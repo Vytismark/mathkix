@@ -42,23 +42,33 @@ export function BillingCard({ subscription }: BillingCardProps) {
 
   async function handlePortal() {
     setLoadingPortal(true)
-    const res = await fetch('/api/stripe/create-portal', { method: 'POST' })
-    const { url, error } = await res.json()
-    if (error) { toast.error(error); setLoadingPortal(false); return }
-    window.location.href = url
+    try {
+      const res = await fetch('/api/stripe/create-portal', { method: 'POST' })
+      const { url, error } = await res.json()
+      if (error) { toast.error(error); setLoadingPortal(false); return }
+      window.location.href = url
+    } catch {
+      toast.error('Something went wrong. Please try again.')
+      setLoadingPortal(false)
+    }
   }
 
   async function handleSubscribe(stripePriceId: string) {
     setLoadingCheckout(stripePriceId)
-    const res = await fetch('/api/stripe/create-checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ priceId: stripePriceId }),
-    })
-    const { url, error } = await res.json()
-    if (error) { toast.error(error); setLoadingCheckout(null); return }
-    if (url) window.location.href = url
-    else { toast.error('Could not open checkout'); setLoadingCheckout(null) }
+    try {
+      const res = await fetch('/api/stripe/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ priceId: stripePriceId }),
+      })
+      const { url, error } = await res.json()
+      if (error) { toast.error(error); setLoadingCheckout(null); return }
+      if (url) window.location.href = url
+      else { toast.error('Could not open checkout'); setLoadingCheckout(null) }
+    } catch {
+      toast.error('Something went wrong. Please try again.')
+      setLoadingCheckout(null)
+    }
   }
 
   const trialEndDate = isTrialing && subscription?.current_period_end
