@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME ?? 'MathKix'}`,
   },
   description: 'Personalized Grade 1-5 math learning, powered by AI',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    apple: '/icon.svg',
+  },
 }
 
 export default function RootLayout({
