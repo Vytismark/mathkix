@@ -2098,7 +2098,7 @@
           },
           {
             "question": "Name two shapes that are quadrilaterals.",
-            "answer": "Square and rectangle (also: rhombus, trapezoid, parallelogram)",
+            "answer": "Square and rectangle",
             "explanation": "Any 4-sided polygon is a quadrilateral."
           },
           {
@@ -2152,7 +2152,7 @@
           },
           {
             "question": "Name two shapes that have all sides equal AND all angles equal.",
-            "answer": "Equilateral triangle and square (also: regular pentagon, regular hexagon)",
+            "answer": "Equilateral triangle and square",
             "explanation": "Equilateral triangle: 3 equal sides and angles. Square: 4 equal sides and right angles."
           },
           {

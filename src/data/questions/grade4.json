@@ -2385,7 +2385,7 @@
           },
           {
             "question": "A triangle has angles 90°, 45°, 45°. Classify it by its angles.",
-            "answer": "Right triangle (also isosceles)",
+            "answer": "Right triangle",
             "explanation": "It has a 90° angle (right) and two equal 45° angles (isosceles)."
           },
           {
