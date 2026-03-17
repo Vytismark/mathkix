@@ -37,6 +37,13 @@ export async function updateSession(request: NextRequest) {
   const url = request.nextUrl.clone()
   const pathname = url.pathname
 
+  // Forward OAuth code from root to auth callback
+  const code = url.searchParams.get('code')
+  if (pathname === '/' && code) {
+    url.pathname = '/auth/callback'
+    return NextResponse.redirect(url)
+  }
+
   // Paths that require authentication
   const protectedPaths = [
     '/dashboard',
