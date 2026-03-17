@@ -41,8 +41,8 @@ export function FractionBarVisual({
       </div>
 
       {/* Bar */}
-      <div className="flex rounded-lg overflow-hidden border-2 border-indigo-400 h-10"
-        style={{ width: `${Math.max(120, safeDen * 40)}px` }}>
+      <div className="flex rounded-lg overflow-hidden border-2 border-indigo-400 h-10 w-full"
+        style={{ maxWidth: `${safeDen * 40}px`, minWidth: '120px' }}>
         {Array.from({ length: safeDen }).map((_, i) => (
           <button
             key={i}

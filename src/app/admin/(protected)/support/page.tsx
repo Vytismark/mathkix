@@ -129,7 +129,7 @@ export default function AdminSupportPage() {
                       {new Date(t.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}
                     </p>
                   </div>
-                  <Badge className={`${PRIORITY_COLORS[t.priority] ?? ''} border-0 text-[10px]`}>
+                  <Badge className={`hidden sm:inline-flex ${PRIORITY_COLORS[t.priority] ?? ''} border-0 text-[10px]`}>
                     {t.priority}
                   </Badge>
                   <Badge className={`${statusCfg.color} border-0 text-[10px]`}>

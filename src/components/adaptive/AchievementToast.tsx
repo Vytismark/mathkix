@@ -62,7 +62,7 @@ export function AchievementToast({
       }`}
     >
       <div
-        className="flex items-center gap-3 bg-white rounded-2xl shadow-2xl border border-amber-200 px-5 py-4 min-w-[240px] cursor-pointer"
+        className="flex items-center gap-3 bg-white rounded-2xl shadow-2xl border border-amber-200 px-5 py-4 min-w-[240px] max-w-[calc(100vw-2rem)] cursor-pointer"
         onClick={() => { setVisible(false); setTimeout(onDismiss, 300) }}
       >
         <span className="text-3xl">{emoji}</span>

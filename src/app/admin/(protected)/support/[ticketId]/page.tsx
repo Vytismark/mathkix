@@ -157,7 +157,7 @@ export default function AdminTicketDetailPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-6">
         {/* Main conversation */}
-        <div className="flex flex-col" style={{ height: 'calc(100vh - 12rem)' }}>
+        <div className="flex flex-col lg:h-[calc(100vh-12rem)]">
           <div className="mb-4 shrink-0">
             <h1 className="text-xl font-bold text-white">{ticket.subject}</h1>
             {ticket.escalated && ticket.escalation_reason && (
