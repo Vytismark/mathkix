@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle } from 'lucide-react'
+import { Menu, X, LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle, ArrowLeftRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
@@ -15,6 +15,7 @@ const NAV_ITEMS = [
   { href: '/billing', label: 'Billing', icon: CreditCard },
   { href: '/account', label: 'Account', icon: Settings },
   { href: '/support', label: 'Support', icon: HelpCircle },
+  { href: '/select', label: 'Switch Child', icon: ArrowLeftRight },
 ]
 
 export function ParentShell({ children }: { children: React.ReactNode }) {
@@ -37,12 +38,26 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
     return () => { document.body.style.overflow = '' }
   }, [drawerOpen])
 
+  const [signingOut, setSigningOut] = useState(false)
+
   async function handleSignOut() {
-    const supabase = createClient()
-    await supabase.auth.signOut()
-    toast.success('Signed out')
-    router.push('/login')
-    router.refresh()
+    if (signingOut) return
+    setSigningOut(true)
+    try {
+      const supabase = createClient()
+      const { error } = await supabase.auth.signOut()
+      if (error) {
+        toast.error('Failed to sign out')
+        setSigningOut(false)
+        return
+      }
+      toast.success('Signed out')
+      router.push('/login')
+      router.refresh()
+    } catch {
+      toast.error('Failed to sign out')
+      setSigningOut(false)
+    }
   }
 
   const navContent = (
