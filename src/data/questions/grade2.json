@@ -1,0 +1,2347 @@
+{
+  "grade": 2,
+  "totalStandards": 26,
+  "totalQuestions": 390,
+  "standards": [
+    {
+      "code": "2.OA.1",
+      "domain": "2.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Solve One- and Two-Step Word Problems Within 100",
+      "explanation": "Students use addition and subtraction within 100 to solve one- and two-step word problems involving adding to, taking from, putting together, taking apart, and comparing situations - with unknowns in all positions.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Amy has 23 stickers. She gets 15 more. How many does she have now?",
+            "answer": "38",
+            "explanation": "23 + 15 = 38. Add ones: 3+5=8. Add tens: 20+10=30. Total: 38."
+          },
+          {
+            "question": "There are 45 apples in a bowl. 12 are eaten. How many remain?",
+            "answer": "33",
+            "explanation": "45 - 12 = 33. Subtract ones: 5-2=3. Subtract tens: 40-10=30. Total: 33."
+          },
+          {
+            "question": "Sam has 30 red crayons and 25 blue crayons. How many crayons in all?",
+            "answer": "55",
+            "explanation": "30 + 25 = 55. Add tens and ones: 50 + 5 = 55."
+          },
+          {
+            "question": "A bag has 56 marbles. 20 roll away. How many are left?",
+            "answer": "36",
+            "explanation": "56 - 20 = 36. Subtract the tens only."
+          },
+          {
+            "question": "18 birds are on a wire. 14 more land. How many birds are there now?",
+            "answer": "32",
+            "explanation": "18 + 14 = 32. Make a ten: 18 + 2 = 20, then 20 + 12 = 32."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Lily had 72 pages to read. She read 38. How many are left?",
+            "answer": "34",
+            "explanation": "72 - 38 = 34. Decompose: 72 - 30 = 42, then 42 - 8 = 34."
+          },
+          {
+            "question": "There are 47 boys and 35 girls in a school play. How many students in all?",
+            "answer": "82",
+            "explanation": "47 + 35 = 82. 47 + 3 = 50, then 50 + 32 = 82."
+          },
+          {
+            "question": "A farmer picks 63 tomatoes. He gives 27 away. How many are left?",
+            "answer": "36",
+            "explanation": "63 - 27 = 36. 63 - 20 = 43, then 43 - 7 = 36."
+          },
+          {
+            "question": "Jan has 54 pennies. She spends 29. How many does she have left?",
+            "answer": "25",
+            "explanation": "54 - 29 = 25. Compensation: 54 - 30 = 24, then 24 + 1 = 25."
+          },
+          {
+            "question": "A box has 46 chocolates. Someone adds 38 more. How many?",
+            "answer": "84",
+            "explanation": "46 + 38 = 84. 46 + 4 = 50, then 50 + 34 = 84."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Tyler had some books. He gave 27 away and has 45 left. How many did he start with?",
+            "answer": "72",
+            "explanation": "? - 27 = 45, so ? = 45 + 27 = 72."
+          },
+          {
+            "question": "A class collected 48 cans, then 37 more. They need 100 total. How many more do they need?",
+            "answer": "15",
+            "explanation": "Step 1: 48 + 37 = 85. Step 2: 100 - 85 = 15."
+          },
+          {
+            "question": "There were 63 people. 28 left and then 18 more arrived. How many people are there now?",
+            "answer": "53",
+            "explanation": "63 - 28 = 35, then 35 + 18 = 53."
+          },
+          {
+            "question": "Sam read 24 pages on Monday and 18 on Tuesday. He needs 67 pages total. How many more pages does he need?",
+            "answer": "25",
+            "explanation": "24 + 18 = 42. Then 67 - 42 = 25 more pages."
+          },
+          {
+            "question": "A plank is 86 cm long. A worker cuts some off and it is now 58 cm. Then another 15 cm is cut. How long is the plank now?",
+            "answer": "43 cm",
+            "explanation": "86 - 58 = 28 cm cut the first time. Remaining after second cut: 58 - 15 = 43 cm."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.OA.2",
+      "domain": "2.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Fluently Add and Subtract Within 20",
+      "explanation": "Students demonstrate fluency - accuracy, efficiency, and flexibility - with addition and subtraction within 20. By end of Grade 2, they know all sums of two one-digit numbers from memory, using strategies like making ten, doubles, near-doubles, and counting on.",
+      "questions": {
+        "easy": [
+          {
+            "question": "9 + 6 = ?",
+            "answer": "15",
+            "explanation": "Make a ten: 9 + 1 = 10, then 10 + 5 = 15."
+          },
+          {
+            "question": "14 - 8 = ?",
+            "answer": "6",
+            "explanation": "Think of the related fact: 8 + 6 = 14, so 14 - 8 = 6."
+          },
+          {
+            "question": "7 + 8 = ?",
+            "answer": "15",
+            "explanation": "Near-doubles: 7 + 7 = 14, so 7 + 8 = 15."
+          },
+          {
+            "question": "6 + 6 = ?",
+            "answer": "12",
+            "explanation": "Doubles fact: 6 + 6 = 12. Know this from memory."
+          },
+          {
+            "question": "17 - 9 = ?",
+            "answer": "8",
+            "explanation": "9 + 8 = 17, so 17 - 9 = 8."
+          }
+        ],
+        "medium": [
+          {
+            "question": "8 + 7 = ?",
+            "answer": "15",
+            "explanation": "Near-doubles: 7 + 7 = 14, so 8 + 7 = 15. Or: 8 + 2 = 10, 10 + 5 = 15."
+          },
+          {
+            "question": "13 - 7 = ?",
+            "answer": "6",
+            "explanation": "Related fact: 7 + 6 = 13, so 13 - 7 = 6."
+          },
+          {
+            "question": "9 + 9 = ?",
+            "answer": "18",
+            "explanation": "Doubles fact: 9 + 9 = 18."
+          },
+          {
+            "question": "16 - 8 = ?",
+            "answer": "8",
+            "explanation": "Doubles: 8 + 8 = 16, so 16 - 8 = 8."
+          },
+          {
+            "question": "5 + 8 = ?",
+            "answer": "13",
+            "explanation": "Make a ten: 8 + 2 = 10, then 10 + 3 = 13."
+          }
+        ],
+        "hard": [
+          {
+            "question": "? + 7 = 15",
+            "answer": "8",
+            "explanation": "15 - 7 = 8. Check: 8 + 7 = 15."
+          },
+          {
+            "question": "20 - ? = 13",
+            "answer": "7",
+            "explanation": "13 + 7 = 20, so ? = 7."
+          },
+          {
+            "question": "6 + ? = 14",
+            "answer": "8",
+            "explanation": "Make a ten: 6 + 4 = 10, then 10 + 4 = 14. So 4 + 4 = 8."
+          },
+          {
+            "question": "? - 8 = 9",
+            "answer": "17",
+            "explanation": "9 + 8 = 17. If ? - 8 = 9, then ? = 9 + 8 = 17."
+          },
+          {
+            "question": "4 + 7 + 9 = ?",
+            "answer": "20",
+            "explanation": "7 + 9 = 16, then 16 + 4 = 20. Or: 4 + 6 = 10 (take 6 from 7), 10 + 1 + 9 = 20."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.OA.3",
+      "domain": "2.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Determine Odd or Even; Express Even Numbers as Two Equal Addends",
+      "explanation": "Students determine whether a group of objects (up to 20) has an odd or even number. Even numbers can be expressed as a sum of two equal addends (e.g., 8 = 4 + 4) and can be paired with no remainder. Odd numbers always have one left over when paired.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Is 6 odd or even?",
+            "answer": "Even",
+            "explanation": "6 = 3 + 3. It can be split into two equal groups. Even numbers pair perfectly with no remainder."
+          },
+          {
+            "question": "Is 7 odd or even?",
+            "answer": "Odd",
+            "explanation": "7 cannot be paired evenly: 3 + 3 = 6, with 1 left over. 7 is odd."
+          },
+          {
+            "question": "Is 4 even? How do you know?",
+            "answer": "Yes, 4 is even",
+            "explanation": "4 = 2 + 2. It can be expressed as two equal addends with no remainder."
+          },
+          {
+            "question": "Is 9 odd or even?",
+            "answer": "Odd",
+            "explanation": "9 = 4 + 4 + 1. There is 1 left over, so 9 is odd."
+          },
+          {
+            "question": "Write 8 as two equal addends.",
+            "answer": "4 + 4 = 8",
+            "explanation": "8 divided equally = 4 + 4. Even numbers can always be written this way."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Is 14 odd or even? How do you know?",
+            "answer": "Even",
+            "explanation": "14 = 7 + 7. It can be expressed as two equal addends, so it is even."
+          },
+          {
+            "question": "Write 18 as two equal addends.",
+            "answer": "9 + 9 = 18",
+            "explanation": "18 / 2 = 9. So 18 = 9 + 9."
+          },
+          {
+            "question": "Mia has 15 stickers. Can she share them equally with one friend, with none left over?",
+            "answer": "No",
+            "explanation": "15 is odd. 15 = 7 + 7 + 1. There would be 1 leftover sticker."
+          },
+          {
+            "question": "Is 20 odd or even? Write it as two equal addends.",
+            "answer": "Even; 10 + 10 = 20",
+            "explanation": "20 = 10 + 10. Even."
+          },
+          {
+            "question": "Which numbers between 11 and 20 are even?",
+            "answer": "12, 14, 16, 18, 20",
+            "explanation": "Even numbers end in 0, 2, 4, 6, or 8: 12, 14, 16, 18, 20."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Can an odd number always be written as two equal addends? Explain.",
+            "answer": "No",
+            "explanation": "Odd numbers always have 1 left over when split in half. e.g., 7 = 3 + 3 + 1. There are no two equal whole-number addends."
+          },
+          {
+            "question": "What happens when you add two even numbers? Give an example.",
+            "answer": "The result is always even",
+            "explanation": "Example: 4 + 6 = 10. Even + Even = Even. The pairs from each number combine neatly."
+          },
+          {
+            "question": "What happens when you add two odd numbers? Give an example.",
+            "answer": "The result is always even",
+            "explanation": "Example: 3 + 5 = 8. The two leftover ones from each odd number pair up, making the total even."
+          },
+          {
+            "question": "Is the sum of an even and an odd number odd or even? Explain.",
+            "answer": "Odd",
+            "explanation": "Example: 4 + 3 = 7. The one leftover one from the odd number stays unpaired, making the total odd."
+          },
+          {
+            "question": "Explain why 16 is even using two equal addends.",
+            "answer": "16 = 8 + 8. It can be split into two equal groups of 8 with no remainder.",
+            "explanation": "16 / 2 = 8. If you arrange 16 objects into 2 rows, each row has 8 - equal with nothing left over."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.OA.4",
+      "domain": "2.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Use Addition with Rectangular Arrays (Up to 5x5)",
+      "explanation": "Students use addition to find the total number of objects in a rectangular array with up to 5 rows and 5 columns. They write equations using equal addends (one per row or column) to represent the total, connecting repeated addition to arrays.",
+      "questions": {
+        "easy": [
+          {
+            "question": "An array has 2 rows and 3 columns. How many objects are there?",
+            "answer": "6",
+            "explanation": "2 rows of 3: 3 + 3 = 6."
+          },
+          {
+            "question": "Write an addition equation for a 3 x 3 array.",
+            "answer": "3 + 3 + 3 = 9",
+            "explanation": "3 rows of 3: 3 + 3 + 3 = 9."
+          },
+          {
+            "question": "An array has 4 rows of 2 objects each. How many objects?",
+            "answer": "8",
+            "explanation": "4 rows of 2: 2 + 2 + 2 + 2 = 8."
+          },
+          {
+            "question": "What is the total in a 2 x 5 array?",
+            "answer": "10",
+            "explanation": "2 rows of 5: 5 + 5 = 10."
+          },
+          {
+            "question": "A 1 x 4 array has how many objects?",
+            "answer": "4",
+            "explanation": "1 row of 4: just 4 objects."
+          }
+        ],
+        "medium": [
+          {
+            "question": "For a 3 x 4 array, write two different addition equations (one by rows, one by columns).",
+            "answer": "4 + 4 + 4 = 12 (by rows) and 3 + 3 + 3 + 3 = 12 (by columns)",
+            "explanation": "3 rows of 4 gives 4+4+4=12. 4 columns of 3 gives 3+3+3+3=12. Both equal 12."
+          },
+          {
+            "question": "A fruit tray has 5 rows with 4 oranges in each row. How many oranges?",
+            "answer": "20",
+            "explanation": "5 rows of 4: 4 + 4 + 4 + 4 + 4 = 20."
+          },
+          {
+            "question": "Write the addition equation for a 4 x 4 array.",
+            "answer": "4 + 4 + 4 + 4 = 16",
+            "explanation": "4 rows of 4 = 4 + 4 + 4 + 4 = 16."
+          },
+          {
+            "question": "An array has 15 objects with 5 in each row. How many rows are there?",
+            "answer": "3 rows",
+            "explanation": "5 + 5 + 5 = 15. There are 3 rows of 5."
+          },
+          {
+            "question": "A 5 x 3 array - how many total? Show your work.",
+            "answer": "15",
+            "explanation": "5 rows of 3: 3 + 3 + 3 + 3 + 3 = 15."
+          }
+        ],
+        "hard": [
+          {
+            "question": "For a 4 x 5 array, write two equations (by rows and by columns).",
+            "answer": "5 + 5 + 5 + 5 = 20 and 4 + 4 + 4 + 4 + 4 = 20",
+            "explanation": "4 rows of 5 and 5 rows of 4 both give a total of 20."
+          },
+          {
+            "question": "There are 20 objects in an array with 4 rows. How many columns?",
+            "answer": "5 columns",
+            "explanation": "Each row has 20 / 4 = 5 objects. There are 5 columns."
+          },
+          {
+            "question": "Write the equation for a 5 x 5 array.",
+            "answer": "5 + 5 + 5 + 5 + 5 = 25",
+            "explanation": "5 rows of 5: 5 + 5 + 5 + 5 + 5 = 25."
+          },
+          {
+            "question": "Compare: a 3 x 4 array and a 4 x 3 array. Do they have the same total?",
+            "answer": "Yes, both equal 12",
+            "explanation": "3 rows of 4 = 12. 4 rows of 3 = 12. Rotating the array does not change the total."
+          },
+          {
+            "question": "A classroom has 4 rows of desks with 5 desks each. 2 desks are empty. How many students are seated?",
+            "answer": "18",
+            "explanation": "4 + 4 + 4 + 4 + 4 = 20 desks total. 20 - 2 = 18 students."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.1",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Understand Place Value of Three-Digit Numbers",
+      "explanation": "Students understand that the three digits of a three-digit number represent amounts of hundreds, tens, and ones. For example, 352 = 3 hundreds + 5 tens + 2 ones = 300 + 50 + 2. They also know that 100 = 10 tens and that 100-900 are bundles of hundreds.",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is the value of each digit in 345?",
+            "answer": "3 hundreds (300), 4 tens (40), 5 ones (5)",
+            "explanation": "345 = 300 + 40 + 5."
+          },
+          {
+            "question": "Write 200 + 70 + 3 as a number.",
+            "answer": "273",
+            "explanation": "2 hundreds + 7 tens + 3 ones = 273."
+          },
+          {
+            "question": "How many hundreds are in 500?",
+            "answer": "5 hundreds",
+            "explanation": "500 = 5 groups of 100."
+          },
+          {
+            "question": "What is the value of the digit 4 in 482?",
+            "answer": "400 (4 hundreds)",
+            "explanation": "4 is in the hundreds place. Its value is 4 x 100 = 400."
+          },
+          {
+            "question": "Write 6 hundreds, 3 tens, 8 ones as a number.",
+            "answer": "638",
+            "explanation": "600 + 30 + 8 = 638."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is the value of the digit 7 in 374?",
+            "answer": "70 (7 tens)",
+            "explanation": "7 is in the tens place. Its value is 7 x 10 = 70."
+          },
+          {
+            "question": "100 = ? tens",
+            "answer": "10 tens",
+            "explanation": "100 = 10 groups of 10. Ten tens make one hundred."
+          },
+          {
+            "question": "A number has 5 hundreds, 0 tens, and 6 ones. What is the number?",
+            "answer": "506",
+            "explanation": "500 + 0 + 6 = 506."
+          },
+          {
+            "question": "What is 400 + 30 + 7?",
+            "answer": "437",
+            "explanation": "4 hundreds + 3 tens + 7 ones = 437."
+          },
+          {
+            "question": "How many ones are in 100?",
+            "answer": "100 ones",
+            "explanation": "100 = 100 individual ones."
+          }
+        ],
+        "hard": [
+          {
+            "question": "835 = 8 hundreds + ? tens + ? ones",
+            "answer": "3 tens and 5 ones",
+            "explanation": "835 = 800 + 30 + 5."
+          },
+          {
+            "question": "Write 712 in two different ways using hundreds, tens, and ones.",
+            "answer": "7 hundreds 1 ten 2 ones; OR 6 hundreds 11 tens 2 ones",
+            "explanation": "712 = 700 + 10 + 2, or 600 + 110 + 2. Both equal 712."
+          },
+          {
+            "question": "How many tens are in 430?",
+            "answer": "43 tens",
+            "explanation": "430 = 43 groups of 10. 43 x 10 = 430."
+          },
+          {
+            "question": "A three-digit number has the same digit in the hundreds and ones place, and 0 in the tens. The digit is 5. What is the number?",
+            "answer": "505",
+            "explanation": "5 hundreds + 0 tens + 5 ones = 505."
+          },
+          {
+            "question": "Is 9 hundreds + 10 tens equal to 1000? Explain.",
+            "answer": "Yes",
+            "explanation": "9 hundreds = 900. 10 tens = 100. 900 + 100 = 1000."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.2",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Count Within 1000; Skip-Count by 5s, 10s, and 100s",
+      "explanation": "Students count within 1000 and skip-count by 5s, 10s, and 100s. Skip-counting by 5s builds fluency with multiples of 5; skip-counting by 10s shows the tens pattern; skip-counting by 100s reveals the hundreds structure.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Skip-count by 5s: 5, 10, 15, __, 25. What is missing?",
+            "answer": "20",
+            "explanation": "Each step adds 5. 15 + 5 = 20."
+          },
+          {
+            "question": "Skip-count by 10s: 10, 20, 30, __, 50. What is missing?",
+            "answer": "40",
+            "explanation": "Each step adds 10. 30 + 10 = 40."
+          },
+          {
+            "question": "Skip-count by 100s: 100, 200, 300, __, 500.",
+            "answer": "400",
+            "explanation": "Each step adds 100. 300 + 100 = 400."
+          },
+          {
+            "question": "Continue: 25, 30, 35, __",
+            "answer": "40",
+            "explanation": "Skip-counting by 5s: 35 + 5 = 40."
+          },
+          {
+            "question": "Continue: 200, 300, 400, __",
+            "answer": "500",
+            "explanation": "Skip-counting by 100s: 400 + 100 = 500."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Skip-count by 5s starting at 45: 45, 50, 55, __",
+            "answer": "60",
+            "explanation": "55 + 5 = 60."
+          },
+          {
+            "question": "Skip-count by 10s: 65, 75, 85, __",
+            "answer": "95",
+            "explanation": "85 + 10 = 95."
+          },
+          {
+            "question": "Skip-count by 100s from 350: 350, 450, 550, __",
+            "answer": "650",
+            "explanation": "550 + 100 = 650."
+          },
+          {
+            "question": "Fill in: 730, 740, 750, __, 770",
+            "answer": "760",
+            "explanation": "Skip-counting by 10s: 750 + 10 = 760."
+          },
+          {
+            "question": "Fill in: 85, 90, 95, __, 105",
+            "answer": "100",
+            "explanation": "Skip-counting by 5s: 95 + 5 = 100."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Count backwards by 10s: 150, 140, 130, __",
+            "answer": "120",
+            "explanation": "Counting back by 10s: 130 - 10 = 120."
+          },
+          {
+            "question": "Skip-count by 5s: 970, 975, 980, 985, __",
+            "answer": "990",
+            "explanation": "985 + 5 = 990."
+          },
+          {
+            "question": "A pattern: 200, 400, 600, __. What type of skip-count is this?",
+            "answer": "800; skip-counting by 200s",
+            "explanation": "Each number is 200 more than the previous."
+          },
+          {
+            "question": "Fill in: 755, 760, 765, __, 775",
+            "answer": "770",
+            "explanation": "Skip-counting by 5s: 765 + 5 = 770."
+          },
+          {
+            "question": "Count back by 100s: 900, 800, 700, __, 500",
+            "answer": "600",
+            "explanation": "700 - 100 = 600."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.3",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Read and Write Numbers to 1000 - Numerals, Names, Expanded Form",
+      "explanation": "Students read and write numbers to 1000 using base-ten numerals, number names (words), and expanded form. Expanded form breaks a number into the value of each digit (e.g., 347 = 300 + 40 + 7).",
+      "questions": {
+        "easy": [
+          {
+            "question": "Write \"three hundred forty-two\" as a numeral.",
+            "answer": "342",
+            "explanation": "3 hundreds + 4 tens + 2 ones = 342."
+          },
+          {
+            "question": "Write 516 in words.",
+            "answer": "Five hundred sixteen",
+            "explanation": "500 + 10 + 6 = five hundred sixteen."
+          },
+          {
+            "question": "Write 728 in expanded form.",
+            "answer": "700 + 20 + 8",
+            "explanation": "7 hundreds + 2 tens + 8 ones."
+          },
+          {
+            "question": "What is the numeral for nine hundred five?",
+            "answer": "905",
+            "explanation": "9 hundreds + 0 tens + 5 ones = 905."
+          },
+          {
+            "question": "Write 400 + 60 + 3 as a number.",
+            "answer": "463",
+            "explanation": "4 hundreds + 6 tens + 3 ones = 463."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Write 804 in expanded form.",
+            "answer": "800 + 0 + 4 (or 800 + 4)",
+            "explanation": "8 hundreds + 0 tens + 4 ones = 804."
+          },
+          {
+            "question": "Write 600 + 90 as a number and in words.",
+            "answer": "690; six hundred ninety",
+            "explanation": "6 hundreds + 9 tens + 0 ones = 690."
+          },
+          {
+            "question": "What number is 200 + 50? Write it in words.",
+            "answer": "250; two hundred fifty",
+            "explanation": "250 = two hundred fifty."
+          },
+          {
+            "question": "Write 1000 in words.",
+            "answer": "One thousand",
+            "explanation": "1000 = one thousand."
+          },
+          {
+            "question": "A number in expanded form is 300 + 0 + 7. Write the numeral and the number name.",
+            "answer": "307; three hundred seven",
+            "explanation": "307 = three hundred seven."
+          }
+        ],
+        "hard": [
+          {
+            "question": "John wrote 670 in expanded form as 600 + 7. What mistake did he make?",
+            "answer": "He forgot the tens: it should be 600 + 70 + 0",
+            "explanation": "670 = 600 + 70. The digit 7 is in the tens place, worth 70, not 7."
+          },
+          {
+            "question": "Write the number that has 8 hundreds, 3 ones, and 0 tens. Give its expanded form.",
+            "answer": "803; 800 + 0 + 3",
+            "explanation": "8 hundreds + 0 tens + 3 ones = 803."
+          },
+          {
+            "question": "Write 500 + 40 + 9 in words.",
+            "answer": "Five hundred forty-nine",
+            "explanation": "549 = five hundred forty-nine."
+          },
+          {
+            "question": "Write 999 in expanded form and in words.",
+            "answer": "900 + 90 + 9; nine hundred ninety-nine",
+            "explanation": "9 hundreds + 9 tens + 9 ones."
+          },
+          {
+            "question": "Is 700 + 30 + 5 the same as \"seven hundred thirty-five\"?",
+            "answer": "Yes",
+            "explanation": "700 + 30 + 5 = 735 = seven hundred thirty-five. They all represent the same number."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.4",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Compare Two Three-Digit Numbers Using >, =, <",
+      "explanation": "Students compare two three-digit numbers using > (greater than), = (equal to), or < (less than). Strategy: compare hundreds first. If equal, compare tens. If still equal, compare ones.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Which is greater: 345 or 267?",
+            "answer": "345",
+            "explanation": "3 hundreds > 2 hundreds, so 345 > 267."
+          },
+          {
+            "question": "Use >, =, or <: 500 __ 500",
+            "answer": "=",
+            "explanation": "500 = 500. Same number."
+          },
+          {
+            "question": "Which is less: 728 or 782?",
+            "answer": "728",
+            "explanation": "Same hundreds (7). Compare tens: 2 < 8, so 728 < 782."
+          },
+          {
+            "question": "Use >, =, or <: 600 __ 590",
+            "answer": ">",
+            "explanation": "6 hundreds > 5 hundreds, so 600 > 590."
+          },
+          {
+            "question": "Circle the greater number: 413 or 431.",
+            "answer": "431",
+            "explanation": "Same hundreds (4). Tens: 3 > 1, so 431 > 413."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Use >, =, or <: 856 __ 865",
+            "answer": "<",
+            "explanation": "Same hundreds (8), same tens (6). Ones: 5 < 6, so 856 < 865."
+          },
+          {
+            "question": "Order from least to greatest: 204, 402, 240.",
+            "answer": "204, 240, 402",
+            "explanation": "Hundreds: 2 < 2 < 4. For 204 and 240, compare tens: 0 < 4, so 204 < 240 < 402."
+          },
+          {
+            "question": "Use >, =, or <: 999 __ 1000",
+            "answer": "<",
+            "explanation": "999 < 1000. A three-digit number is always less than 1000."
+          },
+          {
+            "question": "Which is greatest: 731, 713, 317?",
+            "answer": "731",
+            "explanation": "7 hundreds (731, 713) > 3 hundreds (317). Of 731 and 713: tens 3 > 1, so 731 is greatest."
+          },
+          {
+            "question": "Use >, =, or <: 450 __ 450",
+            "answer": "=",
+            "explanation": "450 = 450."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Name two numbers between 465 and 470.",
+            "answer": "466, 467, 468, or 469",
+            "explanation": "Any two of 466, 467, 468, 469 are between 465 and 470."
+          },
+          {
+            "question": "Is 30 tens greater than, equal to, or less than 300?",
+            "answer": "Equal",
+            "explanation": "30 tens = 30 x 10 = 300. They are equal."
+          },
+          {
+            "question": "A number has 7 in the hundreds place, 5 in the ones place, and is less than 710. What is it?",
+            "answer": "705",
+            "explanation": "705 = 7 hundreds + 0 tens + 5 ones. 705 < 710."
+          },
+          {
+            "question": "Write three numbers that are greater than 850 and less than 900.",
+            "answer": "Any three of 851 to 899, e.g., 860, 875, 899",
+            "explanation": "Any number between 851 and 899 works."
+          },
+          {
+            "question": "Two numbers both have 4 hundreds and 2 tens. The first number has a ones digit 3 more than the second. The second number is 421. What is the first?",
+            "answer": "424",
+            "explanation": "Second = 421, ones digit = 1. First ones digit = 1 + 3 = 4. First number = 424."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.5",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Fluently Add and Subtract Within 100",
+      "explanation": "Students fluently add and subtract within 100 using strategies based on place value, properties of operations, and the relationship between addition and subtraction. They may use concrete models or drawings to support their strategies.",
+      "questions": {
+        "easy": [
+          {
+            "question": "34 + 25 = ?",
+            "answer": "59",
+            "explanation": "Add tens: 30 + 20 = 50. Add ones: 4 + 5 = 9. Total: 59."
+          },
+          {
+            "question": "67 - 43 = ?",
+            "answer": "24",
+            "explanation": "Subtract tens: 60 - 40 = 20. Subtract ones: 7 - 3 = 4. Total: 24."
+          },
+          {
+            "question": "52 + 17 = ?",
+            "answer": "69",
+            "explanation": "50 + 10 = 60; 2 + 7 = 9; total: 69."
+          },
+          {
+            "question": "85 - 32 = ?",
+            "answer": "53",
+            "explanation": "80 - 30 = 50; 5 - 2 = 3; total: 53."
+          },
+          {
+            "question": "41 + 48 = ?",
+            "answer": "89",
+            "explanation": "40 + 40 = 80; 1 + 8 = 9; total: 89."
+          }
+        ],
+        "medium": [
+          {
+            "question": "47 + 35 = ?",
+            "answer": "82",
+            "explanation": "40 + 30 = 70; 7 + 5 = 12; 70 + 12 = 82."
+          },
+          {
+            "question": "73 - 48 = ?",
+            "answer": "25",
+            "explanation": "73 - 40 = 33; 33 - 8 = 25."
+          },
+          {
+            "question": "56 + 29 = ?",
+            "answer": "85",
+            "explanation": "56 + 4 = 60; 60 + 25 = 85. Or: 50 + 20 = 70; 6 + 9 = 15; 70 + 15 = 85."
+          },
+          {
+            "question": "92 - 37 = ?",
+            "answer": "55",
+            "explanation": "92 - 30 = 62; 62 - 7 = 55."
+          },
+          {
+            "question": "65 + 26 = ?",
+            "answer": "91",
+            "explanation": "65 + 5 = 70; 70 + 21 = 91. Or: 60 + 20 = 80; 5 + 6 = 11; 80 + 11 = 91."
+          }
+        ],
+        "hard": [
+          {
+            "question": "99 - 54 = ?",
+            "answer": "45",
+            "explanation": "99 - 50 = 49; 49 - 4 = 45."
+          },
+          {
+            "question": "68 + 17 + 5 = ?",
+            "answer": "90",
+            "explanation": "68 + 17 = 85; 85 + 5 = 90."
+          },
+          {
+            "question": "? - 38 = 45",
+            "answer": "83",
+            "explanation": "45 + 38 = 83. If ? - 38 = 45, then ? = 45 + 38 = 83."
+          },
+          {
+            "question": "A baker made 54 rolls and 29 muffins. He sold 37 items. How many does he have left?",
+            "answer": "46",
+            "explanation": "54 + 29 = 83 total. 83 - 37 = 46."
+          },
+          {
+            "question": "100 - 47 = ?",
+            "answer": "53",
+            "explanation": "100 - 40 = 60; 60 - 7 = 53. Or think: 47 + 53 = 100."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.6",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Add Up to Four Two-Digit Numbers",
+      "explanation": "Students add up to four two-digit numbers using place value strategies and properties of operations. Useful approaches include looking for pairs that make tens (associative property), adding left to right, and using mental math.",
+      "questions": {
+        "easy": [
+          {
+            "question": "21 + 34 = ?",
+            "answer": "55",
+            "explanation": "20 + 30 = 50; 1 + 4 = 5; total: 55."
+          },
+          {
+            "question": "43 + 26 = ?",
+            "answer": "69",
+            "explanation": "40 + 20 = 60; 3 + 6 = 9; total: 69."
+          },
+          {
+            "question": "15 + 32 = ?",
+            "answer": "47",
+            "explanation": "10 + 30 = 40; 5 + 2 = 7; total: 47."
+          },
+          {
+            "question": "62 + 17 = ?",
+            "answer": "79",
+            "explanation": "60 + 10 = 70; 2 + 7 = 9; total: 79."
+          },
+          {
+            "question": "30 + 45 = ?",
+            "answer": "75",
+            "explanation": "30 + 40 = 70; 0 + 5 = 5; total: 75."
+          }
+        ],
+        "medium": [
+          {
+            "question": "13 + 24 + 35 = ?",
+            "answer": "72",
+            "explanation": "13 + 24 = 37; 37 + 35 = 72."
+          },
+          {
+            "question": "21 + 18 + 30 = ?",
+            "answer": "69",
+            "explanation": "21 + 30 = 51; 51 + 18 = 69. Or: 21 + 18 = 39; 39 + 30 = 69."
+          },
+          {
+            "question": "45 + 12 + 23 = ?",
+            "answer": "80",
+            "explanation": "45 + 12 = 57; 57 + 23 = 80."
+          },
+          {
+            "question": "16 + 14 + 20 = ?",
+            "answer": "50",
+            "explanation": "16 + 14 = 30 (they make a round number); 30 + 20 = 50."
+          },
+          {
+            "question": "33 + 27 + 19 = ?",
+            "answer": "79",
+            "explanation": "33 + 27 = 60; 60 + 19 = 79."
+          }
+        ],
+        "hard": [
+          {
+            "question": "14 + 26 + 33 + 17 = ?",
+            "answer": "90",
+            "explanation": "Look for pairs: 14 + 26 = 40; 33 + 17 = 50; 40 + 50 = 90."
+          },
+          {
+            "question": "22 + 18 + 15 + 25 = ?",
+            "answer": "80",
+            "explanation": "22 + 18 = 40; 15 + 25 = 40; 40 + 40 = 80."
+          },
+          {
+            "question": "31 + 19 + 28 + 12 = ?",
+            "answer": "90",
+            "explanation": "31 + 19 = 50; 28 + 12 = 40; 50 + 40 = 90."
+          },
+          {
+            "question": "25 + 13 + 15 + 37 = ?",
+            "answer": "90",
+            "explanation": "25 + 15 = 40; 13 + 37 = 50; 40 + 50 = 90."
+          },
+          {
+            "question": "A store sold 24, 16, 35, and 15 items on four days. How many items in total?",
+            "answer": "90",
+            "explanation": "24 + 16 = 40; 35 + 15 = 50; 40 + 50 = 90."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.7",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Add and Subtract Within 1000",
+      "explanation": "Students add and subtract within 1000 using concrete models or drawings and place-value strategies, composing or decomposing hundreds, tens, and ones as needed. They relate these strategies to written methods.",
+      "questions": {
+        "easy": [
+          {
+            "question": "234 + 152 = ?",
+            "answer": "386",
+            "explanation": "Hundreds: 200+100=300. Tens: 30+50=80. Ones: 4+2=6. Total: 386."
+          },
+          {
+            "question": "567 - 234 = ?",
+            "answer": "333",
+            "explanation": "Hundreds: 500-200=300. Tens: 60-30=30. Ones: 7-4=3. Total: 333."
+          },
+          {
+            "question": "400 + 300 = ?",
+            "answer": "700",
+            "explanation": "4 hundreds + 3 hundreds = 7 hundreds = 700."
+          },
+          {
+            "question": "650 - 230 = ?",
+            "answer": "420",
+            "explanation": "600 - 200 = 400; 50 - 30 = 20; total: 420."
+          },
+          {
+            "question": "125 + 364 = ?",
+            "answer": "489",
+            "explanation": "100+300=400; 20+60=80; 5+4=9; total: 489."
+          }
+        ],
+        "medium": [
+          {
+            "question": "347 + 285 = ?",
+            "answer": "632",
+            "explanation": "300+200=500; 40+80=120; 7+5=12; 500+120+12=632."
+          },
+          {
+            "question": "724 - 368 = ?",
+            "answer": "356",
+            "explanation": "724 - 300 = 424; 424 - 60 = 364; 364 - 8 = 356."
+          },
+          {
+            "question": "500 - 247 = ?",
+            "answer": "253",
+            "explanation": "500 - 200 = 300; 300 - 47 = 253."
+          },
+          {
+            "question": "463 + 179 = ?",
+            "answer": "642",
+            "explanation": "400+100=500; 60+70=130; 3+9=12; 500+130+12=642."
+          },
+          {
+            "question": "800 - 356 = ?",
+            "answer": "444",
+            "explanation": "800 - 300 = 500; 500 - 56 = 444."
+          }
+        ],
+        "hard": [
+          {
+            "question": "587 + 248 = ?",
+            "answer": "835",
+            "explanation": "500+200=700; 80+40=120; 7+8=15; 700+120+15=835."
+          },
+          {
+            "question": "1000 - 673 = ?",
+            "answer": "327",
+            "explanation": "1000 - 600 = 400; 400 - 73 = 327."
+          },
+          {
+            "question": "A school has 345 boys and 478 girls. How many students in all?",
+            "answer": "823",
+            "explanation": "300+400=700; 40+70=110; 5+8=13; 700+110+13=823."
+          },
+          {
+            "question": "902 - 456 = ?",
+            "answer": "446",
+            "explanation": "902 - 400 = 502; 502 - 56 = 446."
+          },
+          {
+            "question": "A bookstore had 750 books. They sold 263 and received 145 more. How many now?",
+            "answer": "632",
+            "explanation": "750 - 263 = 487; 487 + 145 = 632."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.8",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Mentally Add or Subtract 10 or 100 (Numbers 100-900)",
+      "explanation": "Students mentally add or subtract 10 and 100 to/from any number 100-900. Adding 10 increases only the tens digit by 1; adding 100 increases only the hundreds digit by 1. The other digits stay the same.",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is 10 more than 250?",
+            "answer": "260",
+            "explanation": "250 + 10 = 260. Only the tens digit changes: 5 becomes 6."
+          },
+          {
+            "question": "What is 100 more than 300?",
+            "answer": "400",
+            "explanation": "300 + 100 = 400. Only the hundreds digit changes: 3 becomes 4."
+          },
+          {
+            "question": "What is 10 less than 480?",
+            "answer": "470",
+            "explanation": "480 - 10 = 470. Tens digit: 8 becomes 7."
+          },
+          {
+            "question": "What is 100 less than 700?",
+            "answer": "600",
+            "explanation": "700 - 100 = 600. Hundreds digit: 7 becomes 6."
+          },
+          {
+            "question": "530 + 10 = ?",
+            "answer": "540",
+            "explanation": "Add 10: tens digit increases by 1. 3 becomes 4. Answer: 540."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Start at 450. Add 100. Then subtract 10. Where are you?",
+            "answer": "540",
+            "explanation": "450 + 100 = 550; 550 - 10 = 540."
+          },
+          {
+            "question": "620 - 100 + 10 = ?",
+            "answer": "530",
+            "explanation": "620 - 100 = 520; 520 + 10 = 530."
+          },
+          {
+            "question": "What is 100 more than 10 less than 350?",
+            "answer": "440",
+            "explanation": "350 - 10 = 340; 340 + 100 = 440."
+          },
+          {
+            "question": "Fill in the pattern: 200, 300, 400, __ (adding 100 each time).",
+            "answer": "500",
+            "explanation": "400 + 100 = 500."
+          },
+          {
+            "question": "Fill in: 780, 770, 760, __ (subtracting 10).",
+            "answer": "750",
+            "explanation": "760 - 10 = 750."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Start at 190. Add 10. What happens?",
+            "answer": "200",
+            "explanation": "190 + 10 = 200. The tens \"overflow\" and create a new hundred."
+          },
+          {
+            "question": "What is 100 less than 105?",
+            "answer": "5",
+            "explanation": "105 - 100 = 5. The hundreds digit goes from 1 to 0."
+          },
+          {
+            "question": "890 + 100 = ?",
+            "answer": "990",
+            "explanation": "890 + 100 = 990. Hundreds: 8 becomes 9."
+          },
+          {
+            "question": "Start at 500. Add 100 three times. Then subtract 10 twice. Where are you?",
+            "answer": "780",
+            "explanation": "500 + 300 = 800; 800 - 20 = 780."
+          },
+          {
+            "question": "A pattern: 850, 750, 650, __. What comes next? What kind of skip-count is this?",
+            "answer": "550; subtracting 100",
+            "explanation": "850-100=750-100=650-100=550. This is counting back by 100s."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.NBT.9",
+      "domain": "2.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Explain Why Addition and Subtraction Strategies Work",
+      "explanation": "Students explain why their addition and subtraction strategies work using place value and properties of operations. They can articulate why decomposing, making tens, compensation, and using the commutative or associative property produce correct results.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Why does 37 + 20 = 57? Explain using place value.",
+            "answer": "Adding 20 adds 2 tens: 30 + 20 = 50, plus 7 ones = 57.",
+            "explanation": "Only the tens digit changes when you add a multiple of 10. The ones digit stays the same."
+          },
+          {
+            "question": "Why is 8 + 5 the same as 5 + 8?",
+            "answer": "Commutative property: you can add numbers in any order.",
+            "explanation": "The sum does not change when you switch the order of the addends."
+          },
+          {
+            "question": "Explain why 46 - 10 = 36.",
+            "answer": "Subtracting 10 removes 1 ten: 4 tens - 1 ten = 3 tens; ones stay the same.",
+            "explanation": "Only the tens digit changes when you subtract 10."
+          },
+          {
+            "question": "Why does grouping 4 + 6 first help you find 4 + 6 + 8?",
+            "answer": "4 + 6 = 10, and 10 + 8 = 18 is easy to add.",
+            "explanation": "Associative property: group addends that make ten to make the calculation easier."
+          },
+          {
+            "question": "Why is 50 - 30 = 20? Use place value to explain.",
+            "answer": "50 = 5 tens, 30 = 3 tens. 5 tens - 3 tens = 2 tens = 20.",
+            "explanation": "Subtracting tens only changes the tens digit. The result is still in tens."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Explain why 78 - 40 = 38 using place value.",
+            "answer": "40 = 4 tens. 7 tens - 4 tens = 3 tens. Ones digit stays 8. Result: 38.",
+            "explanation": "Subtracting a multiple of 10 changes only the tens digit."
+          },
+          {
+            "question": "Why does decomposing 9 + 7 as (9 + 1) + 6 = 16 work?",
+            "answer": "Associative property: group 9+1=10 first, then 10+6=16. 7 is decomposed as 1+6.",
+            "explanation": "We can regroup numbers without changing the sum."
+          },
+          {
+            "question": "Explain why 63 + 24 = 87 by adding tens and ones separately.",
+            "answer": "Tens: 60+20=80. Ones: 3+4=7. 80+7=87.",
+            "explanation": "Place value allows us to add like units: tens with tens, ones with ones."
+          },
+          {
+            "question": "Why is 100 - 47 = 53? Show a strategy and explain.",
+            "answer": "100 - 40 = 60; 60 - 7 = 53. Or: think 47 + 53 = 100.",
+            "explanation": "Subtracting in parts or using the relationship between addition and subtraction are both valid."
+          },
+          {
+            "question": "Why is (34 + 16) + 22 easier than 34 + (16 + 22)?",
+            "answer": "34 + 16 = 50, a round number. Then 50 + 22 = 72 is easy.",
+            "explanation": "Associative property lets us choose any grouping. Grouping addends that make a round number simplifies the calculation."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Tom said 400 + 90 + 5 = 495. Is he right? Explain.",
+            "answer": "Yes",
+            "explanation": "400 = 4 hundreds, 90 = 9 tens, 5 = 5 ones. 495 is the correct number."
+          },
+          {
+            "question": "Amy solved 82 - 37 by doing 82 - 40 + 3 = 45. Why does this work?",
+            "answer": "She over-subtracted by 3, then added 3 back. This is the compensation strategy.",
+            "explanation": "82 - 40 = 42; 42 + 3 = 45. Subtracting too much then compensating gives the same answer."
+          },
+          {
+            "question": "Explain why 136 + 248 = 384 using place value.",
+            "answer": "Hundreds: 100+200=300. Tens: 30+40=70. Ones: 6+8=14. 300+70+14=384.",
+            "explanation": "Add each place separately. Ones: 14 = 1 ten + 4 ones. Regroup: 300 + 80 + 4 = 384."
+          },
+          {
+            "question": "Is 56 + 27 the same as 56 + 30 - 3? Explain why.",
+            "answer": "Yes",
+            "explanation": "27 = 30 - 3. So 56 + 27 = 56 + 30 - 3 = 86 - 3 = 83. This is the compensation strategy."
+          },
+          {
+            "question": "Explain why counting back on a number line gives the same result as column subtraction.",
+            "answer": "Both methods remove the same value from the starting number.",
+            "explanation": "Subtraction always means removing a quantity. The method changes, but the amount removed is the same, so the result is the same."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.1",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure Length Using Appropriate Tools",
+      "explanation": "Students measure the length of objects by selecting and using appropriate tools: rulers (inches or centimeters), yardsticks, meter sticks, and measuring tapes. They measure in both customary (inches, feet, yards) and metric (centimeters, meters) units.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Which tool would you use to measure a pencil: a ruler or a yardstick?",
+            "answer": "A ruler",
+            "explanation": "A pencil is short (around 7 inches), so a ruler is the most appropriate tool."
+          },
+          {
+            "question": "A book is about 9 inches long. What unit is being used?",
+            "answer": "Inches",
+            "explanation": "Inches are a customary unit used for shorter objects."
+          },
+          {
+            "question": "What unit would you use to measure the length of a room: inches or feet?",
+            "answer": "Feet",
+            "explanation": "A room is too large for inches; feet are more appropriate."
+          },
+          {
+            "question": "A pencil measures 17 cm. What unit is being used?",
+            "answer": "Centimeters",
+            "explanation": "Centimeters (cm) are a metric unit for shorter objects."
+          },
+          {
+            "question": "Would you use a ruler or a meter stick to measure a hallway?",
+            "answer": "Meter stick (or measuring tape)",
+            "explanation": "A hallway is long; a meter stick or measuring tape is more appropriate."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A marker is 14 cm long. A crayon is 9 cm long. Which is longer and by how much?",
+            "answer": "The marker; by 5 cm",
+            "explanation": "14 - 9 = 5 cm. The marker is longer."
+          },
+          {
+            "question": "You measure a hallway in meters and get 12 meters. How many centimeters is that?",
+            "answer": "1200 cm",
+            "explanation": "1 meter = 100 cm. 12 x 100 = 1200 cm."
+          },
+          {
+            "question": "A fish is 6 inches. A book is 8 inches. How much longer is the book?",
+            "answer": "2 inches",
+            "explanation": "8 - 6 = 2 inches."
+          },
+          {
+            "question": "Which unit would you use to measure a swimming pool: feet or inches?",
+            "answer": "Feet (or yards)",
+            "explanation": "A pool is very long. Feet or yards are more appropriate than inches."
+          },
+          {
+            "question": "A leaf measures between 3 and 4 cm on a ruler. About how long is it?",
+            "answer": "About 3.5 cm (or between 3 and 4 cm)",
+            "explanation": "If the leaf falls between 3 and 4 cm, it is approximately 3.5 cm."
+          }
+        ],
+        "hard": [
+          {
+            "question": "About how many feet long is a car?",
+            "answer": "About 12 to 15 feet",
+            "explanation": "A typical car is 12-15 feet long."
+          },
+          {
+            "question": "A table is 3 feet long. How many inches is that? (1 foot = 12 inches)",
+            "answer": "36 inches",
+            "explanation": "3 x 12 = 36 inches."
+          },
+          {
+            "question": "You measure a garden with a yardstick and get 5 yards. How many feet is that? (1 yard = 3 feet)",
+            "answer": "15 feet",
+            "explanation": "5 x 3 = 15 feet."
+          },
+          {
+            "question": "Estimate: Is a door about 2 meters, 20 meters, or 200 meters tall?",
+            "answer": "About 2 meters",
+            "explanation": "A standard door is about 2 meters (approximately 6-7 feet) tall."
+          },
+          {
+            "question": "A student measures a desk as 24 inches. Her friend says it is 2 feet. Are they both correct?",
+            "answer": "Yes",
+            "explanation": "24 inches = 2 feet (1 foot = 12 inches, 2 x 12 = 24). Both are correct."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.2",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure with Different Units; Relate Measurements to Unit Size",
+      "explanation": "Students measure the same object using different units and observe the relationship: smaller units produce a larger number, larger units produce a smaller number. The length of the object does not change, only the unit used to describe it.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A book is 24 cm or 9 inches. Which unit gives a larger number?",
+            "answer": "Centimeters (24)",
+            "explanation": "Centimeters are smaller units, so more of them are needed. The number is larger."
+          },
+          {
+            "question": "You measure a pencil and get 16 cm or about 6 inches. Which unit is smaller?",
+            "answer": "Centimeters",
+            "explanation": "Smaller units need more of them. 16 cm > 6 in shows cm are smaller."
+          },
+          {
+            "question": "A table is 3 feet or 36 inches long. Which unit gives a smaller number?",
+            "answer": "Feet (3)",
+            "explanation": "Larger units produce smaller numbers. 3 < 36."
+          },
+          {
+            "question": "If you measure a room in meters and get 5, what would happen to the number if you used centimeters?",
+            "answer": "It would be much larger (500 cm)",
+            "explanation": "1 meter = 100 cm. 5 meters = 500 cm. Smaller units give a larger number."
+          },
+          {
+            "question": "A ribbon is 2 feet or 24 inches. Is this the same length?",
+            "answer": "Yes",
+            "explanation": "2 feet = 24 inches. Different numbers, different units, same length."
+          }
+        ],
+        "medium": [
+          {
+            "question": "An object measures 4 large blocks or 8 small blocks. How many small blocks equal 1 large block?",
+            "answer": "2 small blocks",
+            "explanation": "4 large = 8 small, so 1 large = 2 small."
+          },
+          {
+            "question": "A snake is 3 feet long. Measured in yards (1 yard = 3 feet), how many yards?",
+            "answer": "1 yard",
+            "explanation": "3 feet = 1 yard."
+          },
+          {
+            "question": "Would you get a higher or lower number measuring a room in inches versus yards?",
+            "answer": "Higher in inches",
+            "explanation": "Inches are smaller units; you need more of them to cover the same length."
+          },
+          {
+            "question": "A stick is 10 cm or about 4 inches. About how many centimeters are in 1 inch?",
+            "answer": "About 2.5 cm",
+            "explanation": "10 cm / 4 inches = 2.5 cm per inch."
+          },
+          {
+            "question": "Jake measured a table as 60 cm. Lisa measured the same table as 2 feet. Can both be right?",
+            "answer": "Approximately yes (60 cm is about 2 feet)",
+            "explanation": "1 foot is about 30 cm, so 2 feet is about 60 cm. Both measurements are approximately correct."
+          }
+        ],
+        "hard": [
+          {
+            "question": "An object measured in feet gives 6. The same object measured in yards gives 2. What is the relationship between feet and yards?",
+            "answer": "1 yard = 3 feet",
+            "explanation": "6 feet / 2 yards = 3. So 1 yard = 3 feet."
+          },
+          {
+            "question": "If a hallway is 9 meters, how many centimeters is that?",
+            "answer": "900 cm",
+            "explanation": "1 meter = 100 cm. 9 x 100 = 900 cm."
+          },
+          {
+            "question": "You measure a paper clip as 3 cm or 30 mm. Are both measurements consistent? (1 cm = 10 mm)",
+            "answer": "Yes",
+            "explanation": "3 cm = 30 mm. They represent the same length in different units."
+          },
+          {
+            "question": "A tree is 4 meters tall. Is it more, less, or equal to 400 cm?",
+            "answer": "Equal; 4 meters = 400 cm",
+            "explanation": "1 meter = 100 cm. 4 x 100 = 400 cm. Equal."
+          },
+          {
+            "question": "You measure a desk with a 30-cm ruler and need 2.5 ruler lengths. How long is the desk?",
+            "answer": "75 cm",
+            "explanation": "2.5 x 30 = 75 cm."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.3",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Estimate Lengths Using Inches, Feet, Centimeters, and Meters",
+      "explanation": "Students estimate lengths using units of inches, feet, centimeters, and meters. Good estimating relies on benchmark reference lengths (e.g., a fingernail is about 1 cm; a door is about 1 meter wide; a classroom is about 10 meters long).",
+      "questions": {
+        "easy": [
+          {
+            "question": "About how long is a pencil: 7 inches, 7 feet, or 7 meters?",
+            "answer": "7 inches",
+            "explanation": "A pencil is about 7 inches long. 7 feet would be as tall as a person!"
+          },
+          {
+            "question": "About how tall is a door: 2 meters or 20 meters?",
+            "answer": "2 meters",
+            "explanation": "A standard door is about 2 meters (about 6.5 feet) tall."
+          },
+          {
+            "question": "About how long is a classroom: 10 meters or 100 meters?",
+            "answer": "About 10 meters",
+            "explanation": "A typical classroom is about 8-10 meters long."
+          },
+          {
+            "question": "Is a paper clip about 3 cm or 30 cm long?",
+            "answer": "About 3 cm",
+            "explanation": "A standard paper clip is about 3 cm long."
+          },
+          {
+            "question": "About how long is a school bus: 10 meters or 1 meter?",
+            "answer": "About 10 meters",
+            "explanation": "A school bus is roughly 10-12 meters long."
+          }
+        ],
+        "medium": [
+          {
+            "question": "You estimate a book is 25 cm long. The actual measurement is 28 cm. How far off was your estimate?",
+            "answer": "3 cm",
+            "explanation": "28 - 25 = 3 cm. Your estimate was 3 cm short."
+          },
+          {
+            "question": "A hallway is about 20 meters long. Estimate in feet. (1 meter is about 3 feet)",
+            "answer": "About 60 feet",
+            "explanation": "20 x 3 = 60 feet."
+          },
+          {
+            "question": "Is a car about 4 feet, 4 meters, or 4 cm long?",
+            "answer": "About 4 meters",
+            "explanation": "A car is approximately 4-5 meters (about 14-16 feet) long."
+          },
+          {
+            "question": "Which is a reasonable estimate for the height of a ceiling: 3 feet, 3 meters, or 30 meters?",
+            "answer": "3 meters",
+            "explanation": "Ceiling height is typically about 3 meters (approximately 10 feet)."
+          },
+          {
+            "question": "A stack of 10 books is about 30 cm tall. About how thick is each book?",
+            "answer": "About 3 cm",
+            "explanation": "30 cm / 10 books = 3 cm per book."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Estimate the length of your classroom in meters, then convert to centimeters.",
+            "answer": "About 8-10 meters; 800-1000 cm",
+            "explanation": "Typical classroom = 8-10 m. Multiply by 100 for centimeters."
+          },
+          {
+            "question": "A fence post is about 1.5 meters tall. There are 8 posts spaced 1.5 meters apart. About how long is the fence?",
+            "answer": "About 12 meters",
+            "explanation": "8 intervals x 1.5 m = 12 meters (measuring the spans between posts)."
+          },
+          {
+            "question": "Estimate: about how many centimeters long is a dollar bill?",
+            "answer": "About 15 cm",
+            "explanation": "A US dollar bill is about 15.6 cm (6.14 inches) long."
+          },
+          {
+            "question": "A student estimates a desk is 60 cm. She measures and finds 65 cm. Is her estimate reasonable?",
+            "answer": "Yes; it is only 5 cm off (about 8% error)",
+            "explanation": "60 and 65 are close. A reasonable estimate is within about 10-15% of the actual value."
+          },
+          {
+            "question": "About how many meters is the height of a two-story building?",
+            "answer": "About 6-8 meters",
+            "explanation": "Each story is roughly 3-4 meters. Two stories = about 6-8 meters."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.4",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure and Compare - How Much Longer Is One Object?",
+      "explanation": "Students measure objects to determine how much longer one is than another, expressing the difference in standard length units. They subtract to find the difference in measurements.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Pencil A is 12 cm. Pencil B is 7 cm. How much longer is A?",
+            "answer": "5 cm",
+            "explanation": "12 - 7 = 5 cm. A is 5 cm longer."
+          },
+          {
+            "question": "A ribbon is 18 inches. A string is 10 inches. How much shorter is the string?",
+            "answer": "8 inches",
+            "explanation": "18 - 10 = 8 inches shorter."
+          },
+          {
+            "question": "Book A is 9 inches tall. Book B is 6 inches tall. What is the difference?",
+            "answer": "3 inches",
+            "explanation": "9 - 6 = 3 inches."
+          },
+          {
+            "question": "A desk is 80 cm wide. A table is 65 cm wide. How much wider is the desk?",
+            "answer": "15 cm",
+            "explanation": "80 - 65 = 15 cm."
+          },
+          {
+            "question": "A snake is 24 cm. A worm is 8 cm. How much longer is the snake?",
+            "answer": "16 cm",
+            "explanation": "24 - 8 = 16 cm."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Sam's rope is 35 cm. Lily's rope is 27 cm. How much longer is Sam's?",
+            "answer": "8 cm",
+            "explanation": "35 - 27 = 8 cm."
+          },
+          {
+            "question": "A red crayon is 14 cm. A blue crayon is 9 cm. How much longer is the red crayon?",
+            "answer": "5 cm longer",
+            "explanation": "14 - 9 = 5 cm."
+          },
+          {
+            "question": "A fish tank is 90 cm long. A fish is 15 cm long. How much longer is the tank?",
+            "answer": "75 cm",
+            "explanation": "90 - 15 = 75 cm."
+          },
+          {
+            "question": "Ann's jump: 48 inches. Ben's jump: 39 inches. How much farther did Ann jump?",
+            "answer": "9 inches",
+            "explanation": "48 - 39 = 9 inches."
+          },
+          {
+            "question": "A room is 450 cm wide. A hallway is 210 cm wide. How much wider is the room?",
+            "answer": "240 cm",
+            "explanation": "450 - 210 = 240 cm."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Strip A = 1 foot 3 inches (= 15 inches). Strip B = 9 inches. How much longer is A?",
+            "answer": "6 inches",
+            "explanation": "15 - 9 = 6 inches."
+          },
+          {
+            "question": "Tower C is 79 cm. Tower A is 68 cm. How much taller is Tower C?",
+            "answer": "11 cm",
+            "explanation": "79 - 68 = 11 cm."
+          },
+          {
+            "question": "A path is 75 meters. A trail is 48 meters. How much longer is the path? Express in meters and centimeters.",
+            "answer": "27 meters; 2700 cm",
+            "explanation": "75 - 48 = 27 m. 27 m x 100 = 2700 cm."
+          },
+          {
+            "question": "A plant grew 14 cm in January and 19 cm in February. How much more did it grow in February?",
+            "answer": "5 cm",
+            "explanation": "19 - 14 = 5 cm."
+          },
+          {
+            "question": "Three ropes: A = 32 cm, B = 45 cm, C = 28 cm. How much longer is the longest than the shortest?",
+            "answer": "17 cm",
+            "explanation": "Longest = B = 45. Shortest = C = 28. 45 - 28 = 17 cm."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.5",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Solve Word Problems About Length Using Addition and Subtraction",
+      "explanation": "Students use addition and subtraction within 100 to solve word problems involving lengths, given in the same units. They may use drawings and equations with a symbol for the unknown to represent the problem.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A string is 25 cm. Another is 14 cm. How long are they together?",
+            "answer": "39 cm",
+            "explanation": "25 + 14 = 39 cm."
+          },
+          {
+            "question": "A worm is 18 cm. It stretches to 24 cm. How much did it grow?",
+            "answer": "6 cm",
+            "explanation": "24 - 18 = 6 cm."
+          },
+          {
+            "question": "A bookshelf is 30 cm wide. A book is 8 cm thick. How much shelf space is left?",
+            "answer": "22 cm",
+            "explanation": "30 - 8 = 22 cm."
+          },
+          {
+            "question": "Two ribbons: 12 inches and 7 inches. How long are they in total?",
+            "answer": "19 inches",
+            "explanation": "12 + 7 = 19 inches."
+          },
+          {
+            "question": "A plant is 15 cm tall. It grows 9 more cm. How tall is it now?",
+            "answer": "24 cm",
+            "explanation": "15 + 9 = 24 cm."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A rope is 45 cm. Jake cuts off 17 cm. How much is left?",
+            "answer": "28 cm",
+            "explanation": "45 - 17 = 28 cm."
+          },
+          {
+            "question": "A fence is 62 feet long. Ann painted 38 feet. How much is unpainted?",
+            "answer": "24 feet",
+            "explanation": "62 - 38 = 24 feet."
+          },
+          {
+            "question": "Carlos walked 38 meters to school and 27 meters to the park. How far did he walk in all?",
+            "answer": "65 meters",
+            "explanation": "38 + 27 = 65 meters."
+          },
+          {
+            "question": "A jump rope needs to be 100 inches. It is currently 84 inches. How many more inches are needed?",
+            "answer": "16 inches",
+            "explanation": "100 - 84 = 16 inches."
+          },
+          {
+            "question": "A plank is 72 cm. It is cut into two pieces. One piece is 45 cm. How long is the other?",
+            "answer": "27 cm",
+            "explanation": "72 - 45 = 27 cm."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A path is 95 meters. Workers paved 47 meters on day 1 and 28 meters on day 2. How much is left?",
+            "answer": "20 meters",
+            "explanation": "47 + 28 = 75. 95 - 75 = 20 meters remaining."
+          },
+          {
+            "question": "A rope is cut into two equal pieces of 36 cm each. How long was the original rope?",
+            "answer": "72 cm",
+            "explanation": "36 + 36 = 72 cm."
+          },
+          {
+            "question": "A garden border needs 100 feet. Three sections: 28 ft, 35 ft, and an unknown. How long is the unknown?",
+            "answer": "37 feet",
+            "explanation": "28 + 35 = 63. 100 - 63 = 37 feet."
+          },
+          {
+            "question": "Ann is 52 inches tall. She grows 3 inches. Ben is 61 inches. How much shorter is Ann than Ben now?",
+            "answer": "6 inches shorter",
+            "explanation": "Ann's new height: 52 + 3 = 55 inches. 61 - 55 = 6 inches shorter."
+          },
+          {
+            "question": "A road is 800 meters. Three sections: 250 m, 320 m, and the rest. How long is the rest?",
+            "answer": "230 meters",
+            "explanation": "250 + 320 = 570. 800 - 570 = 230 meters."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.6",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Represent Sums and Differences on a Number Line",
+      "explanation": "Students represent whole-number sums and differences within 100 on a number line diagram. Addition is represented as a jump to the right; subtraction as a jump to the left. They use number lines to visualize and solve problems.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Show 7 + 5 on a number line. Start at 7, jump 5 right. Where do you land?",
+            "answer": "12",
+            "explanation": "7 + 5 = 12. Start at 7, jump 5 to the right, land on 12."
+          },
+          {
+            "question": "Show 15 - 4 on a number line. Start at 15, jump 4 left. Where do you land?",
+            "answer": "11",
+            "explanation": "15 - 4 = 11. Start at 15, jump 4 left to 11."
+          },
+          {
+            "question": "A number line shows a jump from 8 to 13. What addition equation does this show?",
+            "answer": "8 + 5 = 13",
+            "explanation": "The jump is 5 units to the right: 8 + 5 = 13."
+          },
+          {
+            "question": "Start at 20, jump back 7. Where are you?",
+            "answer": "13",
+            "explanation": "20 - 7 = 13."
+          },
+          {
+            "question": "Show 10 + 6 on a number line. Where do you land?",
+            "answer": "16",
+            "explanation": "Start at 10, jump 6 units right, land on 16. 10 + 6 = 16."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A number line jump goes from 35 to 52. What addition equation does this show?",
+            "answer": "35 + 17 = 52",
+            "explanation": "The jump is 52 - 35 = 17 units to the right."
+          },
+          {
+            "question": "Use a number line to solve 68 - 25.",
+            "answer": "43",
+            "explanation": "Start at 68, jump 25 left: 68 - 25 = 43."
+          },
+          {
+            "question": "Show how to find 47 + 36 on a number line.",
+            "answer": "47 + 36 = 83",
+            "explanation": "Start at 47, jump 30 to 77, then jump 6 to 83."
+          },
+          {
+            "question": "A number line shows a start at 100 and a jump back to 64. What subtraction equation is shown?",
+            "answer": "100 - 36 = 64",
+            "explanation": "The jump back is 36 units: 100 - 36 = 64."
+          },
+          {
+            "question": "Find 80 - 33 on a number line.",
+            "answer": "47",
+            "explanation": "Start at 80, jump back 30 to 50, then back 3 to 47."
+          }
+        ],
+        "hard": [
+          {
+            "question": "On a number line, start at 15, jump 28 right, then jump 14 left. Where do you end? Write the equation.",
+            "answer": "29; 15 + 28 - 14 = 29",
+            "explanation": "15 + 28 = 43; 43 - 14 = 29."
+          },
+          {
+            "question": "A jump on a number line ends at 91 and started at 54. Was it addition or subtraction? How far was the jump?",
+            "answer": "Addition (jump right) of 37",
+            "explanation": "91 - 54 = 37. Since the endpoint is greater, it was an addition jump."
+          },
+          {
+            "question": "Model 100 - 67 by counting up from 67 to 100 on a number line.",
+            "answer": "33; 67 + 33 = 100",
+            "explanation": "67 + 3 = 70; 70 + 30 = 100. Total jump: 3 + 30 = 33."
+          },
+          {
+            "question": "Two jumps: first +42, then -19. Start at 25. Where do you end?",
+            "answer": "48",
+            "explanation": "25 + 42 = 67; 67 - 19 = 48."
+          },
+          {
+            "question": "A mystery start point: a +36 jump lands on 85. What was the starting number?",
+            "answer": "49",
+            "explanation": "85 - 36 = 49. The start was 49."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.7",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Tell and Write Time to the Nearest 5 Minutes (a.m./p.m.)",
+      "explanation": "Students tell and write time from analog and digital clocks to the nearest 5 minutes, using a.m. and p.m. They know that each number on the clock face represents 5 minutes, a.m. is midnight to noon (morning), and p.m. is noon to midnight (afternoon/evening).",
+      "questions": {
+        "easy": [
+          {
+            "question": "The clock shows: hour hand on 4, minute hand on 12. What time is it?",
+            "answer": "4:00",
+            "explanation": "4 o'clock. Minute hand on 12 = exactly on the hour."
+          },
+          {
+            "question": "The time is 3:30. Is the minute hand on 6 or 12?",
+            "answer": "6",
+            "explanation": "3:30 = half past 3. The minute hand points to 6."
+          },
+          {
+            "question": "What time is 15 minutes after 2:00?",
+            "answer": "2:15",
+            "explanation": "15 minutes past 2 = 2:15. The minute hand points to 3."
+          },
+          {
+            "question": "Is 7:45 a.m. morning or evening?",
+            "answer": "Morning",
+            "explanation": "a.m. = morning (midnight to noon)."
+          },
+          {
+            "question": "Write 8:30 p.m. in words.",
+            "answer": "Eight thirty in the evening",
+            "explanation": "8:30 p.m. = eight thirty in the evening."
+          }
+        ],
+        "medium": [
+          {
+            "question": "The minute hand points to 7. How many minutes does this show?",
+            "answer": "35 minutes",
+            "explanation": "Each number = 5 minutes. 7 x 5 = 35 minutes."
+          },
+          {
+            "question": "What time is shown: hour hand just past 6, minute hand on 4?",
+            "answer": "6:20",
+            "explanation": "Minute hand on 4: 4 x 5 = 20 minutes. Time = 6:20."
+          },
+          {
+            "question": "School starts at 8:05 a.m. Write this in words.",
+            "answer": "Eight oh five in the morning",
+            "explanation": "8:05 a.m. = eight oh five in the morning."
+          },
+          {
+            "question": "The minute hand is on 9. The hour is 2. What time is it?",
+            "answer": "2:45",
+            "explanation": "9 x 5 = 45 minutes. Time = 2:45."
+          },
+          {
+            "question": "What time is 30 minutes after 4:25?",
+            "answer": "4:55",
+            "explanation": "4:25 + 30 minutes = 4:55."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Soccer practice starts at 3:15 p.m. and ends at 4:45 p.m. How long is practice?",
+            "answer": "1 hour 30 minutes",
+            "explanation": "3:15 to 4:15 = 1 hour. 4:15 to 4:45 = 30 minutes. Total: 1 hr 30 min."
+          },
+          {
+            "question": "Sam woke at 7:20 a.m. and arrived at school at 8:05 a.m. How long did the trip take?",
+            "answer": "45 minutes",
+            "explanation": "7:20 to 8:00 = 40 min; 8:00 to 8:05 = 5 min. Total: 45 min."
+          },
+          {
+            "question": "A movie starts at 6:35 p.m. and lasts 1 hour 25 minutes. When does it end?",
+            "answer": "8:00 p.m.",
+            "explanation": "6:35 + 1 hour = 7:35; 7:35 + 25 min = 8:00 p.m."
+          },
+          {
+            "question": "Is 11:55 a.m. closer to noon or midnight?",
+            "answer": "Noon",
+            "explanation": "11:55 a.m. is 5 minutes before noon, which is far closer to noon than to midnight."
+          },
+          {
+            "question": "The time is 2:50 p.m. What time will it be in 25 minutes?",
+            "answer": "3:15 p.m.",
+            "explanation": "2:50 + 10 = 3:00; 3:00 + 15 = 3:15 p.m."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.8",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Solve Word Problems with Money (Dollars, Quarters, Dimes, Nickels, Pennies)",
+      "explanation": "Students solve word problems involving dollar bills, quarters (25 cents), dimes (10 cents), nickels (5 cents), and pennies (1 cent). They use the $ and cent symbols correctly and understand that 100 cents = 1 dollar.",
+      "questions": {
+        "easy": [
+          {
+            "question": "You have 2 dimes and 1 nickel. How much money do you have?",
+            "answer": "25 cents",
+            "explanation": "2 dimes = 20 cents; 1 nickel = 5 cents; 20 + 5 = 25 cents."
+          },
+          {
+            "question": "How much is 1 quarter?",
+            "answer": "25 cents",
+            "explanation": "A quarter = 25 cents."
+          },
+          {
+            "question": "You have 3 nickels. How much is that?",
+            "answer": "15 cents",
+            "explanation": "3 x 5 = 15 cents."
+          },
+          {
+            "question": "A pencil costs 10 cents. You pay with a dime. How much change do you get?",
+            "answer": "0 cents (exact change)",
+            "explanation": "1 dime = 10 cents. Exact amount - no change needed."
+          },
+          {
+            "question": "How many pennies equal 1 dime?",
+            "answer": "10 pennies",
+            "explanation": "1 dime = 10 cents = 10 pennies."
+          }
+        ],
+        "medium": [
+          {
+            "question": "You have 1 quarter, 2 dimes, 1 nickel. How much total?",
+            "answer": "50 cents",
+            "explanation": "25 + 20 + 5 = 50 cents."
+          },
+          {
+            "question": "A toy costs 67 cents. You pay with 3 quarters (75 cents). How much change?",
+            "answer": "8 cents",
+            "explanation": "75 - 67 = 8 cents."
+          },
+          {
+            "question": "How many nickels equal 1 dollar?",
+            "answer": "20 nickels",
+            "explanation": "100 cents / 5 cents = 20 nickels."
+          },
+          {
+            "question": "Sam has $1.00. He buys a snack for 62 cents. How much is left?",
+            "answer": "38 cents",
+            "explanation": "100 - 62 = 38 cents."
+          },
+          {
+            "question": "List two ways to make 50 cents using quarters, dimes, and nickels.",
+            "answer": "2 quarters; or 5 dimes; or 1 quarter + 2 dimes + 1 nickel (plus other valid combos)",
+            "explanation": "Many valid combinations: 2 x 25 = 50; 5 x 10 = 50; 1 quarter + 2 dimes + 1 nickel = 25+20+5 = 50."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Ana saves $1.35. She spends $0.80. How much does she have left?",
+            "answer": "$0.55 (55 cents)",
+            "explanation": "135 - 80 = 55 cents = $0.55."
+          },
+          {
+            "question": "A book costs $3.50. Tom has 2 one-dollar bills and 6 quarters. Does he have enough?",
+            "answer": "Yes - exactly $3.50",
+            "explanation": "2 dollars + 6 quarters (6 x 25 = $1.50) = $2.00 + $1.50 = $3.50. Exactly enough."
+          },
+          {
+            "question": "Three items cost 35 cents, 48 cents, and 27 cents. What is the total?",
+            "answer": "$1.10",
+            "explanation": "35 + 48 + 27 = 110 cents = $1.10."
+          },
+          {
+            "question": "Ali has 1 dollar, 3 quarters, 2 dimes, 1 penny. How much total?",
+            "answer": "$1.96",
+            "explanation": "100 + 75 + 20 + 1 = 196 cents = $1.96."
+          },
+          {
+            "question": "A snack costs $0.85. You have 3 quarters and 2 dimes. Do you have enough? How much extra or short?",
+            "answer": "Yes; 10 cents extra",
+            "explanation": "3 quarters = 75 cents; 2 dimes = 20 cents; total = 95 cents. 95 - 85 = 10 cents extra."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.9",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Generate Measurement Data; Make a Line Plot",
+      "explanation": "Students measure objects using rulers and generate measurement data. They display data on a line plot - a number line with X marks above each value - and answer questions about the data, including finding the range and most frequent value.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A line plot shows 4 Xs above 3 and 2 Xs above 4. How many objects measured 3?",
+            "answer": "4",
+            "explanation": "4 Xs above 3 means 4 objects were measured at 3 units."
+          },
+          {
+            "question": "A line plot has Xs at: 5 (3 Xs), 6 (5 Xs), 7 (2 Xs). Which measurement is most common?",
+            "answer": "6",
+            "explanation": "6 has the most Xs (5), making it the most common measurement."
+          },
+          {
+            "question": "A line plot shows crayons: 5 cm (2 Xs), 7 cm (3 Xs), 9 cm (1 X). How many crayons were measured?",
+            "answer": "6",
+            "explanation": "2 + 3 + 1 = 6 crayons total."
+          },
+          {
+            "question": "What is the longest measurement on a line plot with Xs at 4, 5, 6, and 7?",
+            "answer": "7",
+            "explanation": "7 is the largest number with an X. It is the longest measurement."
+          },
+          {
+            "question": "What is the shortest measurement on a line plot with Xs at 8, 9, 10, 11?",
+            "answer": "8",
+            "explanation": "8 is the smallest number with an X. It is the shortest measurement."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Five crayons measure: 6, 8, 6, 7, 8 cm. On a line plot, how many Xs go above 6?",
+            "answer": "2 Xs",
+            "explanation": "Two crayons measured 6 cm, so 2 Xs go above 6."
+          },
+          {
+            "question": "A class measured pencils: 14, 15, 14, 16, 15, 14 cm. Which length appears most often?",
+            "answer": "14 cm",
+            "explanation": "14 appears 3 times, more than any other length."
+          },
+          {
+            "question": "A line plot shows pencil lengths 10-15 cm: 3 Xs at 12, 2 at 13, 1 at 11. How many pencils were measured?",
+            "answer": "6",
+            "explanation": "3 + 2 + 1 = 6 pencils."
+          },
+          {
+            "question": "Data: 5, 6, 5, 7, 5, 6, 7. Describe what a line plot would look like.",
+            "answer": "5: 3 Xs, 6: 2 Xs, 7: 2 Xs",
+            "explanation": "Count each value: 5 appears 3 times, 6 appears 2 times, 7 appears 2 times."
+          },
+          {
+            "question": "A line plot: 10 cm (1 X), 11 cm (3 Xs), 12 cm (2 Xs). How many more objects measured 11 than 10?",
+            "answer": "2 more",
+            "explanation": "11 cm: 3 Xs. 10 cm: 1 X. Difference: 3 - 1 = 2."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Line plot: 8 cm (2 Xs), 9 cm (4 Xs), 10 cm (3 Xs), 11 cm (1 X). How many objects total?",
+            "answer": "10",
+            "explanation": "2 + 4 + 3 + 1 = 10 objects."
+          },
+          {
+            "question": "Using the same data above, how many objects measured more than 9 cm?",
+            "answer": "4 (3 at 10 cm + 1 at 11 cm)",
+            "explanation": "10 cm: 3 Xs + 11 cm: 1 X = 4 objects longer than 9 cm."
+          },
+          {
+            "question": "8 items measured: 5, 5, 6, 7, 7, 7, 8, 8. Which length appears most often?",
+            "answer": "7",
+            "explanation": "7 appears 3 times - more than any other length."
+          },
+          {
+            "question": "Line plot: 3 cm (2 Xs), 4 cm (5 Xs), 5 cm (3 Xs). How many more objects measured 4 cm than 3 cm?",
+            "answer": "3 more",
+            "explanation": "5 - 2 = 3 more objects measured 4 cm."
+          },
+          {
+            "question": "Data: 10, 12, 11, 10, 12, 12, 11, 10. Describe the line plot and identify the most common measurement(s).",
+            "answer": "10: 3 Xs, 11: 2 Xs, 12: 3 Xs. Most common: 10 and 12 (tied at 3 each)",
+            "explanation": "10 and 12 both appear 3 times - they are tied for most common (the mode)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.MD.10",
+      "domain": "2.MD",
+      "domainName": "Measurement and Data",
+      "title": "Draw Picture Graphs and Bar Graphs; Solve Problems from Graphs",
+      "explanation": "Students draw picture graphs and bar graphs (with single-unit scale) to represent data with up to four categories. They solve addition and subtraction problems using information from graphs, including comparisons of how many more or fewer.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A bar graph shows: dogs = 6, cats = 4. How many more dogs than cats?",
+            "answer": "2",
+            "explanation": "6 - 4 = 2 more dogs."
+          },
+          {
+            "question": "A picture graph shows apples = 3, oranges = 5. How many fruits in all?",
+            "answer": "8",
+            "explanation": "3 + 5 = 8."
+          },
+          {
+            "question": "Which is the most popular pet in: dogs = 8, cats = 5, fish = 3?",
+            "answer": "Dogs",
+            "explanation": "8 is the highest count."
+          },
+          {
+            "question": "A bar graph shows: red = 7, blue = 7. What does this tell you?",
+            "answer": "Equal numbers chose red and blue",
+            "explanation": "Both bars are the same height - equal counts."
+          },
+          {
+            "question": "Total students in a survey: Mon = 4, Tue = 6, Wed = 5. How many in all?",
+            "answer": "15",
+            "explanation": "4 + 6 + 5 = 15."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Favorite seasons: Spring=12, Summer=18, Fall=9, Winter=6. Which season got the most votes?",
+            "answer": "Summer",
+            "explanation": "18 is the highest count."
+          },
+          {
+            "question": "How many more voted for Summer than Winter in the graph above?",
+            "answer": "12 more",
+            "explanation": "18 - 6 = 12."
+          },
+          {
+            "question": "Total votes (Spring=12, Summer=18, Fall=9, Winter=6):",
+            "answer": "45",
+            "explanation": "12 + 18 + 9 + 6 = 45."
+          },
+          {
+            "question": "A class surveyed 30 students. 12 liked pizza and 8 liked salad. How many liked other foods?",
+            "answer": "10",
+            "explanation": "30 - 12 - 8 = 10."
+          },
+          {
+            "question": "A picture graph: each symbol = 2 students. There are 4 symbols for cats. How many students chose cats?",
+            "answer": "8",
+            "explanation": "4 symbols x 2 = 8 students."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Bar graph: soccer=15, basketball=9, tennis=6, swimming=12. How many more chose soccer+basketball than tennis+swimming?",
+            "answer": "6 more",
+            "explanation": "Soccer+basketball: 15+9=24. Tennis+swimming: 6+12=18. 24-18=6."
+          },
+          {
+            "question": "Bar graph scores: Ana=85, Ben=70, Carl=90, Dee=75. How much higher is the highest score than the lowest?",
+            "answer": "20",
+            "explanation": "Highest: Carl=90. Lowest: Ben=70. 90-70=20."
+          },
+          {
+            "question": "A pictograph has 3 rows: Row 1 = 4 symbols, Row 2 = 6 symbols, Row 3 = 2 symbols. Each symbol = 3 students. How many students total?",
+            "answer": "36",
+            "explanation": "(4+6+2) x 3 = 12 x 3 = 36 students."
+          },
+          {
+            "question": "28 students surveyed. 10 like math, 8 like reading. How many like something else?",
+            "answer": "10",
+            "explanation": "28 - 10 - 8 = 10 students."
+          },
+          {
+            "question": "Bar graph: cats=12, dogs=18, birds=6, fish=9. How many more dogs than birds and fish combined?",
+            "answer": "3 more",
+            "explanation": "Birds + fish = 6 + 9 = 15. Dogs = 18. 18 - 15 = 3."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.G.1",
+      "domain": "2.G",
+      "domainName": "Geometry",
+      "title": "Recognize and Draw Shapes; Identify Triangles, Quadrilaterals, Pentagons, Hexagons, Cubes",
+      "explanation": "Students recognize and draw shapes based on specified attributes (e.g., a given number of angles or sides). They identify triangles (3 sides), quadrilaterals (4 sides), pentagons (5 sides), hexagons (6 sides), and cubes (3D shape with 6 square faces, 8 vertices, 12 edges).",
+      "questions": {
+        "easy": [
+          {
+            "question": "How many sides does a pentagon have?",
+            "answer": "5",
+            "explanation": "A pentagon has 5 sides (penta = five)."
+          },
+          {
+            "question": "How many sides does a hexagon have?",
+            "answer": "6",
+            "explanation": "A hexagon has 6 sides (hexa = six)."
+          },
+          {
+            "question": "A quadrilateral has how many sides?",
+            "answer": "4",
+            "explanation": "Quadri = four. A quadrilateral has 4 sides."
+          },
+          {
+            "question": "Name two shapes that are quadrilaterals.",
+            "answer": "Square and rectangle (also: rhombus, trapezoid, parallelogram)",
+            "explanation": "Any 4-sided polygon is a quadrilateral."
+          },
+          {
+            "question": "A cube has how many faces?",
+            "answer": "6",
+            "explanation": "A cube has 6 square faces."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A hexagon - how many corners does it have?",
+            "answer": "6 corners",
+            "explanation": "A regular hexagon has 6 sides and 6 corners (vertices)."
+          },
+          {
+            "question": "What is the difference between a square and a rhombus?",
+            "answer": "A square has 4 right angles; a rhombus has 4 equal sides but angles may not be right.",
+            "explanation": "Both are quadrilaterals with 4 equal sides, but a square must have right angles."
+          },
+          {
+            "question": "How many edges does a cube have?",
+            "answer": "12 edges",
+            "explanation": "A cube has 12 edges: 4 on top, 4 on bottom, 4 vertical."
+          },
+          {
+            "question": "Is a stop sign a hexagon or an octagon?",
+            "answer": "Octagon",
+            "explanation": "A stop sign has 8 sides = octagon (octo = eight)."
+          },
+          {
+            "question": "Name a quadrilateral that is NOT a rectangle.",
+            "answer": "Rhombus, parallelogram, or trapezoid",
+            "explanation": "Many 4-sided shapes are not rectangles. A rhombus has 4 equal sides but no right angles."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A shape has 5 equal sides. What is it? Is it a polygon?",
+            "answer": "Regular pentagon; yes, it is a polygon",
+            "explanation": "5 equal sides = regular pentagon. All closed figures with straight sides are polygons."
+          },
+          {
+            "question": "Can a triangle be a quadrilateral?",
+            "answer": "No",
+            "explanation": "A triangle has 3 sides; a quadrilateral has 4. They cannot be the same shape."
+          },
+          {
+            "question": "How many vertices (corners) does a cube have?",
+            "answer": "8 vertices",
+            "explanation": "A cube has 8 corners: 4 on the top face and 4 on the bottom face."
+          },
+          {
+            "question": "Name two shapes that have all sides equal AND all angles equal.",
+            "answer": "Equilateral triangle and square (also: regular pentagon, regular hexagon)",
+            "explanation": "Equilateral triangle: 3 equal sides and angles. Square: 4 equal sides and right angles."
+          },
+          {
+            "question": "How is a pentagon different from a hexagon?",
+            "answer": "Pentagon has 5 sides and 5 corners; hexagon has 6 sides and 6 corners.",
+            "explanation": "Penta = 5, hexa = 6. They differ in the number of sides and corners."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.G.2",
+      "domain": "2.G",
+      "domainName": "Geometry",
+      "title": "Partition Rectangles into Same-Size Squares; Count Them",
+      "explanation": "Students partition a rectangle into rows and columns of same-size unit squares and count to find the total. They write addition equations with equal addends (one per row) to represent the total. This lays the foundation for understanding area.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A rectangle is divided into 2 rows and 3 columns of squares. How many squares total?",
+            "answer": "6",
+            "explanation": "2 rows x 3 columns: 3 + 3 = 6 squares."
+          },
+          {
+            "question": "A rectangle has 4 rows of 2 squares each. How many squares?",
+            "answer": "8",
+            "explanation": "4 rows of 2: 2 + 2 + 2 + 2 = 8 squares."
+          },
+          {
+            "question": "A 3 x 3 grid - how many squares?",
+            "answer": "9",
+            "explanation": "3 rows of 3: 3 + 3 + 3 = 9 squares."
+          },
+          {
+            "question": "A rectangle has 1 row of 5 squares. How many squares?",
+            "answer": "5",
+            "explanation": "1 x 5 = 5 squares."
+          },
+          {
+            "question": "Count the squares in a 2 x 4 grid.",
+            "answer": "8",
+            "explanation": "2 rows of 4: 4 + 4 = 8 squares."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Divide a rectangle into 3 rows and 4 columns. Write the addition equation.",
+            "answer": "4 + 4 + 4 = 12",
+            "explanation": "3 rows of 4 squares: 4 + 4 + 4 = 12 squares."
+          },
+          {
+            "question": "A rectangle has 20 squares in 4 equal rows. How many squares are in each row?",
+            "answer": "5",
+            "explanation": "20 / 4 = 5 squares per row."
+          },
+          {
+            "question": "How many squares in a 5 x 4 rectangle grid? Write an equation.",
+            "answer": "20; 4 + 4 + 4 + 4 + 4 = 20",
+            "explanation": "5 rows of 4 squares each."
+          },
+          {
+            "question": "A 4 x 4 grid - how many squares? How many per row?",
+            "answer": "16 total; 4 per row",
+            "explanation": "4 rows of 4: 4 + 4 + 4 + 4 = 16."
+          },
+          {
+            "question": "A tile floor is 3 rows by 6 tiles wide. How many tiles?",
+            "answer": "18",
+            "explanation": "3 rows of 6: 6 + 6 + 6 = 18 tiles."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A rectangle has 24 squares in 4 equal rows. How many are in each row?",
+            "answer": "6",
+            "explanation": "24 / 4 = 6 squares per row."
+          },
+          {
+            "question": "Two rectangles: one is 3 x 5, the other is 5 x 3. Do they have the same number of squares?",
+            "answer": "Yes, both have 15",
+            "explanation": "3 rows of 5 = 15. 5 rows of 3 = 15. Rotating a rectangle does not change the count."
+          },
+          {
+            "question": "A grid has 6 rows of 4 squares. How many total? If you add one more row, how many?",
+            "answer": "24; then 28",
+            "explanation": "6 x 4 = 24. Adding a row of 4: 24 + 4 = 28."
+          },
+          {
+            "question": "A rectangle is split into 3 rows and some columns. There are 18 squares. How many columns?",
+            "answer": "6 columns",
+            "explanation": "18 / 3 = 6 columns."
+          },
+          {
+            "question": "A floor is 4 squares wide and 7 squares long. How many tiles are needed?",
+            "answer": "28",
+            "explanation": "4 rows of 7: 7 + 7 + 7 + 7 = 28 tiles."
+          }
+        ]
+      }
+    },
+    {
+      "code": "2.G.3",
+      "domain": "2.G",
+      "domainName": "Geometry",
+      "title": "Partition into Halves, Thirds, Fourths; Equal Shares",
+      "explanation": "Students partition circles and rectangles into two, three, or four equal shares and describe them using the vocabulary: halves, thirds, fourths, quarters. They understand that the more equal parts, the smaller each part; and that equal shares of identical wholes need not have the same shape.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A circle is divided into 3 equal parts. What is each part called?",
+            "answer": "A third",
+            "explanation": "3 equal parts = thirds. Each is one-third of the whole."
+          },
+          {
+            "question": "A rectangle is divided into 4 equal parts. What is each part called?",
+            "answer": "A fourth or a quarter",
+            "explanation": "4 equal parts = fourths or quarters. Each is one-fourth."
+          },
+          {
+            "question": "Which is bigger: 1/2 of a pizza or 1/4 of the same pizza?",
+            "answer": "1/2",
+            "explanation": "Fewer pieces means each is larger. Half > quarter."
+          },
+          {
+            "question": "3 thirds = how many wholes?",
+            "answer": "1 whole",
+            "explanation": "3/3 = 1 whole."
+          },
+          {
+            "question": "A sandwich is cut into thirds. You eat one piece. How much did you eat?",
+            "answer": "One-third (1/3)",
+            "explanation": "1 out of 3 equal pieces = one-third."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Which is smallest: one-half, one-third, or one-fourth?",
+            "answer": "One-fourth",
+            "explanation": "More pieces means each is smaller. 1/4 < 1/3 < 1/2."
+          },
+          {
+            "question": "A pie is cut into 3 equal pieces. Two pieces are eaten. How much is left?",
+            "answer": "One-third",
+            "explanation": "3 pieces - 2 eaten = 1 piece left. 1/3 of the pie remains."
+          },
+          {
+            "question": "Kate has 1/4 of a cake. Tom has 1/2. Who has more?",
+            "answer": "Tom",
+            "explanation": "1/2 > 1/4. Tom has more cake."
+          },
+          {
+            "question": "A rectangle is cut into thirds horizontally. Each strip is what fraction of the whole?",
+            "answer": "One-third (1/3)",
+            "explanation": "Three equal horizontal strips; each is 1/3 of the rectangle."
+          },
+          {
+            "question": "4 fourths = ___ halves = ___ whole",
+            "answer": "2 halves = 1 whole",
+            "explanation": "4/4 = 1. And 2/2 = 1. Both equal 1 whole."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Can a circle be divided into thirds? How?",
+            "answer": "Yes, by making 3 equal-sized \"pie slices\" (each 120 degrees)",
+            "explanation": "Divide the circle into 3 equal wedges. Each is one-third of the circle."
+          },
+          {
+            "question": "A shape is divided into 4 equal parts that are not all the same shape. Can these still be called fourths?",
+            "answer": "Yes",
+            "explanation": "Equal shares need equal area, not the same shape. They are still fourths."
+          },
+          {
+            "question": "You have 3 cookies. You eat 1/3 of your total. How many did you eat?",
+            "answer": "1 cookie",
+            "explanation": "1/3 of 3 = 1 cookie."
+          },
+          {
+            "question": "A rectangle is divided into 8 equal parts (4 rows, 2 columns). What fraction is each part?",
+            "answer": "One-eighth (1/8)",
+            "explanation": "8 equal parts = eighths. Each part is 1/8 of the whole."
+          },
+          {
+            "question": "Which is greater: 2/4 or 1/2? Explain.",
+            "answer": "They are equal",
+            "explanation": "2/4 = 1/2. Two fourths equals one half - they represent the same amount."
+          }
+        ]
+      }
+    }
+  ]
+}

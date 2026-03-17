@@ -1,0 +1,64 @@
+'use client'
+
+import { cn } from '@/lib/utils'
+
+interface Option {
+  label: string
+  value: string
+}
+
+interface AnswerGridProps {
+  options: Option[]
+  selected: string | null
+  onSelect: (value: string) => void
+  onSubmit: () => void
+  disabled?: boolean
+}
+
+const OPTION_COLORS = [
+  'bg-blue-100 border-blue-300 text-blue-800 hover:bg-blue-200',
+  'bg-purple-100 border-purple-300 text-purple-800 hover:bg-purple-200',
+  'bg-green-100 border-green-300 text-green-800 hover:bg-green-200',
+  'bg-orange-100 border-orange-300 text-orange-800 hover:bg-orange-200',
+]
+
+export function AnswerGrid({ options, selected, onSelect, onSubmit, disabled }: AnswerGridProps) {
+  return (
+    <div className="w-full max-w-sm mx-auto space-y-3">
+      <div className="grid grid-cols-2 gap-3">
+        {options.map((option, i) => (
+          <button
+            key={`${i}-${option.value}`}
+            type="button"
+            onClick={() => !disabled && onSelect(option.value)}
+            disabled={disabled}
+            className={cn(
+              'min-h-16 py-2 px-3 rounded-2xl border-2 font-bold transition-all active:scale-95 flex flex-col items-center justify-center',
+              option.value.length > 12 ? 'text-sm' : 'text-lg',
+              selected === option.value
+                ? 'border-indigo-500 bg-indigo-100 text-indigo-800 scale-[0.97]'
+                : OPTION_COLORS[i % OPTION_COLORS.length],
+              disabled && 'cursor-not-allowed opacity-70'
+            )}
+          >
+            <span className="block text-xs font-normal opacity-60 mb-0.5">{option.label}</span>
+            <span className="leading-snug text-center">{option.value}</span>
+          </button>
+        ))}
+      </div>
+      <button
+        type="button"
+        onClick={onSubmit}
+        disabled={disabled || !selected}
+        className={cn(
+          'w-full h-14 rounded-xl text-lg font-bold text-white transition-all',
+          selected && !disabled
+            ? 'bg-indigo-600 hover:bg-indigo-700 active:scale-98'
+            : 'bg-muted text-muted-foreground cursor-not-allowed'
+        )}
+      >
+        Check answer ✓
+      </button>
+    </div>
+  )
+}

@@ -1,0 +1,39 @@
+================================================================================
+APP IDEA - MATH LEARNING APP FOR KIDS
+================================================================================
+
+OVERVIEW
+--------
+A math-focused app for kids built on scientifically proven educational methods.
+Features dynamic difficulty adjustment (rule-based + AI via Anthropic), an AI
+level finder using free diagnostic questions, and support for multi-step answer
+input.
+
+================================================================================
+STAGE 1 MVP
+================================================================================
+
+1. BRAND NAME
+   - Define app name, logo, and visual identity
+
+2. DOMAIN PURCHASE
+   - Secure domain for the web app
+
+3. CONTENT
+   - High-quality math content for Kindergarten through Grade 5
+   - Aligned with CCSSM standards
+
+4. WEB APP (Core Build)
+   - AI-powered level finder quiz
+   - Profile algorithm setup
+   - Database architecture
+   - Login / Sign-up flow
+   - Parent profile creation (supports one or multiple children per account)
+   - Payment setup (subscription or one-time)
+   - Child UI: very simple, visual, and engaging
+   - Parent UI: clean, minimal, easy to navigate
+
+5. MARKETING PLAN
+   - Go-to-market strategy for launch
+
+================================================================================

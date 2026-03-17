@@ -1,0 +1,1122 @@
+======================================================================================================================================
+USA MATH CURRICULUM STANDARDS BY GRADE LEVEL - REFERENCE TABLE
+Common Core State Standards for Mathematics (CCSSM)
+======================================================================================================================================
+
+Purpose: Structured math curriculum standards for each USA grade level (K–4),
+designed to power a learning app. Follows CCSSM. Each grade includes critical
+areas, learning expectations, content overview, and detailed standards by domain.
+
+Grades covered: Kindergarten, Grade 1, Grade 2, Grade 3, Grade 4
+Additional grades will be added as they are developed.
+
+======================================================================================================================================
+MATHEMATICAL PRACTICES  (Apply to ALL Grade Levels)
+======================================================================================================================================
+
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| MP#   | Standard Name                                     | Key Focus                                                                   |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 1     | Make sense of problems and persevere              | Explain the problem, analyze givens, plan a pathway, monitor progress,      |
+|       | in solving them.                                  | check answers with a different method, and ask "Does this make sense?"      |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 2     | Reason abstractly and quantitatively.             | Decontextualize (represent situations symbolically) and contextualize       |
+|       |                                                   | (connect symbols to referents); attend to units and meanings.               |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 3     | Construct viable arguments and critique           | Use assumptions and prior results to build logical arguments; identify      |
+|       | the reasoning of others.                          | flaws; listen to and evaluate others' arguments.                            |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 4     | Model with mathematics.                           | Apply math to real-world problems; use diagrams, tables, graphs,            |
+|       |                                                   | formulas; interpret results in context and revise models as needed.         |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 5     | Use appropriate tools strategically.              | Select and use tools (calculators, rulers, software) wisely; know           |
+|       |                                                   | their benefits and limits; use technology to deepen understanding.          |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 6     | Attend to precision.                              | Communicate clearly; use precise definitions and symbols; specify           |
+|       |                                                   | units; label axes; calculate accurately with appropriate precision.         |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 7     | Look for and make use of structure.               | Discern patterns and structure in expressions, equations, and figures;      |
+|       |                                                   | shift perspective; see complex objects as composed of simpler ones.         |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+| 8     | Look for and express regularity in                | Notice repeated calculations; seek general methods and shortcuts;           |
+|       | repeated reasoning.                               | maintain oversight while evaluating reasonableness of results.              |
++-------+---------------------------------------------------+-----------------------------------------------------------------------------+
+
+======================================================================================================================================
+GRADE OVERVIEW SUMMARY
+======================================================================================================================================
+
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+| Grade          | Critical Focus Areas                                    | Key Domains                                                 |
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+| Kindergarten   | 1. Whole numbers with sets of objects                   | Counting & Cardinality, Operations & Algebraic Thinking,    |
+|                | 2. Describing shapes and space                          | Number & Ops in Base Ten, Measurement & Data, Geometry      |
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+| Grade 1        | 1. Addition & subtraction within 20                     | Operations & Algebraic Thinking, Number & Ops in Base Ten,  |
+|                | 2. Place value (tens and ones)                          | Measurement & Data, Geometry                                |
+|                | 3. Linear measurement                                   |                                                             |
+|                | 4. Composing/decomposing shapes                         |                                                             |
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+| Grade 2        | 1. Base-ten notation (up to 1000)                       | Operations & Algebraic Thinking, Number & Ops in Base Ten,  |
+|                | 2. Fluency: addition & subtraction within 100           | Measurement & Data, Geometry                                |
+|                | 3. Standard units of measure                            |                                                             |
+|                | 4. Describing and analyzing shapes                      |                                                             |
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+| Grade 3        | 1. Multiplication & division within 100                 | Operations & Algebraic Thinking, Number & Ops in Base Ten,  |
+|                | 2. Fractions (unit fractions)                           | Number & Ops-Fractions, Measurement & Data, Geometry        |
+|                | 3. Area of rectangles                                   |                                                             |
+|                | 4. Two-dimensional shapes                               |                                                             |
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+| Grade 4        | 1. Multi-digit multiplication & division                | Operations & Algebraic Thinking, Number & Ops in Base Ten,  |
+|                | 2. Fraction equivalence & operations                    | Number & Ops-Fractions, Measurement & Data, Geometry        |
+|                | 3. Geometric figures classification                     |                                                             |
++----------------+---------------------------------------------------------+-------------------------------------------------------------+
+
+======================================================================================================================================
+KINDERGARTEN
+======================================================================================================================================
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CRITICAL AREAS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----+------------------------------------------+-----------------------------------------------------------------------------------------+
+| #   | Critical Area                            | Description                                                                             |
++-----+------------------------------------------+-----------------------------------------------------------------------------------------+
+| 1   | Number and Operations                    | Students use numbers, including written numerals, to represent quantities and solve     |
+|     |                                          | quantitative problems: counting objects in a set, counting out a given number of        |
+|     |                                          |   objects,                                                                              |
+|     |                                          | comparing sets or numerals, and modeling simple joining/separating situations with sets |
+|     |                                          | of objects or equations (e.g., 5 + 2 = 7 and 7 - 2 = 5).                                |
+|     |                                          | Students choose, combine, and apply effective strategies:                               |
+|     |                                          |   - Quickly recognizing the cardinalities of small sets of objects.                     |
+|     |                                          |   - Counting and producing sets of given sizes.                                         |
+|     |                                          |   - Counting the number of objects in combined sets.                                    |
+|     |                                          |   - Counting the number of objects that remain after some are taken away.               |
+|     |                                          | Note: Students should see addition and subtraction equations; writing equations         |
+|     |                                          | is encouraged but not required.                                                         |
++-----+------------------------------------------+-----------------------------------------------------------------------------------------+
+| 2   | Geometry                                 | Students describe their physical world using geometric ideas (shape, orientation,       |
+|     |                                          | spatial relations) and vocabulary. They identify, name, and describe 2-D shapes         |
+|     |                                          | (squares, triangles, circles, rectangles, hexagons) and 3-D shapes (cubes, cones,       |
+|     |                                          | cylinders, spheres). They use basic shapes and spatial reasoning to model objects       |
+|     |                                          | and construct more complex shapes.                                                      |
+|     |                                          | Note: More learning time in Kindergarten should be devoted to number than other topics. |
++-----+------------------------------------------+-----------------------------------------------------------------------------------------+
+
+Note: Detailed Standards (domain/cluster/code level) are not listed for Kindergarten
+      in the CCSSM source. Standards are embedded in the critical area descriptions above.
+
+======================================================================================================================================
+GRADE 1
+======================================================================================================================================
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CRITICAL AREAS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| #   | Critical Area                       | Description                                                                                  |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 1   | Addition and Subtraction            | Students develop strategies for adding and subtracting whole numbers using models            |
+|     |                                     | (discrete objects, length-based models) for add-to, take-from, put-together, take-apart,     |
+|     |                                     | and compare situations. They understand connections between counting and                     |
+|     |                                     | addition/subtraction. They use properties of addition (e.g., "making tens") and compare      |
+|     |                                     | a variety of solution strategies to build understanding of the relationship between          |
+|     |                                     | addition and subtraction. Goal: fluency within 20; solve problems within 100.                |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 2   | Place Value                         | Students develop efficient, accurate, and generalizable methods to add within 100 and        |
+|     |                                     | subtract multiples of 10. They compare whole numbers (at least to 100) to develop            |
+|     |                                     | understanding of relative sizes. They think of whole numbers 10–100 in terms of tens         |
+|     |                                     | and ones (recognizing 11–19 as a ten and some ones). Through number sense activities         |
+|     |                                     | they understand the order of counting numbers and their relative magnitudes.                 |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 3   | Measurement                         | Students develop understanding of the meaning and processes of measurement, including        |
+|     |                                     | iterating (building up the length of an object with equal-sized units) and the               |
+|     |                                     | transitivity principle for indirect measurement.                                             |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 4   | Geometry                            | Students compose and decompose plane or solid figures (e.g., two triangles → quadrilateral)  |
+|     |                                     | building understanding of part-whole relationships and properties of original and            |
+|     |                                     | composite shapes. They recognize shapes from different perspectives and orientations,        |
+|     |                                     | describe geometric attributes, and determine similarities and differences - laying           |
+|     |                                     | background for congruence and symmetry.                                                      |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CONTENT OVERVIEW
+--------------------------------------------------------------------------------------------------------------------------------------
+
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Domain                                   | Clusters / Topics                                                                          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Operations and Algebraic Thinking (1.OA) | - Represent and solve problems involving addition and subtraction.                         |
+|                                          | - Understand and apply properties of operations and the relationship between               |
+|                                          |   addition and subtraction.                                                                |
+|                                          | - Add and subtract within 20.                                                              |
+|                                          | - Work with addition and subtraction equations.                                            |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Number and Operations in Base Ten        | - Extend the counting sequence.                                                            |
+|   (1.NBT)                                | - Understand place value.                                                                  |
+|                                          | - Use place value understanding and properties of operations to add and subtract.          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Measurement and Data (1.MD)              | - Measure lengths indirectly and by iterating length units.                                |
+|                                          | - Tell and write time.                                                                     |
+|                                          | - Represent and interpret data.                                                            |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Geometry (1.G)                           | - Reason with shapes and their attributes.                                                 |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+DETAILED STANDARDS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| Code      | Cluster                                    | Standard Description                                                            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.1    | Represent and solve problems involving     | Use addition and subtraction within 20 to solve word problems involving         |
+|           | addition and subtraction.                  |   situations of                                                                 |
+|           |                                            | adding to, taking from, putting together, taking apart, and comparing, with     |
+|           |                                            |   unknowns in                                                                   |
+|           |                                            | all positions (e.g., by using objects, drawings, and equations with a symbol    |
+|           |                                            |   for the                                                                       |
+|           |                                            | unknown number to represent the problem). [See Glossary, Table 1.]              |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.2    | Represent and solve problems involving     | Solve word problems that call for addition of three whole numbers whose sum is  |
+|           | addition and subtraction.                  |   ≤ 20                                                                          |
+|           |                                            | (e.g., by using objects, drawings, and equations with a symbol for the unknown  |
+|           |                                            |   number).                                                                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.3    | Understand and apply properties of         | Apply properties of operations as strategies to add and subtract.               |
+|           | operations and the relationship between    | Note: Students need not use formal terms for these properties.                  |
+|           | addition and subtraction.                  | Examples:                                                                       |
+|           |                                            |   - If 8 + 3 = 11 is known, then 3 + 8 = 11 is also known. (Commutative         |
+|           |                                            |     property)                                                                   |
+|           |                                            |   - To add 2 + 6 + 4, add 6 + 4 first to make a ten, so 2 + 6 + 4 = 2 + 10 =    |
+|           |                                            |     12.                                                                         |
+|           |                                            |     (Associative property)                                                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.4    | Understand and apply properties of         | Understand subtraction as an unknown-addend problem.                            |
+|           | operations and the relationship between    | Example: Subtract 10 - 8 by finding the number that makes 10 when added to 8.   |
+|           | addition and subtraction.                  |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.5    | Add and subtract within 20.                | Relate counting to addition and subtraction (e.g., by counting on 2 to add 2).  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.6    | Add and subtract within 20.                | Add and subtract within 20, demonstrating fluency for addition and subtraction  |
+|           |                                            |   within 10.                                                                    |
+|           |                                            | Use strategies such as:                                                         |
+|           |                                            |   - Counting on.                                                                |
+|           |                                            |   - Making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14).                         |
+|           |                                            |   - Decomposing a number leading to a ten (e.g., 13 - 4 = 13 - 3 - 1 = 10 - 1   |
+|           |                                            |     = 9).                                                                       |
+|           |                                            |   - Using the relationship between addition and subtraction (8 + 4 = 12 → 12    |
+|           |                                            |     - 8 = 4).                                                                   |
+|           |                                            |   - Creating equivalent but easier or known sums (6 + 7 = 6 + 6 + 1 = 12 + 1    |
+|           |                                            |     = 13).                                                                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.7    | Work with addition and subtraction         | Understand the meaning of the equal sign, and determine if equations involving  |
+|           | equations.                                 |   addition                                                                      |
+|           |                                            | and subtraction are true or false.                                              |
+|           |                                            | Example: Which are true/false? 6 = 6, 7 = 8 - 1, 5 + 2 = 2 + 5, 4 + 1 = 5 + 2.  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.OA.8    | Work with addition and subtraction         | Determine the unknown whole number in an addition or subtraction equation       |
+|           | equations.                                 |   relating                                                                      |
+|           |                                            | three whole numbers.                                                            |
+|           |                                            | Example: Determine the unknown in 8 + ? = 11, 5 = _ - 3, 6 + 6 = _.             |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.NBT.1   | Extend the counting sequence.              | Count to 120, starting at any number less than 120. In this range, read and     |
+|           |                                            |   write                                                                         |
+|           |                                            | numerals and represent a number of objects with a written numeral.              |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.NBT.2   | Understand place value.                    | Understand that the two digits of a two-digit number represent amounts of tens  |
+|           |                                            |   and ones.                                                                     |
+|           |                                            | Understand the following special cases:                                         |
+|           |                                            |   a. 10 can be thought of as a bundle of ten ones - called a "ten."             |
+|           |                                            |   b. Numbers from 11 to 19 are composed of a ten and one, two, ... nine ones.   |
+|           |                                            |   c. Numbers 10, 20, 30, ..., 90 refer to one, two, ..., nine tens (and 0       |
+|           |                                            |     ones).                                                                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.NBT.3   | Understand place value.                    | Compare two two-digit numbers based on meanings of the tens and ones digits,    |
+|           |                                            |   recording                                                                     |
+|           |                                            | the results with the symbols >, =, and <.                                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.NBT.4   | Use place value understanding and          | Add within 100, including adding a two-digit number and a one-digit number, and |
+|           | properties of operations to add and        |   adding                                                                        |
+|           | subtract.                                  | a two-digit number and a multiple of 10, using concrete models or drawings and  |
+|           |                                            |   strategies                                                                    |
+|           |                                            | based on place value, properties of operations, and/or the relationship between |
+|           |                                            |   addition                                                                      |
+|           |                                            | and subtraction. Relate the strategy to a written method and explain the        |
+|           |                                            |   reasoning.                                                                    |
+|           |                                            | Understand that when adding two-digit numbers, one adds tens and tens, ones and |
+|           |                                            |   ones;                                                                         |
+|           |                                            | and sometimes it is necessary to compose a ten.                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.NBT.5   | Use place value understanding and          | Given a two-digit number, mentally find 10 more or 10 less than the number,     |
+|           | properties of operations to add and        |   without                                                                       |
+|           | subtract.                                  | counting; explain the reasoning used.                                           |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.NBT.6   | Use place value understanding and          | Subtract multiples of 10 in the range 10–90 from multiples of 10 in the range   |
+|           | properties of operations to add and        |   10–90                                                                         |
+|           | subtract.                                  | (positive or zero differences), using concrete models or drawings and           |
+|           |                                            |   strategies based                                                              |
+|           |                                            | on place value, properties of operations, and/or the relationship between       |
+|           |                                            |   addition and                                                                  |
+|           |                                            | subtraction. Relate the strategy to a written method and explain the reasoning  |
+|           |                                            |   used.                                                                         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.MD.1    | Measure lengths indirectly and by          | Order three objects by length; compare the lengths of two objects indirectly by |
+|           | iterating length units.                    |   using                                                                         |
+|           |                                            | a third object.                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.MD.2    | Measure lengths indirectly and by          | Express the length of an object as a whole number of length units, by laying    |
+|           | iterating length units.                    |   multiple                                                                      |
+|           |                                            | copies of a shorter object (the length unit) end to end. Understand that the    |
+|           |                                            |   length                                                                        |
+|           |                                            | measurement is the number of same-size length units that span it with no gaps   |
+|           |                                            |   or                                                                            |
+|           |                                            | overlaps. Limit to contexts where the object is spanned by a whole number of    |
+|           |                                            |   units.                                                                        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.MD.3    | Tell and write time.                       | Tell and write time in hours and half-hours using analog and digital clocks.    |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.MD.4    | Represent and interpret data.              | Organize, represent, and interpret data with up to three categories; ask and    |
+|           |                                            |   answer                                                                        |
+|           |                                            | questions about the total number of data points, how many in each category, and |
+|           |                                            |   how                                                                           |
+|           |                                            | many more or less are in one category than in another.                          |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.G.1     | Reason with shapes and their               | Distinguish between defining attributes (e.g., triangles are closed and three-  |
+|           | attributes.                                |   sided)                                                                        |
+|           |                                            | versus non-defining attributes (e.g., color, orientation, overall size); build  |
+|           |                                            |   and                                                                           |
+|           |                                            | draw shapes to possess defining attributes.                                     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.G.2     | Reason with shapes and their               | Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles,     |
+|           | attributes.                                | half-circles, quarter-circles) or three-dimensional shapes (cubes, right        |
+|           |                                            |   rectangular                                                                   |
+|           |                                            | prisms, right circular cones, right circular cylinders) to create a composite   |
+|           |                                            |   shape,                                                                        |
+|           |                                            | and compose new shapes from the composite shape.                                |
+|           |                                            | Note: Students do not need to learn formal names such as "right rectangular     |
+|           |                                            |   prism."                                                                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 1.G.3     | Reason with shapes and their               | Partition circles and rectangles into two and four equal shares; describe       |
+|           | attributes.                                |   shares using                                                                  |
+|           |                                            | halves, fourths, and quarters; use the phrases half of, fourth of, and quarter  |
+|           |                                            |   of.                                                                           |
+|           |                                            | Describe the whole as two of, or four of the shares. Understand that            |
+|           |                                            |   decomposing into                                                              |
+|           |                                            | more equal shares creates smaller shares.                                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+
+======================================================================================================================================
+GRADE 2
+======================================================================================================================================
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CRITICAL AREAS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| #   | Critical Area                       | Description                                                                                  |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 1   | Base-Ten Notation                   | Students extend their understanding of the base-ten system, including ideas of counting      |
+|     |                                     | in fives, tens, and multiples of hundreds, tens, and ones, as well as number relationships   |
+|     |                                     | involving these units, including comparing. Students understand multi-digit numbers          |
+|     |                                     | (up to 1000) written in base-ten notation, recognizing that the digits in each place         |
+|     |                                     | represent amounts of thousands, hundreds, tens, or ones (e.g., 853 = 8 hundreds +            |
+|     |                                     | 5 tens + 3 ones).                                                                            |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 2   | Addition and Subtraction            | Students use their understanding of addition to develop fluency with addition and            |
+|     |                                     | subtraction within 100. They solve problems within 1000 by applying their understanding      |
+|     |                                     | of models for addition and subtraction, and they develop, discuss, and use efficient,        |
+|     |                                     | accurate, and generalizable methods to compute sums and differences in base-ten notation,    |
+|     |                                     | using place value and properties of operations. They select and accurately apply methods     |
+|     |                                     | appropriate for the context and numbers involved to mentally calculate sums and              |
+|     |                                     | differences for numbers with only tens or only hundreds.                                     |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 3   | Measurement                         | Students recognize the need for standard units of measure (centimeter and inch) and use      |
+|     |                                     | rulers and other measurement tools with the understanding that linear measure involves       |
+|     |                                     | an iteration of units. They recognize that the smaller the unit, the more iterations         |
+|     |                                     | they need to cover a given length.                                                           |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 4   | Geometry                            | Students describe and analyze shapes by examining their sides and angles. They               |
+|     |                                     | investigate, describe, and reason about decomposing and combining shapes to make other       |
+|     |                                     | shapes. Through building, drawing, and analyzing 2-D and 3-D shapes, students develop        |
+|     |                                     | a foundation for understanding area, volume, congruence, similarity, and symmetry.           |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CONTENT OVERVIEW
+--------------------------------------------------------------------------------------------------------------------------------------
+
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Domain                                   | Clusters / Topics                                                                          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Operations and Algebraic Thinking (2.OA) | - Represent and solve problems involving addition and subtraction.                         |
+|                                          | - Add and subtract within 20.                                                              |
+|                                          | - Work with equal groups of objects to gain foundations for multiplication.                |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Number and Operations in Base Ten        | - Understand place value.                                                                  |
+|   (2.NBT)                                | - Use place value understanding and properties of operations to add and subtract.          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Measurement and Data (2.MD)              | - Measure and estimate lengths in standard units.                                          |
+|                                          | - Relate addition and subtraction to length.                                               |
+|                                          | - Work with time and money.                                                                |
+|                                          | - Represent and interpret data.                                                            |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Geometry (2.G)                           | - Reason with shapes and their attributes.                                                 |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+DETAILED STANDARDS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| Code      | Cluster                                    | Standard Description                                                            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.OA.1    | Represent and solve problems involving     | Use addition and subtraction within 100 to solve one- and two-step word         |
+|           | addition and subtraction.                  |   problems                                                                      |
+|           |                                            | involving situations of adding to, taking from, putting together, taking apart, |
+|           |                                            |   and                                                                           |
+|           |                                            | comparing, with unknowns in all positions (e.g., by using drawings and          |
+|           |                                            |   equations with                                                                |
+|           |                                            | a symbol for the unknown number to represent the problem). [See Glossary, Table |
+|           |                                            |   1.]                                                                           |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.OA.2    | Add and subtract within 20.                | Fluently add and subtract within 20 using mental strategies. By end of Grade 2, |
+|           |                                            |   know                                                                          |
+|           |                                            | from memory all sums of two one-digit numbers.                                  |
+|           |                                            | [See standard 1.OA.6 for a list of mental strategies.]                          |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.OA.3    | Work with equal groups of objects to       | Determine whether a group of objects (up to 20) has an odd or even number of    |
+|           | gain foundations for multiplication.       |   members                                                                       |
+|           |                                            | (e.g., by pairing objects or counting them by 2s); write an equation to express |
+|           |                                            |   an                                                                            |
+|           |                                            | even number as a sum of two equal addends.                                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.OA.4    | Work with equal groups of objects to       | Use addition to find the total number of objects arranged in rectangular arrays |
+|           | gain foundations for multiplication.       |   with                                                                          |
+|           |                                            | up to 5 rows and up to 5 columns; write an equation to express the total as a   |
+|           |                                            |   sum                                                                           |
+|           |                                            | of equal addends.                                                               |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.1   | Understand place value.                    | Understand that the three digits of a three-digit number represent amounts of   |
+|           |                                            |   hundreds,                                                                     |
+|           |                                            | tens, and ones (e.g., 706 = 7 hundreds, 0 tens, 6 ones). Special cases:         |
+|           |                                            |   a. 100 can be thought of as a bundle of ten tens - called a "hundred."        |
+|           |                                            |   b. Numbers 100, 200, ..., 900 refer to one, two, ..., nine hundreds (and 0    |
+|           |                                            |     tens/ones).                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.2   | Understand place value.                    | Count within 1000; skip-count by 5s, 10s, and 100s.                             |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.3   | Understand place value.                    | Read and write numbers to 1000 using base-ten numerals, number names, and       |
+|           |                                            |   expanded form.                                                                |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.4   | Understand place value.                    | Compare two three-digit numbers based on meanings of the hundreds, tens, and    |
+|           |                                            |   ones digits,                                                                  |
+|           |                                            | using >, =, and < symbols to record the results of comparisons.                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.5   | Use place value understanding and          | Fluently add and subtract within 100 using strategies based on place value,     |
+|           | properties of operations to add and        |   properties                                                                    |
+|           | subtract.                                  | of operations, and/or the relationship between addition and subtraction.        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.6   | Use place value understanding and          | Add up to four two-digit numbers using strategies based on place value and      |
+|           | properties of operations to add and        |   properties                                                                    |
+|           | subtract.                                  | of operations.                                                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.7   | Use place value understanding and          | Add and subtract within 1000, using concrete models or drawings and strategies  |
+|           | properties of operations to add and        |   based                                                                         |
+|           | subtract.                                  | on place value, properties of operations, and/or the relationship between       |
+|           |                                            |   addition and                                                                  |
+|           |                                            | subtraction; relate the strategy to a written method. Understand that when      |
+|           |                                            |   adding or                                                                     |
+|           |                                            | subtracting three-digit numbers, one adds/subtracts hundreds and hundreds, tens |
+|           |                                            |   and                                                                           |
+|           |                                            | tens, ones and ones; sometimes necessary to compose or decompose tens or        |
+|           |                                            |   hundreds.                                                                     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.8   | Use place value understanding and          | Mentally add 10 or 100 to a given number 100–900, and mentally subtract 10 or   |
+|           | properties of operations to add and        |   100                                                                           |
+|           | subtract.                                  | from a given number 100–900.                                                    |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.NBT.9   | Use place value understanding and          | Explain why addition and subtraction strategies work, using place value and     |
+|           | properties of operations to add and        |   properties                                                                    |
+|           | subtract.                                  | of operations.                                                                  |
+|           |                                            | Note: Explanations may be supported by drawings or objects.                     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.1    | Measure and estimate lengths in            | Measure the length of an object by selecting and using appropriate tools such   |
+|           | standard units.                            |   as                                                                            |
+|           |                                            | rulers, yardsticks, meter sticks, and measuring tapes.                          |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.2    | Measure and estimate lengths in            | Measure the length of an object twice, using length units of different lengths  |
+|           | standard units.                            |   for the                                                                       |
+|           |                                            | two measurements; describe how the two measurements relate to the size of the   |
+|           |                                            |   unit chosen.                                                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.3    | Measure and estimate lengths in            | Estimate lengths using units of inches, feet, centimeters, and meters.          |
+|           | standard units.                            |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.4    | Measure and estimate lengths in            | Measure to determine how much longer one object is than another, expressing the |
+|           | standard units.                            |   length                                                                        |
+|           |                                            | difference in terms of a standard length unit.                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.5    | Relate addition and subtraction            | Use addition and subtraction within 100 to solve word problems involving        |
+|           | to length.                                 |   lengths given                                                                 |
+|           |                                            | in the same units (e.g., by using drawings of rulers and equations with a       |
+|           |                                            |   symbol for                                                                    |
+|           |                                            | the unknown number to represent the problem).                                   |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.6    | Relate addition and subtraction            | Represent whole numbers as lengths from 0 on a number line diagram with equally |
+|           | to length.                                 |   spaced                                                                        |
+|           |                                            | points corresponding to the numbers 0, 1, 2, ..., and represent whole-number    |
+|           |                                            |   sums and                                                                      |
+|           |                                            | differences within 100 on a number line diagram.                                |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.7    | Work with time and money.                  | Tell and write time from analog and digital clocks to the nearest five minutes, |
+|           |                                            | using a.m. and p.m.                                                             |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.8    | Work with time and money.                  | Solve word problems involving dollar bills, quarters, dimes, nickels, and       |
+|           |                                            |   pennies,                                                                      |
+|           |                                            | using $ and ¢ symbols appropriately.                                            |
+|           |                                            | Example: If you have 2 dimes and 3 pennies, how many cents do you have?         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.9    | Represent and interpret data.              | Generate measurement data by measuring lengths of several objects to the        |
+|           |                                            |   nearest whole                                                                 |
+|           |                                            | unit, or by making repeated measurements of the same object. Show the           |
+|           |                                            |   measurements by                                                               |
+|           |                                            | making a line plot, where the horizontal scale is marked off in whole-number    |
+|           |                                            |   units.                                                                        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.MD.10   | Represent and interpret data.              | Draw a picture graph and a bar graph (with single-unit scale) to represent a    |
+|           |                                            |   data set                                                                      |
+|           |                                            | with up to four categories. Solve simple put-together, take-apart, and compare  |
+|           |                                            |   problems                                                                      |
+|           |                                            | using information presented in a bar graph. [See Glossary, Table 1.]            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.G.1     | Reason with shapes and their               | Recognize and draw shapes having specified attributes, such as a given number   |
+|           | attributes.                                |   of angles                                                                     |
+|           |                                            | or a given number of equal faces. Identify triangles, quadrilaterals,           |
+|           |                                            |   pentagons,                                                                    |
+|           |                                            | hexagons, and cubes.                                                            |
+|           |                                            | Note: Sizes are compared directly or visually, not compared by measuring.       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.G.2     | Reason with shapes and their               | Partition a rectangle into rows and columns of same-size squares and count to   |
+|           | attributes.                                |   find                                                                          |
+|           |                                            | the total number of them.                                                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 2.G.3     | Reason with shapes and their               | Partition circles and rectangles into two, three, or four equal shares;         |
+|           | attributes.                                |   describe                                                                      |
+|           |                                            | shares using the words halves, thirds, half of, a third of, etc.; describe the  |
+|           |                                            |   whole                                                                         |
+|           |                                            | as two halves, three thirds, four fourths. Recognize that equal shares of       |
+|           |                                            |   identical                                                                     |
+|           |                                            | wholes need not have the same shape.                                            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+
+======================================================================================================================================
+GRADE 3
+======================================================================================================================================
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CRITICAL AREAS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| #   | Critical Area                       | Description                                                                                  |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 1   | Multiplication and Division         | Students develop an understanding of the meanings of multiplication and division through     |
+|     |                                     | equal-sized groups, arrays, and area models. Multiplication is finding an unknown product;   |
+|     |                                     | division is finding an unknown factor. For equal-sized group situations, division can        |
+|     |                                     | require finding the unknown number of groups or the unknown group size. Students use         |
+|     |                                     | properties of operations to calculate products of whole numbers, using increasingly          |
+|     |                                     | sophisticated strategies based on these properties. By comparing solution strategies,        |
+|     |                                     | students learn the relationship between multiplication and division.                         |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 2   | Fractions                           | Students develop an understanding of fractions, beginning with unit fractions. They view     |
+|     |                                     | fractions as built out of unit fractions and use visual fraction models to represent parts   |
+|     |                                     | of a whole. Students understand that the size of a fractional part is relative to the        |
+|     |                                     | whole (e.g., 1/2 of a small bucket may be less than 1/3 of a large bucket; 1/3 of a          |
+|     |                                     | ribbon is longer than 1/5 of the same ribbon). Students use fractions to represent           |
+|     |                                     | numbers equal to, less than, and greater than one. They compare fractions using visual       |
+|     |                                     | models and strategies based on equal numerators or denominators.                             |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 3   | Area                                | Students recognize area as an attribute of two-dimensional regions. They measure area        |
+|     |                                     | by finding the total number of same-size unit squares required to cover the shape without    |
+|     |                                     | gaps or overlaps. Students understand that rectangular arrays can be decomposed into         |
+|     |                                     | identical rows or columns. By decomposing rectangles into rectangular arrays of squares,     |
+|     |                                     | students connect area to multiplication, and justify using multiplication to determine       |
+|     |                                     | the area of a rectangle.                                                                     |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 4   | Geometry                            | Students describe, analyze, and compare properties of two-dimensional shapes. They           |
+|     |                                     | compare and classify shapes by their sides and angles, connecting these with definitions     |
+|     |                                     | of shapes. Students also relate their fraction work to geometry by expressing the area       |
+|     |                                     | of part of a shape as a unit fraction of the whole.                                          |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CONTENT OVERVIEW
+--------------------------------------------------------------------------------------------------------------------------------------
+
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Domain                                   | Clusters / Topics                                                                          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Operations and Algebraic Thinking (3.OA) | - Represent and solve problems involving multiplication and division.                      |
+|                                          | - Understand properties of multiplication and the relationship between                     |
+|                                          |   multiplication and division.                                                             |
+|                                          | - Multiply and divide within 100.                                                          |
+|                                          | - Solve problems involving the four operations, and identify and explain                   |
+|                                          |   patterns in arithmetic.                                                                  |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Number and Operations in Base Ten        | - Use place value understanding and properties of operations to perform                    |
+|   (3.NBT)                                |   multi-digit arithmetic.                                                                  |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Number and Operations-Fractions (3.NF)   | - Develop understanding of fractions as numbers.                                           |
+|                                          |   Note: Limited to fractions with denominators 2, 3, 4, 6, and 8.                          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Measurement and Data (3.MD)              | - Solve problems involving measurement and estimation of intervals of time,                |
+|                                          |   liquid volumes, and masses of objects.                                                   |
+|                                          | - Represent and interpret data.                                                            |
+|                                          | - Geometric measurement: understand concepts of area and relate area to                    |
+|                                          |   multiplication and to addition.                                                          |
+|                                          | - Geometric measurement: recognize perimeter as an attribute of plane figures              |
+|                                          |   and distinguish between linear and area measures.                                        |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Geometry (3.G)                           | - Reason with shapes and their attributes.                                                 |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+DETAILED STANDARDS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| Code      | Cluster                                    | Standard Description                                                            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.1    | Represent and solve problems involving     | Interpret products of whole numbers (e.g., interpret 5 x 7 as the total number  |
+|           | multiplication and division.               |   of                                                                            |
+|           |                                            | objects in 5 groups of 7 objects each). For example, describe a context in      |
+|           |                                            |   which a                                                                       |
+|           |                                            | total number of objects can be expressed as 5 x 7.                              |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.2    | Represent and solve problems involving     | Interpret whole-number quotients of whole numbers (e.g., interpret 56 / 8 as    |
+|           | multiplication and division.               |   the                                                                           |
+|           |                                            | number of objects in each share when 56 objects are partitioned equally into 8  |
+|           |                                            |   shares,                                                                       |
+|           |                                            | or as a number of shares when 56 objects are partitioned into equal shares of 8 |
+|           |                                            |   each).                                                                        |
+|           |                                            | For example, describe a context in which a number of shares or groups can be    |
+|           |                                            | expressed as 56 / 8.                                                            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.3    | Represent and solve problems involving     | Use multiplication and division within 100 to solve word problems in situations |
+|           | multiplication and division.               | involving equal groups, arrays, and measurement quantities (e.g., by using      |
+|           |                                            |   drawings                                                                      |
+|           |                                            | and equations with a symbol for the unknown number to represent the problem).   |
+|           |                                            | [See Glossary, Table 2.]                                                        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.4    | Represent and solve problems involving     | Determine the unknown whole number in a multiplication or division equation     |
+|           | multiplication and division.               |   relating                                                                      |
+|           |                                            | three whole numbers. For example, determine the unknown in 8 x ? = 48, 5 = _ /  |
+|           |                                            |   3,                                                                            |
+|           |                                            | 6 x 6 = ?.                                                                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.5    | Understand properties of multiplication    | Apply properties of operations as strategies to multiply and divide.            |
+|           | and the relationship between               | Note: Students need not use formal terms for these properties.                  |
+|           | multiplication and division.               | Examples:                                                                       |
+|           |                                            |   - If 6 x 4 = 24 is known, then 4 x 6 = 24 is also known. (Commutative         |
+|           |                                            |     property)                                                                   |
+|           |                                            |   - 3 x 5 x 2: find 3 x 5 = 15 then 15 x 2 = 30, or 5 x 2 = 10 then 3 x 10 =    |
+|           |                                            |     30.                                                                         |
+|           |                                            |     (Associative property)                                                      |
+|           |                                            |   - 8 x 5 = 40 and 8 x 2 = 16, so 8 x 7 = 8 x (5 + 2) = 40 + 16 = 56.           |
+|           |                                            |     (Distributive property)                                                     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.6    | Understand properties of multiplication    | Understand division as an unknown-factor problem.                               |
+|           | and the relationship between               | Example: Find 32 / 8 by finding the number that makes 32 when multiplied by 8.  |
+|           | multiplication and division.               |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.7    | Multiply and divide within 100.            | Fluently multiply and divide within 100, using strategies such as the           |
+|           |                                            |   relationship                                                                  |
+|           |                                            | between multiplication and division (e.g., knowing 8 x 5 = 40, one knows 40 / 5 |
+|           |                                            |   = 8)                                                                          |
+|           |                                            | or properties of operations. By the end of Grade 3, know from memory all        |
+|           |                                            |   products                                                                      |
+|           |                                            | of two one-digit numbers.                                                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.8    | Solve problems involving the four          | Solve two-step word problems using the four operations. Represent these         |
+|           | operations, and identify and explain       |   problems using                                                                |
+|           | patterns in arithmetic.                    | equations with a letter for the unknown quantity. Assess the reasonableness of  |
+|           |                                            |   answers                                                                       |
+|           |                                            | using mental computation and estimation strategies including rounding.          |
+|           |                                            | Note: Limited to problems posed with whole numbers and having whole-number      |
+|           |                                            |   answers;                                                                      |
+|           |                                            | students should know how to perform operations in the conventional order when   |
+|           |                                            |   there                                                                         |
+|           |                                            | are no parentheses to specify a particular order (Order of Operations).         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.OA.9    | Solve problems involving the four          | Identify arithmetic patterns (including patterns in the addition table or       |
+|           | operations, and identify and explain       |   multiplication                                                                |
+|           | patterns in arithmetic.                    | table), and explain them using properties of operations.                        |
+|           |                                            | Example: Observe that 4 times a number is always even, and explain why 4 times  |
+|           |                                            |   a                                                                             |
+|           |                                            | number can be decomposed into two equal addends.                                |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.NBT.1   | Use place value understanding and          | Use place value understanding to round whole numbers to the nearest 10 or 100.  |
+|           | properties of operations to perform        | Note: A range of algorithms may be used.                                        |
+|           | multi-digit arithmetic.                    |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.NBT.2   | Use place value understanding and          | Fluently add and subtract within 1000 using strategies and algorithms based on  |
+|           | properties of operations to perform        |   place                                                                         |
+|           | multi-digit arithmetic.                    | value, properties of operations, and/or the relationship between addition and   |
+|           |                                            | subtraction.                                                                    |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.NBT.3   | Use place value understanding and          | Multiply one-digit whole numbers by multiples of 10 in the range 10–90          |
+|           | properties of operations to perform        | (e.g., 9 x 80, 5 x 60) using strategies based on place value and properties     |
+|           | multi-digit arithmetic.                    | of operations.                                                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.NF.1    | Develop understanding of fractions         | Understand a fraction 1/b as the quantity formed by 1 part when a whole is      |
+|           | as numbers.                                |   partitioned                                                                   |
+|           |                                            | into b equal parts; understand a fraction a/b as the quantity formed by a parts |
+|           |                                            | of size 1/b.                                                                    |
+|           |                                            | Note: Grade 3 expectations limited to fractions with denominators 2, 3, 4, 6,   |
+|           |                                            |   and 8.                                                                        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.NF.2    | Develop understanding of fractions         | Understand a fraction as a number on the number line; represent fractions on a  |
+|           | as numbers.                                |   number                                                                        |
+|           |                                            | line diagram.                                                                   |
+|           |                                            |   a. Represent 1/b on a number line by defining the interval from 0 to 1 as     |
+|           |                                            |     the whole                                                                   |
+|           |                                            |     and partitioning it into b equal parts. Each part has size 1/b; the         |
+|           |                                            |       endpoint of                                                               |
+|           |                                            |      the part based at 0 locates the number 1/b on the number line.             |
+|           |                                            |   b. Represent a/b on a number line by marking off a lengths 1/b from 0. The    |
+|           |                                            |     resulting                                                                   |
+|           |                                            |      interval has size a/b and its endpoint locates a/b on the number line.     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.NF.3    | Develop understanding of fractions         | Explain equivalence of fractions in special cases, and compare fractions by     |
+|           | as numbers.                                |   reasoning                                                                     |
+|           |                                            | about their size.                                                               |
+|           |                                            |   a. Understand two fractions as equivalent if they are the same size or the    |
+|           |                                            |     same point                                                                  |
+|           |                                            |      on a number line.                                                          |
+|           |                                            |   b. Recognize and generate simple equivalent fractions (e.g., 1/2 = 2/4, 4/6   |
+|           |                                            |     = 2/3).                                                                     |
+|           |                                            |     Explain why fractions are equivalent (e.g., using a visual fraction         |
+|           |                                            |       model).                                                                   |
+|           |                                            |   c. Express whole numbers as fractions, and recognize fractions equivalent     |
+|           |                                            |     to whole                                                                    |
+|           |                                            |     numbers. Examples: 3 = 3/1; 6/1 = 6; locate 4/4 and 1 at the same point     |
+|           |                                            |       on a                                                                      |
+|           |                                            |      number line.                                                               |
+|           |                                            |   d. Compare two fractions with the same numerator or denominator by            |
+|           |                                            |     reasoning about                                                             |
+|           |                                            |     their size. Comparisons are valid only when the two fractions refer to      |
+|           |                                            |       the same                                                                  |
+|           |                                            |     whole. Record with >, =, or < and justify (e.g., using a visual             |
+|           |                                            |       fraction model).                                                          |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.1    | Solve problems involving measurement       | Tell and write time to the nearest minute and measure time intervals in         |
+|           | and estimation of intervals of time,       |   minutes.                                                                      |
+|           | liquid volumes, and masses.                | Solve word problems involving addition and subtraction of time intervals in     |
+|           |                                            |   minutes                                                                       |
+|           |                                            | (e.g., by representing the problem on a number line diagram).                   |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.2    | Solve problems involving measurement       | Measure and estimate liquid volumes and masses of objects using standard units  |
+|           | and estimation of intervals of time,       |   of grams                                                                      |
+|           | liquid volumes, and masses.                | (g), kilograms (kg), and liters (l). Add, subtract, multiply, or divide to      |
+|           |                                            |   solve                                                                         |
+|           |                                            | one-step word problems involving masses or volumes given in the same units      |
+|           |                                            |   (e.g., by                                                                     |
+|           |                                            | using drawings such as a beaker with a measurement scale).                      |
+|           |                                            | Note: Excludes compound units such as cm³ and finding geometric volume of a     |
+|           |                                            |   container.                                                                    |
+|           |                                            | Excludes multiplicative comparison problems. [See Glossary, Table 2.]           |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.3    | Represent and interpret data.              | Draw a scaled picture graph and a scaled bar graph to represent a data set with |
+|           |                                            |   several                                                                       |
+|           |                                            | categories. Solve one- and two-step "how many more" and "how many less"         |
+|           |                                            |   problems using                                                                |
+|           |                                            | information presented in scaled bar graphs.                                     |
+|           |                                            | Example: Draw a bar graph where each square might represent 5 pets.             |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.4    | Represent and interpret data.              | Generate measurement data by measuring lengths using rulers marked with halves  |
+|           |                                            |   and                                                                           |
+|           |                                            | fourths of an inch. Show the data by making a line plot, where the horizontal   |
+|           |                                            |   scale                                                                         |
+|           |                                            | is marked off in appropriate units - whole numbers, halves, or quarters.        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.5    | Geometric measurement: understand          | Recognize area as an attribute of plane figures and understand concepts of area |
+|           | concepts of area and relate area to        | measurement.                                                                    |
+|           | multiplication and addition.               |   a. A square with side length 1 unit ("unit square") has "one square unit"     |
+|           |                                            |     of area,                                                                    |
+|           |                                            |      and can be used to measure area.                                           |
+|           |                                            |   b. A plane figure that can be covered without gaps or overlaps by n unit      |
+|           |                                            |     squares                                                                     |
+|           |                                            |      is said to have an area of n square units.                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.6    | Geometric measurement: understand          | Measure areas by counting unit squares (square cm, square m, square in, square  |
+|           | concepts of area and relate area to        |   ft,                                                                           |
+|           | multiplication and addition.               | and improvised units).                                                          |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.7    | Geometric measurement: understand          | Relate area to the operations of multiplication and addition.                   |
+|           | concepts of area and relate area to        |   a. Find the area of a rectangle with whole-number side lengths by tiling      |
+|           | multiplication and addition.               |     it, and show                                                                |
+|           |                                            |     that the area is the same as would be found by multiplying the side         |
+|           |                                            |       lengths.                                                                  |
+|           |                                            |   b. Multiply side lengths to find areas of rectangles with whole-number side   |
+|           |                                            |     lengths                                                                     |
+|           |                                            |     in the context of solving real world and mathematical problems, and         |
+|           |                                            |       represent                                                                 |
+|           |                                            |      whole-number products as rectangular areas in mathematical reasoning.      |
+|           |                                            |   c. Use tiling to show that the area of a rectangle with whole-number side     |
+|           |                                            |     lengths                                                                     |
+|           |                                            |     a and b + c is the sum of a x b and a x c. Use area models to represent     |
+|           |                                            |       the                                                                       |
+|           |                                            |      distributive property in mathematical reasoning.                           |
+|           |                                            |   d. Recognize area as additive. Find areas of rectilinear figures by           |
+|           |                                            |     decomposing them                                                            |
+|           |                                            |     into non-overlapping rectangles and adding the areas of the non-            |
+|           |                                            |       overlapping parts,                                                        |
+|           |                                            |      applying this technique to solve real world problems.                      |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.MD.8    | Geometric measurement: recognize           | Solve real world and mathematical problems involving perimeters of polygons,    |
+|           | perimeter as an attribute of plane         |   including                                                                     |
+|           | figures.                                   | finding the perimeter given the side lengths, finding an unknown side length,   |
+|           |                                            |   and                                                                           |
+|           |                                            | exhibiting rectangles with the same perimeter and different areas or with the   |
+|           |                                            |   same                                                                          |
+|           |                                            | area and different perimeters.                                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.G.1     | Reason with shapes and their               | Understand that shapes in different categories (e.g., rhombuses, rectangles,    |
+|           | attributes.                                |   and others)                                                                   |
+|           |                                            | may share attributes (e.g., having four sides), and that shared attributes can  |
+|           |                                            |   define                                                                        |
+|           |                                            | a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and  |
+|           |                                            |   squares                                                                       |
+|           |                                            | as examples of quadrilaterals, and draw examples of quadrilaterals that do not  |
+|           |                                            |   belong                                                                        |
+|           |                                            | to any of these subcategories.                                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 3.G.2     | Reason with shapes and their               | Partition shapes into parts with equal areas. Express the area of each part as  |
+|           | attributes.                                |   a unit                                                                        |
+|           |                                            | fraction of the whole. For example, partition a shape into 4 parts with equal   |
+|           |                                            |   area,                                                                         |
+|           |                                            | and describe the area of each part as 1/4 of the area of the shape.             |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+
+======================================================================================================================================
+GRADE 4
+======================================================================================================================================
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CRITICAL AREAS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| #   | Critical Area                       | Description                                                                                  |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 1   | Multi-Digit Multiplication and      | Students generalize their understanding of place value to 1,000,000. They apply their        |
+|     |   Division                          | understanding of models for multiplication (equal-sized groups, arrays, area models),        |
+|     |                                     | place value, and properties of operations (particularly the distributive property) to        |
+|     |                                     | develop efficient, accurate, and generalizable methods to compute products of multi-digit    |
+|     |                                     | whole numbers. They develop fluency with efficient procedures for multiplying whole          |
+|     |                                     | numbers; understand and explain why the procedures work based on place value and             |
+|     |                                     | properties of operations; and use them to solve problems. Students also develop and use      |
+|     |                                     | efficient procedures to find quotients involving multi-digit dividends, select and apply     |
+|     |                                     | appropriate methods to estimate quotients, and interpret remainders based on context.        |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 2   | Fraction Equivalence and Operations | Students develop understanding of fraction equivalence and operations with fractions.        |
+|     |                                     | They recognize that two different fractions can be equal (e.g., 15/9 = 5/3), and             |
+|     |                                     | develop methods for generating and recognizing equivalent fractions. Students extend         |
+|     |                                     | previous understandings about how fractions are built from unit fractions, composing         |
+|     |                                     | fractions from unit fractions, decomposing fractions into unit fractions, and using          |
+|     |                                     | the meaning of fractions and the meaning of multiplication to multiply a fraction            |
+|     |                                     | by a whole number.                                                                           |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+| 3   | Geometry                            | Students describe, analyze, compare, and classify two-dimensional shapes. Through            |
+|     |                                     | building, drawing, and analyzing two-dimensional shapes, students deepen their               |
+|     |                                     | understanding of properties of two-dimensional objects and the use of them to solve          |
+|     |                                     | problems involving symmetry.                                                                 |
++-----+-------------------------------------+----------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+CONTENT OVERVIEW
+--------------------------------------------------------------------------------------------------------------------------------------
+
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Domain                                   | Clusters / Topics                                                                          |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Operations and Algebraic Thinking (4.OA) | - Use the four operations with whole numbers to solve problems.                            |
+|                                          | - Gain familiarity with factors and multiples.                                             |
+|                                          | - Generate and analyze patterns.                                                           |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Number and Operations in Base Ten        | - Generalize place value understanding for multi-digit whole numbers.                      |
+|   (4.NBT)                                |   Note: Limited to whole numbers less than or equal to 1,000,000.                          |
+|                                          | - Use place value understanding and properties of operations to perform                    |
+|                                          |   multi-digit arithmetic.                                                                  |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Number and Operations-Fractions (4.NF)   | - Extend understanding of fraction equivalence and ordering.                               |
+|                                          |   Note: Limited to fractions with denominators 2, 3, 4, 5, 6, 8, 10, 12, and 100.          |
+|                                          | - Build fractions from unit fractions by applying and extending previous                   |
+|                                          |   understandings of operations on whole numbers.                                           |
+|                                          | - Understand decimal notation for fractions, and compare decimal fractions.                |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Measurement and Data (4.MD)              | - Solve problems involving measurement and conversion of measurements from a               |
+|                                          |   larger unit to a smaller unit.                                                           |
+|                                          | - Represent and interpret data.                                                            |
+|                                          | - Geometric measurement: understand concepts of angle and measure angles.                  |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+| Geometry (4.G)                           | - Draw and identify lines and angles, and classify shapes by properties of                 |
+|                                          |   their lines and angles.                                                                  |
++------------------------------------------+--------------------------------------------------------------------------------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+DETAILED STANDARDS
+--------------------------------------------------------------------------------------------------------------------------------------
+
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| Code      | Cluster                                    | Standard Description                                                            |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.OA.1    | Use the four operations with whole         | Interpret a multiplication equation as a comparison (e.g., interpret 35 = 5 x 7 |
+|           | numbers to solve problems.                 |   as a                                                                          |
+|           |                                            | statement that 35 is 5 times as many as 7 and 7 times as many as 5). Represent  |
+|           |                                            |   verbal                                                                        |
+|           |                                            | statements of multiplicative comparisons as multiplication equations.           |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.OA.2    | Use the four operations with whole         | Multiply or divide to solve word problems involving multiplicative comparison   |
+|           | numbers to solve problems.                 |   (e.g., by                                                                     |
+|           |                                            | using drawings and equations with a symbol for the unknown number to represent  |
+|           |                                            |   the                                                                           |
+|           |                                            | problem), distinguishing multiplicative comparison from additive comparison.    |
+|           |                                            | [See Glossary, Table 2.]                                                        |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.OA.3    | Use the four operations with whole         | Solve multistep word problems posed with whole numbers and having whole-number  |
+|           | numbers to solve problems.                 |   answers                                                                       |
+|           |                                            | using the four operations, including problems in which remainders must be       |
+|           |                                            |   interpreted.                                                                  |
+|           |                                            | Represent these problems using equations with a letter for the unknown          |
+|           |                                            |   quantity. Assess                                                              |
+|           |                                            | the reasonableness of answers using mental computation and estimation           |
+|           |                                            |   strategies                                                                    |
+|           |                                            | including rounding.                                                             |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.OA.4    | Gain familiarity with factors              | Find all factor pairs for a whole number in the range 1–100. Recognize that a   |
+|           | and multiples.                             |   whole                                                                         |
+|           |                                            | number is a multiple of each of its factors. Determine whether a given whole    |
+|           |                                            |   number                                                                        |
+|           |                                            | in the range 1–100 is a multiple of a given one-digit number. Determine whether |
+|           |                                            |   a                                                                             |
+|           |                                            | given whole number in the range 1–100 is prime or composite.                    |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.OA.5    | Generate and analyze patterns.             | Generate a number or shape pattern that follows a given rule. Identify apparent |
+|           |                                            |   features                                                                      |
+|           |                                            | of the pattern that were not explicit in the rule itself.                       |
+|           |                                            | Example: Given the rule "Add 3" and starting number 1, generate terms and       |
+|           |                                            |   observe                                                                       |
+|           |                                            | that the terms appear to alternate between odd and even numbers. Explain        |
+|           |                                            |   informally                                                                    |
+|           |                                            | why the numbers will continue to alternate in this way.                         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NBT.1   | Generalize place value                     | Recognize that in a multi-digit whole number, a digit in one place represents   |
+|           | understanding for multi-digit whole        |   ten times                                                                     |
+|           | numbers.                                   | what it represents in the place to its right.                                   |
+|           |                                            | Example: Recognize that 700 / 70 = 10 by applying concepts of place value and   |
+|           |                                            |   division.                                                                     |
+|           |                                            | Note: Limited to whole numbers less than or equal to 1,000,000.                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NBT.2   | Generalize place value                     | Read and write multi-digit whole numbers using base-ten numerals, number names, |
+|           | understanding for multi-digit whole        |   and                                                                           |
+|           | numbers.                                   | expanded form. Compare two multi-digit numbers based on meanings of the digits  |
+|           |                                            |   in                                                                            |
+|           |                                            | each place, using >, =, and < symbols to record the results of comparisons.     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NBT.3   | Generalize place value                     | Use place value understanding to round multi-digit whole numbers to any place.  |
+|           | understanding for multi-digit whole        |                                                                                 |
+|           | numbers.                                   |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NBT.4   | Use place value understanding and          | Fluently add and subtract multi-digit whole numbers using the standard          |
+|           | properties of operations to perform        |   algorithm.                                                                    |
+|           | multi-digit arithmetic.                    |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NBT.5   | Use place value understanding and          | Multiply a whole number of up to four digits by a one-digit whole number, and   |
+|           | properties of operations to perform        |   multiply                                                                      |
+|           | multi-digit arithmetic.                    | two two-digit numbers, using strategies based on place value and the properties |
+|           |                                            |   of                                                                            |
+|           |                                            | operations. Illustrate and explain the calculation by using equations,          |
+|           |                                            |   rectangular                                                                   |
+|           |                                            | arrays, and/or area models.                                                     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NBT.6   | Use place value understanding and          | Find whole-number quotients and remainders with up to four-digit dividends and  |
+|           | properties of operations to perform        |   one-digit                                                                     |
+|           | multi-digit arithmetic.                    | divisors, using strategies based on place value, the properties of operations,  |
+|           |                                            |   and/or                                                                        |
+|           |                                            | the relationship between multiplication and division. Illustrate and explain    |
+|           |                                            |   the                                                                           |
+|           |                                            | calculation by using equations, rectangular arrays, and/or area models.         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.1    | Extend understanding of fraction           | Explain why a fraction a/b is equivalent to a fraction (n x a)/(n x b) by using |
+|           | equivalence and ordering.                  |   visual                                                                        |
+|           |                                            | fraction models, with attention to how the number and size of the parts differ  |
+|           |                                            |   even                                                                          |
+|           |                                            | though the two fractions themselves are the same size. Use this principle to    |
+|           |                                            |   recognize                                                                     |
+|           |                                            | and generate equivalent fractions.                                              |
+|           |                                            | Note: Limited to fractions with denominators 2, 3, 4, 5, 6, 8, 10, 12, and 100. |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.2    | Extend understanding of fraction           | Compare two fractions with different numerators and different denominators      |
+|           | equivalence and ordering.                  |   (e.g., by                                                                     |
+|           |                                            | creating common denominators or numerators, or by comparing to a benchmark      |
+|           |                                            |   fraction                                                                      |
+|           |                                            | such as 1/2). Recognize that comparisons are valid only when the two fractions  |
+|           |                                            |   refer                                                                         |
+|           |                                            | to the same whole. Record the results of comparisons with symbols >, =, or <,   |
+|           |                                            |   and                                                                           |
+|           |                                            | justify the conclusions (e.g., by using a visual fraction model).               |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.3    | Build fractions from unit fractions        | Understand a fraction a/b with a > 1 as a sum of fractions 1/b.                 |
+|           | by applying and extending previous         |   a. Understand addition and subtraction of fractions as joining and            |
+|           | understandings of operations on            |     separating parts                                                            |
+|           | whole numbers.                             |      referring to the same whole.                                               |
+|           |                                            |   b. Decompose a fraction into a sum of fractions with the same denominator     |
+|           |                                            |     in more                                                                     |
+|           |                                            |     than one way, recording each decomposition by an equation. Justify          |
+|           |                                            |       decompositions                                                            |
+|           |                                            |      (e.g., by using a visual fraction model).                                  |
+|           |                                            |      Examples: 3/8 = 1/8 + 1/8 + 1/8; 3/8 = 1/8 + 2/8; 2 1/8 = 8/8 + 8/8 + 1/8. |
+|           |                                            |   c. Add and subtract mixed numbers with like denominators (e.g., by            |
+|           |                                            |     replacing each                                                              |
+|           |                                            |     mixed number with an equivalent fraction, and/or by using properties of     |
+|           |                                            |       operations                                                                |
+|           |                                            |      and the relationship between addition and subtraction).                    |
+|           |                                            |   d. Solve word problems involving addition and subtraction of fractions        |
+|           |                                            |     referring to                                                                |
+|           |                                            |     the same whole and having like denominators (e.g., by using visual          |
+|           |                                            |       fraction models                                                           |
+|           |                                            |      and equations to represent the problem).                                   |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.4    | Build fractions from unit fractions        | Apply and extend previous understandings of multiplication to multiply a        |
+|           | by applying and extending previous         |   fraction by                                                                   |
+|           | understandings of operations on            | a whole number.                                                                 |
+|           | whole numbers.                             |   a. Understand a fraction a/b as a multiple of 1/b.                            |
+|           |                                            |      Example: Use a visual fraction model to represent 5/4 as 5 x (1/4);        |
+|           |                                            |      recording the conclusion by the equation 5/4 = 5 x (1/4).                  |
+|           |                                            |   b. Understand a multiple of a/b as a multiple of 1/b, and use this            |
+|           |                                            |     understanding                                                               |
+|           |                                            |      to multiply a fraction by a whole number.                                  |
+|           |                                            |      Example: Express 3 x (2/5) as 6 x (1/5), recognizing this product as 6/5.  |
+|           |                                            |      In general, n x (a/b) = (n x a)/b.                                         |
+|           |                                            |   c. Solve word problems involving multiplication of a fraction by a whole      |
+|           |                                            |     number                                                                      |
+|           |                                            |     (e.g., by using visual fraction models and equations to represent the       |
+|           |                                            |       problem).                                                                 |
+|           |                                            |     Example: If each person at a party will eat 3/8 of a pound of roast         |
+|           |                                            |       beef, and                                                                 |
+|           |                                            |     there will be 5 people at the party, how many pounds of roast beef will     |
+|           |                                            |       be needed?                                                                |
+|           |                                            |      Between what two whole numbers does your answer lie?                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.5    | Understand decimal notation for            | Express a fraction with denominator 10 as an equivalent fraction with           |
+|           | fractions, and compare decimal             |   denominator 100,                                                              |
+|           | fractions.                                 | and use this technique to add two fractions with respective denominators 10 and |
+|           |                                            |   100.                                                                          |
+|           |                                            | Example: Express 3/10 as 30/100, and add 3/10 + 4/100 = 34/100.                 |
+|           |                                            | Note: Students who can generate equivalent fractions can develop strategies for |
+|           |                                            |   adding                                                                        |
+|           |                                            | fractions with unlike denominators in general. But addition and subtraction     |
+|           |                                            |   with unlike                                                                   |
+|           |                                            | denominators in general is not a requirement at this grade.                     |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.6    | Understand decimal notation for            | Use decimal notation for fractions with denominators 10 or 100.                 |
+|           | fractions, and compare decimal             | Example: Rewrite 0.62 as 62/100; describe a length as 0.62 meters; locate 0.62  |
+|           | fractions.                                 | on a number line diagram.                                                       |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.NF.7    | Understand decimal notation for            | Compare two decimals to hundredths by reasoning about their size. Recognize     |
+|           | fractions, and compare decimal             |   that                                                                          |
+|           | fractions.                                 | comparisons are valid only when the two decimals refer to the same whole.       |
+|           |                                            |   Record the                                                                    |
+|           |                                            | results of comparisons with the symbols >, =, or <, and justify the conclusions |
+|           |                                            | (e.g., by using a visual model).                                                |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.1    | Solve problems involving measurement       | Know relative sizes of measurement units within one system of units including   |
+|           | and conversion of measurements from        | km, m, cm; kg, g; lb, oz.; l, ml; hr, min, sec. Within a single system of       |
+|           | a larger unit to a smaller unit.           | measurement, express measurements in a larger unit in terms of a smaller unit.  |
+|           |                                            | Record measurement equivalents in a two-column table.                           |
+|           |                                            | Example: Know that 1 ft is 12 times as long as 1 in. Express a 4 ft snake as 48 |
+|           |                                            |   in.                                                                           |
+|           |                                            | Generate a conversion table for feet and inches listing pairs (1, 12), (2, 24), |
+|           |                                            |   (3, 36), ...                                                                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.2    | Solve problems involving measurement       | Use the four operations to solve word problems involving distances, intervals   |
+|           | and conversion of measurements from        |   of time,                                                                      |
+|           | a larger unit to a smaller unit.           | liquid volumes, masses of objects, and money, including problems involving      |
+|           |                                            |   simple                                                                        |
+|           |                                            | fractions or decimals, and problems that require expressing measurements given  |
+|           |                                            |   in a                                                                          |
+|           |                                            | larger unit in terms of a smaller unit. Represent measurement quantities using  |
+|           |                                            |   diagrams                                                                      |
+|           |                                            | such as number line diagrams that feature a measurement scale.                  |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.3    | Solve problems involving measurement       | Apply the area and perimeter formulas for rectangles in real world and          |
+|           | and conversion of measurements from        |   mathematical                                                                  |
+|           | a larger unit to a smaller unit.           | problems.                                                                       |
+|           |                                            | Example: Find the width of a rectangular room given the area of the flooring    |
+|           |                                            |   and the                                                                       |
+|           |                                            | length, by viewing the area formula as a multiplication equation with an        |
+|           |                                            |   unknown factor.                                                               |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.4    | Represent and interpret data.              | Make a line plot to display a data set of measurements in fractions of a unit   |
+|           |                                            | (1/2, 1/4, 1/8). Solve problems involving addition and subtraction of fractions |
+|           |                                            |   by                                                                            |
+|           |                                            | using information presented in line plots.                                      |
+|           |                                            | Example: From a line plot, find and interpret the difference in length between  |
+|           |                                            |   the                                                                           |
+|           |                                            | longest and shortest specimens in an insect collection.                         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.5    | Geometric measurement: understand          | Recognize angles as geometric shapes that are formed wherever two rays share a  |
+|           | concepts of angle and measure angles.      |   common                                                                        |
+|           |                                            | endpoint, and understand concepts of angle measurement:                         |
+|           |                                            |   a. An angle is measured with reference to a circle with its center at the     |
+|           |                                            |     common                                                                      |
+|           |                                            |     endpoint of the rays, by considering the fraction of the circular arc       |
+|           |                                            |       between                                                                   |
+|           |                                            |     the points where the two rays intersect the circle. An angle that turns     |
+|           |                                            |       through                                                                   |
+|           |                                            |     1/360 of a circle is called a "one-degree angle," and can be used to        |
+|           |                                            |       measure                                                                   |
+|           |                                            |      angles.                                                                    |
+|           |                                            |   b. An angle that turns through n one-degree angles is said to have an angle   |
+|           |                                            |     measure                                                                     |
+|           |                                            |      of n degrees.                                                              |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.6    | Geometric measurement: understand          | Measure angles in whole-number degrees using a protractor. Sketch angles of     |
+|           | concepts of angle and measure angles.      | specified measure.                                                              |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.MD.7    | Geometric measurement: understand          | Recognize angle measure as additive. When an angle is decomposed into non-      |
+|           | concepts of angle and measure angles.      |   overlapping                                                                   |
+|           |                                            | parts, the angle measure of the whole is the sum of the angle measures of the   |
+|           |                                            |   parts.                                                                        |
+|           |                                            | Solve addition and subtraction problems to find unknown angles on a diagram in  |
+|           |                                            |   real                                                                          |
+|           |                                            | world and mathematical problems (e.g., by using an equation with a symbol for   |
+|           |                                            |   the                                                                           |
+|           |                                            | unknown angle measure).                                                         |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.G.1     | Draw and identify lines and angles,        | Draw points, lines, line segments, rays, angles (right, acute, obtuse), and     |
+|           | and classify shapes by properties          | perpendicular and parallel lines. Identify these in two-dimensional figures.    |
+|           | of their lines and angles.                 |                                                                                 |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.G.2     | Draw and identify lines and angles,        | Classify two-dimensional figures based on the presence or absence of parallel   |
+|           | and classify shapes by properties          |   or                                                                            |
+|           | of their lines and angles.                 | perpendicular lines, or the presence or absence of angles of a specified size.  |
+|           |                                            | Recognize right triangles as a category, and identify right triangles.          |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+| 4.G.3     | Draw and identify lines and angles,        | Recognize a line of symmetry for a two-dimensional figure as a line across the  |
+|           | and classify shapes by properties          |   figure                                                                        |
+|           | of their lines and angles.                 | such that the figure can be folded along the line into matching parts. Identify |
+|           |                                            | line-symmetric figures and draw lines of symmetry.                              |
++-----------+--------------------------------------------+---------------------------------------------------------------------------------+
+
+======================================================================================================================================
+Source: Common Core State Standards Initiative (CCSSI)
+Standards: CCSSM - Common Core State Standards for Mathematics
+Additional grades (5–12) will be added as they are developed.
+======================================================================================================================================

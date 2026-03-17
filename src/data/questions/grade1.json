@@ -1,0 +1,1897 @@
+{
+  "grade": 1,
+  "totalStandards": 21,
+  "totalQuestions": 315,
+  "standards": [
+    {
+      "code": "1.OA.1",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Use Addition & Subtraction Within 20 to Solve Word Problems",
+      "explanation": "Students use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing - with unknowns in all positions. They represent problems using objects, drawings, and equations.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Tom has 3 apples. He gets 2 more. How many apples does he have now?",
+            "answer": "5",
+            "explanation": "3 + 2 = 5. This is an \"adding to\" problem. Start with 3 and count on 2 more."
+          },
+          {
+            "question": "Sara has 6 flowers. She gives 1 away. How many flowers does she have left?",
+            "answer": "5",
+            "explanation": "6 - 1 = 5. This is a \"taking from\" problem. Start with 6 and take away 1."
+          },
+          {
+            "question": "There are 4 birds on a branch. 3 more birds fly over. How many birds are there now?",
+            "answer": "7",
+            "explanation": "4 + 3 = 7. This is a \"putting together\" problem. Combine both groups."
+          },
+          {
+            "question": "Mike has 8 crayons. He loses 3. How many crayons does he have now?",
+            "answer": "5",
+            "explanation": "8 - 3 = 5. Start with 8 and take away 3."
+          },
+          {
+            "question": "A basket has 5 red apples and 4 green apples. How many apples are there altogether?",
+            "answer": "9",
+            "explanation": "5 + 4 = 9. This is a \"putting together\" problem. Add both groups."
+          }
+        ],
+        "medium": [
+          {
+            "question": "There were 12 children at the park. 5 went home. How many are still at the park?",
+            "answer": "7",
+            "explanation": "12 - 5 = 7. Use make-a-ten: 12 - 2 = 10, 10 - 3 = 7."
+          },
+          {
+            "question": "Jake scored 7 points in game 1 and 8 points in game 2. How many points total?",
+            "answer": "15",
+            "explanation": "7 + 8 = 15. Use make-a-ten: 7 + 3 = 10, then 10 + 5 = 15."
+          },
+          {
+            "question": "Maria picked 14 berries. She ate some and had 9 left. How many did she eat?",
+            "answer": "5",
+            "explanation": "14 - 9 = 5. Think: 9 + ? = 14. Count up from 9 to 14: that is 5 more."
+          },
+          {
+            "question": "There are 6 cats and some dogs. Together there are 13 animals. How many dogs are there?",
+            "answer": "7",
+            "explanation": "6 + ? = 13. Think: 13 - 6 = 7. There are 7 dogs."
+          },
+          {
+            "question": "Ann has 9 stickers. She gives 4 to a friend, then gets 6 more from her teacher. How many does she have now?",
+            "answer": "11",
+            "explanation": "9 - 4 = 5, then 5 + 6 = 11. Solve one step at a time."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Lily read 8 pages on Monday and some pages on Tuesday. She read 17 pages in total. How many pages did she read on Tuesday?",
+            "answer": "9",
+            "explanation": "8 + ? = 17. Think: 17 - 8 = 9. Make-a-ten: 8 + 2 = 10, 10 + 7 = 17, so 2 + 7 = 9."
+          },
+          {
+            "question": "Sam had some toy cars. He got 7 more and now has 15. How many did he start with?",
+            "answer": "8",
+            "explanation": "? + 7 = 15. Think: 15 - 7 = 8. Make-a-ten: 7 + 3 = 10, 10 + 5 = 15, so 3 + 5 = 8."
+          },
+          {
+            "question": "Max had 16 apples. He ate 4 and gave 3 to his sister. How many does he have left?",
+            "answer": "9",
+            "explanation": "16 - 4 = 12, then 12 - 3 = 9. Solve step by step."
+          },
+          {
+            "question": "There are 9 girls and some boys in a class of 16 students. How many more girls than boys are there?",
+            "answer": "2 more girls",
+            "explanation": "Boys = 16 - 9 = 7. Difference = 9 - 7 = 2. There are 2 more girls than boys."
+          },
+          {
+            "question": "Ben had 20 stickers. He gave some to Ana and now has 11. Ana gave 3 stickers back to Ben. How many stickers does Ana have now?",
+            "answer": "6",
+            "explanation": "Ben gave away: 20 - 11 = 9. Ana got 9 and gave 3 back: 9 - 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.2",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Add Three Whole Numbers Whose Sum Is 20 or Less",
+      "explanation": "Students add three whole numbers whose sum is 20 or less. They apply strategies such as making ten, using doubles, or looking for pairs of numbers that are easy to add to improve efficiency.",
+      "questions": {
+        "easy": [
+          {
+            "question": "2 + 3 + 1 = ?",
+            "answer": "6",
+            "explanation": "2 + 3 = 5, then 5 + 1 = 6. Add from left to right."
+          },
+          {
+            "question": "1 + 4 + 2 = ?",
+            "answer": "7",
+            "explanation": "1 + 4 = 5, then 5 + 2 = 7."
+          },
+          {
+            "question": "3 + 2 + 3 = ?",
+            "answer": "8",
+            "explanation": "3 + 2 = 5, then 5 + 3 = 8."
+          },
+          {
+            "question": "1 + 1 + 5 = ?",
+            "answer": "7",
+            "explanation": "1 + 1 = 2, then 2 + 5 = 7."
+          },
+          {
+            "question": "2 + 2 + 4 = ?",
+            "answer": "8",
+            "explanation": "2 + 2 = 4, then 4 + 4 = 8."
+          }
+        ],
+        "medium": [
+          {
+            "question": "4 + 6 + 3 = ?",
+            "answer": "13",
+            "explanation": "Make-a-ten: 4 + 6 = 10, then 10 + 3 = 13."
+          },
+          {
+            "question": "5 + 3 + 7 = ?",
+            "answer": "15",
+            "explanation": "Make-a-ten: 3 + 7 = 10, then 10 + 5 = 15."
+          },
+          {
+            "question": "2 + 8 + 6 = ?",
+            "answer": "16",
+            "explanation": "Make-a-ten: 2 + 8 = 10, then 10 + 6 = 16."
+          },
+          {
+            "question": "4 + 6 + 5 = ?",
+            "answer": "15",
+            "explanation": "Make-a-ten: 4 + 6 = 10, then 10 + 5 = 15."
+          },
+          {
+            "question": "7 + 3 + 5 = ?",
+            "answer": "15",
+            "explanation": "Make-a-ten: 7 + 3 = 10, then 10 + 5 = 15."
+          }
+        ],
+        "hard": [
+          {
+            "question": "8 + 4 + 5 = ?",
+            "answer": "17",
+            "explanation": "Decompose 4 as 2 + 2: 8 + 2 = 10, then 10 + 2 + 5 = 17."
+          },
+          {
+            "question": "Find three different numbers that add up to 18.",
+            "answer": "Many valid answers, e.g. 5 + 6 + 7 = 18",
+            "explanation": "5 + 6 + 7 = 18; or 3 + 6 + 9 = 18. Look for pairs that make ten first."
+          },
+          {
+            "question": "7 + 6 + ? = 20. What is the missing number?",
+            "answer": "7",
+            "explanation": "7 + 6 = 13. Then 20 - 13 = 7."
+          },
+          {
+            "question": "8 + 2 + 9 = ?",
+            "answer": "19",
+            "explanation": "Make-a-ten: 8 + 2 = 10, then 10 + 9 = 19."
+          },
+          {
+            "question": "6 + 5 + 9 = ?",
+            "answer": "20",
+            "explanation": "5 + 9 = 14 (near-doubles: 5 + 5 = 10, 5 + 9 = 14), then 14 + 6 = 20."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.3",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Apply Properties of Operations to Add and Subtract",
+      "explanation": "Students apply properties as strategies: the commutative property (order does not change the sum: 3 + 5 = 5 + 3), the associative property (grouping does not change the sum: (2 + 6) + 4 = 2 + (6 + 4)), and the relationship between addition and subtraction as inverse operations.",
+      "questions": {
+        "easy": [
+          {
+            "question": "If 5 + 3 = 8, what is 3 + 5?",
+            "answer": "8",
+            "explanation": "Commutative property: changing the order of addends does not change the sum."
+          },
+          {
+            "question": "If 7 + 2 = 9, what is 2 + 7?",
+            "answer": "9",
+            "explanation": "Commutative property: 2 + 7 = 9, same as 7 + 2."
+          },
+          {
+            "question": "If 1 + 4 = 5, what is 4 + 1?",
+            "answer": "5",
+            "explanation": "Commutative property: switching the order gives the same answer."
+          },
+          {
+            "question": "If 6 + 3 = 9, what is 3 + 6?",
+            "answer": "9",
+            "explanation": "Commutative property: 3 + 6 = 9."
+          },
+          {
+            "question": "If 2 + 5 = 7, what is 5 + 2?",
+            "answer": "7",
+            "explanation": "Commutative property: numbers can be added in any order."
+          }
+        ],
+        "medium": [
+          {
+            "question": "(3 + 7) + 6 = ? Use the grouping that makes it easiest.",
+            "answer": "16",
+            "explanation": "Associative property: group 3 + 7 = 10 first, then 10 + 6 = 16."
+          },
+          {
+            "question": "8 + (2 + 5) = ?",
+            "answer": "15",
+            "explanation": "Associative property: 8 + 2 = 10 (make a ten), then 10 + 5 = 15."
+          },
+          {
+            "question": "(9 + 1) + 4 = ?",
+            "answer": "14",
+            "explanation": "9 + 1 = 10, then 10 + 4 = 14."
+          },
+          {
+            "question": "If 4 + 8 = 12, write two related subtraction facts.",
+            "answer": "12 - 8 = 4 and 12 - 4 = 8",
+            "explanation": "Addition and subtraction are inverse operations. If a + b = c, then c - a = b and c - b = a."
+          },
+          {
+            "question": "6 + (4 + 7) = ?",
+            "answer": "17",
+            "explanation": "Group 6 + 4 = 10, then 10 + 7 = 17."
+          }
+        ],
+        "hard": [
+          {
+            "question": "5 + (5 + 8) = ? Show two different ways to solve it.",
+            "answer": "18",
+            "explanation": "Way 1: 5 + 5 = 10, then 10 + 8 = 18. Way 2: 5 + 8 = 13, then 13 + 5 = 18. Both use the associative property."
+          },
+          {
+            "question": "If 7 + 9 = 16, write two subtraction sentences using the same numbers.",
+            "answer": "16 - 7 = 9 and 16 - 9 = 7",
+            "explanation": "Inverse operations: if 7 + 9 = 16, then 16 - 7 = 9 and 16 - 9 = 7."
+          },
+          {
+            "question": "(6 + 4) + (7 + 3) = ?",
+            "answer": "20",
+            "explanation": "Group: 6 + 4 = 10 and 7 + 3 = 10. Then 10 + 10 = 20."
+          },
+          {
+            "question": "Decompose 6 to make adding easier: 9 + 6 = ?",
+            "answer": "15",
+            "explanation": "Decompose 6 as 1 + 5: 9 + 1 = 10, then 10 + 5 = 15."
+          },
+          {
+            "question": "Is 8 + (7 + 5) the same as (8 + 7) + 5? Explain.",
+            "answer": "Yes, both equal 20",
+            "explanation": "Associative property: grouping does not change the sum. 8 + 12 = 20 and 15 + 5 = 20."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.4",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Understand Subtraction as an Unknown-Addend Problem",
+      "explanation": "Students understand that subtraction can be thought of as finding an unknown addend. For example, 10 - 8 = ? is the same as asking 8 + ? = 10. This links subtraction to addition and helps students use their addition knowledge to solve subtraction problems.",
+      "questions": {
+        "easy": [
+          {
+            "question": "5 - 2 = ? Think: 2 + ? = 5",
+            "answer": "3",
+            "explanation": "2 + 3 = 5, so 5 - 2 = 3. Count up from 2 to 5: that is 3 counts."
+          },
+          {
+            "question": "7 - 3 = ? Think: 3 + ? = 7",
+            "answer": "4",
+            "explanation": "3 + 4 = 7, so 7 - 3 = 4."
+          },
+          {
+            "question": "6 - 1 = ? Think: 1 + ? = 6",
+            "answer": "5",
+            "explanation": "1 + 5 = 6, so 6 - 1 = 5."
+          },
+          {
+            "question": "8 - 4 = ? Think: 4 + ? = 8",
+            "answer": "4",
+            "explanation": "4 + 4 = 8, so 8 - 4 = 4. Count up from 4 to 8."
+          },
+          {
+            "question": "9 - 5 = ? Think: 5 + ? = 9",
+            "answer": "4",
+            "explanation": "5 + 4 = 9, so 9 - 5 = 4."
+          }
+        ],
+        "medium": [
+          {
+            "question": "10 - 6 = ? Think: 6 + ? = 10",
+            "answer": "4",
+            "explanation": "6 + 4 = 10, so 10 - 6 = 4. You need 4 more to get from 6 to 10."
+          },
+          {
+            "question": "12 - 7 = ? Think: 7 + ? = 12",
+            "answer": "5",
+            "explanation": "Make-a-ten: 7 + 3 = 10, then 10 + 2 = 12, so 3 + 2 = 5."
+          },
+          {
+            "question": "14 - 8 = ? Think: 8 + ? = 14",
+            "answer": "6",
+            "explanation": "Make-a-ten: 8 + 2 = 10, then 10 + 4 = 14, so 2 + 4 = 6."
+          },
+          {
+            "question": "There are 11 children. 5 are girls. How many are boys? Think: 5 + ? = 11",
+            "answer": "6",
+            "explanation": "5 + 6 = 11, so there are 6 boys."
+          },
+          {
+            "question": "15 - 9 = ? Think: 9 + ? = 15",
+            "answer": "6",
+            "explanation": "Make-a-ten: 9 + 1 = 10, then 10 + 5 = 15, so 1 + 5 = 6."
+          }
+        ],
+        "hard": [
+          {
+            "question": "16 - 9 = ? Write it as an unknown addend equation and solve.",
+            "answer": "7",
+            "explanation": "9 + ? = 16. Make-a-ten: 9 + 1 = 10, 10 + 6 = 16, so 1 + 6 = 7."
+          },
+          {
+            "question": "Write both a subtraction and an unknown-addend equation for: ? relates 9 and 18.",
+            "answer": "18 - 9 = 9 and 9 + ? = 18, ? = 9",
+            "explanation": "9 + 9 = 18 (doubles fact), so 18 - 9 = 9."
+          },
+          {
+            "question": "A farmer has 20 eggs. He sold some and has 13 left. Write an unknown-addend equation and solve.",
+            "answer": "? + 13 = 20, ? = 7",
+            "explanation": "13 + 7 = 20, so he sold 7 eggs."
+          },
+          {
+            "question": "? + 8 = 17. What is the missing number?",
+            "answer": "9",
+            "explanation": "8 + ? = 17. Make-a-ten: 8 + 2 = 10, 10 + 7 = 17, so 2 + 7 = 9."
+          },
+          {
+            "question": "Is 15 - 6 = 9 true? Write the unknown-addend equation to verify.",
+            "answer": "Yes; 6 + 9 = 15",
+            "explanation": "6 + 9 = 15 is true, so 15 - 6 = 9 is also true."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.5",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Relate Counting to Addition and Subtraction",
+      "explanation": "Students relate counting sequences to addition and subtraction. Counting on (starting at one number and counting up) represents addition; counting back represents subtraction. Counting up from the smaller number is also a strategy for subtraction.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Start at 4 and count on 2. What number do you land on?",
+            "answer": "6",
+            "explanation": "4 ... 5, 6. Counting on 2 from 4 is the same as 4 + 2 = 6."
+          },
+          {
+            "question": "Start at 7 and count back 3. What number do you land on?",
+            "answer": "4",
+            "explanation": "7 ... 6, 5, 4. Counting back 3 from 7 is the same as 7 - 3 = 4."
+          },
+          {
+            "question": "Count on 3 from 5. What is the answer?",
+            "answer": "8",
+            "explanation": "5 ... 6, 7, 8. This is the same as 5 + 3 = 8."
+          },
+          {
+            "question": "Count back 2 from 8. What do you get?",
+            "answer": "6",
+            "explanation": "8 ... 7, 6. This is the same as 8 - 2 = 6."
+          },
+          {
+            "question": "6 + 3 = ? Use counting on to find the answer.",
+            "answer": "9",
+            "explanation": "Start at 6, count on 3: 7, 8, 9. The answer is 9."
+          }
+        ],
+        "medium": [
+          {
+            "question": "To find 13 - 5, count up from 5 to 13. How many counts is that?",
+            "answer": "8",
+            "explanation": "5 ... 6, 7, 8, 9, 10, 11, 12, 13. That is 8 counts. So 13 - 5 = 8."
+          },
+          {
+            "question": "11 - 7 = ? Count up from 7 to 11 to find the answer.",
+            "answer": "4",
+            "explanation": "7 ... 8, 9, 10, 11. That is 4 counts. 11 - 7 = 4."
+          },
+          {
+            "question": "Count on 6 from 9. Write the addition equation.",
+            "answer": "15; equation: 9 + 6 = 15",
+            "explanation": "9, 10, 11, 12, 13, 14, 15. Same as 9 + 6 = 15."
+          },
+          {
+            "question": "14 - 6 = ? Use counting up or counting back to solve.",
+            "answer": "8",
+            "explanation": "Count up from 6: 7, 8, 9, 10, 11, 12, 13, 14. That is 8 counts. 14 - 6 = 8."
+          },
+          {
+            "question": "A number line shows 15. Count back 7 steps. Where do you land?",
+            "answer": "8",
+            "explanation": "15, 14, 13, 12, 11, 10, 9, 8. Same as 15 - 7 = 8."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Mia counts up 8 times starting at 9. Write an addition equation and give the answer.",
+            "answer": "9 + 8 = 17",
+            "explanation": "Starting at 9 and counting up 8 times: 9 + 8 = 17."
+          },
+          {
+            "question": "A frog jumps back 5 spaces from 14 on a number line. Write a subtraction equation.",
+            "answer": "14 - 5 = 9",
+            "explanation": "14 ... 13, 12, 11, 10, 9. Same as 14 - 5 = 9."
+          },
+          {
+            "question": "7 + ? = 20. Use counting on to find the missing number.",
+            "answer": "13",
+            "explanation": "Start at 7, count up to 20: that is 13 counts. 7 + 13 = 20."
+          },
+          {
+            "question": "How many counts from 6 to 18? Write an addition equation.",
+            "answer": "12 counts; 6 + 12 = 18",
+            "explanation": "Count up from 6 to 18: 12 counts. Equation: 6 + 12 = 18."
+          },
+          {
+            "question": "20 - 8 = ? Count back on a number line to solve.",
+            "answer": "12",
+            "explanation": "Start at 20, count back 8: 19, 18, 17, 16, 15, 14, 13, 12. Answer is 12."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.6",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Add and Subtract Within 20 - Fluency Within 10",
+      "explanation": "Students develop fluency with addition and subtraction within 20, using strategies such as making ten, decomposing a number to make ten, using doubles, using near-doubles, and counting on. They are expected to know all addition and subtraction facts within 10 from memory.",
+      "questions": {
+        "easy": [
+          {
+            "question": "4 + 3 = ?",
+            "answer": "7",
+            "explanation": "Basic fact: 4 + 3 = 7. Know this from memory."
+          },
+          {
+            "question": "9 - 4 = ?",
+            "answer": "5",
+            "explanation": "Basic fact: 9 - 4 = 5. Know this from memory."
+          },
+          {
+            "question": "6 + 2 = ?",
+            "answer": "8",
+            "explanation": "Basic fact: 6 + 2 = 8. Know this from memory."
+          },
+          {
+            "question": "7 - 5 = ?",
+            "answer": "2",
+            "explanation": "Basic fact: 7 - 5 = 2. Know this from memory."
+          },
+          {
+            "question": "5 + 5 = ?",
+            "answer": "10",
+            "explanation": "Doubles fact: 5 + 5 = 10. Know this from memory."
+          }
+        ],
+        "medium": [
+          {
+            "question": "7 + 6 = ? (Use near-doubles)",
+            "answer": "13",
+            "explanation": "Near-doubles: 7 + 7 = 14, so 7 + 6 = 13 (one less)."
+          },
+          {
+            "question": "8 + 5 = ? (Use make-a-ten)",
+            "answer": "13",
+            "explanation": "Make-a-ten: 8 + 2 = 10, then 10 + 3 = 13. Decompose 5 as 2 + 3."
+          },
+          {
+            "question": "13 - 6 = ?",
+            "answer": "7",
+            "explanation": "Think of the related addition fact: 6 + 7 = 13, so 13 - 6 = 7."
+          },
+          {
+            "question": "9 + 4 = ?",
+            "answer": "13",
+            "explanation": "Make-a-ten: 9 + 1 = 10, then 10 + 3 = 13. Decompose 4 as 1 + 3."
+          },
+          {
+            "question": "15 - 7 = ?",
+            "answer": "8",
+            "explanation": "7 + 8 = 15, so 15 - 7 = 8. Or: 15 - 5 = 10, 10 - 2 = 8."
+          }
+        ],
+        "hard": [
+          {
+            "question": "16 - 8 = ?",
+            "answer": "8",
+            "explanation": "Doubles fact: 8 + 8 = 16, so 16 - 8 = 8."
+          },
+          {
+            "question": "9 + 8 = ?",
+            "answer": "17",
+            "explanation": "Make-a-ten: 9 + 1 = 10, 10 + 7 = 17. Or near-doubles: 8 + 8 = 16, so 9 + 8 = 17."
+          },
+          {
+            "question": "18 - 9 = ?",
+            "answer": "9",
+            "explanation": "Doubles fact: 9 + 9 = 18, so 18 - 9 = 9."
+          },
+          {
+            "question": "7 + 8 = ?",
+            "answer": "15",
+            "explanation": "Make-a-ten: 7 + 3 = 10, 10 + 5 = 15. Or near-doubles: 7 + 7 = 14, so 7 + 8 = 15."
+          },
+          {
+            "question": "14 - 6 = ?",
+            "answer": "8",
+            "explanation": "Related fact: 6 + 8 = 14, so 14 - 6 = 8."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.7",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Understand the Equal Sign - True or False Equations",
+      "explanation": "Students understand the meaning of the equal sign as \"the same value as,\" not just as \"the answer comes next.\" They determine whether addition and subtraction equations are true or false, including equations with operations on both sides.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Is 3 + 4 = 7 true or false?",
+            "answer": "True",
+            "explanation": "3 + 4 = 7. The left side equals the right side, so it is true."
+          },
+          {
+            "question": "Is 5 - 2 = 4 true or false?",
+            "answer": "False",
+            "explanation": "5 - 2 = 3, not 4. The equation is false."
+          },
+          {
+            "question": "Is 6 = 6 true or false?",
+            "answer": "True",
+            "explanation": "A number always equals itself. 6 = 6 is true."
+          },
+          {
+            "question": "Is 8 = 5 + 3 true or false?",
+            "answer": "True",
+            "explanation": "5 + 3 = 8. The equal sign means both sides have the same value."
+          },
+          {
+            "question": "Is 4 + 3 = 8 true or false?",
+            "answer": "False",
+            "explanation": "4 + 3 = 7, not 8. The equation is false."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Is 4 + 5 = 3 + 6 true or false?",
+            "answer": "True",
+            "explanation": "4 + 5 = 9 and 3 + 6 = 9. Both sides equal 9, so it is true."
+          },
+          {
+            "question": "Is 7 - 2 = 6 - 1 true or false?",
+            "answer": "True",
+            "explanation": "7 - 2 = 5 and 6 - 1 = 5. Both equal 5, so it is true."
+          },
+          {
+            "question": "Is 10 = 7 + 4 true or false?",
+            "answer": "False",
+            "explanation": "7 + 4 = 11, not 10. The equation is false."
+          },
+          {
+            "question": "Is 8 + 2 = 4 + 6 true or false?",
+            "answer": "True",
+            "explanation": "8 + 2 = 10 and 4 + 6 = 10. Both equal 10."
+          },
+          {
+            "question": "Is 9 - 3 = 5 + 1 true or false?",
+            "answer": "True",
+            "explanation": "9 - 3 = 6 and 5 + 1 = 6. Both equal 6."
+          }
+        ],
+        "hard": [
+          {
+            "question": "7 + ? = 4 + 6. What is the missing number?",
+            "answer": "3",
+            "explanation": "4 + 6 = 10. So 7 + ? = 10, which means ? = 3."
+          },
+          {
+            "question": "Is 12 - 5 = 3 + 4 true or false?",
+            "answer": "True",
+            "explanation": "12 - 5 = 7 and 3 + 4 = 7. Both equal 7, so it is true."
+          },
+          {
+            "question": "? = 8 + 7 - 5. What is the missing number?",
+            "answer": "10",
+            "explanation": "8 + 7 = 15, then 15 - 5 = 10. So ? = 10."
+          },
+          {
+            "question": "Is 15 - 8 = 9 - 2 true or false?",
+            "answer": "True",
+            "explanation": "15 - 8 = 7 and 9 - 2 = 7. Both equal 7."
+          },
+          {
+            "question": "Write a true equation using 9, 4, and 5 on both sides of the equal sign.",
+            "answer": "9 = 4 + 5 (or 4 + 5 = 9)",
+            "explanation": "4 + 5 = 9. The equal sign shows both sides have the same value."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.OA.8",
+      "domain": "1.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Determine the Unknown in Addition and Subtraction Equations",
+      "explanation": "Students determine the unknown whole number in addition or subtraction equations, with the unknown in any position - beginning, middle, or end. They use inverse operations, related facts, and algebraic reasoning to solve.",
+      "questions": {
+        "easy": [
+          {
+            "question": "3 + 4 = ?",
+            "answer": "7",
+            "explanation": "3 + 4 = 7. Count on 4 from 3."
+          },
+          {
+            "question": "8 - 3 = ?",
+            "answer": "5",
+            "explanation": "8 - 3 = 5. Count back 3 from 8."
+          },
+          {
+            "question": "2 + ? = 7",
+            "answer": "5",
+            "explanation": "Think: 7 - 2 = 5. So the missing number is 5."
+          },
+          {
+            "question": "? + 4 = 9",
+            "answer": "5",
+            "explanation": "Think: 9 - 4 = 5. So 5 + 4 = 9."
+          },
+          {
+            "question": "6 - ? = 2",
+            "answer": "4",
+            "explanation": "Think: 2 + 4 = 6. So 6 - 4 = 2."
+          }
+        ],
+        "medium": [
+          {
+            "question": "? + 7 = 15",
+            "answer": "8",
+            "explanation": "Think: 15 - 7 = 8. So 8 + 7 = 15."
+          },
+          {
+            "question": "13 - ? = 5",
+            "answer": "8",
+            "explanation": "Think: 5 + 8 = 13. So 13 - 8 = 5."
+          },
+          {
+            "question": "9 + ? = 18",
+            "answer": "9",
+            "explanation": "Doubles: 9 + 9 = 18. So ? = 9."
+          },
+          {
+            "question": "? - 6 = 7",
+            "answer": "13",
+            "explanation": "Think: 7 + 6 = 13. If ? - 6 = 7, then ? = 7 + 6 = 13."
+          },
+          {
+            "question": "16 - 8 = ?",
+            "answer": "8",
+            "explanation": "Doubles: 8 + 8 = 16, so 16 - 8 = 8."
+          }
+        ],
+        "hard": [
+          {
+            "question": "? + 9 = 20",
+            "answer": "11",
+            "explanation": "Think: 20 - 9 = 11. So 11 + 9 = 20."
+          },
+          {
+            "question": "18 - ? = 9",
+            "answer": "9",
+            "explanation": "Doubles: 9 + 9 = 18, so 18 - 9 = 9."
+          },
+          {
+            "question": "A jar had some cookies. 7 were eaten and 8 remain. Write an equation and find how many were there at the start.",
+            "answer": "? - 7 = 8, so ? = 15",
+            "explanation": "? - 7 = 8. Think: 8 + 7 = 15. There were 15 cookies to start."
+          },
+          {
+            "question": "? - 8 = 6",
+            "answer": "14",
+            "explanation": "Think: 6 + 8 = 14. If ? - 8 = 6, then ? = 6 + 8 = 14."
+          },
+          {
+            "question": "20 - ? = 11",
+            "answer": "9",
+            "explanation": "Think: 11 + 9 = 20. So ? = 9. Check: 20 - 9 = 11."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.NBT.1",
+      "domain": "1.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Count to 120 - Read and Write Numerals",
+      "explanation": "Students count to 120 starting at any number less than 120. In the range of 1-120, they read and write numerals and represent a number of objects with a written numeral. They extend patterns beyond 100, recognizing that counting continues by ones.",
+      "questions": {
+        "easy": [
+          {
+            "question": "What number comes after 15?",
+            "answer": "16",
+            "explanation": "Counting order: ...14, 15, 16..."
+          },
+          {
+            "question": "What number comes before 10?",
+            "answer": "9",
+            "explanation": "Counting backwards: ...8, 9, 10..."
+          },
+          {
+            "question": "Fill in the missing number: 1, 2, 3, __, 5",
+            "answer": "4",
+            "explanation": "The counting sequence is 1, 2, 3, 4, 5."
+          },
+          {
+            "question": "How do you write the number seventeen?",
+            "answer": "17",
+            "explanation": "Seventeen is written as 17 (1 ten and 7 ones)."
+          },
+          {
+            "question": "Count these objects: * * * * * * (6 stars). What number is this?",
+            "answer": "6",
+            "explanation": "Count each star: 1, 2, 3, 4, 5, 6."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What number comes after 99?",
+            "answer": "100",
+            "explanation": "After 99 comes 100. We enter a new group of hundreds."
+          },
+          {
+            "question": "Count by 10s: 10, 20, 30, __, 50. What is missing?",
+            "answer": "40",
+            "explanation": "Count by tens: 10, 20, 30, 40, 50."
+          },
+          {
+            "question": "What number comes between 109 and 111?",
+            "answer": "110",
+            "explanation": "Counting: ...108, 109, 110, 111..."
+          },
+          {
+            "question": "Write one hundred five in numerals.",
+            "answer": "105",
+            "explanation": "One hundred five = 100 + 5 = 105."
+          },
+          {
+            "question": "Fill in the missing number: 115, 116, 117, __, 119",
+            "answer": "118",
+            "explanation": "Counting sequence: 115, 116, 117, 118, 119."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Start at 97 and count to 103. Write all the numbers.",
+            "answer": "97, 98, 99, 100, 101, 102, 103",
+            "explanation": "After 99 comes 100, then 101, 102, 103. The pattern continues even past 100."
+          },
+          {
+            "question": "Write the number that is 1 less than 120.",
+            "answer": "119",
+            "explanation": "120 - 1 = 119. The number before 120 is 119."
+          },
+          {
+            "question": "Nina counted: 108, 109, 110, 120. What mistake did she make?",
+            "answer": "She skipped 111 through 119",
+            "explanation": "After 110 comes 111, not 120. She skipped 9 numbers."
+          },
+          {
+            "question": "How many tens are in 110?",
+            "answer": "11 tens",
+            "explanation": "110 = 11 groups of 10. 11 x 10 = 110."
+          },
+          {
+            "question": "Count backwards from 105 to 100. Write the sequence.",
+            "answer": "105, 104, 103, 102, 101, 100",
+            "explanation": "Counting down by ones: 105, 104, 103, 102, 101, 100."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.NBT.2",
+      "domain": "1.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Understand Place Value - Tens and Ones",
+      "explanation": "Students understand that the two digits of a two-digit number represent amounts of tens and ones. For example, 27 = 2 tens + 7 ones = 20 + 7. They also know that 10 ones make 1 ten, and that the decade numbers (10, 20, 30, ...) represent groups of tens.",
+      "questions": {
+        "easy": [
+          {
+            "question": "How many tens and ones are in 24?",
+            "answer": "2 tens and 4 ones",
+            "explanation": "24 = 20 + 4 = 2 tens and 4 ones."
+          },
+          {
+            "question": "What number has 1 ten and 5 ones?",
+            "answer": "15",
+            "explanation": "1 ten = 10, plus 5 ones = 15."
+          },
+          {
+            "question": "How many ones are in 30?",
+            "answer": "0 ones (3 tens, 0 ones)",
+            "explanation": "30 = 3 tens and 0 ones. There are no extra ones."
+          },
+          {
+            "question": "Write 3 tens and 2 ones as a number.",
+            "answer": "32",
+            "explanation": "3 tens = 30, plus 2 ones = 32."
+          },
+          {
+            "question": "17 has how many tens and how many ones?",
+            "answer": "1 ten and 7 ones",
+            "explanation": "17 = 10 + 7 = 1 ten and 7 ones."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is the value of the digit 5 in 57?",
+            "answer": "50 (5 tens)",
+            "explanation": "In 57, the 5 is in the tens place, so it means 5 tens = 50."
+          },
+          {
+            "question": "40 + 8 = ?",
+            "answer": "48",
+            "explanation": "40 = 4 tens, plus 8 ones = 48."
+          },
+          {
+            "question": "How many tens are in 90?",
+            "answer": "9 tens",
+            "explanation": "90 = 9 tens and 0 ones."
+          },
+          {
+            "question": "A number has 7 tens and 3 ones. What is the number?",
+            "answer": "73",
+            "explanation": "7 tens = 70, plus 3 ones = 73."
+          },
+          {
+            "question": "What is the value of the digit 2 in 62?",
+            "answer": "2 (2 ones)",
+            "explanation": "In 62, the 2 is in the ones place, so it means 2 ones = 2."
+          }
+        ],
+        "hard": [
+          {
+            "question": "58 = 5 tens + ? ones",
+            "answer": "8",
+            "explanation": "58 = 50 + 8 = 5 tens + 8 ones."
+          },
+          {
+            "question": "Write two different ways to show 43 using tens and ones.",
+            "answer": "4 tens 3 ones; or 3 tens 13 ones",
+            "explanation": "43 = 4 tens + 3 ones, or 3 tens + 13 ones. Both equal 43."
+          },
+          {
+            "question": "10 ones = ? ten(s)",
+            "answer": "1 ten",
+            "explanation": "10 ones bundled together make 1 ten. 10 = 1 ten."
+          },
+          {
+            "question": "What number has the same digit in both the tens and ones place, and is between 20 and 40?",
+            "answer": "33",
+            "explanation": "33 = 3 tens and 3 ones. Both digits are 3, and 20 < 33 < 40."
+          },
+          {
+            "question": "A number is between 50 and 60. Its ones digit is 3 less than its tens digit. What is the number?",
+            "answer": "52",
+            "explanation": "Tens digit = 5. Ones digit = 5 - 3 = 2. The number is 52."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.NBT.3",
+      "domain": "1.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Compare Two Two-Digit Numbers Using >, =, <",
+      "explanation": "Students compare two two-digit numbers using the symbols > (greater than), = (equal to), and < (less than). The comparison strategy is to look at tens first; if tens are equal, then compare the ones digit.",
+      "questions": {
+        "easy": [
+          {
+            "question": "Which is greater: 34 or 38?",
+            "answer": "38",
+            "explanation": "Both have 3 tens. Compare ones: 8 > 4, so 38 > 34."
+          },
+          {
+            "question": "Use >, =, or < to compare: 25 __ 25",
+            "answer": "=",
+            "explanation": "25 = 25. They are the same number."
+          },
+          {
+            "question": "Which is less: 47 or 41?",
+            "answer": "41",
+            "explanation": "Both have 4 tens. Compare ones: 1 < 7, so 41 < 47."
+          },
+          {
+            "question": "Use >, =, or < to compare: 60 __ 50",
+            "answer": ">",
+            "explanation": "6 tens > 5 tens, so 60 > 50."
+          },
+          {
+            "question": "Circle the greater number: 72 or 79.",
+            "answer": "79",
+            "explanation": "Both have 7 tens. Compare ones: 9 > 2, so 79 > 72."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Use >, =, or < to compare: 53 __ 49",
+            "answer": ">",
+            "explanation": "5 tens > 4 tens, so 53 > 49 (no need to compare ones)."
+          },
+          {
+            "question": "Which is greater: 81 or 78?",
+            "answer": "81",
+            "explanation": "8 tens > 7 tens, so 81 > 78."
+          },
+          {
+            "question": "Use >, =, or < to compare: 66 __ 68",
+            "answer": "<",
+            "explanation": "Same tens (6). Compare ones: 6 < 8, so 66 < 68."
+          },
+          {
+            "question": "Order from least to greatest: 45, 54, 44.",
+            "answer": "44, 45, 54",
+            "explanation": "44 < 45 (same tens, 4 < 5). 45 < 54 (4 tens < 5 tens)."
+          },
+          {
+            "question": "Use >, =, or < to compare: 90 __ 89",
+            "answer": ">",
+            "explanation": "9 tens > 8 tens, so 90 > 89."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Name two numbers between 30 and 40 where one is greater, and write a comparison.",
+            "answer": "e.g., 37 > 32",
+            "explanation": "Any two numbers between 30-40 work. e.g., 37 > 32 because both have 3 tens but 7 > 2."
+          },
+          {
+            "question": "My number is less than 75 and greater than 72. What could it be?",
+            "answer": "73 or 74",
+            "explanation": "73 and 74 are both less than 75 and greater than 72."
+          },
+          {
+            "question": "Use >, =, or < to compare: (4 tens + 7 ones) __ 52",
+            "answer": "<",
+            "explanation": "4 tens + 7 ones = 47. Compare: 4 tens < 5 tens, so 47 < 52."
+          },
+          {
+            "question": "Write three numbers that are greater than 85.",
+            "answer": "Any three of: 86, 87, 88, 89, 90, ...",
+            "explanation": "86, 87, 88 (or any three numbers above 85)."
+          },
+          {
+            "question": "A two-digit number has 6 in the ones place and is greater than 70. What could it be?",
+            "answer": "76, 86, or 96",
+            "explanation": "76, 86, and 96 all have 6 in the ones place and are greater than 70."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.NBT.4",
+      "domain": "1.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Add Within 100 - Two-Digit Plus One-Digit or Multiple of 10",
+      "explanation": "Students add within 100, using strategies based on place value: a two-digit number plus a one-digit number, or a two-digit number plus a multiple of 10. When adding tens, only the tens digit changes. When adding ones that do not cross a ten boundary, only the ones digit changes.",
+      "questions": {
+        "easy": [
+          {
+            "question": "30 + 20 = ?",
+            "answer": "50",
+            "explanation": "3 tens + 2 tens = 5 tens = 50."
+          },
+          {
+            "question": "45 + 10 = ?",
+            "answer": "55",
+            "explanation": "4 tens + 1 ten = 5 tens; ones stay the same. Answer: 55."
+          },
+          {
+            "question": "62 + 20 = ?",
+            "answer": "82",
+            "explanation": "6 tens + 2 tens = 8 tens; ones stay the same. Answer: 82."
+          },
+          {
+            "question": "71 + 10 = ?",
+            "answer": "81",
+            "explanation": "7 tens + 1 ten = 8 tens; ones unchanged. Answer: 81."
+          },
+          {
+            "question": "50 + 30 = ?",
+            "answer": "80",
+            "explanation": "5 tens + 3 tens = 8 tens = 80."
+          }
+        ],
+        "medium": [
+          {
+            "question": "43 + 5 = ?",
+            "answer": "48",
+            "explanation": "40 + (3 + 5) = 40 + 8 = 48. Only the ones change."
+          },
+          {
+            "question": "61 + 7 = ?",
+            "answer": "68",
+            "explanation": "60 + (1 + 7) = 60 + 8 = 68."
+          },
+          {
+            "question": "34 + 20 = ?",
+            "answer": "54",
+            "explanation": "Add the tens: 30 + 20 = 50, plus 4 ones = 54."
+          },
+          {
+            "question": "52 + 6 = ?",
+            "answer": "58",
+            "explanation": "50 + (2 + 6) = 50 + 8 = 58."
+          },
+          {
+            "question": "73 + 4 = ?",
+            "answer": "77",
+            "explanation": "70 + (3 + 4) = 70 + 7 = 77."
+          }
+        ],
+        "hard": [
+          {
+            "question": "47 + 6 = ?",
+            "answer": "53",
+            "explanation": "Make a ten: 47 + 3 = 50, then 50 + 3 = 53. Decompose 6 as 3 + 3."
+          },
+          {
+            "question": "68 + 5 = ?",
+            "answer": "73",
+            "explanation": "Make a ten: 68 + 2 = 70, then 70 + 3 = 73. Decompose 5 as 2 + 3."
+          },
+          {
+            "question": "35 + 28 = ?",
+            "answer": "63",
+            "explanation": "Add tens: 30 + 20 = 50. Add ones: 5 + 8 = 13. Total: 50 + 13 = 63."
+          },
+          {
+            "question": "59 + 4 = ?",
+            "answer": "63",
+            "explanation": "Make a ten: 59 + 1 = 60, then 60 + 3 = 63."
+          },
+          {
+            "question": "A store has 46 red apples and 30 green apples. How many apples are there in all?",
+            "answer": "76",
+            "explanation": "46 + 30: add the tens: 40 + 30 = 70; ones unchanged: 70 + 6 = 76."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.NBT.5",
+      "domain": "1.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Mentally Find 10 More or 10 Less",
+      "explanation": "Students mentally find 10 more or 10 less than any two-digit number, without counting. They understand that adding 10 increases only the tens digit by 1, and subtracting 10 decreases only the tens digit by 1, while the ones digit always stays the same.",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is 10 more than 23?",
+            "answer": "33",
+            "explanation": "23 + 10 = 33. The tens digit goes from 2 to 3; the ones digit stays 3."
+          },
+          {
+            "question": "What is 10 less than 35?",
+            "answer": "25",
+            "explanation": "35 - 10 = 25. The tens digit goes from 3 to 2; the ones digit stays 5."
+          },
+          {
+            "question": "What is 10 more than 40?",
+            "answer": "50",
+            "explanation": "40 + 10 = 50. Tens digit: 4 becomes 5."
+          },
+          {
+            "question": "What is 10 less than 50?",
+            "answer": "40",
+            "explanation": "50 - 10 = 40. Tens digit: 5 becomes 4."
+          },
+          {
+            "question": "17 + 10 = ?",
+            "answer": "27",
+            "explanation": "17 + 10 = 27. Tens digit: 1 becomes 2. Ones digit stays 7."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is 10 more than 78?",
+            "answer": "88",
+            "explanation": "78 + 10 = 88. Tens digit: 7 becomes 8."
+          },
+          {
+            "question": "What is 10 less than 91?",
+            "answer": "81",
+            "explanation": "91 - 10 = 81. Tens digit: 9 becomes 8."
+          },
+          {
+            "question": "64 + 10 = ?",
+            "answer": "74",
+            "explanation": "64 + 10 = 74. Only the tens digit changes."
+          },
+          {
+            "question": "? - 10 = 53. What is ?",
+            "answer": "63",
+            "explanation": "If ? - 10 = 53, then ? = 53 + 10 = 63."
+          },
+          {
+            "question": "10 less than 100 is ?",
+            "answer": "90",
+            "explanation": "100 - 10 = 90."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Start at 45. Add 10 three times. Where do you end up?",
+            "answer": "75",
+            "explanation": "45 + 10 = 55, 55 + 10 = 65, 65 + 10 = 75."
+          },
+          {
+            "question": "What is 10 more than 10 less than 67?",
+            "answer": "67",
+            "explanation": "67 - 10 = 57, then 57 + 10 = 67. You end where you started!"
+          },
+          {
+            "question": "Complete the pattern: 34, 44, 54, __.",
+            "answer": "64",
+            "explanation": "Each number is 10 more than the previous. 54 + 10 = 64."
+          },
+          {
+            "question": "A pattern: 99, 89, 79, __ . What comes next?",
+            "answer": "69",
+            "explanation": "Each number is 10 less than the previous. 79 - 10 = 69."
+          },
+          {
+            "question": "Start at 99. What is 10 less? What is 10 more?",
+            "answer": "10 less: 89; 10 more: 109",
+            "explanation": "99 - 10 = 89; 99 + 10 = 109. Note: 109 has three digits."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.NBT.6",
+      "domain": "1.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Subtract Multiples of 10 (10-90)",
+      "explanation": "Students subtract multiples of 10 (10, 20, 30, ... 90) from two-digit numbers within the range 10-90. They use place-value understanding and strategies to find the difference, recognizing that subtracting a multiple of 10 changes only the tens digit.",
+      "questions": {
+        "easy": [
+          {
+            "question": "50 - 10 = ?",
+            "answer": "40",
+            "explanation": "5 tens - 1 ten = 4 tens = 40."
+          },
+          {
+            "question": "30 - 20 = ?",
+            "answer": "10",
+            "explanation": "3 tens - 2 tens = 1 ten = 10."
+          },
+          {
+            "question": "80 - 30 = ?",
+            "answer": "50",
+            "explanation": "8 tens - 3 tens = 5 tens = 50."
+          },
+          {
+            "question": "70 - 40 = ?",
+            "answer": "30",
+            "explanation": "7 tens - 4 tens = 3 tens = 30."
+          },
+          {
+            "question": "60 - 20 = ?",
+            "answer": "40",
+            "explanation": "6 tens - 2 tens = 4 tens = 40."
+          }
+        ],
+        "medium": [
+          {
+            "question": "74 - 30 = ?",
+            "answer": "44",
+            "explanation": "70 - 30 = 40, plus 4 ones = 44. Only the tens change."
+          },
+          {
+            "question": "87 - 50 = ?",
+            "answer": "37",
+            "explanation": "80 - 50 = 30, plus 7 ones = 37."
+          },
+          {
+            "question": "65 - 40 = ?",
+            "answer": "25",
+            "explanation": "60 - 40 = 20, plus 5 = 25."
+          },
+          {
+            "question": "93 - 60 = ?",
+            "answer": "33",
+            "explanation": "90 - 60 = 30, plus 3 = 33."
+          },
+          {
+            "question": "58 - 20 = ?",
+            "answer": "38",
+            "explanation": "50 - 20 = 30, plus 8 = 38."
+          }
+        ],
+        "hard": [
+          {
+            "question": "? - 40 = 35. What is the missing number?",
+            "answer": "75",
+            "explanation": "If ? - 40 = 35, then ? = 35 + 40 = 75."
+          },
+          {
+            "question": "90 - ? = 20. What is the missing number?",
+            "answer": "70",
+            "explanation": "Think: 20 + 70 = 90. So ? = 70."
+          },
+          {
+            "question": "A store had 82 apples. They sold a full box of 30. How many are left?",
+            "answer": "52",
+            "explanation": "82 - 30 = 52. Only the tens change: 80 - 30 = 50, plus 2 = 52."
+          },
+          {
+            "question": "60 - 30 + 20 = ?",
+            "answer": "50",
+            "explanation": "60 - 30 = 30, then 30 + 20 = 50."
+          },
+          {
+            "question": "Ben had 79 trading cards. He gave away 40. How many does he have now?",
+            "answer": "39",
+            "explanation": "79 - 40 = 39. Tens: 7 - 4 = 3; ones stay the same: 9."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.MD.1",
+      "domain": "1.MD",
+      "domainName": "Measurement and Data",
+      "title": "Order and Compare Lengths of Objects",
+      "explanation": "Students order three objects by length and compare the lengths of two objects indirectly by using a third object. They use comparison vocabulary such as longer, shorter, tallest, and shortest. Indirect comparison means: if A is longer than B, and B is longer than C, then A is longer than C.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A pencil is 7 inches long. A crayon is 4 inches long. Which is longer?",
+            "answer": "The pencil",
+            "explanation": "7 > 4. The pencil is longer than the crayon."
+          },
+          {
+            "question": "A book is taller than a cup. A cup is taller than a coin. Which is tallest?",
+            "answer": "The book",
+            "explanation": "Book > cup > coin. The book is the tallest of the three."
+          },
+          {
+            "question": "Put in order from shortest to longest: a paper clip, a ruler, a pencil.",
+            "answer": "Paper clip, pencil, ruler",
+            "explanation": "Paper clips are shortest, pencils are medium length, rulers are longest."
+          },
+          {
+            "question": "Two ribbons: one is 8 cm, one is 5 cm. Which is shorter?",
+            "answer": "The 5 cm ribbon",
+            "explanation": "5 < 8. The 5 cm ribbon is shorter."
+          },
+          {
+            "question": "Tim's shoe is longer than Dan's shoe. Dan's shoe is longer than Sue's shoe. Whose shoe is shortest?",
+            "answer": "Sue's",
+            "explanation": "Tim > Dan > Sue. Sue's shoe is the shortest."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A red stick is longer than a blue stick. The blue stick is longer than a yellow stick. Order from longest to shortest.",
+            "answer": "Red, blue, yellow",
+            "explanation": "Red > blue > yellow."
+          },
+          {
+            "question": "String A is 12 cm. String B is 9 cm. String C is 15 cm. Order from shortest to longest.",
+            "answer": "B, A, C",
+            "explanation": "9 < 12 < 15. B is shortest, then A, then C."
+          },
+          {
+            "question": "If a table is shorter than a door but taller than a chair, which object is tallest?",
+            "answer": "The door",
+            "explanation": "Door > table > chair. The door is the tallest."
+          },
+          {
+            "question": "Three crayons: blue = 6 cm, red = 6 cm, green = 4 cm. Which two are the same length?",
+            "answer": "Blue and red",
+            "explanation": "Both blue and red crayons are 6 cm long."
+          },
+          {
+            "question": "Sam measures his foot: 18 cm. He measures his hand: 14 cm. How much longer is his foot than his hand?",
+            "answer": "4 cm",
+            "explanation": "18 - 14 = 4 cm. His foot is 4 cm longer."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Four strings: A = 10 cm, B = 7 cm, C = 13 cm, D = 10 cm. Which two are equal? Order all four from shortest to longest.",
+            "answer": "A and D are equal; order: B, A = D, C",
+            "explanation": "A = D = 10 cm. Order: B (7) < A = D (10) < C (13)."
+          },
+          {
+            "question": "A worm is shorter than a pencil. A pencil is shorter than a ruler. A ruler is shorter than a table. Which is the longest?",
+            "answer": "The table",
+            "explanation": "Worm < pencil < ruler < table. The table is longest."
+          },
+          {
+            "question": "Mark says a stick is about 4 paper clips long. Kate says it is about 3 large buttons long. Who measured with a smaller unit?",
+            "answer": "Mark (paper clips are the smaller unit)",
+            "explanation": "Paper clips are smaller than large buttons, so Mark needed more of them to measure the same length."
+          },
+          {
+            "question": "Arrange from longest to shortest: 6 inches, 2 feet, 1 foot, 3 inches.",
+            "answer": "2 feet, 1 foot, 6 inches, 3 inches",
+            "explanation": "2 ft > 1 ft > 6 in > 3 in. (1 ft = 12 in)"
+          },
+          {
+            "question": "If rope X is longer than rope Y, and rope Y is longer than rope Z, can you say rope X is longer than rope Z?",
+            "answer": "Yes",
+            "explanation": "This is indirect comparison (transitivity). If X > Y and Y > Z, then X > Z."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.MD.2",
+      "domain": "1.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure Lengths Using Same-Size Length Units",
+      "explanation": "Students express the length of an object as a whole number of same-size length units by laying multiple copies of a shorter object end-to-end. They understand that the size of the unit affects the measurement: smaller units produce a larger count, and larger units produce a smaller count.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A pencil is as long as 5 paper clips placed end to end. How long is the pencil?",
+            "answer": "5 paper clips",
+            "explanation": "The pencil is 5 paper clips long. Paper clips are the unit of measurement."
+          },
+          {
+            "question": "A book is 4 crayons long. A ruler is 8 crayons long. Which is longer?",
+            "answer": "The ruler",
+            "explanation": "8 crayons > 4 crayons. The ruler is longer."
+          },
+          {
+            "question": "A crayon is 3 blocks long. How many blocks long is the crayon?",
+            "answer": "3 blocks",
+            "explanation": "Count the blocks placed end-to-end: 3."
+          },
+          {
+            "question": "Sam laid 5 coins end-to-end along a pencil. How long is the pencil in coins?",
+            "answer": "5 coins",
+            "explanation": "5 coins end-to-end = 5 coins long."
+          },
+          {
+            "question": "Maya measures a book with paper clips and uses 8 paper clips. How long is the book?",
+            "answer": "8 paper clips",
+            "explanation": "The book is 8 paper clips long."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Object A is 6 paper clips long. Object B is 4 paper clips long. Which is longer and by how much?",
+            "answer": "Object A; by 2 paper clips",
+            "explanation": "6 - 4 = 2. Object A is longer by 2 paper clips."
+          },
+          {
+            "question": "The same object measures 4 blocks long OR 8 buttons long. Which unit is bigger - a block or a button?",
+            "answer": "A block",
+            "explanation": "Fewer units means each unit is bigger. 4 big units = 8 small units, so blocks are bigger."
+          },
+          {
+            "question": "A table is 10 pencils wide. A desk is 7 pencils wide. How much wider is the table?",
+            "answer": "3 pencils wider",
+            "explanation": "10 - 7 = 3 pencils."
+          },
+          {
+            "question": "Sam measured the door with his foot: 9 feet. Lisa measured it with her foot: 11 feet. Why are the answers different?",
+            "answer": "Their feet are different sizes (different unit lengths)",
+            "explanation": "If units are different sizes, the same object will give different measurements."
+          },
+          {
+            "question": "A book is 5 large cubes or 10 small cubes long. Are the large cubes bigger or smaller than the small cubes?",
+            "answer": "Larger",
+            "explanation": "5 large units = 10 small units, so each large unit is bigger."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A pencil is 6 buttons long. An eraser needs to measure 18 buttons long. How many pencils long is the eraser?",
+            "answer": "3 pencils",
+            "explanation": "18 buttons / 6 buttons per pencil = 3 pencils."
+          },
+          {
+            "question": "Which ruler is shorter: one that measures a table as 4 units, or one that measures the same table as 8 units?",
+            "answer": "The ruler that gives 8 units (the shorter ruler)",
+            "explanation": "Smaller units require more of them. 8 units means each unit is shorter."
+          },
+          {
+            "question": "A path is 12 small steps long. Big steps are twice as long as small steps. How many big steps long is the path?",
+            "answer": "6 big steps",
+            "explanation": "12 small steps / 2 = 6 big steps."
+          },
+          {
+            "question": "Ana measured her desk with paper clips and got 20. Her desk is also 10 crayons long. How long is each crayon in paper clips?",
+            "answer": "2 paper clips",
+            "explanation": "20 paper clips = 10 crayons, so 1 crayon = 2 paper clips."
+          },
+          {
+            "question": "If you use a longer unit to measure a room, will you get a bigger or smaller number?",
+            "answer": "Smaller number",
+            "explanation": "The longer the unit, the fewer units you need to cover the same length."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.MD.3",
+      "domain": "1.MD",
+      "domainName": "Measurement and Data",
+      "title": "Tell and Write Time - Hours and Half-Hours",
+      "explanation": "Students tell and write time in hours and half-hours using analog and digital clocks. On an analog clock: the short hand (hour hand) indicates the hour, the long hand (minute hand) points to 12 for the hour and to 6 for half past. Digital clocks show time as H:MM or HH:MM.",
+      "questions": {
+        "easy": [
+          {
+            "question": "The clock shows the hour hand on 3 and the minute hand on 12. What time is it?",
+            "answer": "3:00 (3 o'clock)",
+            "explanation": "Minute hand on 12 = exactly on the hour. Hour hand on 3 = 3 o'clock."
+          },
+          {
+            "question": "What does 5:00 mean?",
+            "answer": "5 o'clock",
+            "explanation": "5:00 on a digital clock means it is exactly 5 o'clock. The hour hand points to 5, minute hand to 12."
+          },
+          {
+            "question": "The hour hand is on 7 and the minute hand is on 12. What time is it?",
+            "answer": "7:00",
+            "explanation": "7 o'clock. Minute hand on 12 means it is exactly on the hour."
+          },
+          {
+            "question": "For 2:00, where does the hour hand point? Where does the minute hand point?",
+            "answer": "Hour hand on 2, minute hand on 12",
+            "explanation": "For 2 o'clock, hour hand points to 2, minute hand points to 12."
+          },
+          {
+            "question": "Hour hand points to 9, minute hand points to 12. What time is it?",
+            "answer": "9:00",
+            "explanation": "9 o'clock."
+          }
+        ],
+        "medium": [
+          {
+            "question": "The minute hand is on 6 and the hour hand is between 4 and 5. What time is it?",
+            "answer": "4:30",
+            "explanation": "Minute hand on 6 = 30 minutes past. Hour hand between 4 and 5 = half past 4 = 4:30."
+          },
+          {
+            "question": "What time is half past 2?",
+            "answer": "2:30",
+            "explanation": "Half past 2 = 2:30. Minute hand points to 6, hour hand is between 2 and 3."
+          },
+          {
+            "question": "For 6:30, where do the clock hands point?",
+            "answer": "Hour hand between 6 and 7, minute hand on 6",
+            "explanation": "6:30 means half past 6. The hour hand is halfway between 6 and 7."
+          },
+          {
+            "question": "What does 8:30 mean?",
+            "answer": "Half past 8; 30 minutes after 8 o'clock",
+            "explanation": "8:30 = 8 hours and 30 minutes = half past 8."
+          },
+          {
+            "question": "Is 3:30 an o'clock time or a half-hour time?",
+            "answer": "Half-hour",
+            "explanation": "3:30 has 30 minutes past, so it is a half-hour time."
+          }
+        ],
+        "hard": [
+          {
+            "question": "School starts at 8 o'clock. Write this time two ways.",
+            "answer": "8:00 and \"8 o'clock\"",
+            "explanation": "8 o'clock is written as 8:00 on a digital clock."
+          },
+          {
+            "question": "If it is 3:00 now, what time will it be in half an hour?",
+            "answer": "3:30",
+            "explanation": "3:00 + 30 minutes = 3:30."
+          },
+          {
+            "question": "Lunch is at 12:30. Is this before or after noon?",
+            "answer": "After noon (it is half past noon)",
+            "explanation": "12:30 is 30 minutes after noon."
+          },
+          {
+            "question": "The minute hand moved from 12 to 6. How many minutes passed?",
+            "answer": "30 minutes",
+            "explanation": "From 12 to 6 on the minute hand = 30 minutes. This is half an hour."
+          },
+          {
+            "question": "At 7:00, Tom starts reading. At 7:30, he stops. How long did he read?",
+            "answer": "30 minutes",
+            "explanation": "From 7:00 to 7:30 is 30 minutes (one half-hour)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.MD.4",
+      "domain": "1.MD",
+      "domainName": "Measurement and Data",
+      "title": "Organize, Represent, and Interpret Data",
+      "explanation": "Students organize, represent, and interpret data with up to three categories. They answer questions about the total number of data points, how many are in each category, and how many more or fewer in one category compared to another. Data is displayed in charts, tally marks, bar graphs, and pictographs.",
+      "questions": {
+        "easy": [
+          {
+            "question": "5 students chose apples and 3 chose bananas. How many students chose fruit in all?",
+            "answer": "8",
+            "explanation": "5 + 3 = 8 students chose fruit."
+          },
+          {
+            "question": "A chart shows 4 cats and 6 dogs. Which has more?",
+            "answer": "Dogs",
+            "explanation": "6 > 4. More dogs were counted."
+          },
+          {
+            "question": "In a class, 7 students like red and 5 like blue. How many more students like red than blue?",
+            "answer": "2 more",
+            "explanation": "7 - 5 = 2 more students like red."
+          },
+          {
+            "question": "A bar graph shows 3 sunny days and 4 rainy days. How many days in all?",
+            "answer": "7 days",
+            "explanation": "3 + 4 = 7 days."
+          },
+          {
+            "question": "Tally marks: cats = |||| (4), dogs = ||| (3). How many animals in all?",
+            "answer": "7",
+            "explanation": "Cats = 4, Dogs = 3. Total = 4 + 3 = 7."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Favorite colors: Red = 5, Blue = 3, Green = 7. Which color got the most votes?",
+            "answer": "Green",
+            "explanation": "7 > 5 > 3. Green got the most votes."
+          },
+          {
+            "question": "A graph shows: apples = 6, bananas = 4, oranges = 5. How many fruit were counted in all?",
+            "answer": "15",
+            "explanation": "6 + 4 + 5 = 15 fruits."
+          },
+          {
+            "question": "Sports: Soccer = 8, Baseball = 5, Swimming = 3. How many more chose soccer than swimming?",
+            "answer": "5 more",
+            "explanation": "8 - 3 = 5 more students chose soccer."
+          },
+          {
+            "question": "A pictograph shows 4 sunny days, 3 cloudy days, 2 rainy days. How many days does it show?",
+            "answer": "9 days",
+            "explanation": "4 + 3 + 2 = 9 days."
+          },
+          {
+            "question": "Pets: Dogs = 7, Cats = 5, Fish = 3. How many more dogs than fish?",
+            "answer": "4 more",
+            "explanation": "7 - 3 = 4 more dogs than fish."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Favorite lunch: Pizza = 9, Sandwich = 6, Salad = 3. How many more students chose pizza than sandwich and salad combined?",
+            "answer": "0 (they are equal)",
+            "explanation": "Sandwich + Salad = 6 + 3 = 9 = Pizza. They are equal."
+          },
+          {
+            "question": "A class surveyed 20 students about pets. Dogs = 8, Cats = 7. How many students chose neither?",
+            "answer": "5",
+            "explanation": "20 - 8 - 7 = 5 students have neither a dog nor a cat."
+          },
+          {
+            "question": "Survey results: Jump rope = 12, Tag = 8, Blocks = 5. How many students were surveyed?",
+            "answer": "25",
+            "explanation": "12 + 8 + 5 = 25 students."
+          },
+          {
+            "question": "Using the data (Red = 4, Blue = 6, Yellow = 5), write one question and answer it.",
+            "answer": "e.g., \"How many more chose blue than red?\" Answer: 6 - 4 = 2",
+            "explanation": "Many valid questions are possible. The key is to use the data to compare categories."
+          },
+          {
+            "question": "In a class: boys = 12, girls = 10. If 5 boys and 3 girls are absent, how many students are present?",
+            "answer": "14",
+            "explanation": "Present boys: 12 - 5 = 7. Present girls: 10 - 3 = 7. Total: 7 + 7 = 14."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.G.1",
+      "domain": "1.G",
+      "domainName": "Geometry",
+      "title": "Distinguish Defining vs. Non-Defining Attributes of Shapes",
+      "explanation": "Students distinguish between attributes that define a shape (defining attributes) and attributes that do not (non-defining attributes). Defining attributes: number of sides, number of corners, being a closed figure. Non-defining attributes: color, size, and orientation. A triangle is always a triangle because it has 3 sides - regardless of color, size, or how it is rotated.",
+      "questions": {
+        "easy": [
+          {
+            "question": "How many sides does a triangle have?",
+            "answer": "3",
+            "explanation": "A triangle always has exactly 3 sides. This is a defining attribute of a triangle."
+          },
+          {
+            "question": "How many corners does a square have?",
+            "answer": "4",
+            "explanation": "A square has 4 corners (vertices). This is a defining attribute."
+          },
+          {
+            "question": "A shape has 4 sides and 4 corners. Could it be a rectangle?",
+            "answer": "Yes",
+            "explanation": "A rectangle has 4 sides and 4 corners. Those are its defining attributes."
+          },
+          {
+            "question": "A circle is very large. Is it still a circle?",
+            "answer": "Yes",
+            "explanation": "Size is a non-defining attribute. A large circle is still a circle."
+          },
+          {
+            "question": "A triangle is red. Does being red make it a triangle?",
+            "answer": "No",
+            "explanation": "Color is not a defining attribute. A triangle is defined by having 3 sides and 3 corners."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Maria has a yellow triangle and a blue triangle. What makes both shapes triangles?",
+            "answer": "Both have 3 sides and 3 corners",
+            "explanation": "Color does not matter. 3 sides and 3 corners define a triangle."
+          },
+          {
+            "question": "Sort these into defining vs. non-defining attributes: color, number of sides, size, number of corners.",
+            "answer": "Defining: number of sides, number of corners. Non-defining: color, size",
+            "explanation": "Defining attributes determine what shape it is. Non-defining ones can change without changing the shape type."
+          },
+          {
+            "question": "A shape has 6 sides. What is it?",
+            "answer": "Hexagon",
+            "explanation": "A hexagon has 6 sides and 6 corners."
+          },
+          {
+            "question": "Can two different shape types both have 4 sides?",
+            "answer": "Yes (e.g., square and rectangle)",
+            "explanation": "Squares and rectangles both have 4 sides. They are both quadrilaterals."
+          },
+          {
+            "question": "What is one defining attribute of a circle?",
+            "answer": "No straight sides and no corners; it is a closed curved shape",
+            "explanation": "A circle has no straight sides and no corners. This defines it."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Jake says this shape is not a square because it is blue. Is he right?",
+            "answer": "No",
+            "explanation": "Color is a non-defining attribute. A square is defined by 4 equal sides and 4 right corners."
+          },
+          {
+            "question": "Name a non-defining attribute for a triangle. Explain why it is non-defining.",
+            "answer": "e.g., Color. It does not affect the number of sides or corners.",
+            "explanation": "Non-defining attributes (color, size, position) can change without changing whether the shape is a triangle."
+          },
+          {
+            "question": "How is a square different from a rectangle in terms of defining attributes?",
+            "answer": "A square has 4 equal sides. A rectangle has 4 sides where opposite sides are equal. A square is a special rectangle.",
+            "explanation": "Both have 4 sides and 4 right corners, but a square requires all 4 sides to be equal length."
+          },
+          {
+            "question": "A shape is large, green, and has 4 equal sides and 4 right corners. What shape is it?",
+            "answer": "A square",
+            "explanation": "The defining attributes are 4 equal sides and 4 right corners = square. Color and size are non-defining."
+          },
+          {
+            "question": "Write two defining and two non-defining attributes of a rectangle.",
+            "answer": "Defining: 4 sides, 4 corners. Non-defining: color, size",
+            "explanation": "Rectangles always have 4 sides and 4 corners. Their color and size can vary."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.G.2",
+      "domain": "1.G",
+      "domainName": "Geometry",
+      "title": "Compose Two- and Three-Dimensional Shapes",
+      "explanation": "Students compose 2D shapes (triangles, squares, rectangles, trapezoids, half-circles, quarter-circles) and 3D shapes (cubes, rectangular prisms, cones, cylinders) to create a composite shape. They build new shapes from composite shapes and identify 3D shapes by their properties.",
+      "questions": {
+        "easy": [
+          {
+            "question": "What shape do you make when you put two equal right triangles together along their longest sides?",
+            "answer": "A rectangle (or square)",
+            "explanation": "Two right triangles placed together form a rectangle or square."
+          },
+          {
+            "question": "Name a 3D shape that looks like a soup can.",
+            "answer": "Cylinder",
+            "explanation": "A soup can is shaped like a cylinder: circular top and bottom, curved side."
+          },
+          {
+            "question": "What 2D shape is each face of a cube?",
+            "answer": "Square",
+            "explanation": "All 6 faces of a cube are squares."
+          },
+          {
+            "question": "What shape can you make with two equal squares placed side by side?",
+            "answer": "Rectangle",
+            "explanation": "Two equal squares placed side by side form a rectangle."
+          },
+          {
+            "question": "A cone has how many flat faces?",
+            "answer": "1 (the circular base)",
+            "explanation": "A cone has 1 flat circular face at the base and comes to a point at the top."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A large equilateral triangle can be made from how many smaller equal triangles?",
+            "answer": "4",
+            "explanation": "A large equilateral triangle can be divided into 4 smaller equal equilateral triangles."
+          },
+          {
+            "question": "How many faces does a rectangular prism have?",
+            "answer": "6",
+            "explanation": "A rectangular prism has 6 rectangular faces."
+          },
+          {
+            "question": "What 3D shape has one circular face and comes to a point?",
+            "answer": "Cone",
+            "explanation": "A cone has one circular base and a pointed top."
+          },
+          {
+            "question": "Name two 2D shapes you could use to make a simple house outline.",
+            "answer": "A rectangle (walls) and a triangle (roof)",
+            "explanation": "A rectangle for the walls and a triangle on top for the roof."
+          },
+          {
+            "question": "What is the same and different between a cube and a rectangular prism?",
+            "answer": "Same: 6 faces, 8 corners. Different: cube has all square faces; rectangular prism can have rectangular faces.",
+            "explanation": "Both have 6 faces and 8 vertices (corners), but a cube has equal square faces."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Ben has 4 small cubes. He stacks 2 and places 2 side by side. What shape does he create?",
+            "answer": "A larger rectangular prism",
+            "explanation": "Combining cubes in a rectangular arrangement creates a larger rectangular prism."
+          },
+          {
+            "question": "Name three real-world objects shaped like a sphere.",
+            "answer": "e.g., ball, globe, orange",
+            "explanation": "Spheres are perfectly round: balls, globes, oranges are all sphere-shaped."
+          },
+          {
+            "question": "A regular hexagon can be made from how many equilateral triangles?",
+            "answer": "6",
+            "explanation": "A regular hexagon can be divided into 6 equilateral triangles arranged around a center point."
+          },
+          {
+            "question": "What 3D shape has two triangular faces and three rectangular faces?",
+            "answer": "Triangular prism",
+            "explanation": "A triangular prism has 2 triangular faces (ends) and 3 rectangular faces (sides)."
+          },
+          {
+            "question": "You have some triangles and squares. Describe a composite shape you can make and name it.",
+            "answer": "e.g., A square with a triangle on top looks like a house or a pentagon",
+            "explanation": "A square with an equilateral triangle on top creates a house-like pentagon composite shape."
+          }
+        ]
+      }
+    },
+    {
+      "code": "1.G.3",
+      "domain": "1.G",
+      "domainName": "Geometry",
+      "title": "Partition Circles and Rectangles into Equal Shares",
+      "explanation": "Students partition circles and rectangles into 2 or 4 equal shares, using vocabulary: halves, fourths, quarters. They understand that the more equal shares a whole is divided into, the smaller each share becomes, and that equal shares of identical wholes do not need to have the same shape.",
+      "questions": {
+        "easy": [
+          {
+            "question": "A circle is cut into 2 equal pieces. What is each piece called?",
+            "answer": "A half",
+            "explanation": "Two equal pieces of a whole are called halves. Each piece is one-half."
+          },
+          {
+            "question": "If you fold a rectangle into 2 equal parts, how many halves are there?",
+            "answer": "2 halves",
+            "explanation": "2 equal parts = 2 halves."
+          },
+          {
+            "question": "Is half of 8 equal to 4?",
+            "answer": "Yes",
+            "explanation": "8 / 2 = 4. Half of 8 is 4."
+          },
+          {
+            "question": "A pizza is cut in half. You eat one piece. How much of the pizza did you eat?",
+            "answer": "One half (1/2)",
+            "explanation": "One out of two equal pieces = one-half."
+          },
+          {
+            "question": "A sandwich is cut into 2 equal halves. Are the pieces bigger or smaller than the whole sandwich?",
+            "answer": "Smaller",
+            "explanation": "Any piece of a whole is smaller than the whole."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A circle is cut into 4 equal pieces. What is each piece called?",
+            "answer": "A fourth, or a quarter",
+            "explanation": "Four equal pieces = fourths or quarters. Each is one-fourth."
+          },
+          {
+            "question": "If you cut a rectangle into 4 equal parts, how many fourths are there?",
+            "answer": "4 fourths",
+            "explanation": "4 equal parts = 4 fourths."
+          },
+          {
+            "question": "Which is bigger: one-half of a pizza or one-fourth of the same pizza?",
+            "answer": "One-half",
+            "explanation": "The more pieces you cut, the smaller each piece is. A half is bigger than a fourth."
+          },
+          {
+            "question": "A square is cut into 4 equal parts. Each part is called a ___.",
+            "answer": "Fourth (or quarter)",
+            "explanation": "Four equal parts of a whole are called fourths or quarters."
+          },
+          {
+            "question": "4 fourths = ___ whole(s)",
+            "answer": "1 whole",
+            "explanation": "4 fourths put back together = 1 whole."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Can a rectangle be cut into 4 equal shares in different ways? Explain.",
+            "answer": "Yes (e.g., 4 horizontal strips, 4 vertical strips, or a 2x2 grid - all are fourths)",
+            "explanation": "Equal shares do not need to have the same shape. A rectangle can be quartered in multiple ways."
+          },
+          {
+            "question": "Sam cuts a circle into 2 equal pieces. Ana cuts a same-size circle into 4 equal pieces. Whose pieces are bigger?",
+            "answer": "Sam's (halves are bigger than fourths)",
+            "explanation": "Fewer equal pieces means each piece is larger. 2 pieces > 4 pieces in individual size."
+          },
+          {
+            "question": "A rectangle is cut into 2 equal halves. Each half is then cut in half again. What fraction is each piece?",
+            "answer": "One-fourth (1/4)",
+            "explanation": "Half of a half = one-fourth. 1/2 x 1/2 = 1/4."
+          },
+          {
+            "question": "Two identical rectangles: one cut into halves, one into fourths. Which rectangle has smaller pieces?",
+            "answer": "The one cut into fourths",
+            "explanation": "More equal pieces means each piece is smaller."
+          },
+          {
+            "question": "A pizza is shared equally among 4 friends. Is each share a half or a fourth? Who gets a bigger piece - 1 of 2 friends sharing, or 1 of 4 friends sharing?",
+            "answer": "Each of 4 friends gets a fourth. 1 of 2 friends gets a bigger piece.",
+            "explanation": "4 equal shares = fourths. 1/2 > 1/4, so sharing between 2 people gives bigger pieces."
+          }
+        ]
+      }
+    }
+  ]
+}

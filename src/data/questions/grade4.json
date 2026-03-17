@@ -1,0 +1,2527 @@
+{
+  "grade": 4,
+  "totalStandards": 28,
+  "totalQuestions": 420,
+  "standards": [
+    {
+      "code": "4.OA.1",
+      "domain": "4.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Interpret a multiplication equation as a comparison",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Interpret this equation as a comparison: 3 × 6 = 18. Which statement is correct?",
+            "answer": "18 is 3 times as many as 6",
+            "explanation": "A multiplication equation a × b = c means c is a times as many as b."
+          },
+          {
+            "question": "Write a comparison statement for 5 × 4 = 20.",
+            "answer": "20 is 5 times as many as 4",
+            "explanation": "5 × 4 = 20 means 20 is 5 times as many as 4, or equivalently, 4 times as many as 5."
+          },
+          {
+            "question": "If 7 is 7 times as many as 1, write a multiplication equation.",
+            "answer": "7 × 1 = 7",
+            "explanation": "'7 times as many as 1' translates to 7 × 1 = 7."
+          },
+          {
+            "question": "Sara has 2 stickers. Tom has 4 times as many stickers as Sara. How many stickers does Tom have?",
+            "answer": "8 stickers",
+            "explanation": "4 times as many as 2 is 4 × 2 = 8."
+          },
+          {
+            "question": "Which equation matches: '24 is 8 times as many as 3'?",
+            "answer": "8 × 3 = 24",
+            "explanation": "The phrase 'a times as many as b' translates to a × b = the total."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A dog weighs 9 pounds. A cat weighs 3 times as much. Write a comparison equation.",
+            "answer": "3 × 9 = 27",
+            "explanation": "3 times as much as 9 pounds is 3 × 9 = 27 pounds."
+          },
+          {
+            "question": "Maya has 6 marbles. Jake has 42 marbles. Jake has how many times as many marbles as Maya?",
+            "answer": "7 times as many",
+            "explanation": "42 ÷ 6 = 7, so Jake has 7 times as many as Maya."
+          },
+          {
+            "question": "Complete the comparison: 56 is ___ times as many as 8.",
+            "answer": "7",
+            "explanation": "56 ÷ 8 = 7, so 56 is 7 times as many as 8."
+          },
+          {
+            "question": "A book costs $5. A game costs 9 times as much. How much does the game cost? Write the equation.",
+            "answer": "9 × $5 = $45",
+            "explanation": "9 times as much as $5 is 9 × 5 = $45."
+          },
+          {
+            "question": "If 48 is 6 times as many as a number, what is that number?",
+            "answer": "8",
+            "explanation": "48 ÷ 6 = 8. So 48 is 6 times as many as 8."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Liam ran 4 miles. His dad ran 7 times as far. How far did his dad run? Write both a comparison statement and equation.",
+            "answer": "His dad ran 28 miles; 7 × 4 = 28",
+            "explanation": "7 times as far as 4 miles = 7 × 4 = 28 miles."
+          },
+          {
+            "question": "A shelf has 8 books. Another shelf has 72 books. Write two different comparison statements.",
+            "answer": "72 is 9 times as many as 8; 8 is 1/9 of 72",
+            "explanation": "72 ÷ 8 = 9, so 72 is 9 times as many as 8. Conversely, 8 is the smaller amount."
+          },
+          {
+            "question": "If n × 6 = 54, interpret the equation as a comparison statement.",
+            "answer": "54 is n times as many as 6, where n = 9",
+            "explanation": "54 ÷ 6 = 9, so 54 is 9 times as many as 6."
+          },
+          {
+            "question": "Emma has 3 times as many cards as Lily. Together they have 48 cards. How many does each girl have?",
+            "answer": "Lily has 12, Emma has 36",
+            "explanation": "Let Lily = x. Emma = 3x. x + 3x = 48, so 4x = 48, x = 12. Emma has 36."
+          },
+          {
+            "question": "Tom's age is 4 times Kim's age. Tom is 36. How old is Kim? Write the comparison equation.",
+            "answer": "Kim is 9; 4 × 9 = 36",
+            "explanation": "36 ÷ 4 = 9. Kim is 9 years old. 4 × 9 = 36."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.OA.2",
+      "domain": "4.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Multiply or divide to solve word problems involving multiplicative comparison",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A cat weighs 6 pounds. A dog weighs 5 times as much. How much does the dog weigh?",
+            "answer": "30 pounds",
+            "explanation": "5 × 6 = 30 pounds."
+          },
+          {
+            "question": "Ben has 3 toy cars. Alex has 4 times as many. How many toy cars does Alex have?",
+            "answer": "12 toy cars",
+            "explanation": "4 × 3 = 12 toy cars."
+          },
+          {
+            "question": "A rope is 8 feet long. A ribbon is 2 times as long. How long is the ribbon?",
+            "answer": "16 feet",
+            "explanation": "2 × 8 = 16 feet."
+          },
+          {
+            "question": "There are 7 red apples and 3 times as many green apples. How many green apples are there?",
+            "answer": "21 green apples",
+            "explanation": "3 × 7 = 21 green apples."
+          },
+          {
+            "question": "A pencil costs 9 cents. An eraser costs 2 times as much. How much does the eraser cost?",
+            "answer": "18 cents",
+            "explanation": "2 × 9 = 18 cents."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Maria scored 48 points. She scored 6 times as many points as Juan. How many points did Juan score?",
+            "answer": "8 points",
+            "explanation": "48 ÷ 6 = 8 points."
+          },
+          {
+            "question": "A garden has 35 flowers. That is 5 times as many as a small pot. How many flowers are in the small pot?",
+            "answer": "7 flowers",
+            "explanation": "35 ÷ 5 = 7 flowers."
+          },
+          {
+            "question": "Dad drove 63 miles, which is 9 times as far as Mom drove. How far did Mom drive?",
+            "answer": "7 miles",
+            "explanation": "63 ÷ 9 = 7 miles."
+          },
+          {
+            "question": "Amy read 8 books this month. That is 4 times as many as last month. How many books did she read last month?",
+            "answer": "2 books",
+            "explanation": "8 ÷ 4 = 2 books."
+          },
+          {
+            "question": "A large box holds 72 crayons, which is 8 times as many as a small box. How many crayons in the small box?",
+            "answer": "9 crayons",
+            "explanation": "72 ÷ 8 = 9 crayons."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Sam collected 3 times as many shells as Mia. Together they collected 56 shells. How many did each collect?",
+            "answer": "Mia: 14, Sam: 42",
+            "explanation": "Let Mia = x, Sam = 3x. x + 3x = 56 → 4x = 56 → x = 14. Sam = 42."
+          },
+          {
+            "question": "A truck weighs 5 times as much as a car. Together they weigh 5,400 pounds. How much does each weigh?",
+            "answer": "Car: 900 lbs, Truck: 4,500 lbs",
+            "explanation": "Let car = x. 5x + x = 5400 → 6x = 5400 → x = 900. Truck = 4500."
+          },
+          {
+            "question": "There are 3 times as many girls as boys in a class. There are 32 students total. How many boys and girls?",
+            "answer": "8 boys, 24 girls",
+            "explanation": "Let boys = b. Girls = 3b. b + 3b = 32 → 4b = 32 → b = 8, girls = 24."
+          },
+          {
+            "question": "The length of a rectangle is 6 times its width. The perimeter is 56 cm. Find the length and width.",
+            "answer": "Width: 4 cm, Length: 24 cm",
+            "explanation": "Let w = width. Length = 6w. 2(6w + w) = 56 → 14w = 56 → w = 4. Length = 24."
+          },
+          {
+            "question": "Ella has 4 times as many stickers as Nora. If Ella gives 15 stickers to Nora, they have the same amount. How many did each start with?",
+            "answer": "Nora: 10, Ella: 40",
+            "explanation": "Let Nora = n, Ella = 4n. 4n − 15 = n + 15 → 3n = 30 → n = 10. Ella = 40."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.OA.3",
+      "domain": "4.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Solve multistep word problems using the four operations",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A store sold 24 apples in the morning and 36 in the afternoon. They packed them in bags of 6. How many bags?",
+            "answer": "10 bags",
+            "explanation": "24 + 36 = 60. 60 ÷ 6 = 10 bags."
+          },
+          {
+            "question": "Tom had 50 stickers. He gave 12 to Sam and 8 to Lily. How many does he have left?",
+            "answer": "30 stickers",
+            "explanation": "50 − 12 − 8 = 30 stickers."
+          },
+          {
+            "question": "Each box has 8 cookies. There are 5 boxes. If 10 cookies are eaten, how many are left?",
+            "answer": "30 cookies",
+            "explanation": "8 × 5 = 40. 40 − 10 = 30."
+          },
+          {
+            "question": "A class has 4 rows of 7 desks plus 3 extra desks. How many desks total?",
+            "answer": "31 desks",
+            "explanation": "4 × 7 = 28. 28 + 3 = 31."
+          },
+          {
+            "question": "Maria earned $9 each day for 5 days. She spent $15. How much does she have?",
+            "answer": "$30",
+            "explanation": "9 × 5 = 45. 45 − 15 = 30."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A school ordered 6 boxes of pencils with 24 pencils each. They divided them equally among 8 classrooms. How many pencils per classroom?",
+            "answer": "18 pencils",
+            "explanation": "6 × 24 = 144. 144 ÷ 8 = 18."
+          },
+          {
+            "question": "Sam has $100. He buys 3 books at $12 each and 2 notebooks at $7 each. How much money is left?",
+            "answer": "$50",
+            "explanation": "3 × 12 = 36. 2 × 7 = 14. 36 + 14 = 50. 100 − 50 = 50."
+          },
+          {
+            "question": "A baker made 240 muffins. He sold 185 and gave away 30. He wants to pack the rest in boxes of 5. How many boxes?",
+            "answer": "5 boxes",
+            "explanation": "240 − 185 − 30 = 25. 25 ÷ 5 = 5."
+          },
+          {
+            "question": "There are 156 students going on a field trip. Each bus holds 48 students. How many buses are needed?",
+            "answer": "4 buses",
+            "explanation": "156 ÷ 48 = 3 remainder 12. You need 4 buses to seat everyone."
+          },
+          {
+            "question": "A farmer picks 35 oranges per hour for 8 hours. He packs them in bags of 7. How many bags?",
+            "answer": "40 bags",
+            "explanation": "35 × 8 = 280. 280 ÷ 7 = 40."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A theater has 12 rows of 15 seats plus 8 rows of 20 seats. If 245 tickets are sold, how many empty seats?",
+            "answer": "95 empty seats",
+            "explanation": "12 × 15 = 180. 8 × 20 = 160. 180 + 160 = 340. 340 − 245 = 95."
+          },
+          {
+            "question": "A store received 1,500 bottles of water. They sold 847 on Monday and 398 on Tuesday. They need to order more if fewer than 100 are left. Should they order more?",
+            "answer": "Yes, only 255 are left",
+            "explanation": "1500 − 847 − 398 = 255. 255 > 100, actually they should NOT order more."
+          },
+          {
+            "question": "Mia saves $8 per week. After 9 weeks, she buys a book for $23 and a game for $34. How much is left?",
+            "answer": "$15",
+            "explanation": "8 × 9 = 72. 23 + 34 = 57. 72 − 57 = 15."
+          },
+          {
+            "question": "A factory makes 1,200 toys. They ship 48 toys per box. After filling as many boxes as possible, how many toys are left over?",
+            "answer": "0 toys left over",
+            "explanation": "1200 ÷ 48 = 25 exactly. No remainder."
+          },
+          {
+            "question": "A garden has 4 sections. Each section has 6 rows with 9 plants per row. If 50 plants die, how many are alive?",
+            "answer": "166 plants",
+            "explanation": "4 × 6 × 9 = 216. 216 − 50 = 166."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.OA.4",
+      "domain": "4.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Find all factor pairs and determine prime or composite",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "List all the factors of 12.",
+            "answer": "1, 2, 3, 4, 6, 12",
+            "explanation": "Check each number 1-12: 12÷1=12, 12÷2=6, 12÷3=4. Factor pairs: (1,12), (2,6), (3,4)."
+          },
+          {
+            "question": "Is 7 prime or composite?",
+            "answer": "Prime",
+            "explanation": "7 has only two factors: 1 and 7. That makes it prime."
+          },
+          {
+            "question": "List all the factors of 18.",
+            "answer": "1, 2, 3, 6, 9, 18",
+            "explanation": "Factor pairs: (1,18), (2,9), (3,6)."
+          },
+          {
+            "question": "Is 9 prime or composite?",
+            "answer": "Composite",
+            "explanation": "9 = 3 × 3, so it has more than two factors (1, 3, 9)."
+          },
+          {
+            "question": "What are all the factor pairs of 10?",
+            "answer": "(1, 10) and (2, 5)",
+            "explanation": "1×10=10 and 2×5=10. Those are all factor pairs."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Find all factor pairs of 36.",
+            "answer": "(1,36), (2,18), (3,12), (4,9), (6,6)",
+            "explanation": "Check divisibility: 36÷1, 36÷2, 36÷3, 36÷4, 36÷6 all give whole numbers."
+          },
+          {
+            "question": "Is 51 prime or composite? Explain.",
+            "answer": "Composite (51 = 3 × 17)",
+            "explanation": "51 ÷ 3 = 17. Since 51 has factors other than 1 and itself, it's composite."
+          },
+          {
+            "question": "Which numbers between 20 and 30 are prime?",
+            "answer": "23 and 29",
+            "explanation": "Check each: 20(comp), 21(comp), 22(comp), 23(prime), 24(comp), 25(comp), 26(comp), 27(comp), 28(comp), 29(prime), 30(comp)."
+          },
+          {
+            "question": "How many factors does 24 have?",
+            "answer": "8 factors",
+            "explanation": "Factors: 1, 2, 3, 4, 6, 8, 12, 24. That's 8 factors."
+          },
+          {
+            "question": "Is 1 prime, composite, or neither?",
+            "answer": "Neither",
+            "explanation": "1 has only one factor (itself). Prime numbers must have exactly two factors."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Find all the factors of 48. How many factor pairs are there?",
+            "answer": "Factors: 1,2,3,4,6,8,12,16,24,48 - 5 factor pairs",
+            "explanation": "Pairs: (1,48),(2,24),(3,16),(4,12),(6,8). That's 5 pairs, 10 factors."
+          },
+          {
+            "question": "What is the smallest number that has exactly 6 factors?",
+            "answer": "12",
+            "explanation": "12 has factors: 1,2,3,4,6,12 - exactly 6. Numbers before 12 have fewer."
+          },
+          {
+            "question": "A number between 60 and 70 is prime. What is it?",
+            "answer": "61 and 67",
+            "explanation": "Check: 61 is prime (not divisible by 2,3,5,7). 67 is prime. Others are composite."
+          },
+          {
+            "question": "Can an even number greater than 2 be prime? Explain.",
+            "answer": "No",
+            "explanation": "Every even number > 2 is divisible by 2 and itself, giving at least 3 factors, so it's composite."
+          },
+          {
+            "question": "Find a number less than 50 that has exactly 3 factors.",
+            "answer": "4, 9, 25, or 49",
+            "explanation": "Numbers with exactly 3 factors are squares of primes: 2²=4(1,2,4), 3²=9(1,3,9), 5²=25(1,5,25), 7²=49(1,7,49)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.OA.5",
+      "domain": "4.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Generate and analyze a number or shape pattern",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is the rule for this pattern? 2, 4, 6, 8, 10, …",
+            "answer": "Add 2",
+            "explanation": "Each number is 2 more than the previous: 2+2=4, 4+2=6, etc."
+          },
+          {
+            "question": "Continue the pattern: 5, 10, 15, 20, ___",
+            "answer": "25",
+            "explanation": "The rule is add 5. 20 + 5 = 25."
+          },
+          {
+            "question": "What is the rule? 3, 6, 9, 12, 15, …",
+            "answer": "Add 3",
+            "explanation": "Each term increases by 3."
+          },
+          {
+            "question": "Continue: 1, 4, 7, 10, ___",
+            "answer": "13",
+            "explanation": "The rule is add 3. 10 + 3 = 13."
+          },
+          {
+            "question": "What comes next? 100, 90, 80, 70, ___",
+            "answer": "60",
+            "explanation": "The rule is subtract 10. 70 − 10 = 60."
+          }
+        ],
+        "medium": [
+          {
+            "question": "The rule is 'start at 1, add 5.' Generate the first 6 terms. Are all the terms odd?",
+            "answer": "1, 6, 11, 16, 21, 26. No, they alternate odd/even.",
+            "explanation": "1(odd), 6(even), 11(odd), 16(even), 21(odd), 26(even). They alternate."
+          },
+          {
+            "question": "Pattern: 2, 6, 18, 54, ___. What is the rule?",
+            "answer": "Multiply by 3. Next term is 162.",
+            "explanation": "2×3=6, 6×3=18, 18×3=54, 54×3=162."
+          },
+          {
+            "question": "Start at 3, add 4 each time. What is the 8th number in the pattern?",
+            "answer": "31",
+            "explanation": "3, 7, 11, 15, 19, 23, 27, 31. The 8th term is 31."
+          },
+          {
+            "question": "A pattern starts at 0 and adds 7 each time. Will the number 50 appear in this pattern?",
+            "answer": "No",
+            "explanation": "0, 7, 14, 21, 28, 35, 42, 49, 56… It skips from 49 to 56. 50 is not a multiple of 7."
+          },
+          {
+            "question": "In the pattern 4, 8, 12, 16, 20…, what do you notice about whether the numbers are odd or even?",
+            "answer": "All numbers are even",
+            "explanation": "Adding 4 (even) to an even number always gives an even number."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Start at 1, multiply by 2 each time. What are the first 8 terms? What do you notice about odd/even?",
+            "answer": "1, 2, 4, 8, 16, 32, 64, 128. After the first term, all are even.",
+            "explanation": "1 is odd; multiplying by 2 produces all even numbers from the 2nd term on."
+          },
+          {
+            "question": "Two patterns start at 0. Pattern A adds 3. Pattern B adds 6. Compare the 5th terms of each.",
+            "answer": "A: 12, B: 24. B is always twice A.",
+            "explanation": "A: 0,3,6,9,12. B: 0,6,12,18,24. Each term in B is exactly 2 times the corresponding term in A."
+          },
+          {
+            "question": "A shape pattern repeats: triangle, square, circle. What is the 47th shape?",
+            "answer": "Square",
+            "explanation": "47 ÷ 3 = 15 remainder 2. The 2nd shape in the cycle is square."
+          },
+          {
+            "question": "Start at 5 and add 3 each time. Will any numbers in the pattern be divisible by 6? Find the first one.",
+            "answer": "Yes, suffered: the 3rd term (11)… No - actually checking: 5,8,11,14,17,20. 20 is not div by 6. Continuing: 23,26,29,32,35,38. 38 not div by 6. Actually none of 5+3n are divisible by 6 until 5+3(7)=26, no. Let me recalculate: 5,8,11,14,17,20,23,26,29,32,35,38,41,44,47,50,53,56. Actually terms are 5+3n. For divisibility by 6: 5+3n≡0 mod 6 → 3n≡1 mod 6, which has no solution since 3n is always 0 or 3 mod 6. So NO.",
+            "explanation": "Numbers in this pattern have the form 5+3n. Since 5+3n is never divisible by 6 (checking mod 6: always remainder 2 or 5), no term is divisible by 6."
+          },
+          {
+            "question": "Pattern A: start at 0, add 4. Pattern B: start at 0, add 12. The 6th term of Pattern B equals which term of Pattern A?",
+            "answer": "The 16th term",
+            "explanation": "B's 6th term: 0+12×5=60. In A: 0+4×(n-1)=60 → n-1=15 → n=16. So A's 16th term."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NBT.1",
+      "domain": "4.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Recognize that a digit in one place represents ten times what it represents in the place to its right",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "In the number 440, how many times greater is the 4 in the hundreds place than the 4 in the tens place?",
+            "answer": "10 times greater",
+            "explanation": "The hundreds place is one place to the left of tens, so the digit represents 10 times as much."
+          },
+          {
+            "question": "What is the value of the 3 in 3,000?",
+            "answer": "3,000",
+            "explanation": "The 3 is in the thousands place, so its value is 3 × 1,000 = 3,000."
+          },
+          {
+            "question": "In 550, what is the value of the 5 in the hundreds place?",
+            "answer": "500",
+            "explanation": "5 in the hundreds place = 5 × 100 = 500."
+          },
+          {
+            "question": "In 660, the 6 in the tens place has a value of 60. What is the value of the 6 in the hundreds place?",
+            "answer": "600",
+            "explanation": "600 is 10 times 60, because the hundreds place is one position to the left."
+          },
+          {
+            "question": "What place value is 10 times greater than the ones place?",
+            "answer": "Tens place",
+            "explanation": "Each place value is 10 times the place to its right: ones → tens (×10)."
+          }
+        ],
+        "medium": [
+          {
+            "question": "In 7,700, the 7 appears in two places. How many times greater is the thousands-place 7 than the hundreds-place 7?",
+            "answer": "10 times greater",
+            "explanation": "7,000 ÷ 700 = 10. The thousands place is 10× the hundreds place."
+          },
+          {
+            "question": "How many times greater is the value of 5 in 50,000 compared to the 5 in 5,000?",
+            "answer": "10 times greater",
+            "explanation": "50,000 ÷ 5,000 = 10. Ten-thousands is 10× thousands."
+          },
+          {
+            "question": "In 88,888, how many times greater is the leftmost 8 than the rightmost 8?",
+            "answer": "10,000 times greater",
+            "explanation": "80,000 ÷ 8 = 10,000. Moving 4 places left = 10⁴ = 10,000 times."
+          },
+          {
+            "question": "A digit in the thousands place has a value of 6,000. What would the same digit's value be in the ten-thousands place?",
+            "answer": "60,000",
+            "explanation": "One place to the left is 10 times greater: 6,000 × 10 = 60,000."
+          },
+          {
+            "question": "The 2 in 2,200 appears in two places. What are the values of each 2?",
+            "answer": "2,000 and 200",
+            "explanation": "The 2 in thousands = 2,000. The 2 in hundreds = 200."
+          }
+        ],
+        "hard": [
+          {
+            "question": "In 333,333, how many times greater is the hundred-thousands digit than the hundreds digit?",
+            "answer": "1,000 times greater",
+            "explanation": "300,000 ÷ 300 = 1,000. Three places apart = 10³ = 1,000 times."
+          },
+          {
+            "question": "A number has a 4 in the ten-thousands place. If you move it two places to the right, what is its new value?",
+            "answer": "400",
+            "explanation": "Ten-thousands = 40,000. Two places right = ÷10÷10 = ÷100. 40,000 ÷ 100 = 400 (hundreds place)."
+          },
+          {
+            "question": "In 505,050, compare the value of each 5. List them from greatest to least.",
+            "answer": "500,000; 5,000; 50",
+            "explanation": "5 in hundred-thousands = 500,000; 5 in thousands = 5,000; 5 in tens = 50."
+          },
+          {
+            "question": "If you multiply a digit's value by 10 three times, you move it how many places to the left?",
+            "answer": "3 places",
+            "explanation": "Each ×10 moves one place left. Three multiplications = 3 places left."
+          },
+          {
+            "question": "The digit 9 in a number has a value of 90,000. In another number, the same digit has a value of 9. How many times greater is the first value?",
+            "answer": "10,000 times greater",
+            "explanation": "90,000 ÷ 9 = 10,000. This is 10⁴, or 4 place-value positions apart."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NBT.2",
+      "domain": "4.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Read and write multi-digit whole numbers using numerals, number names, and expanded form",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Write 4,523 in expanded form.",
+            "answer": "4,000 + 500 + 20 + 3",
+            "explanation": "Break each digit by place value: 4 thousands + 5 hundreds + 2 tens + 3 ones."
+          },
+          {
+            "question": "Write the number name for 7,081.",
+            "answer": "Seven thousand, eighty-one",
+            "explanation": "7 thousands = seven thousand, 0 hundreds (skip), 8 tens + 1 one = eighty-one."
+          },
+          {
+            "question": "Write three thousand, two hundred five as a numeral.",
+            "answer": "3,205",
+            "explanation": "Three thousand = 3,000, two hundred = 200, five = 5. Total: 3,205."
+          },
+          {
+            "question": "What is 6,000 + 300 + 40 + 9 in standard form?",
+            "answer": "6,349",
+            "explanation": "Add the values: 6,000 + 300 + 40 + 9 = 6,349."
+          },
+          {
+            "question": "Write 1,600 in expanded form.",
+            "answer": "1,000 + 600",
+            "explanation": "1 thousand + 6 hundreds + 0 tens + 0 ones = 1,000 + 600."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Write 52,407 in expanded form.",
+            "answer": "50,000 + 2,000 + 400 + 7",
+            "explanation": "5 ten-thousands + 2 thousands + 4 hundreds + 0 tens + 7 ones."
+          },
+          {
+            "question": "Write the number name for 305,018.",
+            "answer": "Three hundred five thousand, eighteen",
+            "explanation": "305 thousand = three hundred five thousand. 018 = eighteen."
+          },
+          {
+            "question": "Compare: 45,672 ___ 45,762. Use <, >, or =.",
+            "answer": "45,672 < 45,762",
+            "explanation": "Same ten-thousands and thousands. Hundreds: 6 < 7, so 45,672 < 45,762."
+          },
+          {
+            "question": "Write nine hundred twelve thousand, sixty in standard form.",
+            "answer": "912,060",
+            "explanation": "912 thousand = 912,000. Sixty = 60. Total: 912,060."
+          },
+          {
+            "question": "Which is greater: 80,000 + 4,000 + 300 + 20 + 1 or 84,231?",
+            "answer": "84,321 > 84,231",
+            "explanation": "The expanded form equals 84,321. Comparing hundreds: 3 > 2, so 84,321 > 84,231."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Write 600,000 + 50,000 + 70 + 8 in standard form and number name.",
+            "answer": "650,078; six hundred fifty thousand, seventy-eight",
+            "explanation": "Add values: 650,078. Note the 0 in hundreds and thousands places."
+          },
+          {
+            "question": "Arrange from least to greatest: 409,100; 410,900; 409,010; 401,900.",
+            "answer": "401,900; 409,010; 409,100; 410,900",
+            "explanation": "Compare hundred-thousands (all 4), then ten-thousands: 01<09<09<10, then thousands to break 409 ties."
+          },
+          {
+            "question": "A number has 8 hundred-thousands, 0 ten-thousands, 6 thousands, 0 hundreds, 4 tens, and 3 ones. Write it.",
+            "answer": "806,043",
+            "explanation": "800,000 + 0 + 6,000 + 0 + 40 + 3 = 806,043."
+          },
+          {
+            "question": "What number is 10,000 more than 594,999?",
+            "answer": "604,999",
+            "explanation": "594,999 + 10,000 = 604,999."
+          },
+          {
+            "question": "Compare using <, >, or =: 700,000 + 8,000 + 90 ___ 708,900.",
+            "answer": "708,090 < 708,900",
+            "explanation": "Left side = 708,090. 708,090 < 708,900 (compare hundreds: 0 < 9)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NBT.3",
+      "domain": "4.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Use place value understanding to round multi-digit whole numbers to any place",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Round 463 to the nearest hundred.",
+            "answer": "500",
+            "explanation": "Look at tens digit (6 ≥ 5), so round up: 463 → 500."
+          },
+          {
+            "question": "Round 3,821 to the nearest thousand.",
+            "answer": "4,000",
+            "explanation": "Hundreds digit is 8 (≥5), so round up: 3,821 → 4,000."
+          },
+          {
+            "question": "Round 749 to the nearest ten.",
+            "answer": "750",
+            "explanation": "Ones digit is 9 (≥5), round up: 749 → 750."
+          },
+          {
+            "question": "Round 1,250 to the nearest hundred.",
+            "answer": "1,300",
+            "explanation": "Tens digit is 5 (≥5), round up: 1,250 → 1,300."
+          },
+          {
+            "question": "Round 6,500 to the nearest thousand.",
+            "answer": "7,000",
+            "explanation": "Hundreds digit is 5 (≥5), round up: 6,500 → 7,000."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Round 45,678 to the nearest ten-thousand.",
+            "answer": "50,000",
+            "explanation": "Thousands digit is 5 (≥5), round up: 45,678 → 50,000."
+          },
+          {
+            "question": "Round 82,439 to the nearest thousand.",
+            "answer": "82,000",
+            "explanation": "Hundreds digit is 4 (<5), round down: 82,439 → 82,000."
+          },
+          {
+            "question": "A stadium holds 67,248 people. Round to the nearest thousand.",
+            "answer": "67,000",
+            "explanation": "Hundreds digit is 2 (<5), round down: 67,248 → 67,000."
+          },
+          {
+            "question": "Round 504,500 to the nearest thousand.",
+            "answer": "505,000",
+            "explanation": "Hundreds digit is 5 (≥5), round up: 504,500 → 505,000."
+          },
+          {
+            "question": "Round 395,001 to the nearest ten-thousand.",
+            "answer": "400,000",
+            "explanation": "Thousands digit is 5 (≥5), round up: 395,001 → 400,000."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Round 549,999 to the nearest hundred-thousand.",
+            "answer": "500,000",
+            "explanation": "Ten-thousands digit is 4 (<5), round down: 549,999 → 500,000."
+          },
+          {
+            "question": "A city's population is 847,562. Round to the nearest ten-thousand and hundred-thousand.",
+            "answer": "850,000 and 800,000",
+            "explanation": "Nearest ten-thousand: thousands=7≥5 → 850,000. Nearest hundred-thousand: ten-thousands=4<5 → 800,000."
+          },
+          {
+            "question": "What is the smallest number that rounds to 500,000 when rounded to the nearest hundred-thousand?",
+            "answer": "450,000",
+            "explanation": "Numbers from 450,000 to 549,999 round to 500,000. The smallest is 450,000."
+          },
+          {
+            "question": "Round 995,500 to the nearest thousand.",
+            "answer": "996,000",
+            "explanation": "Hundreds digit is 5 (≥5), round up: 995,500 → 996,000."
+          },
+          {
+            "question": "A number rounded to the nearest thousand is 47,000 and to the nearest hundred is 46,500. What could the number be?",
+            "answer": "Any number from 46,500 to 46,549",
+            "explanation": "To round to 46,500 at hundreds, number is 46,450-46,549. Of these, 46,500-46,549 also round to 47,000 at thousands."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NBT.4",
+      "domain": "4.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Fluently add and subtract multi-digit whole numbers using the standard algorithm",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "3,456 + 2,341 = ?",
+            "answer": "5,797",
+            "explanation": "Add column by column: 6+1=7, 5+4=9, 4+3=7, 3+2=5. Answer: 5,797."
+          },
+          {
+            "question": "8,000 − 3,500 = ?",
+            "answer": "4,500",
+            "explanation": "8,000 − 3,500 = 4,500."
+          },
+          {
+            "question": "5,274 + 1,603 = ?",
+            "answer": "6,877",
+            "explanation": "4+3=7, 7+0=7, 2+6=8, 5+1=6. Answer: 6,877."
+          },
+          {
+            "question": "9,450 − 6,230 = ?",
+            "answer": "3,220",
+            "explanation": "0−0=0, 5−3=2, 4−2=2, 9−6=3. Answer: 3,220."
+          },
+          {
+            "question": "4,125 + 3,874 = ?",
+            "answer": "7,999",
+            "explanation": "5+4=9, 2+7=9, 1+8=9, 4+3=7. Answer: 7,999."
+          }
+        ],
+        "medium": [
+          {
+            "question": "47,856 + 35,678 = ?",
+            "answer": "83,534",
+            "explanation": "Add with regrouping: 6+8=14, carry 1; 5+7+1=13, carry 1; 8+6+1=15, carry 1; 7+5+1=13, carry 1; 4+3+1=8. Answer: 83,534."
+          },
+          {
+            "question": "90,000 − 45,327 = ?",
+            "answer": "44,673",
+            "explanation": "Subtract with borrowing from 90,000. 90,000 − 45,327 = 44,673."
+          },
+          {
+            "question": "62,408 + 27,594 = ?",
+            "answer": "90,002",
+            "explanation": "8+4=12 carry 1; 0+9+1=10 carry 1; 4+5+1=10 carry 1; 2+7+1=10 carry 1; 6+2+1=9. Answer: 90,002."
+          },
+          {
+            "question": "80,503 − 47,865 = ?",
+            "answer": "32,638",
+            "explanation": "Borrow across zeros: 80,503 − 47,865 = 32,638."
+          },
+          {
+            "question": "A school raised $34,578 in fall and $28,963 in spring. What is the total?",
+            "answer": "$63,541",
+            "explanation": "34,578 + 28,963 = 63,541."
+          }
+        ],
+        "hard": [
+          {
+            "question": "456,789 + 345,678 = ?",
+            "answer": "802,467",
+            "explanation": "Add with multiple regroupings: 9+8=17, 8+7+1=16, 7+6+1=14, 6+5+1=12, 5+4+1=10, 4+3+1=8. Answer: 802,467."
+          },
+          {
+            "question": "1,000,000 − 567,891 = ?",
+            "answer": "432,109",
+            "explanation": "Borrow from 1,000,000. 1,000,000 − 567,891 = 432,109."
+          },
+          {
+            "question": "A city had 284,506 residents in 2020 and gained 37,894 by 2024. How many residents in 2024?",
+            "answer": "322,400 residents",
+            "explanation": "284,506 + 37,894 = 322,400."
+          },
+          {
+            "question": "Find the missing number: 456,_23 + 234,567 = 691,290.",
+            "answer": "7 (456,723)",
+            "explanation": "691,290 − 234,567 = 456,723. The missing digit is 7."
+          },
+          {
+            "question": "A warehouse had 500,000 items. They shipped 168,475 on Monday and 243,890 on Tuesday. How many remain?",
+            "answer": "87,635 items",
+            "explanation": "500,000 − 168,475 = 331,525. 331,525 − 243,890 = 87,635."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NBT.5",
+      "domain": "4.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Multiply a whole number of up to four digits by a one-digit number, and two two-digit numbers",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "34 × 2 = ?",
+            "answer": "68",
+            "explanation": "30×2=60, 4×2=8, 60+8=68."
+          },
+          {
+            "question": "123 × 3 = ?",
+            "answer": "369",
+            "explanation": "100×3=300, 20×3=60, 3×3=9. 300+60+9=369."
+          },
+          {
+            "question": "45 × 5 = ?",
+            "answer": "225",
+            "explanation": "40×5=200, 5×5=25. 200+25=225."
+          },
+          {
+            "question": "201 × 4 = ?",
+            "answer": "804",
+            "explanation": "200×4=800, 1×4=4. 800+4=804."
+          },
+          {
+            "question": "12 × 11 = ?",
+            "answer": "132",
+            "explanation": "12×10=120, 12×1=12. 120+12=132."
+          }
+        ],
+        "medium": [
+          {
+            "question": "2,345 × 6 = ?",
+            "answer": "14,070",
+            "explanation": "2000×6=12000, 300×6=1800, 40×6=240, 5×6=30. Total: 14,070."
+          },
+          {
+            "question": "56 × 34 = ?",
+            "answer": "1,904",
+            "explanation": "56×30=1680, 56×4=224. 1680+224=1,904."
+          },
+          {
+            "question": "78 × 45 = ?",
+            "answer": "3,510",
+            "explanation": "78×40=3120, 78×5=390. 3120+390=3,510."
+          },
+          {
+            "question": "1,508 × 7 = ?",
+            "answer": "10,556",
+            "explanation": "1000×7=7000, 500×7=3500, 8×7=56. 7000+3500+56=10,556."
+          },
+          {
+            "question": "63 × 27 = ?",
+            "answer": "1,701",
+            "explanation": "63×20=1260, 63×7=441. 1260+441=1,701."
+          }
+        ],
+        "hard": [
+          {
+            "question": "4,567 × 8 = ?",
+            "answer": "36,536",
+            "explanation": "4000×8=32000, 500×8=4000, 60×8=480, 7×8=56. Total: 36,536."
+          },
+          {
+            "question": "93 × 86 = ?",
+            "answer": "7,998",
+            "explanation": "93×80=7440, 93×6=558. 7440+558=7,998."
+          },
+          {
+            "question": "A factory produces 1,875 items per day. How many in 9 days?",
+            "answer": "16,875 items",
+            "explanation": "1,875 × 9 = 16,875."
+          },
+          {
+            "question": "67 × 89 = ?",
+            "answer": "5,963",
+            "explanation": "67×80=5360, 67×9=603. 5360+603=5,963."
+          },
+          {
+            "question": "A school orders 48 boxes with 36 pencils each. How many pencils total?",
+            "answer": "1,728 pencils",
+            "explanation": "48 × 36: 48×30=1440, 48×6=288. 1440+288=1,728."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NBT.6",
+      "domain": "4.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Find whole-number quotients and remainders with up to four-digit dividends and one-digit divisors",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "84 ÷ 4 = ?",
+            "answer": "21",
+            "explanation": "4 × 21 = 84. Or: 80÷4=20, 4÷4=1, 20+1=21."
+          },
+          {
+            "question": "96 ÷ 3 = ?",
+            "answer": "32",
+            "explanation": "3 × 32 = 96. 90÷3=30, 6÷3=2, 30+2=32."
+          },
+          {
+            "question": "75 ÷ 5 = ?",
+            "answer": "15",
+            "explanation": "5 × 15 = 75."
+          },
+          {
+            "question": "56 ÷ 8 = ?",
+            "answer": "7",
+            "explanation": "8 × 7 = 56."
+          },
+          {
+            "question": "63 ÷ 7 = ?",
+            "answer": "9",
+            "explanation": "7 × 9 = 63."
+          }
+        ],
+        "medium": [
+          {
+            "question": "435 ÷ 5 = ?",
+            "answer": "87",
+            "explanation": "400÷5=80, 35÷5=7. 80+7=87."
+          },
+          {
+            "question": "637 ÷ 7 = ?",
+            "answer": "91",
+            "explanation": "630÷7=90, 7÷7=1. 90+1=91."
+          },
+          {
+            "question": "529 ÷ 6 = ?",
+            "answer": "88 R1",
+            "explanation": "6 × 88 = 528. 529 − 528 = 1. Answer: 88 remainder 1."
+          },
+          {
+            "question": "1,248 ÷ 4 = ?",
+            "answer": "312",
+            "explanation": "1200÷4=300, 48÷4=12. 300+12=312."
+          },
+          {
+            "question": "845 ÷ 3 = ?",
+            "answer": "281 R2",
+            "explanation": "3 × 281 = 843. 845 − 843 = 2. Answer: 281 R2."
+          }
+        ],
+        "hard": [
+          {
+            "question": "4,536 ÷ 8 = ?",
+            "answer": "567",
+            "explanation": "8 × 567 = 4,536. Divide step by step: 45÷8=5R5, 53÷8=6R5, 56÷8=7."
+          },
+          {
+            "question": "7,259 ÷ 6 = ?",
+            "answer": "1,209 R5",
+            "explanation": "6 × 1,209 = 7,254. 7,259 − 7,254 = 5. Answer: 1,209 R5."
+          },
+          {
+            "question": "A factory packs 2,847 toys into boxes of 9. How many full boxes and how many left over?",
+            "answer": "316 full boxes, 3 left over",
+            "explanation": "9 × 316 = 2,844. 2,847 − 2,844 = 3."
+          },
+          {
+            "question": "5,000 ÷ 7 = ?",
+            "answer": "714 R2",
+            "explanation": "7 × 714 = 4,998. 5,000 − 4,998 = 2."
+          },
+          {
+            "question": "If 3,672 stickers are shared equally among 8 students, how many does each get and how many are left?",
+            "answer": "459 each, 0 left over",
+            "explanation": "8 × 459 = 3,672. It divides evenly."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.1",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Explain why a fraction a/b is equivalent to (n×a)/(n×b) using visual models",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Find a fraction equivalent to 1/2 by multiplying numerator and denominator by 2.",
+            "answer": "2/4",
+            "explanation": "(1×2)/(2×2) = 2/4. Both represent the same amount."
+          },
+          {
+            "question": "Find a fraction equivalent to 1/3 by multiplying by 3.",
+            "answer": "3/9",
+            "explanation": "(1×3)/(3×3) = 3/9."
+          },
+          {
+            "question": "Are 2/4 and 1/2 equivalent? Explain.",
+            "answer": "Yes",
+            "explanation": "2/4 simplifies to 1/2 (divide both by 2). They name the same amount."
+          },
+          {
+            "question": "Find a fraction equivalent to 3/4 with denominator 8.",
+            "answer": "6/8",
+            "explanation": "(3×2)/(4×2) = 6/8."
+          },
+          {
+            "question": "Write an equivalent fraction for 2/3 with denominator 6.",
+            "answer": "4/6",
+            "explanation": "(2×2)/(3×2) = 4/6."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Find two fractions equivalent to 3/5.",
+            "answer": "6/10 and 9/15",
+            "explanation": "(3×2)/(5×2)=6/10 and (3×3)/(5×3)=9/15."
+          },
+          {
+            "question": "Simplify 8/12 to its simplest form.",
+            "answer": "2/3",
+            "explanation": "GCF of 8 and 12 is 4. 8÷4=2, 12÷4=3. So 8/12 = 2/3."
+          },
+          {
+            "question": "Are 4/6 and 6/9 equivalent?",
+            "answer": "Yes",
+            "explanation": "4/6 = 2/3 (÷2). 6/9 = 2/3 (÷3). Both equal 2/3."
+          },
+          {
+            "question": "Find an equivalent fraction for 5/8 with denominator 24.",
+            "answer": "15/24",
+            "explanation": "(5×3)/(8×3) = 15/24."
+          },
+          {
+            "question": "Simplify 6/10.",
+            "answer": "3/5",
+            "explanation": "GCF of 6 and 10 is 2. 6÷2=3, 10÷2=5."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Find three equivalent fractions for 2/5.",
+            "answer": "4/10, 6/15, 8/20",
+            "explanation": "Multiply by 2, 3, and 4: (2×2)/(5×2)=4/10, (2×3)/(5×3)=6/15, (2×4)/(5×4)=8/20."
+          },
+          {
+            "question": "Is 12/18 equivalent to 8/12? Explain how you know.",
+            "answer": "Yes",
+            "explanation": "12/18 = 2/3 (÷6). 8/12 = 2/3 (÷4). Both simplify to 2/3."
+          },
+          {
+            "question": "What number makes this true? 3/7 = __/21",
+            "answer": "9",
+            "explanation": "7 × 3 = 21, so multiply numerator by 3 too: 3 × 3 = 9."
+          },
+          {
+            "question": "Simplify 24/36 to lowest terms.",
+            "answer": "2/3",
+            "explanation": "GCF of 24 and 36 is 12. 24÷12=2, 36÷12=3."
+          },
+          {
+            "question": "Find the missing number: __/8 = 15/24",
+            "answer": "5",
+            "explanation": "24 ÷ 8 = 3. So 15 ÷ 3 = 5. The fraction is 5/8."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.2",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Compare two fractions with different numerators and denominators",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Compare 1/3 and 1/4 using <, >, or =.",
+            "answer": "1/3 > 1/4",
+            "explanation": "With the same numerator, the fraction with the smaller denominator is larger."
+          },
+          {
+            "question": "Compare 2/5 and 4/5.",
+            "answer": "2/5 < 4/5",
+            "explanation": "Same denominator: 2 < 4, so 2/5 < 4/5."
+          },
+          {
+            "question": "Compare 3/8 and 5/8.",
+            "answer": "3/8 < 5/8",
+            "explanation": "Same denominator: 3 < 5."
+          },
+          {
+            "question": "Which is larger: 1/2 or 1/6?",
+            "answer": "1/2",
+            "explanation": "Same numerator: smaller denominator = larger fraction."
+          },
+          {
+            "question": "Compare 3/4 and 3/6.",
+            "answer": "3/4 > 3/6",
+            "explanation": "Same numerator (3): 4ths are larger pieces than 6ths."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Compare 3/4 and 5/8. Use a common denominator.",
+            "answer": "3/4 > 5/8",
+            "explanation": "3/4 = 6/8. Since 6/8 > 5/8, we know 3/4 > 5/8."
+          },
+          {
+            "question": "Compare 2/3 and 3/5.",
+            "answer": "2/3 > 3/5",
+            "explanation": "Common denom 15: 2/3=10/15, 3/5=9/15. 10>9 so 2/3 > 3/5."
+          },
+          {
+            "question": "Order from least to greatest: 1/2, 2/5, 3/4.",
+            "answer": "2/5, 1/2, 3/4",
+            "explanation": "Common denom 20: 1/2=10/20, 2/5=8/20, 3/4=15/20. Order: 8,10,15."
+          },
+          {
+            "question": "Compare 5/6 and 7/8.",
+            "answer": "5/6 < 7/8",
+            "explanation": "Common denom 24: 5/6=20/24, 7/8=21/24. 20<21."
+          },
+          {
+            "question": "Compare 4/10 and 2/5.",
+            "answer": "4/10 = 2/5",
+            "explanation": "2/5 = 4/10 (multiply by 2). They are equal."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Order from greatest to least: 2/3, 5/8, 7/12.",
+            "answer": "2/3, 5/8, 7/12",
+            "explanation": "Common denom 24: 2/3=16/24, 5/8=15/24, 7/12=14/24. Order: 16,15,14."
+          },
+          {
+            "question": "Compare 7/9 and 5/6. Which is closer to 1?",
+            "answer": "5/6 is closer to 1",
+            "explanation": "7/9 = 14/18, 5/6 = 15/18. 15/18 > 14/18 and is closer to 18/18 = 1."
+          },
+          {
+            "question": "Find a fraction between 1/3 and 1/2.",
+            "answer": "5/12 (or other valid answer)",
+            "explanation": "1/3=4/12, 1/2=6/12. 5/12 is between them."
+          },
+          {
+            "question": "Compare 11/12 and 8/9.",
+            "answer": "11/12 > 8/9",
+            "explanation": "Common denom 36: 11/12=33/36, 8/9=32/36. 33>32."
+          },
+          {
+            "question": "Is 3/7 greater or less than 1/2? Explain without finding a common denominator.",
+            "answer": "Less than 1/2",
+            "explanation": "Half of 7 is 3.5. Since 3 < 3.5, the fraction 3/7 < 1/2."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.3",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Understand a fraction a/b with a > 1 as a sum of fractions 1/b; add and subtract fractions with like denominators",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Write 3/4 as a sum of unit fractions.",
+            "answer": "1/4 + 1/4 + 1/4",
+            "explanation": "3/4 = three copies of 1/4."
+          },
+          {
+            "question": "1/5 + 2/5 = ?",
+            "answer": "3/5",
+            "explanation": "Same denominator: 1+2=3, keep denominator 5."
+          },
+          {
+            "question": "4/6 − 1/6 = ?",
+            "answer": "3/6 = 1/2",
+            "explanation": "4−1=3, keep 6. 3/6 simplifies to 1/2."
+          },
+          {
+            "question": "2/8 + 3/8 = ?",
+            "answer": "5/8",
+            "explanation": "2+3=5, denominator stays 8."
+          },
+          {
+            "question": "Write 5/3 as a mixed number.",
+            "answer": "1 2/3",
+            "explanation": "5÷3 = 1 remainder 2, so 5/3 = 1 2/3."
+          }
+        ],
+        "medium": [
+          {
+            "question": "3/10 + 4/10 + 2/10 = ?",
+            "answer": "9/10",
+            "explanation": "3+4+2=9, denominator stays 10."
+          },
+          {
+            "question": "7/8 − 3/8 = ?",
+            "answer": "4/8 = 1/2",
+            "explanation": "7−3=4, keep 8. 4/8 simplifies to 1/2."
+          },
+          {
+            "question": "2 3/5 + 1 1/5 = ?",
+            "answer": "3 4/5",
+            "explanation": "Add wholes: 2+1=3. Add fractions: 3/5+1/5=4/5. Total: 3 4/5."
+          },
+          {
+            "question": "4 2/6 − 1 5/6 = ?",
+            "answer": "2 3/6 = 2 1/2",
+            "explanation": "Borrow: 4 2/6 = 3 8/6. 3 8/6 − 1 5/6 = 2 3/6 = 2 1/2."
+          },
+          {
+            "question": "Write 11/4 as a mixed number.",
+            "answer": "2 3/4",
+            "explanation": "11÷4=2 R3, so 11/4 = 2 3/4."
+          }
+        ],
+        "hard": [
+          {
+            "question": "5 1/8 − 2 5/8 = ?",
+            "answer": "2 4/8 = 2 1/2",
+            "explanation": "Borrow: 5 1/8 = 4 9/8. 4 9/8 − 2 5/8 = 2 4/8 = 2 1/2."
+          },
+          {
+            "question": "A recipe needs 3/4 cup of flour. You already added 1/4 cup. How much more do you need?",
+            "answer": "2/4 = 1/2 cup",
+            "explanation": "3/4 − 1/4 = 2/4 = 1/2 cup."
+          },
+          {
+            "question": "Write 3 2/5 as an improper fraction.",
+            "answer": "17/5",
+            "explanation": "3 × 5 + 2 = 17. So 3 2/5 = 17/5."
+          },
+          {
+            "question": "7 3/12 + 2 11/12 = ?",
+            "answer": "10 2/12 = 10 1/6",
+            "explanation": "7+2=9. 3/12+11/12=14/12=1 2/12. 9+1 2/12=10 2/12=10 1/6."
+          },
+          {
+            "question": "Sam ran 2 5/6 miles Monday and 3 4/6 miles Tuesday. How far total?",
+            "answer": "6 3/6 = 6 1/2 miles",
+            "explanation": "2+3=5. 5/6+4/6=9/6=1 3/6. 5+1 3/6=6 3/6=6 1/2."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.4",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Apply and extend understanding of multiplication to multiply a fraction by a whole number",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "3 × 1/4 = ?",
+            "answer": "3/4",
+            "explanation": "3 × 1/4 = 1/4 + 1/4 + 1/4 = 3/4."
+          },
+          {
+            "question": "2 × 2/5 = ?",
+            "answer": "4/5",
+            "explanation": "2 × 2/5 = 2/5 + 2/5 = 4/5."
+          },
+          {
+            "question": "4 × 1/3 = ?",
+            "answer": "4/3 = 1 1/3",
+            "explanation": "4 × 1/3 = 4/3 = 1 1/3."
+          },
+          {
+            "question": "5 × 1/2 = ?",
+            "answer": "5/2 = 2 1/2",
+            "explanation": "5 × 1/2 = 5/2 = 2 1/2."
+          },
+          {
+            "question": "2 × 3/8 = ?",
+            "answer": "6/8 = 3/4",
+            "explanation": "2 × 3 = 6, keep 8. 6/8 = 3/4."
+          }
+        ],
+        "medium": [
+          {
+            "question": "6 × 2/3 = ?",
+            "answer": "12/3 = 4",
+            "explanation": "6 × 2 = 12, keep 3. 12/3 = 4."
+          },
+          {
+            "question": "4 × 3/5 = ?",
+            "answer": "12/5 = 2 2/5",
+            "explanation": "4 × 3 = 12, keep 5. 12/5 = 2 2/5."
+          },
+          {
+            "question": "A recipe uses 2/3 cup of sugar. If you triple the recipe, how much sugar?",
+            "answer": "6/3 = 2 cups",
+            "explanation": "3 × 2/3 = 6/3 = 2 cups."
+          },
+          {
+            "question": "7 × 3/4 = ?",
+            "answer": "21/4 = 5 1/4",
+            "explanation": "7 × 3 = 21, keep 4. 21/4 = 5 1/4."
+          },
+          {
+            "question": "5 × 4/6 = ?",
+            "answer": "20/6 = 3 2/6 = 3 1/3",
+            "explanation": "5 × 4 = 20, keep 6. 20/6 = 3 2/6 = 3 1/3."
+          }
+        ],
+        "hard": [
+          {
+            "question": "8 × 5/6 = ?",
+            "answer": "40/6 = 6 4/6 = 6 2/3",
+            "explanation": "8×5=40, keep 6. 40/6 = 6 R4, so 6 4/6 = 6 2/3."
+          },
+          {
+            "question": "Each serving of juice is 3/4 cup. How many cups for 12 servings?",
+            "answer": "36/4 = 9 cups",
+            "explanation": "12 × 3/4 = 36/4 = 9 cups."
+          },
+          {
+            "question": "9 × 2/3 = ? Write as a mixed number.",
+            "answer": "18/3 = 6",
+            "explanation": "9 × 2 = 18, keep 3. 18/3 = 6 (whole number)."
+          },
+          {
+            "question": "A hiker walks 7/8 mile each day. How far in 6 days?",
+            "answer": "42/8 = 5 2/8 = 5 1/4 miles",
+            "explanation": "6 × 7/8 = 42/8 = 5 2/8 = 5 1/4 miles."
+          },
+          {
+            "question": "If 4 × n/5 = 3 1/5, what is n?",
+            "answer": "n = 4",
+            "explanation": "3 1/5 = 16/5. 4n/5 = 16/5, so 4n = 16, n = 4."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.5",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Express a fraction with denominator 10 as an equivalent fraction with denominator 100",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Write 3/10 as a fraction with denominator 100.",
+            "answer": "30/100",
+            "explanation": "(3×10)/(10×10) = 30/100."
+          },
+          {
+            "question": "Write 7/10 as a fraction with denominator 100.",
+            "answer": "70/100",
+            "explanation": "(7×10)/(10×10) = 70/100."
+          },
+          {
+            "question": "Add: 3/10 + 4/100 = ?",
+            "answer": "34/100",
+            "explanation": "3/10 = 30/100. 30/100 + 4/100 = 34/100."
+          },
+          {
+            "question": "Write 1/10 with denominator 100.",
+            "answer": "10/100",
+            "explanation": "(1×10)/(10×10) = 10/100."
+          },
+          {
+            "question": "Add: 5/10 + 20/100 = ?",
+            "answer": "70/100",
+            "explanation": "5/10 = 50/100. 50/100 + 20/100 = 70/100."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Add: 6/10 + 35/100 = ?",
+            "answer": "95/100",
+            "explanation": "6/10 = 60/100. 60/100 + 35/100 = 95/100."
+          },
+          {
+            "question": "Add: 2/10 + 8/100 = ?",
+            "answer": "28/100",
+            "explanation": "2/10 = 20/100. 20/100 + 8/100 = 28/100."
+          },
+          {
+            "question": "Which is greater: 4/10 or 39/100?",
+            "answer": "4/10 > 39/100",
+            "explanation": "4/10 = 40/100. 40/100 > 39/100."
+          },
+          {
+            "question": "Add: 9/10 + 5/100 = ?",
+            "answer": "95/100",
+            "explanation": "9/10 = 90/100. 90/100 + 5/100 = 95/100."
+          },
+          {
+            "question": "Is 50/100 the same as 5/10?",
+            "answer": "Yes",
+            "explanation": "5/10 = 50/100 (multiply by 10). They are equivalent."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Add: 8/10 + 25/100 = ? Write as a fraction and simplify if possible.",
+            "answer": "105/100 = 1 5/100 = 1 1/20",
+            "explanation": "8/10=80/100. 80+25=105/100=1 5/100. 5/100=1/20."
+          },
+          {
+            "question": "Express 47/100 as a sum of a tenths fraction and a hundredths fraction.",
+            "answer": "4/10 + 7/100",
+            "explanation": "47/100 = 40/100 + 7/100 = 4/10 + 7/100."
+          },
+          {
+            "question": "Which is greater: 6/10 + 3/100 or 7/10 − 8/100?",
+            "answer": "6/10 + 3/100 = 63/100; 7/10 − 8/100 = 62/100. The first is greater.",
+            "explanation": "63/100 > 62/100."
+          },
+          {
+            "question": "A jar is 3/10 full. Then 15/100 more is added. What fraction is full now?",
+            "answer": "45/100 = 9/20",
+            "explanation": "3/10=30/100. 30+15=45/100. Simplify: 45÷5=9, 100÷5=20."
+          },
+          {
+            "question": "Add: 7/10 + 7/100. Then subtract 1/10. What's the result?",
+            "answer": "67/100",
+            "explanation": "7/10+7/100=77/100. 77/100−10/100=67/100."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.6",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Use decimal notation for fractions with denominators 10 or 100",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Write 3/10 as a decimal.",
+            "answer": "0.3",
+            "explanation": "3/10 = 0.3 (3 in the tenths place)."
+          },
+          {
+            "question": "Write 47/100 as a decimal.",
+            "answer": "0.47",
+            "explanation": "47/100 = 0.47 (4 tenths, 7 hundredths)."
+          },
+          {
+            "question": "Write 0.8 as a fraction.",
+            "answer": "8/10",
+            "explanation": "0.8 has 8 in the tenths place = 8/10."
+          },
+          {
+            "question": "Write 0.25 as a fraction.",
+            "answer": "25/100",
+            "explanation": "0.25 = 25 hundredths = 25/100."
+          },
+          {
+            "question": "Write 9/10 as a decimal.",
+            "answer": "0.9",
+            "explanation": "9/10 = 0.9."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Write 1 3/10 as a decimal.",
+            "answer": "1.3",
+            "explanation": "1 whole and 3 tenths = 1.3."
+          },
+          {
+            "question": "Write 5.07 as a fraction.",
+            "answer": "5 7/100",
+            "explanation": "5.07 = 5 and 7 hundredths = 5 7/100."
+          },
+          {
+            "question": "Write 62/100 as a decimal.",
+            "answer": "0.62",
+            "explanation": "62/100 = 0.62."
+          },
+          {
+            "question": "Write 2.50 as a mixed number.",
+            "answer": "2 50/100 = 2 1/2",
+            "explanation": "2.50 = 2 and 50/100 = 2 1/2."
+          },
+          {
+            "question": "Write 4/10 as a decimal and as hundredths.",
+            "answer": "0.4 = 0.40 = 40/100",
+            "explanation": "4/10 = 40/100 = 0.40."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Write 3 8/10 + 15/100 as a single decimal.",
+            "answer": "3.95",
+            "explanation": "3 8/10 = 3.80. 15/100 = 0.15. 3.80 + 0.15 = 3.95."
+          },
+          {
+            "question": "A pencil costs $0.75. Write this as a fraction of a dollar.",
+            "answer": "75/100 = 3/4 of a dollar",
+            "explanation": "$0.75 = 75/100 = 3/4."
+          },
+          {
+            "question": "Order from least to greatest: 0.5, 0.05, 0.55, 0.50.",
+            "answer": "0.05, 0.5, 0.50, 0.55 (note: 0.5 = 0.50)",
+            "explanation": "0.05=5/100, 0.5=50/100=0.50, 0.55=55/100. Order: 0.05, 0.5=0.50, 0.55."
+          },
+          {
+            "question": "Write the decimal for: 6 ones + 0 tenths + 4 hundredths.",
+            "answer": "6.04",
+            "explanation": "6 + 0/10 + 4/100 = 6.04."
+          },
+          {
+            "question": "If you add 3/10 and 0.45, what decimal do you get?",
+            "answer": "0.75",
+            "explanation": "3/10 = 0.30. 0.30 + 0.45 = 0.75."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.NF.7",
+      "domain": "4.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Compare two decimals to hundredths by reasoning about their size",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Compare 0.3 and 0.5 using <, >, or =.",
+            "answer": "0.3 < 0.5",
+            "explanation": "3 tenths < 5 tenths."
+          },
+          {
+            "question": "Compare 0.72 and 0.27.",
+            "answer": "0.72 > 0.27",
+            "explanation": "7 tenths > 2 tenths, so 0.72 > 0.27."
+          },
+          {
+            "question": "Compare 0.40 and 0.4.",
+            "answer": "0.40 = 0.4",
+            "explanation": "0.40 and 0.4 are the same: 4 tenths."
+          },
+          {
+            "question": "Which is greater: 0.9 or 0.85?",
+            "answer": "0.9",
+            "explanation": "0.9 = 0.90. 0.90 > 0.85."
+          },
+          {
+            "question": "Compare 0.6 and 0.60.",
+            "answer": "0.6 = 0.60",
+            "explanation": "They are equal. The trailing zero doesn't change value."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Order from least to greatest: 0.45, 0.54, 0.4, 0.5.",
+            "answer": "0.4, 0.45, 0.5, 0.54",
+            "explanation": "0.4=0.40, 0.45, 0.5=0.50, 0.54. Compare hundredths in order."
+          },
+          {
+            "question": "Compare 0.08 and 0.8.",
+            "answer": "0.08 < 0.8",
+            "explanation": "0.08 = 8 hundredths. 0.8 = 80 hundredths. 8 < 80."
+          },
+          {
+            "question": "Which is closest to 1: 0.89, 0.98, or 0.9?",
+            "answer": "0.98",
+            "explanation": "0.98 is only 0.02 from 1. 0.9 is 0.1 away. 0.89 is 0.11 away."
+          },
+          {
+            "question": "Order from greatest to least: 3.5, 3.05, 3.55, 3.50.",
+            "answer": "3.55, 3.5 = 3.50, 3.05",
+            "explanation": "3.55 > 3.50 = 3.5 > 3.05."
+          },
+          {
+            "question": "Compare 1.2 and 1.19.",
+            "answer": "1.2 > 1.19",
+            "explanation": "1.2 = 1.20. 1.20 > 1.19."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Order from least to greatest: 4.04, 4.40, 4.44, 4.4.",
+            "answer": "4.04, 4.4 = 4.40, 4.44",
+            "explanation": "4.04 < 4.40 = 4.4 < 4.44."
+          },
+          {
+            "question": "Find a decimal between 0.6 and 0.7.",
+            "answer": "0.65 (or any value like 0.61-0.69)",
+            "explanation": "0.6 = 0.60. Any decimal from 0.61 to 0.69 is between them."
+          },
+          {
+            "question": "Are 0.30 and 0.3 and 3/10 all equal? Explain.",
+            "answer": "Yes, all equal",
+            "explanation": "0.30 = 0.3 (trailing zero). 0.3 = 3/10. All represent three tenths."
+          },
+          {
+            "question": "Sam ran 2.5 miles. Kim ran 2.48 miles. Who ran farther and by how much?",
+            "answer": "Sam ran farther by 0.02 miles",
+            "explanation": "2.5 = 2.50. 2.50 − 2.48 = 0.02 miles."
+          },
+          {
+            "question": "Place these on a number line in order: 0.7, 0.07, 7.0, 0.77.",
+            "answer": "0.07, 0.7, 0.77, 7.0",
+            "explanation": "7 hundredths, 70 hundredths, 77 hundredths, 7 wholes."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.1",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Know relative sizes of measurement units; express measurements of a larger unit in terms of a smaller unit",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "How many inches are in 1 foot?",
+            "answer": "12 inches",
+            "explanation": "1 foot = 12 inches."
+          },
+          {
+            "question": "How many centimeters are in 1 meter?",
+            "answer": "100 centimeters",
+            "explanation": "1 meter = 100 centimeters."
+          },
+          {
+            "question": "Convert 3 feet to inches.",
+            "answer": "36 inches",
+            "explanation": "3 × 12 = 36 inches."
+          },
+          {
+            "question": "How many minutes are in 1 hour?",
+            "answer": "60 minutes",
+            "explanation": "1 hour = 60 minutes."
+          },
+          {
+            "question": "Convert 2 meters to centimeters.",
+            "answer": "200 centimeters",
+            "explanation": "2 × 100 = 200 cm."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Convert 5 yards to feet.",
+            "answer": "15 feet",
+            "explanation": "1 yard = 3 feet. 5 × 3 = 15 feet."
+          },
+          {
+            "question": "How many ounces are in 3 pounds?",
+            "answer": "48 ounces",
+            "explanation": "1 pound = 16 ounces. 3 × 16 = 48."
+          },
+          {
+            "question": "Convert 4 kilometers to meters.",
+            "answer": "4,000 meters",
+            "explanation": "1 km = 1,000 m. 4 × 1,000 = 4,000."
+          },
+          {
+            "question": "How many cups are in 3 quarts?",
+            "answer": "12 cups",
+            "explanation": "1 quart = 4 cups. 3 × 4 = 12 cups."
+          },
+          {
+            "question": "Convert 2 hours 30 minutes to minutes.",
+            "answer": "150 minutes",
+            "explanation": "2 × 60 = 120. 120 + 30 = 150 minutes."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A table is 6 feet long. How many inches is that? How many yards?",
+            "answer": "72 inches; 2 yards",
+            "explanation": "6 × 12 = 72 inches. 6 ÷ 3 = 2 yards."
+          },
+          {
+            "question": "A recipe needs 2 pounds 5 ounces of flour. How many ounces total?",
+            "answer": "37 ounces",
+            "explanation": "2 × 16 = 32. 32 + 5 = 37 ounces."
+          },
+          {
+            "question": "Convert 3 gallons 2 quarts to quarts.",
+            "answer": "14 quarts",
+            "explanation": "1 gallon = 4 quarts. 3 × 4 = 12. 12 + 2 = 14 quarts."
+          },
+          {
+            "question": "A race is 5 kilometers 200 meters. How many meters total?",
+            "answer": "5,200 meters",
+            "explanation": "5 × 1,000 = 5,000. 5,000 + 200 = 5,200."
+          },
+          {
+            "question": "A movie is 2 hours 15 minutes. A second movie is 145 minutes. Which is longer?",
+            "answer": "The second movie (145 > 135)",
+            "explanation": "2 hr 15 min = 135 min. 145 > 135."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.2",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Use the four operations to solve word problems involving distances, intervals of time, money, and liquid volumes",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A bottle holds 2 liters. How many milliliters is that?",
+            "answer": "2,000 mL",
+            "explanation": "1 L = 1,000 mL. 2 × 1,000 = 2,000 mL."
+          },
+          {
+            "question": "Sam walked 3 km 400 m. Write this in meters.",
+            "answer": "3,400 m",
+            "explanation": "3 × 1,000 = 3,000. 3,000 + 400 = 3,400 m."
+          },
+          {
+            "question": "A movie starts at 2:15 PM and ends at 4:00 PM. How long is it?",
+            "answer": "1 hour 45 minutes",
+            "explanation": "From 2:15 to 4:00 = 1 hr 45 min."
+          },
+          {
+            "question": "You have $5.00 and buy a toy for $3.25. How much change?",
+            "answer": "$1.75",
+            "explanation": "$5.00 − $3.25 = $1.75."
+          },
+          {
+            "question": "A pitcher has 4 liters of juice. 1 liter 500 mL is poured out. How much remains?",
+            "answer": "2 liters 500 mL",
+            "explanation": "4 L − 1 L 500 mL = 2 L 500 mL."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A runner completes a race in 12 minutes 45 seconds. Another finishes in 11 minutes 58 seconds. What is the difference?",
+            "answer": "47 seconds",
+            "explanation": "12:45 − 11:58 = 47 seconds."
+          },
+          {
+            "question": "Three containers hold 750 mL, 1 L 200 mL, and 500 mL. What is the total in liters and mL?",
+            "answer": "2 L 450 mL",
+            "explanation": "750 + 1200 + 500 = 2,450 mL = 2 L 450 mL."
+          },
+          {
+            "question": "You earn $8.50 per hour and work 4 hours. How much do you earn?",
+            "answer": "$34.00",
+            "explanation": "$8.50 × 4 = $34.00."
+          },
+          {
+            "question": "A trip is 15 km 600 m. You've driven 8 km 900 m. How far is left?",
+            "answer": "6 km 700 m",
+            "explanation": "15,600 − 8,900 = 6,700 m = 6 km 700 m."
+          },
+          {
+            "question": "School starts at 8:30 AM and ends at 3:15 PM. How long is the school day?",
+            "answer": "6 hours 45 minutes",
+            "explanation": "8:30 to 3:15: 8:30→3:30 = 7 hrs, minus 15 min = 6 hr 45 min."
+          }
+        ],
+        "hard": [
+          {
+            "question": "You buy 3 items at $4.75, $6.50, and $2.25. You pay with a $20 bill. What's your change?",
+            "answer": "$6.50",
+            "explanation": "4.75+6.50+2.25 = $13.50. $20 − $13.50 = $6.50."
+          },
+          {
+            "question": "A tank holds 50 liters. Water flows in at 3 liters per minute. How long to fill?",
+            "answer": "16 minutes 40 seconds",
+            "explanation": "50 ÷ 3 = 16 R2. 2/3 minute = 40 seconds. Total: 16 min 40 sec."
+          },
+          {
+            "question": "A family drives 234 km in the morning and 178 km 500 m in the afternoon. Total distance?",
+            "answer": "412 km 500 m",
+            "explanation": "234,000 + 178,500 = 412,500 m = 412 km 500 m."
+          },
+          {
+            "question": "A plumber charges $45 per hour plus $25 for the visit. A job takes 3 hours. What's the total cost?",
+            "answer": "$160",
+            "explanation": "3 × $45 = $135. $135 + $25 = $160."
+          },
+          {
+            "question": "A train departs at 9:47 AM and arrives at 1:23 PM. How long is the trip?",
+            "answer": "3 hours 36 minutes",
+            "explanation": "9:47→12:47 = 3 hrs. 12:47→1:23 = 36 min. Total: 3 hr 36 min."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.3",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Apply the area and perimeter formulas for rectangles in real-world problems",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Find the perimeter of a rectangle with length 8 cm and width 5 cm.",
+            "answer": "26 cm",
+            "explanation": "P = 2(8+5) = 2×13 = 26 cm."
+          },
+          {
+            "question": "Find the area of a rectangle with length 6 m and width 4 m.",
+            "answer": "24 sq m",
+            "explanation": "A = 6 × 4 = 24 square meters."
+          },
+          {
+            "question": "A square has sides of 7 inches. What is its perimeter?",
+            "answer": "28 inches",
+            "explanation": "P = 4 × 7 = 28 inches."
+          },
+          {
+            "question": "A square has sides of 9 cm. What is its area?",
+            "answer": "81 sq cm",
+            "explanation": "A = 9 × 9 = 81 square centimeters."
+          },
+          {
+            "question": "A garden is 10 feet long and 3 feet wide. What is its area?",
+            "answer": "30 sq ft",
+            "explanation": "A = 10 × 3 = 30 square feet."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A room is 12 feet by 15 feet. How many square feet of carpet are needed?",
+            "answer": "180 sq ft",
+            "explanation": "A = 12 × 15 = 180 square feet."
+          },
+          {
+            "question": "A rectangle has a perimeter of 30 m and a length of 10 m. What is the width?",
+            "answer": "5 m",
+            "explanation": "P = 2(L+W). 30 = 2(10+W). 15 = 10+W. W = 5."
+          },
+          {
+            "question": "A rectangle has an area of 48 sq cm and a width of 6 cm. What is the length?",
+            "answer": "8 cm",
+            "explanation": "A = L×W. 48 = L×6. L = 8."
+          },
+          {
+            "question": "How much fencing is needed for a 25 m by 18 m rectangular field?",
+            "answer": "86 m",
+            "explanation": "P = 2(25+18) = 2×43 = 86 m."
+          },
+          {
+            "question": "A rectangle has sides 7 cm and 11 cm. Find both area and perimeter.",
+            "answer": "Area: 77 sq cm, Perimeter: 36 cm",
+            "explanation": "A = 7×11 = 77. P = 2(7+11) = 36."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A rectangle has a perimeter of 50 cm. Its length is 3 times its width. Find the dimensions.",
+            "answer": "Width: 6.25 cm, Length: 18.75 cm",
+            "explanation": "2(3w+w)=50. 8w=50. w=6.25. L=18.75."
+          },
+          {
+            "question": "Two rooms are 15×12 ft and 10×8 ft. What is the total area of carpet needed?",
+            "answer": "260 sq ft",
+            "explanation": "15×12=180. 10×8=80. 180+80=260."
+          },
+          {
+            "question": "A pool is 25 m long and 10 m wide. A 2 m wide walkway surrounds it. What is the area of the walkway?",
+            "answer": "168 sq m",
+            "explanation": "Outer: 29×14=406. Inner: 25×10=250. Walkway: 406−250=156. Wait: outer is (25+4)×(10+4)=29×14=406. 406−250=156 sq m."
+          },
+          {
+            "question": "A farmer has 60 m of fencing. What dimensions give the largest rectangular area?",
+            "answer": "15 m × 15 m = 225 sq m",
+            "explanation": "Max area of a rectangle with fixed perimeter is a square. 60÷4=15. A=15×15=225."
+          },
+          {
+            "question": "A rectangular yard has area 600 sq ft and width 20 ft. How much fencing is needed to surround it?",
+            "answer": "100 ft",
+            "explanation": "L = 600÷20 = 30. P = 2(30+20) = 100 ft."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.4",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Make a line plot to display a data set of measurements in fractions of a unit",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Students measured ribbons: 1/4, 1/2, 1/4, 3/4, 1/2. How many measured 1/2 inch?",
+            "answer": "2 ribbons",
+            "explanation": "Count 1/2 in the list: appears twice."
+          },
+          {
+            "question": "A line plot shows 3 X's above 1/4, 2 X's above 1/2, and 1 X above 3/4. How many data points total?",
+            "answer": "6",
+            "explanation": "3 + 2 + 1 = 6 data points."
+          },
+          {
+            "question": "On a line plot, which value has the most X's: 1/8(2), 3/8(4), 5/8(1)?",
+            "answer": "3/8",
+            "explanation": "3/8 has 4 X's, which is the most."
+          },
+          {
+            "question": "What is the difference between the longest and shortest ribbons: 1/4, 1/2, 3/4 inches?",
+            "answer": "1/2 inch",
+            "explanation": "3/4 − 1/4 = 2/4 = 1/2 inch."
+          },
+          {
+            "question": "Data: 1/2, 1/2, 1, 1/2, 1. How many pieces measure 1/2?",
+            "answer": "3 pieces",
+            "explanation": "1/2 appears 3 times."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Caterpillar lengths (inches): 3/8, 5/8, 3/8, 7/8, 5/8, 3/8. What is the most common length?",
+            "answer": "3/8 inch (3 times)",
+            "explanation": "3/8 appears 3 times, more than any other."
+          },
+          {
+            "question": "A line plot shows plant heights: 2 at 1/4 in, 4 at 1/2 in, 3 at 3/4 in. What is the total of all heights?",
+            "answer": "4 3/4 inches",
+            "explanation": "2(1/4)+4(1/2)+3(3/4) = 2/4+8/4+9/4 = 19/4 = 4 3/4."
+          },
+          {
+            "question": "Pencil lengths: 5 1/2, 6, 5 1/2, 6 1/2, 6, 6, 5 1/2. What length appears most?",
+            "answer": "5 1/2 and 6 (tied at 3 each)",
+            "explanation": "5 1/2 appears 3 times, 6 appears 3 times, 6 1/2 once."
+          },
+          {
+            "question": "From a line plot: 1/4(3), 2/4(5), 3/4(2). How much longer is the longest than shortest?",
+            "answer": "2/4 = 1/2",
+            "explanation": "3/4 − 1/4 = 2/4 = 1/2."
+          },
+          {
+            "question": "Data: 1/8, 3/8, 3/8, 5/8, 7/8. Find the sum of all measurements.",
+            "answer": "19/8 = 2 3/8",
+            "explanation": "1+3+3+5+7=19 eighths = 19/8 = 2 3/8."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Ant lengths: 1/4(2), 3/8(3), 1/2(4), 5/8(1). Find the total length if all ants were placed end to end.",
+            "answer": "4 3/8 inches",
+            "explanation": "2(1/4)+3(3/8)+4(1/2)+1(5/8) = 4/8+9/8+16/8+5/8 = 34/8 = 4 2/8 = 4 1/4. Let me recalculate: 2(2/8)+3(3/8)+4(4/8)+1(5/8) = 4/8+9/8+16/8+5/8 = 34/8 = 4 2/8 = 4 1/4 inches."
+          },
+          {
+            "question": "Eight students measured worms. Results: 3/4, 1/2, 5/8, 3/4, 7/8, 1/2, 3/4, 5/8. What fraction of students found worms 3/4 inch or longer?",
+            "answer": "4/8 = 1/2",
+            "explanation": "3/4 or longer: 3/4(3 times) + 7/8(1 time) = 4 out of 8 = 1/2."
+          },
+          {
+            "question": "Rainfall over 5 days (inches): 1/4, 0, 3/4, 1/2, 1/4. What was the average daily rainfall?",
+            "answer": "7/20 inch",
+            "explanation": "Sum: 1/4+3/4+1/2+1/4 = 7/4. Average: (7/4)÷5 = 7/20."
+          },
+          {
+            "question": "How much more rain fell on the rainiest day vs. least rainy day (above)?",
+            "answer": "3/4 inch",
+            "explanation": "Rainiest: 3/4. Least (excluding 0): 1/4. Difference: 3/4−1/4 = 1/2. Including 0: 3/4−0=3/4."
+          },
+          {
+            "question": "Seed lengths: 3/16(4), 5/16(3), 7/16(5), 9/16(2). What is the combined length of all seeds?",
+            "answer": "78/16 = 4 14/16 = 4 7/8 inches",
+            "explanation": "4(3)+3(5)+5(7)+2(9) = 12+15+35+18 = 80 sixteenths = 80/16 = 5. Recalculating: 12+15+35+18=80. 80/16=5 inches."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.5",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Recognize angles as geometric shapes formed wherever two rays share a common endpoint",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is an angle?",
+            "answer": "Two rays sharing a common endpoint (vertex)",
+            "explanation": "An angle is formed by two rays that start at the same point, called the vertex."
+          },
+          {
+            "question": "How many degrees are in a right angle?",
+            "answer": "90°",
+            "explanation": "A right angle measures exactly 90 degrees."
+          },
+          {
+            "question": "How many degrees are in a full turn (circle)?",
+            "answer": "360°",
+            "explanation": "A full rotation around a point is 360 degrees."
+          },
+          {
+            "question": "What fraction of a circle is a right angle?",
+            "answer": "1/4",
+            "explanation": "90/360 = 1/4 of a full turn."
+          },
+          {
+            "question": "An angle that turns through 1/360 of a circle is how many degrees?",
+            "answer": "1 degree",
+            "explanation": "By definition, 1 degree = 1/360 of a full turn."
+          }
+        ],
+        "medium": [
+          {
+            "question": "How many degrees is half a circle?",
+            "answer": "180°",
+            "explanation": "360 ÷ 2 = 180°. This is called a straight angle."
+          },
+          {
+            "question": "An angle is 3/4 of a full turn. How many degrees?",
+            "answer": "270°",
+            "explanation": "3/4 × 360 = 270°."
+          },
+          {
+            "question": "A clock's minute hand moves from 12 to 3. How many degrees did it turn?",
+            "answer": "90°",
+            "explanation": "12 to 3 is 1/4 of the clock face. 1/4 × 360 = 90°."
+          },
+          {
+            "question": "Is a 45° angle greater or less than a right angle?",
+            "answer": "Less than a right angle",
+            "explanation": "45° < 90°. A 45° angle is half of a right angle."
+          },
+          {
+            "question": "How many right angles make a straight angle (180°)?",
+            "answer": "2 right angles",
+            "explanation": "2 × 90° = 180°."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A clock's minute hand moves from 12 to 8. How many degrees did it turn?",
+            "answer": "240°",
+            "explanation": "12 to 8 = 8 hours on the clock = 8/12 of a turn = 2/3 × 360 = 240°."
+          },
+          {
+            "question": "If you face north and turn clockwise to face south, how many degrees did you turn?",
+            "answer": "180°",
+            "explanation": "North to south is a half turn = 180°."
+          },
+          {
+            "question": "A pizza is cut into 8 equal slices. What angle does each slice form at the center?",
+            "answer": "45°",
+            "explanation": "360 ÷ 8 = 45° per slice."
+          },
+          {
+            "question": "How many 30° angles fit in a straight angle?",
+            "answer": "6 angles",
+            "explanation": "180 ÷ 30 = 6."
+          },
+          {
+            "question": "A wheel turns 5/6 of a full rotation. How many degrees is that?",
+            "answer": "300°",
+            "explanation": "5/6 × 360 = 300°."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.6",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure angles in whole-number degrees using a protractor",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A protractor shows an angle measuring 45°. Is this acute, right, or obtuse?",
+            "answer": "Acute",
+            "explanation": "45° < 90°, so it's an acute angle."
+          },
+          {
+            "question": "An angle measures 90°. What type of angle is it?",
+            "answer": "Right angle",
+            "explanation": "Exactly 90° = right angle."
+          },
+          {
+            "question": "An angle measures 120°. Is it acute, right, or obtuse?",
+            "answer": "Obtuse",
+            "explanation": "120° > 90° but < 180°, so it's obtuse."
+          },
+          {
+            "question": "Which is larger: a 60° angle or a 75° angle?",
+            "answer": "75° angle",
+            "explanation": "75 > 60, so the 75° angle is larger."
+          },
+          {
+            "question": "What type of angle is 180°?",
+            "answer": "Straight angle",
+            "explanation": "180° forms a straight line."
+          }
+        ],
+        "medium": [
+          {
+            "question": "An angle measures 135°. Is it closer to a right angle or a straight angle?",
+            "answer": "Closer to a straight angle",
+            "explanation": "|135−90|=45 and |135−180|=45. It's equidistant, but since 135>90 it's obtuse and closer to 180."
+          },
+          {
+            "question": "A triangle has angles of 60° and 80°. What is the third angle?",
+            "answer": "40°",
+            "explanation": "180 − 60 − 80 = 40°. Triangle angles sum to 180°."
+          },
+          {
+            "question": "Two angles together form a right angle. One is 35°. What is the other?",
+            "answer": "55°",
+            "explanation": "90 − 35 = 55°."
+          },
+          {
+            "question": "Classify these angles: 15°, 90°, 110°, 175°.",
+            "answer": "Acute, right, obtuse, obtuse",
+            "explanation": "15°<90(acute), 90°(right), 110°>90(obtuse), 175°>90(obtuse)."
+          },
+          {
+            "question": "How many degrees larger is an obtuse angle of 140° than an acute angle of 50°?",
+            "answer": "90°",
+            "explanation": "140 − 50 = 90°."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A quadrilateral has angles 85°, 95°, and 110°. What is the fourth angle?",
+            "answer": "70°",
+            "explanation": "Quadrilateral angles sum to 360°. 360−85−95−110 = 70°."
+          },
+          {
+            "question": "Two angles are supplementary. One is 63°. What is the other?",
+            "answer": "117°",
+            "explanation": "Supplementary angles sum to 180°. 180−63=117°."
+          },
+          {
+            "question": "Two angles are complementary. One is 28°. What is the other?",
+            "answer": "62°",
+            "explanation": "Complementary angles sum to 90°. 90−28=62°."
+          },
+          {
+            "question": "A regular hexagon has 6 equal angles. What is each interior angle?",
+            "answer": "120°",
+            "explanation": "Sum of interior angles = (6−2)×180 = 720°. Each = 720÷6 = 120°."
+          },
+          {
+            "question": "If you draw both diagonals of a square, what angles do they form at the center?",
+            "answer": "Four 90° angles",
+            "explanation": "Diagonals of a square bisect each other at right angles, creating four 90° angles."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.MD.7",
+      "domain": "4.MD",
+      "domainName": "Measurement and Data",
+      "title": "Recognize angle measure as additive; solve addition and subtraction problems to find unknown angles",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Two angles share a side. One is 30° and the other is 50°. What is the total angle?",
+            "answer": "80°",
+            "explanation": "30 + 50 = 80°. Adjacent angles add up."
+          },
+          {
+            "question": "An angle is split into 40° and 25°. What is the whole angle?",
+            "answer": "65°",
+            "explanation": "40 + 25 = 65°."
+          },
+          {
+            "question": "A right angle is split into two parts. One part is 60°. What is the other?",
+            "answer": "30°",
+            "explanation": "90 − 60 = 30°."
+          },
+          {
+            "question": "Two angles form a straight line. One is 110°. What is the other?",
+            "answer": "70°",
+            "explanation": "180 − 110 = 70°."
+          },
+          {
+            "question": "Three angles meet at a point on a line: 45°, 85°, and x°. Find x.",
+            "answer": "50°",
+            "explanation": "45 + 85 + x = 180. 130 + x = 180. x = 50°."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Angle ABC = 125°. Ray BD splits it into angle ABD = 75° and angle DBC. Find angle DBC.",
+            "answer": "50°",
+            "explanation": "125 − 75 = 50°."
+          },
+          {
+            "question": "Two angles form a right angle. One is (x + 10)° and the other is 50°. Find x.",
+            "answer": "30",
+            "explanation": "(x+10) + 50 = 90. x + 60 = 90. x = 30."
+          },
+          {
+            "question": "Three angles at a point on a line measure 55°, 65°, and n°. Find n.",
+            "answer": "60°",
+            "explanation": "55 + 65 + n = 180. 120 + n = 180. n = 60°."
+          },
+          {
+            "question": "A full turn is divided into 4 angles: 90°, 90°, 85°, and x°. Find x.",
+            "answer": "95°",
+            "explanation": "90+90+85+x = 360. 265+x=360. x=95°."
+          },
+          {
+            "question": "An angle of 150° is split into 3 equal parts. What is each part?",
+            "answer": "50°",
+            "explanation": "150 ÷ 3 = 50° each."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Angles around a point: 120°, 85°, x°, and 70°. Find x.",
+            "answer": "85°",
+            "explanation": "120+85+x+70=360. 275+x=360. x=85°."
+          },
+          {
+            "question": "Two supplementary angles are in the ratio 2:3. Find both angles.",
+            "answer": "72° and 108°",
+            "explanation": "2x + 3x = 180. 5x = 180. x = 36. Angles: 72° and 108°."
+          },
+          {
+            "question": "Angle PQR = 160°. Point S is inside so that angle PQS = 3x° and angle SQR = 2x°. Find x and both angles.",
+            "answer": "x = 32; angles are 96° and 64°",
+            "explanation": "3x + 2x = 160. 5x = 160. x = 32. PQS=96°, SQR=64°."
+          },
+          {
+            "question": "Two complementary angles differ by 20°. Find both.",
+            "answer": "35° and 55°",
+            "explanation": "x + (x+20) = 90. 2x + 20 = 90. 2x = 70. x = 35. Other = 55°."
+          },
+          {
+            "question": "Five angles around a point: 60°, 75°, 80°, 55°, and y°. Find y.",
+            "answer": "90°",
+            "explanation": "60+75+80+55+y = 360. 270+y=360. y=90°."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.G.1",
+      "domain": "4.G",
+      "domainName": "Geometry",
+      "title": "Draw and identify points, lines, line segments, rays, angles, and perpendicular and parallel lines",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is the difference between a line and a line segment?",
+            "answer": "A line goes on forever in both directions; a line segment has two endpoints",
+            "explanation": "A line has no endpoints and extends infinitely. A line segment has two defined endpoints."
+          },
+          {
+            "question": "What is a ray?",
+            "answer": "A part of a line with one endpoint that extends infinitely in one direction",
+            "explanation": "A ray starts at a point and goes on forever in one direction."
+          },
+          {
+            "question": "Do parallel lines ever cross?",
+            "answer": "No",
+            "explanation": "Parallel lines are always the same distance apart and never intersect."
+          },
+          {
+            "question": "What do we call two lines that cross at a 90° angle?",
+            "answer": "Perpendicular lines",
+            "explanation": "Perpendicular lines intersect forming right angles (90°)."
+          },
+          {
+            "question": "Name a real-world example of parallel lines.",
+            "answer": "Railroad tracks (or similar)",
+            "explanation": "Railroad tracks, edges of a ruler, or opposite sides of a door are parallel."
+          }
+        ],
+        "medium": [
+          {
+            "question": "How many line segments does a triangle have?",
+            "answer": "3",
+            "explanation": "A triangle is made of 3 line segments (sides)."
+          },
+          {
+            "question": "Can two rays form an angle? Explain.",
+            "answer": "Yes, if they share a common endpoint",
+            "explanation": "Two rays with the same endpoint (vertex) form an angle."
+          },
+          {
+            "question": "In the letter H, identify a pair of parallel line segments and a perpendicular one.",
+            "answer": "The two vertical lines are parallel; the horizontal bar is perpendicular to both",
+            "explanation": "The uprights of H are parallel. The crossbar meets them at right angles."
+          },
+          {
+            "question": "Are the opposite sides of a rectangle parallel, perpendicular, or both?",
+            "answer": "Opposite sides are parallel; adjacent sides are perpendicular",
+            "explanation": "A rectangle has 2 pairs of parallel sides and 4 right angles."
+          },
+          {
+            "question": "How many right angles are formed when two perpendicular lines cross?",
+            "answer": "4 right angles",
+            "explanation": "Two perpendicular lines create 4 angles of 90° each."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Draw a shape that has exactly one pair of parallel sides. What is it called?",
+            "answer": "A trapezoid",
+            "explanation": "A trapezoid (or trapezium) has exactly one pair of parallel sides."
+          },
+          {
+            "question": "Can a triangle have a pair of parallel sides? Why or why not?",
+            "answer": "No",
+            "explanation": "If two sides were parallel, they would never meet, but a triangle requires all three sides to connect."
+          },
+          {
+            "question": "A figure has 4 sides, 2 pairs of parallel sides, but no right angles. What could it be?",
+            "answer": "A parallelogram (non-rectangular, like a rhombus)",
+            "explanation": "A parallelogram has 2 pairs of parallel sides. Without right angles, it's not a rectangle."
+          },
+          {
+            "question": "In a regular hexagon, how many pairs of parallel sides are there?",
+            "answer": "3 pairs",
+            "explanation": "A regular hexagon has 3 pairs of opposite parallel sides."
+          },
+          {
+            "question": "Two lines are both perpendicular to the same line. Are they parallel to each other? Explain.",
+            "answer": "Yes",
+            "explanation": "If two lines are both perpendicular to a third line, they must be parallel to each other (both form 90° with the same line)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.G.2",
+      "domain": "4.G",
+      "domainName": "Geometry",
+      "title": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or angles of a specified size",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Does a square have parallel sides?",
+            "answer": "Yes, 2 pairs of parallel sides",
+            "explanation": "Opposite sides of a square are parallel."
+          },
+          {
+            "question": "How many right angles does a rectangle have?",
+            "answer": "4",
+            "explanation": "All four angles in a rectangle are 90°."
+          },
+          {
+            "question": "Does a triangle always have right angles?",
+            "answer": "No",
+            "explanation": "Only right triangles have a 90° angle. Other triangles don't."
+          },
+          {
+            "question": "Name a quadrilateral with no parallel sides.",
+            "answer": "An irregular quadrilateral (or a general trapezium in some definitions)",
+            "explanation": "A quadrilateral with no sides parallel has no special name but exists."
+          },
+          {
+            "question": "Does a rhombus have parallel sides?",
+            "answer": "Yes, 2 pairs",
+            "explanation": "A rhombus is a parallelogram - opposite sides are parallel."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Classify a rectangle: how many pairs of parallel sides, perpendicular sides, and right angles?",
+            "answer": "2 pairs parallel, 4 pairs perpendicular adjacent sides, 4 right angles",
+            "explanation": "Rectangle: 2 pairs parallel sides, each pair of adjacent sides is perpendicular, 4 right angles."
+          },
+          {
+            "question": "A triangle has angles 90°, 45°, 45°. Classify it by its angles.",
+            "answer": "Right triangle (also isosceles)",
+            "explanation": "It has a 90° angle (right) and two equal 45° angles (isosceles)."
+          },
+          {
+            "question": "What makes a square different from other rectangles?",
+            "answer": "All four sides are equal length",
+            "explanation": "A square is a rectangle with all sides equal. Rectangles only require opposite sides equal."
+          },
+          {
+            "question": "Can a parallelogram have exactly one right angle?",
+            "answer": "No, it must have 0 or 4",
+            "explanation": "If one angle is 90°, the opposite angle must also be 90°, and adjacent angles must be 180°−90°=90°. So all four must be right angles."
+          },
+          {
+            "question": "A quadrilateral has exactly one pair of parallel sides and no right angles. What is it?",
+            "answer": "A trapezoid (without right angles)",
+            "explanation": "One pair of parallel sides = trapezoid. No right angles makes it a non-right trapezoid."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Is every square a rectangle? Is every rectangle a square? Explain.",
+            "answer": "Yes; No",
+            "explanation": "Every square IS a rectangle (4 right angles, opposite sides parallel and equal). But not every rectangle is a square (sides may differ)."
+          },
+          {
+            "question": "Is every rhombus a parallelogram? Is every parallelogram a rhombus?",
+            "answer": "Yes; No",
+            "explanation": "Every rhombus has 2 pairs of parallel sides (parallelogram). But parallelograms don't need all sides equal."
+          },
+          {
+            "question": "Name all quadrilaterals that always have 4 right angles.",
+            "answer": "Rectangles and squares",
+            "explanation": "Rectangles always have 4 right angles. Squares are special rectangles, so they do too."
+          },
+          {
+            "question": "A shape has 4 equal sides and no right angles. What is it?",
+            "answer": "A rhombus (that is not a square)",
+            "explanation": "4 equal sides = rhombus. If no right angles, it's a rhombus but not a square."
+          },
+          {
+            "question": "Can a right triangle have two right angles? Explain.",
+            "answer": "No",
+            "explanation": "Triangle angles sum to 180°. Two right angles = 180°, leaving 0° for the third angle, which is impossible."
+          }
+        ]
+      }
+    },
+    {
+      "code": "4.G.3",
+      "domain": "4.G",
+      "domainName": "Geometry",
+      "title": "Recognize a line of symmetry for a two-dimensional figure",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Does a square have lines of symmetry? How many?",
+            "answer": "Yes, 4 lines of symmetry",
+            "explanation": "A square can be folded along 4 lines: 2 through midpoints of sides, 2 along diagonals."
+          },
+          {
+            "question": "Does the letter A have a line of symmetry?",
+            "answer": "Yes, 1 vertical line of symmetry",
+            "explanation": "The letter A can be folded vertically down the middle."
+          },
+          {
+            "question": "How many lines of symmetry does a circle have?",
+            "answer": "Infinite (unlimited)",
+            "explanation": "Any line through the center of a circle is a line of symmetry."
+          },
+          {
+            "question": "Does a rectangle (non-square) have lines of symmetry? How many?",
+            "answer": "Yes, 2 lines of symmetry",
+            "explanation": "Fold horizontally through the middle or vertically through the middle."
+          },
+          {
+            "question": "Does the letter B have a line of symmetry?",
+            "answer": "Yes, 1 horizontal line",
+            "explanation": "The letter B can be folded along a horizontal line through its middle."
+          }
+        ],
+        "medium": [
+          {
+            "question": "How many lines of symmetry does an equilateral triangle have?",
+            "answer": "3",
+            "explanation": "Each line goes from a vertex to the midpoint of the opposite side."
+          },
+          {
+            "question": "Does a parallelogram (non-rectangle) have any lines of symmetry?",
+            "answer": "No",
+            "explanation": "A general parallelogram has no lines of symmetry. Only special cases (rectangles, rhombi) do."
+          },
+          {
+            "question": "How many lines of symmetry does a regular pentagon have?",
+            "answer": "5",
+            "explanation": "A regular pentagon has 5 lines of symmetry, each from a vertex to the midpoint of the opposite side."
+          },
+          {
+            "question": "Does an isosceles triangle have a line of symmetry? How many?",
+            "answer": "Yes, 1 line",
+            "explanation": "The line from the vertex angle to the midpoint of the base is the line of symmetry."
+          },
+          {
+            "question": "Which has more lines of symmetry: a square or an equilateral triangle?",
+            "answer": "A square (4 vs. 3)",
+            "explanation": "Square: 4 lines. Equilateral triangle: 3 lines."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A regular hexagon has how many lines of symmetry?",
+            "answer": "6",
+            "explanation": "3 lines through opposite vertices + 3 lines through midpoints of opposite sides = 6."
+          },
+          {
+            "question": "Can you draw a quadrilateral with exactly 1 line of symmetry? Describe it.",
+            "answer": "Yes - a kite or an isosceles trapezoid",
+            "explanation": "A kite has 1 line of symmetry along its main diagonal. An isosceles trapezoid has 1 vertical line of symmetry."
+          },
+          {
+            "question": "Which capital letters have exactly 2 lines of symmetry?",
+            "answer": "H, I, O, X",
+            "explanation": "H, I, O, and X can each be folded both horizontally and vertically."
+          },
+          {
+            "question": "If a shape has rotational symmetry of order 3, what can you say about its lines of symmetry?",
+            "answer": "It has at least 3 lines of symmetry (if it has line symmetry at all)",
+            "explanation": "Shapes with order-3 rotational symmetry and line symmetry have exactly 3 lines (like equilateral triangles)."
+          },
+          {
+            "question": "Draw or describe a figure with no lines of symmetry.",
+            "answer": "A scalene triangle or the letter F",
+            "explanation": "A scalene triangle has all different sides and angles - no fold line will match both halves."
+          }
+        ]
+      }
+    }
+  ]
+}

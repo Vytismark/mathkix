@@ -127,3 +127,575 @@
     @apply font-sans;
   }
 }
+
+/* ─────────────────────────────────────────────
+   Start Practice button shimmer
+───────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { transform: skewX(-12deg) translateX(-100%); }
+  60%  { transform: skewX(-12deg) translateX(250%); }
+  100% { transform: skewX(-12deg) translateX(250%); }
+}
+
+/* ─────────────────────────────────────────────
+   Lesson card stagger
+───────────────────────────────────────────── */
+.lesson-grid > *:nth-child(1) { animation-delay: 40ms;  }
+.lesson-grid > *:nth-child(2) { animation-delay: 90ms;  }
+.lesson-grid > *:nth-child(3) { animation-delay: 140ms; }
+.lesson-grid > *:nth-child(4) { animation-delay: 190ms; }
+.lesson-grid > *:nth-child(5) { animation-delay: 240ms; }
+.lesson-grid > *:nth-child(6) { animation-delay: 290ms; }
+.lesson-grid > *:nth-child(7) { animation-delay: 340ms; }
+.lesson-grid > *:nth-child(8) { animation-delay: 390ms; }
+
+/* ─────────────────────────────────────────────
+   Journey path - pulsing ring for current node
+───────────────────────────────────────────── */
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 var(--ring-color, rgba(99,102,241,0.5)); }
+  50%      { box-shadow: 0 0 0 10px var(--ring-color, rgba(99,102,241,0)); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Floating background decoration
+───────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Streak flame flicker
+───────────────────────────────────────────── */
+@keyframes streak-flame {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25%      { transform: scale(1.1) rotate(-2deg); }
+  75%      { transform: scale(1.05) rotate(2deg); }
+}
+
+.animate-streak-flame {
+  animation: streak-flame 0.8s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Journey path stagger
+───────────────────────────────────────────── */
+.journey-path > * {
+  animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.journey-path > *:nth-child(1)  { animation-delay: 40ms;  }
+.journey-path > *:nth-child(2)  { animation-delay: 90ms;  }
+.journey-path > *:nth-child(3)  { animation-delay: 140ms; }
+.journey-path > *:nth-child(4)  { animation-delay: 190ms; }
+.journey-path > *:nth-child(5)  { animation-delay: 240ms; }
+.journey-path > *:nth-child(6)  { animation-delay: 290ms; }
+.journey-path > *:nth-child(7)  { animation-delay: 340ms; }
+.journey-path > *:nth-child(8)  { animation-delay: 390ms; }
+.journey-path > *:nth-child(9)  { animation-delay: 440ms; }
+.journey-path > *:nth-child(10) { animation-delay: 490ms; }
+.journey-path > *:nth-child(11) { animation-delay: 540ms; }
+.journey-path > *:nth-child(12) { animation-delay: 590ms; }
+
+/* ─────────────────────────────────────────────
+   Shared entrance keyframes
+───────────────────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes progress-grow {
+  from { width: 0%; }
+  to   { width: var(--progress-target, 0%); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease both;
+}
+
+/* ─────────────────────────────────────────────
+   Plan cards - spring lift on hover
+   .plan-card        → monthly / lifetime
+   .plan-card-annual → already elevated -12px on md, lifts further
+───────────────────────────────────────────── */
+.plan-card,
+.plan-card-annual {
+  will-change: transform, box-shadow;
+  transition:
+    transform     0.28s cubic-bezier(0.34, 1.5, 0.64, 1),
+    box-shadow    0.28s ease,
+    border-color  0.28s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+}
+
+@media (min-width: 768px) {
+  .plan-card-annual {
+    transform: translateY(-12px);
+  }
+  .plan-card-annual:hover {
+    transform: translateY(-20px);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   CTA buttons - lift + spring press
+───────────────────────────────────────────── */
+.cta-btn {
+  transition:
+    transform  0.18s cubic-bezier(0.34, 1.5, 0.64, 1),
+    box-shadow 0.18s ease,
+    opacity    0.15s ease;
+}
+
+.cta-btn:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.015);
+}
+
+.cta-btn:active:not(:disabled) {
+  transform: translateY(1px) scale(0.975);
+  transition-duration: 0.08s;
+}
+
+/* ─────────────────────────────────────────────
+   Trust tiles
+───────────────────────────────────────────── */
+.trust-tile {
+  transition:
+    transform     0.22s cubic-bezier(0.34, 1.4, 0.64, 1),
+    background    0.2s ease,
+    border-color  0.2s ease;
+}
+
+.trust-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.13) !important;
+  background: rgba(255,255,255,0.045) !important;
+}
+
+/* ─────────────────────────────────────────────
+   Animated progress bar (driven by CSS var)
+───────────────────────────────────────────── */
+.progress-bar-animated {
+  animation: progress-grow 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+  width: var(--progress-target, 0%);
+}
+
+/* ─────────────────────────────────────────────
+   Slide down - for banners
+───────────────────────────────────────────── */
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─────────────────────────────────────────────
+   Scale-in - for modals / overlays
+───────────────────────────────────────────── */
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.38s cubic-bezier(0.34, 1.3, 0.64, 1) both;
+}
+
+/* ─────────────────────────────────────────────
+   Child cards - spring lift hover
+───────────────────────────────────────────── */
+.child-card {
+  will-change: transform, box-shadow;
+  transition:
+    transform    0.28s cubic-bezier(0.34, 1.5, 0.64, 1),
+    box-shadow   0.28s ease,
+    border-color 0.28s ease;
+}
+
+.child-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  border-color: rgba(255,255,255,0.22) !important;
+  box-shadow: 0 16px 44px rgba(0,0,0,0.55) !important;
+}
+
+/* ─────────────────────────────────────────────
+   Stat + child grid - CSS nth-child stagger
+   (works for server-rendered lists without JS)
+───────────────────────────────────────────── */
+.stat-grid > * {
+  animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.stat-grid > *:nth-child(1) { animation-delay: 60ms;  }
+.stat-grid > *:nth-child(2) { animation-delay: 120ms; }
+.stat-grid > *:nth-child(3) { animation-delay: 180ms; }
+.stat-grid > *:nth-child(4) { animation-delay: 240ms; }
+
+.child-grid > * {
+  animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.child-grid > *:nth-child(1) { animation-delay: 80ms;  }
+.child-grid > *:nth-child(2) { animation-delay: 150ms; }
+.child-grid > *:nth-child(3) { animation-delay: 220ms; }
+.child-grid > *:nth-child(4) { animation-delay: 290ms; }
+.child-grid > *:nth-child(5) { animation-delay: 360ms; }
+.child-grid > *:nth-child(6) { animation-delay: 430ms; }
+.child-grid > *:nth-child(7) { animation-delay: 500ms; }
+.child-grid > *:nth-child(8) { animation-delay: 570ms; }
+.child-grid > *:nth-child(9) { animation-delay: 640ms; }
+
+/* ─────────────────────────────────────────────
+   Domain progress grid (child profile)
+───────────────────────────────────────────── */
+.domain-grid > * {
+  animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.domain-grid > *:nth-child(1) { animation-delay: 60ms;  }
+.domain-grid > *:nth-child(2) { animation-delay: 130ms; }
+.domain-grid > *:nth-child(3) { animation-delay: 200ms; }
+.domain-grid > *:nth-child(4) { animation-delay: 270ms; }
+.domain-grid > *:nth-child(5) { animation-delay: 340ms; }
+
+.standard-row-animate {
+  animation: fade-in-up 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─────────────────────────────────────────────
+   Quick links (dashboard)
+───────────────────────────────────────────── */
+.quick-link {
+  will-change: transform, border-color;
+  transition:
+    transform    0.24s cubic-bezier(0.34, 1.5, 0.64, 1),
+    border-color 0.2s  ease,
+    background   0.2s  ease;
+}
+
+.quick-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.2) !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* ─────────────────────────────────────────────
+   Nav items
+───────────────────────────────────────────── */
+.nav-item-animate {
+  animation: fade-in-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─────────────────────────────────────────────
+   Landing page - sticky frosted glass nav
+───────────────────────────────────────────── */
+.landing-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7, 8, 15, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ─────────────────────────────────────────────
+   Landing - feature cards
+───────────────────────────────────────────── */
+.feature-card {
+  will-change: transform, border-color, background;
+  transition:
+    transform     0.28s cubic-bezier(0.34, 1.5, 0.64, 1),
+    border-color  0.22s ease,
+    background    0.22s ease,
+    box-shadow    0.28s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.065) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ─────────────────────────────────────────────
+   Landing - feature grid nth-child stagger
+───────────────────────────────────────────── */
+.feature-grid > * {
+  animation: fade-in-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.feature-grid > *:nth-child(1) { animation-delay: 0ms;   }
+.feature-grid > *:nth-child(2) { animation-delay: 70ms;  }
+.feature-grid > *:nth-child(3) { animation-delay: 140ms; }
+.feature-grid > *:nth-child(4) { animation-delay: 210ms; }
+.feature-grid > *:nth-child(5) { animation-delay: 280ms; }
+.feature-grid > *:nth-child(6) { animation-delay: 350ms; }
+
+/* ─────────────────────────────────────────────
+   Landing - ghost link button hover
+───────────────────────────────────────────── */
+.ghost-btn {
+  will-change: transform, border-color, background;
+  transition:
+    transform     0.18s cubic-bezier(0.34, 1.5, 0.64, 1),
+    border-color  0.15s ease,
+    background    0.15s ease,
+    color         0.15s ease;
+}
+
+.ghost-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: white !important;
+}
+
+/* ─────────────────────────────────────────────
+   Landing - step cards
+───────────────────────────────────────────── */
+.step-card {
+  will-change: transform, border-color;
+  transition:
+    transform     0.28s cubic-bezier(0.34, 1.5, 0.64, 1),
+    border-color  0.2s ease,
+    background    0.2s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ─────────────────────────────────────────────
+   Auth pages - floating label input system
+───────────────────────────────────────────── */
+
+/* Wrapper - the visible "input box" */
+.auth-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0 1rem;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  transition:
+    border-color 0.18s ease,
+    box-shadow   0.18s ease,
+    background   0.18s ease;
+}
+
+.auth-input-wrap:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Full-colour red border + inner + outer glow on focus */
+.auth-input-wrap:focus-within {
+  border-color: #E74C3C;
+  box-shadow:
+    0 0 0 4px rgba(231, 76, 60, 0.15),
+    inset 0 0 24px rgba(231, 76, 60, 0.04);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Icon */
+.auth-input-icon {
+  color: rgba(255, 255, 255, 0.28);
+  flex-shrink: 0;
+  transition: color 0.18s ease, transform 0.22s cubic-bezier(0.34,1.5,0.64,1);
+}
+
+.auth-input-wrap:focus-within .auth-input-icon {
+  color: #E74C3C;
+  transform: scale(1.1);
+}
+
+/* Inner container for input + floating label */
+.auth-float-group {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+/* The <input> itself */
+.auth-float-input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f1f5f9;
+  font-size: 0.925rem;
+  font-weight: 450;
+  line-height: 1.4;
+  caret-color: #E74C3C !important;
+  padding-top: 16px;
+  letter-spacing: 0.01em;
+}
+
+.auth-float-input::placeholder { color: transparent; }
+
+/* ── Kill Chrome autofill white flash ──
+   Inset box-shadow paints over Chrome's injected bg.
+   Color matches: rgba(255,255,255,0.06) on rgba(255,255,255,0.05) on #07080f ≈ #0f1117 */
+.auth-float-input:-webkit-autofill,
+.auth-float-input:-webkit-autofill:hover,
+.auth-float-input:-webkit-autofill:focus,
+.auth-float-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 100px #0f1117 inset !important;
+  -webkit-text-fill-color: #f1f5f9 !important;
+  caret-color: #E74C3C !important;
+  transition: background-color 9999s ease-in-out 0s !important;
+}
+
+/* Floating label - centered at rest, springs up on focus/content */
+.auth-float-label {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.38);
+  pointer-events: none;
+  white-space: nowrap;
+  transform-origin: 0 0;
+  transition:
+    top       0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    color     0.18s ease;
+}
+
+/* Float up - focused */
+.auth-input-wrap:focus-within .auth-float-label {
+  top: 9px;
+  transform: translateY(0) scale(0.72);
+  color: #E74C3C;
+}
+
+/* Float up - has content but not focused */
+.auth-float-input:not(:placeholder-shown) ~ .auth-float-label {
+  top: 9px;
+  transform: translateY(0) scale(0.72);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Float up - autofilled by browser */
+.auth-float-input:-webkit-autofill ~ .auth-float-label {
+  top: 9px;
+  transform: translateY(0) scale(0.72);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ─────────────────────────────────────────────
+   Mobile: tap highlight + safe area
+───────────────────────────────────────────── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+}
+
+/* ─────────────────────────────────────────────
+   Scrollbar hide utility
+───────────────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────
+   Touch-friendly hover states
+   Only apply hover transforms on pointer devices
+───────────────────────────────────────────── */
+@media (hover: none) {
+  .plan-card:hover,
+  .plan-card-annual:hover,
+  .trust-tile:hover,
+  .feature-card:hover,
+  .ghost-btn:hover,
+  .step-card:hover,
+  .child-card:hover,
+  .quick-link:hover {
+    transform: none !important;
+  }
+
+  .child-card:active,
+  .plan-card:active,
+  .quick-link:active,
+  .feature-card:active,
+  .trust-tile:active,
+  .step-card:active,
+  .ghost-btn:active {
+    transform: scale(0.97) !important;
+    transition-duration: 0.1s;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Mobile drawer overlay
+───────────────────────────────────────────── */
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes fade-in-backdrop {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.mobile-drawer-enter {
+  animation: slide-in-left 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.mobile-backdrop-enter {
+  animation: fade-in-backdrop 0.2s ease both;
+}
+
+/* ─────────────────────────────────────────────
+   Mobile menu slide-down (marketing nav)
+───────────────────────────────────────────── */
+@keyframes slide-down-menu {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.mobile-menu-enter {
+  animation: slide-down-menu 0.2s ease both;
+}

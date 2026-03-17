@@ -1,0 +1,2257 @@
+{
+  "grade": 3,
+  "totalStandards": 25,
+  "totalQuestions": 375,
+  "standards": [
+    {
+      "code": "3.OA.1",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Interpret Products of Whole Numbers",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What does 3 x 4 mean?",
+            "answer": "3 groups of 4, which equals 12",
+            "explanation": "3 x 4 means 3 groups with 4 in each group: 4 + 4 + 4 = 12."
+          },
+          {
+            "question": "There are 2 bags with 5 apples each. Write a multiplication equation.",
+            "answer": "2 x 5 = 10",
+            "explanation": "2 groups of 5: 2 x 5 = 10 apples."
+          },
+          {
+            "question": "What does 5 x 2 mean?",
+            "answer": "5 groups of 2, which equals 10",
+            "explanation": "5 x 2 = 2 + 2 + 2 + 2 + 2 = 10."
+          },
+          {
+            "question": "Draw an array for 2 x 3. How many total?",
+            "answer": "6 (2 rows of 3)",
+            "explanation": "2 rows with 3 in each row: 3 + 3 = 6."
+          },
+          {
+            "question": "There are 4 plates with 2 cookies each. How many cookies?",
+            "answer": "8 (4 x 2 = 8)",
+            "explanation": "4 groups of 2: 2 + 2 + 2 + 2 = 8."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Describe a real-world situation for 6 x 3.",
+            "answer": "Example: 6 baskets with 3 oranges each = 18 oranges",
+            "explanation": "6 x 3 = 18. Any situation with 6 equal groups of 3."
+          },
+          {
+            "question": "An array shows 4 rows and 5 columns. Write the multiplication.",
+            "answer": "4 x 5 = 20",
+            "explanation": "4 rows of 5 = 20 total objects."
+          },
+          {
+            "question": "Write 7 x 3 as repeated addition.",
+            "answer": "3 + 3 + 3 + 3 + 3 + 3 + 3 = 21",
+            "explanation": "7 groups of 3 added together = 21."
+          },
+          {
+            "question": "There are 8 packs of markers with 3 in each. How many markers?",
+            "answer": "24 (8 x 3 = 24)",
+            "explanation": "8 x 3 = 24 markers total."
+          },
+          {
+            "question": "Is 5 x 4 the same as 4 + 4 + 4 + 4 + 4? Explain.",
+            "answer": "Yes, both equal 20",
+            "explanation": "5 x 4 means 5 groups of 4. Adding 4 five times = 20."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Jake says 3 x 8 means '3 added 8 times.' Is he right?",
+            "answer": "Not exactly; it means 3 groups of 8 (or 8 + 8 + 8 = 24)",
+            "explanation": "3 x 8 = 3 groups of 8 = 8 + 8 + 8 = 24. It could also be read as 8 groups of 3."
+          },
+          {
+            "question": "Write a word problem for 9 x 4.",
+            "answer": "Example: There are 9 rows of desks with 4 desks in each row. How many desks?",
+            "explanation": "9 x 4 = 36. Any context with 9 equal groups of 4."
+          },
+          {
+            "question": "Is 6 x 5 the same as 5 x 6? Explain using arrays.",
+            "answer": "Yes, both = 30",
+            "explanation": "6 x 5: 6 rows of 5. 5 x 6: 5 rows of 6. Both give 30 (commutative property)."
+          },
+          {
+            "question": "A classroom has 7 tables with 4 students at each. Write two multiplication equations.",
+            "answer": "7 x 4 = 28 and 4 x 7 = 28",
+            "explanation": "Both describe the same total: 28 students."
+          },
+          {
+            "question": "Write 8 x 5 as repeated addition, then find the product.",
+            "answer": "5+5+5+5+5+5+5+5 = 40",
+            "explanation": "8 groups of 5 = 40."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.2",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Interpret Whole-Number Quotients",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "12 cookies are shared equally among 3 friends. How many does each get?",
+            "answer": "4 cookies (12 / 3 = 4)",
+            "explanation": "12 / 3 = 4. Each friend gets 4 cookies."
+          },
+          {
+            "question": "What does 10 / 2 mean?",
+            "answer": "10 objects split into 2 equal groups = 5 in each",
+            "explanation": "10 / 2 = 5. Two groups of 5."
+          },
+          {
+            "question": "8 stickers are shared equally between 2 children. How many each?",
+            "answer": "4 (8 / 2 = 4)",
+            "explanation": "8 / 2 = 4 stickers each."
+          },
+          {
+            "question": "15 pencils put into groups of 5. How many groups?",
+            "answer": "3 groups (15 / 5 = 3)",
+            "explanation": "15 / 5 = 3. You can make 3 groups of 5."
+          },
+          {
+            "question": "6 toys divided equally among 3 kids. How many each?",
+            "answer": "2 (6 / 3 = 2)",
+            "explanation": "6 / 3 = 2 toys each."
+          }
+        ],
+        "medium": [
+          {
+            "question": "24 students sit in rows of 6. How many rows?",
+            "answer": "4 rows (24 / 6 = 4)",
+            "explanation": "24 / 6 = 4 rows."
+          },
+          {
+            "question": "Describe a situation for 36 / 9.",
+            "answer": "Example: 36 books on 9 shelves = 4 books per shelf",
+            "explanation": "36 / 9 = 4. 36 objects split into 9 equal groups."
+          },
+          {
+            "question": "There are 28 grapes. Each bag holds 7 grapes. How many bags?",
+            "answer": "4 bags (28 / 7 = 4)",
+            "explanation": "28 / 7 = 4 bags."
+          },
+          {
+            "question": "40 crayons are shared equally among 8 children. How many each?",
+            "answer": "5 (40 / 8 = 5)",
+            "explanation": "40 / 8 = 5 crayons per child."
+          },
+          {
+            "question": "What does 42 / 6 mean? Find the answer.",
+            "answer": "7 (42 split into 6 groups or groups of 6)",
+            "explanation": "42 / 6 = 7. Either 6 groups of 7 or 7 groups of 6."
+          }
+        ],
+        "hard": [
+          {
+            "question": "56 / 8 = ?. Describe two different sharing situations.",
+            "answer": "7",
+            "explanation": "Situation 1: 56 items shared among 8 people = 7 each. Situation 2: 56 items in groups of 8 = 7 groups."
+          },
+          {
+            "question": "A baker has 72 muffins. He puts 9 in each box. How many boxes?",
+            "answer": "8 boxes (72 / 9 = 8)",
+            "explanation": "72 / 9 = 8 boxes."
+          },
+          {
+            "question": "There are 63 seats in 7 equal rows. How many seats per row?",
+            "answer": "9 (63 / 7 = 9)",
+            "explanation": "63 / 7 = 9 seats per row."
+          },
+          {
+            "question": "81 / 9 = ?. Check your answer with multiplication.",
+            "answer": "9 (9 x 9 = 81)",
+            "explanation": "81 / 9 = 9. Check: 9 x 9 = 81."
+          },
+          {
+            "question": "A library has 48 books to put equally on 6 shelves. How many per shelf? Write the equation.",
+            "answer": "48 / 6 = 8",
+            "explanation": "48 / 6 = 8 books per shelf."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.3",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Solve Word Problems Using Multiplication and Division Within 100",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "There are 3 fish tanks with 6 fish in each. How many fish in all?",
+            "answer": "18 (3 x 6 = 18)",
+            "explanation": "3 x 6 = 18 fish total."
+          },
+          {
+            "question": "20 apples are shared equally among 4 baskets. How many in each?",
+            "answer": "5 (20 / 4 = 5)",
+            "explanation": "20 / 4 = 5 apples per basket."
+          },
+          {
+            "question": "Each kid gets 3 stickers. There are 5 kids. How many stickers in all?",
+            "answer": "15 (5 x 3 = 15)",
+            "explanation": "5 x 3 = 15 stickers."
+          },
+          {
+            "question": "18 eggs are in cartons of 6. How many cartons?",
+            "answer": "3 (18 / 6 = 3)",
+            "explanation": "18 / 6 = 3 cartons."
+          },
+          {
+            "question": "A garden has 4 rows with 7 flowers each. How many flowers?",
+            "answer": "28 (4 x 7 = 28)",
+            "explanation": "4 x 7 = 28 flowers."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A farmer has 54 eggs. He puts 9 in each carton. How many cartons does he fill?",
+            "answer": "6 (54 / 9 = 6)",
+            "explanation": "54 / 9 = 6 cartons."
+          },
+          {
+            "question": "There are 8 teams with 7 players each. How many players in all?",
+            "answer": "56 (8 x 7 = 56)",
+            "explanation": "8 x 7 = 56 players."
+          },
+          {
+            "question": "A school bought 48 notebooks for 6 classrooms. Each classroom gets the same amount. How many?",
+            "answer": "8 (48 / 6 = 8)",
+            "explanation": "48 / 6 = 8 notebooks per classroom."
+          },
+          {
+            "question": "A store has 9 shelves with 8 toys on each. How many toys?",
+            "answer": "72 (9 x 8 = 72)",
+            "explanation": "9 x 8 = 72 toys."
+          },
+          {
+            "question": "A baker made 35 cookies. He puts 5 in each bag. How many bags?",
+            "answer": "7 (35 / 5 = 7)",
+            "explanation": "35 / 5 = 7 bags."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A hall has 6 rows of chairs with 9 chairs in each row. 15 more chairs are added. How many total?",
+            "answer": "69",
+            "explanation": "6 x 9 = 54 chairs. 54 + 15 = 69 total chairs."
+          },
+          {
+            "question": "There are 72 students going on a field trip. Each bus holds 9 students. How many buses are needed?",
+            "answer": "8 buses (72 / 9 = 8)",
+            "explanation": "72 / 9 = 8 buses."
+          },
+          {
+            "question": "Amy has 7 packs of cards with 8 cards each. She gives 16 cards away. How many does she have left?",
+            "answer": "40",
+            "explanation": "7 x 8 = 56. 56 - 16 = 40 cards left."
+          },
+          {
+            "question": "A box holds 6 donuts. A bakery needs to box 42 donuts. How many boxes?",
+            "answer": "7 boxes (42 / 6 = 7)",
+            "explanation": "42 / 6 = 7 boxes."
+          },
+          {
+            "question": "Each table seats 4 people. There are 36 people. How many tables are needed? If 2 more tables are added empty, how many tables total?",
+            "answer": "9 tables needed; 11 total",
+            "explanation": "36 / 4 = 9. Then 9 + 2 = 11 tables total."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.4",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Determine the Unknown in Multiplication/Division Equations",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Find the unknown: 4 x ? = 12",
+            "answer": "3",
+            "explanation": "4 x 3 = 12. Think: how many groups of 4 make 12?"
+          },
+          {
+            "question": "Find the unknown: ? x 5 = 25",
+            "answer": "5",
+            "explanation": "5 x 5 = 25."
+          },
+          {
+            "question": "Find the unknown: 6 x 6 = ?",
+            "answer": "36",
+            "explanation": "6 x 6 = 36."
+          },
+          {
+            "question": "Find the unknown: 18 / ? = 3",
+            "answer": "6",
+            "explanation": "18 / 6 = 3. Think: 3 x 6 = 18."
+          },
+          {
+            "question": "Find the unknown: ? / 4 = 5",
+            "answer": "20",
+            "explanation": "20 / 4 = 5. Think: 4 x 5 = 20."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Find the unknown: 8 x ? = 56",
+            "answer": "7",
+            "explanation": "8 x 7 = 56."
+          },
+          {
+            "question": "Find the unknown: ? x 9 = 63",
+            "answer": "7",
+            "explanation": "7 x 9 = 63."
+          },
+          {
+            "question": "Find the unknown: 48 / ? = 6",
+            "answer": "8",
+            "explanation": "48 / 8 = 6. Think: 6 x 8 = 48."
+          },
+          {
+            "question": "Find the unknown: ? / 7 = 9",
+            "answer": "63",
+            "explanation": "63 / 7 = 9. Think: 7 x 9 = 63."
+          },
+          {
+            "question": "Find the unknown: 7 x ? = 42",
+            "answer": "6",
+            "explanation": "7 x 6 = 42."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Find the unknown: ? x 8 = 72",
+            "answer": "9",
+            "explanation": "9 x 8 = 72."
+          },
+          {
+            "question": "Find the unknown: 81 / ? = 9",
+            "answer": "9",
+            "explanation": "81 / 9 = 9."
+          },
+          {
+            "question": "Find both unknowns: 6 x ? = 54 and 54 / 6 = ?",
+            "answer": "Both are 9",
+            "explanation": "6 x 9 = 54 and 54 / 6 = 9. Multiplication and division are related."
+          },
+          {
+            "question": "If ? x ? = 64 and both numbers are the same, what is ??",
+            "answer": "8",
+            "explanation": "8 x 8 = 64."
+          },
+          {
+            "question": "Find the unknown: ? / 8 = 7. Then check: 8 x 7 = ?",
+            "answer": "56; 8 x 7 = 56",
+            "explanation": "? = 56. Check: 8 x 7 = 56 = 56."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.5",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Apply Properties of Operations to Multiply and Divide",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "If 3 x 7 = 21, what is 7 x 3?",
+            "answer": "21",
+            "explanation": "Commutative property: 3 x 7 = 7 x 3 = 21."
+          },
+          {
+            "question": "If 4 x 6 = 24, what is 6 x 4?",
+            "answer": "24",
+            "explanation": "Switching the order doesn't change the product."
+          },
+          {
+            "question": "What is 5 x 1?",
+            "answer": "5",
+            "explanation": "Identity property: any number times 1 equals itself."
+          },
+          {
+            "question": "What is 8 x 0?",
+            "answer": "0",
+            "explanation": "Zero property: any number times 0 equals 0."
+          },
+          {
+            "question": "If 2 x 9 = 18, what is 9 x 2?",
+            "answer": "18",
+            "explanation": "Commutative property: order doesn't matter."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Find 3 x 5 x 2 by grouping in two ways.",
+            "answer": "30 both ways",
+            "explanation": "(3 x 5) x 2 = 15 x 2 = 30. Also 3 x (5 x 2) = 3 x 10 = 30. Associative property."
+          },
+          {
+            "question": "Use the distributive property: 7 x 6 = 7 x (5 + 1). Solve.",
+            "answer": "42",
+            "explanation": "7 x 5 = 35, 7 x 1 = 7. 35 + 7 = 42."
+          },
+          {
+            "question": "Find 4 x 8 by breaking 8 into 5 + 3.",
+            "answer": "32",
+            "explanation": "4 x (5 + 3) = (4 x 5) + (4 x 3) = 20 + 12 = 32. Distributive property."
+          },
+          {
+            "question": "Find 2 x 4 x 5. Which grouping makes it easiest?",
+            "answer": "40 (group 4 x 5 first)",
+            "explanation": "2 x (4 x 5) = 2 x 20 = 40. Easier than (2 x 4) x 5 = 8 x 5 = 40."
+          },
+          {
+            "question": "Use the distributive property: 6 x 8 = 6 x (4 + 4). Solve.",
+            "answer": "48",
+            "explanation": "6 x 4 = 24, 6 x 4 = 24. 24 + 24 = 48."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Use the distributive property to find 8 x 7: 8 x (5 + 2).",
+            "answer": "56",
+            "explanation": "8 x 5 = 40. 8 x 2 = 16. 40 + 16 = 56."
+          },
+          {
+            "question": "Find 9 x 6 by breaking 9 into (10 - 1).",
+            "answer": "54",
+            "explanation": "(10 - 1) x 6 = 10 x 6 - 1 x 6 = 60 - 6 = 54."
+          },
+          {
+            "question": "Show that 5 x 3 x 4 = 4 x 5 x 3.",
+            "answer": "Both = 60",
+            "explanation": "Commutative + associative: order and grouping don't change the product. Both = 60."
+          },
+          {
+            "question": "Find 7 x 12 using the distributive property: 7 x (10 + 2).",
+            "answer": "84",
+            "explanation": "7 x 10 = 70. 7 x 2 = 14. 70 + 14 = 84."
+          },
+          {
+            "question": "Why does 6 x 0 x 99 = 0?",
+            "answer": "Because any number times 0 equals 0",
+            "explanation": "6 x 0 = 0. Then 0 x 99 = 0. Once you multiply by 0, the result is always 0."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.6",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Understand Division as an Unknown-Factor Problem",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Find 12 / 4 by thinking: 4 x ? = 12",
+            "answer": "3",
+            "explanation": "4 x 3 = 12, so 12 / 4 = 3."
+          },
+          {
+            "question": "Find 15 / 3 by thinking: 3 x ? = 15",
+            "answer": "5",
+            "explanation": "3 x 5 = 15, so 15 / 3 = 5."
+          },
+          {
+            "question": "Find 20 / 5 by thinking: 5 x ? = 20",
+            "answer": "4",
+            "explanation": "5 x 4 = 20, so 20 / 5 = 4."
+          },
+          {
+            "question": "Find 8 / 2 by thinking: 2 x ? = 8",
+            "answer": "4",
+            "explanation": "2 x 4 = 8, so 8 / 2 = 4."
+          },
+          {
+            "question": "Find 18 / 6 by thinking: 6 x ? = 18",
+            "answer": "3",
+            "explanation": "6 x 3 = 18, so 18 / 6 = 3."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Find 32 / 8. Think: 8 x ? = 32",
+            "answer": "4",
+            "explanation": "8 x 4 = 32, so 32 / 8 = 4."
+          },
+          {
+            "question": "Find 45 / 9. Think: 9 x ? = 45",
+            "answer": "5",
+            "explanation": "9 x 5 = 45, so 45 / 9 = 5."
+          },
+          {
+            "question": "Find 56 / 7. Think: 7 x ? = 56",
+            "answer": "8",
+            "explanation": "7 x 8 = 56, so 56 / 7 = 8."
+          },
+          {
+            "question": "If 6 x 9 = 54, what are 54 / 6 and 54 / 9?",
+            "answer": "54 / 6 = 9 and 54 / 9 = 6",
+            "explanation": "Fact family: 6 x 9 = 54, so 54 / 6 = 9 and 54 / 9 = 6."
+          },
+          {
+            "question": "Find 48 / 8. Think: 8 x ? = 48",
+            "answer": "6",
+            "explanation": "8 x 6 = 48, so 48 / 8 = 6."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Find 72 / 8. Think: 8 x ? = 72",
+            "answer": "9",
+            "explanation": "8 x 9 = 72, so 72 / 8 = 9."
+          },
+          {
+            "question": "Write the complete fact family for 7, 8, and 56.",
+            "answer": "7x8=56, 8x7=56, 56/7=8, 56/8=7",
+            "explanation": "Four related facts using the same three numbers."
+          },
+          {
+            "question": "Find 63 / 9 by using multiplication. Then find 63 / 7.",
+            "answer": "63/9=7 and 63/7=9",
+            "explanation": "9 x 7 = 63. So 63/9 = 7 and 63/7 = 9."
+          },
+          {
+            "question": "If you know 8 x 8 = 64, how does that help you find 64 / 8?",
+            "answer": "64 / 8 = 8",
+            "explanation": "Division undoes multiplication. Since 8 x 8 = 64, dividing 64 by 8 gives 8."
+          },
+          {
+            "question": "Explain why knowing 9 x 6 = 54 helps you solve both 54 / 9 and 54 / 6.",
+            "answer": "Because division is the inverse of multiplication",
+            "explanation": "If 9 x 6 = 54, then 54 / 9 = 6 (unknown factor) and 54 / 6 = 9 (unknown factor)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.7",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Fluently Multiply and Divide Within 100",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is 3 x 5?",
+            "answer": "15",
+            "explanation": "3 x 5 = 15."
+          },
+          {
+            "question": "What is 24 / 6?",
+            "answer": "4",
+            "explanation": "24 / 6 = 4. Think: 6 x 4 = 24."
+          },
+          {
+            "question": "What is 7 x 2?",
+            "answer": "14",
+            "explanation": "7 x 2 = 14."
+          },
+          {
+            "question": "What is 30 / 5?",
+            "answer": "6",
+            "explanation": "30 / 5 = 6."
+          },
+          {
+            "question": "What is 4 x 4?",
+            "answer": "16",
+            "explanation": "4 x 4 = 16."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is 8 x 6?",
+            "answer": "48",
+            "explanation": "8 x 6 = 48."
+          },
+          {
+            "question": "What is 63 / 9?",
+            "answer": "7",
+            "explanation": "63 / 9 = 7."
+          },
+          {
+            "question": "What is 7 x 8?",
+            "answer": "56",
+            "explanation": "7 x 8 = 56."
+          },
+          {
+            "question": "What is 72 / 8?",
+            "answer": "9",
+            "explanation": "72 / 8 = 9."
+          },
+          {
+            "question": "What is 9 x 6?",
+            "answer": "54",
+            "explanation": "9 x 6 = 54."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Solve quickly: 8 x 9, 7 x 7, 6 x 8, 81 / 9, 56 / 7.",
+            "answer": "72, 49, 48, 9, 8",
+            "explanation": "These are key facts to know from memory by end of Grade 3."
+          },
+          {
+            "question": "What is 12 x 5?",
+            "answer": "60",
+            "explanation": "12 x 5 = 60. Think: 10 x 5 = 50, 2 x 5 = 10, 50 + 10 = 60."
+          },
+          {
+            "question": "What is 100 / 10?",
+            "answer": "10",
+            "explanation": "100 / 10 = 10."
+          },
+          {
+            "question": "Complete the fact family: 9 x 7 = 63. Write the other three facts.",
+            "answer": "7x9=63, 63/9=7, 63/7=9",
+            "explanation": "All four facts use 7, 9, and 63."
+          },
+          {
+            "question": "What is 11 x 8?",
+            "answer": "88",
+            "explanation": "11 x 8 = 88. Think: 10 x 8 = 80, plus 1 x 8 = 8, total 88."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.8",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Solve Two-Step Word Problems Using Four Operations",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Sam has 3 bags of 5 marbles. He finds 4 more. How many marbles in all?",
+            "answer": "19",
+            "explanation": "3 x 5 = 15 marbles in bags. 15 + 4 = 19 total."
+          },
+          {
+            "question": "There are 20 apples. 8 are eaten. The rest are shared equally among 4 friends. How many each?",
+            "answer": "3",
+            "explanation": "20 - 8 = 12 left. 12 / 4 = 3 each."
+          },
+          {
+            "question": "Amy buys 4 packs of stickers with 6 each. She gives away 10. How many left?",
+            "answer": "14",
+            "explanation": "4 x 6 = 24 stickers. 24 - 10 = 14 left."
+          },
+          {
+            "question": "A farmer has 12 chickens and buys 18 more. He puts them in coops of 6. How many coops?",
+            "answer": "5",
+            "explanation": "12 + 18 = 30 chickens. 30 / 6 = 5 coops."
+          },
+          {
+            "question": "Jake has $25. He spends $7 and then earns $8. How much does he have?",
+            "answer": "$26",
+            "explanation": "$25 - $7 = $18. $18 + $8 = $26."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A toy costs $8. Maria buys 3 toys and pays with a $50 bill. How much change?",
+            "answer": "$26",
+            "explanation": "3 x $8 = $24 spent. $50 - $24 = $26 change."
+          },
+          {
+            "question": "There are 6 boxes with 9 books each. 15 books are donated. How many books now?",
+            "answer": "69",
+            "explanation": "6 x 9 = 54. 54 + 15 = 69 books."
+          },
+          {
+            "question": "A baker makes 48 cupcakes. He sells 30, then makes 24 more. How many now?",
+            "answer": "42",
+            "explanation": "48 - 30 = 18 left. 18 + 24 = 42 cupcakes."
+          },
+          {
+            "question": "Sara has 45 beads. She uses 9 beads for each bracelet and makes 3 bracelets. How many beads left?",
+            "answer": "18",
+            "explanation": "3 x 9 = 27 beads used. 45 - 27 = 18 left."
+          },
+          {
+            "question": "Round to estimate: 7 x 8 is about ? x 8. Is 52 a reasonable answer for 7 x 8?",
+            "answer": "No, 7 x 8 = 56; 52 is not reasonable",
+            "explanation": "7 x 8 = 56, not 52. Estimate: 7 x 8 is close to 7 x 10 = 70 or 8 x 8 = 64. 52 is too low."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A school orders 8 boxes of pencils with 12 each. They distribute equally to 6 classrooms. How many per classroom?",
+            "answer": "16",
+            "explanation": "8 x 12 = 96 pencils. 96 / 6 = 16 per classroom."
+          },
+          {
+            "question": "Tom earns $9 per hour. He works 5 hours and buys a book for $18. How much money does he have left?",
+            "answer": "$27",
+            "explanation": "5 x $9 = $45 earned. $45 - $18 = $27 left."
+          },
+          {
+            "question": "A parking lot has 4 rows of 8 cars and 3 rows of 6 cars. How many cars total?",
+            "answer": "50",
+            "explanation": "4 x 8 = 32. 3 x 6 = 18. 32 + 18 = 50 cars."
+          },
+          {
+            "question": "Mia has 72 stickers. She gives an equal number to 8 friends and keeps 24 for herself. How many did each friend get?",
+            "answer": "6",
+            "explanation": "72 - 24 = 48 given away. 48 / 8 = 6 per friend."
+          },
+          {
+            "question": "There are 9 packs of 7 erasers. 13 are broken. The rest are shared among 5 boxes. How many per box?",
+            "answer": "10",
+            "explanation": "9 x 7 = 63. 63 - 13 = 50 good erasers. 50 / 5 = 10 per box."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.OA.9",
+      "domain": "3.OA",
+      "domainName": "Operations and Algebraic Thinking",
+      "title": "Identify and Explain Arithmetic Patterns",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What pattern do you see: 2, 4, 6, 8, 10?",
+            "answer": "Counting by 2s (adding 2 each time)",
+            "explanation": "Each number is 2 more than the last. These are even numbers."
+          },
+          {
+            "question": "What pattern: 5, 10, 15, 20, 25?",
+            "answer": "Counting by 5s (adding 5 each time)",
+            "explanation": "Skip-counting by 5. Each number ends in 0 or 5."
+          },
+          {
+            "question": "What comes next: 3, 6, 9, 12, ___?",
+            "answer": "15",
+            "explanation": "Counting by 3s (multiples of 3). 12 + 3 = 15."
+          },
+          {
+            "question": "What comes next: 10, 20, 30, 40, ___?",
+            "answer": "50",
+            "explanation": "Counting by 10s. 40 + 10 = 50."
+          },
+          {
+            "question": "What pattern: 4, 8, 12, 16, 20?",
+            "answer": "Multiples of 4 (adding 4 each time)",
+            "explanation": "These are multiples of 4: 4x1, 4x2, 4x3, 4x4, 4x5."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Look at the multiplication table: 4x1=4, 4x2=8, 4x3=12. Are the products always even?",
+            "answer": "Yes",
+            "explanation": "4 times any number is always even. 4 = 2 x 2, so the product always has 2 as a factor."
+          },
+          {
+            "question": "What pattern do you see in multiples of 9: 9, 18, 27, 36, 45?",
+            "answer": "The digits add up to 9",
+            "explanation": "9: 9, 18: 1+8=9, 27: 2+7=9, 36: 3+6=9, 45: 4+5=9."
+          },
+          {
+            "question": "In the addition table, what happens when you add 0 to any number?",
+            "answer": "You get the same number",
+            "explanation": "Adding 0 doesn't change the number. This is the identity property of addition."
+          },
+          {
+            "question": "Odd + odd = ? (Try 3+5, 7+9, 1+3)",
+            "answer": "Always even",
+            "explanation": "3+5=8, 7+9=16, 1+3=4. Odd + odd always equals an even number."
+          },
+          {
+            "question": "What pattern: 0x5=0, 1x5=5, 2x5=10, 3x5=15? What comes next?",
+            "answer": "4 x 5 = 20",
+            "explanation": "Multiples of 5 go up by 5 each time. They always end in 0 or 5."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Why is 4 times any number always even? Explain.",
+            "answer": "Because 4 = 2 x 2, so the product always contains 2 as a factor, making it even",
+            "explanation": "4 x n = 2 x 2 x n. Since there's a factor of 2, the result is always even."
+          },
+          {
+            "question": "In the multiplication table, is the product of two odd numbers odd or even? Test with examples.",
+            "answer": "Always odd",
+            "explanation": "3x5=15 (odd), 7x3=21 (odd), 9x7=63 (odd). Odd x odd = odd."
+          },
+          {
+            "question": "What pattern do you notice about squares: 1x1=1, 2x2=4, 3x3=9, 4x4=16, 5x5=25?",
+            "answer": "The differences increase by 2: 3, 5, 7, 9",
+            "explanation": "4-1=3, 9-4=5, 16-9=7, 25-16=9. Consecutive odd numbers!"
+          },
+          {
+            "question": "Even x even = ? Even x odd = ? Test and explain.",
+            "answer": "Even x even = even; even x odd = even",
+            "explanation": "4x6=24 (even), 6x3=18 (even). Any product with an even factor is even."
+          },
+          {
+            "question": "Look at multiples of 3: 3,6,9,12,15,18. Which are also multiples of 6?",
+            "answer": "6, 12, 18",
+            "explanation": "Every other multiple of 3 is a multiple of 6, because 6 = 2 x 3."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.NBT.1",
+      "domain": "3.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Round Whole Numbers to the Nearest 10 or 100",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Round 23 to the nearest 10.",
+            "answer": "20",
+            "explanation": "23 is between 20 and 30. Since 3 < 5, round down to 20."
+          },
+          {
+            "question": "Round 67 to the nearest 10.",
+            "answer": "70",
+            "explanation": "67 is between 60 and 70. Since 7 >= 5, round up to 70."
+          },
+          {
+            "question": "Round 45 to the nearest 10.",
+            "answer": "50",
+            "explanation": "45 is exactly halfway. The rule is to round up: 50."
+          },
+          {
+            "question": "Round 150 to the nearest 100.",
+            "answer": "200",
+            "explanation": "150 is halfway between 100 and 200. Round up to 200."
+          },
+          {
+            "question": "Round 82 to the nearest 10.",
+            "answer": "80",
+            "explanation": "82 is between 80 and 90. Since 2 < 5, round down to 80."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Round 345 to the nearest 10.",
+            "answer": "350",
+            "explanation": "345: look at ones digit (5). 5 = 5, round up to 350."
+          },
+          {
+            "question": "Round 345 to the nearest 100.",
+            "answer": "300",
+            "explanation": "345: look at tens digit (4). 4 < 5, round down to 300."
+          },
+          {
+            "question": "Round 678 to the nearest 100.",
+            "answer": "700",
+            "explanation": "678: tens digit is 7. 7 >= 5, round up to 700."
+          },
+          {
+            "question": "Round 251 to the nearest 10 and the nearest 100.",
+            "answer": "250 (nearest 10); 300 (nearest 100)",
+            "explanation": "Nearest 10: ones digit 1 < 5, round to 250. Nearest 100: tens digit 5, round up to 300."
+          },
+          {
+            "question": "Round 495 to the nearest 10.",
+            "answer": "500",
+            "explanation": "495: ones digit 5, round up from 490 to 500."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A school has 467 students. About how many is that, rounded to the nearest hundred?",
+            "answer": "500",
+            "explanation": "467: tens digit is 6. 6 >= 5, round up to 500."
+          },
+          {
+            "question": "Round 555 to the nearest 10 and to the nearest 100.",
+            "answer": "560 (nearest 10); 600 (nearest 100)",
+            "explanation": "Nearest 10: 5 rounds up to 560. Nearest 100: tens digit 5 rounds up to 600."
+          },
+          {
+            "question": "Which numbers round to 400 when rounded to the nearest hundred?",
+            "answer": "350 to 449",
+            "explanation": "Numbers from 350 to 449 round to 400. Below 350 rounds to 300; 450+ rounds to 500."
+          },
+          {
+            "question": "Sara says 348 rounds to 400. Jake says it rounds to 350. Who is correct and why?",
+            "answer": "Both could be correct depending on whether rounding to nearest 100 or 10",
+            "explanation": "To nearest 100: 300 (Jake is wrong). To nearest 10: 350 (Jake is right). Sara is wrong for both."
+          },
+          {
+            "question": "Use rounding to estimate 489 + 312.",
+            "answer": "About 800",
+            "explanation": "489 rounds to 500. 312 rounds to 300. 500 + 300 = 800."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.NBT.2",
+      "domain": "3.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Fluently Add and Subtract Within 1000",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is 342 + 215?",
+            "answer": "557",
+            "explanation": "Ones: 2+5=7. Tens: 4+1=5. Hundreds: 3+2=5. Total: 557."
+          },
+          {
+            "question": "What is 689 - 234?",
+            "answer": "455",
+            "explanation": "Ones: 9-4=5. Tens: 8-3=5. Hundreds: 6-2=4. Total: 455."
+          },
+          {
+            "question": "What is 500 + 300?",
+            "answer": "800",
+            "explanation": "5 hundreds + 3 hundreds = 8 hundreds."
+          },
+          {
+            "question": "What is 746 - 200?",
+            "answer": "546",
+            "explanation": "746 - 200: subtract 2 from hundreds. 546."
+          },
+          {
+            "question": "What is 123 + 456?",
+            "answer": "579",
+            "explanation": "Ones: 3+6=9. Tens: 2+5=7. Hundreds: 1+4=5. Total: 579."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is 475 + 368?",
+            "answer": "843",
+            "explanation": "Ones: 5+8=13, write 3 carry 1. Tens: 7+6+1=14, write 4 carry 1. Hundreds: 4+3+1=8. Total: 843."
+          },
+          {
+            "question": "What is 800 - 347?",
+            "answer": "453",
+            "explanation": "Decompose: 800 = 799 + 1. Or use standard algorithm with regrouping."
+          },
+          {
+            "question": "What is 562 + 279?",
+            "answer": "841",
+            "explanation": "Ones: 2+9=11. Tens: 6+7+1=14. Hundreds: 5+2+1=8. Total: 841."
+          },
+          {
+            "question": "What is 604 - 258?",
+            "answer": "346",
+            "explanation": "Need to regroup from hundreds. 604 = 5 hundreds + 10 tens + 4 ones, etc."
+          },
+          {
+            "question": "What is 999 - 456?",
+            "answer": "543",
+            "explanation": "Ones: 9-6=3. Tens: 9-5=4. Hundreds: 9-4=5. Total: 543."
+          }
+        ],
+        "hard": [
+          {
+            "question": "What is 783 + 217?",
+            "answer": "1000",
+            "explanation": "Ones: 3+7=10. Tens: 8+1+1=10. Hundreds: 7+2+1=10. Total: 1000."
+          },
+          {
+            "question": "What is 1000 - 463?",
+            "answer": "537",
+            "explanation": "1000 - 463: regroup from thousands. 999 - 463 = 536, plus 1 = 537."
+          },
+          {
+            "question": "A store had 856 items. It sold 478 and received 235 new ones. How many now?",
+            "answer": "613",
+            "explanation": "856 - 478 = 378. 378 + 235 = 613."
+          },
+          {
+            "question": "What is 567 + 433 - 291?",
+            "answer": "709",
+            "explanation": "567 + 433 = 1000. 1000 - 291 = 709."
+          },
+          {
+            "question": "Estimate 687 + 295 by rounding, then find the exact answer.",
+            "answer": "Estimate: 700+300=1000; Exact: 982",
+            "explanation": "Estimate: 700 + 300 = 1000. Exact: 687 + 295 = 982."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.NBT.3",
+      "domain": "3.NBT",
+      "domainName": "Number and Operations in Base Ten",
+      "title": "Multiply One-Digit Numbers by Multiples of 10",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is 2 x 10?",
+            "answer": "20",
+            "explanation": "2 groups of 10 = 20."
+          },
+          {
+            "question": "What is 5 x 10?",
+            "answer": "50",
+            "explanation": "5 groups of 10 = 50."
+          },
+          {
+            "question": "What is 3 x 20?",
+            "answer": "60",
+            "explanation": "3 x 20 = 3 x 2 tens = 6 tens = 60."
+          },
+          {
+            "question": "What is 4 x 10?",
+            "answer": "40",
+            "explanation": "4 x 10 = 40."
+          },
+          {
+            "question": "What is 2 x 30?",
+            "answer": "60",
+            "explanation": "2 x 30 = 2 x 3 tens = 6 tens = 60."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is 5 x 60?",
+            "answer": "300",
+            "explanation": "5 x 6 = 30, then 30 x 10 = 300. Or: 5 x 6 tens = 30 tens = 300."
+          },
+          {
+            "question": "What is 7 x 40?",
+            "answer": "280",
+            "explanation": "7 x 4 = 28, then 28 x 10 = 280."
+          },
+          {
+            "question": "What is 8 x 30?",
+            "answer": "240",
+            "explanation": "8 x 3 = 24, then times 10 = 240."
+          },
+          {
+            "question": "What is 6 x 50?",
+            "answer": "300",
+            "explanation": "6 x 5 = 30, times 10 = 300."
+          },
+          {
+            "question": "What is 9 x 20?",
+            "answer": "180",
+            "explanation": "9 x 2 = 18, times 10 = 180."
+          }
+        ],
+        "hard": [
+          {
+            "question": "What is 9 x 80?",
+            "answer": "720",
+            "explanation": "9 x 8 = 72, times 10 = 720."
+          },
+          {
+            "question": "What is 7 x 90?",
+            "answer": "630",
+            "explanation": "7 x 9 = 63, times 10 = 630."
+          },
+          {
+            "question": "What is 8 x 70?",
+            "answer": "560",
+            "explanation": "8 x 7 = 56, times 10 = 560."
+          },
+          {
+            "question": "Each classroom has 30 desks. There are 8 classrooms. How many desks total?",
+            "answer": "240",
+            "explanation": "8 x 30 = 240 desks."
+          },
+          {
+            "question": "Explain why 6 x 70 = 420 using place value.",
+            "answer": "420",
+            "explanation": "6 x 70 = 6 x 7 tens = 42 tens = 420. Multiply the non-zero digits (6 x 7 = 42), then append the zero."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.NF.1",
+      "domain": "3.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Understand Unit Fractions and Fractions a/b",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A pizza is cut into 4 equal slices. What fraction is one slice?",
+            "answer": "1/4",
+            "explanation": "1 part out of 4 equal parts = 1/4 (one fourth)."
+          },
+          {
+            "question": "A pie is cut into 2 equal pieces. What fraction is one piece?",
+            "answer": "1/2",
+            "explanation": "1 out of 2 equal parts = 1/2 (one half)."
+          },
+          {
+            "question": "A chocolate bar has 3 equal parts. You eat 1 part. What fraction did you eat?",
+            "answer": "1/3",
+            "explanation": "1 out of 3 equal parts = 1/3 (one third)."
+          },
+          {
+            "question": "A rectangle is divided into 8 equal parts. What fraction is one part?",
+            "answer": "1/8",
+            "explanation": "1 out of 8 equal parts = 1/8 (one eighth)."
+          },
+          {
+            "question": "What does the 4 in 3/4 tell you?",
+            "answer": "The whole is divided into 4 equal parts",
+            "explanation": "The denominator (bottom number) tells how many equal parts the whole is divided into."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A pie is cut into 6 equal pieces. You eat 2 pieces. What fraction did you eat?",
+            "answer": "2/6",
+            "explanation": "2 out of 6 equal parts = 2/6. Each piece is 1/6, and you ate 2 of them."
+          },
+          {
+            "question": "A strip of paper is divided into 4 equal parts. You color 3 parts. What fraction is colored?",
+            "answer": "3/4",
+            "explanation": "3 out of 4 equal parts = 3/4."
+          },
+          {
+            "question": "What does 5/8 mean?",
+            "answer": "5 parts out of 8 equal parts",
+            "explanation": "The whole is divided into 8 equal parts, and we have 5 of them."
+          },
+          {
+            "question": "A cake is divided into 3 equal parts. All 3 parts are eaten. What fraction was eaten?",
+            "answer": "3/3 = 1 whole",
+            "explanation": "3/3 = 1. All parts of the whole were eaten."
+          },
+          {
+            "question": "Write the fraction: two sixths.",
+            "answer": "2/6",
+            "explanation": "Two sixths: numerator 2, denominator 6 = 2/6."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A ribbon is divided into 8 equal parts. You use 5 parts. What fraction is used? What fraction is left?",
+            "answer": "5/8 used; 3/8 left",
+            "explanation": "Used: 5/8. Left: 8/8 - 5/8 = 3/8."
+          },
+          {
+            "question": "What fraction is greater: 3/4 or 3/8? Explain.",
+            "answer": "3/4 is greater",
+            "explanation": "Same numerator (3), but fourths are larger than eighths. So 3/4 > 3/8."
+          },
+          {
+            "question": "A shape is divided into 6 equal parts. 6 parts are shaded. What fraction? What does this equal?",
+            "answer": "6/6 = 1 whole",
+            "explanation": "6/6 means all parts are shaded = 1 whole."
+          },
+          {
+            "question": "If 1/4 of a rope is 3 feet long, how long is the whole rope?",
+            "answer": "12 feet",
+            "explanation": "If 1/4 = 3 feet, then the whole = 4 x 3 = 12 feet."
+          },
+          {
+            "question": "Write a fraction with denominator 8 that is more than 1/2 of the whole.",
+            "answer": "5/8, 6/8, 7/8 (any works)",
+            "explanation": "1/2 of 8 parts = 4 parts. More than 4/8 means 5/8 or greater."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.NF.2",
+      "domain": "3.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Represent Fractions on a Number Line",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "On a number line from 0 to 1, where is 1/2?",
+            "answer": "Halfway between 0 and 1",
+            "explanation": "Divide the segment into 2 equal parts. The first mark is 1/2."
+          },
+          {
+            "question": "On a number line from 0 to 1 divided into 4 equal parts, where is 1/4?",
+            "answer": "At the first mark (one quarter of the way)",
+            "explanation": "4 equal parts: the first mark from 0 is 1/4."
+          },
+          {
+            "question": "On a number line from 0 to 1 divided into 3 parts, where is 1/3?",
+            "answer": "At the first mark",
+            "explanation": "3 equal parts: the first mark is at 1/3."
+          },
+          {
+            "question": "On a number line, where is 0/4?",
+            "answer": "At 0",
+            "explanation": "0/4 = 0. Zero parts out of 4 means you're at the start."
+          },
+          {
+            "question": "On a number line, where is 4/4?",
+            "answer": "At 1",
+            "explanation": "4/4 = 1 whole. All 4 parts = the whole."
+          }
+        ],
+        "medium": [
+          {
+            "question": "On a number line from 0 to 1 with 4 equal parts, where is 3/4?",
+            "answer": "At the third mark from 0",
+            "explanation": "Count 3 parts of size 1/4 from 0. That's 3/4."
+          },
+          {
+            "question": "Place 2/3 on a number line from 0 to 1.",
+            "answer": "At the second mark when divided into 3 equal parts",
+            "explanation": "Divide into 3 parts. The second mark = 2/3."
+          },
+          {
+            "question": "What fraction is at the point halfway between 0 and 1/2 on the number line?",
+            "answer": "1/4",
+            "explanation": "Half of 1/2 is 1/4. It's at the 1/4 mark."
+          },
+          {
+            "question": "On a number line with eighths marked, what fraction is at the 5th mark?",
+            "answer": "5/8",
+            "explanation": "Count 5 parts of size 1/8 from 0 = 5/8."
+          },
+          {
+            "question": "On a number line, is 2/6 to the left or right of 1/2?",
+            "answer": "To the left (2/6 < 1/2)",
+            "explanation": "2/6 = 1/3, and 1/3 < 1/2. So it's to the left of 1/2."
+          }
+        ],
+        "hard": [
+          {
+            "question": "On a number line from 0 to 2, where is 5/4?",
+            "answer": "Between 1 and 2, at 1 and 1/4",
+            "explanation": "5/4 = 1 whole + 1/4. One and one quarter, between 1 and 2."
+          },
+          {
+            "question": "Place both 1/3 and 2/3 on a number line. Which is closer to 1?",
+            "answer": "2/3 is closer to 1",
+            "explanation": "1/3 is 1 part from 0. 2/3 is 2 parts from 0 (only 1/3 from 1)."
+          },
+          {
+            "question": "On a number line with sixths, what fraction is at the same point as 1/2?",
+            "answer": "3/6",
+            "explanation": "1/2 = 3/6. They occupy the same point on the number line."
+          },
+          {
+            "question": "On a number line from 0 to 1, is 3/8 closer to 0 or to 1/2?",
+            "answer": "Closer to 1/2",
+            "explanation": "1/2 = 4/8. 3/8 is 1/8 from 4/8 but 3/8 from 0. Closer to 1/2."
+          },
+          {
+            "question": "Place 6/4 on a number line. Is it greater or less than 1?",
+            "answer": "Greater than 1 (6/4 = 1 and 2/4 = 1 1/2)",
+            "explanation": "6/4 = 1 2/4 = 1 1/2, which is past 1 on the number line."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.NF.3",
+      "domain": "3.NF",
+      "domainName": "Number and Operations-Fractions",
+      "title": "Equivalent Fractions and Comparing Fractions",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Are 1/2 and 2/4 the same amount?",
+            "answer": "Yes, they are equivalent",
+            "explanation": "1/2 = 2/4. If you cut a half in half, you get two fourths."
+          },
+          {
+            "question": "Compare 1/3 and 1/6. Which is larger?",
+            "answer": "1/3",
+            "explanation": "Same numerator: thirds are bigger pieces than sixths. 1/3 > 1/6."
+          },
+          {
+            "question": "Compare 2/4 and 3/4. Which is larger?",
+            "answer": "3/4",
+            "explanation": "Same denominator: more parts = larger fraction. 3/4 > 2/4."
+          },
+          {
+            "question": "What is 3/3 equal to?",
+            "answer": "1 (one whole)",
+            "explanation": "3/3 means all 3 parts of 3 = 1 whole."
+          },
+          {
+            "question": "What whole number equals 6/6?",
+            "answer": "1",
+            "explanation": "6/6 = 1 whole."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Write a fraction equivalent to 1/2 with denominator 6.",
+            "answer": "3/6",
+            "explanation": "1/2 = 3/6. Multiply top and bottom by 3."
+          },
+          {
+            "question": "Compare 3/8 and 3/4. Which is greater?",
+            "answer": "3/4",
+            "explanation": "Same numerator (3). Fourths > eighths in size. 3/4 > 3/8."
+          },
+          {
+            "question": "Express the number 3 as a fraction with denominator 1.",
+            "answer": "3/1",
+            "explanation": "3 = 3/1. Any whole number n = n/1."
+          },
+          {
+            "question": "Is 2/3 greater than, less than, or equal to 4/6?",
+            "answer": "Equal (2/3 = 4/6)",
+            "explanation": "2/3 = 4/6. Multiply 2/3 by 2/2 = 4/6."
+          },
+          {
+            "question": "Compare 1/4 and 1/3. Which is greater?",
+            "answer": "1/3",
+            "explanation": "Same numerator. Fewer parts means bigger pieces: 1/3 > 1/4."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Compare 5/6 and 7/8. Which is closer to 1?",
+            "answer": "7/8 is closer to 1",
+            "explanation": "5/6 is 1/6 away from 1. 7/8 is 1/8 away from 1. 1/8 < 1/6, so 7/8 is closer."
+          },
+          {
+            "question": "Write two fractions equivalent to 2/4.",
+            "answer": "1/2 and 4/8",
+            "explanation": "2/4 = 1/2 (simplify). 2/4 = 4/8 (multiply by 2/2)."
+          },
+          {
+            "question": "Express 4 as a fraction with denominator 4.",
+            "answer": "16/4",
+            "explanation": "4 = 16/4, because 16 / 4 = 4."
+          },
+          {
+            "question": "Where does 8/8 sit on the number line? What about 8/4?",
+            "answer": "8/8 = 1; 8/4 = 2",
+            "explanation": "8/8 = 1 (one whole). 8/4 = 2 (two wholes)."
+          },
+          {
+            "question": "Compare 2/3 and 3/4. Which is greater? (Hint: find common denominators or use benchmarks.)",
+            "answer": "3/4 > 2/3",
+            "explanation": "2/3 = 8/12. 3/4 = 9/12. Since 9/12 > 8/12, 3/4 > 2/3."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.1",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Tell Time to the Nearest Minute; Solve Time Interval Problems",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What time does a clock show when the hour hand is on 3 and the minute hand is on 4?",
+            "answer": "3:20",
+            "explanation": "Minute hand on 4 = 4 x 5 = 20 minutes. Time is 3:20."
+          },
+          {
+            "question": "It is 2:00. What time will it be in 30 minutes?",
+            "answer": "2:30",
+            "explanation": "2:00 + 30 minutes = 2:30."
+          },
+          {
+            "question": "A class starts at 9:00 and ends at 10:00. How long is the class?",
+            "answer": "60 minutes (1 hour)",
+            "explanation": "From 9:00 to 10:00 = 1 hour = 60 minutes."
+          },
+          {
+            "question": "The minute hand is on the 6. How many minutes past the hour?",
+            "answer": "30 minutes",
+            "explanation": "6 x 5 = 30 minutes."
+          },
+          {
+            "question": "The minute hand is on the 12. The hour hand is between 7 and 8. What time is it?",
+            "answer": "7:00",
+            "explanation": "When the minute hand is exactly on 12, it's the start of the hour."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A movie starts at 4:15 and is 90 minutes long. What time does it end?",
+            "answer": "5:45",
+            "explanation": "4:15 + 60 min = 5:15. 5:15 + 30 min = 5:45."
+          },
+          {
+            "question": "School starts at 8:05 and lunch is at 11:35. How many minutes between?",
+            "answer": "210 minutes (3 hours 30 minutes)",
+            "explanation": "8:05 to 11:05 = 3 hours = 180 min. 11:05 to 11:35 = 30 min. Total: 210 min."
+          },
+          {
+            "question": "A train leaves at 6:47 a.m. It arrives at 7:23 a.m. How long was the trip?",
+            "answer": "36 minutes",
+            "explanation": "6:47 to 7:00 = 13 min. 7:00 to 7:23 = 23 min. Total: 36 min."
+          },
+          {
+            "question": "It is 3:42. What time was it 25 minutes ago?",
+            "answer": "3:17",
+            "explanation": "3:42 - 25 = 3:17."
+          },
+          {
+            "question": "If the minute hand points at the 7, what is the exact minute?",
+            "answer": "35 minutes past the hour",
+            "explanation": "7 x 5 = 35 minutes."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A show starts at 7:48 p.m. and lasts 1 hour 25 minutes. What time does it end?",
+            "answer": "9:13 p.m.",
+            "explanation": "7:48 + 1 hour = 8:48. 8:48 + 25 min = 9:13 p.m."
+          },
+          {
+            "question": "Recess starts at 10:15 and lasts 20 minutes. Math class is 45 minutes after recess. When does math start?",
+            "answer": "10:35 + 0 = 10:35 is when recess ends; but 45 min after = trick",
+            "explanation": "Recess ends at 10:35. Math starts 45 min later: 10:35 + 45 = 11:20."
+          },
+          {
+            "question": "A bus ride takes 1 hour 15 minutes. If you need to arrive by 9:00, what is the latest you can leave?",
+            "answer": "7:45",
+            "explanation": "9:00 - 1 hour = 8:00. 8:00 - 15 min = 7:45."
+          },
+          {
+            "question": "Sam starts homework at 4:23 and finishes at 5:08. How long did it take?",
+            "answer": "45 minutes",
+            "explanation": "4:23 to 5:00 = 37 min. 5:00 to 5:08 = 8 min. Total: 45 min."
+          },
+          {
+            "question": "Two events: Event A from 1:30 to 2:15, Event B from 3:00 to 4:10. Which lasts longer and by how much?",
+            "answer": "Event B (70 min vs 45 min); 25 min longer",
+            "explanation": "A: 45 min. B: 70 min. Difference: 70 - 45 = 25 min."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.2",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure and Estimate Liquid Volumes and Masses (g, kg, L)",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Would you measure a paperclip in grams or kilograms?",
+            "answer": "Grams",
+            "explanation": "A paperclip is very light. Grams are used for small masses."
+          },
+          {
+            "question": "Would you measure a watermelon in grams or kilograms?",
+            "answer": "Kilograms",
+            "explanation": "A watermelon is heavy. Kilograms are used for heavier objects."
+          },
+          {
+            "question": "A bottle holds 1 liter of water. If you pour out half, how much is left?",
+            "answer": "About half a liter",
+            "explanation": "1 liter - half a liter = half a liter remaining."
+          },
+          {
+            "question": "A bag of flour weighs 2 kilograms. What is its mass?",
+            "answer": "2 kg",
+            "explanation": "The mass is 2 kilograms."
+          },
+          {
+            "question": "Would you measure a bathtub of water in liters or grams?",
+            "answer": "Liters",
+            "explanation": "Liters measure liquid volume. A bathtub holds many liters."
+          }
+        ],
+        "medium": [
+          {
+            "question": "An apple has a mass of 150 grams. 4 apples weigh how many grams?",
+            "answer": "600 grams",
+            "explanation": "4 x 150 = 600 grams."
+          },
+          {
+            "question": "A bucket holds 8 liters. You fill 3 buckets. How many liters total?",
+            "answer": "24 liters",
+            "explanation": "3 x 8 = 24 liters."
+          },
+          {
+            "question": "A book has a mass of 300 g. You have 3 books. What is the total mass?",
+            "answer": "900 g",
+            "explanation": "3 x 300 = 900 grams."
+          },
+          {
+            "question": "A jug has 5 liters of juice. You pour out 2 liters. How much is left?",
+            "answer": "3 liters",
+            "explanation": "5 - 2 = 3 liters."
+          },
+          {
+            "question": "A cat weighs 4 kg. A dog weighs 9 kg. How much more does the dog weigh?",
+            "answer": "5 kg",
+            "explanation": "9 - 4 = 5 kg."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A recipe needs 250 mL of milk. You have 1 liter. How much is left after the recipe?",
+            "answer": "750 mL",
+            "explanation": "1 liter = 1000 mL. 1000 - 250 = 750 mL."
+          },
+          {
+            "question": "A bag of rice is 2 kg. How many grams is that?",
+            "answer": "2000 grams",
+            "explanation": "1 kg = 1000 g. 2 kg = 2000 g."
+          },
+          {
+            "question": "Three boxes weigh 350 g, 425 g, and 225 g. What is the total mass?",
+            "answer": "1000 g (or 1 kg)",
+            "explanation": "350 + 425 + 225 = 1000 g = 1 kg."
+          },
+          {
+            "question": "A fish tank holds 20 liters. It has 12 liters. How much more water is needed to fill it?",
+            "answer": "8 liters",
+            "explanation": "20 - 12 = 8 liters needed."
+          },
+          {
+            "question": "5 oranges each weigh 200 g. A basket weighs 300 g. What is the total mass?",
+            "answer": "1300 g",
+            "explanation": "5 x 200 = 1000 g oranges. 1000 + 300 = 1300 g."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.3",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Scaled Picture Graphs and Bar Graphs",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A bar graph shows: Red=6, Blue=10, Green=4. Which color has the most votes?",
+            "answer": "Blue (10)",
+            "explanation": "10 is the highest value."
+          },
+          {
+            "question": "In a picture graph, each picture = 2 votes. A category has 5 pictures. How many votes?",
+            "answer": "10",
+            "explanation": "5 x 2 = 10 votes."
+          },
+          {
+            "question": "A bar graph shows: Dogs=8, Cats=5. How many more votes for dogs?",
+            "answer": "3 more",
+            "explanation": "8 - 5 = 3 more for dogs."
+          },
+          {
+            "question": "In a picture graph, each picture = 5. There are 3 pictures for apples. How many for apples?",
+            "answer": "15",
+            "explanation": "3 x 5 = 15."
+          },
+          {
+            "question": "A bar graph shows: Spring=12, Summer=18, Fall=9, Winter=6. Which season is least popular?",
+            "answer": "Winter (6)",
+            "explanation": "6 is the lowest value."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A picture graph uses a scale of 2. Pizza has 7 pictures. Tacos have 5 pictures. How many total votes?",
+            "answer": "24",
+            "explanation": "Pizza: 7 x 2 = 14. Tacos: 5 x 2 = 10. Total: 24."
+          },
+          {
+            "question": "A bar graph: Soccer=20, Basketball=15, Baseball=25, Tennis=10. How many more for baseball than tennis?",
+            "answer": "15 more",
+            "explanation": "25 - 10 = 15 more."
+          },
+          {
+            "question": "In a picture graph (scale=5): Cats have 4 pictures, Dogs have 6. How many more dog votes?",
+            "answer": "10 more",
+            "explanation": "Dogs: 6 x 5 = 30. Cats: 4 x 5 = 20. 30 - 20 = 10 more."
+          },
+          {
+            "question": "A bar graph shows scores: Team A=45, Team B=38. How many total points were scored?",
+            "answer": "83",
+            "explanation": "45 + 38 = 83."
+          },
+          {
+            "question": "In a scaled graph (scale=10), how many pictures show 60?",
+            "answer": "6 pictures",
+            "explanation": "60 / 10 = 6 pictures."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A picture graph (scale=5) shows: Mon=3, Tue=5, Wed=4, Thu=6, Fri=2. Total for the week?",
+            "answer": "100",
+            "explanation": "(3+5+4+6+2) x 5 = 20 x 5 = 100."
+          },
+          {
+            "question": "A bar graph: Grade 3=45, Grade 4=60, Grade 5=55. How many fewer in Grade 3 than Grades 4 and 5 combined?",
+            "answer": "70 fewer",
+            "explanation": "Grade 4+5 = 60+55 = 115. 115 - 45 = 70 fewer."
+          },
+          {
+            "question": "In a picture graph with scale=2, if you need to show 15, how many full pictures and half pictures?",
+            "answer": "7 full pictures and 1 half picture",
+            "explanation": "7 x 2 = 14. 15 - 14 = 1, which is half of 2. So 7.5 pictures."
+          },
+          {
+            "question": "A bar graph: Red=24, Blue=18, Green=30, Yellow=12. Which two colors total closest to 50?",
+            "answer": "Red + Blue = 42 or Blue + Green = 48 (Blue+Green is closest)",
+            "explanation": "24+18=42, 18+30=48, 24+12=36, 30+12=42. 48 is closest to 50."
+          },
+          {
+            "question": "Design a scale for a picture graph showing: Apples=35, Bananas=20, Oranges=15. What scale works well?",
+            "answer": "Scale of 5",
+            "explanation": "All values are multiples of 5. Scale=5: Apples=7 pictures, Bananas=4, Oranges=3."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.4",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure Lengths to Halves/Fourths of an Inch; Line Plots",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A pencil is 5 and 1/2 inches long. Write this as a number.",
+            "answer": "5 1/2 inches",
+            "explanation": "Five and one half inches, or 5.5 inches."
+          },
+          {
+            "question": "How many quarter inches are in 1 inch?",
+            "answer": "4",
+            "explanation": "1 inch = 4 quarter inches (4 x 1/4 = 1)."
+          },
+          {
+            "question": "A crayon measures between 3 inches and 4 inches, right at the halfway mark. How long?",
+            "answer": "3 1/2 inches",
+            "explanation": "Halfway between 3 and 4 = 3 1/2 inches."
+          },
+          {
+            "question": "On a line plot, 3 X's are above 4 inches. What does that mean?",
+            "answer": "3 objects measured 4 inches",
+            "explanation": "Each X represents one measurement of that length."
+          },
+          {
+            "question": "How many half inches are in 1 inch?",
+            "answer": "2",
+            "explanation": "1 inch = 2 half inches."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Lengths: 3, 3 1/2, 4, 3 1/2, 4, 4 1/2, 3 (inches). How many are 3 1/2 inches?",
+            "answer": "2",
+            "explanation": "Count the 3 1/2 values: there are 2."
+          },
+          {
+            "question": "A ribbon is 6 3/4 inches long. Is it closer to 6 or 7 inches?",
+            "answer": "Closer to 7",
+            "explanation": "6 3/4 is 3/4 past 6, which is more than halfway to 7."
+          },
+          {
+            "question": "On a line plot: 2 in.(1), 2 1/4(3), 2 1/2(2), 2 3/4(1), 3 in.(1). How many objects were measured?",
+            "answer": "8",
+            "explanation": "1 + 3 + 2 + 1 + 1 = 8 objects."
+          },
+          {
+            "question": "A stick is 4 1/4 inches. Another is 4 3/4 inches. What is the difference?",
+            "answer": "1/2 inch",
+            "explanation": "4 3/4 - 4 1/4 = 2/4 = 1/2 inch."
+          },
+          {
+            "question": "What is the length if the ruler shows 3 marks past the 5 inch line (marked in quarters)?",
+            "answer": "5 3/4 inches",
+            "explanation": "3 quarter-inch marks past 5 = 5 + 3/4 = 5 3/4 inches."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Lengths measured: 2 1/4, 2 3/4, 2 1/2, 2 1/4, 3, 2 1/2, 2 3/4, 2 1/4 inches. What length is most common?",
+            "answer": "2 1/4 inches (3 times)",
+            "explanation": "2 1/4: 3 times, 2 1/2: 2 times, 2 3/4: 2 times, 3: 1 time."
+          },
+          {
+            "question": "On a line plot, the shortest measurement is 4 1/4 inches and the longest is 6 inches. What is the range?",
+            "answer": "1 3/4 inches",
+            "explanation": "6 - 4 1/4 = 1 3/4 inches."
+          },
+          {
+            "question": "A caterpillar is 1 3/4 inches. A beetle is 1 1/4 inches. How much longer is the caterpillar?",
+            "answer": "1/2 inch (2/4 inch)",
+            "explanation": "1 3/4 - 1 1/4 = 2/4 = 1/2 inch."
+          },
+          {
+            "question": "Five worms measured: 3 1/2, 4, 3 3/4, 4 1/4, 3 1/2 inches. If you add another worm at 3 3/4, which lengths now tie?",
+            "answer": "3 1/2 and 3 3/4 (both appear twice)",
+            "explanation": "3 1/2: 2, 3 3/4: 2, 4: 1, 4 1/4: 1."
+          },
+          {
+            "question": "A line plot shows measurements from 5 to 7 inches in half-inch intervals. Most X's (4) are at 6 inches. What can you conclude?",
+            "answer": "6 inches was the most frequent measurement",
+            "explanation": "The mode is 6 inches with 4 occurrences, more than any other length."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.5",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Recognize Area as an Attribute; Understand Area Measurement",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is area?",
+            "answer": "The amount of space inside a flat shape",
+            "explanation": "Area measures how much surface a 2D shape covers."
+          },
+          {
+            "question": "A square has side length 1 unit. What is its area?",
+            "answer": "1 square unit",
+            "explanation": "A unit square (1 x 1) has an area of 1 square unit."
+          },
+          {
+            "question": "If a shape is covered by 6 unit squares with no gaps, what is its area?",
+            "answer": "6 square units",
+            "explanation": "Count the unit squares: 6 squares = 6 square units."
+          },
+          {
+            "question": "Which has more area: a shape covered by 4 squares or one covered by 7 squares?",
+            "answer": "The shape covered by 7 squares",
+            "explanation": "7 square units > 4 square units."
+          },
+          {
+            "question": "Can you measure area with circles? Why or why not?",
+            "answer": "No, circles leave gaps",
+            "explanation": "Circles can't cover a surface without gaps or overlaps. We use squares."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A shape is covered by 12 unit squares. What is the area?",
+            "answer": "12 square units",
+            "explanation": "Count all squares with no gaps or overlaps = 12 sq units."
+          },
+          {
+            "question": "Two shapes: Shape A = 15 square cm, Shape B = 11 square cm. Which is larger?",
+            "answer": "Shape A",
+            "explanation": "15 > 11. Shape A has more area."
+          },
+          {
+            "question": "Why must unit squares have no gaps or overlaps when measuring area?",
+            "answer": "Gaps would undercount and overlaps would overcount the area",
+            "explanation": "No gaps/overlaps ensures an accurate measurement of the space inside."
+          },
+          {
+            "question": "A rectangle is filled with square-inch tiles: 3 rows of 5. What is the area?",
+            "answer": "15 square inches",
+            "explanation": "3 x 5 = 15 square inches."
+          },
+          {
+            "question": "If you use larger unit squares, do you need more or fewer to cover the same shape?",
+            "answer": "Fewer",
+            "explanation": "Larger units cover more space each, so you need fewer of them."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A floor is covered by square-foot tiles. It takes 24 tiles. What is the floor area?",
+            "answer": "24 square feet",
+            "explanation": "24 tiles of 1 sq ft each = 24 square feet."
+          },
+          {
+            "question": "Shape A is 20 square cm. Shape B is 20 square inches. Are their areas the same?",
+            "answer": "No, because the units are different",
+            "explanation": "Square cm and square inches are different sizes. You can only compare when units match."
+          },
+          {
+            "question": "A shape is covered by 8 large squares or 32 small squares. If each large square = 4 small squares, does this make sense?",
+            "answer": "Yes, 8 x 4 = 32",
+            "explanation": "Each large square = 4 small squares. 8 x 4 = 32 small squares."
+          },
+          {
+            "question": "Can two different shapes have the same area? Give an example.",
+            "answer": "Yes",
+            "explanation": "A 2x6 rectangle and a 3x4 rectangle both have area 12, but look different."
+          },
+          {
+            "question": "Explain why area is measured in 'square units' rather than just 'units.'",
+            "answer": "Because area measures 2D space, which is covered by squares, not lines",
+            "explanation": "Length is 1D (units). Area is 2D (square units). The 'square' indicates two dimensions."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.6",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Measure Areas by Counting Unit Squares",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Count the squares: a shape made of 5 unit squares. What is the area?",
+            "answer": "5 square units",
+            "explanation": "Count each unit square: 5 squares = 5 square units."
+          },
+          {
+            "question": "A shape has 3 rows of 4 squares. What is the area?",
+            "answer": "12 square units",
+            "explanation": "3 x 4 = 12 square units."
+          },
+          {
+            "question": "A small rug covers 8 square feet. What is its area?",
+            "answer": "8 square feet",
+            "explanation": "The rug covers 8 square foot tiles."
+          },
+          {
+            "question": "A rectangle is 2 squares wide and 6 squares long. What is the area?",
+            "answer": "12 square units",
+            "explanation": "2 x 6 = 12 square units."
+          },
+          {
+            "question": "Count: a shape has 10 unit squares. What is the area?",
+            "answer": "10 square units",
+            "explanation": "10 non-overlapping unit squares = 10 square units."
+          }
+        ],
+        "medium": [
+          {
+            "question": "An L-shaped figure is made of a 3x2 rectangle and a 2x1 rectangle. What is the total area?",
+            "answer": "8 square units",
+            "explanation": "3x2 = 6. 2x1 = 2. Total: 6 + 2 = 8 square units."
+          },
+          {
+            "question": "A rectangle is 5 cm by 4 cm. How many square centimeters?",
+            "answer": "20 square cm",
+            "explanation": "5 x 4 = 20 square centimeters."
+          },
+          {
+            "question": "A room has 7 rows of 8 square-foot tiles. What is the area?",
+            "answer": "56 square feet",
+            "explanation": "7 x 8 = 56 square feet."
+          },
+          {
+            "question": "A garden plot is 6 m by 3 m. What is the area?",
+            "answer": "18 square meters",
+            "explanation": "6 x 3 = 18 square meters."
+          },
+          {
+            "question": "A T-shaped figure: top part 4x1, bottom part 2x3. Total area?",
+            "answer": "10 square units",
+            "explanation": "Top: 4x1 = 4. Bottom: 2x3 = 6. Total: 4 + 6 = 10."
+          }
+        ],
+        "hard": [
+          {
+            "question": "An irregular shape on grid paper covers 23 full squares and 0 partial squares. What is the area?",
+            "answer": "23 square units",
+            "explanation": "Count only full squares (no gaps/overlaps): 23 square units."
+          },
+          {
+            "question": "A U-shaped pool: outer rectangle 8x5, inner rectangle 4x3 removed. What is the pool area?",
+            "answer": "28 square units",
+            "explanation": "Outer: 8x5 = 40. Inner removed: 4x3 = 12. Pool: 40 - 12 = 28."
+          },
+          {
+            "question": "A floor is 9 m by 7 m. Each tile is 1 sq m. How many tiles are needed?",
+            "answer": "63 tiles",
+            "explanation": "9 x 7 = 63 square meters = 63 tiles."
+          },
+          {
+            "question": "Two rooms: Room A is 4x5, Room B is 3x7. Which has more area? By how much?",
+            "answer": "Room B (21 vs 20); 1 square unit more",
+            "explanation": "A: 20. B: 21. Room B is 1 sq unit larger."
+          },
+          {
+            "question": "A figure is made of 3 non-overlapping rectangles: 2x3, 4x2, and 1x5. Total area?",
+            "answer": "19 square units",
+            "explanation": "6 + 8 + 5 = 19 square units."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.7",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Relate Area to Multiplication and Addition",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A rectangle is 3 units by 5 units. What is the area?",
+            "answer": "15 square units (3 x 5 = 15)",
+            "explanation": "Area = length x width = 3 x 5 = 15 square units."
+          },
+          {
+            "question": "A rectangle is 4 by 6. Find the area by multiplying.",
+            "answer": "24 square units",
+            "explanation": "4 x 6 = 24 square units."
+          },
+          {
+            "question": "A rug is 2 feet by 8 feet. What is the area?",
+            "answer": "16 square feet",
+            "explanation": "2 x 8 = 16 square feet."
+          },
+          {
+            "question": "A rectangle is 7 by 3. Area?",
+            "answer": "21 square units",
+            "explanation": "7 x 3 = 21."
+          },
+          {
+            "question": "A poster is 5 inches by 5 inches. Area?",
+            "answer": "25 square inches",
+            "explanation": "5 x 5 = 25 square inches."
+          }
+        ],
+        "medium": [
+          {
+            "question": "Use the distributive property: A rectangle is 7 by 8. Break 8 into 5+3 and find the area.",
+            "answer": "56",
+            "explanation": "7 x (5+3) = 7x5 + 7x3 = 35 + 21 = 56 square units."
+          },
+          {
+            "question": "A rectangle is 6 by 9. Break 9 into 10-1. Find the area.",
+            "answer": "54",
+            "explanation": "6 x (10-1) = 60 - 6 = 54."
+          },
+          {
+            "question": "An L-shaped room: one part is 3x4, the other is 5x2. Total area?",
+            "answer": "22 square units",
+            "explanation": "3x4 = 12. 5x2 = 10. Total: 12 + 10 = 22."
+          },
+          {
+            "question": "A rectangle is 8 by 7. Show it equals 8 x (4+3).",
+            "answer": "56",
+            "explanation": "8 x 4 = 32. 8 x 3 = 24. 32 + 24 = 56."
+          },
+          {
+            "question": "A garden is 9 m by 6 m. What is the area? If you add a 3x6 section, what is the new total?",
+            "answer": "54 sq m; new total 72 sq m",
+            "explanation": "9x6 = 54. Additional: 3x6 = 18. Total: 54 + 18 = 72."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A room is shaped like an L: a 10x8 rectangle with a 4x3 corner cut out. What is the area?",
+            "answer": "68 square units",
+            "explanation": "10x8 = 80. Cut: 4x3 = 12. Area: 80 - 12 = 68."
+          },
+          {
+            "question": "Show that a 6 by (4+5) rectangle has the same area as 6x4 + 6x5.",
+            "answer": "54 = 24 + 30 = 54",
+            "explanation": "6 x 9 = 54. Also 6x4=24, 6x5=30, 24+30=54. Distributive property."
+          },
+          {
+            "question": "Two rectangles share a side: Rectangle A is 5x3, Rectangle B is 5x7. What is the combined area? What single rectangle has the same area?",
+            "answer": "50 square units; a 5x10 rectangle",
+            "explanation": "5x3 = 15, 5x7 = 35. Total: 50. Combined: 5 x (3+7) = 5x10 = 50."
+          },
+          {
+            "question": "A playground is 12 by 8. A sandbox (3x4) is inside it. What is the playground area NOT covered by the sandbox?",
+            "answer": "84 square units",
+            "explanation": "12x8 = 96. Sandbox: 3x4 = 12. Uncovered: 96 - 12 = 84."
+          },
+          {
+            "question": "Find the area of a figure made of a 4x6 rectangle on top of a 8x3 rectangle (sharing the 4-unit side... well, just add the areas).",
+            "answer": "48 square units",
+            "explanation": "4x6 = 24. 8x3 = 24. Total: 24 + 24 = 48."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.MD.8",
+      "domain": "3.MD",
+      "domainName": "Measurement and Data",
+      "title": "Solve Problems Involving Perimeter",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A square has sides of 4 cm. What is the perimeter?",
+            "answer": "16 cm",
+            "explanation": "4 + 4 + 4 + 4 = 16 cm. Or 4 x 4 = 16 cm."
+          },
+          {
+            "question": "A rectangle is 5 inches long and 3 inches wide. What is the perimeter?",
+            "answer": "16 inches",
+            "explanation": "5 + 3 + 5 + 3 = 16 inches. Or 2x(5+3) = 16."
+          },
+          {
+            "question": "A triangle has sides 3, 4, and 5 cm. What is the perimeter?",
+            "answer": "12 cm",
+            "explanation": "3 + 4 + 5 = 12 cm."
+          },
+          {
+            "question": "What is perimeter?",
+            "answer": "The distance around the outside of a shape",
+            "explanation": "Perimeter = total length of all sides added together."
+          },
+          {
+            "question": "A rectangle has sides 6 and 2. What is the perimeter?",
+            "answer": "16",
+            "explanation": "6 + 2 + 6 + 2 = 16."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A rectangle has a perimeter of 20 cm. One side is 6 cm. What is the other side?",
+            "answer": "4 cm",
+            "explanation": "20 = 2(6 + w). 10 = 6 + w. w = 4 cm."
+          },
+          {
+            "question": "A square has a perimeter of 36 inches. What is the side length?",
+            "answer": "9 inches",
+            "explanation": "36 / 4 = 9 inches per side."
+          },
+          {
+            "question": "A garden is 8 m by 5 m. How much fencing is needed to go around it?",
+            "answer": "26 meters",
+            "explanation": "Perimeter = 2(8+5) = 2(13) = 26 m."
+          },
+          {
+            "question": "Can two rectangles have the same perimeter but different areas?",
+            "answer": "Yes",
+            "explanation": "Example: 1x9 (perimeter 20, area 9) and 4x6 (perimeter 20, area 24)."
+          },
+          {
+            "question": "A rectangle is 7 by 3. Another is 5 by 5. Which has the larger perimeter?",
+            "answer": "7 by 3 (perimeter 20 vs 20) - they're equal!",
+            "explanation": "7x3: 2(7+3)=20. 5x5: 2(5+5)=20. Same perimeter!"
+          }
+        ],
+        "hard": [
+          {
+            "question": "Draw two rectangles with perimeter 24 cm. What are their areas?",
+            "answer": "Example: 1x11 (area 11) and 6x6 (area 36)",
+            "explanation": "Many options: 2x10 (area 20), 3x9 (area 27), 4x8 (area 32), 5x7 (area 35), 6x6 (area 36)."
+          },
+          {
+            "question": "A rectangle has area 24 sq cm and one side is 8 cm. What is the perimeter?",
+            "answer": "22 cm",
+            "explanation": "Width = 24/8 = 3. Perimeter = 2(8+3) = 22 cm."
+          },
+          {
+            "question": "Two rectangles both have area 36. Rectangle A is 4x9. Rectangle B is 6x6. Which has the smaller perimeter?",
+            "answer": "Rectangle B (24 vs 26)",
+            "explanation": "A: 2(4+9)=26. B: 2(6+6)=24. B has the smaller perimeter."
+          },
+          {
+            "question": "A rectangular garden has perimeter 30 m. If the length is twice the width, what are the dimensions?",
+            "answer": "Length = 10 m, Width = 5 m",
+            "explanation": "2(L+W) = 30, L+W = 15. If L = 2W: 2W+W = 15, 3W = 15, W = 5, L = 10."
+          },
+          {
+            "question": "An L-shaped figure: outer dimensions 8x6, with a 3x2 notch cut from one corner. What is the perimeter?",
+            "answer": "28 units",
+            "explanation": "The perimeter = 8+6+8+6 = 28 (cutting a notch adds the same length it removes from the outside)."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.G.1",
+      "domain": "3.G",
+      "domainName": "Geometry",
+      "title": "Understand Shape Categories; Quadrilateral Subcategories",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "Is a square a quadrilateral?",
+            "answer": "Yes",
+            "explanation": "A square has 4 sides, so it is a quadrilateral."
+          },
+          {
+            "question": "Is a rectangle a quadrilateral?",
+            "answer": "Yes",
+            "explanation": "A rectangle has 4 sides = quadrilateral."
+          },
+          {
+            "question": "Name a shape that is NOT a quadrilateral.",
+            "answer": "A triangle (3 sides) or circle",
+            "explanation": "Quadrilaterals must have exactly 4 sides."
+          },
+          {
+            "question": "What do all quadrilaterals have in common?",
+            "answer": "4 sides and 4 angles",
+            "explanation": "Every quadrilateral has exactly 4 sides and 4 angles."
+          },
+          {
+            "question": "Is a rhombus a quadrilateral?",
+            "answer": "Yes",
+            "explanation": "A rhombus has 4 sides, so it is a quadrilateral."
+          }
+        ],
+        "medium": [
+          {
+            "question": "What makes a rectangle special compared to other quadrilaterals?",
+            "answer": "It has 4 right angles",
+            "explanation": "All rectangles are quadrilaterals with 4 right (square) angles."
+          },
+          {
+            "question": "What makes a rhombus special?",
+            "answer": "All 4 sides are equal length",
+            "explanation": "A rhombus has 4 equal sides (but angles may not be right angles)."
+          },
+          {
+            "question": "Is a square a rectangle? Is it a rhombus?",
+            "answer": "Yes to both",
+            "explanation": "A square has 4 right angles (rectangle) AND 4 equal sides (rhombus)."
+          },
+          {
+            "question": "Draw (describe) a quadrilateral that is NOT a rectangle, square, or rhombus.",
+            "answer": "Example: a trapezoid or any irregular 4-sided shape",
+            "explanation": "A shape with 4 sides, unequal side lengths, and no right angles."
+          },
+          {
+            "question": "Can a quadrilateral have no right angles? Give an example.",
+            "answer": "Yes, a parallelogram (non-rectangle) or a general quadrilateral",
+            "explanation": "Many quadrilaterals have no right angles, like a tilted diamond."
+          }
+        ],
+        "hard": [
+          {
+            "question": "Explain how squares, rectangles, and rhombuses are all related.",
+            "answer": "All are quadrilaterals. A square is both a rectangle and a rhombus.",
+            "explanation": "Quadrilateral > rectangle (4 right angles) and rhombus (4 equal sides). Square = both."
+          },
+          {
+            "question": "True or false: All rectangles are squares.",
+            "answer": "False",
+            "explanation": "All squares are rectangles, but not all rectangles are squares. Squares need equal sides."
+          },
+          {
+            "question": "True or false: All rhombuses are quadrilaterals.",
+            "answer": "True",
+            "explanation": "Every rhombus has 4 sides, making it a quadrilateral."
+          },
+          {
+            "question": "A shape has 4 sides, 2 pairs of parallel sides, but no right angles. What could it be?",
+            "answer": "A parallelogram (non-rectangle type) or rhombus",
+            "explanation": "A parallelogram with no right angles, like a tilted rectangle."
+          },
+          {
+            "question": "Sort: square, triangle, rhombus, pentagon, rectangle. Which are quadrilaterals?",
+            "answer": "Square, rhombus, rectangle",
+            "explanation": "These all have 4 sides. Triangle has 3, pentagon has 5."
+          }
+        ]
+      }
+    },
+    {
+      "code": "3.G.2",
+      "domain": "3.G",
+      "domainName": "Geometry",
+      "title": "Partition Shapes into Equal Areas; Express as Unit Fractions",
+      "explanation": "",
+      "questions": {
+        "easy": [
+          {
+            "question": "A rectangle is divided into 4 equal parts. What fraction is each part?",
+            "answer": "1/4",
+            "explanation": "4 equal parts: each is 1/4 of the total area."
+          },
+          {
+            "question": "A circle is divided into 3 equal parts. What fraction is each?",
+            "answer": "1/3",
+            "explanation": "3 equal parts: each is 1/3."
+          },
+          {
+            "question": "A square is cut in half. What fraction is each piece?",
+            "answer": "1/2",
+            "explanation": "2 equal parts: each is 1/2."
+          },
+          {
+            "question": "A rectangle is divided into 8 equal parts. You shade 1. What fraction is shaded?",
+            "answer": "1/8",
+            "explanation": "1 out of 8 equal parts = 1/8."
+          },
+          {
+            "question": "A shape is divided into 6 equal parts. What fraction is one part?",
+            "answer": "1/6",
+            "explanation": "Each part is 1/6 of the whole."
+          }
+        ],
+        "medium": [
+          {
+            "question": "A rectangle has area 12 sq units. It is divided into 4 equal parts. What is the area of each part?",
+            "answer": "3 square units",
+            "explanation": "12 / 4 = 3 sq units each. Each is 1/4 of 12."
+          },
+          {
+            "question": "A square has area 16 sq cm. It is divided into 4 equal parts. Each part = what fraction? What area?",
+            "answer": "1/4 of the whole; 4 sq cm each",
+            "explanation": "16 / 4 = 4 sq cm. Each is 1/4."
+          },
+          {
+            "question": "A circle is divided into 6 equal parts. You shade 2. What fraction is shaded?",
+            "answer": "2/6 (or 1/3)",
+            "explanation": "2 out of 6 = 2/6 = 1/3."
+          },
+          {
+            "question": "A rectangle (area 24) is divided into 3 equal rows. What is the area of each row?",
+            "answer": "8 square units (1/3 of 24)",
+            "explanation": "24 / 3 = 8. Each row is 1/3 of the total."
+          },
+          {
+            "question": "If 1/4 of a shape's area is 5 sq cm, what is the total area?",
+            "answer": "20 sq cm",
+            "explanation": "1/4 = 5, so whole = 4 x 5 = 20 sq cm."
+          }
+        ],
+        "hard": [
+          {
+            "question": "A rectangle has area 36 sq units. It is divided into 6 equal parts. What fraction and area is each part?",
+            "answer": "1/6 of the whole; 6 sq units each",
+            "explanation": "36 / 6 = 6 sq units per part. Each is 1/6."
+          },
+          {
+            "question": "A square (area 64 sq in) is divided into 8 equal strips. What is the area of 3 strips?",
+            "answer": "24 sq in (3/8 of 64)",
+            "explanation": "Each strip: 64/8 = 8 sq in. Three strips: 3 x 8 = 24 sq in = 3/8 of the whole."
+          },
+          {
+            "question": "Can you divide a rectangle into 4 equal parts in more than one way?",
+            "answer": "Yes",
+            "explanation": "4 horizontal strips, 4 vertical strips, a 2x2 grid, or diagonal cuts can all make 4 equal parts."
+          },
+          {
+            "question": "A shape is divided into 3 unequal parts. Can you call each part 1/3?",
+            "answer": "No",
+            "explanation": "Fractions require EQUAL parts. Unequal parts are not thirds."
+          },
+          {
+            "question": "A rectangular garden (area 30 sq m) is divided into 6 equal plots. Each plot is what fraction? What area?",
+            "answer": "1/6 of the garden; 5 sq m each",
+            "explanation": "30 / 6 = 5 sq m. Each is 1/6."
+          }
+        ]
+      }
+    }
+  ]
+}

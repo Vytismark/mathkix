@@ -1,0 +1,37 @@
+Standards for Mathematical Practice - Quick Reference Table
+Common Core State Standards for Mathematics
+================================================================================
+
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+| MP# | Standard Name                                    | Key Focus                                                                           |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  1  | Make sense of problems and persevere in          | Explain the problem's meaning, analyze givens, plan a pathway, monitor progress,    |
+|     | solving them.                                    | check answers using a different method, and ask "Does this make sense?"             |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  2  | Reason abstractly and quantitatively.            | Decontextualize (represent situations symbolically) and contextualize (connect      |
+|     |                                                  | symbols back to referents); attend to units and meanings of quantities.             |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  3  | Construct viable arguments and critique the      | Use assumptions, definitions, and prior results to build logical arguments;         |
+|     | reasoning of others.                             | identify flaws in reasoning; listen to and evaluate others' arguments.              |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  4  | Model with mathematics.                          | Apply math to real-world problems; use diagrams, tables, graphs, and formulas;      |
+|     |                                                  | interpret results in context and revise models as needed.                           |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  5  | Use appropriate tools strategically.             | Select and use tools (calculators, rulers, software, etc.) wisely; know their       |
+|     |                                                  | benefits and limitations; use technology to explore and deepen understanding.       |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  6  | Attend to precision.                             | Communicate with clarity; use precise definitions and symbols; specify units;       |
+|     |                                                  | label axes; calculate accurately with appropriate levels of precision.              |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  7  | Look for and make use of structure.              | Discern patterns and structure in expressions, equations, and figures; shift        |
+|     |                                                  | perspective; see complicated objects as composed of simpler ones.                   |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+|  8  | Look for and express regularity in               | Notice repeated calculations; seek general methods and shortcuts; maintain          |
+|     | repeated reasoning.                              | oversight of the process while evaluating reasonableness of results.                |
++-----+--------------------------------------------------+-------------------------------------------------------------------------------------+
+
+================================================================================
+Source: Common Core State Standards Initiative (CCSSI)
+Note: These 8 practices apply across all grade levels and mathematical content areas.
+The practices connect to content standards - look for "understand" expectations as
+key points of intersection between practice and content standards.
