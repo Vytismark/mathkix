@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { ArrowRight, Check, ShieldCheck, RotateCcw, Zap, Star } from 'lucide-react'
 import { PRICING_PLANS } from '@/types/stripe'
@@ -6,7 +7,21 @@ import { MarketingNav } from '@/components/marketing/MarketingNav'
 
 export const metadata: Metadata = {
   title: 'Pricing - MathKix',
-  description: 'Simple, transparent pricing. One account, unlimited children. 30-day free trial on every plan.',
+  description: 'Simple, transparent pricing. One account, unlimited children. 30-day free trial on every plan. Monthly $9.99, Annual $79.99, Lifetime $149.99.',
+  alternates: {
+    canonical: '/pricing',
+  },
+  openGraph: {
+    title: 'MathKix Pricing - Plans for Every Family',
+    description:
+      'Simple, transparent pricing. One account, unlimited children. 30-day free trial. Monthly $9.99, Annual $79.99, Lifetime $149.99.',
+    type: 'website',
+  },
+  twitter: {
+    title: 'MathKix Pricing - Plans for Every Family',
+    description:
+      'One account, unlimited children. 30-day free trial. Monthly $9.99, Annual $79.99, Lifetime $149.99.',
+  },
 }
 
 const PLAN_META: Record<string, {
@@ -50,11 +65,59 @@ const TRUST = [
   { icon: Star,        label: 'Unlimited children',   text: 'All kids on one account'               },
 ]
 
+const PRICING_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'MathKix',
+  description:
+    'AI-powered adaptive math learning for Grades 1-5. Personalized placement, spaced repetition, and AI tutoring aligned to Common Core standards.',
+  brand: { '@type': 'Brand', name: 'MathKix' },
+  audience: {
+    '@type': 'EducationalAudience',
+    educationalRole: 'student',
+    suggestedMinAge: 5,
+    suggestedMaxAge: 11,
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Monthly',
+      price: '9.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      url: 'https://mathkix.com/pricing',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Annual',
+      price: '79.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      url: 'https://mathkix.com/pricing',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Lifetime',
+      price: '149.99',
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      url: 'https://mathkix.com/pricing',
+    },
+  ],
+}
+
 export default function PricingPage() {
   const appName = process.env.NEXT_PUBLIC_APP_NAME ?? 'MathKix'
 
   return (
     <div style={{ background: '#07080f', minHeight: '100vh', color: 'white' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PRICING_SCHEMA) }}
+      />
 
       {/* ── Nav ──────────────────────────────────────── */}
       <MarketingNav currentPage="pricing" />
@@ -245,8 +308,7 @@ export default function PricingPage() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
           <span className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
+            <Image src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
               <span style={{ color: '#E74C3C' }}>Kix</span>

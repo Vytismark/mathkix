@@ -1,0 +1,22 @@
+{
+  "name": "MathKix - Adaptive Math for Grades 1-5",
+  "short_name": "MathKix",
+  "description": "AI-powered math practice for kids from Grade 1 to Grade 5. Personalized, adaptive, and aligned to Common Core standards.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07080f",
+  "theme_color": "#E74C3C",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/mathkix-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

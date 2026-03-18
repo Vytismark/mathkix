@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Account',
+  robots: { index: false, follow: true },
 }
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {

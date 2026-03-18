@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import {
   Target, TrendingUp, Users, Gamepad2, BookOpen, Shield,
@@ -18,6 +19,20 @@ export const metadata: Metadata = {
   title: 'MathKix - Personalized Grades 1-5 Math Learning Powered by AI',
   description:
     'AI-powered math practice for kids from Grade 1 to Grade 5. Places every child at their exact level in 3 minutes. 30-day free trial, no credit card.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'MathKix - Personalized Grades 1-5 Math Learning Powered by AI',
+    description:
+      'AI-powered math practice for Grades 1-5. A 3-minute quiz finds your child\'s exact level, then adapts as they master each skill. 30-day free trial.',
+    type: 'website',
+  },
+  twitter: {
+    title: 'MathKix - AI-Powered Math for Grades 1-5',
+    description:
+      'AI-powered math practice for Grades 1-5. A 3-minute quiz finds your child\'s exact level. 30-day free trial, no credit card.',
+  },
 }
 
 const FEATURES = [
@@ -106,6 +121,98 @@ const STATS = [
   { value: '0',      label: 'Ads, ever'            },
 ]
 
+const ORGANIZATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'MathKix',
+  url: 'https://mathkix.com',
+  logo: 'https://mathkix.com/mathkix-logo.svg',
+  description:
+    'AI-powered adaptive math learning platform for children in Grades 1-5, aligned to Common Core State Standards.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'hello@mathkix.com',
+    contactType: 'customer support',
+  },
+}
+
+const SOFTWARE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'MathKix',
+  applicationCategory: 'EducationalApplication',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'AggregateOffer',
+    lowPrice: '9.99',
+    highPrice: '149.99',
+    priceCurrency: 'USD',
+    offerCount: 3,
+  },
+  aggregateRating: undefined,
+  audience: {
+    '@type': 'EducationalAudience',
+    educationalRole: 'student',
+    suggestedMinAge: 5,
+    suggestedMaxAge: 11,
+  },
+}
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How does the placement quiz work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Your child answers a short set of adaptive questions that take about 3 minutes. The quiz starts at their enrolled grade level and adjusts up or down based on each answer. At the end, MathKix maps their strengths and gaps across every Common Core math domain and begins lessons at exactly the right level.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if my child is behind their grade level?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'That is completely fine - and it is one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There is no "grade shaming" - your child only sees encouragement and progress.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does MathKix replace school math?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'MathKix is designed as a supplement, not a replacement. It reinforces what your child learns at school by providing daily practice aligned to the same Common Core standards their teacher uses. Many parents use it for 5-15 minutes a day after school or on weekends.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What devices does it work on?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'MathKix runs in any modern web browser - Chrome, Safari, Firefox, or Edge. It works on phones, tablets, laptops, and desktops. No app download required. The interface is optimized for touch on tablets and phones with large tap targets designed for small fingers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Can I track my child's progress?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Your parent dashboard shows mastery across every math domain, daily activity, streak data, and which standards your child has completed. You can see exactly where they are strong and where they need more practice.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens after the free trial?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "After 30 days, you can choose monthly ($9.99/mo), annual ($79.99/yr), or lifetime ($149.99 one-time) billing. If you cancel, your child's progress is saved for 90 days in case you come back. No cancellation fees, no contracts.",
+      },
+    },
+  ],
+}
+
 export default function LandingPage() {
   const appName = process.env.NEXT_PUBLIC_APP_NAME ?? 'MathKix'
 
@@ -127,6 +234,18 @@ export default function LandingPage() {
 
   return (
     <div style={{ background: '#07080f', minHeight: '100vh', color: 'white' }} className="overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_SCHEMA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
 
       {/* ── Sticky Nav ───────────────────────────────── */}
       <MarketingNav />
@@ -582,8 +701,7 @@ export default function LandingPage() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
           <span className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
+            <Image src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
               <span style={{ color: '#E74C3C' }}>Kix</span>

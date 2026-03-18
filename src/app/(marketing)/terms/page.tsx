@@ -4,6 +4,14 @@ import { MarketingNav } from '@/components/marketing/MarketingNav'
 export const metadata: Metadata = {
   title: 'Terms of Service - MathKix',
   description: 'Terms of Service for MathKix, the adaptive math learning platform for Grades 1-5.',
+  alternates: {
+    canonical: '/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service - MathKix',
+    description: 'Terms of Service for MathKix, the adaptive math learning platform for Grades 1-5.',
+    type: 'website',
+  },
 }
 
 export default function TermsPage() {

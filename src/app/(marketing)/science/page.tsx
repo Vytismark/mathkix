@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import {
   Brain, RefreshCw, Sparkles, Target, Heart, ArrowRight,
@@ -12,11 +13,14 @@ export const metadata: Metadata = {
   title: 'The Science Behind MathKix - Research-Backed Grades 1-5 Math Learning',
   description:
     'Discover how MathKix uses spaced repetition (SM-2), adaptive learning in the zone of proximal development, growth mindset AI tutoring, and real-time engagement detection to help Grades 1-5 students master math.',
+  alternates: {
+    canonical: '/science',
+  },
   openGraph: {
     title: 'The Science Behind MathKix',
     description:
       'Research-backed adaptive learning for Grades 1-5 math. Spaced repetition, AI tutoring in the zone of proximal development, and growth mindset feedback.',
-    type: 'website',
+    type: 'article',
     siteName: 'MathKix',
   },
   twitter: {
@@ -166,6 +170,7 @@ const STRUCTURED_DATA = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
   name: 'MathKix',
+  url: 'https://mathkix.com',
   description: 'Adaptive math learning platform for Grades 1-5 students, grounded in spaced repetition, zone of proximal development, and growth mindset research.',
   educationalFramework: 'Common Core State Standards for Mathematics',
   teaches: ['Mathematics', 'Arithmetic', 'Geometry', 'Fractions', 'Measurement & Data', 'Algebraic Thinking'],
@@ -175,6 +180,27 @@ const STRUCTURED_DATA = {
     suggestedMinAge: 5,
     suggestedMaxAge: 11,
   },
+}
+
+const ARTICLE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'The Science Behind MathKix - Research-Backed Grades 1-5 Math Learning',
+  description:
+    'How MathKix uses spaced repetition (SM-2), adaptive learning, growth mindset AI tutoring, and engagement detection.',
+  author: { '@type': 'Organization', name: 'MathKix' },
+  publisher: { '@type': 'Organization', name: 'MathKix', logo: { '@type': 'ImageObject', url: 'https://mathkix.com/mathkix-logo.svg' } },
+  datePublished: '2026-03-17',
+  dateModified: '2026-03-17',
+  mainEntityOfPage: 'https://mathkix.com/science',
+  citation: [
+    'Ebbinghaus, H. (1885). Memory: A Contribution to Experimental Psychology.',
+    'Vygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes.',
+    'Dweck, C. S. (2006). Mindset: The New Psychology of Success.',
+    'Pimsleur, P. (1967). A Memory Schedule. Modern Language Journal, 51(2), 73-75.',
+    'Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience.',
+    'Wozniak, P. A., & Gorzelanczyk, E. J. (1994). Optimization of repetition spacing in the practice of learning.',
+  ],
 }
 
 /* -- Page ---------------------------------------------------- */
@@ -188,6 +214,10 @@ export default function SciencePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }}
       />
 
       {/* -- Sticky Nav --------------------------------------- */}
@@ -569,8 +599,7 @@ export default function SciencePage() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
           <span className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
+            <Image src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
               <span style={{ color: '#E74C3C' }}>Kix</span>

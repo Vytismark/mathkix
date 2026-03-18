@@ -3,7 +3,15 @@ import { MarketingNav } from '@/components/marketing/MarketingNav'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - MathKix',
-  description: 'Privacy Policy for MathKix. Learn how we protect your data and your children\'s privacy.',
+  description: 'Privacy Policy for MathKix. Learn how we protect your data and your children\'s privacy. COPPA compliant.',
+  alternates: {
+    canonical: '/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy - MathKix',
+    description: 'Learn how MathKix protects your data and your children\'s privacy. COPPA compliant.',
+    type: 'website',
+  },
 }
 
 export default function PrivacyPage() {

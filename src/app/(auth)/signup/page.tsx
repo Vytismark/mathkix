@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { SignupForm } from '@/components/auth/SignupForm'
 
-export const metadata: Metadata = { title: 'Create account - MathKix' }
+export const metadata: Metadata = {
+  title: 'Create account - MathKix',
+  robots: { index: false, follow: true },
+}
 
 export default function SignupPage() {
   return (

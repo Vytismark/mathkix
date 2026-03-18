@@ -2,7 +2,10 @@ import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { LoginForm } from '@/components/auth/LoginForm'
 
-export const metadata: Metadata = { title: 'Sign in - MathKix' }
+export const metadata: Metadata = {
+  title: 'Sign in - MathKix',
+  robots: { index: false, follow: true },
+}
 
 export default function LoginPage() {
   return (

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { ParentShell } from '@/components/parent/ParentShell'
@@ -6,6 +7,10 @@ import { TrialExpiredModal } from '@/components/parent/TrialExpiredModal'
 import { getTrialState } from '@/lib/trial'
 
 export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+}
 
 export default async function ParentLayout({
   children,
