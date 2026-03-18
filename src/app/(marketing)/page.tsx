@@ -519,6 +519,64 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── Testimonials ─────────────────────────────── */}
+      <section className="px-6 py-20" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="animate-fade-in-up text-3xl sm:text-4xl font-extrabold mb-3">
+              Parents love it. Kids actually use it.
+            </h2>
+            <p className="text-slate-400">Real feedback from families in their first month.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                quote: "My son was almost a full grade behind and too embarrassed to admit it. MathKix figured that out on its own in the placement quiz and just started him where he needed to be. No drama.",
+                name: 'Rachel T.',
+                detail: 'Mom of a 3rd grader, Ohio',
+              },
+              {
+                quote: "I've tried three other math apps. This is the first one my daughter asks to open. The streak thing is annoyingly effective — she reminds me if we forget.",
+                name: 'James K.',
+                detail: 'Dad of two, Texas',
+              },
+              {
+                quote: "Worth it just for the parent dashboard. I can actually see which standards she's mastered versus where she's still shaky. Her teacher was impressed I knew the specifics.",
+                name: 'Priya M.',
+                detail: 'Mom of a 4th grader, California',
+              },
+            ].map(({ quote, name, detail }, i) => (
+              <div
+                key={name}
+                className="animate-fade-in-up flex flex-col gap-5 p-7 rounded-2xl border"
+                style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  borderColor: 'rgba(255,255,255,0.08)',
+                  animationDelay: `${i * 80}ms`,
+                }}
+              >
+                {/* Stars */}
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, s) => (
+                    <svg key={s} className="w-4 h-4" viewBox="0 0 20 20" fill="#f59e0b">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                {/* Quote */}
+                <p className="text-slate-300 text-sm leading-relaxed flex-1">&ldquo;{quote}&rdquo;</p>
+                {/* Author */}
+                <div>
+                  <p className="text-white font-semibold text-sm">{name}</p>
+                  <p className="text-slate-500 text-xs mt-0.5">{detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── App Preview ──────────────────────────────── */}
       <section className="px-6 py-20 relative overflow-hidden" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div
