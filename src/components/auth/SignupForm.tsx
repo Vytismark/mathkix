@@ -23,6 +23,7 @@ export function SignupForm() {
 
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
       window.gtag('event', 'qualify_lead', { method: 'google' })
+      window.gtag('event', 'conversion', { send_to: 'AW-18023157221/A6BbCL2zjIscEOWbjpJD' })
     }
 
     const { error } = await supabase.auth.signInWithOAuth({
@@ -61,11 +62,10 @@ export function SignupForm() {
       return
     }
 
-    // GA4: track signup as a lead
+    // GA4 + Google Ads: track signup as a lead
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', 'qualify_lead', {
-        method: 'email',
-      })
+      window.gtag('event', 'qualify_lead', { method: 'email' })
+      window.gtag('event', 'conversion', { send_to: 'AW-18023157221/A6BbCL2zjIscEOWbjpJD' })
     }
 
     setDone(true)
