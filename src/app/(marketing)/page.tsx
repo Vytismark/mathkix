@@ -537,7 +537,7 @@ export default function LandingPage() {
                 detail: 'Mom of a 3rd grader, Ohio',
               },
               {
-                quote: "I've tried three other math apps. This is the first one my daughter asks to open. The streak thing is annoyingly effective — she reminds me if we forget.",
+                quote: "I've tried three other math apps. This is the first one my daughter asks to open. The streak thing is annoyingly effective. She reminds me if we forget.",
                 name: 'James K.',
                 detail: 'Dad of two, Texas',
               },
