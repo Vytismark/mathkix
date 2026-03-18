@@ -72,11 +72,5 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
-  // Redirect authenticated users from marketing home to profile selection
-  if (pathname === '/' && user) {
-    url.pathname = '/select'
-    return NextResponse.redirect(url)
-  }
-
   return supabaseResponse
 }
