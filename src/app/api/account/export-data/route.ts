@@ -1,13 +1,22 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { isRateLimited } from '@/lib/rate-limit'
 
-export async function POST() {
+export async function POST(request: Request) {
   try {
     const supabase = await createClient()
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+    }
+
+    // Rate limit: 1 export per hour per user
+    if (isRateLimited(user.id, { namespace: 'export-data', maxRequests: 1, windowMs: 60 * 60 * 1000 })) {
+      return NextResponse.json(
+        { error: 'You can only export data once per hour. Please try again later.' },
+        { status: 429 },
+      )
     }
 
     const userId = user.id

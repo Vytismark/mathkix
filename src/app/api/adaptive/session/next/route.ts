@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { requireActiveSubscription } from '@/lib/subscription-guard'
 import type { Domain } from '@/types/quiz'
 import type { SRItem, TopicAffinity, EngagementWindow, EarnedAchievement } from '@/types/adaptive'
 import {
@@ -30,6 +31,9 @@ export async function POST(request: NextRequest) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const blocked = await requireActiveSubscription(user.id)
+  if (blocked) return blocked
 
   const {
     sessionId,

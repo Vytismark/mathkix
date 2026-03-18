@@ -63,6 +63,9 @@ export async function POST(request: NextRequest) {
     }
 
     const appUrl = process.env.NEXT_PUBLIC_APP_URL
+    if (!appUrl) {
+      return NextResponse.json({ error: 'Application URL not configured' }, { status: 500 })
+    }
 
     // Determine if this is a one-time price (lifetime)
     const price = await stripe.prices.retrieve(priceId)

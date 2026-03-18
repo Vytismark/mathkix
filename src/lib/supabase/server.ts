@@ -2,15 +2,24 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import type { Database } from '@/types/database'
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://placeholder.supabase.co'
-const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? 'placeholder-anon-key'
+function getSupabaseUrl(): string {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  if (!url) throw new Error('Missing NEXT_PUBLIC_SUPABASE_URL')
+  return url
+}
+
+function getSupabaseAnonKey(): string {
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  if (!key) throw new Error('Missing NEXT_PUBLIC_SUPABASE_ANON_KEY')
+  return key
+}
 
 export async function createClient() {
   const cookieStore = await cookies()
 
   return createServerClient<Database>(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY,
+    getSupabaseUrl(),
+    getSupabaseAnonKey(),
     {
       cookies: {
         getAll() {
@@ -33,11 +42,14 @@ export async function createClient() {
 
 // Service role client for server-side operations that bypass RLS
 export async function createServiceClient() {
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!serviceRoleKey) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY')
+
   const cookieStore = await cookies()
 
   return createServerClient<Database>(
-    SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY ?? 'placeholder-service-key',
+    getSupabaseUrl(),
+    serviceRoleKey,
     {
       cookies: {
         getAll() {

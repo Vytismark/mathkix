@@ -53,6 +53,7 @@ export async function updateSession(request: NextRequest) {
     '/select',
     '/play',
     '/support',
+    '/admin',
   ]
 
   // Paths only for unauthenticated users

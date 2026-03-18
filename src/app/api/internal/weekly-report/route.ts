@@ -40,10 +40,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: profilesError.message }, { status: 500 })
   }
 
-  // Only send to users who have opted in (default true after migration)
+  // Only send to users who have explicitly opted in
   const optedIn = (profiles ?? []).filter((p) => {
     const prefs = p.notification_preferences as Record<string, boolean> | null
-    return prefs?.weekly_reports !== false // send unless explicitly opted out
+    return prefs?.weekly_reports === true // send only if explicitly opted in
   })
 
   if (optedIn.length === 0) {

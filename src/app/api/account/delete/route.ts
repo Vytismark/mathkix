@@ -5,11 +5,18 @@ import { stripe } from '@/lib/stripe/server'
 
 export async function POST(request: Request) {
   try {
-    const { confirmation } = await request.json()
+    const { confirmation, currentPassword } = await request.json()
 
     if (confirmation !== 'DELETE') {
       return NextResponse.json(
         { error: 'You must type DELETE to confirm account deletion' },
+        { status: 400 },
+      )
+    }
+
+    if (!currentPassword) {
+      return NextResponse.json(
+        { error: 'Current password is required to delete your account' },
         { status: 400 },
       )
     }
@@ -19,6 +26,16 @@ export async function POST(request: Request) {
 
     if (authError || !user) {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+    }
+
+    // Re-authenticate to prevent CSRF and confirm identity
+    const { error: signInError } = await supabase.auth.signInWithPassword({
+      email: user.email!,
+      password: currentPassword,
+    })
+
+    if (signInError) {
+      return NextResponse.json({ error: 'Incorrect password' }, { status: 403 })
     }
 
     const userId = user.id

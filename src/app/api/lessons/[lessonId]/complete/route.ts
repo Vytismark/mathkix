@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { requireActiveSubscription } from '@/lib/subscription-guard'
 import { scoreLesson, calculateXP, getMasteryDelta } from '@/lib/quiz/scoring'
 import { scoreToSRQuality, applyReview, createInitialSRItem } from '@/lib/adaptive/spaced-repetition'
 import type { LessonQuestion } from '@/types/curriculum'
@@ -14,6 +15,9 @@ export async function POST(request: NextRequest, { params }: Params) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const blocked = await requireActiveSubscription(user.id)
+  if (blocked) return blocked
 
   const { childId, answers, timeSpentSec } = await request.json()
   // answers: Record<number, string> - {questionId: answerGiven}
@@ -36,6 +40,27 @@ export async function POST(request: NextRequest, { params }: Params) {
     .single()
 
   if (!lesson) return NextResponse.json({ error: 'Lesson not found' }, { status: 404 })
+
+  // Check for duplicate submission (same child + lesson completed in last 60 seconds)
+  const { data: recentAttempt } = await supabase
+    .from('lesson_attempts')
+    .select('id, completed_at')
+    .eq('child_id', childId)
+    .eq('lesson_id', lessonId)
+    .eq('status', 'completed')
+    .order('completed_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  if (recentAttempt?.completed_at) {
+    const timeSince = Date.now() - new Date(recentAttempt.completed_at).getTime()
+    if (timeSince < 60_000) {
+      return NextResponse.json(
+        { error: 'This lesson was just completed. Please wait before retrying.' },
+        { status: 409 },
+      )
+    }
+  }
 
   const questions = lesson.questions as unknown as LessonQuestion[]
   const { results, score_pct, correct_count } = scoreLesson(questions, answers)

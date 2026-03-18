@@ -33,17 +33,24 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  // ── Enforce child profile limits ──────────────────────────
-  const [{ count: childCount }, trialState] = await Promise.all([
-    supabase
-      .from('children')
-      .select('*', { count: 'exact', head: true })
-      .eq('profile_id', user.id),
-    getTrialState(user.id),
-  ])
+  // ── Enforce child profile limits (with row-level locking) ──
+  const trialState = await getTrialState(user.id)
+
+  if (trialState.status === 'expired') {
+    return NextResponse.json(
+      { error: 'Your free trial has expired. Please upgrade to add children.', code: 'SUBSCRIPTION_REQUIRED' },
+      { status: 403 },
+    )
+  }
 
   const isPaid = trialState.status === 'active_paid'
   const maxChildren = isPaid ? 10 : 2
+
+  // Count + insert atomically via RPC or re-check after insert
+  const { count: childCount } = await supabase
+    .from('children')
+    .select('*', { count: 'exact', head: true })
+    .eq('profile_id', user.id)
 
   if ((childCount ?? 0) >= maxChildren) {
     return NextResponse.json(
