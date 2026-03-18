@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle, ArrowLeftRight } from 'lucide-react'
+import { Menu, X, LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle, ArrowLeftRight, BookOpen } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
@@ -15,6 +15,7 @@ const NAV_ITEMS = [
   { href: '/billing', label: 'Billing', icon: CreditCard },
   { href: '/account', label: 'Account', icon: Settings },
   { href: '/support', label: 'Support', icon: HelpCircle },
+  { href: '/how-to', label: 'How it works', icon: BookOpen },
   { href: '/select', label: 'Switch Child', icon: ArrowLeftRight },
 ]
 

@@ -40,6 +40,19 @@ function getColor(id: string) {
   return colorMap[id]
 }
 
+function getLastActive(lastActive: string | null): { label: string; color: string } | null {
+  if (!lastActive) return null
+  const diffMs = Date.now() - new Date(lastActive).getTime()
+  const diffDays = Math.floor(diffMs / 86400000)
+  const diffHours = Math.floor(diffMs / 3600000)
+
+  if (diffHours < 1) return { label: 'Just now',     color: '#10b981' }
+  if (diffHours < 24) return { label: 'Active today', color: '#10b981' }
+  if (diffDays === 1) return { label: 'Yesterday',    color: '#10b981' }
+  if (diffDays <= 3)  return { label: `${diffDays}d ago`, color: '#f59e0b' }
+  return                     { label: `${diffDays}d ago`, color: '#ef4444' }
+}
+
 export function ChildCard({ child }: ChildCardProps) {
   const emoji = AVATAR_EMOJI[child.avatar_id] ?? AVATAR_EMOJI.default
 
@@ -47,6 +60,8 @@ export function ChildCard({ child }: ChildCardProps) {
   const gradeLabel   = displayGrade !== null ? getGradeLabel(displayGrade) : null
 
   const color = getColor(child.id)
+  const lastActive = getLastActive(child.last_active)
+  const hotStreak = (child.streak_days ?? 0) >= 7
 
   return (
     <Link href={`/children/${child.id}`}>
@@ -57,12 +72,21 @@ export function ChildCard({ child }: ChildCardProps) {
           boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
         }}
       >
-        {!child.placement_done && (
-          <span className="absolute top-4 right-4 text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full">
-            Needs placement
-          </span>
-        )}
+        {/* Top-right badges */}
+        <div className="absolute top-4 right-4 flex items-center gap-1.5">
+          {!child.placement_done && (
+            <span className="text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full">
+              Needs placement
+            </span>
+          )}
+          {hotStreak && child.placement_done && (
+            <span className="text-[10px] font-bold bg-orange-500/20 text-orange-400 border border-orange-500/30 px-2 py-0.5 rounded-full flex items-center gap-0.5">
+              🔥 {child.streak_days}d
+            </span>
+          )}
+        </div>
 
+        {/* Avatar + name */}
         <div className="flex items-center gap-4 mb-4">
           <div
             className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shrink-0 transition-transform duration-300 group-hover:scale-110"
@@ -82,9 +106,16 @@ export function ChildCard({ child }: ChildCardProps) {
             ) : (
               <p className="text-slate-600 text-xs mt-0.5">No grade set</p>
             )}
+            {/* Last active indicator */}
+            {lastActive && (
+              <p className="text-[11px] mt-0.5 font-medium" style={{ color: lastActive.color }}>
+                {lastActive.label}
+              </p>
+            )}
           </div>
         </div>
 
+        {/* Stats footer */}
         <div className="flex items-center gap-4 pt-3 border-t border-white/[0.07]">
           <span className="flex items-center gap-1.5 text-sm font-medium text-yellow-400">
             <Star className="w-3.5 h-3.5 fill-yellow-400" />
@@ -92,7 +123,7 @@ export function ChildCard({ child }: ChildCardProps) {
           </span>
           <span className="flex items-center gap-1.5 text-sm font-medium text-orange-400">
             <Flame className="w-3.5 h-3.5" />
-            {child.streak_days} day streak
+            {child.streak_days} day{child.streak_days !== 1 ? 's' : ''}
           </span>
         </div>
       </div>

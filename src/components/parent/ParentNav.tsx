@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { LayoutDashboard, Users, CreditCard, Settings, LogOut } from 'lucide-react'
+import { LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { href: '/children', label: 'Children', icon: Users },
   { href: '/billing', label: 'Billing', icon: CreditCard },
   { href: '/account', label: 'Account', icon: Settings },
+  { href: '/how-to', label: 'How it works', icon: HelpCircle },
 ]
 
 export function ParentNav() {
