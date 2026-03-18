@@ -115,6 +115,11 @@ export function LevelFinderQuiz({ childId, childName, schoolGrade }: LevelFinder
       return
     }
 
+    if (!data.question) {
+      toast.error('No more questions available.')
+      setPhase('idle')
+      return
+    }
     setCurrent({ data: data.question, sessionId: current.sessionId, startedAt: Date.now() })
     setAnswer('')
     setSelectedOption(null)

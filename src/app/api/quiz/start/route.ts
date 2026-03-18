@@ -94,19 +94,24 @@ export async function POST(request: NextRequest) {
     firstQuestion = anyOA ?? null
   }
 
+  if (!firstQuestion) {
+    return NextResponse.json(
+      { error: 'No diagnostic questions found. Please seed the question bank first.' },
+      { status: 500 }
+    )
+  }
+
   return NextResponse.json({
     sessionId: session.id,
-    question: firstQuestion
-      ? {
-          id:            firstQuestion.id,
-          grade_level:   firstQuestion.grade_level,
-          domain:        firstQuestion.domain,
-          question_text: firstQuestion.question_text,
-          question_type: firstQuestion.question_type,
-          options:       firstQuestion.options,
-          difficulty:    firstQuestion.difficulty,
-        }
-      : null,
+    question: {
+      id:            firstQuestion.id,
+      grade_level:   firstQuestion.grade_level,
+      domain:        firstQuestion.domain,
+      question_text: firstQuestion.question_text,
+      question_type: firstQuestion.question_type,
+      options:       firstQuestion.options,
+      difficulty:    firstQuestion.difficulty,
+    },
     currentDomain:  firstDomain,
     domainProgress: getDomainProgress(state),
     questionsAsked: 0,
