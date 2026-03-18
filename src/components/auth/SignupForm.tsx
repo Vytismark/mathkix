@@ -20,6 +20,11 @@ export function SignupForm() {
   async function handleGoogleSignIn() {
     setLoading(true)
     const supabase = createClient()
+
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'qualify_lead', { method: 'google' })
+    }
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -54,6 +59,13 @@ export function SignupForm() {
       toast.error(error.message)
       setLoading(false)
       return
+    }
+
+    // GA4: track signup as a lead
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'qualify_lead', {
+        method: 'email',
+      })
     }
 
     setDone(true)

@@ -3,6 +3,36 @@ import type Stripe from 'stripe'
 import { stripe } from '@/lib/stripe/server'
 import { createServiceClient } from '@/lib/supabase/server'
 
+async function sendGA4PurchaseEvent(params: {
+  transactionId: string
+  value: number
+  currency: string
+  planType: string
+}) {
+  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const apiSecret = process.env.GA4_MEASUREMENT_PROTOCOL_SECRET
+  if (!measurementId || !apiSecret) return
+
+  await fetch(
+    `https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        client_id: params.transactionId, // use transaction ID as anonymous client
+        events: [{
+          name: 'purchase',
+          params: {
+            transaction_id: params.transactionId,
+            value: params.value,
+            currency: params.currency,
+            items: [{ item_name: `MathKix ${params.planType}`, price: params.value, quantity: 1 }],
+          },
+        }],
+      }),
+    }
+  ).catch(() => { /* non-critical, don't fail the webhook */ })
+}
+
 export async function POST(request: NextRequest) {
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
   if (!webhookSecret) {
@@ -35,13 +65,28 @@ export async function POST(request: NextRequest) {
       if (session.mode === 'subscription' && session.subscription) {
         const sub = await stripe.subscriptions.retrieve(session.subscription as string)
         await upsertSubscription(supabase, userId, sub)
+        const planType = getPlanType(sub.items.data[0]?.price.id ?? null)
+        const amountPaid = (session.amount_total ?? 0) / 100
+        await sendGA4PurchaseEvent({
+          transactionId: session.id,
+          value: amountPaid,
+          currency: session.currency?.toUpperCase() ?? 'USD',
+          planType,
+        })
       } else if (session.mode === 'payment') {
         // Lifetime purchase
+        const priceId = session.line_items?.data[0]?.price?.id ?? null
         await supabase.from('subscriptions').upsert({
           profile_id: userId,
           plan_type: 'lifetime',
           status: 'active',
-          stripe_price_id: session.line_items?.data[0]?.price?.id ?? null,
+          stripe_price_id: priceId,
+        })
+        await sendGA4PurchaseEvent({
+          transactionId: session.id,
+          value: (session.amount_total ?? 14999) / 100,
+          currency: session.currency?.toUpperCase() ?? 'USD',
+          planType: 'lifetime',
         })
       }
       break
