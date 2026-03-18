@@ -121,12 +121,14 @@ const STATS = [
   { value: '0',      label: 'Ads, ever'            },
 ]
 
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://mathkix.com'
+
 const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'MathKix',
-  url: 'https://mathkix.com',
-  logo: 'https://mathkix.com/mathkix-logo.svg',
+  url: BASE_URL,
+  logo: `${BASE_URL}/mathkix-logo.svg`,
   description:
     'AI-powered adaptive math learning platform for children in Grades 1-5, aligned to Common Core State Standards.',
   contactPoint: {
@@ -149,7 +151,6 @@ const SOFTWARE_SCHEMA = {
     priceCurrency: 'USD',
     offerCount: 3,
   },
-  aggregateRating: undefined,
   audience: {
     '@type': 'EducationalAudience',
     educationalRole: 'student',
@@ -701,7 +702,7 @@ export default function LandingPage() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
           <span className="flex items-center gap-2">
-            <Image src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
+            <Image src="/mathkix-icon.svg" alt="MathKix logo" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
               <span style={{ color: '#E74C3C' }}>Kix</span>

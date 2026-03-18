@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description: 'Terms of Service for MathKix, the adaptive math learning platform for Grades 1-5.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of Service - MathKix',
+    description: 'Terms of Service for MathKix, the adaptive math learning platform for Grades 1-5.',
+  },
 }
 
 export default function TermsPage() {

@@ -5,6 +5,7 @@ import { createServiceClient } from '@/lib/supabase/server'
 
 async function sendGA4PurchaseEvent(params: {
   transactionId: string
+  userId: string
   value: number
   currency: string
   planType: string
@@ -18,7 +19,8 @@ async function sendGA4PurchaseEvent(params: {
     {
       method: 'POST',
       body: JSON.stringify({
-        client_id: params.transactionId, // use transaction ID as anonymous client
+        client_id: params.userId,
+        user_id: params.userId,
         events: [{
           name: 'purchase',
           params: {
@@ -69,6 +71,7 @@ export async function POST(request: NextRequest) {
         const amountPaid = (session.amount_total ?? 0) / 100
         await sendGA4PurchaseEvent({
           transactionId: session.id,
+          userId,
           value: amountPaid,
           currency: session.currency?.toUpperCase() ?? 'USD',
           planType,
@@ -84,6 +87,7 @@ export async function POST(request: NextRequest) {
         })
         await sendGA4PurchaseEvent({
           transactionId: session.id,
+          userId,
           value: (session.amount_total ?? 14999) / 100,
           currency: session.currency?.toUpperCase() ?? 'USD',
           planType: 'lifetime',

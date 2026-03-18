@@ -84,27 +84,24 @@ const PRICING_SCHEMA = {
       name: 'Monthly',
       price: '9.99',
       priceCurrency: 'USD',
-      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
-      url: 'https://mathkix.com/pricing',
+      url: `${process.env.NEXT_PUBLIC_APP_URL ?? 'https://mathkix.com'}/pricing`,
     },
     {
       '@type': 'Offer',
       name: 'Annual',
       price: '79.99',
       priceCurrency: 'USD',
-      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
-      url: 'https://mathkix.com/pricing',
+      url: `${process.env.NEXT_PUBLIC_APP_URL ?? 'https://mathkix.com'}/pricing`,
     },
     {
       '@type': 'Offer',
       name: 'Lifetime',
       price: '149.99',
       priceCurrency: 'USD',
-      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
-      url: 'https://mathkix.com/pricing',
+      url: `${process.env.NEXT_PUBLIC_APP_URL ?? 'https://mathkix.com'}/pricing`,
     },
   ],
 }
@@ -308,7 +305,7 @@ export default function PricingPage() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
           <span className="flex items-center gap-2">
-            <Image src="/mathkix-icon.svg" alt="" width={28} height={28} className="h-7 w-7" />
+            <Image src="/mathkix-icon.svg" alt="MathKix logo" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
               <span style={{ color: '#E74C3C' }}>Kix</span>

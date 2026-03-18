@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description: 'Learn how MathKix protects your data and your children\'s privacy. COPPA compliant.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy - MathKix',
+    description: 'Learn how MathKix protects your data and your children\'s privacy. COPPA compliant.',
+  },
 }
 
 export default function PrivacyPage() {
