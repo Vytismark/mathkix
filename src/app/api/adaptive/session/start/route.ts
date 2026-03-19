@@ -12,6 +12,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { requireActiveSubscription } from '@/lib/subscription-guard'
+import { captureServerEvent } from '@/lib/posthog/server'
 import type { Domain } from '@/types/quiz'
 import type { SRItem, TopicAffinity, MixedQuestion, QuestionScoringContext } from '@/types/adaptive'
 import {
@@ -214,6 +215,22 @@ export async function POST(request: NextRequest) {
     .from('practice_sessions')
     .update({ engine_state: engineStateWithQuestions as unknown as Json })
     .eq('id', session.id)
+
+  // Check if this is the child's first ever practice session
+  const { count: prevSessionCount } = await supabase
+    .from('practice_sessions')
+    .select('*', { count: 'exact', head: true })
+    .eq('child_id', childId)
+    .neq('id', session.id)
+
+  const isFirst = (prevSessionCount ?? 0) === 0
+  captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
+    child_id: childId,
+    session_id: session.id,
+    question_count: final.length,
+    grade: child.school_grade ?? 0,
+    is_first: isFirst,
+  }).catch(() => {})
 
   // Fire session_start event
   supabase.from('behavioral_events').insert({

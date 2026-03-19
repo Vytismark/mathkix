@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { toast } from 'sonner'
 import { User, Mail, Lock } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { getPasswordStrength } from '@/lib/password'
+import { captureEvent } from '@/lib/posthog/client'
 
 export function SignupForm() {
   const [fullName, setFullName] = useState('')
@@ -17,6 +18,10 @@ export function SignupForm() {
 
   const strength = getPasswordStrength(password)
 
+  useEffect(() => {
+    captureEvent('signup_started', { method: 'page_load' })
+  }, [])
+
   async function handleGoogleSignIn() {
     setLoading(true)
     const supabase = createClient()
@@ -25,6 +30,7 @@ export function SignupForm() {
       window.gtag('event', 'qualify_lead', { method: 'google' })
       window.gtag('event', 'conversion', { send_to: 'AW-18023157221/A6BbCL2zjIscEOWbjpJD' })
     }
+    captureEvent('signup_completed', { method: 'google' })
 
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
@@ -67,6 +73,7 @@ export function SignupForm() {
       window.gtag('event', 'qualify_lead', { method: 'email' })
       window.gtag('event', 'conversion', { send_to: 'AW-18023157221/A6BbCL2zjIscEOWbjpJD' })
     }
+    captureEvent('signup_completed', { method: 'email' })
 
     setDone(true)
   }

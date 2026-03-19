@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { requireActiveSubscription } from '@/lib/subscription-guard'
+import { captureServerEvent } from '@/lib/posthog/server'
 import { anthropic } from '@/lib/anthropic/client'
 import {
   buildDomainAssessmentSystemPrompt,
@@ -137,6 +138,13 @@ export async function POST(request: NextRequest) {
       })
     }
   }
+
+  captureServerEvent(user.id, 'quiz_completed', {
+    child_id: childId,
+    session_id: sessionId,
+    scoring_method: scoringMethod,
+    questions_answered: questionsAsked.length,
+  }).catch(() => {})
 
   return NextResponse.json({
     result: {

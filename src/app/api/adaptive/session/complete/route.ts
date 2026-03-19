@@ -8,6 +8,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { requireActiveSubscription } from '@/lib/subscription-guard'
+import { captureServerEvent } from '@/lib/posthog/server'
 import { scoreToSRQuality, applyReview, createInitialSRItem } from '@/lib/adaptive/spaced-repetition'
 import { checkAchievements, buildAchievementRow } from '@/lib/adaptive/achievements'
 import { computeAffinityDelta, applyScoreAdjustment } from '@/lib/adaptive/affinity'
@@ -433,6 +434,27 @@ export async function POST(request: NextRequest) {
         last_updated: new Date().toISOString(),
       }, { onConflict: 'child_id,domain' })
     }
+  }
+
+  // ── PostHog: session completed ───────────────────────────
+  {
+    const { count: prevCompletedCount } = await supabase
+      .from('practice_sessions')
+      .select('*', { count: 'exact', head: true })
+      .eq('child_id', childId)
+      .eq('status', 'completed')
+      .neq('id', sessionId)
+
+    const isFirst = (prevCompletedCount ?? 0) === 0
+    captureServerEvent(user.id, isFirst ? 'first_session_completed' : 'session_completed', {
+      child_id: childId,
+      session_id: sessionId,
+      score_pct: scorePct,
+      xp_earned: totalXP,
+      questions_answered: mixedQuestions.length,
+      correct_count: correctCount,
+      is_first: isFirst,
+    }).catch(() => {})
   }
 
   // ── Fire behavioral event ────────────────────────────────

@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Lock } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import { captureEvent } from '@/lib/posthog/client'
 
 export function TrialExpiredModal() {
   const pathname = usePathname()
@@ -13,6 +14,10 @@ export function TrialExpiredModal() {
   if (pathname.startsWith('/billing')) return null
 
   const priceId = process.env.NEXT_PUBLIC_STRIPE_PRICE_MONTHLY ?? ''
+
+  useEffect(() => {
+    captureEvent('trial_expired_modal_shown')
+  }, [])
 
   async function handleSubscribe() {
     setLoading(true)

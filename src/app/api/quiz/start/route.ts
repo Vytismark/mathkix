@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { requireActiveSubscription } from '@/lib/subscription-guard'
+import { captureServerEvent } from '@/lib/posthog/server'
 import {
   createDomainAdaptiveState,
   getCurrentDomain,
@@ -41,6 +42,13 @@ export async function POST(request: NextRequest) {
     .single()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+
+  captureServerEvent(user.id, 'quiz_started', {
+    child_id: childId,
+    session_id: session.id,
+    grade: schoolGrade,
+    total_questions: totalQuestions,
+  }).catch(() => {})
 
   // Build domain state - first domain is OA at difficulty 2
   const state = createDomainAdaptiveState(schoolGrade)

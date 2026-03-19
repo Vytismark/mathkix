@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { getTrialState } from '@/lib/trial'
+import { captureServerEvent } from '@/lib/posthog/server'
 
 // GET /api/children - list all children for the logged-in parent
 export async function GET() {
@@ -99,6 +100,11 @@ export async function POST(request: NextRequest) {
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
+
+  captureServerEvent(user.id, 'child_added', {
+    grade: school_grade,
+    child_id: data.id,
+  }).catch(() => {})
 
   return NextResponse.json({ child: data }, { status: 201 })
 }

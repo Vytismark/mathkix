@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import type Stripe from 'stripe'
 import { stripe } from '@/lib/stripe/server'
 import { createServiceClient } from '@/lib/supabase/server'
+import { captureServerEvent } from '@/lib/posthog/server'
 
 async function sendGA4PurchaseEvent(params: {
   transactionId: string
@@ -76,6 +77,12 @@ export async function POST(request: NextRequest) {
           currency: session.currency?.toUpperCase() ?? 'USD',
           planType,
         })
+        captureServerEvent(userId, 'subscription_started', {
+          plan: planType,
+          price: amountPaid,
+          currency: session.currency?.toUpperCase() ?? 'USD',
+          transaction_id: session.id,
+        }).catch(() => {})
       } else if (session.mode === 'payment') {
         // Lifetime purchase
         const priceId = session.line_items?.data[0]?.price?.id ?? null
@@ -85,13 +92,20 @@ export async function POST(request: NextRequest) {
           status: 'active',
           stripe_price_id: priceId,
         })
+        const lifetimeAmount = (session.amount_total ?? 14999) / 100
         await sendGA4PurchaseEvent({
           transactionId: session.id,
           userId,
-          value: (session.amount_total ?? 14999) / 100,
+          value: lifetimeAmount,
           currency: session.currency?.toUpperCase() ?? 'USD',
           planType: 'lifetime',
         })
+        captureServerEvent(userId, 'subscription_started', {
+          plan: 'lifetime',
+          price: lifetimeAmount,
+          currency: session.currency?.toUpperCase() ?? 'USD',
+          transaction_id: session.id,
+        }).catch(() => {})
       }
       break
     }
@@ -114,6 +128,10 @@ export async function POST(request: NextRequest) {
           .from('subscriptions')
           .update({ status: 'canceled' })
           .eq('stripe_subscription_id', sub.id)
+        captureServerEvent(userId, 'subscription_cancelled', {
+          plan: getPlanType(sub.items.data[0]?.price.id ?? null),
+          subscription_id: sub.id,
+        }).catch(() => {})
       }
       break
     }
