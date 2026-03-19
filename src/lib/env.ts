@@ -25,6 +25,6 @@ export const env = {
   get ADMIN_EMAILS() { return required('ADMIN_EMAILS') },
   get CRON_SECRET() { return required('CRON_SECRET') },
   get RESEND_API_KEY() { return optional('RESEND_API_KEY', '') },
-  get SUPPORT_FROM_EMAIL() { return optional('SUPPORT_FROM_EMAIL', 'support@mathkix.com') },
+  get SUPPORT_FROM_EMAIL() { return optional('SUPPORT_FROM_EMAIL', 'hello@mathkix.com') },
   get ADMIN_NOTIFICATION_EMAIL() { return optional('ADMIN_NOTIFICATION_EMAIL', '') },
 } as const

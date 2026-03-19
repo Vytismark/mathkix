@@ -3,7 +3,7 @@ import { resend } from '@/lib/email/resend'
 import { isRateLimited } from '@/lib/rate-limit'
 import { escapeHtml } from '@/lib/security'
 
-const FROM_EMAIL = process.env.SUPPORT_FROM_EMAIL ?? 'support@mathkix.com'
+const FROM_EMAIL = `MathKix <${process.env.SUPPORT_FROM_EMAIL ?? 'hello@mathkix.com'}>`
 const ADMIN_EMAIL = process.env.ADMIN_NOTIFICATION_EMAIL ?? ''
 
 export async function POST(request: NextRequest) {

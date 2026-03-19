@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { requireActiveSubscription } from '@/lib/subscription-guard'
+import { enqueueEmail, DRIP_KEYS } from '@/lib/email/drip-queue'
 import { scoreLesson, calculateXP, getMasteryDelta } from '@/lib/quiz/scoring'
 import { scoreToSRQuality, applyReview, createInitialSRItem } from '@/lib/adaptive/spaced-repetition'
 import type { LessonQuestion } from '@/types/curriculum'
@@ -25,7 +26,7 @@ export async function POST(request: NextRequest, { params }: Params) {
   // Verify child ownership
   const { data: child } = await supabase
     .from('children')
-    .select('id, xp_total, streak_days, last_active')
+    .select('id, name, xp_total, streak_days, last_active')
     .eq('id', childId)
     .eq('profile_id', user.id)
     .single()
@@ -158,6 +159,14 @@ export async function POST(request: NextRequest, { params }: Params) {
       await supabase.from('spaced_repetition_items').insert(newItem)
     }
   }
+
+  // Enqueue first-lesson-complete email (idempotent via UNIQUE key)
+  enqueueEmail(
+    user.id,
+    DRIP_KEYS.FIRST_LESSON_COMPLETE,
+    new Date(),
+    { childName: child.name ?? null, xpEarned },
+  ).catch(() => {})
 
   return NextResponse.json({
     score_pct,

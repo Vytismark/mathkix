@@ -3,6 +3,7 @@ import type Stripe from 'stripe'
 import { stripe } from '@/lib/stripe/server'
 import { createServiceClient } from '@/lib/supabase/server'
 import { captureServerEvent } from '@/lib/posthog/server'
+import { enqueueEmail, cancelTrialEmails, DRIP_KEYS } from '@/lib/email/drip-queue'
 
 async function sendGA4PurchaseEvent(params: {
   transactionId: string
@@ -83,6 +84,9 @@ export async function POST(request: NextRequest) {
           currency: session.currency?.toUpperCase() ?? 'USD',
           transaction_id: session.id,
         }).catch(() => {})
+        // Drip: cancel trial expiry emails, send welcome-paid
+        cancelTrialEmails(userId).catch(() => {})
+        enqueueEmail(userId, DRIP_KEYS.WELCOME_PAID, new Date(), { planType }).catch(() => {})
       } else if (session.mode === 'payment') {
         // Lifetime purchase
         const priceId = session.line_items?.data[0]?.price?.id ?? null
@@ -106,6 +110,9 @@ export async function POST(request: NextRequest) {
           currency: session.currency?.toUpperCase() ?? 'USD',
           transaction_id: session.id,
         }).catch(() => {})
+        // Drip: cancel trial expiry emails, send welcome-paid
+        cancelTrialEmails(userId).catch(() => {})
+        enqueueEmail(userId, DRIP_KEYS.WELCOME_PAID, new Date(), { planType: 'lifetime' }).catch(() => {})
       }
       break
     }

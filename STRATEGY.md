@@ -45,26 +45,6 @@ Before any growth work, the funnel must be airtight. Wait for QA tester results,
 
 ## Phase 1 — Foundation (Weeks 1-2, post-QA)
 
-### 1.1 Analytics ✅ DONE
-
-PostHog is live on mathkix.com. All 8 core events are wired up:
-
-```
-signup_started → signup_completed       (SignupForm, email + Google)
-child_added                             (POST /api/children)
-quiz_started → quiz_completed           (placement quiz API)
-first_session_started → first_session_completed  (adaptive session API)
-session_started → session_completed     (every subsequent session)
-subscription_started (plan, price)      (Stripe webhook)
-subscription_cancelled                  (Stripe webhook)
-trial_expired_modal_shown               (TrialExpiredModal)
-```
-
-Events proxy through `/ingest` to bypass ad blockers. Build these funnels in PostHog → Product Analytics → Funnels:
-- **Signup rate:** `signup_started → signup_completed`
-- **Activation rate:** `signup_completed → child_added → first_session_completed`
-- **Conversion rate:** `first_session_completed → subscription_started`
-
 ### 1.2 Email Drip Sequence
 
 You have Resend already configured. Add lifecycle emails:
@@ -259,7 +239,7 @@ Offer: co-op discount code (20% off) in exchange for a mention in their newslett
 Prioritized by impact-to-effort ratio, for features not yet built:
 
 ### High Impact / Low Effort
-- [x] Analytics event tracking (PostHog — 8 events live, reverse proxy, funnels ready)
+- [ ] Analytics event tracking (PostHog/Mixpanel integration)
 - [ ] Lifecycle email drip sequence (7 emails, cron-based)
 - [ ] Plan pre-selection in signup URL (`?plan=annual`)
 - [ ] Streak shield system (1 DB column, minor UI)

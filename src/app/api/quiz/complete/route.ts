@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { requireActiveSubscription } from '@/lib/subscription-guard'
 import { captureServerEvent } from '@/lib/posthog/server'
+import { enqueueEmail, DRIP_KEYS } from '@/lib/email/drip-queue'
 import { anthropic } from '@/lib/anthropic/client'
 import {
   buildDomainAssessmentSystemPrompt,
@@ -145,6 +146,22 @@ export async function POST(request: NextRequest) {
     scoring_method: scoringMethod,
     questions_answered: questionsAsked.length,
   }).catch(() => {})
+
+  // Enqueue placement-complete email
+  {
+    const { data: child } = await supabase
+      .from('children')
+      .select('name, school_grade')
+      .eq('id', childId)
+      .single()
+    const assessedGrade = (session.children as unknown as { school_grade: number | null }).school_grade
+    enqueueEmail(
+      user.id,
+      DRIP_KEYS.PLACEMENT_COMPLETE,
+      new Date(),
+      { childName: child?.name ?? null, assessedGrade },
+    ).catch(() => {})
+  }
 
   return NextResponse.json({
     result: {

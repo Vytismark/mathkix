@@ -197,6 +197,12 @@ export type Database = {
           }
         ]
       }
+      email_queue: {
+        Row: { id: string; profile_id: string; sequence_key: string; send_at: string; sent_at: string | null; cancelled_at: string | null; failed_at: string | null; error: string | null; metadata: Json; created_at: string }
+        Insert: { id?: string; profile_id: string; sequence_key: string; send_at: string; sent_at?: string | null; cancelled_at?: string | null; failed_at?: string | null; error?: string | null; metadata?: Json }
+        Update: { send_at?: string; sent_at?: string | null; cancelled_at?: string | null; failed_at?: string | null; error?: string | null; metadata?: Json }
+        Relationships: [{ foreignKeyName: 'email_queue_profile_id_fkey'; columns: ['profile_id']; isOneToOne: false; referencedRelation: 'profiles'; referencedColumns: ['id'] }]
+      }
     }
     Views: {
       [_ in never]: never

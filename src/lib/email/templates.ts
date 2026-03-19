@@ -1,6 +1,6 @@
 import { resend } from './resend'
 
-const FROM_EMAIL = process.env.SUPPORT_FROM_EMAIL ?? 'support@mathkix.com'
+const FROM_EMAIL = `MathKix <${process.env.SUPPORT_FROM_EMAIL ?? 'hello@mathkix.com'}>`
 const ADMIN_EMAIL = process.env.ADMIN_NOTIFICATION_EMAIL ?? ''
 
 /* ─── Weekly report types ──────────────────────────────────────────────── */
@@ -75,18 +75,18 @@ function childCardHtml(child: WeeklyReportChild, appUrl: string): string {
         </td>
         <td width="2%"></td>
         <td align="center" style="padding:12px 6px;background-color:#eff6ff;border-radius:8px;width:32%;">
-          <div style="font-size:20px;font-weight:800;color:#1d4ed8;line-height:1;">${child.weekAvgScore !== null ? `${child.weekAvgScore}%` : '—'}</div>
+          <div style="font-size:20px;font-weight:800;color:#1d4ed8;line-height:1;">${child.weekAvgScore !== null ? `${child.weekAvgScore}%` : '-'}</div>
           <div style="font-size:11px;color:#1e40af;margin-top:3px;">Accuracy</div>
         </td>
       </tr>
     </table>` : `
     <p style="margin:12px 0 0;font-size:13px;color:#94a3b8;font-style:italic;">
-      No practice this week — a great time to jump back in! 💪
+      No practice this week - a great time to jump back in! 💪
     </p>`
 
   const streakHtml = child.streak_days > 0 ? `
     <p style="margin:12px 0 0;font-size:13px;color:#ea580c;font-weight:600;">
-      🔥 ${child.streak_days}-day streak — keep it going!
+      🔥 ${child.streak_days}-day streak - keep it going!
     </p>` : ''
 
   const achHtml = child.achievements.length > 0 ? `
@@ -207,7 +207,7 @@ function buildWeeklyReportHtml(params: WeeklyReportParams): string {
           <tr>
             <td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:0 0 16px 16px;padding:20px 32px 28px;border-top:1px solid #f1f5f9;">
               <p style="margin:0 0 10px;font-size:13px;color:#94a3b8;text-align:center;">
-                Keep up the great work — every lesson counts! 🌟
+                Keep up the great work - every lesson counts! 🌟
               </p>
               <p style="margin:0;font-size:12px;color:#cbd5e1;text-align:center;line-height:2;">
                 <a href="${appUrl}/account" style="color:#94a3b8;text-decoration:underline;">Manage notifications</a>
@@ -313,7 +313,7 @@ export async function sendEscalationEmail(ticket: {
       to: ADMIN_EMAIL,
       subject: `[Escalated] ${ticket.subject}`,
       html: `
-        <h2>Ticket Escalated — Human Response Needed</h2>
+        <h2>Ticket Escalated - Human Response Needed</h2>
         <p><strong>From:</strong> ${ticket.parentName ?? 'Unknown'} (${ticket.parentEmail})</p>
         <p><strong>Subject:</strong> ${ticket.subject}</p>
         <p><strong>Reason:</strong> ${ticket.escalation_reason ?? 'AI could not resolve'}</p>
@@ -334,12 +334,12 @@ export async function sendAdminReplyEmail(
     await resend.emails.send({
       from: FROM_EMAIL,
       to: parentEmail,
-      subject: `Re: ${ticketSubject} — MathKix Support`,
+      subject: `Re: ${ticketSubject} - MathKix Support`,
       html: `
         <p>Hi ${parentName ?? 'there'},</p>
         <p>Our support team has replied to your ticket: <strong>${ticketSubject}</strong></p>
         <p><a href="${process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'}/support">View your ticket</a></p>
-        <p>— The MathKix Team</p>
+        <p>The MathKix Team</p>
       `,
     })
   } catch (e) {
@@ -356,12 +356,12 @@ export async function sendTicketResolvedEmail(
     await resend.emails.send({
       from: FROM_EMAIL,
       to: parentEmail,
-      subject: `Resolved: ${ticketSubject} — MathKix Support`,
+      subject: `Resolved: ${ticketSubject} - MathKix Support`,
       html: `
         <p>Hi ${parentName ?? 'there'},</p>
         <p>Your support ticket <strong>${ticketSubject}</strong> has been marked as resolved.</p>
         <p>If you still need help, you can reply by <a href="${process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'}/support">opening a new ticket</a>.</p>
-        <p>— The MathKix Team</p>
+        <p>The MathKix Team</p>
       `,
     })
   } catch (e) {

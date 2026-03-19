@@ -154,7 +154,7 @@ export default function PrivacyPage() {
             </ul>
             <p>
               To exercise any of these rights, contact us at{' '}
-              <span className="text-white font-medium">privacy@mathkix.com</span>.
+              <span className="text-white font-medium">hello@mathkix.com</span>.
             </p>
           </section>
 
@@ -180,7 +180,7 @@ export default function PrivacyPage() {
               For privacy-related questions or to exercise your parental rights, contact us at:
             </p>
             <p className="mt-2">
-              <span className="text-white font-medium">privacy@mathkix.com</span>
+              <span className="text-white font-medium">hello@mathkix.com</span>
             </p>
           </section>
 

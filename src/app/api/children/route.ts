@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { getTrialState } from '@/lib/trial'
 import { captureServerEvent } from '@/lib/posthog/server'
+import { enqueueEmail, DRIP_KEYS } from '@/lib/email/drip-queue'
 
 // GET /api/children - list all children for the logged-in parent
 export async function GET() {
@@ -105,6 +106,16 @@ export async function POST(request: NextRequest) {
     grade: school_grade,
     child_id: data.id,
   }).catch(() => {})
+
+  // Enqueue placement nudge for the first child added (+1 hour)
+  if ((childCount ?? 0) === 0) {
+    enqueueEmail(
+      user.id,
+      DRIP_KEYS.CHILD_ADDED_NUDGE,
+      new Date(Date.now() + 3_600_000),
+      { childName: name.trim(), grade: school_grade },
+    ).catch(() => {})
+  }
 
   return NextResponse.json({ child: data }, { status: 201 })
 }
