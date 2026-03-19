@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     childId, message, contextHint, currentQuestion, correctAnswer,
     history, sessionId, autoGreet, wrongExplain,
     struggleCount: rawStruggle, emotionSignal: rawEmotion, problemType: rawProblem,
-    progressSummary,
+    progressSummary, gradeLevel: clientGradeLevel,
   } = body
 
   if (!childId || !message) {
@@ -57,10 +57,10 @@ export async function POST(request: NextRequest) {
     .eq('id', childId)
     .eq('profile_id', user.id)
     .single()
-  if (!child) return NextResponse.json({ error: 'Child not found' }, { status: 404 })
 
-  const gradeLevel = child.grade_level ?? 2
-  const childName = child.name ?? 'there'
+  // Fall back to client-supplied grade level if DB lookup fails (e.g. during setup)
+  const gradeLevel = child?.grade_level ?? clientGradeLevel ?? 2
+  const childName = child?.name ?? 'there'
 
   // Build the hidden context block appended to most prompts
   function buildContextBlock(q: string, ans?: string): string {
@@ -159,6 +159,7 @@ export async function POST(request: NextRequest) {
           }).then(() => {})
         }
       } catch (err) {
+        console.error('[ai-teacher] Anthropic error:', err)
         controller.enqueue(
           encoder.encode(`data: ${JSON.stringify({ error: 'AI unavailable' })}\n\n`)
         )

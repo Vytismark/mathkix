@@ -174,8 +174,11 @@ export function AiTeacherPanel({
           emotionSignal,
           problemType,
           progressSummary: progressSummary ?? null,
+          gradeLevel,
         }),
       })
+
+      if (!res.ok) throw new Error(`API error ${res.status}`)
 
       if (!res.body) throw new Error('No stream')
 
