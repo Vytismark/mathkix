@@ -225,8 +225,8 @@ export function AiTeacherPanel({
         } else if (isWrongExplain) {
           // Fallback explanation when AI is unavailable
           const fallback = correctAnswer
-            ? `That was a tricky one! The answer is ${correctAnswer}. Study it and feel free to ask me why before moving on!`
-            : "That was a tricky one! Look at the correct answer and ask me anything about it before you continue."
+            ? `That was a tricky one! The correct answer is ${correctAnswer}. Type "why is it ${correctAnswer}?" in the box below and I will explain it to you!`
+            : "That was a tricky one! Type your question in the box below and I will explain it!"
           setMessages((prev) => {
             const next = [...prev.slice(0, -1), { role: 'assistant' as const, content: fallback }]
             messagesRef.current = next
@@ -251,8 +251,8 @@ export function AiTeacherPanel({
       } else if (isWrongExplain) {
         // Fallback explanation when AI throws
         const fallback = correctAnswer
-          ? `That was a tricky one! The answer is ${correctAnswer}. Study it and feel free to ask me why before moving on!`
-          : "That was a tricky one! Look at the correct answer and ask me anything about it before you continue."
+          ? `That was a tricky one! The correct answer is ${correctAnswer}. Type "why is it ${correctAnswer}?" in the box below and I will explain it to you!`
+          : "That was a tricky one! Type your question in the box below and I will explain it!"
         setMessages((prev) => {
           const next = prev.filter((m) => m.content !== '')
           const withFallback = [...next, { role: 'assistant' as const, content: fallback }]
