@@ -32,6 +32,7 @@ export async function POST(request: NextRequest) {
     correctAnswer?: string
     autoGreet?: boolean
     wrongExplain?: boolean
+    gradeLevel?: number
   } = await request.json()
 
   const {
