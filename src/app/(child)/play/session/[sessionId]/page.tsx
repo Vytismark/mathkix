@@ -55,6 +55,37 @@ export default function SessionPage() {
   const startedAt      = useRef(Date.now())
   const questionStartMs = useRef(Date.now())
 
+  // ── Greeting pre-fetch cache ───────────────────────────────
+  // Maps questionIndex → pre-fetched greeting text
+  const greetingCache = useRef<Map<number, string>>(new Map())
+
+  const prefetchGreeting = useCallback(async (index: number, qs?: MixedQuestion[]) => {
+    const questionList = qs ?? questions
+    const q = questionList[index]
+    if (!q || greetingCache.current.has(index)) return
+    try {
+      const res = await fetch('/api/adaptive/ai-teacher?prefetch=true', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          childId,
+          autoGreet: true,
+          message: '[New question loaded. Greet the student about this math problem.]',
+          currentQuestion: q.text,
+          correctAnswer: q.correct_answer,
+          history: [],
+          gradeLevel,
+          questionDomain: q.domain,
+          questionType: q.type,
+        }),
+      })
+      if (res.ok) {
+        const { text } = (await res.json()) as { text: string }
+        if (text) greetingCache.current.set(index, text)
+      }
+    } catch { /* silent — auto-greet will fall back to live API call */ }
+  }, [questions, childId, gradeLevel])
+
   // Compute progress summary for AI teacher panel
   const correctCount = useMemo(() => {
     let count = 0
@@ -75,6 +106,8 @@ export default function SessionPage() {
       setQuestions(qs)
       setPhase('answering')
       questionStartMs.current = Date.now()
+      // Pre-fetch Q0 greeting immediately while page is initialising
+      void prefetchGreeting(0, qs)
     } catch {
       router.push('/select')
     }
@@ -110,11 +143,13 @@ export default function SessionPage() {
     setPhase('feedback')
 
     if (isCorrect) {
-      // Correct: show green banner briefly then auto-advance
+      // Pre-fetch next greeting during the 1400ms correct-answer animation
+      void prefetchGreeting(questionIndex + 1)
       await new Promise((r) => setTimeout(r, 1400))
       advanceToNext({ ...answers, [currentQuestion.id]: given })
     } else {
-      // Wrong: show red banner briefly, then transition to review phase
+      // Pre-fetch next greeting during wrong-review (child reads explanation)
+      void prefetchGreeting(questionIndex + 1)
       await new Promise((r) => setTimeout(r, 800))
       setPhase('wrong_review')
       setWrongAnswerTrigger((n) => n + 1)
@@ -347,6 +382,7 @@ export default function SessionPage() {
             questionType={currentQuestion.type}
             progressSummary={`${correctCount} of ${questions.length} correct so far`}
             wrongAnswerTrigger={wrongAnswerTrigger}
+            prefetchedGreeting={greetingCache.current.get(questionIndex)}
             className="h-[300px] sm:h-[420px] md:h-[calc(100vh-100px)] md:max-h-[560px]"
           />
         </div>

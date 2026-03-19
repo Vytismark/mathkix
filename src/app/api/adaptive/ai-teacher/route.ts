@@ -129,6 +129,34 @@ export async function POST(request: NextRequest) {
     .filter((m) => m.content && m.content.trim())
     .slice(-6)
 
+  const claudeMessages = [
+    ...recentHistory.map((m) => ({
+      role: m.role as 'user' | 'assistant',
+      content: m.content,
+    })),
+    { role: 'user' as const, content: userContent },
+  ]
+
+  // ── Prefetch mode: return plain JSON for pre-fetching greetings ──────────
+  // Called with ?prefetch=true from the session page to pre-load auto-greet
+  // responses during answer-transition animations (no SSE overhead needed)
+  const isPrefetch = new URL(request.url).searchParams.get('prefetch') === 'true'
+  if (isPrefetch && autoGreet) {
+    try {
+      const response = await anthropic.messages.create({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 200,
+        system: systemPrompt,
+        messages: claudeMessages,
+      })
+      const text = response.content[0]?.type === 'text' ? response.content[0].text : ''
+      return NextResponse.json({ text })
+    } catch (err) {
+      console.error('[ai-teacher] prefetch error:', err)
+      return NextResponse.json({ text: '' })
+    }
+  }
+
   // Stream response from Claude
   const encoder = new TextEncoder()
 
@@ -139,13 +167,7 @@ export async function POST(request: NextRequest) {
           model: 'claude-haiku-4-5-20251001',
           max_tokens: wrongExplain ? 300 : 200,
           system: systemPrompt,
-          messages: [
-            ...recentHistory.map((m) => ({
-              role: m.role as 'user' | 'assistant',
-              content: m.content,
-            })),
-            { role: 'user', content: userContent },
-          ],
+          messages: claudeMessages,
         })
 
         let fullResponse = ''

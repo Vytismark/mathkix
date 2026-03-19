@@ -77,6 +77,7 @@ interface AiTeacherPanelProps {
   questionType?:    string   // e.g. 'multiple_choice', 'numeric'
   progressSummary?: string   // e.g. "3 of 8 correct so far"
   wrongAnswerTrigger?: number // increment to trigger wrong-answer explanation
+  prefetchedGreeting?: string // pre-fetched greeting text — display instantly, skip API call
   className?:       string
 }
 
@@ -91,6 +92,7 @@ export function AiTeacherPanel({
   questionType,
   progressSummary,
   wrongAnswerTrigger = 0,
+  prefetchedGreeting,
   className = '',
 }: AiTeacherPanelProps) {
   const mode = getTeacherMode(gradeLevel)
@@ -260,10 +262,18 @@ export function AiTeacherPanel({
     greetedQuestionRef.current = currentQuestion
     setMessages([])
     messagesRef.current = []
-    setStruggleCount(0) // reset struggle on new question
-    const t = setTimeout(() => void sendMessage('', true), 300)
-    return () => clearTimeout(t)
-  }, [currentQuestion, sendMessage])
+    setStruggleCount(0)
+
+    if (prefetchedGreeting) {
+      // Display pre-fetched greeting instantly — no API call needed
+      const msg: ChatMessage = { role: 'assistant', content: prefetchedGreeting }
+      setMessages([msg])
+      messagesRef.current = [msg]
+    } else {
+      // Fall back to live API call (no delay — start immediately)
+      void sendMessage('', true)
+    }
+  }, [currentQuestion, sendMessage, prefetchedGreeting])
 
   // ── Auto-explain tapped equation part ────────────────────
   useEffect(() => {
