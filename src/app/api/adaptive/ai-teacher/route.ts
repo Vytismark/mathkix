@@ -113,8 +113,16 @@ export async function POST(request: NextRequest) {
   }
 
   const rawUserContent = buildTeacherUserMessage(message, contextHint)
-  // Guard: Anthropic rejects whitespace-only content blocks
-  const userContent = rawUserContent.trim() ? rawUserContent : 'Hello!'
+  // For auto-greet and wrong-explain, use directive-style triggers so Claude
+  // follows the system prompt instead of treating the placeholder as child speech
+  let userContent: string
+  if (autoGreet) {
+    userContent = '[New question loaded. Greet the student about this math problem.]'
+  } else if (wrongExplain) {
+    userContent = '[Student answered incorrectly. Explain why the correct answer is right.]'
+  } else {
+    userContent = rawUserContent.trim() ? rawUserContent : 'Hello!'
+  }
 
   // Keep last 6 turns of history, excluding any empty-content messages
   const recentHistory = (history ?? [])

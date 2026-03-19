@@ -2,6 +2,11 @@
 
 import { cn } from '@/lib/utils'
 
+/** Strip trailing parenthetical hints like "(also: rhombus, ...)" for display only */
+function stripHint(text: string): string {
+  return text.replace(/\s*\([^)]*\)\s*\.?\s*$/, '').trim() || text
+}
+
 interface Option {
   label: string
   value: string
@@ -34,15 +39,15 @@ export function AnswerGrid({ options, selected, onSelect, onSubmit, disabled }: 
             disabled={disabled}
             className={cn(
               'min-h-16 py-2 px-3 rounded-2xl border-2 font-bold transition-all active:scale-95 flex flex-col items-center justify-center',
-              option.value.length > 12 ? 'text-sm' : 'text-lg',
+              stripHint(option.value).length > 12 ? 'text-sm' : 'text-lg',
               selected === option.value
                 ? 'border-indigo-500 bg-indigo-100 text-indigo-800 scale-[0.97]'
                 : OPTION_COLORS[i % OPTION_COLORS.length],
               disabled && 'cursor-not-allowed opacity-70'
             )}
           >
-            <span className="block text-xs font-normal opacity-60 mb-0.5">{option.label}</span>
-            <span className="leading-snug text-center">{option.value}</span>
+            <span className="block text-xs font-normal opacity-60 mb-0.5">{stripHint(option.label)}</span>
+            <span className="leading-snug text-center">{stripHint(option.value)}</span>
           </button>
         ))}
       </div>
