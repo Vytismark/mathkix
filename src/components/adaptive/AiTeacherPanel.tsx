@@ -134,6 +134,7 @@ export function AiTeacherPanel({
     if (!userText && !isAutomatic) return
 
     const isAutoGreet = isAutomatic && !userText && !wrongExplain
+    const isWrongExplain = wrongExplain
     const userMsg: ChatMessage | null = userText ? { role: 'user', content: userText } : null
     const historySnapshot = messagesRef.current.slice(-6)
 
@@ -188,18 +189,18 @@ export function AiTeacherPanel({
         return next
       })
 
-      while (true) {
+      let streamErrorMsg = ''
+      outer: while (true) {
         const { done, value } = await reader.read()
         if (done) break
         const chunk = decoder.decode(value)
         for (const line of chunk.split('\n')) {
           if (!line.startsWith('data: ')) continue
           const payload = line.slice(6).trim()
-          if (payload === '[DONE]') break
+          if (payload === '[DONE]') break outer
           try {
             const parsed = JSON.parse(payload) as { text?: string; error?: string }
-            // If the API sent an error, treat it as a failed stream
-            if (parsed.error) throw new Error(parsed.error)
+            if (parsed.error) { streamErrorMsg = parsed.error; break outer }
             if (parsed.text) {
               aiText += parsed.text
               setMessages((prev) => {
@@ -208,15 +209,26 @@ export function AiTeacherPanel({
                 return next
               })
             }
-          } catch { /* ignore malformed chunks */ }
+          } catch { /* ignore malformed JSON chunks */ }
         }
       }
+      if (streamErrorMsg) throw new Error(streamErrorMsg)
 
       if (!aiText) {
-        // For auto-greets, silently remove the empty placeholder instead of showing an error
         if (isAutoGreet) {
+          // Silently remove the empty placeholder for auto-greets
           setMessages((prev) => {
             const next = prev.slice(0, -1)
+            messagesRef.current = next
+            return next
+          })
+        } else if (isWrongExplain) {
+          // Fallback explanation when AI is unavailable
+          const fallback = correctAnswer
+            ? `That was a tricky one! The answer is ${correctAnswer}. Study it and feel free to ask me why before moving on!`
+            : "That was a tricky one! Look at the correct answer and ask me anything about it before you continue."
+          setMessages((prev) => {
+            const next = [...prev.slice(0, -1), { role: 'assistant' as const, content: fallback }]
             messagesRef.current = next
             return next
           })
@@ -229,16 +241,27 @@ export function AiTeacherPanel({
         }
       }
     } catch {
-      // For auto-greets, fail silently - don't show an error for something the child didn't initiate
       if (isAutoGreet) {
+        // Fail silently for auto-greets
         setMessages((prev) => {
           const next = prev.filter((m) => m.content !== '')
           messagesRef.current = next
           return next
         })
+      } else if (isWrongExplain) {
+        // Fallback explanation when AI throws
+        const fallback = correctAnswer
+          ? `That was a tricky one! The answer is ${correctAnswer}. Study it and feel free to ask me why before moving on!`
+          : "That was a tricky one! Look at the correct answer and ask me anything about it before you continue."
+        setMessages((prev) => {
+          const next = prev.filter((m) => m.content !== '')
+          const withFallback = [...next, { role: 'assistant' as const, content: fallback }]
+          messagesRef.current = withFallback
+          return withFallback
+        })
       } else {
         setMessages((prev) => {
-          const next = [...prev, { role: 'assistant' as const, content: "I'm having a little trouble right now. Ask me again in a moment! 😊" }]
+          const next = [...prev, { role: 'assistant' as const, content: "I'm having a little trouble right now. Ask me again in a moment!" }]
           messagesRef.current = next
           return next
         })
