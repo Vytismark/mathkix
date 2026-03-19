@@ -282,7 +282,7 @@ export function BillingCard({ subscription }: BillingCardProps) {
                 <div className="flex items-end gap-0.5 mb-1">
                   <span className="text-lg font-bold self-start mt-1.5" style={{ color: accentColor }}>$</span>
                   <span className="text-[52px] font-black text-white leading-none tracking-tighter">
-                    {(plan.price / 100).toFixed(0)}
+                    {(plan.price / 100).toFixed(2).replace(/\.?0+$/, '')}
                   </span>
                   <span className="text-slate-500 text-sm mb-2 ml-0.5">
                     {plan.interval === 'month' ? '/mo' : plan.interval === 'year' ? '/yr' : ''}
