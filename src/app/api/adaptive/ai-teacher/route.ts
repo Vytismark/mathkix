@@ -63,6 +63,14 @@ export async function POST(request: NextRequest) {
   const gradeLevel = child?.grade_level ?? clientGradeLevel ?? 2
   const childName = child?.name ?? 'there'
 
+  // Strip trailing parenthetical hints like "(also: rhombus, ...)" from answer
+  // before giving it to Claude so it never leaks into responses
+  function cleanAnswer(ans: string | undefined | null): string | undefined {
+    if (!ans) return undefined
+    return ans.replace(/\s*\([^)]*\)\s*\.?\s*$/, '').trim() || ans
+  }
+  const displayableAnswer = cleanAnswer(correctAnswer)
+
   // Build the hidden context block appended to most prompts
   function buildContextBlock(q: string, ans?: string): string {
     const ansLine = ans
@@ -80,22 +88,22 @@ export async function POST(request: NextRequest) {
   // Build system prompt adapted to grade level
   // Priority: wrongExplain > auto-greet > click-to-explain > regular message
   let systemPrompt: string
-  if (wrongExplain && currentQuestion && correctAnswer) {
-    systemPrompt = buildWrongAnswerExplainPrompt(gradeLevel, childName, currentQuestion, correctAnswer, problemType)
+  if (wrongExplain && currentQuestion && displayableAnswer) {
+    systemPrompt = buildWrongAnswerExplainPrompt(gradeLevel, childName, currentQuestion, displayableAnswer, problemType)
   } else if (autoGreet && currentQuestion) {
     const greetBase = buildAutoGreetPrompt(gradeLevel, childName, currentQuestion, problemType)
-    systemPrompt = correctAnswer
-      ? `${greetBase}\n\nCORRECT ANSWER (NEVER reveal): "${correctAnswer}"`
+    systemPrompt = displayableAnswer
+      ? `${greetBase}\n\nCORRECT ANSWER (NEVER reveal): "${displayableAnswer}"`
       : greetBase
   } else if (contextHint && !message.trim()) {
     const base = buildClickToExplainPrompt(gradeLevel, childName, contextHint, emotionSignal)
     systemPrompt = currentQuestion
-      ? `${base}${buildContextBlock(currentQuestion, correctAnswer)}`
+      ? `${base}${buildContextBlock(currentQuestion, displayableAnswer)}`
       : base
   } else {
     const base = buildTeacherSystemPrompt(gradeLevel, childName, promptOptions)
     systemPrompt = currentQuestion
-      ? `${base}${buildContextBlock(currentQuestion, correctAnswer)}`
+      ? `${base}${buildContextBlock(currentQuestion, displayableAnswer)}`
       : base
   }
 
@@ -104,10 +112,14 @@ export async function POST(request: NextRequest) {
     systemPrompt = `[PROGRESS: ${progressSummary}. Struggle count: ${struggleCount}. Emotion: ${emotionSignal}.]\n\n${systemPrompt}`
   }
 
-  const userContent = buildTeacherUserMessage(message, contextHint)
+  const rawUserContent = buildTeacherUserMessage(message, contextHint)
+  // Guard: Anthropic rejects whitespace-only content blocks
+  const userContent = rawUserContent.trim() ? rawUserContent : 'Hello!'
 
-  // Keep last 6 turns of history to stay within context budget
-  const recentHistory = (history ?? []).slice(-6)
+  // Keep last 6 turns of history, excluding any empty-content messages
+  const recentHistory = (history ?? [])
+    .filter((m) => m.content && m.content.trim())
+    .slice(-6)
 
   // Stream response from Claude
   const encoder = new TextEncoder()

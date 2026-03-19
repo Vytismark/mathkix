@@ -163,7 +163,7 @@ export function AiTeacherPanel({
         body: JSON.stringify({
           childId,
           sessionId:       sessionId ?? null,
-          message:         userText || ' ',
+          message:         userText || (wrongExplain ? 'Please explain the answer.' : 'Hello, what is this question about?'),
           contextHint:     contextHint ?? null,
           currentQuestion: currentQuestion ?? null,
           correctAnswer:   correctAnswer ?? null,
@@ -218,49 +218,29 @@ export function AiTeacherPanel({
       if (streamErrorMsg) throw new Error(streamErrorMsg)
 
       if (!aiText) {
-        if (isAutoGreet) {
-          // Silently remove the empty placeholder for auto-greets
-          setMessages((prev) => {
-            const next = prev.slice(0, -1)
-            messagesRef.current = next
-            return next
-          })
-        } else if (isWrongExplain) {
-          // Fallback explanation when AI is unavailable
-          const fallback = correctAnswer
-            ? `That was a tricky one! The correct answer is ${correctAnswer}. Type "why is it ${correctAnswer}?" in the box below and I will explain it to you!`
-            : "That was a tricky one! Type your question in the box below and I will explain it!"
-          setMessages((prev) => {
-            const next = [...prev.slice(0, -1), { role: 'assistant' as const, content: fallback }]
-            messagesRef.current = next
-            return next
-          })
-        } else {
+        // Remove the empty placeholder — auto-greet and wrong-explain fail silently
+        if (!isAutoGreet && !isWrongExplain) {
           setMessages((prev) => {
             const next = [...prev.slice(0, -1), { role: 'assistant' as const, content: "Hmm, I didn't get that. Try asking again!" }]
             messagesRef.current = next
             return next
           })
+        } else {
+          setMessages((prev) => {
+            const next = prev.slice(0, -1)
+            messagesRef.current = next
+            return next
+          })
         }
       }
-    } catch {
-      if (isAutoGreet) {
-        // Fail silently for auto-greets
+    } catch (err) {
+      console.error('[AiTeacherPanel] sendMessage error:', err)
+      // Auto-greet and wrong-explain fail silently — clear any empty placeholder
+      if (isAutoGreet || isWrongExplain) {
         setMessages((prev) => {
           const next = prev.filter((m) => m.content !== '')
           messagesRef.current = next
           return next
-        })
-      } else if (isWrongExplain) {
-        // Fallback explanation when AI throws
-        const fallback = correctAnswer
-          ? `That was a tricky one! The correct answer is ${correctAnswer}. Type "why is it ${correctAnswer}?" in the box below and I will explain it to you!`
-          : "That was a tricky one! Type your question in the box below and I will explain it!"
-        setMessages((prev) => {
-          const next = prev.filter((m) => m.content !== '')
-          const withFallback = [...next, { role: 'assistant' as const, content: fallback }]
-          messagesRef.current = withFallback
-          return withFallback
         })
       } else {
         setMessages((prev) => {

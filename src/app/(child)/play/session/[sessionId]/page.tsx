@@ -18,6 +18,12 @@ function looksLikeMath(text: string): boolean {
   return /[\+×÷=]|\d+\/\d+/.test(text) && text.length < 80
 }
 
+/** Strip trailing parenthetical hints like "(also: rhombus, ...)" from displayed answers */
+function displayAnswer(ans: string): string {
+  // Use [^)]* instead of .* to avoid multiline/greedy issues
+  return ans.replace(/\s*\([^)]*\)\s*\.?\s*$/, '').trim() || ans
+}
+
 const DOMAIN_LABELS: Record<string, string> = {
   OA:  '➕ Operations',
   NBT: '🔢 Number & Place Value',
@@ -258,7 +264,7 @@ export default function SessionPage() {
           {phase === 'wrong_review' && currentQuestion && (
             <div className="rounded-2xl px-4 py-3 text-center bg-amber-50 border border-amber-200">
               <p className="text-amber-700 font-bold text-lg mb-1">
-                The answer was: {currentQuestion.correct_answer}
+                The answer was: {displayAnswer(currentQuestion.correct_answer)}
               </p>
               <p className="text-amber-600 text-sm">Ms. Owl is explaining why</p>
             </div>
