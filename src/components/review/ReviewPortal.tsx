@@ -947,6 +947,26 @@ const TRUST_COLORS = {
   Low:    'bg-emerald-900/40 text-emerald-300 border border-emerald-700',
 }
 
+// Pre-filled templates for each flag type — helps reviewers write consistent notes
+const FLAG_TEMPLATES: Record<string, { comment: string; fix: string }> = {
+  wrong_answer:        { comment: 'The correct answer shown is wrong.', fix: 'Change correct_answer to [X]. Work: [show your calculation]' },
+  ui_mismatch:         { comment: 'The answer cannot be entered with the current input type.', fix: 'Change question type to [multiple_choice / numeric / fraction] OR change the answer to a value that fits the current type.' },
+  format_error:        { comment: 'Multiple choice question has too few answer options.', fix: 'Add more options. Suggested additions: [option 1, option 2...]' },
+  missing_visual_ref:  { comment: 'Question refers to a diagram or picture but no image is shown.', fix: 'Either add an image of [describe what is needed] OR rewrite the question so it does not reference a visual.' },
+  unanswerable:        { comment: 'The question is missing information needed to solve it.', fix: 'Add the missing [number / unit / context] OR rewrite as: "[your suggested version]"' },
+  grade_mismatch:      { comment: 'This question seems too [hard / easy] for the stated grade.', fix: 'Move to Grade [X] OR simplify/extend to: "[your suggested version]"' },
+  weak_distractors:    { comment: 'The wrong answer options are too obvious and would not challenge a student guessing.', fix: 'Replace weak options with common mistake answers: [A: ..., B: ..., C: ...]' },
+  ambiguous_wording:   { comment: 'The wording can be interpreted in more than one way.', fix: 'Rewrite as: "[your clearer version]"' },
+}
+
+const FIX_EXAMPLES = [
+  { label: 'Wrong answer',      text: 'Change correct_answer to 56. Work: 7 × 8 = 56, not 54.' },
+  { label: 'UI mismatch',       text: 'Answer is "1/2" but input type is numeric. Change correct_answer to 0.5 or change type to fraction.' },
+  { label: 'Missing visual',    text: 'Question says "look at the bar graph" but no graph is shown. Rewrite as: "A bag has 3 red and 5 blue marbles. How many total?"' },
+  { label: 'Ambiguous wording', text: 'Rewrite as: "How many equal groups of 4 can you make from 20 objects?"' },
+  { label: 'Grade mismatch',    text: 'Long division with 3-digit divisor is Grade 5 content. Move to Grade 5 or simplify divisor to single digit.' },
+]
+
 // ── Types ──────────────────────────────────────────────────────────────────────
 
 type GuideTab = 'checklist' | 'standards' | 'flags'
@@ -982,13 +1002,29 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
   const [loading,     setLoading]     = useState(true)
   const [filter,      setFilter]      = useState<FilterTab>('ai_flagged')
   const [idx,         setIdx]         = useState(0)
-  const [guideTab,       setGuideTab]       = useState<GuideTab>('checklist')
-  const [expandedStd,    setExpandedStd]    = useState<string | null>(null)
-  const [isFlagMode,     setIsFlagMode]     = useState(false)
-  const [flagComment, setFlagComment] = useState('')
-  const [fixText,     setFixText]     = useState('')
-  const [submitting,  setSubmitting]  = useState(false)
+  const [guideTab,        setGuideTab]       = useState<GuideTab>('checklist')
+  const [expandedStd,     setExpandedStd]    = useState<string | null>(null)
+  const [isFlagMode,      setIsFlagMode]     = useState(false)
+  const [flagComment,     setFlagComment]    = useState('')
+  const [fixText,         setFixText]        = useState('')
+  const [selectedFlagType, setSelectedFlagType] = useState<string | null>(null)
+  const [showFixExamples, setShowFixExamples] = useState(false)
+  const [toast,           setToast]          = useState<{ msg: string; type: 'approve' | 'flag' } | null>(null)
+  const [showWelcome,     setShowWelcome]    = useState(false)
+  const [submitting,      setSubmitting]     = useState(false)
   const commentRef = useRef<HTMLTextAreaElement>(null)
+
+  // show welcome modal once per browser
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !localStorage.getItem('mkreview_v1_welcomed')) {
+      setShowWelcome(true)
+    }
+  }, [])
+
+  function dismissWelcome() {
+    localStorage.setItem('mkreview_v1_welcomed', '1')
+    setShowWelcome(false)
+  }
 
   // fetch
   useEffect(() => {
@@ -1033,10 +1069,15 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
       })
     : []
 
+  function showToast(msg: string, type: 'approve' | 'flag') {
+    setToast({ msg, type })
+    setTimeout(() => setToast(null), 2200)
+  }
+
   // navigation
   function navigate(dir: number) {
     setIdx(i => Math.max(0, Math.min(filtered.length - 1, i + dir)))
-    setIsFlagMode(false); setFlagComment(''); setFixText('')
+    setIsFlagMode(false); setFlagComment(''); setFixText(''); setSelectedFlagType(null); setShowFixExamples(false)
   }
 
   // keyboard shortcuts
@@ -1070,7 +1111,18 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
     const aiNotes = currentReview?.ai_notes ?? ''
     if (!flagComment) setFlagComment(currentReview?.comment || aiNotes || '')
     if (!fixText) setFixText(currentReview?.suggested_fix ?? '')
+    setSelectedFlagType(null)
+    setShowFixExamples(false)
     setIsFlagMode(true)
+    setTimeout(() => commentRef.current?.focus(), 50)
+  }
+
+  function pickFlagType(code: string) {
+    const t = FLAG_TEMPLATES[code]
+    if (!t) return
+    setSelectedFlagType(code)
+    setFlagComment(t.comment)
+    if (!fixText) setFixText(t.fix)
     setTimeout(() => commentRef.current?.focus(), 50)
   }
 
@@ -1091,6 +1143,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
         is_ai_review: false,
       }},
     } : prev)
+    showToast('Approved', 'approve')
     setSubmitting(false)
     navigate(1)
   }, [current, submitting])
@@ -1116,7 +1169,8 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
         is_ai_review: false,
       }},
     } : prev)
-    setIsFlagMode(false); setFlagComment(''); setFixText('')
+    setIsFlagMode(false); setFlagComment(''); setFixText(''); setSelectedFlagType(null); setShowFixExamples(false)
+    showToast('Flagged', 'flag')
     setSubmitting(false)
     navigate(1)
   }
@@ -1142,6 +1196,58 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
   // ── Layout ───────────────────────────────────────────────────────────────────
   return (
     <div className="min-h-screen flex flex-col bg-gray-950">
+
+      {/* ── Welcome modal ────────────────────────────────────────────────────── */}
+      {showWelcome && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl max-w-lg w-full p-6 space-y-5">
+            <div className="text-center">
+              <div className="text-3xl mb-2">👋</div>
+              <h2 className="text-white font-bold text-lg">Welcome to MathKix Review</h2>
+              <p className="text-gray-400 text-sm mt-1">Here is all you need to know to get started.</p>
+            </div>
+
+            <div className="space-y-3">
+              {[
+                { n: '1', color: 'bg-indigo-600', title: 'Read each question carefully', body: 'Check that the answer is correct, the wording is clear, and it makes sense for the grade shown. The guide panel on the right has a full checklist.' },
+                { n: '2', color: 'bg-emerald-600', title: 'Approve if it looks good', body: 'Press the green Approve button (or → on your keyboard). That\'s it, move on.' },
+                { n: '3', color: 'bg-red-600', title: 'Flag if something is wrong', body: 'Press Flag, pick the issue type to get a pre-filled template, then edit it to describe what is wrong and what the fix should be. Be specific but brief.' },
+              ].map(s => (
+                <div key={s.n} className="flex gap-3 bg-gray-800/60 rounded-xl p-3">
+                  <span className={`${s.color} text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5`}>{s.n}</span>
+                  <div>
+                    <p className="text-sm font-semibold text-white">{s.title}</p>
+                    <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">{s.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-amber-950/40 border border-amber-800/60 rounded-xl p-3">
+              <p className="text-xs font-semibold text-amber-400 mb-1.5">Example of a good flag note</p>
+              <p className="text-xs text-amber-200/80 italic mb-1">&ldquo;The correct answer shown is 54, but 7 × 8 = 56.&rdquo;</p>
+              <p className="text-xs font-semibold text-emerald-400 mb-1 mt-2">With suggested fix</p>
+              <p className="text-xs text-emerald-200/80 italic">&ldquo;Change correct_answer to 56.&rdquo;</p>
+            </div>
+
+            <button onClick={dismissWelcome}
+              className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-colors text-sm">
+              Got it, let&apos;s start reviewing
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* ── Toast ────────────────────────────────────────────────────────────── */}
+      {toast && (
+        <div className={`fixed top-4 right-4 z-50 flex items-center gap-2 px-4 py-2.5 rounded-xl shadow-lg text-sm font-semibold transition-all animate-in fade-in slide-in-from-top-2 ${
+          toast.type === 'approve'
+            ? 'bg-emerald-700 text-white'
+            : 'bg-red-700 text-white'
+        }`}>
+          {toast.type === 'approve' ? '✓ Approved' : '⚑ Flagged'} and saved
+        </div>
+      )}
 
       {/* ── Header ────────────────────────────────────────────────────────────── */}
       <header className="sticky top-0 z-20 bg-gray-900/95 backdrop-blur border-b border-gray-800 px-4 py-2.5 flex items-center gap-3 flex-wrap">
@@ -1381,19 +1487,66 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
               {/* ── Flag form ────────────────────────────────────────────────── */}
               {isFlagMode && (
                 <div className="mt-4 bg-red-950/40 border border-red-800 rounded-2xl p-5 space-y-4">
+
+                  {/* Flag type selector */}
+                  <div>
+                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                      What type of issue is this? <span className="text-gray-600 font-normal normal-case">(pick one to auto-fill a template)</span>
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {FLAGS.map(flag => (
+                        <button
+                          key={flag.code}
+                          onClick={() => pickFlagType(flag.code)}
+                          className={`text-[11px] font-semibold px-2.5 py-1 rounded-full border transition-all ${
+                            selectedFlagType === flag.code
+                              ? flag.color + ' ring-1 ring-white/20 scale-105'
+                              : 'bg-gray-800 text-gray-400 border-gray-700 hover:border-gray-500'
+                          }`}
+                        >
+                          {flag.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* What's wrong */}
                   <div>
                     <label className="block text-sm font-semibold text-red-300 mb-2">
                       What&apos;s wrong? <span className="text-red-500">*</span>
                     </label>
                     <textarea ref={commentRef} value={flagComment}
                       onChange={e => setFlagComment(e.target.value)} rows={2}
-                      placeholder="e.g. Correct answer is wrong — 7 × 8 = 56, not 54"
+                      placeholder="e.g. The correct answer is wrong. 7 × 8 = 56, not 54."
                       className="w-full bg-gray-900 border border-red-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600 resize-none" />
                   </div>
+
+                  {/* Suggested fix */}
                   <div>
-                    <label className="block text-sm font-semibold text-emerald-400 mb-2">
-                      Suggested fix <span className="text-gray-500 font-normal">(optional — very helpful)</span>
-                    </label>
+                    <div className="flex items-center justify-between mb-2">
+                      <label className="text-sm font-semibold text-emerald-400">
+                        Suggested fix <span className="text-gray-500 font-normal">(optional but very helpful)</span>
+                      </label>
+                      <button
+                        onClick={() => setShowFixExamples(v => !v)}
+                        className="text-[11px] text-indigo-400 hover:text-indigo-300 transition-colors"
+                      >
+                        {showFixExamples ? 'Hide examples ▲' : 'See examples ▼'}
+                      </button>
+                    </div>
+
+                    {showFixExamples && (
+                      <div className="mb-2 bg-gray-900 border border-gray-700 rounded-xl p-3 space-y-2">
+                        <p className="text-[10px] text-gray-500 uppercase font-semibold tracking-wider">Example suggested fixes</p>
+                        {FIX_EXAMPLES.map(ex => (
+                          <div key={ex.label}>
+                            <p className="text-[10px] text-indigo-400 font-semibold mb-0.5">{ex.label}</p>
+                            <p className="text-[11px] text-gray-300 italic leading-snug">&ldquo;{ex.text}&rdquo;</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
                     <textarea value={fixText} onChange={e => setFixText(e.target.value)} rows={3}
                       placeholder={
                         current.question_type === 'multiple_choice'
@@ -1402,8 +1555,9 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
                       }
                       className="w-full bg-gray-900 border border-emerald-800 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-700 resize-none placeholder-gray-600" />
                   </div>
+
                   <div className="flex gap-3">
-                    <button onClick={() => { setIsFlagMode(false); setFlagComment(''); setFixText('') }}
+                    <button onClick={() => { setIsFlagMode(false); setFlagComment(''); setFixText(''); setSelectedFlagType(null); setShowFixExamples(false) }}
                       className="flex-1 py-2.5 rounded-xl border border-gray-700 text-gray-300 text-sm font-semibold hover:bg-gray-800 transition-colors">
                       Cancel
                     </button>
