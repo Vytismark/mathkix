@@ -4,8 +4,24 @@ import { useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 
 export default function ReviewLoginPage() {
-  const [loading, setLoading] = useState(false)
-  const [error, setError]     = useState('')
+  const [loading, setLoading]   = useState(false)
+  const [error, setError]       = useState('')
+  const [email, setEmail]       = useState('')
+  const [password, setPassword] = useState('')
+
+  async function handleEmailSignIn(e: React.FormEvent) {
+    e.preventDefault()
+    setError('')
+    setLoading(true)
+    const supabase = createClient()
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    if (error) {
+      setError('Invalid email or password.')
+      setLoading(false)
+    } else {
+      window.location.href = '/review'
+    }
+  }
 
   async function handleGoogleSignIn() {
     setError('')
@@ -40,7 +56,6 @@ export default function ReviewLoginPage() {
               </svg>
             </div>
             <h1 className="text-xl font-bold text-white">Reviewer Access</h1>
-            <p className="text-gray-400 text-sm mt-1">Sign in with the Google account<br/>that was granted access.</p>
           </div>
 
           {error && (
@@ -48,6 +63,39 @@ export default function ReviewLoginPage() {
               {error}
             </p>
           )}
+
+          {/* Email / Password */}
+          <form onSubmit={handleEmailSignIn} className="space-y-3 mb-4">
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+              className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+              className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500"
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-800 text-white font-semibold py-3 rounded-xl transition-colors"
+            >
+              {loading ? 'Signing in…' : 'Sign in'}
+            </button>
+          </form>
+
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex-1 h-px bg-gray-800" />
+            <span className="text-xs text-gray-600">or</span>
+            <div className="flex-1 h-px bg-gray-800" />
+          </div>
 
           <button
             onClick={handleGoogleSignIn}
@@ -60,12 +108,8 @@ export default function ReviewLoginPage() {
               <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
               <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
             </svg>
-            {loading ? 'Redirecting…' : 'Sign in with Google'}
+            Sign in with Google
           </button>
-
-          <p className="text-center text-xs text-gray-600 mt-5">
-            Don&apos;t have access?<br/>Contact the MathKix team to be added.
-          </p>
         </div>
       </div>
     </div>
