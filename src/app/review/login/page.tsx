@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 
 export default function ReviewLoginPage() {
+  const router = useRouter()
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState('')
   const [email, setEmail]       = useState('')
@@ -19,7 +21,8 @@ export default function ReviewLoginPage() {
       setError('Invalid email or password.')
       setLoading(false)
     } else {
-      window.location.href = '/review'
+      router.refresh()
+      router.push('/review')
     }
   }
 
