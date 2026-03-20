@@ -33,10 +33,6 @@ import { render as renderWelcomePaid }          from '@/lib/email/drip/welcome-p
 import { render as renderReengagement7day }     from '@/lib/email/drip/reengagement-7day'
 import type { DripKey } from '@/lib/email/drip-queue'
 
-if (process.env.NODE_ENV === 'production') {
-  throw new Error('test-email route must not be used in production')
-}
-
 const RENDERERS: Record<DripKey, (meta: Record<string, unknown>) => { subject: string; text: string; html?: string }> = {
   [DRIP_KEYS.WELCOME]:               renderWelcome,
   [DRIP_KEYS.CHILD_ADDED_NUDGE]:     renderChildAddedNudge,
