@@ -24,7 +24,11 @@ export interface ReviewableQuestion {
 export interface ReviewRecord {
   status: 'approved' | 'flagged'
   comment: string | null
+  suggested_fix: string | null
   reviewed_at: string
+  ai_flags: string[]
+  ai_notes: string | null
+  is_ai_review: boolean
 }
 
 
@@ -39,14 +43,18 @@ export async function GET() {
   // Load existing reviews
   const { data: reviewRows } = await adminClient
     .from('question_reviews')
-    .select('question_ref, status, comment, reviewed_at')
+    .select('question_ref, status, comment, suggested_fix, reviewed_at, ai_flags, ai_notes, is_ai_review')
 
   const reviews: Record<string, ReviewRecord> = {}
   for (const r of reviewRows ?? []) {
     reviews[r.question_ref] = {
       status: r.status as 'approved' | 'flagged',
       comment: r.comment,
+      suggested_fix: r.suggested_fix ?? null,
       reviewed_at: r.reviewed_at,
+      ai_flags: (r.ai_flags as string[]) ?? [],
+      ai_notes: r.ai_notes ?? null,
+      is_ai_review: r.is_ai_review ?? false,
     }
   }
 

@@ -157,8 +157,9 @@ export function QuestionReviewDeck() {
   const [isLoading,     setIsLoading]     = useState(true)
   const [isFlagMode,    setIsFlagMode]    = useState(false)
   const [flagComment,   setFlagComment]   = useState('')
+  const [suggestedFix,  setSuggestedFix]  = useState('')
   const [isSubmitting,  setIsSubmitting]  = useState(false)
-  const [filter,        setFilter]        = useState<'all' | 'pending' | 'approved' | 'flagged'>('pending')
+  const [filter,        setFilter]        = useState<'all' | 'pending' | 'ai_flagged' | 'approved' | 'flagged'>('ai_flagged')
   const commentRef = useRef<HTMLTextAreaElement>(null)
 
   // Load queue on mount
@@ -193,9 +194,10 @@ export function QuestionReviewDeck() {
 
   const filteredQueue = queue.filter(q => {
     const r = reviews[q.ref]
-    if (filter === 'pending')  return !r
-    if (filter === 'approved') return r?.status === 'approved'
-    if (filter === 'flagged')  return r?.status === 'flagged'
+    if (filter === 'pending')    return !r
+    if (filter === 'ai_flagged') return r?.status === 'flagged' && r.is_ai_review === true
+    if (filter === 'approved')   return r?.status === 'approved'
+    if (filter === 'flagged')    return r?.status === 'flagged' && r.is_ai_review === false
     return true
   })
 
@@ -205,6 +207,7 @@ export function QuestionReviewDeck() {
     setCurrentIndex(i => Math.max(0, Math.min(filteredQueue.length - 1, i + delta)))
     setIsFlagMode(false)
     setFlagComment('')
+    setSuggestedFix('')
   }
 
   const submitReview = useCallback(async (status: 'approved' | 'flagged', comment?: string) => {
@@ -214,19 +217,29 @@ export function QuestionReviewDeck() {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({
-        ref:      current.ref,
-        source:   current.source,
+        ref:           current.ref,
+        source:        current.source,
         status,
         comment,
-        snapshot: current,
+        suggested_fix: suggestedFix.trim() || undefined,
+        snapshot:      current,
       }),
     })
     setReviews(prev => ({
       ...prev,
-      [current.ref]: { status, comment: comment ?? null, reviewed_at: new Date().toISOString() },
+      [current.ref]: {
+        status,
+        comment:       comment ?? null,
+        suggested_fix: suggestedFix.trim() || null,
+        reviewed_at:   new Date().toISOString(),
+        ai_flags:      prev[current.ref]?.ai_flags ?? [],
+        ai_notes:      prev[current.ref]?.ai_notes ?? null,
+        is_ai_review:  false,
+      },
     }))
     setIsFlagMode(false)
     setFlagComment('')
+    setSuggestedFix('')
     setIsSubmitting(false)
     // Advance to next if in pending filter
     if (filter === 'pending') {
@@ -243,9 +256,10 @@ export function QuestionReviewDeck() {
   }
 
   // Stats
-  const approvedCount = Object.values(reviews).filter(r => r.status === 'approved').length
-  const flaggedCount  = Object.values(reviews).filter(r => r.status === 'flagged').length
-  const pendingCount  = queue.length - approvedCount - flaggedCount
+  const approvedCount   = Object.values(reviews).filter(r => r.status === 'approved').length
+  const aiFlaggedCount  = Object.values(reviews).filter(r => r.status === 'flagged' && r.is_ai_review).length
+  const flaggedCount    = Object.values(reviews).filter(r => r.status === 'flagged' && !r.is_ai_review).length
+  const pendingCount    = queue.length - approvedCount - aiFlaggedCount - flaggedCount
 
   if (isLoading) {
     return (
@@ -276,17 +290,26 @@ export function QuestionReviewDeck() {
           <span className="bg-green-900/60 text-green-400 border border-green-800 px-2.5 py-1 rounded-full">
             ✓ {approvedCount}
           </span>
+          <span className="bg-amber-900/60 text-amber-400 border border-amber-800 px-2.5 py-1 rounded-full">
+            ⚑ {aiFlaggedCount} AI flagged
+          </span>
           <span className="bg-red-900/60 text-red-400 border border-red-800 px-2.5 py-1 rounded-full">
-            ✗ {flaggedCount}
+            ✗ {flaggedCount} flagged
           </span>
           <span className="bg-yellow-900/40 text-yellow-400 border border-yellow-800 px-2.5 py-1 rounded-full">
-            ○ {pendingCount} pending
+            ○ {pendingCount} unreviewed
           </span>
         </div>
 
         {/* Filter tabs */}
         <div className="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
-          {(['pending', 'all', 'approved', 'flagged'] as const).map(f => (
+          {([
+            ['ai_flagged', 'AI Flagged'],
+            ['pending',    'Unreviewed'],
+            ['all',        'All'],
+            ['approved',   'Approved'],
+            ['flagged',    'Flagged'],
+          ] as const).map(([f, label]) => (
             <button
               key={f}
               onClick={() => { setFilter(f); setCurrentIndex(0) }}
@@ -294,7 +317,7 @@ export function QuestionReviewDeck() {
                 filter === f ? 'bg-indigo-600 text-white' : 'text-gray-400 hover:text-gray-200'
               }`}
             >
-              {f.charAt(0).toUpperCase() + f.slice(1)}
+              {label}
             </button>
           ))}
         </div>
@@ -481,32 +504,106 @@ export function QuestionReviewDeck() {
                   )}
                 </div>
 
-                {/* Previous flag comment */}
-                {reviews[current.ref]?.status === 'flagged' && reviews[current.ref].comment && (
-                  <div className="mx-6 mb-6 bg-red-900/30 border border-red-800 rounded-xl px-4 py-3">
-                    <p className="text-xs text-red-400 font-semibold uppercase tracking-wider mb-1">Flag Comment</p>
-                    <p className="text-sm text-red-200">{reviews[current.ref].comment}</p>
+                {/* AI flags */}
+                {(() => {
+                  const r = reviews[current.ref]
+                  if (!r || !r.ai_flags?.length) return null
+                  const FLAG_COLORS: Record<string, string> = {
+                    wrong_answer:       'bg-red-900/40 text-red-300 border-red-700',
+                    ui_mismatch:        'bg-red-900/40 text-red-300 border-red-700',
+                    format_error:       'bg-red-900/40 text-red-300 border-red-700',
+                    unanswerable:       'bg-red-900/40 text-red-300 border-red-700',
+                    missing_visual_ref: 'bg-amber-900/40 text-amber-300 border-amber-700',
+                    weak_distractors:   'bg-orange-900/40 text-orange-300 border-orange-700',
+                    ambiguous_wording:  'bg-yellow-900/40 text-yellow-300 border-yellow-700',
+                    grade_mismatch:     'bg-purple-900/40 text-purple-300 border-purple-700',
+                  }
+                  const FLAG_LABELS: Record<string, string> = {
+                    wrong_answer:       'Wrong Answer',
+                    ui_mismatch:        'UI Mismatch',
+                    format_error:       'Format Error',
+                    unanswerable:       'Unanswerable',
+                    missing_visual_ref: 'Missing Visual',
+                    weak_distractors:   'Weak Distractors',
+                    ambiguous_wording:  'Ambiguous Wording',
+                    grade_mismatch:     'Grade Mismatch',
+                  }
+                  return (
+                    <div className="mx-6 mb-4 bg-amber-950/30 border border-amber-800/60 rounded-xl px-4 py-3 space-y-2">
+                      <p className="text-xs text-amber-400 font-semibold uppercase tracking-wider flex items-center gap-1.5">
+                        ⚑ AI Flags {r.is_ai_review && <span className="font-normal text-amber-600">(awaiting human review)</span>}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {r.ai_flags.map(flag => (
+                          <span
+                            key={flag}
+                            className={`text-[11px] font-semibold px-2 py-0.5 rounded-full border ${FLAG_COLORS[flag] ?? 'bg-gray-800 text-gray-400 border-gray-700'}`}
+                          >
+                            {FLAG_LABELS[flag] ?? flag}
+                          </span>
+                        ))}
+                      </div>
+                      {r.ai_notes && (
+                        <p className="text-xs text-amber-200/70 italic">{r.ai_notes}</p>
+                      )}
+                    </div>
+                  )
+                })()}
+
+                {/* Previous human flag comment + suggested fix */}
+                {reviews[current.ref]?.status === 'flagged' && !reviews[current.ref].is_ai_review && (
+                  <div className="mx-6 mb-6 space-y-2">
+                    {reviews[current.ref].comment && (
+                      <div className="bg-red-900/30 border border-red-800 rounded-xl px-4 py-3">
+                        <p className="text-xs text-red-400 font-semibold uppercase tracking-wider mb-1">What&apos;s wrong</p>
+                        <p className="text-sm text-red-200">{reviews[current.ref].comment}</p>
+                      </div>
+                    )}
+                    {reviews[current.ref].suggested_fix && (
+                      <div className="bg-emerald-900/30 border border-emerald-800 rounded-xl px-4 py-3">
+                        <p className="text-xs text-emerald-400 font-semibold uppercase tracking-wider mb-1">Suggested fix</p>
+                        <p className="text-sm text-emerald-200 whitespace-pre-wrap">{reviews[current.ref].suggested_fix}</p>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
 
               {/* ── Flag comment input ──────────────────────────────────────────── */}
               {isFlagMode && (
-                <div className="mt-4 bg-red-950/40 border border-red-800 rounded-2xl p-5">
-                  <label className="block text-sm font-semibold text-red-300 mb-2">
-                    What&apos;s wrong with this question?
-                  </label>
-                  <textarea
-                    ref={commentRef}
-                    value={flagComment}
-                    onChange={(e) => setFlagComment(e.target.value)}
-                    rows={3}
-                    placeholder="Describe the issue - wrong answer, incorrect grade level, bad wording, misleading options…"
-                    className="w-full bg-gray-900 border border-red-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600 resize-none"
-                  />
-                  <div className="flex gap-3 mt-3">
+                <div className="mt-4 bg-red-950/40 border border-red-800 rounded-2xl p-5 space-y-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-red-300 mb-2">
+                      What&apos;s wrong? <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      ref={commentRef}
+                      value={flagComment}
+                      onChange={(e) => setFlagComment(e.target.value)}
+                      rows={2}
+                      placeholder="Describe the issue — wrong answer, bad wording, misleading options…"
+                      className="w-full bg-gray-900 border border-red-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600 resize-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-emerald-400 mb-2">
+                      Suggested fix <span className="text-gray-500 font-normal">(optional)</span>
+                    </label>
+                    <textarea
+                      value={suggestedFix}
+                      onChange={(e) => setSuggestedFix(e.target.value)}
+                      rows={3}
+                      placeholder={
+                        current?.question_type === 'multiple_choice'
+                          ? 'e.g. Change correct answer to "C" — 12 is wrong, should be 15\nOr: Option B should say "4 × 3" not "4 + 3"'
+                          : 'e.g. Change correct answer to 15\nOr: Reword as "How many apples are left after giving away 3?"'
+                      }
+                      className="w-full bg-gray-900 border border-emerald-800 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-700 resize-none placeholder-gray-600"
+                    />
+                  </div>
+                  <div className="flex gap-3">
                     <button
-                      onClick={() => { setIsFlagMode(false); setFlagComment('') }}
+                      onClick={() => { setIsFlagMode(false); setFlagComment(''); setSuggestedFix('') }}
                       className="flex-1 py-2.5 rounded-xl border border-gray-700 text-gray-300 text-sm font-semibold hover:bg-gray-800 transition-colors"
                     >
                       Cancel
@@ -527,6 +624,9 @@ export function QuestionReviewDeck() {
                 <div className="mt-5 grid grid-cols-2 gap-4">
                   <button
                     onClick={() => {
+                      const review = current ? reviews[current.ref] : null
+                      if (!flagComment) setFlagComment(review?.ai_notes ?? review?.comment ?? '')
+                      if (!suggestedFix) setSuggestedFix(review?.suggested_fix ?? '')
                       setIsFlagMode(true)
                       setTimeout(() => commentRef.current?.focus(), 50)
                     }}
@@ -573,10 +673,11 @@ export function QuestionReviewDeck() {
                 >
                   <div className="flex items-center gap-2">
                     <span className={`text-xs w-3 ${
-                      review?.status === 'approved' ? 'text-green-400' :
-                      review?.status === 'flagged'  ? 'text-red-400' : 'text-gray-600'
+                      review?.status === 'approved'                        ? 'text-green-400' :
+                      review?.status === 'flagged' && review.is_ai_review  ? 'text-amber-400' :
+                      review?.status === 'flagged'                         ? 'text-red-400' : 'text-gray-600'
                     }`}>
-                      {review?.status === 'approved' ? '✓' : review?.status === 'flagged' ? '✗' : '○'}
+                      {review?.status === 'approved' ? '✓' : review?.status === 'flagged' && review.is_ai_review ? '⚑' : review?.status === 'flagged' ? '✗' : '○'}
                     </span>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-gray-400 truncate">{q.question_text.slice(0, 45)}…</p>

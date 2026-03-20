@@ -9,11 +9,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  const { ref, source, status, comment, snapshot } = await request.json() as {
+  const { ref, source, status, comment, suggested_fix, snapshot } = await request.json() as {
     ref: string
     source: string
     status: 'approved' | 'flagged'
     comment?: string
+    suggested_fix?: string
     snapshot: Record<string, unknown>
   }
 
@@ -34,7 +35,9 @@ export async function POST(request: NextRequest) {
       question_snapshot: snapshot as Json,
       status,
       comment:           comment?.trim() ?? null,
+      suggested_fix:     suggested_fix?.trim() ?? null,
       reviewed_at:       new Date().toISOString(),
+      is_ai_review:      false,
     }, { onConflict: 'question_ref' })
 
   return NextResponse.json({ ok: true })

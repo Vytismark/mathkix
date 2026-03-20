@@ -148,9 +148,9 @@ export type Database = {
         Relationships: [{ foreignKeyName: 'achievements_child_id_fkey'; columns: ['child_id']; isOneToOne: false; referencedRelation: 'children'; referencedColumns: ['id'] }]
       }
       question_reviews: {
-        Row: { id: string; question_ref: string; question_source: string; question_snapshot: Json; status: string; comment: string | null; reviewed_at: string }
-        Insert: { id?: string; question_ref: string; question_source: string; question_snapshot: Json; status: string; comment?: string | null; reviewed_at?: string }
-        Update: { status?: string; comment?: string | null }
+        Row: { id: string; question_ref: string; question_source: string; question_snapshot: Json; status: string; comment: string | null; suggested_fix: string | null; reviewed_at: string; ai_flags: string[]; ai_notes: string | null; is_ai_review: boolean }
+        Insert: { id?: string; question_ref: string; question_source: string; question_snapshot: Json; status: string; comment?: string | null; suggested_fix?: string | null; reviewed_at?: string; ai_flags?: string[]; ai_notes?: string | null; is_ai_review?: boolean }
+        Update: { status?: string; comment?: string | null; suggested_fix?: string | null; ai_flags?: string[]; ai_notes?: string | null; is_ai_review?: boolean }
         Relationships: []
       }
       support_tickets: {
