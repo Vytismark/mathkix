@@ -5,6 +5,7 @@ import './globals.css'
 import { AuthProvider } from '@/components/auth/AuthProvider'
 import { PostHogProvider } from '@/components/analytics/PostHogProvider'
 import { Toaster } from '@/components/ui/sonner'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const geist = Geist({
   variable: '--font-geist',
@@ -90,6 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <AuthProvider>
             {children}
             <Toaster richColors position="top-right" />
+            <SpeedInsights />
           </AuthProvider>
         </PostHogProvider>
       </body>
