@@ -69,13 +69,9 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
   const navContent = (
     <>
       <div className="animate-fade-in mb-8 px-2">
-        <Link href="/select" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+        <Link href="/select" className="hover:opacity-80 transition-opacity">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/mathkix-icon.svg" alt="" width={32} height={28} />
-          <span className="text-lg font-extrabold leading-none tracking-tight">
-            <span className="text-white">Math</span>
-            <span style={{ color: '#E74C3C' }}>Kix</span>
-          </span>
+          <img src="/mathkix-logo.svg" alt="MathKix" height={28} className="h-7 w-auto" />
         </Link>
       </div>
 
@@ -129,13 +125,9 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
       <div className="md:hidden fixed top-0 left-0 right-0 z-40 border-b border-white/[0.07] px-4 py-3 flex items-center justify-between"
         style={{ background: 'rgba(7,8,15,1)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
       >
-        <Link href="/select" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <Link href="/select" className="hover:opacity-80 transition-opacity">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/mathkix-icon.svg" alt="" width={28} height={24} />
-          <span className="text-base font-extrabold leading-none tracking-tight">
-            <span className="text-white">Math</span>
-            <span style={{ color: '#E74C3C' }}>Kix</span>
-          </span>
+          <img src="/mathkix-logo.svg" alt="MathKix" height={26} className="h-6 w-auto" />
         </Link>
         <button
           onClick={() => setDrawerOpen(true)}
@@ -161,13 +153,9 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
             style={{ background: '#0a0b12' }}
           >
             <div className="flex items-center justify-between mb-6 px-2">
-              <Link href="/select" className="flex items-center gap-2">
+              <Link href="/select" className="hover:opacity-80 transition-opacity">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/mathkix-icon.svg" alt="" width={28} height={24} />
-                <span className="text-base font-extrabold leading-none tracking-tight">
-                  <span className="text-white">Math</span>
-                  <span style={{ color: '#E74C3C' }}>Kix</span>
-                </span>
+                <img src="/mathkix-logo.svg" alt="MathKix" height={26} className="h-6 w-auto" />
               </Link>
               <button
                 onClick={() => setDrawerOpen(false)}

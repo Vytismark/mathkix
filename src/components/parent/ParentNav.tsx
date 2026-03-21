@@ -36,13 +36,9 @@ export function ParentNav() {
       style={{ background: 'rgba(255,255,255,0.025)' }}
     >
       <div className="animate-fade-in mb-8 px-2">
-        <Link href="/select" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+        <Link href="/select" className="hover:opacity-80 transition-opacity">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/mathkix-icon.svg" alt="" width={32} height={28} />
-          <span className="text-lg font-extrabold leading-none tracking-tight">
-            <span className="text-white">Math</span>
-            <span style={{ color: '#E74C3C' }}>Kix</span>
-          </span>
+          <img src="/mathkix-logo.svg" alt="MathKix" height={28} className="h-7 w-auto" />
         </Link>
       </div>
 

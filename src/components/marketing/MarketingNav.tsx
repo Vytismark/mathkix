@@ -39,19 +39,14 @@ export function MarketingNav({ currentPage }: MarketingNavProps) {
     <nav className="landing-nav">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="shrink-0 flex items-center gap-2.5">
+        <Link href="/" className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/mathkix-icon.svg"
-            alt=""
-            width={36}
-            height={36}
-            className="h-8 w-8 sm:h-9 sm:w-9"
+            src="/mathkix-logo.svg"
+            alt="MathKix"
+            height={32}
+            className="h-7 sm:h-8 w-auto"
           />
-          <span className="text-lg sm:text-xl font-extrabold tracking-tight">
-            <span className="text-white">Math</span>
-            <span style={{ color: '#E74C3C' }}>Kix</span>
-          </span>
         </Link>
 
         {/* Desktop links (hidden on mobile) */}
