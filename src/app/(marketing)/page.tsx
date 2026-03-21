@@ -82,7 +82,7 @@ const FEATURES = [
     glow: 'rgba(236,72,153,0.28)',
     title: 'Safe, Private & Ad-Free',
     description:
-      'No ads. No data selling. Your child\'s profile is theirs — invisible to everyone except you.',
+      'No ads. No data selling. Your child\'s profile is theirs - invisible to everyone except you.',
   },
 ]
 
@@ -97,7 +97,7 @@ const STEPS = [
     number: '02',
     title: 'Add your child & take the quiz',
     description:
-      'A 3-minute AI quiz pinpoints exactly where your child stands — across every skill, not just their grade.',
+      'A 3-minute AI quiz pinpoints exactly where your child stands - across every skill, not just their grade.',
   },
   {
     number: '03',
@@ -176,7 +176,7 @@ const FAQ_SCHEMA = {
       name: 'What if my child is behind their grade level?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That\'s completely fine — and it\'s one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There\'s no "grade shaming" — your child only sees encouragement and progress.',
+        text: 'That\'s completely fine - and it\'s one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There\'s no "grade shaming" - your child only sees encouragement and progress.',
       },
     },
     {
@@ -300,7 +300,7 @@ export default function LandingPage() {
             style={{ animationDelay: '120ms' }}
           >
             A 3-minute quiz finds your child&apos;s exact level across every
-            math skill. Then builds a custom path forward — standard by standard.
+            math skill. Then builds a custom path forward - standard by standard.
           </p>
 
           {/* CTAs */}
@@ -407,7 +407,7 @@ export default function LandingPage() {
               Most apps guess. MathKix measures.
             </h2>
             <p className="text-slate-400 text-lg max-w-xl mx-auto">
-              Generic math apps give every kid the same questions. MathKix starts with where your child actually is — then moves from there.
+              Generic math apps give every kid the same questions. MathKix starts with where your child actually is - then moves from there.
             </p>
           </div>
 
@@ -454,7 +454,7 @@ export default function LandingPage() {
                   { icon: Shuffle, text: 'Adaptive engine adjusts difficulty after every answer' },
                   { icon: BarChart3, text: 'Designed to make knowledge stick, not just practice it' },
                   { icon: MessageCircle, text: 'AI tutor adapts language to your child\'s grade' },
-                  { icon: CheckCircle, text: 'You can see exactly what they know — and what\'s next' },
+                  { icon: CheckCircle, text: 'You can see exactly what they know - and what\'s next' },
                 ].map(({ icon: Icon, text }) => (
                   <li key={text} className="flex items-start gap-3 text-sm text-slate-200">
                     <span
@@ -597,7 +597,7 @@ export default function LandingPage() {
               <ul className="space-y-4">
                 {[
                   { color: '#3678FF', text: 'Wrong answers teach, never punish' },
-                  { color: '#7c3aed', text: 'Ms. Owl explains mistakes in plain language — no red X and move on' },
+                  { color: '#7c3aed', text: 'Ms. Owl explains mistakes in plain language - no red X and move on' },
                   { color: '#f59e0b', text: 'XP and streaks keep them coming back' },
                   { color: '#10b981', text: 'Large tap targets built for small fingers' },
                 ].map(({ color, text }) => (
@@ -716,7 +716,7 @@ export default function LandingPage() {
             className="animate-fade-in-up text-slate-300 text-base font-medium mb-10"
             style={{ animationDelay: '110ms' }}
           >
-            Then just $9.99/month — less than a single tutoring hour.
+            Then just $9.99/month - less than a single tutoring hour.
           </p>
           <div
             className="animate-fade-in-up"

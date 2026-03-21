@@ -17,7 +17,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: 'What if my child is behind their grade level?',
     answer:
-      'That\'s completely fine — and it\'s one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There\'s no "grade shaming" — your child only sees encouragement and progress.',
+      'That\'s completely fine - and it\'s one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There\'s no "grade shaming" - your child only sees encouragement and progress.',
   },
   {
     question: 'Does MathKix replace school math?',
