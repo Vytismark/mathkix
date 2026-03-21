@@ -210,7 +210,7 @@ export function GreetingBanner({
         {srDueCount > 0 && (
           <a
             href={`/play/home?child=${childId}&mode=review`}
-            className="inline-flex items-center gap-1.5 mt-2 text-xs font-bold text-purple-600 bg-purple-100 px-3 py-1.5 rounded-full border border-purple-200 hover:bg-purple-200 transition-colors animate-pulse"
+            className="inline-flex items-center gap-1.5 mt-2 text-xs font-bold text-[#3678FF] bg-blue-100 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-blue-200 transition-colors animate-pulse"
           >
             🧠 {srDueCount} review{srDueCount > 1 ? 's' : ''} waiting!
           </a>

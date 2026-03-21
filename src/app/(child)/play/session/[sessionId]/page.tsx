@@ -252,7 +252,7 @@ export default function SessionPage() {
   const domainLabel = DOMAIN_LABELS[currentQuestion.domain] ?? currentQuestion.domain
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ background: '#F8FAFF' }}>
 
       {/* Achievement toasts */}
       {toastQueue.length > 0 && (
@@ -272,7 +272,7 @@ export default function SessionPage() {
             <QuizProgress current={questionIndex + 1} total={questions.length} />
           </div>
           {/* Domain chip */}
-          <span className="shrink-0 text-xs font-semibold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full">
+          <span className="shrink-0 text-xs font-semibold text-[#3678FF] bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">
             {domainLabel}
           </span>
         </div>
@@ -361,7 +361,10 @@ export default function SessionPage() {
           {phase === 'wrong_review' && (
             <button
               onClick={handleContinue}
-              className="w-full py-3.5 rounded-2xl font-bold text-lg text-white bg-indigo-600 hover:bg-indigo-700 active:scale-[0.98] transition-all shadow-md"
+              className="w-full py-3.5 rounded-2xl font-bold text-lg text-white active:scale-[0.98] transition-all shadow-md"
+              style={{ background: '#3678FF' }}
+              onMouseEnter={e => (e.currentTarget.style.background = '#2557CC')}
+              onMouseLeave={e => (e.currentTarget.style.background = '#3678FF')}
             >
               Continue to next question
             </button>

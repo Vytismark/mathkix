@@ -99,13 +99,13 @@ export default async function PlayHomePage({
     { emoji: '🔥', value: String(streakDays), label: 'Day Streak', gradient: 'from-orange-500 to-red-500', show: streakDays > 0 },
     { emoji: '⭐', value: child.xp_total.toLocaleString(), label: 'Total XP', gradient: 'from-amber-400 to-yellow-500', show: true },
     { emoji: '🏆', value: String(masteredCount), label: 'Mastered', gradient: 'from-emerald-500 to-green-600', show: true },
-    { emoji: '🧠', value: String(srDueCount), label: 'Due Today', gradient: 'from-purple-500 to-violet-600', show: srDueCount > 0, pulse: true },
+    { emoji: '🧠', value: String(srDueCount), label: 'Due Today', gradient: 'from-blue-500 to-blue-600', show: srDueCount > 0, pulse: true },
   ].filter((s) => s.show)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ background: '#F8FAFF' }}>
       {/* ── Sticky HUD bar ───────────────────────── */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur shadow-md border-b-2 border-indigo-200/80 px-4 py-3">
+      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur shadow-md border-b-2 border-blue-200/80 px-4 py-3">
         <div className="max-w-2xl mx-auto flex items-center gap-3">
           <Link
             href="/select"

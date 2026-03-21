@@ -394,7 +394,7 @@ export default function LessonPage() {
   const showClickableEquation = looksLikeMath(currentQuestion.text)
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 sm:p-6 max-w-md mx-auto">
+    <div className="min-h-screen flex flex-col items-center p-4 sm:p-6 max-w-md mx-auto" style={{ background: '#F8FAFF' }}>
 
       {/* Achievement toasts */}
       {toastQueue.length > 0 && (
@@ -483,7 +483,8 @@ export default function LessonPage() {
       {/* AI Teacher floating button */}
       <button
         onClick={() => { setContextHint(undefined); setTeacherOpen(true) }}
-        className="fixed bottom-6 right-4 z-40 flex items-center gap-2 bg-indigo-600 text-white text-sm font-semibold px-4 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
+        className="fixed bottom-6 right-4 z-40 flex items-center gap-2 text-white text-sm font-semibold px-4 py-3 rounded-full shadow-lg transition-colors"
+        style={{ background: '#3678FF' }}
         aria-label="Ask the teacher"
       >
         <span>🦉</span>

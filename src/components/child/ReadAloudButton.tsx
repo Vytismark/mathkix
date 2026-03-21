@@ -63,8 +63,8 @@ export function ReadAloudButton({ text, gradeLevel }: ReadAloudButtonProps) {
       onClick={toggleSpeak}
       className={`absolute top-3 right-3 w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm ${
         isSpeaking
-          ? 'bg-indigo-500 text-white scale-110'
-          : 'bg-indigo-100 text-indigo-600 hover:bg-indigo-200'
+          ? 'bg-[#3678FF] text-white scale-110'
+          : 'bg-blue-100 text-[#3678FF] hover:bg-blue-200'
       }`}
       aria-label={isSpeaking ? 'Stop reading' : 'Read question aloud'}
       title={isSpeaking ? 'Stop' : 'Read aloud'}

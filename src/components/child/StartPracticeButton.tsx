@@ -37,7 +37,12 @@ export function StartPracticeButton({ childId }: StartPracticeButtonProps) {
     <button
       onClick={start}
       disabled={loading}
-      className="relative w-full bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 hover:from-indigo-600 hover:via-violet-600 hover:to-purple-700 disabled:opacity-60 text-white text-xl font-extrabold py-6 px-6 rounded-2xl shadow-lg shadow-indigo-300/50 hover:shadow-indigo-400/60 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0.5 active:border-b-0 border-b-4 border-indigo-700 overflow-hidden"
+      className="relative w-full disabled:opacity-60 text-white text-xl font-extrabold py-6 px-6 rounded-2xl shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0.5 active:border-b-0 border-b-4 overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+        borderBottomColor: '#1a3f9e',
+        boxShadow: '0 8px 24px rgba(54,120,255,0.35)',
+      }}
     >
       {/* Shimmer overlay */}
       {!loading && (

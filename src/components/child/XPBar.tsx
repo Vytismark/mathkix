@@ -35,7 +35,7 @@ export function XPBar({ xpTotal, gradeLevel, childName, streakDays = 0 }: XPBarP
           {initial}
         </div>
         {/* Level badge */}
-        <div className="absolute -bottom-1 -right-1 bg-indigo-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-full ring-2 ring-white shadow-sm leading-none">
+        <div className="absolute -bottom-1 -right-1 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-full ring-2 ring-white shadow-sm leading-none" style={{ backgroundColor: '#3678FF' }}>
           {level}
         </div>
       </div>

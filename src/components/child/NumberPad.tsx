@@ -52,7 +52,7 @@ export function NumberPad({ value, onChange, onSubmit, disabled, allowDecimal = 
               'flex items-center justify-center h-14 rounded-xl text-xl font-semibold transition-all active:scale-95',
               key === '⌫'
                 ? 'bg-red-100 text-red-600 hover:bg-red-200'
-                : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100',
+                : 'bg-blue-50 text-[#3678FF] hover:bg-blue-100',
               disabled && 'opacity-40 cursor-not-allowed'
             )}
           >
@@ -70,7 +70,7 @@ export function NumberPad({ value, onChange, onSubmit, disabled, allowDecimal = 
         className={cn(
           'w-full mt-3 h-14 rounded-xl text-lg font-bold text-white transition-all active:scale-98',
           value && !disabled
-            ? 'bg-indigo-600 hover:bg-indigo-700'
+            ? 'bg-[#3678FF] hover:bg-[#2557CC]'
             : 'bg-muted text-muted-foreground cursor-not-allowed'
         )}
       >

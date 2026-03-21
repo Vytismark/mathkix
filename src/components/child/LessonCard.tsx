@@ -48,7 +48,7 @@ export function LessonCard({ lesson, childId, masteryLevel = 0, isRecommended }:
         className={cn(
           'relative rounded-2xl bg-white shadow-sm border overflow-hidden cursor-pointer',
           'transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98]',
-          isRecommended ? 'border-indigo-300 ring-2 ring-indigo-300/60' : 'border-slate-100'
+          isRecommended ? 'border-[#3678FF]/50 ring-2 ring-[#3678FF]/30' : 'border-slate-100'
         )}
       >
         {/* Domain color accent bar */}
@@ -56,7 +56,7 @@ export function LessonCard({ lesson, childId, masteryLevel = 0, isRecommended }:
 
         {/* Recommended ribbon */}
         {isRecommended && (
-          <div className="absolute top-4 right-3 bg-red-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-sm tracking-wide">
+          <div className="absolute top-4 right-3 bg-[#3678FF] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-sm tracking-wide">
             ⭐ Next up
           </div>
         )}

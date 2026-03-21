@@ -58,7 +58,7 @@ export default async function SelectPage() {
       {/* ── Ambient glow blobs ── */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-[-15%] left-1/2 -translate-x-1/2 w-[400px] sm:w-[900px] h-[400px] sm:h-[600px]"
-          style={{ background: 'radial-gradient(ellipse at center, rgba(192,57,43,0.22) 0%, transparent 65%)' }} />
+          style={{ background: 'radial-gradient(ellipse at center, rgba(54,120,255,0.18) 0%, transparent 65%)' }} />
         <div className="absolute bottom-[-10%] left-[-8%] w-[280px] sm:w-[500px] h-[280px] sm:h-[500px]"
           style={{ background: 'radial-gradient(ellipse at center, rgba(243,156,18,0.12) 0%, transparent 65%)' }} />
         <div className="absolute top-[5%] right-[-5%] w-[250px] sm:w-[400px] h-[250px] sm:h-[400px]"
@@ -108,7 +108,7 @@ export default async function SelectPage() {
             <Link key={child.id} href={href}>
               <div className={`group relative flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-7 rounded-3xl cursor-pointer transition-all duration-200 hover:scale-[1.07] bg-white/[0.07] border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.5)] ${color.shadow}`}>
                 {gradeLabel && (
-                  <span className="absolute top-2 right-2 sm:top-3 sm:right-3 text-[10px] font-bold bg-red-600 text-white px-2 py-0.5 rounded-full tracking-wider">
+                  <span className="absolute top-2 right-2 sm:top-3 sm:right-3 text-[10px] font-bold bg-[#3678FF] text-white px-2 py-0.5 rounded-full tracking-wider">
                     {gradeLabel}
                   </span>
                 )}

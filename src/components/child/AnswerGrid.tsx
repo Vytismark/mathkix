@@ -41,7 +41,7 @@ export function AnswerGrid({ options, selected, onSelect, onSubmit, disabled }: 
               'min-h-16 py-2 px-3 rounded-2xl border-2 font-bold transition-all active:scale-95 flex flex-col items-center justify-center',
               stripHint(option.value).length > 12 ? 'text-sm' : 'text-lg',
               selected === option.value
-                ? 'border-indigo-500 bg-indigo-100 text-indigo-800 scale-[0.97]'
+                ? 'border-[#3678FF] bg-blue-100 text-blue-800 scale-[0.97]'
                 : OPTION_COLORS[i % OPTION_COLORS.length],
               disabled && 'cursor-not-allowed opacity-70'
             )}
@@ -58,7 +58,7 @@ export function AnswerGrid({ options, selected, onSelect, onSubmit, disabled }: 
         className={cn(
           'w-full h-14 rounded-xl text-lg font-bold text-white transition-all',
           selected && !disabled
-            ? 'bg-indigo-600 hover:bg-indigo-700 active:scale-98'
+            ? 'bg-[#3678FF] hover:bg-[#2557CC] active:scale-98'
             : 'bg-muted text-muted-foreground cursor-not-allowed'
         )}
       >

@@ -129,7 +129,7 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
           <div className="flex flex-col items-center gap-2 w-36">
             {/* Overall ring */}
             <div className="relative w-20 h-20 flex items-center justify-center">
-              <SkillRingSVG pct={overallPct} color="#7c3aed" colorLight="#ede9fe" size={80} />
+              <SkillRingSVG pct={overallPct} color="#3678FF" colorLight="#dbeafe" size={80} />
               <div className="flex flex-col items-center">
                 <span className="text-xl font-extrabold text-slate-800 leading-none">{overallPct}%</span>
                 <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none mt-0.5">Overall</span>

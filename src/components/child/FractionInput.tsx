@@ -46,7 +46,7 @@ export function FractionInput({ value, onChange, onSubmit, disabled }: FractionI
           className={cn(
             'w-24 h-14 text-3xl font-bold rounded-xl border-2 transition-all',
             activeField === 'num'
-              ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
+              ? 'border-[#3678FF] bg-blue-50 text-[#3678FF]'
               : 'border-border bg-white'
           )}
         >
@@ -59,7 +59,7 @@ export function FractionInput({ value, onChange, onSubmit, disabled }: FractionI
           className={cn(
             'w-24 h-14 text-3xl font-bold rounded-xl border-2 transition-all',
             activeField === 'den'
-              ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
+              ? 'border-[#3678FF] bg-blue-50 text-[#3678FF]'
               : 'border-border bg-white'
           )}
         >
@@ -82,7 +82,7 @@ export function FractionInput({ value, onChange, onSubmit, disabled }: FractionI
                 'flex items-center justify-center h-12 rounded-xl text-xl font-semibold transition-all active:scale-95',
                 key === '⌫'
                   ? 'bg-red-100 text-red-600 hover:bg-red-200'
-                  : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100',
+                  : 'bg-blue-50 text-[#3678FF] hover:bg-blue-100',
                 disabled && 'opacity-40 cursor-not-allowed'
               )}
             >
@@ -99,7 +99,7 @@ export function FractionInput({ value, onChange, onSubmit, disabled }: FractionI
         className={cn(
           'w-full mt-3 h-14 rounded-xl text-lg font-bold text-white transition-all',
           isValid && !disabled
-            ? 'bg-indigo-600 hover:bg-indigo-700 active:scale-98'
+            ? 'bg-[#3678FF] hover:bg-[#2557CC] active:scale-98'
             : 'bg-muted text-muted-foreground cursor-not-allowed'
         )}
       >

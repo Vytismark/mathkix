@@ -45,7 +45,7 @@ export default async function QuizResultsPage({
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center" style={{ background: '#F8FAFF' }}>
       {/* Header */}
       <div className="text-6xl mb-4 animate-bounce">🎉</div>
       <h1 className="text-3xl font-extrabold tracking-tight mb-1">Quiz complete!</h1>
@@ -147,7 +147,8 @@ export default async function QuizResultsPage({
       {/* CTA */}
       <Link
         href={childId ? `/play/home?child=${childId}` : '/select'}
-        className="bg-indigo-600 hover:bg-indigo-700 text-white text-xl font-bold px-10 py-4 rounded-2xl transition-all active:scale-95"
+        className="text-white text-xl font-bold px-10 py-4 rounded-2xl transition-all active:scale-95"
+        style={{ background: '#3678FF' }}
       >
         Start learning! ✨
       </Link>

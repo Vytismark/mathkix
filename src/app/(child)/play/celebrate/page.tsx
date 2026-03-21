@@ -39,7 +39,7 @@ function CelebrateContent() {
   }, [childId])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center relative max-w-sm mx-auto">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center relative max-w-sm mx-auto" style={{ background: '#F8FAFF' }}>
       {isPerfect && <StarBurst />}
 
       {/* Score emoji */}
@@ -62,7 +62,7 @@ function CelebrateContent() {
       <div className="bg-white rounded-3xl shadow-lg p-5 w-full mb-5 relative z-10">
         <div className="flex justify-around">
           <div>
-            <p className="text-3xl font-bold text-indigo-600">{score.toFixed(0)}%</p>
+            <p className="text-3xl font-bold text-[#3678FF]">{score.toFixed(0)}%</p>
             <p className="text-xs text-muted-foreground mt-1">Score</p>
           </div>
           <div className="w-px bg-border" />
@@ -98,7 +98,8 @@ function CelebrateContent() {
       <div className="flex flex-col gap-3 w-full relative z-10">
         <button
           onClick={() => router.push(`/play/home?child=${childId}`)}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-bold py-4 rounded-2xl transition-all active:scale-95"
+          className="text-white text-lg font-bold py-4 rounded-2xl transition-all active:scale-95"
+          style={{ background: '#3678FF' }}
         >
           Keep learning! 🚀
         </button>

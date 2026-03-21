@@ -29,11 +29,11 @@ export function FreshPracticeMessage({ domain, show }: FreshPracticeMessageProps
   const label = DOMAIN_LABELS[domain as Domain] ?? domain
 
   return (
-    <div className="w-full bg-gradient-to-r from-indigo-100 to-purple-100 border border-indigo-200 rounded-2xl px-4 py-3 mb-3 text-center animate-in fade-in slide-in-from-top-2 duration-500">
-      <p className="text-sm font-semibold text-indigo-700">
+    <div className="w-full bg-gradient-to-r from-blue-100 to-blue-50 border border-blue-200 rounded-2xl px-4 py-3 mb-3 text-center animate-in fade-in slide-in-from-top-2 duration-500">
+      <p className="text-sm font-semibold text-[#3678FF]">
         Well done! You completed all {label} lessons!
       </p>
-      <p className="text-xs text-indigo-500 mt-0.5">
+      <p className="text-xs text-[#3678FF]/70 mt-0.5">
         Generating fresh practice questions just for you...
       </p>
     </div>
