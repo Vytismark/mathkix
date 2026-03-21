@@ -85,8 +85,8 @@ export default function ResetPasswordPage() {
             disabled={loading}
             className="cta-btn w-full h-11 rounded-xl font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed"
             style={{
-              background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-              boxShadow: '0 3px 18px rgba(192,57,43,0.4)',
+              background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+              boxShadow: '0 3px 18px rgba(54,120,255,0.4)',
             }}
           >
             {loading ? 'Updating…' : 'Update password'}

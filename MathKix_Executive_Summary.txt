@@ -1,0 +1,195 @@
+================================================================================
+                        MATHKIX - EXECUTIVE SUMMARY
+                          Business Plan Context | 2026
+================================================================================
+
+COMPANY OVERVIEW
+----------------
+MathKix is a subscription-based K-5 math learning platform that delivers
+personalized, adaptive math practice to elementary-age children. The platform
+combines AI-driven level assessment with structured lesson content, giving
+parents a transparent view of their child's progress while keeping the child
+experience engaging and age-appropriate.
+
+Website: https://mathkix.com
+Stage:   Live (product built and deployed; monetization activation in progress)
+
+
+THE PROBLEM
+-----------
+Elementary-aged children frequently fall behind in foundational math skills
+between school years due to lack of structured, engaging practice at home.
+Existing solutions are either too gamified (lacking educational rigor) or too
+academic (failing to retain children's attention). Parents lack visibility into
+what their child actually knows and where the gaps are.
+
+
+THE SOLUTION
+------------
+MathKix offers:
+
+  • Adaptive Learning Engine - AI-powered assessments that identify a child's
+    current level and continuously adjust difficulty to keep them in the optimal
+    learning zone.
+
+  • Structured Curriculum - Grade-aligned lessons and quizzes covering K-5
+    math standards, ensuring what children practice at home reinforces what
+    they're learning in school.
+
+  • Parent Dashboard - Real-time progress tracking, quiz history, and level
+    data give parents actionable insight without requiring them to sit beside
+    their child.
+
+  • 24/7 AI Support - An integrated Claude-powered support system provides
+    instant help to parents at any hour, with seamless escalation to human
+    agents when needed.
+
+  • Zero Ads - A distraction-free, child-safe environment with no advertising
+    of any kind.
+
+
+TARGET MARKET
+-------------
+Primary:   Parents of children in grades K-5 (ages 5-11) in the United States
+           who are invested in their child's academic performance and willing
+           to pay for quality educational tools.
+
+Secondary: Homeschooling families seeking a structured, affordable math
+           curriculum supplement.
+
+Market Size:
+  - ~33 million K-5 students in the US
+  - EdTech for K-12 is a $15B+ market growing at ~16% annually
+  - Direct comparable: Prodigy (10M+ users), IXL ($400M+ ARR)
+
+
+BUSINESS MODEL
+--------------
+SaaS subscription with three tiers designed to maximize conversion and LTV:
+
+  Plan          Price           Notes
+  ─────────────────────────────────────────────────────
+  Monthly       $9.99/month     Low-friction trial entry
+  Annual        $79.99/year     ~33% discount; $6.67/mo effective
+  Lifetime      $149.99 once    High LTV; ideal for homeschool families
+
+All plans cover one child account with full feature access. Multi-child
+family plans represent a near-term upsell opportunity.
+
+
+COMPETITIVE ADVANTAGE
+---------------------
+  1. AI-First Personalization - Claude API integration enables genuine adaptive
+     learning, not just rule-based difficulty switching.
+
+  2. Parent Transparency - Most competitors focus on the child; MathKix treats
+     the parent as an equal stakeholder with full visibility.
+
+  3. Clean, Focused UX - Purpose-built for K-5 math only. No bloat, no ads,
+     no distractions - a deliberate contrast to broad edtech platforms.
+
+  4. Lifetime Tier - Creates a loyal, vocal early adopter base and generates
+     upfront cash flow during the growth phase.
+
+  5. Low Overhead - Fully serverless architecture (Vercel + Supabase) means
+     infrastructure costs scale with revenue, not ahead of it.
+
+
+TECHNOLOGY
+----------
+The platform is fully built and deployed on a modern, scalable stack:
+
+  • Frontend / Backend:  Next.js 16 (App Router), TypeScript
+  • Database & Auth:     Supabase (PostgreSQL)
+  • Payments:            Stripe (subscription billing)
+  • AI:                  Anthropic Claude API (assessment + support)
+  • Styling:             Tailwind CSS v4, shadcn/ui
+  • Hosting:             Vercel (global CDN, serverless)
+
+The architecture is intentionally lean - no dedicated servers to manage,
+automatic scaling, and a clean TypeScript codebase that is maintainable by
+a small team.
+
+
+GO-TO-MARKET STRATEGY
+---------------------
+Phase 1 - Launch (Now)
+  • Activate paid infrastructure (Supabase, Stripe, email)
+  • Add social proof and testimonials to landing page
+  • Soft launch to personal network and parenting communities
+
+Phase 2 - Organic Growth (Months 1-3)
+  • SEO content targeting "math practice for kids," grade-specific queries
+  • Parent Facebook groups, Reddit (r/homeschool, r/parenting)
+  • Referral incentive: one free month per referred signup
+
+Phase 3 - Paid Acquisition (Months 4-6)
+  • Meta/Instagram ads targeting parents of K-5 children
+  • Google Search ads on high-intent keywords
+  • Pinterest for homeschool audience
+
+Phase 4 - Partnerships (Month 6+)
+  • Outreach to homeschool co-ops and curriculum resellers
+  • Teacher referral program (teachers recommend to parents)
+
+
+FINANCIAL PROJECTIONS (Conservative)
+--------------------------------------
+Assumptions: 60% annual / 30% monthly / 10% lifetime mix; 5% monthly churn
+
+  Month     Subscribers    MRR (est.)
+  ─────────────────────────────────────
+  Month 3       150          $1,050
+  Month 6       500          $3,500
+  Month 12    1,500         $10,500
+  Month 24    5,000         $35,000
+
+Break-even estimated at ~300 active subscribers given current infrastructure
+cost profile (~$50-100/mo at low scale).
+
+
+CURRENT STATUS & MILESTONES
+----------------------------
+  [DONE]  Full web application built and deployed at mathkix.com
+  [DONE]  Adaptive quiz engine, lesson system, and AI assessment complete
+  [DONE]  Parent dashboard and child portal complete
+  [DONE]  Stripe subscription integration (code-complete)
+  [DONE]  AI-powered 24/7 support system with admin dashboard
+  [TODO]  Provision Supabase project and run database migrations
+  [TODO]  Create Stripe products and activate billing
+  [TODO]  Add social proof / testimonials to landing page
+  [TODO]  Configure email notifications (Resend)
+  [TODO]  First 100 paying customers
+
+
+FOUNDING TEAM
+-------------
+Vytis Markevičius - Founder & CEO
+  Origin:      Vilnius, Lithuania
+  Background:  Graduated high school with the highest academic results in his
+               cohort, demonstrating exceptional all-round intellectual ability
+               across technical and creative disciplines. Recognized informally
+               as among the most capable students of his generation.
+
+  Technical:   Solo-built the entire MathKix platform from the ground up -
+               full-stack architecture, database design, AI integration, payment
+               infrastructure, and deployment. No technical co-founder; no
+               outsourced development. The product is entirely his own work.
+
+  Leadership:  Proven track record of leading complex initiatives and teams in
+               academic and community settings, with a pattern of taking
+               ownership of high-stakes projects and delivering results.
+
+  Approach:    Full-time founder. Combining deep technical execution ability
+               with strong strategic and organizational instincts - a rare
+               profile that allows MathKix to move fast without sacrificing
+               product quality or architectural integrity.
+
+  Edge:        Built and shipped a production-grade, AI-powered SaaS platform
+               as a solo founder - demonstrating the kind of end-to-end
+               capability that typically requires a team of 4-6 engineers.
+
+
+================================================================================
+                  Confidential - Prepared March 2026
+================================================================================

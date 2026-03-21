@@ -33,8 +33,8 @@ export default async function SupportPage() {
           <button
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white"
             style={{
-              background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-              boxShadow: '0 4px 18px rgba(192,57,43,0.35)',
+              background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+              boxShadow: '0 4px 18px rgba(54,120,255,0.35)',
             }}
           >
             <Plus className="w-4 h-4" />
@@ -58,7 +58,7 @@ export default async function SupportPage() {
           <Link href="/support/new">
             <button
               className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
-              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+              style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
             >
               Create your first ticket
             </button>

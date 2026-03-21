@@ -31,7 +31,7 @@ function Toggle({ checked, onChange, disabled }: { checked: boolean; onChange: (
       className="relative w-11 h-6 rounded-full shrink-0 transition-colors duration-200 disabled:opacity-40"
       style={{
         background: checked
-          ? 'linear-gradient(135deg, #C0392B, #E74C3C)'
+          ? 'linear-gradient(135deg, #2557CC, #3678FF)'
           : 'rgba(255,255,255,0.1)',
       }}
     >
@@ -316,8 +316,8 @@ export default function AccountPage() {
               disabled={profileLoading}
               className="cta-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-white disabled:opacity-50"
               style={{
-                background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                boxShadow: '0 4px 16px rgba(192,57,43,0.3)',
+                background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                boxShadow: '0 4px 16px rgba(54,120,255,0.3)',
               }}
             >
               {profileLoading ? 'Saving…' : 'Save changes'}
@@ -383,8 +383,8 @@ export default function AccountPage() {
                 disabled={passwordLoading || !currentPassword || !newPassword || !confirmPassword}
                 className="cta-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-white disabled:opacity-50"
                 style={{
-                  background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                  boxShadow: '0 4px 16px rgba(192,57,43,0.3)',
+                  background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                  boxShadow: '0 4px 16px rgba(54,120,255,0.3)',
                 }}
               >
                 {passwordLoading ? 'Updating…' : 'Update password'}

@@ -101,7 +101,7 @@ function childCardHtml(child: WeeklyReportChild, appUrl: string): string {
   const ctaHtml = `
     <div style="margin-top:18px;">
       <a href="${appUrl}/children/${child.id}/progress"
-         style="display:inline-block;background-color:#E74C3C;color:#ffffff;text-decoration:none;border-radius:8px;padding:11px 22px;font-size:13px;font-weight:700;letter-spacing:0.01em;">
+         style="display:inline-block;background-color:#3678FF;color:#ffffff;text-decoration:none;border-radius:8px;padding:11px 22px;font-size:13px;font-weight:700;letter-spacing:0.01em;">
         View ${esc(child.name)}&apos;s progress &rarr;
       </a>
     </div>`
@@ -169,7 +169,7 @@ function buildWeeklyReportHtml(params: WeeklyReportParams): string {
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <span style="font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">Math<span style="color:#E74C3C;">Kix</span></span>
+                    <span style="font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">Math<span style="color:#3678FF;">Kix</span></span>
                     <div style="font-size:13px;color:#64748b;margin-top:5px;letter-spacing:0.02em;">📊 &nbsp;WEEKLY PROGRESS REPORT</div>
                   </td>
                   <td align="right" style="vertical-align:bottom;">

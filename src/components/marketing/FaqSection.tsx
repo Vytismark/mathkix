@@ -55,7 +55,7 @@ export default function FaqSection() {
               className="rounded-xl border overflow-hidden transition-colors"
               style={{
                 background: isOpen ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.02)',
-                borderColor: isOpen ? 'rgba(231,76,60,0.2)' : 'rgba(255,255,255,0.07)',
+                borderColor: isOpen ? 'rgba(54,120,255,0.20)' : 'rgba(255,255,255,0.07)',
               }}
             >
               <button

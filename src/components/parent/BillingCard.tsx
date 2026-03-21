@@ -220,7 +220,7 @@ export function BillingCard({ subscription, justPurchased }: BillingCardProps) {
           const isLifetime = plan.id === 'lifetime'
           const meta       = PLAN_META[plan.id] ?? { tagline: '', priceNote: '' }
 
-          const accentColor = isAnnual ? '#818cf8' : isLifetime ? '#fbbf24' : '#E74C3C'
+          const accentColor = isAnnual ? '#818cf8' : isLifetime ? '#fbbf24' : '#3678FF'
           const checkBg     = isAnnual
             ? 'rgba(99,102,241,0.22)'
             : isLifetime
@@ -231,7 +231,7 @@ export function BillingCard({ subscription, justPurchased }: BillingCardProps) {
             ? 'linear-gradient(135deg,#6366f1,#4f46e5)'
             : isLifetime
             ? 'linear-gradient(135deg,#d97706,#b45309)'
-            : 'linear-gradient(135deg,#C0392B,#E74C3C)'
+            : 'linear-gradient(135deg,#2557CC,#3678FF)'
 
           const cardBorder = isCurrent
             ? '1.5px solid rgba(16,185,129,0.45)'

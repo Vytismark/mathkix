@@ -65,7 +65,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           <Link
             href="/"
             className="text-[26px] font-extrabold tracking-tight"
-            style={{ color: '#E74C3C' }}
+            style={{ color: '#3678FF' }}
           >
             {appName}
           </Link>

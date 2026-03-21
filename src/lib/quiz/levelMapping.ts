@@ -57,7 +57,7 @@ export const DOMAIN_ICONS: Record<Domain, string> = {
 
 /** Tailwind-compatible accent colour per domain (used for bars, badges, borders) */
 export const DOMAIN_COLORS: Record<Domain, { bg: string; text: string; border: string; hex: string }> = {
-  OA:  { bg: 'rgba(231,76,60,0.15)',   text: '#f87171', border: 'rgba(231,76,60,0.4)',   hex: '#E74C3C' },
+  OA:  { bg: 'rgba(54,120,255,0.15)',  text: '#93bbff', border: 'rgba(54,120,255,0.4)',  hex: '#3678FF' },
   NBT: { bg: 'rgba(99,102,241,0.15)',  text: '#a5b4fc', border: 'rgba(99,102,241,0.4)',  hex: '#6366f1' },
   NF:  { bg: 'rgba(139,92,246,0.15)',  text: '#c4b5fd', border: 'rgba(139,92,246,0.4)',  hex: '#8b5cf6' },
   MD:  { bg: 'rgba(14,165,233,0.15)',  text: '#7dd3fc', border: 'rgba(14,165,233,0.4)',  hex: '#0ea5e9' },

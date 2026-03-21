@@ -46,9 +46,9 @@ export function TrialExpiredModal() {
         {/* Icon */}
         <div
           className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
-          style={{ background: 'rgba(192,57,43,0.15)', boxShadow: '0 0 24px rgba(192,57,43,0.25)' }}
+          style={{ background: 'rgba(54,120,255,0.15)', boxShadow: '0 0 24px rgba(54,120,255,0.25)' }}
         >
-          <Lock className="w-7 h-7" style={{ color: '#E74C3C' }} />
+          <Lock className="w-7 h-7" style={{ color: '#3678FF' }} />
         </div>
 
         <h2 className="text-2xl font-bold text-white mb-3">
@@ -65,8 +65,8 @@ export function TrialExpiredModal() {
           disabled={loading}
           className="cta-btn w-full py-4 rounded-2xl text-white font-bold text-lg mb-3 disabled:opacity-60"
           style={{
-            background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-            boxShadow: '0 4px 20px rgba(192,57,43,0.4)',
+            background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+            boxShadow: '0 4px 20px rgba(54,120,255,0.40)',
           }}
         >
           {loading ? 'Loading…' : 'Subscribe - $9.99 / month'}

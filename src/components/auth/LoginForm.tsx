@@ -137,7 +137,7 @@ export function LoginForm() {
         <div className="flex justify-end mt-1.5">
           <Link
             href="/forgot-password"
-            className="text-xs text-slate-500 hover:text-red-400 transition-colors"
+            className="text-xs text-slate-500 hover:text-blue-400 transition-colors"
           >
             Forgot password?
           </Link>
@@ -151,8 +151,8 @@ export function LoginForm() {
           disabled={loading}
           className="cta-btn w-full h-11 rounded-xl font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed"
           style={{
-            background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-            boxShadow: '0 3px 18px rgba(192,57,43,0.4)',
+            background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+            boxShadow: '0 3px 18px rgba(54,120,255,0.40)',
           }}
         >
           {loading ? 'Signing in…' : 'Sign in'}
@@ -165,7 +165,7 @@ export function LoginForm() {
         style={{ animation: 'fade-in-up 0.45s cubic-bezier(0.22,1,0.36,1) 290ms both' }}
       >
         Don&apos;t have an account?{' '}
-        <Link href="/signup" className="text-red-400 hover:text-red-300 transition-colors font-medium">
+        <Link href="/signup" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
           Sign up
         </Link>
       </p>

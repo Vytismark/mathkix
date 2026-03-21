@@ -65,7 +65,7 @@ export function render(meta: Record<string, unknown>): RenderResult {
 
           <tr>
             <td bgcolor="#07080f" style="background-color:#07080f;border-radius:16px 16px 0 0;padding:26px 32px 24px;">
-              <span style="font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">Math<span style="color:#E74C3C;">Kix</span></span>
+              <span style="font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">Math<span style="color:#3678FF;">Kix</span></span>
               <div style="font-size:13px;color:#64748b;margin-top:5px;">Two-week progress update</div>
             </td>
           </tr>
@@ -79,7 +79,7 @@ export function render(meta: Record<string, unknown>): RenderResult {
               ${statCols}
               <div style="margin-top:22px;">
                 <a href="${appUrl}/select"
-                   style="display:inline-block;background-color:#E74C3C;color:#ffffff;text-decoration:none;border-radius:8px;padding:12px 24px;font-size:14px;font-weight:700;">
+                   style="display:inline-block;background-color:#3678FF;color:#ffffff;text-decoration:none;border-radius:8px;padding:12px 24px;font-size:14px;font-weight:700;">
                   Continue lessons &rarr;
                 </a>
               </div>

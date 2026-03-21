@@ -1255,7 +1255,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
         {/* Brand */}
         <span className="text-base font-extrabold tracking-tight shrink-0">
           <span className="text-white">Math</span>
-          <span style={{ color: '#E74C3C' }}>Kix</span>
+          <span style={{ color: '#3678FF' }}>Kix</span>
           <span className="text-indigo-400 text-xs font-medium ml-1.5">Review</span>
         </span>
 

@@ -107,7 +107,7 @@ export function ParentNav() {
               onClick={confirmSignOut}
               disabled={signingOut}
               className="flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white disabled:opacity-50"
-              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+              style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
             >
               {signingOut ? 'Signing out…' : 'Sign out'}
             </button>

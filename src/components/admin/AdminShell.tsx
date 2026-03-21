@@ -46,7 +46,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <Link href="/admin" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
           <span className="text-lg font-extrabold leading-none tracking-tight">
             <span className="text-white">Math</span>
-            <span style={{ color: '#E74C3C' }}>Kix</span>
+            <span style={{ color: '#3678FF' }}>Kix</span>
             <span className="text-indigo-400 ml-1.5 text-xs font-medium">Admin</span>
           </span>
         </Link>
@@ -103,7 +103,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
       >
         <span className="text-base font-extrabold leading-none tracking-tight">
           <span className="text-white">Math</span>
-          <span style={{ color: '#E74C3C' }}>Kix</span>
+          <span style={{ color: '#3678FF' }}>Kix</span>
           <span className="text-indigo-400 ml-1.5 text-xs font-medium">Admin</span>
         </span>
         <button
@@ -129,7 +129,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
             <div className="flex items-center justify-between mb-6 px-2">
               <span className="text-base font-extrabold">
                 <span className="text-white">Math</span>
-                <span style={{ color: '#E74C3C' }}>Kix</span>
+                <span style={{ color: '#3678FF' }}>Kix</span>
                 <span className="text-indigo-400 ml-1.5 text-xs font-medium">Admin</span>
               </span>
               <button

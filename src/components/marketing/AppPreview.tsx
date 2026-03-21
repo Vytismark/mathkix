@@ -15,7 +15,7 @@ interface QuizStep {
 }
 
 const DEMO_STEPS: QuizStep[] = [
-  { question: '7 + 5 = ?', options: ['11', '12', '13', '14'], correct: 1, gradeLabel: 'Grade 2', domain: 'Addition', color: '#E74C3C' },
+  { question: '7 + 5 = ?', options: ['11', '12', '13', '14'], correct: 1, gradeLabel: 'Grade 2', domain: 'Addition', color: '#3678FF' },
   { question: '24 - 9 = ?', options: ['13', '14', '15', '16'], correct: 2, gradeLabel: 'Grade 2', domain: 'Subtraction', color: '#0ea5e9' },
   { question: '3 × 4 = ?', options: ['7', '10', '12', '14'], correct: 2, gradeLabel: 'Grade 3', domain: 'Multiplication', color: '#7c3aed' },
 ]
@@ -184,13 +184,13 @@ export default function AppPreview() {
           <div className="flex items-center gap-2">
             <div
               className="w-7 h-7 rounded-lg flex items-center justify-center text-[11px] font-extrabold"
-              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)', color: 'white' }}
+              style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)', color: 'white' }}
             >
               M
             </div>
             <span className="text-xs font-bold">
               <span className="text-white">Math</span>
-              <span style={{ color: '#E74C3C' }}>Spark</span>
+              <span style={{ color: '#3678FF' }}>Spark</span>
             </span>
           </div>
           <div className="flex items-center gap-3">

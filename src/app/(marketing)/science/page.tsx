@@ -44,8 +44,8 @@ const PILLARS = [
   },
   {
     icon: Target,
-    color: '#E74C3C',
-    glow: 'rgba(231,76,60,0.28)',
+    color: '#3678FF',
+    glow: 'rgba(54,120,255,0.28)',
     title: 'Adaptive Learning',
     subtitle: 'Every question scored individually, mixing domains and difficulties',
     anchor: 'adaptive-learning',
@@ -88,7 +88,7 @@ const DEEP_DIVES = [
   {
     id: 'adaptive-learning',
     title: 'Adaptive Learning',
-    accent: '#E74C3C',
+    accent: '#3678FF',
     researchTitle: 'Zone of Proximal Development',
     researchBody:
       'Lev Vygotsky proposed in 1978 that learning happens most effectively in the zone of proximal development - the space between what a child can do independently and what they can achieve with guidance. Material that is too easy leads to boredom; material that is too hard leads to frustration.',
@@ -144,7 +144,7 @@ const GRADES = [
 ]
 
 const DOMAINS = [
-  { code: 'OA',  name: 'Operations & Algebraic Thinking',  color: '#E74C3C' },
+  { code: 'OA',  name: 'Operations & Algebraic Thinking',  color: '#3678FF' },
   { code: 'NBT', name: 'Number & Operations in Base Ten',  color: '#f59e0b' },
   { code: 'NF',  name: 'Number & Operations - Fractions',  color: '#10b981' },
   { code: 'MD',  name: 'Measurement & Data',               color: '#0ea5e9' },
@@ -501,9 +501,9 @@ export default function SciencePage() {
               >
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(192,57,43,0.15)' }}
+                  style={{ background: 'rgba(54,120,255,0.15)' }}
                 >
-                  <Clock className="w-4 h-4" style={{ color: '#E74C3C' }} />
+                  <Clock className="w-4 h-4" style={{ color: '#3678FF' }} />
                 </div>
                 <p className="text-slate-300 text-sm font-medium">5-15 min daily sessions designed for kids</p>
               </div>
@@ -576,8 +576,8 @@ export default function SciencePage() {
               href="/signup"
               className="cta-btn inline-flex items-center justify-center gap-2 text-white font-bold text-lg px-10 py-4 rounded-2xl"
               style={{
-                background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                boxShadow: '0 4px 32px rgba(192,57,43,0.5)',
+                background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                boxShadow: '0 4px 32px rgba(54,120,255,0.5)',
               }}
             >
               Start free for 30 days
@@ -603,7 +603,7 @@ export default function SciencePage() {
             <Image src="/mathkix-icon.svg" alt="MathKix logo" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
-              <span style={{ color: '#E74C3C' }}>Kix</span>
+              <span style={{ color: '#3678FF' }}>Kix</span>
             </span>
           </span>
           <div className="flex items-center gap-6">

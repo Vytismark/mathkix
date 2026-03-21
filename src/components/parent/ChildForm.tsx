@@ -59,16 +59,16 @@ function CardGroup<T extends string>({
             onClick={() => onChange(opt.value)}
             className="relative flex flex-col items-center gap-2.5 rounded-2xl border p-4 text-center transition-all duration-200 cursor-pointer"
             style={{
-              background: active ? 'rgba(231,76,60,0.12)' : 'rgba(255,255,255,0.04)',
-              borderColor: active ? 'rgba(231,76,60,0.6)' : 'rgba(255,255,255,0.1)',
-              boxShadow: active ? '0 0 0 3px rgba(231,76,60,0.12)' : 'none',
+              background: active ? 'rgba(54,120,255,0.12)' : 'rgba(255,255,255,0.04)',
+              borderColor: active ? 'rgba(54,120,255,0.60)' : 'rgba(255,255,255,0.1)',
+              boxShadow: active ? '0 0 0 3px rgba(54,120,255,0.12)' : 'none',
               transform: active ? 'translateY(-2px)' : 'translateY(0)',
             }}
           >
             {active && (
               <span
                 className="absolute top-2 right-2 w-4 h-4 rounded-full flex items-center justify-center"
-                style={{ background: '#E74C3C' }}
+                style={{ background: '#3678FF' }}
               >
                 <Check className="w-2.5 h-2.5 text-white" />
               </span>
@@ -216,9 +216,9 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
             <div
               className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300"
               style={{
-                background: s < step ? '#E74C3C' : s === step ? 'rgba(231,76,60,0.2)' : 'rgba(255,255,255,0.06)',
+                background: s < step ? '#3678FF' : s === step ? 'rgba(231,76,60,0.2)' : 'rgba(255,255,255,0.06)',
                 border: s <= step ? '1.5px solid rgba(231,76,60,0.7)' : '1.5px solid rgba(255,255,255,0.1)',
-                color: s <= step ? (s < step ? '#fff' : '#E74C3C') : '#475569',
+                color: s <= step ? (s < step ? '#fff' : '#3678FF') : '#475569',
               }}
             >
               {s < step ? <Check className="w-3 h-3" /> : s}
@@ -226,7 +226,7 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
             {s < 3 && (
               <div
                 className="flex-1 h-[1.5px] w-16 sm:w-24 transition-all duration-500"
-                style={{ background: s < step ? '#E74C3C' : 'rgba(255,255,255,0.08)' }}
+                style={{ background: s < step ? '#3678FF' : 'rgba(255,255,255,0.08)' }}
               />
             )}
           </div>
@@ -269,7 +269,7 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
               className="flex-1 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 border"
               style={{
                 background: schoolGrade === g.value ? 'rgba(231,76,60,0.15)' : 'rgba(255,255,255,0.04)',
-                borderColor: schoolGrade === g.value ? 'rgba(231,76,60,0.6)' : 'rgba(255,255,255,0.1)',
+                borderColor: schoolGrade === g.value ? 'rgba(54,120,255,0.60)' : 'rgba(255,255,255,0.1)',
                 color: schoolGrade === g.value ? '#fca5a5' : '#64748b',
                 transform: schoolGrade === g.value ? 'translateY(-2px)' : 'translateY(0)',
                 boxShadow: schoolGrade === g.value ? '0 0 0 3px rgba(231,76,60,0.1)' : 'none',
@@ -293,7 +293,7 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
         disabled={!canAdvanceStep1()}
         className="cta-btn w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-sm text-white disabled:opacity-40 disabled:cursor-not-allowed transition-opacity"
         style={{
-          background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
+          background: 'linear-gradient(135deg, #2557CC, #3678FF)',
           boxShadow: canAdvanceStep1() ? '0 4px 20px rgba(192,57,43,0.35)' : 'none',
         }}
       >
@@ -332,7 +332,7 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
           onClick={() => setStep(3)}
           className="cta-btn flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-bold text-sm text-white"
           style={{
-            background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
+            background: 'linear-gradient(135deg, #2557CC, #3678FF)',
             boxShadow: '0 4px 20px rgba(192,57,43,0.35)',
           }}
         >
@@ -396,7 +396,7 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
           disabled={loading}
           className="cta-btn flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-bold text-sm text-white disabled:opacity-60"
           style={{
-            background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
+            background: 'linear-gradient(135deg, #2557CC, #3678FF)',
             boxShadow: '0 4px 20px rgba(192,57,43,0.35)',
           }}
         >

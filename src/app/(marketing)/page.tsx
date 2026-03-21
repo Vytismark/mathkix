@@ -38,8 +38,8 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     icon: Target,
-    color: '#E74C3C',
-    glow: 'rgba(231,76,60,0.28)',
+    color: '#3678FF',
+    glow: 'rgba(54,120,255,0.28)',
     title: 'AI Placement in 3 Minutes',
     description:
       'A short diagnostic quiz powered by Claude AI finds your child\'s exact level - no guessing, no wasted time on work that\'s too easy or too hard.',
@@ -263,7 +263,7 @@ export default function LandingPage() {
             transform: 'translateX(-50%)',
             width: '800px',
             height: '560px',
-            background: 'radial-gradient(ellipse at 50% 30%, rgba(192,57,43,0.13) 0%, transparent 68%)',
+            background: 'radial-gradient(ellipse at 50% 30%, rgba(54,120,255,0.10) 0%, transparent 68%)',
             pointerEvents: 'none',
           }}
         />
@@ -273,9 +273,9 @@ export default function LandingPage() {
           <div
             className="animate-fade-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-8 border"
             style={{
-              background: 'rgba(192,57,43,0.1)',
-              borderColor: 'rgba(231,76,60,0.3)',
-              color: '#f87171',
+              background: 'rgba(54,120,255,0.10)',
+              borderColor: 'rgba(54,120,255,0.28)',
+              color: '#93bbff',
             }}
           >
             <Sparkles className="w-3.5 h-3.5" />
@@ -289,14 +289,7 @@ export default function LandingPage() {
           >
             Ignite your child&apos;s<br />
             math{' '}
-            <span
-              style={{
-                background: 'linear-gradient(135deg, #E74C3C 0%, #ff7058 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
+            <span style={{ color: '#3678FF' }}>
               potential.
             </span>
           </h1>
@@ -319,8 +312,8 @@ export default function LandingPage() {
               href="/signup"
               className="cta-btn inline-flex items-center justify-center gap-2 text-white font-bold text-base px-8 py-4 rounded-2xl"
               style={{
-                background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                boxShadow: '0 4px 28px rgba(192,57,43,0.45)',
+                background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                boxShadow: '0 4px 28px rgba(54,120,255,0.40)',
               }}
             >
               Start free for 30 days
@@ -450,11 +443,11 @@ export default function LandingPage() {
             <div
               className="rounded-2xl border p-7"
               style={{
-                background: 'rgba(231,76,60,0.04)',
-                borderColor: 'rgba(231,76,60,0.18)',
+                background: 'rgba(54,120,255,0.05)',
+                borderColor: 'rgba(54,120,255,0.20)',
               }}
             >
-              <p className="text-sm font-bold uppercase tracking-wider mb-5" style={{ color: '#E74C3C' }}>MathKix</p>
+              <p className="text-sm font-bold uppercase tracking-wider mb-5" style={{ color: '#3678FF' }}>MathKix</p>
               <ul className="space-y-4">
                 {[
                   { icon: Brain, text: 'AI placement finds their exact level in 3 minutes' },
@@ -466,9 +459,9 @@ export default function LandingPage() {
                   <li key={text} className="flex items-start gap-3 text-sm text-slate-200">
                     <span
                       className="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0"
-                      style={{ background: 'rgba(231,76,60,0.18)' }}
+                      style={{ background: 'rgba(54,120,255,0.18)' }}
                     >
-                      <Icon className="w-3 h-3" style={{ color: '#E74C3C' }} />
+                      <Icon className="w-3 h-3" style={{ color: '#3678FF' }} />
                     </span>
                     {text}
                   </li>
@@ -503,7 +496,7 @@ export default function LandingPage() {
                 <div
                   className="text-5xl font-black mb-5 leading-none select-none"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(231,76,60,0.55), rgba(192,57,43,0.18))',
+                    background: 'linear-gradient(135deg, rgba(54,120,255,0.55), rgba(37,87,204,0.18))',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -606,7 +599,7 @@ export default function LandingPage() {
                   { color: '#10b981', text: 'Large tap targets for small fingers' },
                   { color: '#7c3aed', text: 'Ms. Owl AI tutor gives encouragement' },
                   { color: '#f59e0b', text: 'XP and streaks keep them motivated' },
-                  { color: '#E74C3C', text: 'Wrong answers teach, never punish' },
+                  { color: '#3678FF', text: 'Wrong answers teach, never punish' },
                 ].map(({ color, text }) => (
                   <li key={text} className="flex items-center gap-3 text-sm text-slate-300">
                     <div
@@ -657,9 +650,9 @@ export default function LandingPage() {
               >
                 <div
                   className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(192,57,43,0.15)', boxShadow: '0 0 12px rgba(192,57,43,0.2)' }}
+                  style={{ background: 'rgba(54,120,255,0.15)', boxShadow: '0 0 12px rgba(54,120,255,0.20)' }}
                 >
-                  <Icon className="w-4 h-4" style={{ color: '#E74C3C' }} />
+                  <Icon className="w-4 h-4" style={{ color: '#3678FF' }} />
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">{label}</p>
@@ -699,7 +692,7 @@ export default function LandingPage() {
             transform: 'translateX(-50%)',
             width: '700px',
             height: '500px',
-            background: 'radial-gradient(ellipse at 50% 80%, rgba(192,57,43,0.11) 0%, transparent 65%)',
+            background: 'radial-gradient(ellipse at 50% 80%, rgba(54,120,255,0.09) 0%, transparent 65%)',
             pointerEvents: 'none',
           }}
         />
@@ -709,14 +702,7 @@ export default function LandingPage() {
             className="animate-fade-in-up text-4xl sm:text-5xl font-extrabold mb-5 leading-[1.1]"
           >
             Give your child a head start -{' '}
-            <span
-              style={{
-                background: 'linear-gradient(135deg, #E74C3C, #ff7058)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
+            <span style={{ color: '#3678FF' }}>
               free for 30 days.
             </span>
           </h2>
@@ -736,8 +722,8 @@ export default function LandingPage() {
               href="/signup"
               className="cta-btn inline-flex items-center justify-center gap-2 text-white font-bold text-lg px-10 py-4 rounded-2xl"
               style={{
-                background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                boxShadow: '0 4px 32px rgba(192,57,43,0.5)',
+                background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                boxShadow: '0 4px 32px rgba(54,120,255,0.45)',
               }}
             >
               Start free for 30 days
@@ -763,7 +749,7 @@ export default function LandingPage() {
             <Image src="/mathkix-icon.svg" alt="MathKix logo" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
-              <span style={{ color: '#E74C3C' }}>Kix</span>
+              <span style={{ color: '#3678FF' }}>Kix</span>
             </span>
           </span>
           <div className="flex items-center gap-6">

@@ -281,7 +281,7 @@ export function LevelFinderQuiz({ childId, childName, schoolGrade }: LevelFinder
             onClick={submitAnswer}
             disabled={feedbackPhase || !answer.trim()}
             className="w-full py-4 rounded-2xl text-white text-lg font-bold disabled:opacity-40 transition-opacity"
-            style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+            style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
           >
             Submit
           </button>

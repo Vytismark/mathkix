@@ -131,9 +131,9 @@ export default function PricingPage() {
           className="animate-fade-in-up text-sm font-semibold px-4 py-1.5 rounded-full inline-block border"
           style={{
             animationDelay: '120ms',
-            background: 'rgba(192,57,43,0.1)',
-            borderColor: 'rgba(231,76,60,0.3)',
-            color: '#f87171',
+            background: 'rgba(54,120,255,0.10)',
+            borderColor: 'rgba(54,120,255,0.28)',
+            color: '#93bbff',
           }}
         >
           Every plan starts with a free 30-day trial - no credit card required
@@ -266,9 +266,9 @@ export default function PricingPage() {
             >
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center"
-                style={{ background: 'rgba(192,57,43,0.12)', boxShadow: '0 0 14px rgba(192,57,43,0.18)' }}
+                style={{ background: 'rgba(54,120,255,0.12)', boxShadow: '0 0 14px rgba(54,120,255,0.18)' }}
               >
-                <Icon className="w-4.5 h-4.5" style={{ color: '#E74C3C', width: 18, height: 18 }} />
+                <Icon className="w-4.5 h-4.5" style={{ color: '#3678FF', width: 18, height: 18 }} />
               </div>
               <div>
                 <p className="text-white font-semibold text-sm">{label}</p>
@@ -308,7 +308,7 @@ export default function PricingPage() {
             <Image src="/mathkix-icon.svg" alt="MathKix logo" width={28} height={28} className="h-7 w-7" />
             <span className="text-base font-extrabold tracking-tight">
               <span className="text-white">Math</span>
-              <span style={{ color: '#E74C3C' }}>Kix</span>
+              <span style={{ color: '#3678FF' }}>Kix</span>
             </span>
           </span>
           <div className="flex items-center gap-6">

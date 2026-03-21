@@ -106,7 +106,7 @@ export function SignupForm() {
         </p>
         <p className="text-sm text-slate-500">
           Already confirmed?{' '}
-          <Link href="/login" className="text-red-400 hover:text-red-300 transition-colors font-medium">
+          <Link href="/login" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
             Sign in
           </Link>
         </p>
@@ -279,15 +279,15 @@ export function SignupForm() {
             type="checkbox"
             checked={agreedTerms}
             onChange={(e) => setAgreedTerms(e.target.checked)}
-            className="mt-0.5 w-4 h-4 rounded border-slate-600 accent-red-500 shrink-0"
+            className="mt-0.5 w-4 h-4 rounded border-slate-600 accent-blue-500 shrink-0"
           />
           <span className="text-xs text-slate-500 leading-relaxed">
             I agree to the{' '}
-            <Link href="/terms" className="text-red-400 hover:text-red-300 underline underline-offset-2">
+            <Link href="/terms" className="text-blue-400 hover:text-blue-300 underline underline-offset-2">
               Terms of Service
             </Link>{' '}
             and{' '}
-            <Link href="/privacy" className="text-red-400 hover:text-red-300 underline underline-offset-2">
+            <Link href="/privacy" className="text-blue-400 hover:text-blue-300 underline underline-offset-2">
               Privacy Policy
             </Link>
           </span>
@@ -301,8 +301,8 @@ export function SignupForm() {
           disabled={loading || googleLoading || !agreedTerms || (confirmPassword.length > 0 && password !== confirmPassword)}
           className="cta-btn w-full h-11 rounded-xl font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed"
           style={{
-            background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-            boxShadow: '0 3px 18px rgba(192,57,43,0.4)',
+            background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+            boxShadow: '0 3px 18px rgba(54,120,255,0.40)',
           }}
         >
           {loading ? 'Creating account…' : 'Create account'}
@@ -323,7 +323,7 @@ export function SignupForm() {
         style={{ animation: 'fade-in-up 0.45s cubic-bezier(0.22,1,0.36,1) 370ms both' }}
       >
         Already have an account?{' '}
-        <Link href="/login" className="text-red-400 hover:text-red-300 transition-colors font-medium">
+        <Link href="/login" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
           Sign in
         </Link>
       </p>

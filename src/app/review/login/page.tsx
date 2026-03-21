@@ -45,7 +45,7 @@ export default function ReviewLoginPage() {
         <div className="text-center mb-10">
           <p className="text-3xl font-extrabold tracking-tight mb-1">
             <span className="text-white">Math</span>
-            <span style={{ color: '#E74C3C' }}>Kix</span>
+            <span style={{ color: '#3678FF' }}>Kix</span>
           </p>
           <p className="text-sm text-indigo-400 font-medium">Question Review Portal</p>
         </div>

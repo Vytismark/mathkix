@@ -98,8 +98,8 @@ export default function NewTicketPage() {
           disabled={loading || !subject.trim() || description.trim().length < 10}
           className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
           style={{
-            background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-            boxShadow: '0 4px 18px rgba(192,57,43,0.35)',
+            background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+            boxShadow: '0 4px 18px rgba(54,120,255,0.35)',
           }}
         >
           <Send className="w-4 h-4" />

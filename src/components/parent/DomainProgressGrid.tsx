@@ -402,7 +402,7 @@ export function DomainProgressGrid({
           <Link href="/select">
             <button
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white transition-transform active:scale-95"
-              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+              style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
             >
               <Play className="w-4 h-4" />
               Start placement quiz

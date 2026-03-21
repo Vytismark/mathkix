@@ -246,7 +246,7 @@ export default function TicketDetailPage() {
               type="submit"
               disabled={sending || !reply.trim()}
               className="px-4 py-3 rounded-xl text-white disabled:opacity-40 transition-opacity shrink-0"
-              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+              style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
             >
               <Send className="w-4 h-4" />
             </button>

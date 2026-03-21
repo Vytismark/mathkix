@@ -68,8 +68,8 @@ export function MarketingNav({ currentPage }: MarketingNavProps) {
             href="/signup"
             className="cta-btn text-sm font-bold text-white px-4 py-2 rounded-xl"
             style={{
-              background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-              boxShadow: '0 2px 14px rgba(192,57,43,0.4)',
+              background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+              boxShadow: '0 2px 14px rgba(54,120,255,0.40)',
             }}
           >
             Start free
@@ -120,8 +120,8 @@ export function MarketingNav({ currentPage }: MarketingNavProps) {
                 href="/signup"
                 className="cta-btn flex items-center justify-center text-sm font-bold text-white w-full py-3 rounded-xl"
                 style={{
-                  background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                  boxShadow: '0 2px 14px rgba(192,57,43,0.4)',
+                  background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                  boxShadow: '0 2px 14px rgba(54,120,255,0.4)',
                 }}
               >
                 Start free for 30 days

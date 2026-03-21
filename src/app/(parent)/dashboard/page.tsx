@@ -146,8 +146,8 @@ export default async function DashboardPage() {
               <button
                 className="cta-btn flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-white w-full sm:w-auto justify-center"
                 style={{
-                  background: 'linear-gradient(135deg, #C0392B, #E74C3C)',
-                  boxShadow: '0 4px 18px rgba(192,57,43,0.35)',
+                  background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                  boxShadow: '0 4px 18px rgba(54,120,255,0.35)',
                 }}
               >
                 <Plus className="w-4 h-4" />
@@ -232,7 +232,7 @@ export default async function DashboardPage() {
           <Link href="/children/new">
             <button
               className="flex items-center gap-2 mx-auto px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
-              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+              style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
             >
               <Plus className="w-4 h-4" />
               Add child
