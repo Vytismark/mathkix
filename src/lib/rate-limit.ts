@@ -1,5 +1,5 @@
 // Simple in-memory rate limiter for API routes
-// Not suitable for multi-instance deployments — use Redis in production
+// Not suitable for multi-instance deployments - use Redis in production
 
 interface RateLimitEntry {
   count: number

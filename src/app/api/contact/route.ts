@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (!ADMIN_EMAIL) {
-    console.error('ADMIN_NOTIFICATION_EMAIL not set — contact form submission dropped')
+    console.error('ADMIN_NOTIFICATION_EMAIL not set - contact form submission dropped')
     return NextResponse.json({ ok: true })
   }
 

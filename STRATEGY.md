@@ -1,4 +1,4 @@
-# MathKix — Strategic Plan
+# MathKix - Strategic Plan
 _Updated: March 2026_
 
 ---
@@ -7,7 +7,7 @@ _Updated: March 2026_
 
 **What's working:**
 - App is live at mathkix.com, deployed on Vercel
-- Supabase, Stripe, Anthropic, Resend — all wired up and active
+- Supabase, Stripe, Anthropic, Resend - all wired up and active
 - Full adaptive learning engine (SM-2 spaced repetition, topic affinity, domain weights)
 - Parent dashboard, child learning UI, placement quiz, AI tutor, support system
 - 1,890 seeded questions across Grades 1-5, all CCSSM domains
@@ -20,7 +20,7 @@ _Updated: March 2026_
 - SEO content (landing page exists but no blog/content layer)
 
 **Recently completed:**
-- PostHog analytics — 8 core funnel events live (signup, activation, session, subscription)
+- PostHog analytics - 8 core funnel events live (signup, activation, session, subscription)
 - Reverse proxy (`/ingest`) so ad blockers don't interfere with event collection
 
 ---
@@ -43,7 +43,7 @@ Before any growth work, the funnel must be airtight. Wait for QA tester results,
 
 ---
 
-## Phase 1 — Foundation (Weeks 1-2, post-QA)
+## Phase 1 - Foundation (Weeks 1-2, post-QA)
 
 ### 1.2 Email Drip Sequence
 
@@ -77,17 +77,17 @@ This is a 20-minute code change with a meaningful conversion impact.
 
 ---
 
-## Phase 2 — First 100 Users (Weeks 2-6)
+## Phase 2 - First 100 Users (Weeks 2-6)
 
 ### 2.1 Targeted Parent Communities (Zero cost)
 
 The highest-ROI early-user channel for an edtech app is direct outreach in parent communities. This is manual but converts well because you're solving a real, felt pain.
 
 **Where to post (with what angle):**
-- **r/homeschool, r/Parenting, r/elementary** — "I built a free AI math app for K-5, looking for beta testers"
-- **Facebook groups** — "Homeschool Parents", "Elementary School Math Help", grade-specific groups
-- **Twitter/X** — tag edtech accounts, post a short video of the placement quiz working
-- **Product Hunt** — launch when you have 10 real testimonials; prep a maker comment thread
+- **r/homeschool, r/Parenting, r/elementary** - "I built a free AI math app for K-5, looking for beta testers"
+- **Facebook groups** - "Homeschool Parents", "Elementary School Math Help", grade-specific groups
+- **Twitter/X** - tag edtech accounts, post a short video of the placement quiz working
+- **Product Hunt** - launch when you have 10 real testimonials; prep a maker comment thread
 
 **What to say:** Lead with the pain, not the product. "Does your kid get math homework that's too easy or too hard and just gives up? That's what I built this to fix." Offer the 30-day free trial explicitly.
 
@@ -97,7 +97,7 @@ Teachers and tutors are multipliers. One teacher who recommends it = 20-30 famil
 
 - Email 10-20 local elementary school math teachers: offer a free parent account + walk them through the progress dashboard
 - Contact 5-10 private math tutors: offer a free professional account in exchange for referring clients
-- Create a simple "For Educators" landing page or section explaining how the parent dashboard maps to CCSSM (you already have this data — it's your CurriculumView)
+- Create a simple "For Educators" landing page or section explaining how the parent dashboard maps to CCSSM (you already have this data - it's your CurriculumView)
 
 ### 2.3 SEO Content Layer
 
@@ -130,7 +130,7 @@ Add a "Refer a friend" feature to the parent dashboard. Since your product is a 
 
 ---
 
-## Phase 3 — Retention and LTV (Weeks 4-8)
+## Phase 3 - Retention and LTV (Weeks 4-8)
 
 Acquiring users is only valuable if they stay. EdTech churn is notoriously high. These features directly attack churn.
 
@@ -181,7 +181,7 @@ These milestones should trigger both an in-app notification and an email. They g
 
 ---
 
-## Phase 4 — Monetization Optimization (Week 6+)
+## Phase 4 - Monetization Optimization (Week 6+)
 
 ### 4.1 Trial-to-Paid Conversion
 
@@ -194,17 +194,17 @@ Levers:
 
 ### 4.2 Annual Plan Anchoring
 
-Currently the annual plan is marked "BEST VALUE" — good. But the pricing CTAs don't do enough to push users toward annual.
+Currently the annual plan is marked "BEST VALUE" - good. But the pricing CTAs don't do enough to push users toward annual.
 
 **Improvement:** On the trial expiry modal, default-select the annual plan and show the monthly equivalent ($6.66/mo). Only show all three options on click of "see all plans." Defaulting to annual in high-intent moments meaningfully increases LTV.
 
 ### 4.3 Lifetime Plan Positioning
 
-Lifetime at $149.99 is a high-intent purchase. Position it as the "for homeschoolers" or "for 2+ kids" option — families who know they'll use this for 3-5 years. Add this framing to the pricing page and the trial expiry modal.
+Lifetime at $149.99 is a high-intent purchase. Position it as the "for homeschoolers" or "for 2+ kids" option - families who know they'll use this for 3-5 years. Add this framing to the pricing page and the trial expiry modal.
 
 ---
 
-## Phase 5 — Scale (Month 3+)
+## Phase 5 - Scale (Month 3+)
 
 Only pursue these after Phase 1-2 are generating steady signups and you have analytics to guide decisions.
 
@@ -220,7 +220,7 @@ Only pursue these after Phase 1-2 are generating steady signups and you have ana
 
 Once you have 50+ happy individual users, approach school districts with a bulk licensing proposal:
 - Per-student pricing ($3-5/student/year for district volume)
-- Teacher dashboard (read-only view of whole-class mastery — this is a new feature)
+- Teacher dashboard (read-only view of whole-class mastery - this is a new feature)
 - SSO/Clever integration (required for most US districts)
 - COPPA/FERPA compliance documentation
 
@@ -253,7 +253,7 @@ Prioritized by impact-to-effort ratio, for features not yet built:
 
 ### Medium Impact / Medium Effort
 - [ ] "For Educators" landing page
-- [ ] Mobile app (PWA manifest + install prompt — no app store needed, 1-2 days)
+- [ ] Mobile app (PWA manifest + install prompt - no app store needed, 1-2 days)
 - [ ] Printable progress report (PDF via API) for parents to share with teachers
 - [ ] Grade-up celebration (when a child's assessed grade improves)
 
@@ -284,7 +284,7 @@ Build a simple internal metrics view at `/admin` showing these weekly:
 
 **The product works. Will parents find it?**
 
-The technology, adaptive engine, and UX are genuinely well-built. The risk is not product quality — it is distribution. Every action in Phase 1-2 should prioritize getting real users into the funnel as fast as possible, because:
+The technology, adaptive engine, and UX are genuinely well-built. The risk is not product quality - it is distribution. Every action in Phase 1-2 should prioritize getting real users into the funnel as fast as possible, because:
 
 1. Real user data will reveal what to fix in the product faster than any internal review.
 2. Real testimonials (replacing the current placeholders) will improve conversion immediately.

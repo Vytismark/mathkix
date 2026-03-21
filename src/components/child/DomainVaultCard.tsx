@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 // ── Discovery content per domain ────────────────────────────
 // Each discovery is a real, verifiable mathematical fact or trick.
-// Science: Loewenstein (1994) information-gap theory — partial
+// Science: Loewenstein (1994) information-gap theory - partial
 // information creates stronger curiosity motivation than none.
 
 const DOMAIN_META: Record<string, {
@@ -22,7 +22,7 @@ const DOMAIN_META: Record<string, {
     discovery: {
       emoji: '🧠',
       title: 'The 11× mind trick',
-      body: 'Multiply any 2-digit number by 11: add the two digits and put the sum in the middle. 23 × 11 = 253. 45 × 11 = 495. It always works — every single time. Try it on a friend!',
+      body: 'Multiply any 2-digit number by 11: add the two digits and put the sum in the middle. 23 × 11 = 253. 45 × 11 = 495. It always works - every single time. Try it on a friend!',
     },
   },
   NBT: {
@@ -33,7 +33,7 @@ const DOMAIN_META: Record<string, {
     discovery: {
       emoji: '💻',
       title: 'Why computers only use 0 and 1',
-      body: 'Every number can be written with just 0s and 1s. 5 = 101. 10 = 1010. This is called binary — the secret language of every computer, phone, and video game ever made.',
+      body: 'Every number can be written with just 0s and 1s. 5 = 101. 10 = 1010. This is called binary - the secret language of every computer, phone, and video game ever made.',
     },
   },
   NF: {
@@ -44,7 +44,7 @@ const DOMAIN_META: Record<string, {
     discovery: {
       emoji: '♾️',
       title: '0.999... = 1. Exactly.',
-      body: '1/3 = 0.333... So 3 × 1/3 = 0.999... But 3 × 1/3 also = 1. So 0.999... = 1. Exactly. Forever. This is mathematically proven — and it confuses even adults!',
+      body: '1/3 = 0.333... So 3 × 1/3 = 0.999... But 3 × 1/3 also = 1. So 0.999... = 1. Exactly. Forever. This is mathematically proven - and it confuses even adults!',
     },
   },
   MD: {
@@ -55,7 +55,7 @@ const DOMAIN_META: Record<string, {
     discovery: {
       emoji: '🌍',
       title: 'Measuring the Earth with a stick',
-      body: '2,200 years ago, Eratosthenes measured the entire Earth\'s circumference using just a stick and shadows — and got within 2% of the correct answer. No satellites. No computers. Just math.',
+      body: '2,200 years ago, Eratosthenes measured the entire Earth\'s circumference using just a stick and shadows - and got within 2% of the correct answer. No satellites. No computers. Just math.',
     },
   },
   G: {
@@ -66,7 +66,7 @@ const DOMAIN_META: Record<string, {
     discovery: {
       emoji: '🌀',
       title: 'The shape with only one side',
-      body: 'Take a strip of paper, twist it once, and tape the ends. Draw a line down the middle without lifting your pencil — you cover both "sides" because there is only one side. This is a Möbius strip, and it\'s real.',
+      body: 'Take a strip of paper, twist it once, and tape the ends. Draw a line down the middle without lifting your pencil - you cover both "sides" because there is only one side. This is a Möbius strip, and it\'s real.',
     },
   },
   CC: {
@@ -77,7 +77,7 @@ const DOMAIN_META: Record<string, {
     discovery: {
       emoji: '🔺',
       title: 'The triangle that hides everything',
-      body: "Pascal's Triangle hides all Fibonacci numbers, all powers of 2, all triangle numbers, and patterns found in nature — all from one simple triangle built by adding neighbors. Mathematicians are still finding new secrets in it.",
+      body: "Pascal's Triangle hides all Fibonacci numbers, all powers of 2, all triangle numbers, and patterns found in nature - all from one simple triangle built by adding neighbors. Mathematicians are still finding new secrets in it.",
     },
   },
 }
@@ -118,7 +118,7 @@ export function DomainVaultCard({
   const visibleWords = words.slice(0, 2).join(' ')
   const hiddenWords = words.slice(2).join(' ')
 
-  // Star dots — represent individual standards (the "constellation")
+  // Star dots - represent individual standards (the "constellation")
   const MAX_DOTS = 10
   const dotsToShow = Math.min(standardsTotal, MAX_DOTS)
 

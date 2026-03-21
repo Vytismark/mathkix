@@ -289,7 +289,7 @@ export default async function DashboardPage() {
           {/* ── Children grid ────────────────────────────────────────── */}
           <div className="mb-8">
             <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">
-              Your children — {children!.length}
+              Your children - {children!.length}
             </h2>
             <div className="child-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {children!.map((child) => (

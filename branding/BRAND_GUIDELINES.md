@@ -1,5 +1,5 @@
 # MathKix Brand Guidelines
-**Version 1.0 — March 2026**
+**Version 1.0 - March 2026**
 
 ---
 
@@ -7,7 +7,7 @@
 
 ### Who MathKix Is
 
-MathKix is ambitious, innovative, and loves a challenge — but refuses to make that feel like pressure. Think of MathKix as the coach who believes every kid has untapped potential, and builds a program specifically around unlocking it. Not a cheerleader. Not a drill sergeant. A coach.
+MathKix is ambitious, innovative, and loves a challenge - but refuses to make that feel like pressure. Think of MathKix as the coach who believes every kid has untapped potential, and builds a program specifically around unlocking it. Not a cheerleader. Not a drill sergeant. A coach.
 
 ### The Two Audiences
 
@@ -22,10 +22,10 @@ MathKix serves two distinct people simultaneously, and the brand speaks to each 
 
 ### Brand Values (in order)
 
-1. **Ambition** — We believe kids are more capable than most software gives them credit for.
-2. **Honesty** — We don't fake progress. Results are real, feedback is direct.
-3. **Quality** — Every detail is intentional. Premium feel, no bloat.
-4. **Calm confidence** — We don't shout. We don't guilt. We simply raise the bar.
+1. **Ambition** - We believe kids are more capable than most software gives them credit for.
+2. **Honesty** - We don't fake progress. Results are real, feedback is direct.
+3. **Quality** - Every detail is intentional. Premium feel, no bloat.
+4. **Calm confidence** - We don't shout. We don't guilt. We simply raise the bar.
 
 ---
 
@@ -47,7 +47,7 @@ Blue gradient:   #3678FF → #B0CDFF  (top to bottom or left to right)
 Gold gradient:   #FFAB02 → #FFD892  (bottom to top or left to right)
 ```
 
-Use gradients for the icon, achievement badges, and select hero moments — not for body text or UI chrome.
+Use gradients for the icon, achievement badges, and select hero moments - not for body text or UI chrome.
 
 ---
 
@@ -70,7 +70,7 @@ MathKix uses a **dark-first** neutral system. The deep navy `#000714` is the bra
 
 ### 1.3 Semantic Colors
 
-These communicate system state. Keep them consistent — never use brand blue/gold for errors or warnings.
+These communicate system state. Keep them consistent - never use brand blue/gold for errors or warnings.
 
 | State | Hex | Usage |
 |---|---|---|
@@ -83,8 +83,8 @@ These communicate system state. Keep them consistent — never use brand blue/go
 
 ### 1.4 Color Rules
 
-- **Never** use the old red `#E74C3C` — it has been fully retired.
-- **Never** use brand gold as a background color for text — contrast is insufficient at small sizes.
+- **Never** use the old red `#E74C3C` - it has been fully retired.
+- **Never** use brand gold as a background color for text - contrast is insufficient at small sizes.
 - **Minimum contrast ratio**: 4.5:1 for body text, 3:1 for large text (WCAG AA).
 - **Dark backgrounds are the default** across the full app. Light mode is only used for the official logo on light surfaces (logo light variant).
 - Brand Blue is the **only** color allowed on primary CTA buttons. Gold is reserved for achievement/reward contexts only.
@@ -110,7 +110,7 @@ font-family: 'Geist Mono', 'Courier New', monospace;
 ```
 
 **Logo typeface**
-The wordmark uses a custom rounded geometric sans-serif from the brand designer. Never attempt to recreate the logo using Geist — always use the provided SVG assets.
+The wordmark uses a custom rounded geometric sans-serif from the brand designer. Never attempt to recreate the logo using Geist - always use the provided SVG assets.
 
 ---
 
@@ -132,7 +132,7 @@ The wordmark uses a custom rounded geometric sans-serif from the brand designer.
 ### 2.3 Typography Rules
 
 - **Letter spacing**: Hero and H1 headings should use `tracking-tight` (−0.02em). Body copy uses default tracking.
-- **Weight contrast**: Headlines are always 700 or 800. Never bold body copy for general emphasis — use color or size instead.
+- **Weight contrast**: Headlines are always 700 or 800. Never bold body copy for general emphasis - use color or size instead.
 - **All caps**: Allowed only for badges, micro labels, and section dividers. Never for body text or CTAs.
 - **Numeric displays** (scores, timers, streak counts): Always use Geist Mono to prevent layout shift as numbers change.
 - **Max line length**: 65–75 characters for body text. Never let a paragraph stretch full-width on desktop.
@@ -145,9 +145,9 @@ The wordmark uses a custom rounded geometric sans-serif from the brand designer.
 
 | File | Use case |
 |---|---|
-| `public/mathkix-logo.svg` | All dark backgrounds — nav, app screens, dark hero sections |
-| `public/mathkix-logo-light.svg` | Light backgrounds only — print, email, white cards |
-| `public/mathkix-icon.svg` | Icon-only contexts — app icon, avatar, social profile picture |
+| `public/mathkix-logo.svg` | All dark backgrounds - nav, app screens, dark hero sections |
+| `public/mathkix-logo-light.svg` | Light backgrounds only - print, email, white cards |
+| `public/mathkix-icon.svg` | Icon-only contexts - app icon, avatar, social profile picture |
 | `public/icon.svg` | Favicon (32×32, navy background) |
 
 ---
@@ -156,8 +156,8 @@ The wordmark uses a custom rounded geometric sans-serif from the brand designer.
 
 The MathKix icon is a two-part geometric shield:
 
-- **Blue chevron** (top) — represents direction, ambition, upward movement
-- **Gold semicircle** (bottom) — represents foundation, achievement, warmth
+- **Blue chevron** (top) - represents direction, ambition, upward movement
+- **Gold semicircle** (bottom) - represents foundation, achievement, warmth
 
 Together they form a compact badge that works at any size from 16px to billboard.
 
@@ -165,7 +165,7 @@ Together they form a compact badge that works at any size from 16px to billboard
 
 ### 3.3 Clear Space
 
-The minimum clear space around the logo (both icon-only and full wordmark) is equal to the **height of the gold semicircle** in the mark — approximately 40% of the total icon height.
+The minimum clear space around the logo (both icon-only and full wordmark) is equal to the **height of the gold semicircle** in the mark - approximately 40% of the total icon height.
 
 ```
          ↑ clear space
@@ -194,15 +194,15 @@ Below these thresholds the mark becomes unreadable. Use icon-only below 40px tal
 **Do:**
 - Use the dark logo (white text) on all dark/navy surfaces
 - Use the light logo (navy text) on white or very light surfaces
-- Maintain the icon's aspect ratio — never stretch
+- Maintain the icon's aspect ratio - never stretch
 - Give the logo its required clear space
 
 **Don't:**
 - ❌ Recreate the wordmark using Geist or any other font
 - ❌ Use the logo on medium-grey backgrounds where neither version provides sufficient contrast
 - ❌ Add drop shadows, glows, or effects to the logo
-- ❌ Change any gradient color in the icon — the blue and gold are locked
-- ❌ Place the icon without its gold semicircle — the two parts are inseparable
+- ❌ Change any gradient color in the icon - the blue and gold are locked
+- ❌ Place the icon without its gold semicircle - the two parts are inseparable
 - ❌ Use the old red `#E74C3C` color anywhere near the logo
 
 ---
@@ -211,7 +211,7 @@ Below these thresholds the mark becomes unreadable. Use icon-only below 40px tal
 
 ### 4.1 The Brand Voice
 
-MathKix communicates like a **world-class coach** — direct, motivating, and respectful of the person's intelligence. It never condescends. It never guilt-trips. It never performs enthusiasm it doesn't mean.
+MathKix communicates like a **world-class coach** - direct, motivating, and respectful of the person's intelligence. It never condescends. It never guilt-trips. It never performs enthusiasm it doesn't mean.
 
 **Three words: Sharp. Warm. Ambitious.**
 
@@ -224,7 +224,7 @@ Parents are busy, skeptical, and have seen too many "AI-powered" products that o
 **Principles:**
 - Lead with what it does, not how "amazing" it is
 - Use data and specificity over adjectives
-- Assume intelligence — never over-explain
+- Assume intelligence - never over-explain
 - Confident without arrogance
 
 **Examples:**
@@ -233,7 +233,7 @@ Parents are busy, skeptical, and have seen too many "AI-powered" products that o
 |---|---|
 | "Amazing AI-powered learning!" | "Adapts to your child's level in real time." |
 | "Your child will LOVE this!" | "Built for kids who are ready to be challenged." |
-| "Sign up today — don't miss out!" | "Start with a free 3-minute assessment." |
+| "Sign up today - don't miss out!" | "Start with a free 3-minute assessment." |
 | "We're so excited to help your family!" | "Personalised math practice for grades K–5." |
 | "Our cutting-edge technology..." | "Each session adapts based on what your child got wrong." |
 
@@ -241,10 +241,10 @@ Parents are busy, skeptical, and have seen too many "AI-powered" products that o
 
 ### 4.3 Child-Facing Voice
 
-Children inside the app see a different register — warmer, more direct, and coach-like. The goal is to make hard feel possible, not to make easy feel impressive.
+Children inside the app see a different register - warmer, more direct, and coach-like. The goal is to make hard feel possible, not to make easy feel impressive.
 
 **Principles:**
-- Praise is **specific and earned** — never generic
+- Praise is **specific and earned** - never generic
 - Difficulty is framed as opportunity, not threat
 - Short sentences. Active voice. Present tense.
 - Never condescend. Kids know when they're being talked down to.
@@ -266,10 +266,10 @@ Children inside the app see a different register — warmer, more direct, and co
 
 MathKix is specifically not:
 
-- **Guilt-driven** — No streak shame. No "You're losing your streak!" panic mechanics.
-- **Infantilising** — No baby talk, no "Wow great job!" for answering 2+2.
-- **Hollow** — No generic encouragement. Praise only when it's been earned.
-- **Loud** — Minimal exclamation marks. Enthusiasm is shown through product quality, not punctuation.
+- **Guilt-driven** - No streak shame. No "You're losing your streak!" panic mechanics.
+- **Infantilising** - No baby talk, no "Wow great job!" for answering 2+2.
+- **Hollow** - No generic encouragement. Praise only when it's been earned.
+- **Loud** - Minimal exclamation marks. Enthusiasm is shown through product quality, not punctuation.
 
 ---
 
@@ -309,14 +309,14 @@ Buttons use **action verbs**. Never use vague labels like "Click here" or "Submi
 MathKix uses a **clean geometric** illustration approach, with selective use of warmth through color rather than character style. Think: precision-first, with the brand gold used to bring energy.
 
 **Characteristics:**
-- Geometric shapes as base forms — not organic or hand-drawn
+- Geometric shapes as base forms - not organic or hand-drawn
 - Brand blue and gold as primary illustration colors
 - High contrast against dark backgrounds
-- Minimal detail — readable at small sizes
+- Minimal detail - readable at small sizes
 - No realistic shading or drop shadows in illustrations
 - Occasional use of soft glows using brand blue at low opacity to suggest depth
 
-**Reference feel**: Somewhere between Linear's precision and Stripe's warmth — geometric-first, but not cold.
+**Reference feel**: Somewhere between Linear's precision and Stripe's warmth - geometric-first, but not cold.
 
 ---
 
@@ -326,7 +326,7 @@ MathKix uses a **clean geometric** illustration approach, with selective use of 
 - ❌ Cartoon characters or mascots (incompatible with the premium positioning)
 - ❌ Clipart-style flat illustrations
 - ❌ Anything that looks like a classroom or a worksheet
-- ❌ Neon/rainbow color palettes — always stay within the brand palette
+- ❌ Neon/rainbow color palettes - always stay within the brand palette
 
 ---
 
@@ -335,9 +335,9 @@ MathKix uses a **clean geometric** illustration approach, with selective use of 
 All icons in the product use **Lucide React** (already implemented). Usage rules:
 
 - **Size**: 16px (`w-4 h-4`) for inline/nav, 20px (`w-5 h-5`) for actions, 24px (`w-6 h-6`) for featured
-- **Stroke width**: Default (1.5) — never increase to 2+ as it conflicts with the brand's precise feel
-- **Color**: Icons inherit text color. Never use brand gold or brand blue for decorative icons — reserve those for semantic meaning (achievement = gold, primary action = blue)
-- **Never** use filled/solid icon variants — the outlined Lucide style is consistent with the brand
+- **Stroke width**: Default (1.5) - never increase to 2+ as it conflicts with the brand's precise feel
+- **Color**: Icons inherit text color. Never use brand gold or brand blue for decorative icons - reserve those for semantic meaning (achievement = gold, primary action = blue)
+- **Never** use filled/solid icon variants - the outlined Lucide style is consistent with the brand
 
 ---
 
@@ -346,7 +346,7 @@ All icons in the product use **Lucide React** (already implemented). Usage rules
 Achievement moments (completing a level, hitting a streak, earning a badge) are the **one context** where MathKix allows more visual expression:
 
 - Brand gold gradient is the primary color for achievement states
-- Subtle animation is allowed (scale, fade — not bounce or spin)
+- Subtle animation is allowed (scale, fade - not bounce or spin)
 - Keep copy direct even in celebration: "Level 5. Unlocked." not "WOW YOU'RE AMAZING!!!"
 
 ---
@@ -383,5 +383,5 @@ NEVER
 
 ---
 
-*MathKix Brand Guidelines v1.0 — March 2026*
+*MathKix Brand Guidelines v1.0 - March 2026*
 *Update this document before shipping any significant new visual pattern.*

@@ -13,7 +13,7 @@ function optional(name: string, fallback: string): string {
   return process.env[name] || fallback
 }
 
-/** Server-only env vars — import this in API routes / server code */
+/** Server-only env vars - import this in API routes / server code */
 export const env = {
   get NEXT_PUBLIC_SUPABASE_URL() { return required('NEXT_PUBLIC_SUPABASE_URL') },
   get NEXT_PUBLIC_SUPABASE_ANON_KEY() { return required('NEXT_PUBLIC_SUPABASE_ANON_KEY') },

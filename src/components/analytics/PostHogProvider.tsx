@@ -30,7 +30,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
       api_host: '/ingest',
       ui_host: 'https://us.posthog.com',
       person_profiles: 'identified_only',
-      capture_pageview: false, // Manual — fired by PostHogPageview on route change
+      capture_pageview: false, // Manual - fired by PostHogPageview on route change
       capture_pageleave: true,
     })
   }, [])

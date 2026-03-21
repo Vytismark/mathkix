@@ -1,4 +1,3 @@
-1. Quality review all of the questions, the answers.
 2. Improve ai teacher prompt.
 3. add grade 6-8
 4. Make everything load faster, now when I click on parent dashboard on the profile selection, it takes a while to load, feels slow.
@@ -16,5 +15,5 @@
 16. Blog section, write a blog about some trending search(keyword research) or buy a blog
 17. quality backlinks + co-citations, guest posting.
 18. social media set up after logo.
-19. Ai support assistant to not use **, improve its prompt, it should only talk about mathkix, and be immune to prompt engineering to not input sensitive information.
+19. Ai support assistant to not use **, improve its prompt, it should only talk about mathkix, and be immune to prompt engineering(or injection not sure what it is called) to not input sensitive information.
 20. Drip emails currently run once daily (9am) due to Vercel Hobby plan cron limit. Switch drip-emails cron back to hourly (0 * * * *) in vercel.json once upgraded to Vercel Pro, so time-sensitive sequences (e.g. 1hr after signup) fire correctly.

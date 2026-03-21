@@ -110,7 +110,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '1.NBT.C.5': {
     desc: 'Mentally find 10 more or 10 less',
     example: 'What is 10 more than 56?',
-    scope: 'Mental calculation only — no pencil. Students see that only the tens digit changes when adding/subtracting 10.',
+    scope: 'Mental calculation only - no pencil. Students see that only the tens digit changes when adding/subtracting 10.',
     inScope: ['10 more than any 2-digit number', '10 less than any 2-digit number', 'Mental math only'],
     outScope: ['Adding/subtracting other amounts', 'Numbers > 99'],
   },
@@ -124,7 +124,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '1.MD.A.1': {
     desc: 'Order three objects by length',
     example: 'Which pencil is shortest?',
-    scope: 'Direct comparison of three objects — no measuring tool needed. Uses words: shorter, longer, shortest, longest.',
+    scope: 'Direct comparison of three objects - no measuring tool needed. Uses words: shorter, longer, shortest, longest.',
     inScope: ['Ordering three objects from shortest to longest or vice versa', 'Using comparative vocabulary', 'Direct visual comparison'],
     outScope: ['Using a ruler or units to measure (1.MD.A.2)', 'More than three objects'],
   },
@@ -152,7 +152,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '1.G.A.1': {
     desc: 'Distinguish defining attributes of 2D/3D shapes',
     example: 'Which shape has 3 sides?',
-    scope: 'Identifying shapes by their geometric attributes (sides, angles, faces) — not by color, size, or orientation. Triangles, squares, rectangles, circles, cubes, cones, cylinders, spheres.',
+    scope: 'Identifying shapes by their geometric attributes (sides, angles, faces) - not by color, size, or orientation. Triangles, squares, rectangles, circles, cubes, cones, cylinders, spheres.',
     inScope: ['Identifying shapes by number of sides/corners', 'Distinguishing defining vs. non-defining attributes', 'Both 2D and basic 3D shapes'],
     outScope: ['Composing shapes (1.G.A.2)', 'Partitioning (1.G.A.3)', 'Parallel/perpendicular (Grade 4)'],
   },
@@ -180,7 +180,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '2.OA.B.2': {
     desc: 'Fluently add and subtract within 20 from memory',
     example: 'What is 13 − 7?',
-    scope: 'Instant recall — not counting on fingers. Both addition and subtraction facts where all values are 0–20.',
+    scope: 'Instant recall - not counting on fingers. Both addition and subtraction facts where all values are 0–20.',
     inScope: ['Any add/subtract fact with operands and result ≤ 20', 'Expected to answer from memory', 'Includes related facts (if 7+8=15, then 15−7=8)'],
     outScope: ['Values > 20', 'Word problems', 'Strategy explanations'],
   },
@@ -257,7 +257,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '2.NBT.B.9': {
     desc: 'Explain why addition/subtraction strategies work',
     example: 'Why does adding tens first make 354 + 200 easier?',
-    scope: 'Conceptual understanding questions — students explain or justify a strategy using place value. Verbal or written explanations. Very hard to test with multiple choice alone.',
+    scope: 'Conceptual understanding questions - students explain or justify a strategy using place value. Verbal or written explanations. Very hard to test with multiple choice alone.',
     inScope: ['Explaining why a strategy works', 'Using place value language in justification', 'Comparing efficiency of strategies'],
     outScope: ['Just computing the answer without explanation', 'Memorization of procedure'],
   },
@@ -271,14 +271,14 @@ const STANDARDS: Record<string, StandardEntry> = {
   '2.MD.A.3': {
     desc: 'Estimate lengths using inches, feet, centimetres, metres',
     example: 'About how tall is a door? Metres or centimetres?',
-    scope: 'Estimating — not measuring — using benchmarks. Also choosing between units (would you measure a room in cm or m?).',
+    scope: 'Estimating - not measuring - using benchmarks. Also choosing between units (would you measure a room in cm or m?).',
     inScope: ['Choosing appropriate unit', 'Estimating using known benchmarks (e.g. a door is about 2 metres)', 'Reasonable vs. unreasonable estimates'],
     outScope: ['Actual measurement with a tool (2.MD.A.1)', 'Exact answers'],
   },
   '2.MD.B.5': {
     desc: 'Solve word problems involving length',
     example: 'A rope is 85 cm. Cut off 37 cm. How much left?',
-    scope: 'Word problems that involve lengths — adding or subtracting. May include a number line diagram.',
+    scope: 'Word problems that involve lengths - adding or subtracting. May include a number line diagram.',
     inScope: ['Add or subtract lengths given in same units', 'Word problem context', 'Number lines as representation', 'Results within measurable range'],
     outScope: ['Converting between units', 'Multiplying lengths', 'Area (Grade 3)'],
   },
@@ -319,7 +319,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   },
   '2.G.A.2': {
     desc: 'Partition a rectangle into rows and columns of same-size squares',
-    example: 'A 3×4 rectangle — how many unit squares?',
+    example: 'A 3×4 rectangle - how many unit squares?',
     scope: 'Dividing a rectangle into a grid of equal unit squares by drawing rows and columns. Count the total squares. Foundation for area.',
     inScope: ['Rectangles partitioned into equal unit squares', 'Counting total squares in a grid', 'Arrays of squares (rows × columns)'],
     outScope: ['Using the area formula (Grade 3)', 'Non-rectangular shapes', 'Triangles or circles'],
@@ -362,7 +362,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '3.OA.B.5': {
     desc: 'Apply properties of multiplication',
     example: 'If 4 × 7 = 28, what is 7 × 4?',
-    scope: 'Commutative (a×b = b×a), associative ((a×b)×c = a×(b×c)), and distributive (a×(b+c) = a×b + a×c) properties. Students apply — not name — them.',
+    scope: 'Commutative (a×b = b×a), associative ((a×b)×c = a×(b×c)), and distributive (a×(b+c) = a×b + a×c) properties. Students apply - not name - them.',
     inScope: ['Commutative: 4×7 = 7×4', 'Associative: (2×3)×4 = 2×(3×4)', 'Distributive: 6×7 = 6×(5+2) = 30+12', 'Using properties to find unknown products'],
     outScope: ['Naming properties by term', 'Division properties', 'Values > 100'],
   },
@@ -376,7 +376,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '3.OA.C.7': {
     desc: 'Fluently multiply and divide within 100',
     example: 'What is 7 × 8?',
-    scope: 'Automatic recall of all multiplication facts 1–10 × 1–10 and corresponding division facts. This is pure fluency — speed and accuracy.',
+    scope: 'Automatic recall of all multiplication facts 1–10 × 1–10 and corresponding division facts. This is pure fluency - speed and accuracy.',
     inScope: ['All single-digit × single-digit facts (1×1 through 10×10)', 'Corresponding division (56 ÷ 7 = 8)', 'Expected from memory or near-instant strategy'],
     outScope: ['Multi-digit multiplication (Grade 4)', 'Word problems (3.OA.A.3)', 'Two-digit × two-digit'],
   },
@@ -448,7 +448,7 @@ const STANDARDS: Record<string, StandardEntry> = {
     example: 'A bottle holds about 1 ___ of water. Litre or millilitre?',
     scope: 'Using grams, kilograms, litres, millilitres. Adding, subtracting, multiplying, or dividing these measurements. Estimation questions included.',
     inScope: ['Grams (g), kilograms (kg)', 'Litres (L), millilitres (mL)', 'Choosing appropriate unit', 'Solving word problems with these measurements'],
-    outScope: ['Ounces, pounds, cups, pints, quarts (customary — not in CCSS 3.MD.A.2)', 'Converting between units (Grade 4)', 'Length/area'],
+    outScope: ['Ounces, pounds, cups, pints, quarts (customary - not in CCSS 3.MD.A.2)', 'Converting between units (Grade 4)', 'Length/area'],
   },
   '3.MD.B.3': {
     desc: 'Draw and interpret scaled picture/bar graphs',
@@ -473,7 +473,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   },
   '3.MD.C.7': {
     desc: 'Relate area to multiplication and addition',
-    example: 'A 4×6 rectangle — what is its area?',
+    example: 'A 4×6 rectangle - what is its area?',
     scope: 'Area of a rectangle = length × width. Also: find area of L-shaped figures by decomposing into rectangles and adding. Connects to distributive property.',
     inScope: ['Area = l × w for rectangles', 'Decomposing irregular shapes into rectangles', 'Distributive property connection: (a+b)×c = a×c + b×c', 'Results as square units'],
     outScope: ['Perimeter (3.MD.D.8)', 'Triangles or circles (Grade 6)', 'Fractions as dimensions (Grade 5)'],
@@ -483,7 +483,7 @@ const STANDARDS: Record<string, StandardEntry> = {
     example: 'A 6cm × 4cm rectangle. Perimeter?',
     scope: 'Perimeter = total distance around. Finding perimeter given side lengths, finding an unknown side given perimeter, and distinguishing perimeter from area.',
     inScope: ['Perimeter by adding all sides', 'Finding an unknown side when perimeter is given', 'Any polygon (not just rectangles)', 'Distinguishing perimeter from area'],
-    outScope: ['Area (3.MD.C.7)', 'Circles (circumference — middle school)', 'Formulas not yet required'],
+    outScope: ['Area (3.MD.C.7)', 'Circles (circumference - middle school)', 'Formulas not yet required'],
   },
   '3.G.A.1': {
     desc: 'Understand shapes share attributes (e.g., all quadrilaterals)',
@@ -698,7 +698,7 @@ const STANDARDS: Record<string, StandardEntry> = {
   '5.OA.A.2': {
     desc: 'Write simple expressions that record calculations',
     example: 'Write an expression: subtract 4 from the product of 5 and 3.',
-    scope: 'Translating word descriptions into numerical expressions — NOT evaluating them. Interpreting what an expression represents.',
+    scope: 'Translating word descriptions into numerical expressions - NOT evaluating them. Interpreting what an expression represents.',
     inScope: ['Writing expressions from verbal descriptions', 'Interpreting what an expression means in context', 'Using grouping symbols correctly in an expression'],
     outScope: ['Evaluating (computing) the expression (5.OA.A.1)', 'Variables (Grade 6)', 'Equations (has = sign)'],
   },
@@ -721,7 +721,7 @@ const STANDARDS: Record<string, StandardEntry> = {
     example: 'What is 4.5 × 10²?',
     scope: 'Multiplying by 10ⁿ shifts the decimal point n places right; dividing shifts n places left. Uses exponent notation for powers of 10.',
     inScope: ['Multiplying/dividing decimals by 10¹, 10², 10³', 'Decimal point shifts', 'Whole numbers and decimals as operands', 'Explaining the pattern'],
-    outScope: ['Negative exponents (÷ 10ⁿ as 10⁻ⁿ — middle school)', 'Non-powers-of-10 multipliers', 'Scientific notation format'],
+    outScope: ['Negative exponents (÷ 10ⁿ as 10⁻ⁿ - middle school)', 'Non-powers-of-10 multipliers', 'Scientific notation format'],
   },
   '5.NBT.A.3': {
     desc: 'Read, write, and compare decimals to thousandths',
@@ -947,7 +947,7 @@ const TRUST_COLORS = {
   Low:    'bg-emerald-900/40 text-emerald-300 border border-emerald-700',
 }
 
-// Pre-filled templates for each flag type — helps reviewers write consistent notes
+// Pre-filled templates for each flag type - helps reviewers write consistent notes
 const FLAG_TEMPLATES: Record<string, { comment: string; fix: string }> = {
   wrong_answer:        { comment: 'The correct answer shown is wrong.', fix: 'Change correct_answer to [X]. Work: [show your calculation]' },
   ui_mismatch:         { comment: 'The answer cannot be entered with the current input type.', fix: 'Change question type to [multiple_choice / numeric / fraction] OR change the answer to a value that fits the current type.' },
@@ -1304,7 +1304,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
       <div className="flex flex-1 overflow-hidden">
 
         {/* ════════════════════════════════════════════════════════════════════
-            LEFT — Question area
+            LEFT - Question area
         ════════════════════════════════════════════════════════════════════ */}
         <div className="flex-1 flex flex-col overflow-y-auto">
 
@@ -1378,7 +1378,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
                       </span>
                       {STANDARDS[current.standard_code] && (
                         <span className="text-gray-400 text-sm">
-                          — {STANDARDS[current.standard_code].desc}
+                          - {STANDARDS[current.standard_code].desc}
                         </span>
                       )}
                     </div>
@@ -1593,7 +1593,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
         </div>
 
         {/* ════════════════════════════════════════════════════════════════════
-            RIGHT — Guide panel
+            RIGHT - Guide panel
         ════════════════════════════════════════════════════════════════════ */}
         <aside className="hidden lg:flex flex-col w-80 xl:w-96 shrink-0 border-l border-gray-800 bg-gray-900/50 overflow-hidden">
 
@@ -1621,7 +1621,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
             {guideTab === 'checklist' && (
               <div className="p-4 space-y-3">
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-3">
-                  Decision framework — check in order
+                  Decision framework - check in order
                 </p>
 
                 {[
@@ -1805,7 +1805,7 @@ export function ReviewPortal({ userEmail }: { userEmail: string }) {
             {guideTab === 'flags' && (
               <div className="p-4 space-y-3">
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-3">
-                  Flag types — AI trust level &amp; what to do
+                  Flag types - AI trust level &amp; what to do
                 </p>
 
                 {FLAGS.map(flag => (

@@ -581,7 +581,7 @@ export function QuestionReviewDeck() {
                       value={flagComment}
                       onChange={(e) => setFlagComment(e.target.value)}
                       rows={2}
-                      placeholder="Describe the issue — wrong answer, bad wording, misleading options…"
+                      placeholder="Describe the issue - wrong answer, bad wording, misleading options…"
                       className="w-full bg-gray-900 border border-red-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-red-600 resize-none"
                     />
                   </div>
@@ -595,7 +595,7 @@ export function QuestionReviewDeck() {
                       rows={3}
                       placeholder={
                         current?.question_type === 'multiple_choice'
-                          ? 'e.g. Change correct answer to "C" — 12 is wrong, should be 15\nOr: Option B should say "4 × 3" not "4 + 3"'
+                          ? 'e.g. Change correct answer to "C" - 12 is wrong, should be 15\nOr: Option B should say "4 × 3" not "4 + 3"'
                           : 'e.g. Change correct answer to 15\nOr: Reword as "How many apples are left after giving away 3?"'
                       }
                       className="w-full bg-gray-900 border border-emerald-800 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-700 resize-none placeholder-gray-600"

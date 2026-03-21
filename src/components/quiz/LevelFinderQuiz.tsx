@@ -240,7 +240,7 @@ export function LevelFinderQuiz({ childId, childName, schoolGrade }: LevelFinder
         <ReadAloudButton text={q.question_text} gradeLevel={schoolGrade} />
         <p className="text-xl font-semibold leading-relaxed text-gray-900 px-10">{q.question_text}</p>
         <QuestionVisual visualAsset={q.visual_asset} questionText={q.question_text} />
-        {/* Feedback flash — overlaid so it doesn't push content down */}
+        {/* Feedback flash - overlaid so it doesn't push content down */}
         {feedbackPhase && wasCorrect !== null && (
           <div className={`absolute inset-0 flex items-center justify-center rounded-2xl text-3xl font-bold ${wasCorrect ? 'text-green-500 bg-green-50/90' : 'text-red-500 bg-red-50/90'}`}>
             {wasCorrect ? '✓ Correct!' : '✗ Incorrect!'}

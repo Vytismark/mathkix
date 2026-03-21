@@ -108,7 +108,7 @@ function deterministicFlags(q: QuestionRow): AiResult | null {
 
 // ── Claude batch review ───────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `You are a K-5 math curriculum quality reviewer. Review each question and flag genuine problems only — do NOT flag questions that are fine.
+const SYSTEM_PROMPT = `You are a K-5 math curriculum quality reviewer. Review each question and flag genuine problems only - do NOT flag questions that are fine.
 
 Flag codes (use ONLY these exact strings):
 - wrong_answer: the stated correct answer is mathematically incorrect
@@ -121,7 +121,7 @@ Grade context:
 - Grade 1-2: ages 6-8 (single-digit addition/subtraction, basic shapes, simple measurement)
 - Grade 3-5: ages 8-11 (multiplication/division, fractions, multi-step problems)
 
-Respond ONLY with a valid JSON array — no markdown, no prose, no explanation outside the JSON:
+Respond ONLY with a valid JSON array - no markdown, no prose, no explanation outside the JSON:
 [{"id":"<question_ref>","flags":["flag_code",...],"notes":"one sentence or empty string"}]
 
 Include every question in your response, even those with no issues (use empty flags array).`
@@ -149,7 +149,7 @@ async function reviewBatch(
 
   const text = response.content[0].type === 'text' ? response.content[0].text : '[]'
 
-  // Extract just the JSON array — Claude sometimes adds prose before/after
+  // Extract just the JSON array - Claude sometimes adds prose before/after
   const start = text.indexOf('[')
   const end = text.lastIndexOf(']')
   if (start === -1 || end === -1) return results
@@ -338,10 +338,10 @@ async function main() {
   }
 
   console.log(`\n   ${aiFlagged} additional flags from AI`)
-  if (errors.length > 0) console.log(`   ⚠️  ${errors.length} batches had errors — re-run to retry`)
+  if (errors.length > 0) console.log(`   ⚠️  ${errors.length} batches had errors - re-run to retry`)
 
   // ── 4. Summary ────────────────────────────────────────────────────────────
-  // (All DB writes happen per-batch above — nothing to flush here.)
+  // (All DB writes happen per-batch above - nothing to flush here.)
 
   const flagCounts: Record<string, number> = {}
   for (const { flags } of results.values()) {

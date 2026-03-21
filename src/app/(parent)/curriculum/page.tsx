@@ -75,7 +75,7 @@ export default async function CurriculumPage() {
         <p className="text-slate-500 text-sm leading-relaxed">
           MathKix teaches the full Common Core Math curriculum for grades 1-5.
           Every standard includes adaptive lessons, practice questions, and spaced
-          repetition — all personalized to your child&apos;s level.
+          repetition - all personalized to your child&apos;s level.
         </p>
       </div>
 

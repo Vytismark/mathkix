@@ -21,5 +21,5 @@ CREATE INDEX IF NOT EXISTS email_queue_pending_idx
   ON email_queue (send_at)
   WHERE sent_at IS NULL AND cancelled_at IS NULL AND failed_at IS NULL;
 
--- RLS: no direct user access — only service role (cron) writes/reads this table
+-- RLS: no direct user access - only service role (cron) writes/reads this table
 ALTER TABLE email_queue ENABLE ROW LEVEL SECURITY;

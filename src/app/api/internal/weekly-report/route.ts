@@ -10,7 +10,7 @@ function formatWeekLabel(weekStart: Date): string {
 }
 
 export async function POST(request: Request) {
-  // Verify cron secret — Vercel sets Authorization: Bearer <CRON_SECRET> automatically
+  // Verify cron secret - Vercel sets Authorization: Bearer <CRON_SECRET> automatically
   const cronSecret = process.env.CRON_SECRET
   if (!cronSecret) {
     return NextResponse.json({ error: 'CRON_SECRET not configured' }, { status: 500 })
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
   const weekAgoStr = weekAgo.toISOString().slice(0, 10)
   const weekLabel = formatWeekLabel(weekAgo)
 
-  // Fetch all profiles — filter opted-in in JS (JSONB key filter)
+  // Fetch all profiles - filter opted-in in JS (JSONB key filter)
   const { data: profiles, error: profilesError } = await admin
     .from('profiles')
     .select('id, email, full_name, notification_preferences')

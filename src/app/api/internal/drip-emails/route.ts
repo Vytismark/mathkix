@@ -3,7 +3,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { resend } from '@/lib/email/resend'
 import { enqueueEmail, DRIP_KEYS, type DripKey } from '@/lib/email/drip-queue'
 
-// Template renderers — one per sequence_key
+// Template renderers - one per sequence_key
 import { render as renderWelcome }               from '@/lib/email/drip/welcome'
 import { render as renderChildAddedNudge }        from '@/lib/email/drip/child-added-nudge'
 import { render as renderPlacementComplete }      from '@/lib/email/drip/placement-complete'
@@ -133,7 +133,7 @@ export async function POST(request: Request) {
   for (const row of pending) {
     const profile = profileMap.get(row.profile_id)
     if (!profile?.email) {
-      // Mark failed — no email address
+      // Mark failed - no email address
       await admin
         .from('email_queue')
         .update({ failed_at: now, error: 'no_email' })
@@ -142,7 +142,7 @@ export async function POST(request: Request) {
       continue
     }
 
-    // All drip emails are lifecycle emails (onboarding, trial, re-engagement) — not marketing.
+    // All drip emails are lifecycle emails (onboarding, trial, re-engagement) - not marketing.
     // We do not gate them on product_updates. A future `lifecycle_emails` preference key
     // could be added here when explicit opt-out is needed.
 
@@ -164,7 +164,7 @@ export async function POST(request: Request) {
       ...(row.metadata as Record<string, unknown>),
       parentFirstName: firstName,
       appUrl: process.env.NEXT_PUBLIC_APP_URL ?? 'https://mathkix.com',
-      // Live child data — always overrides stale enqueue-time values
+      // Live child data - always overrides stale enqueue-time values
       ...(child ? {
         childName:   child.name,
         grade:       child.school_grade,

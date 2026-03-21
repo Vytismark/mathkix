@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (ADMIN_EMAILS.length === 0) {
-    console.error('ADMIN_EMAILS is not configured — all admin logins will be rejected')
+    console.error('ADMIN_EMAILS is not configured - all admin logins will be rejected')
     return NextResponse.json({ error: 'Admin access not configured' }, { status: 500 })
   }
 
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
 
   if (!ADMIN_EMAILS.includes(data.user.email?.toLowerCase() ?? '')) {
     await supabase.auth.signOut()
-    return NextResponse.json({ error: 'Unauthorized — not an admin account' }, { status: 403 })
+    return NextResponse.json({ error: 'Unauthorized - not an admin account' }, { status: 403 })
   }
 
   return NextResponse.json({ ok: true })

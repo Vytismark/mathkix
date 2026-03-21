@@ -202,7 +202,7 @@ export default function TicketDetailPage() {
             </div>
           )
         })}
-        {/* AI typing indicator — shown while waiting for response */}
+        {/* AI typing indicator - shown while waiting for response */}
         {sending && ticket.status !== 'awaiting_human' && (
           <div className="flex justify-start">
             <div className="max-w-[80%]">

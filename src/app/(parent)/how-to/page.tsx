@@ -28,7 +28,7 @@ const STEPS = [
     glow: 'rgba(245,158,11,0.35)',
     title: 'Complete the placement quiz',
     description:
-      'After creating a profile, have your child take the short placement quiz. Our AI uses the results to figure out exactly where they are in maths and sets the right starting level — no guesswork.',
+      'After creating a profile, have your child take the short placement quiz. Our AI uses the results to figure out exactly where they are in maths and sets the right starting level - no guesswork.',
     tips: [
       'The quiz takes about 5–10 minutes',
       'Sit with your child for the first time so they feel comfortable',
@@ -78,15 +78,15 @@ const SECTIONS = [
     items: [
       {
         q: 'How are lessons chosen?',
-        a: 'Our adaptive engine picks lessons based on your child\'s current level, recent performance, and spaced-repetition scheduling — so topics they struggle with appear more often until mastered.',
+        a: 'Our adaptive engine picks lessons based on your child\'s current level, recent performance, and spaced-repetition scheduling - so topics they struggle with appear more often until mastered.',
       },
       {
         q: 'What is XP?',
-        a: 'XP (experience points) are earned by completing lessons and quizzes correctly. They\'re purely motivational — kids see them accumulate and feel proud of their progress.',
+        a: 'XP (experience points) are earned by completing lessons and quizzes correctly. They\'re purely motivational - kids see them accumulate and feel proud of their progress.',
       },
       {
         q: 'Can my child replay lessons?',
-        a: 'Yes — from their play home they can revisit any topic. The AI teacher will present new question variations so it never feels repetitive.',
+        a: 'Yes - from their play home they can revisit any topic. The AI teacher will present new question variations so it never feels repetitive.',
       },
     ],
   },
@@ -120,7 +120,7 @@ const SECTIONS = [
       },
       {
         q: 'How does my child log in?',
-        a: 'From the child-select screen (the page shown after you log in), tap your child\'s avatar. No separate password is needed — they\'re linked to your account.',
+        a: 'From the child-select screen (the page shown after you log in), tap your child\'s avatar. No separate password is needed - they\'re linked to your account.',
       },
     ],
   },
@@ -135,7 +135,7 @@ const SECTIONS = [
       },
       {
         q: 'Can I cancel anytime?',
-        a: 'Yes — go to Billing and click "Manage subscription" to cancel or change your plan at any time. You keep access until the end of the billing period.',
+        a: 'Yes - go to Billing and click "Manage subscription" to cancel or change your plan at any time. You keep access until the end of the billing period.',
       },
     ],
   },
@@ -228,7 +228,7 @@ export default function HowToPage() {
       {/* Getting started steps */}
       <section className="mb-10">
         <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">
-          Getting started — 3 steps
+          Getting started - 3 steps
         </h2>
         <div className="flex flex-col gap-4">
           {STEPS.map((step, i) => {

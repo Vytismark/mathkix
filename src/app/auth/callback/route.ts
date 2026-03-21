@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     const supabase = await createClient()
     const { data: sessionData, error } = await supabase.auth.exchangeCodeForSession(code)
     if (!error) {
-      // Enqueue drip series for new users (idempotent — UNIQUE key prevents duplicates)
+      // Enqueue drip series for new users (idempotent - UNIQUE key prevents duplicates)
       if (sessionData?.user) {
         const userId = sessionData.user.id
         const admin = createAdminClient()

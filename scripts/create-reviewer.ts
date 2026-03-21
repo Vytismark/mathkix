@@ -3,7 +3,7 @@
  * Run: npx tsx scripts/create-reviewer.ts
  *
  * Outputs credentials to copy-paste and send to the freelancer.
- * The email is added to REVIEWER_EMAILS automatically — just add it to Vercel too.
+ * The email is added to REVIEWER_EMAILS automatically - just add it to Vercel too.
  */
 
 import { readFileSync } from 'fs'

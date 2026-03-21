@@ -10,7 +10,7 @@ MathKix is a web-based math learning platform for elementary school students. It
 
 - **AI Placement Quiz**: A 3-minute adaptive assessment that maps each child's strengths and gaps across all CCSSM domains.
 - **Adaptive Learning Engine**: Scores every question across 6 factors (mastery need, spaced repetition urgency, difficulty fit, domain weight, topic affinity, variety) to select the optimal next question.
-- **Spaced Repetition (SM-2)**: Implements the SM-2 algorithm with child-friendly modifications — the ease factor never decreases on failure.
+- **Spaced Repetition (SM-2)**: Implements the SM-2 algorithm with child-friendly modifications - the ease factor never decreases on failure.
 - **AI Tutor (Ms. Owl)**: Powered by Anthropic's Claude. Provides growth-mindset feedback adapted to each child's grade level. Four-tier scaffolding: Explore, Nudge, Scaffold, Direct.
 - **Engagement Detection**: Monitors response time, error streaks, and session duration to adapt difficulty in real time before frustration sets in.
 - **Parent Dashboard**: Detailed mastery tracking per Common Core standard, daily activity, streaks, and domain-level progress.
@@ -18,7 +18,7 @@ MathKix is a web-based math learning platform for elementary school students. It
 ## Grades & Subjects
 
 - Grades 1 through 5
-- Domains: Operations & Algebraic Thinking (OA), Number & Operations in Base Ten (NBT), Number & Operations — Fractions (NF), Measurement & Data (MD), Geometry (G)
+- Domains: Operations & Algebraic Thinking (OA), Number & Operations in Base Ten (NBT), Number & Operations - Fractions (NF), Measurement & Data (MD), Geometry (G)
 
 ## Pricing
 
@@ -41,7 +41,7 @@ MathKix is built on peer-reviewed cognitive science:
 
 ## Children's Privacy
 
-MathKix is COPPA-compliant. Children cannot create accounts — only parents/guardians manage child profiles. No advertising, no data selling, no third-party tracking on child-facing pages.
+MathKix is COPPA-compliant. Children cannot create accounts - only parents/guardians manage child profiles. No advertising, no data selling, no third-party tracking on child-facing pages.
 
 ## Contact
 

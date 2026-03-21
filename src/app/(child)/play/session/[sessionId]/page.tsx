@@ -83,7 +83,7 @@ export default function SessionPage() {
         const { text } = (await res.json()) as { text: string }
         if (text) greetingCache.current.set(index, text)
       }
-    } catch { /* silent — auto-greet will fall back to live API call */ }
+    } catch { /* silent - auto-greet will fall back to live API call */ }
   }, [questions, childId, gradeLevel])
 
   // Compute progress summary for AI teacher panel

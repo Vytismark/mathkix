@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
           err instanceof Stripe.errors.StripeInvalidRequestError &&
           err.code === 'resource_missing'
         ) {
-          // Stale ID — clear it so we create a fresh customer below
+          // Stale ID - clear it so we create a fresh customer below
           customerId = null
           await supabase
             .from('profiles')

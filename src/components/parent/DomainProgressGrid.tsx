@@ -276,7 +276,7 @@ function DomainCard({
         boxShadow: isExpanded ? `0 0 24px ${colors.bg}` : 'none',
       }}
     >
-      {/* Header — always visible, clickable */}
+      {/* Header - always visible, clickable */}
       <button
         onClick={onToggle}
         className="w-full text-left px-4 py-3.5 flex items-start gap-3 cursor-pointer group"
@@ -329,7 +329,7 @@ function DomainCard({
         />
       </button>
 
-      {/* Expandable content — CSS grid transition */}
+      {/* Expandable content - CSS grid transition */}
       <div
         className="grid transition-[grid-template-rows] duration-300 ease-out"
         style={{ gridTemplateRows: isExpanded ? '1fr' : '0fr' }}

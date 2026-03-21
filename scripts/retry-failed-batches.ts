@@ -57,7 +57,7 @@ Flag codes (use ONLY these exact strings):
 - unanswerable: the question is missing information required to solve it
 
 Grade context: Grade 1-2 = ages 6-8, Grade 3-5 = ages 8-11.
-Respond ONLY with valid JSON array — no markdown, no prose:
+Respond ONLY with valid JSON array - no markdown, no prose:
 [{"id":"<question_ref>","flags":["flag_code",...],"notes":"one sentence or empty string"}]
 Include every question, even those with no issues (empty flags array).`
 
@@ -160,7 +160,7 @@ async function main() {
   console.log(`✅  ${questions.length} total, ${alreadyInDb.size} already in DB, ${toReview.length} remaining`)
 
   if (toReview.length === 0) {
-    console.log('Nothing to do — all questions already processed.')
+    console.log('Nothing to do - all questions already processed.')
     return
   }
 

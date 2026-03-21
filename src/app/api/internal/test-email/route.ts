@@ -1,15 +1,15 @@
 /**
  * DEV-ONLY test route for the email drip system.
- * Never ship this in production — it bypasses auth.
+ * Never ship this in production - it bypasses auth.
  *
  * GET /api/internal/test-email?key=welcome&send=false
  *
  * Query params:
- *   key    — sequence_key to render (required)
- *   send   — "true" to actually send via Resend, omit to just preview
- *   to     — override recipient email (required if send=true)
- *   enqueue — "true" to insert into email_queue for the signed-in user's profileId
- *   profileId — profile UUID to use for enqueue test
+ *   key    - sequence_key to render (required)
+ *   send   - "true" to actually send via Resend, omit to just preview
+ *   to     - override recipient email (required if send=true)
+ *   enqueue - "true" to insert into email_queue for the signed-in user's profileId
+ *   profileId - profile UUID to use for enqueue test
  */
 
 import { NextResponse, type NextRequest } from 'next/server'
@@ -50,7 +50,7 @@ const RENDERERS: Record<DripKey, (meta: Record<string, unknown>) => { subject: s
   [DRIP_KEYS.REENGAGEMENT_7DAY]:     renderReengagement7day,
 }
 
-// Sample metadata for each key — gives realistic preview output
+// Sample metadata for each key - gives realistic preview output
 const SAMPLE_META: Record<DripKey, Record<string, unknown>> = {
   [DRIP_KEYS.WELCOME]:               { parentFirstName: 'Alex' },
   [DRIP_KEYS.CHILD_ADDED_NUDGE]:     { childName: 'Sam', grade: 2 },

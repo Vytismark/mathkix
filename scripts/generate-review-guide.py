@@ -130,11 +130,11 @@ story += [
     sp(20),
     p("Contents", "h2"),
     p("1. How the dashboard works", "toc"),
-    p("2. Decision framework — when to approve vs. flag", "toc"),
+    p("2. Decision framework - when to approve vs. flag", "toc"),
     p("3. Question types &amp; UI rules (critical)", "toc"),
-    p("4. AI flags — what they mean and when to trust them", "toc"),
+    p("4. AI flags - what they mean and when to trust them", "toc"),
     p("5. Difficulty levels explained", "toc"),
-    p("6. Curriculum cheat sheet — all grades &amp; standards", "toc"),
+    p("6. Curriculum cheat sheet - all grades &amp; standards", "toc"),
     p("7. Edge cases &amp; worked examples", "toc"),
     PageBreak(),
 ]
@@ -146,22 +146,22 @@ story += [
     h1("1. How the Dashboard Works"),
     hr(),
     body("Log in at <b>mathkix.com/admin</b> → click <b>Questions</b> in the left sidebar. "
-         "You will see a card for each question. The default filter shows <b>AI Flagged</b> questions first — "
+         "You will see a card for each question. The default filter shows <b>AI Flagged</b> questions first - "
          "these were pre-screened by an AI and need your human judgement to confirm or override."),
     sp(4),
     h2("Filters"),
-    body("<b>AI Flagged</b> — AI found a potential issue. Review these first."),
-    body("<b>Unreviewed</b> — Not yet seen by anyone. Work through these after AI Flagged."),
-    body("<b>Approved</b> — Already approved. You can revisit if needed."),
-    body("<b>Flagged</b> — Human-confirmed issues. Skip unless re-checking."),
+    body("<b>AI Flagged</b> - AI found a potential issue. Review these first."),
+    body("<b>Unreviewed</b> - Not yet seen by anyone. Work through these after AI Flagged."),
+    body("<b>Approved</b> - Already approved. You can revisit if needed."),
+    body("<b>Flagged</b> - Human-confirmed issues. Skip unless re-checking."),
     sp(4),
     h2("Actions"),
-    body("<b>Approve (→ or L key)</b> — Question is correct, clear, and appropriate. Move on."),
-    body("<b>Flag (← or H key)</b> — Opens a form. Fill in:"),
-    bullet("<b>What's wrong?</b> (required) — Brief description of the issue."),
-    bullet("<b>Suggested fix</b> (optional but very helpful) — What the question should say or what the answer should be."),
+    body("<b>Approve (→ or L key)</b> - Question is correct, clear, and appropriate. Move on."),
+    body("<b>Flag (← or H key)</b> - Opens a form. Fill in:"),
+    bullet("<b>What's wrong?</b> (required) - Brief description of the issue."),
+    bullet("<b>Suggested fix</b> (optional but very helpful) - What the question should say or what the answer should be."),
     sp(4),
-    info_box("Tip — keyboard shortcuts",
+    info_box("Tip - keyboard shortcuts",
              "Use → to approve and ← to flag. Use ↑ / ↓ to navigate without deciding. "
              "This makes reviewing fast once you are in a rhythm."),
     PageBreak(),
@@ -196,7 +196,7 @@ checks = [
      "at a grade level are expected to push the upper boundary of that standard.",
      PURPLE_LT, PURPLE),
     ("6", "For multiple choice: are the wrong options (distractors) reasonable?",
-     "Distractors should reflect common mistakes — not be obviously silly or identical to each other. "
+     "Distractors should reflect common mistakes - not be obviously silly or identical to each other. "
      "Flag as <b>Weak Distractors</b> if a child could eliminate wrong answers without knowing the math.",
      ORANGE_LT, AMBER),
     ("7", "Is the language appropriate for the grade?",
@@ -225,7 +225,7 @@ for num, title, desc, bg, border in checks:
 
 story.append(sp(4))
 story.append(info_box(
-    "When in doubt — approve",
+    "When in doubt - approve",
     "If you have spent more than 60 seconds on a question and are still unsure, approve it. "
     "The goal is to catch clear errors, not to debate edge cases. Flag only when you are confident something is wrong."))
 story.append(PageBreak())
@@ -237,7 +237,7 @@ story += [
     h1("3. Question Types &amp; UI Rules"),
     hr(),
     body("Each question has a type. The type determines what UI component the student uses to answer. "
-         "If the correct answer cannot be physically entered using that UI, the question is broken — flag it as <b>UI Mismatch</b>."),
+         "If the correct answer cannot be physically entered using that UI, the question is broken - flag it as <b>UI Mismatch</b>."),
     sp(8),
 ]
 
@@ -246,15 +246,15 @@ type_data = [
     ["multiple_choice",
      "Taps one of 2–4 labelled buttons (A, B, C, D)",
      "Must exactly match one of the option values (case-sensitive)",
-     "Answer is '12' but option values are 'twelve', '10', '14', '16' — no match\nFewer than 2 options"],
+     "Answer is '12' but option values are 'twelve', '10', '14', '16' - no match\nFewer than 2 options"],
     ["numeric",
      "Types on a virtual number pad (digits 0–9 and decimal point)",
      "Any number: '7', '42', '3.14', '0.5'\nNO fractions, NO words",
-     "Answer is '1/2' — must use fraction type\nAnswer is 'A half' — not a number\nAnswer is 'seven' — not a number"],
+     "Answer is '1/2' - must use fraction type\nAnswer is 'A half' - not a number\nAnswer is 'seven' - not a number"],
     ["fraction",
-     "Two separate boxes — numerator (top) and denominator (bottom)",
+     "Two separate boxes - numerator (top) and denominator (bottom)",
      "Format: X/Y where Y is not 0\nExamples: '1/2', '3/4', '7/8'\nNO decimals, NO mixed numbers",
-     "Answer is '0.5' — must be '1/2'\nAnswer is '1 1/2' — mixed numbers not supported\nDenominator is 0 (e.g. '3/0')"],
+     "Answer is '0.5' - must be '1/2'\nAnswer is '1 1/2' - mixed numbers not supported\nDenominator is 0 (e.g. '3/0')"],
 ]
 
 col_widths = [1.1*inch, 1.6*inch, 1.8*inch, 2.0*inch]
@@ -279,7 +279,7 @@ tbl.setStyle(TableStyle([
 story.append(tbl)
 story.append(sp(10))
 
-story.append(h2("Multiple choice — extra checks"))
+story.append(h2("Multiple choice - extra checks"))
 story += [
     bullet("The <b>correct_answer</b> field must exactly match one option <b>value</b> (not label). "
            "Labels are A/B/C/D. Values are what the student actually answers, e.g. '12'."),
@@ -288,11 +288,11 @@ story += [
     bullet("The correct option should not be obviously different in style or length from wrong options."),
 ]
 story.append(sp(6))
-story.append(h2("Fraction type — grade rule"))
+story.append(h2("Fraction type - grade rule"))
 story += [
     bullet("Fractions (NF domain) are a <b>Grade 3+ topic</b> in Common Core."),
-    bullet("A question tagged Grade 1 or Grade 2 with type 'fraction' is almost certainly a data error — flag as <b>Grade Mismatch + UI Mismatch</b>."),
-    bullet("Exception: Grade 2.G.A.3 asks students to partition shapes into equal shares (halves, thirds, fourths) — but the answer is described in words, not entered as a fraction. If a G2 question asks for a fraction input, flag it."),
+    bullet("A question tagged Grade 1 or Grade 2 with type 'fraction' is almost certainly a data error - flag as <b>Grade Mismatch + UI Mismatch</b>."),
+    bullet("Exception: Grade 2.G.A.3 asks students to partition shapes into equal shares (halves, thirds, fourths) - but the answer is described in words, not entered as a fraction. If a G2 question asks for a fraction input, flag it."),
 ]
 story.append(PageBreak())
 
@@ -300,7 +300,7 @@ story.append(PageBreak())
 # 4. AI FLAGS
 # ═══════════════════════════════════════════════════════════════════════════════
 story += [
-    h1("4. AI Flags — What They Mean &amp; When to Trust Them"),
+    h1("4. AI Flags - What They Mean &amp; When to Trust Them"),
     hr(),
     body("The AI pre-screened all questions and left flags where it suspected problems. "
          "It is helpful but not perfect. <b>Your human judgement always overrides the AI.</b>"),
@@ -337,7 +337,7 @@ flag_rows = [
     ["Weak Distractors",
      "Wrong options are too obvious or nonsensical for multiple choice",
      "Low",
-     "Check if wrong options reflect plausible mistakes. If they do, approve — AI is conservative here."],
+     "Check if wrong options reflect plausible mistakes. If they do, approve - AI is conservative here."],
     ["Unanswerable",
      "Missing information needed to solve the problem",
      "Medium",
@@ -377,8 +377,8 @@ story.append(sp(10))
 story.append(info_box(
     "Key principle on Grade Mismatch flags",
     "The AI does not know the difficulty setting. A 3-star (hard) question labelled Grade 2 is EXPECTED "
-    "to be at the upper edge of Grade 2 content — that is its purpose. Always check the stars before "
-    "accepting a grade mismatch flag. The example '345 + 478' for Grade 2 hard is fine — it's 2.NBT.7."))
+    "to be at the upper edge of Grade 2 content - that is its purpose. Always check the stars before "
+    "accepting a grade mismatch flag. The example '345 + 478' for Grade 2 hard is fine - it's 2.NBT.7."))
 story.append(PageBreak())
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -401,7 +401,7 @@ diff_data = [
      "or slightly larger numbers. Still within the core standard."],
     ["★★★", "Hard",
      "Pushes the upper boundary of the standard. Multi-step, larger numbers, word problems, "
-     "or application in a new context. SHOULD feel harder than easy — do not flag just because it "
+     "or application in a new context. SHOULD feel harder than easy - do not flag just because it "
      "seems challenging for that grade."],
 ]
 col_widths3 = [0.7*inch, 0.7*inch, 5.1*inch]
@@ -650,26 +650,26 @@ story += [
 
 cases = [
     (GREEN, "APPROVE",
-     "Grade 2 hard — 345 + 478 flagged as Grade Mismatch",
+     "Grade 2 hard - 345 + 478 flagged as Grade Mismatch",
      "Standard 2.NBT.7 explicitly covers adding within 1,000. Three-digit addition with regrouping IS the Grade 2 hard content. "
      "The AI flagged because the numbers look large, but it didn't account for the hard difficulty. Approve."),
     (RED, "FLAG",
-     "Grade 2 fraction type — correct_answer '1/2', type 'fraction'",
+     "Grade 2 fraction type - correct_answer '1/2', type 'fraction'",
      "Fraction input (the X/Y entry UI) is for Grade 3+ NF standards. A Grade 2 question should not use this type. "
      "Flag as UI Mismatch + Grade Mismatch. Suggested fix: change type to 'multiple_choice' with word answers, "
      "or move to Grade 3."),
     (RED, "FLAG",
-     "Type numeric — correct_answer 'A half'",
+     "Type numeric - correct_answer 'A half'",
      "The numeric keypad only accepts digits and a decimal point. 'A half' cannot be typed. "
      "Flag as UI Mismatch. Suggested fix: change correct_answer to '0.5' and type to 'numeric', "
      "or rephrase question and use 'multiple_choice'."),
     (RED, "FLAG",
-     "Type multiple_choice — correct_answer '12' but options are ['ten', 'twelve', 'fourteen', 'sixteen']",
+     "Type multiple_choice - correct_answer '12' but options are ['ten', 'twelve', 'fourteen', 'sixteen']",
      "The correct_answer '12' is a numeral but the options use words. No option value equals '12'. "
      "Flag as UI Mismatch. Suggested fix: either change correct_answer to 'twelve', "
      "or change option values to '10', '12', '14', '16'."),
     (GREEN, "APPROVE",
-     "Grade 4 hard — 'Is 97 prime or composite?' flagged as Grade Mismatch",
+     "Grade 4 hard - 'Is 97 prime or composite?' flagged as Grade Mismatch",
      "4.OA.B.4 explicitly covers prime and composite numbers. 97 is a valid choice for hard difficulty "
      "(it requires checking divisibility). Approve."),
     (RED, "FLAG",
@@ -677,18 +677,18 @@ cases = [
      "The student cannot answer without seeing the shape. Flag as Missing Visual. "
      "Note in Suggested Fix that a visual asset is needed (or rephrase the question to be self-contained)."),
     (RED, "FLAG",
-     "Correct answer verified wrong — 'What is 7 x 8?' with correct_answer '54'",
+     "Correct answer verified wrong - 'What is 7 x 8?' with correct_answer '54'",
      "7 x 8 = 56, not 54. Flag as Wrong Answer. Suggested fix: change correct_answer to '56'."),
     (GREEN, "APPROVE",
-     "Multiple choice — one distractor is obviously wrong (e.g. '999' when other options are '12', '14', '16')",
+     "Multiple choice - one distractor is obviously wrong (e.g. '999' when other options are '12', '14', '16')",
      "The AI may flag this as Weak Distractors. But consider: for Grade 1-2 students, "
-     "'999' is still a plausible wrong answer if they miscount. Use your judgement — "
+     "'999' is still a plausible wrong answer if they miscount. Use your judgement - "
      "if most distractors are reasonable, approve. Only flag if ALL wrong options are clearly absurd."),
     (GREEN, "APPROVE",
-     "Grade 3 word problem with two steps — flagged as Grade Mismatch (too hard)",
+     "Grade 3 word problem with two steps - flagged as Grade Mismatch (too hard)",
      "3.OA.D.8 explicitly requires two-step word problems. If it's tagged as hard difficulty, this is expected. Approve."),
     (RED, "FLAG",
-     "Type fraction — correct_answer '3/0'",
+     "Type fraction - correct_answer '3/0'",
      "Division by zero is undefined and the fraction UI rejects a denominator of 0. "
      "Flag as UI Mismatch + Wrong Answer. The question itself needs to be reworked."),
 ]

@@ -77,7 +77,7 @@ interface AiTeacherPanelProps {
   questionType?:    string   // e.g. 'multiple_choice', 'numeric'
   progressSummary?: string   // e.g. "3 of 8 correct so far"
   wrongAnswerTrigger?: number // increment to trigger wrong-answer explanation
-  prefetchedGreeting?: string // pre-fetched greeting text — display instantly, skip API call
+  prefetchedGreeting?: string // pre-fetched greeting text - display instantly, skip API call
   className?:       string
 }
 
@@ -220,7 +220,7 @@ export function AiTeacherPanel({
       if (streamErrorMsg) throw new Error(streamErrorMsg)
 
       if (!aiText) {
-        // Remove the empty placeholder — auto-greet and wrong-explain fail silently
+        // Remove the empty placeholder - auto-greet and wrong-explain fail silently
         if (!isAutoGreet && !isWrongExplain) {
           setMessages((prev) => {
             const next = [...prev.slice(0, -1), { role: 'assistant' as const, content: "Hmm, I didn't get that. Try asking again!" }]
@@ -237,7 +237,7 @@ export function AiTeacherPanel({
       }
     } catch (err) {
       console.error('[AiTeacherPanel] sendMessage error:', err)
-      // Auto-greet and wrong-explain fail silently — clear any empty placeholder
+      // Auto-greet and wrong-explain fail silently - clear any empty placeholder
       if (isAutoGreet || isWrongExplain) {
         setMessages((prev) => {
           const next = prev.filter((m) => m.content !== '')
@@ -265,12 +265,12 @@ export function AiTeacherPanel({
     setStruggleCount(0)
 
     if (prefetchedGreeting) {
-      // Display pre-fetched greeting instantly — no API call needed
+      // Display pre-fetched greeting instantly - no API call needed
       const msg: ChatMessage = { role: 'assistant', content: prefetchedGreeting }
       setMessages([msg])
       messagesRef.current = [msg]
     } else {
-      // Fall back to live API call (no delay — start immediately)
+      // Fall back to live API call (no delay - start immediately)
       void sendMessage('', true)
     }
   }, [currentQuestion, sendMessage, prefetchedGreeting])

@@ -60,10 +60,10 @@ export async function enqueueDripSeries(
 
   const meta = { appUrl: APP_URL, parentFirstName: parentFirstName ?? null }
 
-  // Welcome — immediate
+  // Welcome - immediate
   await enqueueEmail(profileId, DRIP_KEYS.WELCOME, now, meta)
 
-  // Nurture drip — relative to signup (now)
+  // Nurture drip - relative to signup (now)
   const day = (n: number) => new Date(now.getTime() + n * 86_400_000)
 
   await enqueueEmail(profileId, DRIP_KEYS.ONBOARDING_DAY3,  day(3),  meta)
@@ -71,7 +71,7 @@ export async function enqueueDripSeries(
   await enqueueEmail(profileId, DRIP_KEYS.FEATURE_DAY10,    day(10), meta)
   await enqueueEmail(profileId, DRIP_KEYS.MIDTRIAL_DAY14,   day(14), meta)
 
-  // Trial conversion — relative to trial_end
+  // Trial conversion - relative to trial_end
   const daysBeforeEnd = (n: number) => new Date(trialEnd.getTime() - n * 86_400_000)
 
   await enqueueEmail(profileId, DRIP_KEYS.TRIAL_EXPIRING_7, daysBeforeEnd(7), meta)

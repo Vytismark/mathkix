@@ -115,7 +115,7 @@ export default function AppPreview() {
   return (
     <div className="relative select-none" style={{ width: 300, paddingTop: 24, paddingBottom: 24 }}>
 
-      {/* Floating decorative badges — hidden on mobile to prevent overlap */}
+      {/* Floating decorative badges - hidden on mobile to prevent overlap */}
       <div className="hidden md:block">
         <FloatingBadge style={{ top: 8, left: -40, animation: 'floatA 4s ease-in-out infinite' }}>
           <span className="flex items-center gap-1.5">

@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
 
   // ── Seed per-standard mastery from diagnostic answers ────────────────────
   // Conservative mapping: diagnostics give a starting point, lessons refine it.
-  // Mastery 3 ("Mastered") is never set here — requires repeated lesson practice.
+  // Mastery 3 ("Mastered") is never set here - requires repeated lesson practice.
   {
     const byStandard = new Map<string, QuizAnswerRecord[]>()
     for (const a of questionsAsked) {

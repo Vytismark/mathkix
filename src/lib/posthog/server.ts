@@ -22,6 +22,6 @@ export async function captureServerEvent(
     client.capture({ distinctId, event, properties })
     await client.shutdown()
   } catch {
-    // Non-critical — never fail the primary request
+    // Non-critical - never fail the primary request
   }
 }
