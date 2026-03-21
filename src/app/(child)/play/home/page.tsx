@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { XPBar } from '@/components/child/XPBar'
 import { GreetingBanner } from '@/components/child/GreetingBanner'
-import { VaultHub } from '@/components/child/VaultHub'
+import { SkillRings } from '@/components/child/SkillRings'
 import type { Domain } from '@/types/quiz'
 import { getDomainsForGrade } from '@/types/quiz'
 
@@ -75,23 +75,6 @@ export default async function PlayHomePage({
   for (const domain of getDomainsForGrade(gradeLevel)) {
     const t = domainTotals[domain]
     domainMastery[domain] = t ? Math.round((t.sum / t.count / 3) * 100) : 0
-  }
-
-  // ── Per-domain standard counts (for vault dots) ─────
-  // Deduplicate by standard_code so each standard counts once
-  const domainStandardSets: Record<string, Set<string>> = {}
-  for (const l of lessons ?? []) {
-    if (!l.standard_code) continue
-    if (!domainStandardSets[l.domain]) domainStandardSets[l.domain] = new Set()
-    domainStandardSets[l.domain].add(l.standard_code)
-  }
-  const domainStandardInfo: Record<string, { total: number; mastered: number }> = {}
-  for (const [domain, codes] of Object.entries(domainStandardSets)) {
-    let mastered = 0
-    for (const code of codes) {
-      if ((masteryMap[code] ?? 0) >= 3) mastered++
-    }
-    domainStandardInfo[domain] = { total: codes.size, mastered }
   }
 
   // ── Streak / activity ───────────────────────────────
@@ -174,14 +157,20 @@ export default async function PlayHomePage({
           </div>
         </div>
 
-        {/* ── Discovery Vault ──────────────────────── */}
+        {/* ── Skill rings hub ──────────────────────── */}
         {enrichedLessons.length > 0 && (
           <div className="mt-6 animate-fade-in-up" style={{ animationDelay: '160ms' }}>
-            <VaultHub
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex-1 h-px bg-slate-200" />
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest px-2">
+                Your Skills
+              </span>
+              <div className="flex-1 h-px bg-slate-200" />
+            </div>
+            <SkillRings
               childId={childId}
               domainMastery={domainMastery}
               domains={enrichedLessons.map((l) => l.domain)}
-              domainStandardInfo={domainStandardInfo}
             />
           </div>
         )}
