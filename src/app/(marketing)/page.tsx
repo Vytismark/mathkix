@@ -701,7 +701,7 @@ export default function LandingPage() {
           <h2
             className="animate-fade-in-up text-4xl sm:text-5xl font-extrabold mb-5 leading-[1.1]"
           >
-            Start where your child is.{' '}
+            Exact level from day one.{' '}
             <span style={{ color: '#3678FF' }}>
               Free for 30 days.
             </span>
