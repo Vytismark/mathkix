@@ -338,13 +338,42 @@ export default function SessionPage() {
                   disabled={phase === 'feedback'}
                 />
               )}
-              {currentQuestion.type === 'numeric' && (
+              {currentQuestion.type === 'numeric' && !isNaN(Number(currentQuestion.correct_answer)) && currentQuestion.correct_answer.trim() !== '' && (
                 <NumberPad
                   value={currentInput}
                   onChange={setCurrentInput}
                   onSubmit={submitAnswer}
                   disabled={phase === 'feedback'}
                 />
+              )}
+              {currentQuestion.type === 'numeric' && (isNaN(Number(currentQuestion.correct_answer)) || currentQuestion.correct_answer.trim() === '') && /^\d+\/\d+/.test(currentQuestion.correct_answer.trim()) && (
+                <FractionInput
+                  value={currentInput}
+                  onChange={setCurrentInput}
+                  onSubmit={submitAnswer}
+                  disabled={phase === 'feedback'}
+                />
+              )}
+              {currentQuestion.type === 'numeric' && (isNaN(Number(currentQuestion.correct_answer)) || currentQuestion.correct_answer.trim() === '') && !/^\d+\/\d+/.test(currentQuestion.correct_answer.trim()) && (
+                <div className="w-full flex flex-col gap-3">
+                  <input
+                    type="text"
+                    value={currentInput}
+                    onChange={(e) => setCurrentInput(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === 'Enter') submitAnswer() }}
+                    placeholder="Type your answer…"
+                    disabled={phase === 'feedback'}
+                    className="w-full text-center text-lg font-semibold bg-white border-2 border-gray-200 rounded-2xl px-4 py-3 focus:outline-none focus:border-indigo-400"
+                  />
+                  <button
+                    onClick={submitAnswer}
+                    disabled={phase === 'feedback' || !currentInput.trim()}
+                    className="w-full py-4 rounded-2xl text-white text-lg font-bold disabled:opacity-40 transition-opacity"
+                    style={{ background: 'linear-gradient(135deg, #2557CC, #3678FF)' }}
+                  >
+                    Check answer ✓
+                  </button>
+                </div>
               )}
               {currentQuestion.type === 'fraction' && (
                 <FractionInput
