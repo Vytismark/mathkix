@@ -58,7 +58,7 @@ const FEATURES = [
     glow: 'rgba(124,58,237,0.28)',
     title: 'One Account, All Your Kids',
     description:
-      'Add unlimited children under one parent account. Each child gets their own profile, progress, and personalized curriculum.',
+      'Each child gets their own path. No siblings sharing a score, no one-size-fits-all grade. Add unlimited children under one account.',
   },
   {
     icon: Gamepad2,
@@ -66,7 +66,7 @@ const FEATURES = [
     glow: 'rgba(245,158,11,0.28)',
     title: 'Built for Ages 5-11',
     description:
-      'Big tap targets, XP rewards, daily streaks, and a custom number pad. Designed for small fingers and short attention spans.',
+      'Built around how kids actually learn: fast sessions, XP rewards, daily streaks, and a number pad made for small fingers.',
   },
   {
     icon: BookOpen,
@@ -74,7 +74,7 @@ const FEATURES = [
     glow: 'rgba(14,165,233,0.28)',
     title: 'Full CCSSM Coverage',
     description:
-      'Every question maps to a Common Core standard. Operations, Fractions, Measurement, Geometry - Grades 1-5, covered.',
+      'Every question maps to the same standards your child\'s teacher uses. Progress in MathKix means progress in class.',
   },
   {
     icon: Shield,
@@ -82,7 +82,7 @@ const FEATURES = [
     glow: 'rgba(236,72,153,0.28)',
     title: 'Safe, Private & Ad-Free',
     description:
-      'No ads. No data selling. Child profiles are protected with row-level security. You control everything.',
+      'No ads. No data selling. Your child\'s profile is theirs — invisible to everyone except you.',
   },
 ]
 
@@ -97,13 +97,13 @@ const STEPS = [
     number: '02',
     title: 'Add your child & take the quiz',
     description:
-      'A 3-minute AI placement quiz finds exactly where your child is in their math journey.',
+      'A 3-minute AI quiz pinpoints exactly where your child stands — across every skill, not just their grade.',
   },
   {
     number: '03',
     title: 'Watch them grow',
     description:
-      'Daily practice, XP rewards, and a streak to maintain. You get weekly progress updates.',
+      'Your child builds a daily streak. You get a weekly report showing exactly what they\'ve mastered.',
   },
 ]
 
@@ -176,7 +176,7 @@ const FAQ_SCHEMA = {
       name: 'What if my child is behind their grade level?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'That is completely fine - and it is one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There is no "grade shaming" - your child only sees encouragement and progress.',
+        text: 'That\'s completely fine — and it\'s one of the main reasons parents use MathKix. The placement quiz detects gaps automatically, and the adaptive engine serves questions from earlier standards until your child masters them. There\'s no "grade shaming" — your child only sees encouragement and progress.',
       },
     },
     {
@@ -287,10 +287,10 @@ export default function LandingPage() {
             className="animate-fade-in-up text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.06] mb-6"
             style={{ animationDelay: '60ms' }}
           >
-            Ignite your child&apos;s<br />
-            math{' '}
+            Math that starts where<br />
+            your child{' '}
             <span style={{ color: '#3678FF' }}>
-              potential.
+              actually is.
             </span>
           </h1>
 
@@ -299,8 +299,8 @@ export default function LandingPage() {
             className="animate-fade-in-up text-lg sm:text-xl text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed"
             style={{ animationDelay: '120ms' }}
           >
-            AI-powered math for Grades 1-5. A 3-minute quiz finds your
-            child&apos;s exact level, then adapts as they master each skill.
+            A 3-minute quiz finds your child&apos;s exact level across every
+            math skill. Then builds a custom path forward — standard by standard.
           </p>
 
           {/* CTAs */}
@@ -336,7 +336,7 @@ export default function LandingPage() {
             className="animate-fade-in text-sm text-slate-500"
             style={{ animationDelay: '240ms' }}
           >
-            No credit card&nbsp;&nbsp;·&nbsp;&nbsp;Cancel anytime&nbsp;&nbsp;·&nbsp;&nbsp;All Grades 1-5
+            No credit card&nbsp;&nbsp;·&nbsp;&nbsp;Cancel anytime&nbsp;&nbsp;·&nbsp;&nbsp;No ads, ever
           </p>
 
           {/* Stats row */}
@@ -369,7 +369,7 @@ export default function LandingPage() {
             <h2 className="animate-fade-in-up text-3xl sm:text-4xl font-extrabold mb-3">
               Everything they need.
             </h2>
-            <p className="text-slate-400 text-lg">Nothing generic. Nothing boring.</p>
+            <p className="text-slate-400 text-lg">Built for one kid: yours.</p>
           </div>
 
           <div className="feature-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -404,10 +404,10 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="animate-fade-in-up text-3xl sm:text-4xl font-extrabold mb-3">
-              Not another math app
+              Most apps guess. MathKix measures.
             </h2>
             <p className="text-slate-400 text-lg max-w-xl mx-auto">
-              Most math apps give every kid the same questions. MathKix starts where your child actually is.
+              Generic math apps give every kid the same questions. MathKix starts with where your child actually is — then moves from there.
             </p>
           </div>
 
@@ -425,8 +425,8 @@ export default function LandingPage() {
                 {[
                   'Same questions for every student',
                   'Pick a grade, hope it fits',
-                  'Gamification without learning science',
-                  'One-size-fits-all explanations',
+                  'Rewards that don\'t make kids actually learn more',
+                  'Explanations that miss if your kid is above or below grade',
                   'No visibility into what they actually know',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-slate-500">
@@ -452,9 +452,9 @@ export default function LandingPage() {
                 {[
                   { icon: Brain, text: 'AI placement finds their exact level in 3 minutes' },
                   { icon: Shuffle, text: 'Adaptive engine adjusts difficulty after every answer' },
-                  { icon: BarChart3, text: 'Built on spaced repetition and learning science' },
+                  { icon: BarChart3, text: 'Designed to make knowledge stick, not just practice it' },
                   { icon: MessageCircle, text: 'AI tutor adapts language to your child\'s grade' },
-                  { icon: CheckCircle, text: 'Parent dashboard shows mastery per standard' },
+                  { icon: CheckCircle, text: 'You can see exactly what they know — and what\'s next' },
                 ].map(({ icon: Icon, text }) => (
                   <li key={text} className="flex items-start gap-3 text-sm text-slate-200">
                     <span
@@ -477,7 +477,7 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="animate-fade-in-up text-3xl sm:text-4xl font-extrabold mb-3">
-              Up and running in minutes
+              Three steps. Then it runs itself.
             </h2>
             <p className="text-slate-400">No setup. No curriculum decisions. Just start.</p>
           </div>
@@ -596,10 +596,10 @@ export default function LandingPage() {
               </p>
               <ul className="space-y-4">
                 {[
-                  { color: '#10b981', text: 'Large tap targets for small fingers' },
-                  { color: '#7c3aed', text: 'Ms. Owl AI tutor gives encouragement' },
-                  { color: '#f59e0b', text: 'XP and streaks keep them motivated' },
                   { color: '#3678FF', text: 'Wrong answers teach, never punish' },
+                  { color: '#7c3aed', text: 'Ms. Owl explains mistakes in plain language — no red X and move on' },
+                  { color: '#f59e0b', text: 'XP and streaks keep them coming back' },
+                  { color: '#10b981', text: 'Large tap targets built for small fingers' },
                 ].map(({ color, text }) => (
                   <li key={text} className="flex items-center gap-3 text-sm text-slate-300">
                     <div
@@ -622,10 +622,10 @@ export default function LandingPage() {
       <section className="px-6 py-20" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="animate-fade-in-up text-3xl sm:text-4xl font-extrabold mb-3">
-            Covers all Grades 1-5 math
+            Every standard. Grades 1–5. Nothing skipped.
           </h2>
           <p className="text-slate-400 mb-12">
-            Fully aligned with Common Core State Standards for Mathematics
+            The same standards your child's teacher uses, built into every question.
           </p>
 
           {/* Curriculum explorer */}
@@ -671,7 +671,7 @@ export default function LandingPage() {
             <h2 className="animate-fade-in-up text-3xl sm:text-4xl font-extrabold mb-3">
               Common questions
             </h2>
-            <p className="text-slate-400">Everything parents ask before getting started.</p>
+            <p className="text-slate-400">Answered.</p>
           </div>
           <FaqSection />
         </div>
@@ -701,18 +701,22 @@ export default function LandingPage() {
           <h2
             className="animate-fade-in-up text-4xl sm:text-5xl font-extrabold mb-5 leading-[1.1]"
           >
-            Give your child a head start -{' '}
+            Start where your child is.{' '}
             <span style={{ color: '#3678FF' }}>
-              free for 30 days.
+              Free for 30 days.
             </span>
           </h2>
           <p
-            className="animate-fade-in-up text-slate-400 text-lg mb-10"
+            className="animate-fade-in-up text-slate-400 text-lg mb-6"
             style={{ animationDelay: '80ms' }}
           >
             No credit card. No commitment. Cancel with one click.
-            <br />
-            Then just $9.99/month - less than one tutoring hour.
+          </p>
+          <p
+            className="animate-fade-in-up text-slate-300 text-base font-medium mb-10"
+            style={{ animationDelay: '110ms' }}
+          >
+            Then just $9.99/month — less than a single tutoring hour.
           </p>
           <div
             className="animate-fade-in-up"
