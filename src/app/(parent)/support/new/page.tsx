@@ -16,6 +16,12 @@ export default function NewTicketPage() {
     e.preventDefault()
     if (!subject.trim() || !description.trim()) return
 
+    // Validate subject contains at least some alphanumeric characters
+    if (!/[a-zA-Z0-9]/.test(subject)) {
+      toast.error('Please enter a valid subject with some text or numbers')
+      return
+    }
+
     setLoading(true)
     try {
       const res = await fetch('/api/support/tickets', {

@@ -115,30 +115,32 @@ export default function AppPreview() {
   return (
     <div className="relative select-none" style={{ width: 300, paddingTop: 24, paddingBottom: 24 }}>
 
-      {/* Floating decorative badges */}
-      <FloatingBadge style={{ top: 8, left: -40, animation: 'floatA 4s ease-in-out infinite' }}>
-        <span className="flex items-center gap-1.5">
-          <Flame className="w-3.5 h-3.5 text-orange-400" />
-          <span className="text-orange-300">{streak} streak</span>
-        </span>
-      </FloatingBadge>
+      {/* Floating decorative badges — hidden on mobile to prevent overlap */}
+      <div className="hidden md:block">
+        <FloatingBadge style={{ top: 8, left: -40, animation: 'floatA 4s ease-in-out infinite' }}>
+          <span className="flex items-center gap-1.5">
+            <Flame className="w-3.5 h-3.5 text-orange-400" />
+            <span className="text-orange-300">{streak} streak</span>
+          </span>
+        </FloatingBadge>
 
-      <FloatingBadge style={{ top: 60, right: -50, animation: 'floatB 5s ease-in-out infinite' }}>
-        <span className="flex items-center gap-1.5">
-          <Star className="w-3.5 h-3.5 text-purple-400" />
-          <span className="text-purple-300">{xp} XP</span>
-        </span>
-      </FloatingBadge>
+        <FloatingBadge style={{ top: 60, right: -50, animation: 'floatB 5s ease-in-out infinite' }}>
+          <span className="flex items-center gap-1.5">
+            <Star className="w-3.5 h-3.5 text-purple-400" />
+            <span className="text-purple-300">{xp} XP</span>
+          </span>
+        </FloatingBadge>
 
-      <FloatingBadge style={{ bottom: 70, left: -48, animation: 'floatC 4.5s ease-in-out infinite' }}>
-        <span className="text-slate-300">
-          🎓 <span style={{ color: step.color }}>{step.gradeLabel}</span>
-        </span>
-      </FloatingBadge>
+        <FloatingBadge style={{ bottom: 70, left: -48, animation: 'floatC 4.5s ease-in-out infinite' }}>
+          <span className="text-slate-300">
+            🎓 <span style={{ color: step.color }}>{step.gradeLabel}</span>
+          </span>
+        </FloatingBadge>
 
-      <FloatingBadge style={{ bottom: 30, right: -42, animation: 'floatA 5.5s ease-in-out infinite reverse' }}>
-        <span className="text-slate-300">📐 {step.domain}</span>
-      </FloatingBadge>
+        <FloatingBadge style={{ bottom: 30, right: -42, animation: 'floatA 5.5s ease-in-out infinite reverse' }}>
+          <span className="text-slate-300">📐 {step.domain}</span>
+        </FloatingBadge>
+      </div>
 
       {/* XP floating pops */}
       {xpPops.map((pop) => (

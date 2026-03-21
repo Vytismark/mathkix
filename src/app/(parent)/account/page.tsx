@@ -204,7 +204,8 @@ export default function AccountPage() {
     try {
       const res = await fetch('/api/account/export-data', { method: 'POST' })
       if (!res.ok) {
-        toast.error('Failed to export data')
+        const data = await res.json().catch(() => ({}))
+        toast.error(data.error || 'Failed to export data. Please try again.')
         setExportLoading(false)
         return
       }

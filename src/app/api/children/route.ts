@@ -77,6 +77,9 @@ export async function POST(request: NextRequest) {
   if (!name?.trim()) {
     return NextResponse.json({ error: 'Name is required' }, { status: 400 })
   }
+  if (!/^[\p{L}\p{N}\s'-]+$/u.test(name.trim())) {
+    return NextResponse.json({ error: 'Name can only contain letters, numbers, spaces, hyphens, and apostrophes' }, { status: 400 })
+  }
   if (school_grade === undefined || school_grade === null) {
     return NextResponse.json({ error: 'School grade is required' }, { status: 400 })
   }

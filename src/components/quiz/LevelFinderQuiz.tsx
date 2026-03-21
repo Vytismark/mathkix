@@ -167,11 +167,11 @@ export function LevelFinderQuiz({ childId, childName, schoolGrade }: LevelFinder
   // ── Quiz UI ────────────────────────────────────────────────────────────────
 
   return (
-    <div className="flex flex-col items-center gap-5 max-w-sm mx-auto py-4">
+    <div className="flex flex-col items-center gap-3 max-w-sm mx-auto py-2">
 
       {/* "Working on" banner - prominent, shown from question 1 */}
       <div
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl"
+        className="w-full flex items-center gap-3 px-4 py-2 rounded-2xl"
         style={{
           background: DOMAIN_COLORS[currentDomain].bg,
           border:     `2px solid ${DOMAIN_COLORS[currentDomain].border}`,
@@ -235,18 +235,17 @@ export function LevelFinderQuiz({ childId, childName, schoolGrade }: LevelFinder
         })}
       </div>
 
-      {/* Feedback flash */}
-      {feedbackPhase && wasCorrect !== null && (
-        <div className={`text-3xl font-bold ${wasCorrect ? 'text-green-400' : 'text-red-400'}`}>
-          {wasCorrect ? '✓ Correct!' : '✗ Not quite'}
-        </div>
-      )}
-
-      {/* Question card */}
-      <div className="relative bg-white rounded-2xl shadow-sm border p-6 w-full text-center">
+      {/* Question card with feedback overlay */}
+      <div className="relative bg-white rounded-2xl shadow-sm border p-5 w-full text-center">
         <ReadAloudButton text={q.question_text} gradeLevel={schoolGrade} />
         <p className="text-xl font-semibold leading-relaxed text-gray-900 px-10">{q.question_text}</p>
         <QuestionVisual visualAsset={q.visual_asset} questionText={q.question_text} />
+        {/* Feedback flash — overlaid so it doesn't push content down */}
+        {feedbackPhase && wasCorrect !== null && (
+          <div className={`absolute inset-0 flex items-center justify-center rounded-2xl text-3xl font-bold ${wasCorrect ? 'text-green-500 bg-green-50/90' : 'text-red-500 bg-red-50/90'}`}>
+            {wasCorrect ? '✓ Correct!' : '✗ Incorrect!'}
+          </div>
+        )}
       </div>
 
       {/* Answer input */}
@@ -259,13 +258,34 @@ export function LevelFinderQuiz({ childId, childName, schoolGrade }: LevelFinder
           disabled={feedbackPhase}
         />
       )}
-      {q.question_type === 'numeric' && (
+      {q.question_type === 'numeric' && !isNaN(Number(q.correct_answer)) && q.correct_answer.trim() !== '' && (
         <NumberPad
           value={answer}
           onChange={setAnswer}
           onSubmit={submitAnswer}
           disabled={feedbackPhase}
         />
+      )}
+      {q.question_type === 'numeric' && (isNaN(Number(q.correct_answer)) || q.correct_answer.trim() === '') && (
+        <div className="w-full flex flex-col gap-3">
+          <input
+            type="text"
+            value={answer}
+            onChange={(e) => setAnswer(e.target.value)}
+            onKeyDown={(e) => { if (e.key === 'Enter') submitAnswer() }}
+            placeholder="Type your answer…"
+            disabled={feedbackPhase}
+            className="w-full text-center text-lg font-semibold bg-white border-2 border-gray-200 rounded-2xl px-4 py-3 focus:outline-none focus:border-indigo-400"
+          />
+          <button
+            onClick={submitAnswer}
+            disabled={feedbackPhase || !answer.trim()}
+            className="w-full py-4 rounded-2xl text-white text-lg font-bold disabled:opacity-40 transition-opacity"
+            style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+          >
+            Submit
+          </button>
+        </div>
       )}
       {q.question_type === 'fraction' && (
         <FractionInput

@@ -1,11 +1,11 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import { LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle, AlertTriangle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
-import { toast } from 'sonner'
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -17,17 +17,20 @@ const NAV_ITEMS = [
 
 export function ParentNav() {
   const pathname = usePathname()
-  const router = useRouter()
+  const [showConfirm, setShowConfirm] = useState(false)
+  const [signingOut, setSigningOut] = useState(false)
 
-  async function handleSignOut() {
+  async function confirmSignOut() {
+    if (signingOut) return
+    setSigningOut(true)
+    setShowConfirm(false)
     const supabase = createClient()
     await supabase.auth.signOut()
-    toast.success('Signed out')
-    router.push('/login')
-    router.refresh()
+    window.location.href = '/login'
   }
 
   return (
+    <>
     <nav
       className="flex flex-col w-56 min-h-screen px-3 py-6 border-r border-white/[0.07] shrink-0"
       style={{ background: 'rgba(255,255,255,0.025)' }}
@@ -68,7 +71,7 @@ export function ParentNav() {
 
       <div className="border-t border-white/[0.07] pt-3">
         <button
-          onClick={handleSignOut}
+          onClick={() => setShowConfirm(true)}
           className="nav-item-animate flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-500 hover:text-slate-200 hover:bg-white/[0.06] transition-colors duration-150 w-full"
           style={{ animationDelay: `${NAV_ITEMS.length * 50}ms` }}
         >
@@ -77,5 +80,45 @@ export function ParentNav() {
         </button>
       </div>
     </nav>
+
+    {showConfirm && (
+
+      <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <div
+          className="absolute inset-0"
+          style={{ background: 'rgba(0,0,0,0.7)' }}
+          onClick={() => setShowConfirm(false)}
+        />
+        <div
+          className="relative w-full max-w-sm rounded-3xl border border-white/10 p-6"
+          style={{ background: '#0e0f16' }}
+        >
+          <div className="flex items-center gap-2.5 mb-3">
+            <AlertTriangle className="w-5 h-5 text-amber-400" />
+            <h3 className="text-lg font-bold text-white">Sign out?</h3>
+          </div>
+          <p className="text-sm text-slate-400 leading-relaxed mb-6">
+            Are you sure you want to sign out?
+          </p>
+          <div className="flex gap-3">
+            <button
+              onClick={() => setShowConfirm(false)}
+              className="flex-1 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 border border-white/10 hover:bg-white/[0.06] transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={confirmSignOut}
+              disabled={signingOut}
+              className="flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white disabled:opacity-50"
+              style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+            >
+              {signingOut ? 'Signing out…' : 'Sign out'}
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+    </>
   )
 }

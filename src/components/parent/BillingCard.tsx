@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { Check, ExternalLink, ShieldCheck, RotateCcw, TrendingUp } from 'lucide-react'
 import { PRICING_PLANS } from '@/types/stripe'
 
 interface BillingCardProps {
+  justPurchased?: boolean
   subscription: {
     plan_type: string
     status: string
@@ -29,9 +31,21 @@ const PLAN_META: Record<string, { tagline: string; priceNote: string }> = {
   lifetime: { tagline: 'Pay once, done forever',      priceNote: 'One-time, never renews' },
 }
 
-export function BillingCard({ subscription }: BillingCardProps) {
+export function BillingCard({ subscription, justPurchased }: BillingCardProps) {
+  const router = useRouter()
   const [loadingPortal, setLoadingPortal]     = useState(false)
   const [loadingCheckout, setLoadingCheckout] = useState<string | null>(null)
+  const [verifying, setVerifying]             = useState(justPurchased && !subscription?.status?.match(/^active$/))
+
+  useEffect(() => {
+    if (!verifying) return
+    // Auto-refresh after 3 seconds to pick up the Stripe webhook update
+    const timer = setTimeout(() => {
+      router.refresh()
+      setVerifying(false)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [verifying, router])
 
   const isPaidActive = (
     subscription?.status === 'active' &&
@@ -91,6 +105,19 @@ export function BillingCard({ subscription }: BillingCardProps) {
 
   return (
     <div className="space-y-10">
+
+      {/* ── Payment verification banner ── */}
+      {verifying && (
+        <div
+          className="flex items-center gap-3 px-5 py-4 rounded-2xl border"
+          style={{ background: 'rgba(16,185,129,0.08)', borderColor: 'rgba(16,185,129,0.25)' }}
+        >
+          <div className="w-4 h-4 rounded-full border-2 border-emerald-400 border-t-transparent animate-spin shrink-0" />
+          <p className="text-emerald-300 text-sm font-medium">
+            Confirming your payment… This will refresh automatically.
+          </p>
+        </div>
+      )}
 
       {/* ── Trial / current plan status ── */}
       {subscription && (

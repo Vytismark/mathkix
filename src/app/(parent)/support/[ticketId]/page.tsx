@@ -202,6 +202,22 @@ export default function TicketDetailPage() {
             </div>
           )
         })}
+        {/* AI typing indicator — shown while waiting for response */}
+        {sending && ticket.status !== 'awaiting_human' && (
+          <div className="flex justify-start">
+            <div className="max-w-[80%]">
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <Bot className="w-3.5 h-3.5 text-indigo-400" />
+                <span className="text-xs text-indigo-400 font-medium">MathKix Assistant</span>
+              </div>
+              <div className="rounded-2xl px-4 py-3 bg-white/[0.07] border border-white/10 flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce [animation-delay:0ms]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce [animation-delay:150ms]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce [animation-delay:300ms]" />
+              </div>
+            </div>
+          </div>
+        )}
         <div ref={messagesEndRef} />
       </div>
 
@@ -209,7 +225,7 @@ export default function TicketDetailPage() {
       {ticket.status !== 'closed' ? (
         <form
           onSubmit={handleSendReply}
-          className="shrink-0 pt-4 border-t border-white/[0.07]"
+          className="shrink-0 pt-3 pb-1 border-t border-white/[0.07]"
         >
           {ticket.status === 'awaiting_human' && (
             <div className="flex items-center gap-2 mb-3 text-xs text-amber-400/80">

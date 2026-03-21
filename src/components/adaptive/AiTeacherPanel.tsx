@@ -530,8 +530,15 @@ export function AiTeacherPanel({
 
           {/* Error banner */}
           {micError && (
-            <div className="mx-3 mb-1 flex items-start gap-2 bg-orange-50 border border-orange-200 rounded-xl px-3 py-2">
-              <span className="text-xs text-orange-700 leading-snug">{micError}</span>
+            <div className="mx-3 mb-1 flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-xl px-3 py-2">
+              <span className="text-xs text-orange-700 leading-snug flex-1">{micError}</span>
+              <button
+                onClick={() => setMicStatus('idle')}
+                className="shrink-0 text-orange-400 hover:text-orange-600 text-sm font-bold leading-none"
+                aria-label="Dismiss"
+              >
+                ✕
+              </button>
             </div>
           )}
 

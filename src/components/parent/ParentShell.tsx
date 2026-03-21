@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle, ArrowLeftRight, BookOpen } from 'lucide-react'
+import { Menu, X, LayoutDashboard, Users, CreditCard, Settings, LogOut, HelpCircle, ArrowLeftRight, BookOpen, AlertTriangle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
@@ -40,10 +40,12 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
   }, [drawerOpen])
 
   const [signingOut, setSigningOut] = useState(false)
+  const [showSignOutConfirm, setShowSignOutConfirm] = useState(false)
 
-  async function handleSignOut() {
+  async function confirmSignOut() {
     if (signingOut) return
     setSigningOut(true)
+    setShowSignOutConfirm(false)
     try {
       const supabase = createClient()
       const { error } = await supabase.auth.signOut()
@@ -52,13 +54,16 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
         setSigningOut(false)
         return
       }
-      toast.success('Signed out')
-      router.push('/login')
-      router.refresh()
+      window.location.href = '/login'
     } catch {
       toast.error('Failed to sign out')
       setSigningOut(false)
     }
+  }
+
+  function handleSignOut() {
+    setDrawerOpen(false)
+    setShowSignOutConfirm(true)
   }
 
   const navContent = (
@@ -121,8 +126,8 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
       </nav>
 
       {/* ── Mobile top bar (visible below md) ── */}
-      <div className="md:hidden sticky top-0 z-40 border-b border-white/[0.07] px-4 py-3 flex items-center justify-between"
-        style={{ background: 'rgba(7,8,15,0.95)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-40 border-b border-white/[0.07] px-4 py-3 flex items-center justify-between"
+        style={{ background: 'rgba(7,8,15,1)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
       >
         <Link href="/select" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -209,9 +214,48 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
       )}
 
       {/* ── Main content ── */}
-      <main className="relative flex-1 p-4 md:p-8 overflow-auto">
+      <main className="relative flex-1 p-4 pt-16 md:pt-8 md:p-8 overflow-auto">
         {children}
       </main>
+
+      {/* ── Sign-out confirmation dialog ── */}
+      {showSignOutConfirm && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 animate-fade-in"
+            style={{ background: 'rgba(0,0,0,0.7)' }}
+            onClick={() => setShowSignOutConfirm(false)}
+          />
+          <div
+            className="relative animate-scale-in w-full max-w-sm rounded-3xl border border-white/10 p-6"
+            style={{ background: '#0e0f16' }}
+          >
+            <div className="flex items-center gap-2.5 mb-3">
+              <AlertTriangle className="w-5 h-5 text-amber-400" />
+              <h3 className="text-lg font-bold text-white">Sign out?</h3>
+            </div>
+            <p className="text-sm text-slate-400 leading-relaxed mb-6">
+              Are you sure you want to sign out?
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowSignOutConfirm(false)}
+                className="flex-1 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 border border-white/10 hover:bg-white/[0.06] transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmSignOut}
+                disabled={signingOut}
+                className="flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white disabled:opacity-50 transition-colors"
+                style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
+              >
+                {signingOut ? 'Signing out…' : 'Sign out'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

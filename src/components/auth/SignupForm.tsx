@@ -3,18 +3,22 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { toast } from 'sonner'
-import { User, Mail, Lock } from 'lucide-react'
+import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { getPasswordStrength } from '@/lib/password'
 import { captureEvent } from '@/lib/posthog/client'
 
 export function SignupForm() {
-  const [fullName, setFullName] = useState('')
-  const [email, setEmail]       = useState('')
-  const [password, setPassword] = useState('')
-  const [loading, setLoading]   = useState(false)
-  const [done, setDone]         = useState(false)
-  const [agreedTerms, setAgreedTerms] = useState(false)
+  const [fullName, setFullName]           = useState('')
+  const [email, setEmail]                 = useState('')
+  const [password, setPassword]           = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [showPassword, setShowPassword]   = useState(false)
+  const [showConfirm, setShowConfirm]     = useState(false)
+  const [loading, setLoading]             = useState(false)
+  const [googleLoading, setGoogleLoading] = useState(false)
+  const [done, setDone]                   = useState(false)
+  const [agreedTerms, setAgreedTerms]     = useState(false)
 
   const strength = getPasswordStrength(password)
 
@@ -23,7 +27,7 @@ export function SignupForm() {
   }, [])
 
   async function handleGoogleSignIn() {
-    setLoading(true)
+    setGoogleLoading(true)
     const supabase = createClient()
 
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -40,14 +44,26 @@ export function SignupForm() {
     })
     if (error) {
       toast.error('Failed to sign in with Google')
-      setLoading(false)
+      setGoogleLoading(false)
     }
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (!fullName.trim()) {
+      toast.error('Please enter your name')
+      return
+    }
+    if (password !== password.trim()) {
+      toast.error('Password cannot start or end with spaces')
+      return
+    }
     if (password.length < 8) {
       toast.error('Password must be at least 8 characters')
+      return
+    }
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match')
       return
     }
     setLoading(true)
@@ -105,8 +121,8 @@ export function SignupForm() {
         <button
           type="button"
           onClick={handleGoogleSignIn}
-          disabled={loading}
-          className="w-full h-11 rounded-xl font-semibold flex items-center justify-center gap-3 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-900 transition-colors"
+          disabled={googleLoading || loading}
+          className="w-full h-11 rounded-xl font-semibold flex items-center justify-center gap-3 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none text-gray-900 transition-colors"
         >
           <svg width="18" height="18" viewBox="0 0 18 18">
             <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/>
@@ -114,7 +130,7 @@ export function SignupForm() {
             <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
             <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
           </svg>
-          Continue with Google
+          {googleLoading ? 'Redirecting…' : 'Continue with Google'}
         </button>
       </div>
 
@@ -177,17 +193,26 @@ export function SignupForm() {
           <div className="auth-float-group">
             <input
               id="password"
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder=" "
               required
               autoComplete="new-password"
               minLength={8}
-              className="auth-float-input"
+              className="auth-float-input pr-10"
             />
             <label htmlFor="password" className="auth-float-label">Password</label>
           </div>
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
+            tabIndex={-1}
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
+          >
+            {showPassword ? <EyeOff style={{ width: 16, height: 16 }} /> : <Eye style={{ width: 16, height: 16 }} />}
+          </button>
         </div>
 
         {/* Password strength bar */}
@@ -212,6 +237,38 @@ export function SignupForm() {
               {strength.label}
             </p>
           </div>
+        )}
+      </div>
+
+      {/* Confirm Password */}
+      <div style={{ animation: 'fade-in-up 0.45s cubic-bezier(0.22,1,0.36,1) 230ms both' }}>
+        <div className="auth-input-wrap">
+          <Lock className="auth-input-icon" style={{ width: 17, height: 17 }} />
+          <div className="auth-float-group">
+            <input
+              id="confirmPassword"
+              type={showConfirm ? 'text' : 'password'}
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder=" "
+              required
+              autoComplete="new-password"
+              className="auth-float-input pr-10"
+            />
+            <label htmlFor="confirmPassword" className="auth-float-label">Confirm password</label>
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowConfirm(!showConfirm)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
+            tabIndex={-1}
+            aria-label={showConfirm ? 'Hide password' : 'Show password'}
+          >
+            {showConfirm ? <EyeOff style={{ width: 16, height: 16 }} /> : <Eye style={{ width: 16, height: 16 }} />}
+          </button>
+        </div>
+        {confirmPassword && password !== confirmPassword && (
+          <p className="text-xs text-red-400 mt-1.5 px-1">Passwords do not match</p>
         )}
       </div>
 
@@ -241,7 +298,7 @@ export function SignupForm() {
       <div style={{ animation: 'fade-in-up 0.45s cubic-bezier(0.22,1,0.36,1) 300ms both' }}>
         <button
           type="submit"
-          disabled={loading || !agreedTerms}
+          disabled={loading || googleLoading || !agreedTerms || (confirmPassword.length > 0 && password !== confirmPassword)}
           className="cta-btn w-full h-11 rounded-xl font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed"
           style={{
             background: 'linear-gradient(135deg, #C0392B, #E74C3C)',

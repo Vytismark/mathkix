@@ -160,6 +160,51 @@ export async function POST(request: NextRequest, { params }: Params) {
     }
   }
 
+  // ── Progress snapshot (weekly XP tracking) ─────────────────
+  // Compute the Monday (start of ISO week) for today in UTC
+  const weekStart = new Date(now)
+  weekStart.setUTCHours(0, 0, 0, 0)
+  const dayOfWeek = weekStart.getUTCDay() // 0=Sun, 1=Mon, ...
+  const diff = dayOfWeek === 0 ? -6 : 1 - dayOfWeek
+  weekStart.setUTCDate(weekStart.getUTCDate() + diff)
+  const weekStartStr = weekStart.toISOString().slice(0, 10) // 'YYYY-MM-DD'
+
+  // Fetch existing snapshot for this week to accumulate values
+  const { data: existingSnapshot } = await supabase
+    .from('progress_snapshots')
+    .select('lessons_completed, xp_earned, avg_score_pct, domains_practiced')
+    .eq('child_id', childId)
+    .eq('week_start', weekStartStr)
+    .maybeSingle()
+
+  const snapPrevLessons = existingSnapshot?.lessons_completed ?? 0
+  const snapPrevXP = existingSnapshot?.xp_earned ?? 0
+  const snapPrevAvg = existingSnapshot?.avg_score_pct ?? null
+  const snapPrevDomains = existingSnapshot?.domains_practiced ?? []
+
+  const snapLessons = snapPrevLessons + 1
+  const snapXP = snapPrevXP + xpEarned
+  // Running average of score_pct
+  const snapAvg = snapPrevAvg !== null
+    ? Math.round((snapPrevAvg * snapPrevLessons + score_pct) / snapLessons)
+    : score_pct
+  // Merge domain if not already present
+  const snapDomains = lesson.domain && !snapPrevDomains.includes(lesson.domain as string)
+    ? [...snapPrevDomains, lesson.domain as string]
+    : snapPrevDomains
+
+  await supabase.from('progress_snapshots').upsert(
+    {
+      child_id: childId,
+      week_start: weekStartStr,
+      lessons_completed: snapLessons,
+      xp_earned: snapXP,
+      avg_score_pct: snapAvg,
+      domains_practiced: snapDomains,
+    },
+    { onConflict: 'child_id,week_start' },
+  )
+
   // Enqueue first-lesson-complete email (idempotent via UNIQUE key)
   enqueueEmail(
     user.id,

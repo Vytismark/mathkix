@@ -59,7 +59,7 @@ export const DOMAIN_ICONS: Record<Domain, string> = {
 export const DOMAIN_COLORS: Record<Domain, { bg: string; text: string; border: string; hex: string }> = {
   OA:  { bg: 'rgba(231,76,60,0.15)',   text: '#f87171', border: 'rgba(231,76,60,0.4)',   hex: '#E74C3C' },
   NBT: { bg: 'rgba(99,102,241,0.15)',  text: '#a5b4fc', border: 'rgba(99,102,241,0.4)',  hex: '#6366f1' },
-  NF:  { bg: 'rgba(245,158,11,0.15)',  text: '#fcd34d', border: 'rgba(245,158,11,0.4)',  hex: '#f59e0b' },
+  NF:  { bg: 'rgba(139,92,246,0.15)',  text: '#c4b5fd', border: 'rgba(139,92,246,0.4)',  hex: '#8b5cf6' },
   MD:  { bg: 'rgba(14,165,233,0.15)',  text: '#7dd3fc', border: 'rgba(14,165,233,0.4)',  hex: '#0ea5e9' },
   G:   { bg: 'rgba(16,185,129,0.15)',  text: '#6ee7b7', border: 'rgba(16,185,129,0.4)',  hex: '#10b981' },
 }

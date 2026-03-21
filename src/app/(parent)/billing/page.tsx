@@ -4,9 +4,14 @@ import { BillingCard } from '@/components/parent/BillingCard'
 
 export const metadata: Metadata = { title: 'Billing' }
 
-export default async function BillingPage() {
+export default async function BillingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ success?: string }>
+}) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
+  const { success } = await searchParams
 
   const { data: subscription } = await supabase
     .from('subscriptions')
@@ -22,7 +27,7 @@ export default async function BillingPage() {
       <p className="text-slate-500 text-sm mb-10">
         30-day free trial, then choose a plan. No credit card required to start.
       </p>
-      <BillingCard subscription={subscription} />
+      <BillingCard subscription={subscription} justPurchased={success === 'true'} />
     </div>
   )
 }

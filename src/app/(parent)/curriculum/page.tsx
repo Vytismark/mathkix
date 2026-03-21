@@ -64,7 +64,7 @@ export default async function CurriculumPage() {
       {/* Back link */}
       <Link
         href="/dashboard"
-        className="inline-flex items-center gap-1.5 text-slate-500 hover:text-slate-300 text-sm transition-colors mb-5"
+        className="inline-flex items-center gap-1.5 text-slate-400 hover:text-slate-200 transition-colors mb-5"
       >
         ← Dashboard
       </Link>

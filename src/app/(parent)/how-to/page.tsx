@@ -4,7 +4,7 @@ import { useState } from 'react'
 import {
   UserPlus, ClipboardList, Rocket, LayoutDashboard,
   Star, Flame, BookOpen, ChevronDown, CheckCircle2,
-  BarChart2, Settings, CreditCard, HelpCircle,
+  BarChart2, Settings, CreditCard,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -218,7 +218,6 @@ export default function HowToPage() {
       {/* Header */}
       <div className="animate-fade-in-up mb-8">
         <div className="flex items-center gap-2.5 mb-1">
-          <HelpCircle className="w-5 h-5 text-slate-500" />
           <h1 className="text-2xl sm:text-3xl font-bold text-white">How it works</h1>
         </div>
         <p className="text-slate-500 text-sm mt-1">

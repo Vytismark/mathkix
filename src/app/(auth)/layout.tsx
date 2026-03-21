@@ -78,7 +78,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       </div>
 
       {/* Footer */}
-      <p className="relative mt-8 text-xs" style={{ color: '#1e293b' }}>
+      <p className="relative mt-8 text-xs" style={{ color: '#64748b' }}>
         © {new Date().getFullYear()} {appName}
       </p>
     </div>

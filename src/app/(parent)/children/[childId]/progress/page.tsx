@@ -73,7 +73,7 @@ export default async function ChildProgressPage({
   return (
     <div>
       <div className="flex items-center gap-4 mb-8">
-        <Link href={`/children/${childId}`} className="text-muted-foreground hover:text-foreground text-sm">
+        <Link href={`/children/${childId}`} className="text-slate-500 hover:text-white text-sm transition-colors">
           ← Back
         </Link>
         <h1 className="text-2xl font-bold">{child.name}&apos;s Progress</h1>

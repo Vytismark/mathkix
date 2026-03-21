@@ -56,7 +56,8 @@ export function CurriculumView({ grades, defaultGrade }: CurriculumViewProps) {
   return (
     <div>
       {/* Grade tabs */}
-      <div className="flex gap-2 overflow-x-auto pb-1 mb-6 scrollbar-hide">
+      <div className="relative mb-6">
+      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
         {grades.map((g) => {
           const active = g.grade === selectedGrade
           return (
@@ -80,6 +81,13 @@ export function CurriculumView({ grades, defaultGrade }: CurriculumViewProps) {
             </button>
           )
         })}
+      </div>
+      {/* Fade-out hint indicating horizontal scroll */}
+      <div
+        className="absolute right-0 top-0 bottom-2 w-8 pointer-events-none"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(7,8,15,0.8))' }}
+        aria-hidden
+      />
       </div>
 
       {/* Domain sections */}

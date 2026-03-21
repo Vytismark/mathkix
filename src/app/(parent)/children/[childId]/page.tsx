@@ -94,16 +94,24 @@ export default async function ChildDetailPage({
     arr.sort((a, b) => b.mastery_level - a.mastery_level || a.code.localeCompare(b.code, undefined, { numeric: true }))
   }
 
-  const domains: DomainData[] = activeDomains.map((d: Domain) => ({
-    domain: d,
-    label: DOMAIN_LABELS[d],
-    icon: DOMAIN_ICONS[d],
-    description: DOMAIN_DESCRIPTIONS[d],
-    colors: DOMAIN_COLORS[d],
-    overallMastery: Math.round(domainMastery[d] ?? 0),
-    effectiveGrade: domainGrades[d] ?? null,
-    standards: standardsByDomain[d] ?? [],
-  }))
+  const domains: DomainData[] = activeDomains.map((d: Domain) => {
+    const stds = standardsByDomain[d] ?? []
+    // Compute mastery from practice data if available; fall back to quiz domain_mastery
+    const practicedStds = stds.filter((s) => s.attempts > 0 || s.mastery_level > 0)
+    const computedMastery = practicedStds.length > 0
+      ? Math.round((practicedStds.reduce((sum, s) => sum + s.mastery_level, 0) / (practicedStds.length * 3)) * 100)
+      : Math.round(domainMastery[d] ?? 0)
+    return {
+      domain: d,
+      label: DOMAIN_LABELS[d],
+      icon: DOMAIN_ICONS[d],
+      description: DOMAIN_DESCRIPTIONS[d],
+      colors: DOMAIN_COLORS[d],
+      overallMastery: computedMastery,
+      effectiveGrade: domainGrades[d] ?? null,
+      standards: stds,
+    }
+  })
 
   const totalStandards = gradeBank.totalStandards
   const practicedStandards = standardRows.length
@@ -193,13 +201,13 @@ export default async function ChildDetailPage({
             <div className="text-center py-8">
               <p className="text-slate-500 text-sm mb-4">No lessons completed yet.</p>
               {!child.placement_done && (
-                <Link href="/select">
+                <Link href={`/play/quiz?child=${childId}`}>
                   <button
                     className="flex items-center gap-2 mx-auto px-4 py-2 rounded-xl text-sm font-semibold text-white"
                     style={{ background: 'linear-gradient(135deg, #C0392B, #E74C3C)' }}
                   >
                     <Play className="w-4 h-4" />
-                    Start level quiz
+                    Start placement quiz
                   </button>
                 </Link>
               )}

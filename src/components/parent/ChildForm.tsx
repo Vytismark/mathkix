@@ -157,13 +157,19 @@ export function ChildForm({ mode, defaultValues, childId }: ChildFormProps) {
   const [notes,      setNotes]      = useState(defaultValues?.learning_notes ?? '')
 
   // ── Step 1 validation ──
+  function isValidName(n: string) {
+    const trimmed = n.trim()
+    return trimmed.length > 0 && /^[\p{L}\p{N}\s'-]+$/u.test(trimmed)
+  }
+
   function canAdvanceStep1() {
-    return name.trim().length > 0 && schoolGrade !== null
+    return isValidName(name) && schoolGrade !== null
   }
 
   // ── Submit ──
   async function handleSubmit() {
     if (!name.trim()) { toast.error('Name is required'); return }
+    if (!isValidName(name)) { toast.error('Name can only contain letters, numbers, spaces, hyphens, and apostrophes'); return }
     if (schoolGrade === null) { toast.error('School grade is required'); return }
 
     setLoading(true)

@@ -65,12 +65,12 @@ export default async function SupportPage() {
           </Link>
         </div>
       ) : (
-        <div className="space-y-3">
+        <div className="flex flex-col gap-3">
           {tickets.map((ticket) => {
             const config = STATUS_CONFIG[ticket.status]
             const Icon = config.icon
             return (
-              <Link key={ticket.id} href={`/support/${ticket.id}`}>
+              <Link key={ticket.id} href={`/support/${ticket.id}`} className="block">
                 <div
                   className="flex items-center gap-4 p-4 rounded-2xl border border-white/10 hover:border-white/20 transition-colors cursor-pointer"
                   style={{ background: 'rgba(255,255,255,0.04)' }}

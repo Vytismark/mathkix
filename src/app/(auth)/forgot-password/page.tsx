@@ -19,7 +19,14 @@ export default function ForgotPasswordPage() {
       redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/reset-password`,
     })
     if (error) {
-      toast.error(error.message)
+      const msg = error.message.toLowerCase()
+      if (msg.includes('rate limit') || msg.includes('exceeded') || msg.includes('too many')) {
+        toast.error('Too many reset attempts. Please wait a few minutes before trying again.')
+      } else if (msg.includes('not found') || msg.includes('invalid')) {
+        toast.error('No account found with that email address.')
+      } else {
+        toast.error('Failed to send reset link. Please try again.')
+      }
       setLoading(false)
       return
     }
