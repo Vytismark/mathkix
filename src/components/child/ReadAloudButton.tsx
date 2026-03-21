@@ -9,7 +9,7 @@ interface ReadAloudButtonProps {
 
 /**
  * Speaker button that reads question text aloud via Web Speech API.
- * Only rendered for G1-2 children (gradeLevel 1-2).
+ * Only rendered for G1-3 children (gradeLevel 1-3).
  */
 export function ReadAloudButton({ text, gradeLevel }: ReadAloudButtonProps) {
   const [isSpeaking, setIsSpeaking] = useState(false)
@@ -55,8 +55,8 @@ export function ReadAloudButton({ text, gradeLevel }: ReadAloudButtonProps) {
     setIsSpeaking(true)
   }, [text, isSpeaking, supported])
 
-  // Only show for G1-2
-  if (gradeLevel > 2 || !supported) return null
+  // Only show for G1-3
+  if (gradeLevel > 3 || !supported) return null
 
   return (
     <button
