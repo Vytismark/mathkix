@@ -4,8 +4,8 @@
   "description": "AI-powered math practice for kids from Grade 1 to Grade 5. Personalized, adaptive, and aligned to Common Core standards.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#07080f",
-  "theme_color": "#E74C3C",
+  "background_color": "#0D1B2A",
+  "theme_color": "#3256CC",
   "icons": [
     {
       "src": "/icon.svg",
@@ -16,7 +16,7 @@
       "src": "/mathkix-icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ]
 }
