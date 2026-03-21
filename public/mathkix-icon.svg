@@ -1,19 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 214 70 72" width="200" height="200">
   <defs>
-    <linearGradient id="blueGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#6B9FFF"/>
-      <stop offset="100%" stop-color="#3256CC"/>
+    <linearGradient id="blue-grad" x1="99.67" y1="233.81" x2="158.53" y2="233.81" gradientTransform="translate(214.41) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset=".3" stop-color="#3678ff"/>
+      <stop offset="1" stop-color="#b0cdff"/>
     </linearGradient>
-    <linearGradient id="goldGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#FFD060"/>
-      <stop offset="100%" stop-color="#F59000"/>
+    <linearGradient id="gold-grad" x1="99.69" y1="266.6" x2="158.6" y2="266.6" gradientTransform="translate(214.41) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffab02"/>
+      <stop offset="1" stop-color="#ffd892"/>
     </linearGradient>
-    <clipPath id="goldClip">
-      <rect x="0" y="106" width="200" height="100"/>
-    </clipPath>
   </defs>
-  <!-- Blue chevron / house-roof shape -->
-  <polygon points="100,14 184,88 184,106 16,106 16,88" fill="url(#blueGrad)"/>
-  <!-- Gold semicircle (bottom half) -->
-  <circle cx="100" cy="106" r="84" fill="url(#goldGrad)" clip-path="url(#goldClip)"/>
+  <!-- Blue chevron -->
+  <path fill="url(#blue-grad)" d="M114.74,236.24v12.52l-29.56-16.35c-9.77,5.45-19.53,10.89-29.3,16.34.03-4.17.06-8.34.09-12.52l29.22-17.39,29.56,17.39Z"/>
+  <!-- Gold semicircle -->
+  <path fill="url(#gold-grad)" d="M55.81,252.45c0,15.85,13.19,28.7,29.46,28.7s29.45-12.85,29.45-28.7c0-.13,0-.26,0-.39h-58.9c0,.13,0,.26,0,.39Z"/>
 </svg>

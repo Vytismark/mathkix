@@ -1,21 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <defs>
-    <linearGradient id="b" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#6B9FFF"/>
-      <stop offset="100%" stop-color="#3256CC"/>
+    <linearGradient id="b" x1="99.67" y1="233.81" x2="158.53" y2="233.81" gradientTransform="translate(214.41) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset=".3" stop-color="#3678ff"/>
+      <stop offset="1" stop-color="#b0cdff"/>
     </linearGradient>
-    <linearGradient id="g" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#FFD060"/>
-      <stop offset="100%" stop-color="#F59000"/>
+    <linearGradient id="g" x1="99.69" y1="266.6" x2="158.6" y2="266.6" gradientTransform="translate(214.41) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffab02"/>
+      <stop offset="1" stop-color="#ffd892"/>
     </linearGradient>
-    <clipPath id="c">
-      <rect x="0" y="17" width="32" height="15"/>
-    </clipPath>
+    <symbol id="mk-icon" viewBox="50 214 70 72">
+      <path fill="url(#b)" d="M114.74,236.24v12.52l-29.56-16.35c-9.77,5.45-19.53,10.89-29.3,16.34.03-4.17.06-8.34.09-12.52l29.22-17.39,29.56,17.39Z"/>
+      <path fill="url(#g)" d="M55.81,252.45c0,15.85,13.19,28.7,29.46,28.7s29.45-12.85,29.45-28.7c0-.13,0-.26,0-.39h-58.9c0,.13,0,.26,0,.39Z"/>
+    </symbol>
   </defs>
-  <!-- Navy rounded background -->
-  <rect width="32" height="32" rx="7" fill="#0D1B2A"/>
-  <!-- Blue chevron -->
-  <polygon points="16,4 28,15 28,17 4,17 4,15" fill="url(#b)"/>
-  <!-- Gold semicircle -->
-  <circle cx="16" cy="17" r="12" fill="url(#g)" clip-path="url(#c)"/>
+  <rect width="32" height="32" rx="7" fill="#000714"/>
+  <use href="#mk-icon" x="3" y="3" width="26" height="26"/>
 </svg>
