@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs sed:*)",
+      "Bash(npm run:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npm:*)",
+      "Bash(node -e \":*)",
+      "Bash(where jq:*)",
+      "Bash(npx tsx -e \":*)",
+      "Bash(npx tsx:*)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade5-review.json'',''utf-8''\\)\\);console.log\\(''Count:'',d.length\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade3-review.json'',''utf-8''\\)\\);console.log\\(''Grade3 count:'',d.length\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade1-review.json'',''utf-8''\\)\\);console.log\\(''Grade1:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,80\\)\\)\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade2-review.json'',''utf-8''\\)\\);console.log\\(''Grade2:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade3-review.json'',''utf-8''\\)\\);console.log\\(''Grade3:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade4-review.json'',''utf-8''\\)\\);console.log\\(''Grade4:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade5-review.json'',''utf-8''\\)\\);console.log\\(''Grade5:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let s='';process.stdin.on('data',c=>s+=c);process.stdin.on('end',()=>{try{const d=JSON.parse(s);const f=(d.tool_input&&d.tool_input.file_path)||(d.tool_response&&d.tool_response.filePath)||'';const sentinel=require('os').tmpdir()+'/claude-ui-modified';if(/src[\\\\/](components|lib)[\\\\/]/.test(f)||(/src[\\\\/]app[\\\\/]/.test(f)&&!/src[\\\\/]app[\\\\/]api[\\\\/]/.test(f))){require('fs').writeFileSync(sentinel,'1');process.stdout.write(JSON.stringify({hookSpecificOutput:{hookEventName:'PostToolUse',additionalContext:'UI file modified ('+f+') - verify the preview server is running and check for visual regressions.'}}));}else{try{require('fs').unlinkSync(sentinel);}catch(e){}}}catch(e){}});\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const sentinel=require('os').tmpdir()+'/claude-ui-modified';try{require('fs').readFileSync(sentinel);require('fs').unlinkSync(sentinel);process.stdout.write(JSON.stringify({systemMessage:'[Preview Required] UI files were modified but no dev server may be running. Call preview_start and verify changes.'}));}catch(e){}\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -96,14 +96,23 @@ export async function POST(request: NextRequest) {
   const attentionSpan     = child.attention_span as 'short' | 'medium' | 'long' | null
   const spanQuestionOffset = child.span_question_offset ?? 0
 
-  // Parallelize SR items, affinity, and session creation (all independent)
-  const [{ data: srItems }, { data: affinityRows }, { data: session, error: sessionError }] = await Promise.all([
+  // Parallelize SR items, affinity, session creation, question pool, and mastery
+  // (all independent once we have childId + overallGrade from the previous step)
+  const [
+    { data: srItems },
+    { data: affinityRows },
+    { data: session, error: sessionError },
+    pool,
+    { data: masteryRows },
+  ] = await Promise.all([
     supabase.from('spaced_repetition_items').select('*').eq('child_id', childId).lte('next_review_at', lookahead).order('next_review_at'),
     supabase.from('topic_affinity').select('*').eq('child_id', childId),
     supabase.from('practice_sessions')
       .insert({ child_id: childId, status: 'active', engine_state: {} as Json, engagement_summary: {} as Json })
       .select('id')
       .single(),
+    buildQuestionPool(supabase, overallGrade),
+    supabase.from('child_standard_mastery').select('standard_code, mastery_level').eq('child_id', childId),
   ])
 
   if (sessionError || !session) {
@@ -120,26 +129,12 @@ export async function POST(request: NextRequest) {
     overallGrade
   )
 
-  // ── Build question pool from ALL grade-level lessons ────
-  const pool = await buildQuestionPool(supabase, overallGrade)
-
   if (pool.length === 0) {
     return NextResponse.json(
       { error: 'No questions found. Please add lesson content first.' },
       { status: 500 }
     )
   }
-
-  // ── Load standard mastery for all standards in pool ─────
-  const allStandardCodes = [...new Set(pool.map((q) => q.standard_code))]
-
-  const { data: masteryRows } = allStandardCodes.length > 0
-    ? await supabase
-        .from('child_standard_mastery')
-        .select('standard_code, mastery_level')
-        .eq('child_id', childId)
-        .in('standard_code', allStandardCodes)
-    : { data: [] }
 
   const masteryMap = new Map((masteryRows ?? []).map((m) => [m.standard_code, m.mastery_level]))
 

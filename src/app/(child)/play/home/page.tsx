@@ -30,23 +30,19 @@ export default async function PlayHomePage({
 
   const gradeLevel = child.school_grade ?? 0
 
-  // Fetch lessons (needs gradeLevel from child)
-  const { data: lessons } = await supabase
-    .from('lessons')
-    .select('id, domain, standard_code, title, lesson_type, difficulty, xp_reward, sort_order')
-    .eq('grade_level', gradeLevel)
-    .eq('is_active', true)
-    .order('sort_order', { ascending: true })
-
-  const standardCodes = lessons?.map((l) => l.standard_code).filter(Boolean) as string[]
-
-  const { data: masteryRows } = standardCodes.length > 0
-    ? await supabase
-        .from('child_standard_mastery')
-        .select('standard_code, mastery_level')
-        .eq('child_id', childId)
-        .in('standard_code', standardCodes)
-    : { data: [] }
+  // Fetch lessons + all child mastery in parallel (mastery filtered client-side)
+  const [{ data: lessons }, { data: masteryRows }] = await Promise.all([
+    supabase
+      .from('lessons')
+      .select('id, domain, standard_code, title, lesson_type, difficulty, xp_reward, sort_order')
+      .eq('grade_level', gradeLevel)
+      .eq('is_active', true)
+      .order('sort_order', { ascending: true }),
+    supabase
+      .from('child_standard_mastery')
+      .select('standard_code, mastery_level')
+      .eq('child_id', childId),
+  ])
 
   const masteryMap = Object.fromEntries(
     (masteryRows ?? []).map((m) => [m.standard_code, m.mastery_level])
