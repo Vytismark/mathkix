@@ -317,33 +317,6 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
-  {
-    slug: 'spaced-repetition-math',
-    title: 'Why Spaced Repetition is the Secret to Math Mastery',
-    description:
-      'Most practice apps repeat questions randomly. Spaced repetition schedules reviews at the exact moment a memory is about to fade — and the research on this is decades old.',
-    category: 'Learning Science',
-    date: '2026-03-10',
-    readTime: 6,
-  },
-  {
-    slug: 'math-habit-kids',
-    title: 'How to Build a Math Habit Your Child Will Actually Keep',
-    description:
-      'Motivation fades. Habits stick. The research on habit formation in children points to a few specific conditions that make the difference between a streak that lasts and one that collapses after a week.',
-    category: 'Parenting',
-    date: '2026-03-17',
-    readTime: 5,
-  },
-  {
-    slug: 'adaptive-learning-explained',
-    title: 'Adaptive Learning: Why One-Size-Fits-All Math Practice Fails',
-    description:
-      "Lev Vygotsky identified the zone of proximal development in the 1930s. Ninety years later, most math apps still ignore it. Here's what adaptive learning actually means — and why it matters.",
-    category: 'Learning Science',
-    date: '2026-03-20',
-    readTime: 7,
-  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
