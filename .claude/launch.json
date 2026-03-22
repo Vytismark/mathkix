@@ -7,5 +7,6 @@
       "runtimeArgs": ["C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js", "run", "dev"],
       "port": 3000
     }
-  ]
+  ],
+  "autoVerify": false
 }

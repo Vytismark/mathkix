@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   const appName = process.env.NEXT_PUBLIC_APP_NAME ?? 'MathKix'
-  const updated = 'March 17, 2026'
+  const updated = 'March 22, 2026'
 
   return (
     <div style={{ background: '#07080f', minHeight: '100vh', color: 'white' }}>
@@ -68,11 +68,11 @@ export default function TermsPage() {
             </p>
             <p>
               Subscription fees are billed through Stripe. Monthly and annual plans renew automatically unless cancelled
-              before the renewal date. You may cancel at any time from your account settings - access continues until
-              the end of your current billing period.
+              before the renewal date. You may cancel at any time from your account settings; your access continues until
+              the end of your current billing period. We do not offer refunds for partial billing periods.
             </p>
             <p>
-              We reserve the right to change pricing with 30 days notice to existing subscribers. Lifetime plans are
+              We reserve the right to change pricing with 30 days' notice to existing subscribers. Lifetime plans are
               not subject to future price changes.
             </p>
           </section>
@@ -154,7 +154,19 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2>13. Contact</h2>
+            <h2>13. Governing Law</h2>
+            <p>
+              These Terms are governed by and construed in accordance with the laws of the State of Delaware,
+              without regard to its conflict of law provisions. Any dispute arising from these Terms or your use
+              of the Service will be resolved through binding arbitration under the rules of the American
+              Arbitration Association, except that either party may seek injunctive or equitable relief in a court
+              of competent jurisdiction. You waive any right to participate in a class action lawsuit or class-wide
+              arbitration.
+            </p>
+          </section>
+
+          <section>
+            <h2>14. Contact</h2>
             <p>
               Questions about these Terms? Contact us at{' '}
               <a href="mailto:hello@mathkix.com" className="text-white font-medium">hello@mathkix.com</a>.
