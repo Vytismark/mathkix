@@ -41,10 +41,10 @@ export function NumberPad({ value, onChange, onSubmit, disabled, allowDecimal = 
       <div className="grid grid-cols-3 gap-2">
         {DIGITS.map((key, idx) => (
           key === '' ? (
-            <div key={idx} className="h-14" />
+            <div key={`spacer-${idx}`} className="h-14" />
           ) : (
           <button
-            key={key}
+            key={`digit-${key}`}
             type="button"
             onClick={() => handleKey(key)}
             disabled={disabled}

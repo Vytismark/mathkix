@@ -23,9 +23,6 @@ export async function POST(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  const blocked = await requireActiveSubscription(user.id)
-  if (blocked) return blocked
-
   const body: AITeacherRequest & {
     sessionId?: string
     currentQuestion?: string
@@ -51,13 +48,12 @@ export async function POST(request: NextRequest) {
   const emotionSignal: EmotionSignal = rawEmotion ?? 'neutral'
   const problemType: ProblemType = rawProblem ?? 'other'
 
-  // Verify child ownership and get grade level
-  const { data: child } = await supabase
-    .from('children')
-    .select('id, name, grade_level')
-    .eq('id', childId)
-    .eq('profile_id', user.id)
-    .single()
+  // Parallelize subscription check + child lookup (both only need user.id / childId)
+  const [blocked, { data: child }] = await Promise.all([
+    requireActiveSubscription(user.id),
+    supabase.from('children').select('id, name, grade_level').eq('id', childId).eq('profile_id', user.id).single(),
+  ])
+  if (blocked) return blocked
 
   // Fall back to client-supplied grade level if DB lookup fails (e.g. during setup)
   const gradeLevel = child?.grade_level ?? clientGradeLevel ?? 2

@@ -68,19 +68,21 @@ export async function POST(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  const blocked = await requireActiveSubscription(user.id)
-  if (blocked) return blocked
-
   const { childId } = await request.json()
   if (!childId) return NextResponse.json({ error: 'childId required' }, { status: 400 })
 
-  // Verify child + load profile
-  const { data: child, error: childError } = await supabase
-    .from('children')
-    .select('id, domain_mastery, school_grade, attention_span, span_question_offset')
-    .eq('id', childId)
-    .eq('profile_id', user.id)
-    .single()
+  const lookahead = new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString()
+
+  // Parallelize subscription check + child profile (both only need user.id / childId)
+  const [blocked, { data: child, error: childError }] = await Promise.all([
+    requireActiveSubscription(user.id),
+    supabase.from('children')
+      .select('id, domain_mastery, school_grade, attention_span, span_question_offset')
+      .eq('id', childId)
+      .eq('profile_id', user.id)
+      .single(),
+  ])
+  if (blocked) return blocked
 
   if (childError || !child) {
     return NextResponse.json(
@@ -89,24 +91,20 @@ export async function POST(request: NextRequest) {
     )
   }
 
-  // Load SR items + affinity
-  const lookahead = new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString()
-  const [{ data: srItems }, { data: affinityRows }] = await Promise.all([
-    supabase.from('spaced_repetition_items').select('*').eq('child_id', childId).lte('next_review_at', lookahead).order('next_review_at'),
-    supabase.from('topic_affinity').select('*').eq('child_id', childId),
-  ])
-
   const domainMastery = (child.domain_mastery as Record<Domain, number>) ?? {}
   const overallGrade  = child.school_grade ?? 2
   const attentionSpan     = child.attention_span as 'short' | 'medium' | 'long' | null
   const spanQuestionOffset = child.span_question_offset ?? 0
 
-  // ── Create session ──────────────────────────────────────
-  const { data: session, error: sessionError } = await supabase
-    .from('practice_sessions')
-    .insert({ child_id: childId, status: 'active', engine_state: {} as Json, engagement_summary: {} as Json })
-    .select('id')
-    .single()
+  // Parallelize SR items, affinity, and session creation (all independent)
+  const [{ data: srItems }, { data: affinityRows }, { data: session, error: sessionError }] = await Promise.all([
+    supabase.from('spaced_repetition_items').select('*').eq('child_id', childId).lte('next_review_at', lookahead).order('next_review_at'),
+    supabase.from('topic_affinity').select('*').eq('child_id', childId),
+    supabase.from('practice_sessions')
+      .insert({ child_id: childId, status: 'active', engine_state: {} as Json, engagement_summary: {} as Json })
+      .select('id')
+      .single(),
+  ])
 
   if (sessionError || !session) {
     return NextResponse.json({ error: sessionError?.message ?? 'Failed to create session' }, { status: 500 })
@@ -216,23 +214,24 @@ export async function POST(request: NextRequest) {
     .update({ engine_state: engineStateWithQuestions as unknown as Json })
     .eq('id', session.id)
 
-  // Check if this is the child's first ever practice session
-  const { count: prevSessionCount } = await supabase
+  // Check first session for analytics — fire-and-forget so it doesn't block response
+  // Analytics: fire-and-forget after response is sent
+  supabase
     .from('practice_sessions')
     .select('*', { count: 'exact', head: true })
     .eq('child_id', childId)
     .neq('id', session.id)
+    .then(({ count: prevSessionCount }) => {
+      const isFirst = (prevSessionCount ?? 0) === 0
+      captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
+        child_id: childId,
+        session_id: session.id,
+        question_count: final.length,
+        grade: child.school_grade ?? 0,
+        is_first: isFirst,
+      }).catch(() => {})
+    }).catch(() => {})
 
-  const isFirst = (prevSessionCount ?? 0) === 0
-  captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
-    child_id: childId,
-    session_id: session.id,
-    question_count: final.length,
-    grade: child.school_grade ?? 0,
-    is_first: isFirst,
-  }).catch(() => {})
-
-  // Fire session_start event
   supabase.from('behavioral_events').insert({
     child_id:   childId,
     session_id: session.id,
