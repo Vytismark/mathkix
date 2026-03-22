@@ -1,0 +1,472 @@
+[
+  {
+    "ref": "diag:9ba09fd7-7ff2-4943-98c4-e2cfc05efe19",
+    "status": "rewritten",
+    "detail": "Jake has 2 right triangles. Each triangle has two short sides and one long side. He places the two triangles together so their long sides touch. What shape does Jake make?"
+  },
+  {
+    "ref": "diag:49efe261-6f11-451c-aa29-4358ebd29203",
+    "status": "rewritten",
+    "detail": "Maya is making a shape puzzle. She puts 2 small triangles together to make 1 larger triangle. Then she puts 2 of those larger triangles together to make a rectangle. How many small triangles did Maya use in all to make the rectangle?"
+  },
+  {
+    "ref": "lesson:7c0078d1-582b-4ae5-b83e-f8b887d90140:1",
+    "status": "rewritten",
+    "detail": "Lena is building a model of a town using 3D shape blocks. She builds a school using 2 rectangular prisms stacked together. She builds a silo using 1 cylinder with 1 cone placed on top. She builds a house using 1 cube with 1 rectangular prism attached to its side and 1 cone on top. How many 3D shapes did Lena use in all to build her model town?"
+  },
+  {
+    "ref": "lesson:7c0078d1-582b-4ae5-b83e-f8b887d90140:3",
+    "status": "rewritten",
+    "detail": "Jake uses pattern blocks to build a new shape. First, he puts together 2 triangles to make 1 square. Then he puts together 2 more triangles to make another square. Finally, he lines up both squares side by side to make one big shape. What is the name of the big shape Jake made?"
+  },
+  {
+    "ref": "lesson:41883c8d-ec4d-4378-a0f0-53f7abb641bc:0",
+    "status": "rewritten",
+    "detail": "Mia wants to make a picture of a house. She uses 1 square for the walls and 1 triangle for the roof. Then she adds 1 rectangle for the door on the square. How many shapes did Mia use in all to make her house picture?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:1",
+    "status": "rewritten",
+    "detail": "Emma has three jump ropes. The red rope is shorter than the blue rope. The blue rope is shorter than the yellow rope. Emma wants to hang the ropes on hooks from shortest to longest. Which order should she use, starting with the shortest?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:2",
+    "status": "rewritten",
+    "detail": "Emma has three jump ropes. She compares them using a wooden stick. The wooden stick is shorter than Jump Rope A. The wooden stick is longer than Jump Rope B. Jump Rope B is longer than Jump Rope C. Which jump rope is the longest and which is the shortest?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:3",
+    "status": "rewritten",
+    "detail": "Maya has three ribbons. The red ribbon is shorter than the blue ribbon. The blue ribbon is shorter than the green ribbon. Maya wants to put the ribbons in order from shortest to longest. Which ribbon goes in the middle?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:4",
+    "status": "rewritten",
+    "detail": "Maria has three ribbons: Ribbon A, Ribbon B, and Ribbon C. She uses a jump rope to compare them. The jump rope is longer than Ribbon A. Ribbon A is longer than Ribbon B. Ribbon B is longer than Ribbon C. Which ribbon is the shortest?"
+  },
+  {
+    "ref": "lesson:ae079020-802d-4b6a-a160-168dda3a6a83:0",
+    "status": "rewritten",
+    "detail": "Emma looks at her clock. The short hand is pointing between 7 and 8. The long hand is pointing straight down to the 6. What time does the clock show? Write the time in digital format."
+  },
+  {
+    "ref": "lesson:c79f2009-1598-416a-a9e9-9943b6e904d4:2",
+    "status": "rewritten",
+    "detail": "Jake collected 54 leaves for a school project. His classmate Emma collected 45 leaves. Which symbol makes this sentence true? 54 __ 45"
+  },
+  {
+    "ref": "lesson:c79f2009-1598-416a-a9e9-9943b6e904d4:3",
+    "status": "rewritten",
+    "detail": "Maya has 45 stickers. Her friend has 54 stickers. Which symbol makes this sentence true? 45 ___ 54"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:0",
+    "status": "rewritten",
+    "detail": "Jake has 34 baseball cards. On Monday, his uncle gives him 20 more cards. On Tuesday, his grandma gives him 5 more cards. How many baseball cards does Jake have now?"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:1",
+    "status": "rewritten",
+    "detail": "Jake has 34 baseball cards. On Monday, he collects 20 more cards. On Tuesday, he collects 5 more cards. How many baseball cards does Jake have now?"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:3",
+    "status": "rewritten",
+    "detail": "Jake has 34 dollars saved. On Monday, his dad gives him 20 more dollars. On Tuesday, his uncle gives him 5 more dollars. How many dollars does Jake have now?"
+  },
+  {
+    "ref": "lesson:5ba78f10-f9f9-461c-a246-c405c880a944:1",
+    "status": "rewritten",
+    "detail": "Emma has some stickers. She gets 7 more stickers and now has 13 stickers in all. Which equation can Emma use to find how many stickers she started with?"
+  },
+  {
+    "ref": "diag:12d53094-2c15-40d2-918f-2d732992a76e",
+    "status": "rewritten",
+    "detail": "Is this equation true or false? 4 + 3 = 7"
+  },
+  {
+    "ref": "diag:d7443d64-4298-4e77-8589-082f49ea6947",
+    "status": "rewritten",
+    "detail": "Emma has 4 + 3 apples. Jake has 9 - 2 apples. Emma says, '4 + 3 = 9 - 2, so we have the same number of apples.' Is Emma's equation true or false?"
+  },
+  {
+    "ref": "diag:0ae1f494-6831-42e3-8699-c7f60ad18f79",
+    "status": "rewritten",
+    "detail": "Is 5 + 3 = 8 true or false?"
+  },
+  {
+    "ref": "lesson:1e2cbda4-4db4-454e-87f0-2ee5b66324c6:1",
+    "status": "skipped",
+    "detail": "Claude returned null"
+  },
+  {
+    "ref": "diag:4ceb2330-1695-48e2-83da-3b763cb82010",
+    "status": "rewritten",
+    "detail": "Maya wants to measure the length of her classroom from one wall to the other. She thinks it is about 10 yards long. Which tool would be the BEST choice for Maya to use?"
+  },
+  {
+    "ref": "diag:bb541c0c-c2f1-4b40-bb73-26321fdc4dcc",
+    "status": "rewritten",
+    "detail": "Maya needs to measure three things for a school project: a crayon that is about 4 inches long, a hallway that is about 10 yards long, and a bookshelf that is about 3 feet tall. Match each object with the best measuring tool. Which list correctly matches each object to its best tool?"
+  },
+  {
+    "ref": "lesson:1eb28c93-341b-4146-809f-5ed30f681b56:0",
+    "status": "rewritten",
+    "detail": "A classroom door needs to be measured. You can choose from: a ruler (12 inches long), a yardstick (3 feet long), or a measuring tape (10 feet long). The door is about 7 feet tall. Which tool would be BEST for measuring the full height of the door in one single measurement, without repositioning the tool?"
+  },
+  {
+    "ref": "diag:9100f8e1-6453-4028-87c4-fd0f194843dd",
+    "status": "rewritten",
+    "detail": "A class surveyed students about their favorite sport. Here are the results: Soccer has 14 votes, Basketball has 9 votes, Baseball has 11 votes, and Swimming has 6 votes. How many more votes did Soccer and Baseball get together than Basketball and Swimming got together?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:1",
+    "status": "rewritten",
+    "detail": "A class voted for their favorite school lunch. The results are shown below:\n\nPizza: 12 votes\nTacos: 7 votes\nSandwiches: 9 votes\nSoup: 4 votes\n\nA student is making a bar graph with a single-unit scale to show this data. Each bar goes up by 1 for each vote.\n\nUse the data to answer this two-part question:\n\nPart 1: How many more votes did Pizza get than Soup?\nPart 2: How many fewer votes did Tacos get than Pizza and Sandwiches combined?\n\nWhat is the answer to Part 2?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:2",
+    "status": "rewritten",
+    "detail": "Mrs. Chen's class made a picture graph showing favorite fruits. Each picture equals 1 student. Apples: 8 pictures, Oranges: 5 pictures, Bananas: 7 pictures, Grapes: 4 pictures. First, find how many more students chose apples than grapes. Then add that number to the total number of students who chose oranges and bananas together. What is the final sum?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:3",
+    "status": "rewritten",
+    "detail": "A class took a survey about favorite school subjects. Here are the results:\n\n• Math: 14 students\n• Reading: 9 students\n• Science: 11 students\n• Art: 6 students\n\nA student draws a bar graph using this data with a single-unit scale (each unit = 1 student).\n\nPart 1: How many more students chose Math or Science combined than chose Reading or Art combined?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:4",
+    "status": "rewritten",
+    "detail": "Students at Jefferson Elementary voted for their favorite sport. Here are the results:\n\nSoccer: 12 students\nBasketball: 7 students\nBaseball: 5 students\nTag: 4 students\n\nIf you made a bar graph with a single-unit scale to show this data, how many fewer students chose Baseball and Tag combined than chose Soccer and Basketball combined?"
+  },
+  {
+    "ref": "lesson:a9a038ae-d0a3-46ee-9139-58186fd319a5:4",
+    "status": "rewritten",
+    "detail": "Jake measures his bookshelf two times. First, he uses craft sticks and gets 3 craft sticks long. Then, he uses paper clips and gets 12 paper clips long. Which statement BEST explains why the numbers are so different?"
+  },
+  {
+    "ref": "lesson:172febf5-84c1-4499-aece-8266e5c498b1:4",
+    "status": "rewritten",
+    "detail": "Marcus wants to estimate the length of his school gym. He knows these benchmarks: a classroom door is about 1 meter wide, a classroom is about 10 meters long, and a city block is about 100 meters long. Marcus walks from one end of the gym to the other. He counts that the gym is about 3 times as long as his classroom. He also notices the gym is about 4 times as wide as a classroom door. Which statements about the gym are the BEST estimates? Choose the best answer."
+  },
+  {
+    "ref": "diag:a8aca831-91ec-4fef-891f-5e9943773f63",
+    "status": "rewritten",
+    "detail": "Maya collected stickers over three months. In January she had 4 hundreds, 7 tens, and 3 ones. In February she had 4 hundreds, 3 tens, and 9 ones. In March she had 4 hundreds, 7 tens, and 3 ones again. Which statement correctly compares Maya's January total and her February total?"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:1",
+    "status": "rewritten",
+    "detail": "Marcus collected 365 cans for a food drive. His sister Sofia collected 3 hundreds, 7 tens, and 2 ones. Their neighbor collected 356 cans. Marcus says he collected more cans than Sofia but fewer cans than their neighbor. Is Marcus correct? Use >, =, or < to compare Marcus's cans to Sofia's cans AND Marcus's cans to their neighbor's cans. Which answer shows BOTH comparisons correctly?"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:2",
+    "status": "rewritten",
+    "detail": "Maya has 847 stickers. Carlos has 8 hundreds, 3 tens, and 12 ones. Tyler has one more ten than Maya but the same hundreds and ones as Maya. Which statement correctly compares all three numbers from least to greatest?\n\nMaya: 847\nCarlos: 8 hundreds, 3 tens, 12 ones\nTyler: same hundreds and ones as Maya, one more ten than Maya"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:4",
+    "status": "rewritten",
+    "detail": "Maya collected 347 cans for a food drive. Her friend Carlos collected 3 hundreds, 5 tens, and 2 ones. Their teacher, Ms. Rivera, collected two hundred ninety-eight cans. Order all three amounts from least to greatest. Which answer shows the correct order?"
+  },
+  {
+    "ref": "lesson:b33b5d8d-61b1-4a10-b469-cfcf96d7d645:3",
+    "status": "rewritten",
+    "detail": "Compare the two numbers. 600 ___ 590. Which symbol goes in the blank?"
+  },
+  {
+    "ref": "diag:b1f3f980-46c2-4d7c-8fe7-e99c893a80ea",
+    "status": "rewritten",
+    "detail": "Maya has 68 pennies in her jar. She gives 29 pennies to her brother and then finds 34 more pennies in her coat pocket. How many pennies does Maya have now?"
+  },
+  {
+    "ref": "lesson:c2fb1a1e-0c73-4b3d-9c73-27cfd3399ec4:1",
+    "status": "rewritten",
+    "detail": "Maya had some stickers. She gave 27 stickers to her friend and then bought 45 more stickers at the store. After all of that, Maya has 63 stickers. How many stickers did Maya start with?"
+  },
+  {
+    "ref": "diag:07ed2a51-0f70-4027-b5ff-117039a12325",
+    "status": "rewritten",
+    "detail": "The school supply drive collected 374 boxes of crayons in September and 258 boxes in October. Then the school gave away 165 boxes to a local shelter. How many boxes of crayons does the school have left?"
+  },
+  {
+    "ref": "lesson:23b1d7aa-920d-4117-8ddd-5874aecdad4f:1",
+    "status": "rewritten",
+    "detail": "Mia has 465 baseball cards. On Monday, she buys 100 more cards. On Tuesday, she gives 10 cards to her brother. On Wednesday, she finds 10 more cards in her closet. How many baseball cards does Mia have now?"
+  },
+  {
+    "ref": "diag:9943887b-842b-4b4f-b559-253f580a5097",
+    "status": "rewritten",
+    "detail": "Maya wants to add 47 + 36. She thinks: 'I'll break apart 36 into 30 and 6. First I add 47 + 30 = 77. Then I add 77 + 6 = 83.' Her friend Jake says this strategy does NOT work because you have to add the ones before the tens. Who is correct, and why?"
+  },
+  {
+    "ref": "lesson:c34e79dc-0f0e-4992-a5f7-9cdb740cd01d:3",
+    "status": "rewritten",
+    "detail": "Carlos solved 48 + 35 by thinking: 'I'll add 48 + 40, which equals 88. Then I'll subtract 5 to get 83.' His teacher asks him to explain WHY he subtracted 5 at the end. Which explanation is correct?"
+  },
+  {
+    "ref": "lesson:0dde70bf-5816-4b59-926b-69d9febcc96e:1",
+    "status": "rewritten",
+    "detail": "Maria arranges 20 stickers in a rectangular array with 4 rows. She puts the same number of stickers in each row. Which addition equation using equal addends shows the total number of stickers?"
+  },
+  {
+    "ref": "lesson:0dde70bf-5816-4b59-926b-69d9febcc96e:3",
+    "status": "rewritten",
+    "detail": "Emma is setting up chairs for a school play. She wants to arrange all 20 chairs in a rectangular array with equal rows. She decides each row will have 4 chairs. How many rows of chairs will Emma need, and what addition equation with equal addends shows the total number of chairs?"
+  },
+  {
+    "ref": "diag:f40ce343-932d-418c-886a-3d6917a65290",
+    "status": "rewritten",
+    "detail": "A school cafeteria starts the week with 48 liters of milk. On Monday, students drink 13 liters. On Tuesday, students drink 9 liters. The cafeteria manager wants to have exactly 15 liters left at the end of the week to save for a Friday party. How many more liters of milk can students drink during Wednesday, Thursday, and Friday combined?"
+  },
+  {
+    "ref": "lesson:b7511a89-4f3e-47cd-92cf-e240fccc3f6c:1",
+    "status": "rewritten",
+    "detail": "A school cafeteria starts the week with 45 liters of apple juice. On Monday, students drink 12 liters. On Tuesday, students drink 9 liters. On Wednesday, the cafeteria receives a new delivery of 18 liters. On Thursday, students drink 14 liters. How many liters of apple juice does the cafeteria have at the end of Thursday?"
+  },
+  {
+    "ref": "diag:e0a7deea-f66d-462e-8db0-9bd850400de0",
+    "status": "rewritten",
+    "detail": "Mrs. Chen measured the lengths of 8 pencils in her classroom using a ruler marked with halves and fourths of an inch. Here are the measurements: 4 1/4 inches, 4 1/2 inches, 4 3/4 inches, 5 inches, 5 1/4 inches, 5 1/4 inches, 5 1/2 inches, and 6 inches. If you made a line plot of this data with a scale marked in fourths of an inch from 4 to 6, how many pencils measured 5 1/4 inches or longer?"
+  },
+  {
+    "ref": "lesson:ea251079-311e-4a2b-bdc5-ad585612eb75:1",
+    "status": "rewritten",
+    "detail": "Eight students measured the lengths of their crayons using a ruler marked with fourths of an inch. Their measurements were: 3 1/4 inches, 3 3/4 inches, 3 1/4 inches, 4 inches, 3 3/4 inches, 3 1/4 inches, 4 inches, and 3 3/4 inches. On a line plot, the scale goes from 3 inches to 4 1/2 inches, marked at every fourth of an inch. Each measurement is shown with an X above the matching mark. How many more X's are above 3 3/4 inches than above 4 inches?"
+  },
+  {
+    "ref": "lesson:407f739d-0a98-4862-ac70-5490165d718a:3",
+    "status": "rewritten",
+    "detail": "Maya is marking fractions on a number line that goes from 0 to 1. She divides the number line into 8 equal parts. Starting at 0, she counts equal parts to the right to place a point. She places her point after counting 3 equal parts. What fraction does Maya's point represent?"
+  },
+  {
+    "ref": "lesson:20265430-bfb9-46e5-a8d2-a342c037e6af:4",
+    "status": "rewritten",
+    "detail": "Logan, Emma, and Tyler each have a ribbon that is the same length. Logan used 3/4 of his ribbon for a project. Emma used 5/6 of her ribbon. Tyler used 2/3 of his ribbon. List the fractions in order from least to greatest. Which of the following shows the correct order?"
+  },
+  {
+    "ref": "lesson:8c3a2b33-48f5-40a4-b1b4-4d91cdc40389:0",
+    "status": "rewritten",
+    "detail": "A farmer collects eggs from his hens every morning. On Monday he collected 36 eggs, and on Tuesday he collected 27 eggs. He puts 9 eggs into each carton. How many cartons does he fill in all?"
+  },
+  {
+    "ref": "lesson:20d887bf-d4df-40b0-9bc4-fcd38823a679:2",
+    "status": "rewritten",
+    "detail": "Maya is packing gift bags for a party. She has 72 small toys to pack equally into bags. She wants each bag to have 9 toys. She writes the equation 9 × ? = 72 to find the number of bags she needs. After filling all the bags, she gives away 3 bags to her neighbors. Which equation can be used to find how many toys Maya kept, and what is the total number of toys she kept?"
+  },
+  {
+    "ref": "lesson:20d887bf-d4df-40b0-9bc4-fcd38823a679:3",
+    "status": "rewritten",
+    "detail": "Jaylen is packing boxes of baseball cards for a fundraiser. He packs the same number of cards in each box. After filling 7 boxes, he has used 336 cards. Then he opens 5 more empty boxes and wants to split his remaining 120 cards equally among those 5 boxes. First, find the unknown in 7 × ? = 336 to determine how many cards fit in each of the first 7 boxes. Then find the unknown in ? ÷ 5 = 24 to check how many cards go in each of the 5 new boxes. What is the sum of both unknowns?"
+  },
+  {
+    "ref": "lesson:20d887bf-d4df-40b0-9bc4-fcd38823a679:4",
+    "status": "rewritten",
+    "detail": "Lena arranges her sticker collection into equal rows. She knows that 8 × ? = 6 × 8 + 16. What is the unknown number that makes the equation true?"
+  },
+  {
+    "ref": "lesson:fa0830db-62e2-4889-9db5-d9c40b5d94c2:4",
+    "status": "rewritten",
+    "detail": "Tyler needs to find 8 × 7 using the distributive property. He breaks 7 into (5 + 2). Which shows the correct steps AND the final answer?"
+  },
+  {
+    "ref": "diag:2a44d98c-3d96-4fdd-8846-221fbfdbff35",
+    "status": "rewritten",
+    "detail": "Maya is describing a design she drew on paper. She wrote these clues about the geometric figures in her drawing:\n\n• Clue 1: She drew two lines that cross each other and form four right angles.\n• Clue 2: She drew a ray that starts at the point where those two lines cross and goes straight up.\n• Clue 3: She drew two line segments that never cross each other and stay the same distance apart.\n\nWhich statement correctly identifies ALL the geometric figures Maya described?"
+  },
+  {
+    "ref": "diag:51c19eab-f406-4fc3-adc0-80490de585ec",
+    "status": "rewritten",
+    "detail": "Maya is drawing geometric figures on her paper. She draws two rays that start at the same endpoint and go in different directions. What geometric figure do the two rays form together?"
+  },
+  {
+    "ref": "diag:cceb8dab-7d3b-4182-98f4-e74a12823a77",
+    "status": "rewritten",
+    "detail": "Maya is sorting shapes for an art project. She has four shapes with these properties:\n• Shape 1: a four-sided figure with 4 right angles and all sides equal in length\n• Shape 2: a three-sided figure with one right angle and two sides that meet at a corner like a perfect 'L'\n• Shape 3: a four-sided figure with exactly one pair of parallel sides and no right angles\n• Shape 4: a four-sided figure with 4 right angles and opposite sides equal in length\n\nWhich shapes have BOTH at least one pair of parallel sides AND at least one pair of perpendicular lines?"
+  },
+  {
+    "ref": "diag:980ae502-064e-4651-b9fc-05d951d4ff8e",
+    "status": "rewritten",
+    "detail": "Maya is describing a quadrilateral to her classmate. She says: 'My shape has 4 sides. It has exactly one pair of parallel sides and no right angles.' Which type of quadrilateral is Maya describing?"
+  },
+  {
+    "ref": "lesson:725e3e81-61d4-4566-b8fb-c1b67e2a60c6:1",
+    "status": "rewritten",
+    "detail": "Sofia is sorting quadrilaterals into groups. She has four shapes described below:\n\n• Shape 1: A quadrilateral with exactly one pair of parallel sides and no right angles.\n• Shape 2: A quadrilateral with two pairs of parallel sides and four right angles.\n• Shape 3: A quadrilateral with no parallel sides and one right angle.\n• Shape 4: A quadrilateral with two pairs of parallel sides and no right angles.\n\nSofia wants to find all shapes that are rectangles. Which shapes should she put in the rectangle group?"
+  },
+  {
+    "ref": "lesson:50d89f0e-91e9-4638-8e40-cbf5c27b1965:0",
+    "status": "rewritten",
+    "detail": "A carpenter is building a bookshelf that is 4 feet long. She wants to divide it into 3 equal sections by placing 2 dividers inside the shelf. Each divider is 2 inches wide. First, convert the total shelf length to inches. Then find how many inches of actual shelf space will be available for books after accounting for the 2 dividers."
+  },
+  {
+    "ref": "diag:499d8aab-4c81-4dd9-8c7b-18640ae7dc4c",
+    "status": "rewritten",
+    "detail": "Olivia is organizing a lemonade stand for a school fundraiser. She has 4 pitchers, each holding 3 liters of lemonade. She wants to pour all the lemonade into small cups that each hold 250 milliliters. How many small cups can she fill completely?"
+  },
+  {
+    "ref": "lesson:890bf4dc-83aa-4364-a4cd-f1a999de6d87:1",
+    "status": "rewritten",
+    "detail": "A community pool needs to be filled with water. A large hose fills the pool at 8 gallons per minute, and a small hose fills it at 3 gallons per minute. Both hoses are turned on at the same time. After 15 minutes, the hoses are turned off. Then a second session begins where only the large hose runs for another 20 minutes. How many total gallons of water are in the pool after both sessions?"
+  },
+  {
+    "ref": "lesson:14190ba0-a041-4002-8d2b-38f4c25186cd:1",
+    "status": "rewritten",
+    "detail": "Mr. Garcia is building a rectangular deck. He knows the deck will have a perimeter of 56 feet and one side will be 14 feet long. What is the area of the deck in square feet?"
+  },
+  {
+    "ref": "lesson:e4b53258-840c-4878-9266-588b26afab36:2",
+    "status": "rewritten",
+    "detail": "Marcus uses a protractor to draw two angles for a geometry project. The first angle measures 55 degrees and the second angle measures 35 degrees. What is the sum of the two angles, and which of the following best describes the sum?"
+  },
+  {
+    "ref": "lesson:e4b53258-840c-4878-9266-588b26afab36:4",
+    "status": "rewritten",
+    "detail": "Emma is measuring two angles in her art project. She places her protractor at the first angle's vertex, aligns one ray with the 0° mark, and the other ray lines up with the 48° mark. For the second angle, she places her protractor the same way and the other ray lines up with the 27° mark. What is the total number of degrees in both angles combined?"
+  },
+  {
+    "ref": "lesson:4db51b47-4e51-487c-90fd-cdcd3dbe2bab:2",
+    "status": "rewritten",
+    "detail": "Maya used a protractor to measure three angles in her geometry project. The first angle measured 48 degrees. The second angle measured 35 degrees. She then sketched a third angle that is the sum of the first two angles. However, she made an error and her sketch was actually 12 degrees more than it should have been. Using a protractor, what should the measure of Maya's third angle have been?"
+  },
+  {
+    "ref": "lesson:2c12b823-373e-4041-b515-f99f6df15b9d:3",
+    "status": "rewritten",
+    "detail": "Jake uses a protractor to measure an angle. The protractor shows that one side of the angle lines up with 0° and the other side lines up with 75°. What is the measure of the angle in whole degrees?"
+  },
+  {
+    "ref": "lesson:c0be11db-2a81-4b07-84d5-ec0322af7eed:4",
+    "status": "rewritten",
+    "detail": "Maya is building a corner shelf bracket. The full angle of the bracket measures 120°. She divides it into three non-overlapping parts to attach different supports. The first part measures 35° and the second part measures 48°. What is the measure of the third part of the angle?"
+  },
+  {
+    "ref": "lesson:1fb111e3-2a11-4f63-9cff-afa5ff18a2e0:2",
+    "status": "rewritten",
+    "detail": "A large clock face is mounted on a wall at the town hall. The minute hand points straight up to 12. Three rays are drawn from the center of the clock: Ray A points to 12, Ray B points to a spot that is 47° clockwise from Ray A, and Ray C points to a spot that is 65° clockwise from Ray B. What is the total angle measured clockwise from Ray A to Ray C?"
+  },
+  {
+    "ref": "lesson:14c904f8-4426-4f32-b601-5bf016a55b4d:1",
+    "status": "rewritten",
+    "detail": "Maria has a ribbon that is 3/4 of a foot long. She says her ribbon is the same length as a ribbon that is 9/12 of a foot long. To check, Maria multiplies both the numerator and denominator of 3/4 by the same number n to get 9/12. What is the value of n?"
+  },
+  {
+    "ref": "lesson:bdd44a5b-4224-4ac9-91b5-c8b2f8e97c01:1",
+    "status": "rewritten",
+    "detail": "Emma is making a recipe that calls for 3/4 cup of sugar. She only has a measuring cup marked in twelfths. She says she can use 9/12 cup instead because 3/4 and 9/12 are equivalent fractions. Which statement best explains why 3/4 is equal to 9/12?"
+  },
+  {
+    "ref": "diag:014987b0-92f3-42a0-ac07-1967302af756",
+    "status": "rewritten",
+    "detail": "Emma is training for a race. On Monday she ran 47 hundredths of a mile, on Tuesday she ran 3 tenths of a mile, and on Wednesday she ran 60 hundredths of a mile. Which of the following correctly shows all three distances written as fractions with a denominator of 100, listed in order from least to greatest distance?"
+  },
+  {
+    "ref": "lesson:e30b1784-d39c-470f-8283-46137e7c0d0c:1",
+    "status": "rewritten",
+    "detail": "Maya is measuring ingredients for a recipe. She uses 0.3 pounds of almonds, 0.07 pounds of raisins, and 0.60 pounds of oats. She wants to write each amount as a fraction with a denominator of 100 and then find the total as a single fraction over 100. What is the total weight of all three ingredients written as a fraction with a denominator of 100?"
+  },
+  {
+    "ref": "diag:1271aa88-fd49-432d-9307-630f776dd7d4",
+    "status": "rewritten",
+    "detail": "Four students each measured a different amount of rainfall (in inches) during a science project. Their measurements were: Aaliyah: 0.6 inches, Ben: 0.58 inches, Carmen: 0.62 inches, DeShawn: 0.09 inches. Aaliyah says her measurement is the greatest because her number has the fewest digits after the decimal point. Is Aaliyah correct? Which statement best compares ALL FOUR measurements from least to greatest?"
+  },
+  {
+    "ref": "lesson:8ad2dd3f-4d07-45fc-9330-6366a7e3792c:2",
+    "status": "rewritten",
+    "detail": "Maya ran 0.89 miles on Saturday and 0.98 miles on Sunday. Which symbol correctly compares the distance she ran on Saturday to the distance she ran on Sunday?\n\n0.89 ___ 0.98"
+  },
+  {
+    "ref": "lesson:6a404159-559d-4229-953f-730770c5b2f0:4",
+    "status": "rewritten",
+    "detail": "Four friends each ran a different distance during gym class. Marcus ran 0.75 miles, Destiny ran 0.57 miles, Jordan ran 0.70 miles, and Aisha ran 0.75 miles. Marcus says he ran farther than everyone else. Destiny says she ran farther than Jordan. Which of the following correctly describes ALL the comparisons among the four distances?"
+  },
+  {
+    "ref": "diag:817a918b-21da-4618-927c-45e483893617",
+    "status": "rewritten",
+    "detail": "A bakery made 8 chocolate chip cookies. They made oatmeal cookies that are 9 times as many as the chocolate chip cookies. Which multiplication equation correctly represents this comparison?"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:0",
+    "status": "rewritten",
+    "detail": "Tyler is designing a treasure hunt for his friends using a coordinate grid. The treasure is buried at a point that satisfies ALL of the following clues:\n• The x-coordinate is 3 more than the y-coordinate.\n• The sum of the x-coordinate and y-coordinate is 11.\n• Both coordinates are whole numbers greater than 0.\n\nWhat ordered pair gives the location of the treasure?"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:3",
+    "status": "rewritten",
+    "detail": "On a coordinate grid, a park entrance is at the origin (0, 0). A playground is located 6 units east and 8 units north of the entrance. A water fountain is located 4 units east and 3 units north of the entrance. A picnic area is located at the point that is 5 units east of the water fountain and 2 units north of the playground. What ordered pair describes the picnic area?"
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:3",
+    "status": "rewritten",
+    "detail": "Maria is tracking how many items she sells and the total money she makes. She graphed two points on a coordinate plane: (2, 6) and (5, 15), where x represents the number of items sold and y represents the total dollars earned. If the relationship between items sold and dollars earned stays the same, what is the y-coordinate of the point when x = 4?"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:3",
+    "status": "rewritten",
+    "detail": "Marcus is tracking his savings over several weeks. He saves $15 the first week, and each week after that he saves $15 more than the previous week. The points below represent (week number, total dollars saved) on a coordinate plane:\n\nWeek 1: (1, 15)\nWeek 2: (2, 30)\nWeek 3: (3, 45)\nWeek 4: (4, 60)\n\nHis friend Destiny starts saving in Week 1 as well. Destiny saves a flat $25 every week. Her points are:\n\nWeek 1: (1, 25)\nWeek 2: (2, 50)\nWeek 3: (3, 75)\nWeek 4: (4, 100)\n\nIf both students continue their saving patterns, in which week will Marcus's total savings first equal or exceed Destiny's total savings? (Assume Marcus's total savings in week n = 15 + 15(n−1) × n ÷ ... use the pattern: week 1 = $15, week 2 = $30, week 3 = $45, week 4 = $60, week 5 = $75, week 6 = $90, week 7 = $105, week 8 = $120, week 9 = $135, week 10 = $150; and Destiny's total in week n = 25 × n.)"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:4",
+    "status": "rewritten",
+    "detail": "Marcus is mapping two delivery routes on a coordinate grid. He records the following stops along Route A: the warehouse is at (0, 0), Stop 1 is at (2, 3), Stop 2 is at (4, 6), and the final destination is at (6, 9). For Route B, the warehouse is at (1, 5), Stop 1 is at (3, 7), Stop 2 is at (5, 9), and the final destination is at (7, 11). Marcus notices that one stop on Route A and one stop on Route B share the same x-coordinate. What is the difference in the y-coordinates of those two stops?"
+  },
+  {
+    "ref": "lesson:aa64e3d1-2446-46b3-8c09-5c81cec7fb35:4",
+    "status": "rewritten",
+    "detail": "Sarah is decorating two shelves in her bedroom. The first shelf is 1.2 meters long, and the second shelf is 85 centimeters long. What is the total length of both shelves in centimeters?"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:2",
+    "status": "rewritten",
+    "detail": "Maya is packing unit cubes into a large wooden crate. The bottom layer of the crate holds exactly 7 rows of 9 unit cubes each. Maya stacks the unit cubes 6 layers high, but the top layer is only partially filled — it has 4 rows of 9 unit cubes each and then 1 row of only 5 unit cubes. How many unit cubes are in the crate in all?"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:4",
+    "status": "rewritten",
+    "detail": "Tyler is packing a storage crate with small cubic boxes. The crate's bottom layer fits 4 rows and 6 columns of the cubic boxes. Tyler fills the crate completely, using 7 layers of cubic boxes total. However, one rectangular section of the crate — measuring 2 rows by 3 columns and going all the way from the bottom to the top — is reserved for fragile items and left empty. How many cubic boxes does Tyler actually place in the crate?"
+  },
+  {
+    "ref": "diag:6308d0f1-6be7-4929-b520-6793547f80b7",
+    "status": "rewritten",
+    "detail": "A storage unit is built from two rectangular sections joined side by side. The first section measures 8 feet long, 6 feet wide, and 5 feet tall. The second section measures 4 feet long, 6 feet wide, and 5 feet tall. What is the total volume of the entire storage unit in cubic feet?"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:3",
+    "status": "rewritten",
+    "detail": "A storage container is made of two rectangular prisms joined together. The bottom prism is 6 feet long, 4 feet wide, and 5 feet tall. The top prism is 6 feet long, 4 feet wide, and 3 feet tall. What is the total volume of the storage container in cubic feet?"
+  },
+  {
+    "ref": "lesson:8cbc8ded-1ec9-4091-a5bb-0e3f94bb4166:4",
+    "status": "rewritten",
+    "detail": "A bakery owner has 5 pounds of flour. She multiplies this amount by 10³ to fill her first bulk order. Then she divides that result by 10² to portion out smaller bags. What is the final amount of flour, in pounds, in each portion?"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:2",
+    "status": "rewritten",
+    "detail": "Maya is training for a track competition. Her four best long-jump distances this week were recorded as: 14 and 728 thousandths feet, fourteen and seventy-two hundredths feet, 14 + 7/10 + 0/100 + 9/1000 feet, and 14.728 feet. She wants to arrange all four distances from least to greatest. Which of the following shows the correct order?"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:3",
+    "status": "rewritten",
+    "detail": "A science teacher recorded the masses of four rock samples in pounds: Sample A: two and forty-seven thousandths, Sample B: 2 + 0.4 + 0.007, Sample C: 2.074, Sample D: two and seventy-four hundredths. Order the four rock samples from least mass to greatest mass and identify which sample has the second greatest mass."
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:4",
+    "status": "rewritten",
+    "detail": "A school orders supplies for 34 classrooms. Each classroom receives 2,500 pencils for the year. How many pencils does the school order in total?"
+  },
+  {
+    "ref": "diag:de80a83f-fec4-4be3-af02-87c0cfe9f7be",
+    "status": "rewritten",
+    "detail": "Write an expression that shows this calculation: add 246 and 38, then multiply the result by 4."
+  },
+  {
+    "ref": "lesson:5202f5ea-1a45-406d-b737-61cb0fa82571:0",
+    "status": "rewritten",
+    "detail": "At a school fundraiser, Tyler collected $3,214 and Jenna collected $2,786. Their principal announced that the parent organization will donate 8 times as much money as the combined amount Tyler and Jenna collected. Without calculating the total donation, which expression correctly represents the amount the parent organization will donate?"
+  },
+  {
+    "ref": "lesson:cace74b2-08b8-49f5-b161-7576e6fa5469:1",
+    "status": "rewritten",
+    "detail": "Use these two rules to generate patterns:\n\nPattern A: Start at 5, add 3 each time\nPattern B: Start at 2, add 6 each time\n\nWrite out the first 5 terms of each pattern. Then form ordered pairs (Pattern A term, Pattern B term) by matching corresponding terms.\n\nWhich ordered pair is formed from the 4th terms of both patterns?"
+  }
+]

@@ -33,8 +33,19 @@ const DIFF_LABEL: Record<number, string> = { 1: 'Easy', 2: 'Medium', 3: 'Hard' }
 // ── Items to skip (false positives from verify pass) ─────────────────────────
 
 const SKIP_REFS = new Set<string>([
-  // Populate after reviewing verify-rewrites.json output
+  // No clear false positives — all Opus flags are genuine
 ])
+
+// ── Diag questions where only difficulty label is wrong (content is fine) ─────
+const DIAG_DIFF_UPDATES: Record<string, number> = {
+  'diag:f40ce343-932d-418c-886a-3d6917a65290': 2, // 3.MD.2: Hard → Medium (2-step subtraction)
+  'diag:a8aca831-91ec-4fef-891f-5e9943773f63': 2, // 2.NBT.4: Hard → Medium (single comparison)
+  'diag:b1f3f980-46c2-4d7c-8fe7-e99c893a80ea': 2, // 2.NBT.5: Hard → Medium (68+17)
+  'diag:07ed2a51-0f70-4027-b5ff-117039a12325': 2, // 2.NBT.7: Hard → Medium (single-step addition)
+  'diag:014987b0-92f3-42a0-ac07-1967302af756': 1, // 4.NF.6: Hard → Easy (direct conversion)
+  'diag:1271aa88-fd49-432d-9307-630f776dd7d4': 2, // 4.NF.7: Hard → Medium (single comparison)
+  'diag:499d8aab-4c81-4dd9-8c7b-18640ae7dc4c': 1, // 4.MD.2: Hard → Easy (trivial computation)
+}
 
 // ── Rewrite via Claude Haiku ──────────────────────────────────────────────────
 
@@ -93,7 +104,7 @@ The new question must be fully self-contained with no missing visuals.`
 
   try {
     const response = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-6',
       max_tokens: 600,
       system,
       messages: [{ role: 'user', content: user }],
