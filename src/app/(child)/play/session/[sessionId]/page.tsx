@@ -15,7 +15,9 @@ import type { MixedQuestion, EarnedAchievement } from '@/types/adaptive'
 type Phase = 'loading' | 'answering' | 'feedback' | 'wrong_review' | 'submitting'
 
 function looksLikeMath(text: string): boolean {
-  return /[\+×÷=]|\d+\/\d+/.test(text) && text.length < 80
+  // Must start with a digit or parenthesis — word problems that contain + or =
+  // would tokenise letter-by-letter and produce unwanted character-level spacing.
+  return /[\+×÷=]|\d+\/\d+/.test(text) && /^[\d(]/.test(text.trim()) && text.length < 80
 }
 
 /** Strip trailing parenthetical hints like "(also: rhombus, ...)" from displayed answers */

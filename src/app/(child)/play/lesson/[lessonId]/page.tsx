@@ -26,10 +26,13 @@ type AdaptiveAction =
   | { type: 'engagement'; signal: EngagementSignal; nextLesson: LessonSummary | null; score: number; xp: number }
 
 function looksLikeMath(text: string): boolean {
-  // Only render as clickable equation if the text contains actual math operators
-  // or fraction notation - not just any string that happens to contain a digit.
+  // Only render as clickable equation if the text is a pure math expression
+  // (starts with a digit or parenthesis) — not a word problem that happens to
+  // contain a + or = sign. Word problems would tokenise letter-by-letter,
+  // producing unwanted character-level spacing.
   const hasMathOp = /[\+×÷=]|\d+\/\d+/.test(text)
-  return hasMathOp && text.length < 80
+  const startsWithMath = /^[\d(]/.test(text.trim())
+  return hasMathOp && startsWithMath && text.length < 80
 }
 
 function freshEngagementWindow(): EngagementWindow {
