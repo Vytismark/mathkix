@@ -49,7 +49,7 @@ export function AnswerGrid({ options, selected, onSelect, onSubmit, disabled }: 
             {/^[A-Da-d]$/.test(option.label.trim()) && (
               <span className="block text-xs font-normal opacity-60 mb-0.5">{option.label.trim().toUpperCase()}</span>
             )}
-            <span className="leading-snug text-center">{stripHint(option.value)}</span>
+            <span className="leading-snug text-center break-words min-w-0 w-full">{stripHint(option.value)}</span>
           </button>
         ))}
       </div>

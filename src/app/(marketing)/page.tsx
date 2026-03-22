@@ -284,7 +284,7 @@ export default function LandingPage() {
 
           {/* Headline */}
           <h1
-            className="animate-fade-in-up text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.06] mb-6"
+            className="animate-fade-in-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.06] mb-6"
             style={{ animationDelay: '60ms' }}
           >
             Higher standards.<br />

@@ -91,8 +91,8 @@ export function MarketingNav({ currentPage }: MarketingNavProps) {
         <>
           {/* Backdrop */}
           <div
-            className="sm:hidden fixed inset-0 z-30 mobile-backdrop-enter"
-            style={{ background: 'rgba(0,0,0,0.5)', top: '56px' }}
+            className="sm:hidden fixed inset-x-0 bottom-0 top-14 z-30 mobile-backdrop-enter"
+            style={{ background: 'rgba(0,0,0,0.5)' }}
             onClick={() => setMenuOpen(false)}
           />
           {/* Menu panel */}

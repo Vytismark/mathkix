@@ -123,7 +123,7 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
   return (
     <div className="flex flex-col items-center gap-6">
       {/* ── Skill rings hub ──────────────── */}
-      <div className="relative w-full max-w-[340px] mx-auto" style={{ aspectRatio: '1' }}>
+      <div className="relative w-full max-w-[300px] sm:max-w-[340px] mx-auto" style={{ aspectRatio: '1' }}>
         {/* Center: CTA button + overall mastery */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="flex flex-col items-center gap-2 w-36">

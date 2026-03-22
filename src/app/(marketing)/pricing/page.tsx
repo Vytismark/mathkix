@@ -151,7 +151,7 @@ export default function PricingPage() {
             return (
               <div
                 key={plan.id}
-                className={`animate-fade-in-up relative rounded-3xl border p-8 flex flex-col ${
+                className={`animate-fade-in-up relative rounded-3xl border p-5 sm:p-8 flex flex-col ${
                   isAnnual ? 'plan-card-annual' : 'plan-card'
                 }`}
                 style={{
