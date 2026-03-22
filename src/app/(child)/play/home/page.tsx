@@ -16,20 +16,21 @@ export default async function PlayHomePage({
   if (!childId) notFound()
 
   const supabase = await createClient()
+  const srCutoff = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
+
   const { data: { user } } = await supabase.auth.getUser()
 
-  const { data: child } = await supabase
-    .from('children')
-    .select('*')
-    .eq('id', childId)
-    .eq('profile_id', user!.id)
-    .single()
+  // Run child profile + SR due count in parallel (both only need childId from URL)
+  const [{ data: child }, { data: srDueItems }] = await Promise.all([
+    supabase.from('children').select('*').eq('id', childId).eq('profile_id', user!.id).single(),
+    supabase.from('spaced_repetition_items').select('id').eq('child_id', childId).lte('next_review_at', srCutoff),
+  ])
 
   if (!child) notFound()
 
   const gradeLevel = child.school_grade ?? 0
 
-  // Fetch lessons with mastery
+  // Fetch lessons (needs gradeLevel from child)
   const { data: lessons } = await supabase
     .from('lessons')
     .select('id, domain, standard_code, title, lesson_type, difficulty, xp_reward, sort_order')
@@ -83,13 +84,6 @@ export default async function PlayHomePage({
     ? Math.floor((Date.now() - new Date(child.last_active).getTime()) / 86_400_000)
     : 999
 
-  // ── Fetch SR due count ──────────────────────────────
-  const srCutoff = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
-  const { data: srDueItems } = await supabase
-    .from('spaced_repetition_items')
-    .select('id')
-    .eq('child_id', childId)
-    .lte('next_review_at', srCutoff)
   const srDueCount = srDueItems?.length ?? 0
 
   const masteredCount = enrichedLessons.filter((l) => l.mastery_level >= 3).length
