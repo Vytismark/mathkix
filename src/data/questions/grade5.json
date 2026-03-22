@@ -8,7 +8,7 @@
       "domain": "5.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols",
-      "explanation": "",
+      "explanation": "Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols. Students apply order of operations to evaluate multi-step numerical expressions.",
       "questions": {
         "easy": [
           {
@@ -98,7 +98,7 @@
       "domain": "5.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them",
-      "explanation": "",
+      "explanation": "Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them. For example, express the calculation 'add 8 and 7, then multiply by 2' as 2 × (8 + 7). Recognize that 3 × (18932 + 921) is three times as large as 18932 + 921, without calculating.",
       "questions": {
         "easy": [
           {
@@ -188,7 +188,7 @@
       "domain": "5.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Generate two numerical patterns using two given rules, identify relationships, and graph ordered pairs",
-      "explanation": "",
+      "explanation": "Generate two numerical patterns using two given rules. Identify apparent relationships between corresponding terms. Form ordered pairs consisting of corresponding terms from the two patterns, and graph the ordered pairs on a coordinate plane.",
       "questions": {
         "easy": [
           {
@@ -278,7 +278,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Recognize that a digit in one place represents 10 times as much as the place to its right and 1/10 of the place to its left",
-      "explanation": "",
+      "explanation": "Recognize that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and 1/10 of what it represents in the place to its left. This extends place value understanding to decimals.",
       "questions": {
         "easy": [
           {
@@ -368,7 +368,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Explain patterns in zeros and decimal placement when multiplying/dividing by powers of 10; use exponents",
-      "explanation": "",
+      "explanation": "Explain patterns in the number of zeros of the product when multiplying a number by powers of 10, and explain patterns in the placement of the decimal point when a decimal is multiplied or divided by a power of 10. Use whole-number exponents to denote powers of 10.",
       "questions": {
         "easy": [
           {
@@ -458,7 +458,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Read, write, and compare decimals to thousandths",
-      "explanation": "",
+      "explanation": "Read, write, and compare decimals to thousandths. Read and write decimals using base-ten numerals, number names, and expanded form. Compare two decimals to thousandths based on meanings of the digits in each place, using >, =, and < symbols.",
       "questions": {
         "easy": [
           {
@@ -548,7 +548,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Use place value understanding to round decimals to any place",
-      "explanation": "",
+      "explanation": "Use place value understanding to round decimals to any place.",
       "questions": {
         "easy": [
           {
@@ -638,7 +638,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Fluently multiply multi-digit whole numbers using the standard algorithm",
-      "explanation": "",
+      "explanation": "Fluently multiply multi-digit whole numbers using the standard algorithm.",
       "questions": {
         "easy": [
           {
@@ -728,7 +728,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Find whole-number quotients with up to 4-digit dividends and 2-digit divisors",
-      "explanation": "",
+      "explanation": "Find whole-number quotients of whole numbers with up to four-digit dividends and two-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation using equations, rectangular arrays, and/or area models.",
       "questions": {
         "easy": [
           {
@@ -818,7 +818,7 @@
       "domain": "5.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Add, subtract, multiply, and divide decimals to hundredths",
-      "explanation": "",
+      "explanation": "Add, subtract, multiply, and divide decimals to hundredths, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used.",
       "questions": {
         "easy": [
           {
@@ -908,7 +908,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Add and subtract fractions with unlike denominators (including mixed numbers)",
-      "explanation": "",
+      "explanation": "Add and subtract fractions with unlike denominators (including mixed numbers) by replacing given fractions with equivalent fractions in such a way as to produce an equivalent sum or difference of fractions with like denominators. For example, 2/3 + 5/4 = 8/12 + 15/12 = 23/12.",
       "questions": {
         "easy": [
           {
@@ -998,7 +998,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Solve word problems involving addition and subtraction of fractions with unlike denominators",
-      "explanation": "",
+      "explanation": "Solve word problems involving addition and subtraction of fractions referring to the same whole, including cases of unlike denominators. Use benchmark fractions and number sense to estimate mentally and assess the reasonableness of answers.",
       "questions": {
         "easy": [
           {
@@ -1088,7 +1088,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Interpret a fraction as division of the numerator by the denominator (a/b = a ÷ b)",
-      "explanation": "",
+      "explanation": "Interpret a fraction as division of the numerator by the denominator (a/b = a ÷ b). Solve word problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers. For example, interpret 3/4 as the result of dividing 3 by 4.",
       "questions": {
         "easy": [
           {
@@ -1178,7 +1178,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Multiply a fraction or whole number by a fraction",
-      "explanation": "",
+      "explanation": "Apply and extend previous understandings of multiplication to multiply a fraction or whole number by a fraction. Interpret the product (a/b) × q as a parts of a partition of q into b equal parts. Find the area of a rectangle with fractional side lengths by tiling it with unit squares of the appropriate unit fraction side lengths.",
       "questions": {
         "easy": [
           {
@@ -1268,7 +1268,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Interpret multiplication as scaling (resizing)",
-      "explanation": "",
+      "explanation": "Interpret multiplication as scaling (resizing). Compare the size of a product to the size of one factor on the basis of the size of the other factor, without performing multiplication. Explain why multiplying a given number by a fraction greater than 1 results in a product greater than the number, and multiplying by a fraction less than 1 results in a smaller product.",
       "questions": {
         "easy": [
           {
@@ -1358,7 +1358,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Solve real-world problems involving multiplication of fractions and mixed numbers",
-      "explanation": "",
+      "explanation": "Solve real world problems involving multiplication of fractions and mixed numbers by using visual fraction models or equations to represent the problem.",
       "questions": {
         "easy": [
           {
@@ -1448,7 +1448,7 @@
       "domain": "5.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Divide unit fractions by whole numbers and whole numbers by unit fractions",
-      "explanation": "",
+      "explanation": "Apply and extend previous understandings of division to divide unit fractions by whole numbers and whole numbers by unit fractions. Interpret division of a unit fraction by a non-zero whole number; compute such quotients. Interpret division of a whole number by a unit fraction; compute such quotients. Solve real world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions.",
       "questions": {
         "easy": [
           {
@@ -1538,7 +1538,7 @@
       "domain": "5.MD",
       "domainName": "Measurement and Data",
       "title": "Convert among different-sized standard measurement units within a given measurement system",
-      "explanation": "",
+      "explanation": "Convert among different-sized standard measurement units within a given measurement system (e.g., convert 5 cm to 0.05 m), and use these conversions in solving multi-step, real world problems.",
       "questions": {
         "easy": [
           {
@@ -1628,7 +1628,7 @@
       "domain": "5.MD",
       "domainName": "Measurement and Data",
       "title": "Make a line plot to display a data set of measurements in fractions of a unit; use operations on fractions to solve problems",
-      "explanation": "",
+      "explanation": "Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8). Use operations on fractions for this grade to solve problems involving information presented in line plots.",
       "questions": {
         "easy": [
           {
@@ -1718,7 +1718,7 @@
       "domain": "5.MD",
       "domainName": "Measurement and Data",
       "title": "Recognize volume as an attribute of solid figures and understand concepts of volume measurement",
-      "explanation": "",
+      "explanation": "Recognize volume as an attribute of solid figures and understand concepts of volume measurement. A cube with side length 1 unit is a 'unit cube' and has one cubic unit of volume. A solid figure which can be packed without gaps or overlaps using n unit cubes has a volume of n cubic units.",
       "questions": {
         "easy": [
           {
@@ -1808,7 +1808,7 @@
       "domain": "5.MD",
       "domainName": "Measurement and Data",
       "title": "Measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised units",
-      "explanation": "",
+      "explanation": "Measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised units.",
       "questions": {
         "easy": [
           {
@@ -1898,7 +1898,7 @@
       "domain": "5.MD",
       "domainName": "Measurement and Data",
       "title": "Relate volume to multiplication and addition; use V = l × w × h and V = B × h; recognize volume as additive",
-      "explanation": "",
+      "explanation": "Relate volume to the operations of multiplication and addition and solve real world and mathematical problems involving volume. Find the volume of a right rectangular prism with whole-number side lengths by packing it with unit cubes, and show that the volume is the same as found by multiplying the edge lengths. Apply the formulas V = l × w × h and V = b × h. Recognize volume as additive and find volumes of solid figures composed of two non-overlapping right rectangular prisms.",
       "questions": {
         "easy": [
           {
@@ -1988,7 +1988,7 @@
       "domain": "5.G",
       "domainName": "Geometry",
       "title": "Use a pair of perpendicular number lines (axes) to define a coordinate system; locate points using ordered pairs",
-      "explanation": "",
+      "explanation": "Use a pair of perpendicular number lines, called axes, to define a coordinate system, with the intersection of the lines (the origin) arranged to coincide with the 0 on each line and a given point in the plane located by using an ordered pair of numbers, called its coordinates.",
       "questions": {
         "easy": [
           {
@@ -2078,7 +2078,7 @@
       "domain": "5.G",
       "domainName": "Geometry",
       "title": "Represent real-world and mathematical problems by graphing points in the first quadrant of the coordinate plane",
-      "explanation": "",
+      "explanation": "Represent real world and mathematical problems by graphing points in the first quadrant of the coordinate plane, and interpret coordinate values of points in the context of the situation.",
       "questions": {
         "easy": [
           {
@@ -2168,7 +2168,7 @@
       "domain": "5.G",
       "domainName": "Geometry",
       "title": "Understand that attributes belonging to a category of 2D figures also belong to all subcategories",
-      "explanation": "",
+      "explanation": "Understand that attributes belonging to a category of two-dimensional figures also belong to all subcategories of that category. For example, all rectangles have four right angles and squares are rectangles, so all squares have four right angles.",
       "questions": {
         "easy": [
           {
@@ -2258,7 +2258,7 @@
       "domain": "5.G",
       "domainName": "Geometry",
       "title": "Classify two-dimensional figures in a hierarchy based on properties",
-      "explanation": "",
+      "explanation": "Classify two-dimensional figures in a hierarchy based on properties. For example, understand that all squares are rhombuses (since they have four equal sides), but not all rhombuses are squares (right angles required).",
       "questions": {
         "easy": [
           {

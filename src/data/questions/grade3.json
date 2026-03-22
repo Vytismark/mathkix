@@ -8,7 +8,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Interpret Products of Whole Numbers",
-      "explanation": "",
+      "explanation": "Interpret products of whole numbers as the total number of objects in equal groups. For example, interpret 5 × 7 as the total number of objects in 5 groups of 7 objects each. Students describe real-world contexts where a total can be expressed as a product.",
       "questions": {
         "easy": [
           {
@@ -98,7 +98,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Interpret Whole-Number Quotients",
-      "explanation": "",
+      "explanation": "Interpret whole-number quotients of whole numbers as the number of objects in each share or the number of equal shares. For example, interpret 56 ÷ 8 as the number of objects in each share when 56 objects are partitioned equally into 8 shares, or as the number of shares when 56 objects are partitioned into equal shares of 8 objects each.",
       "questions": {
         "easy": [
           {
@@ -188,7 +188,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Solve Word Problems Using Multiplication and Division Within 100",
-      "explanation": "",
+      "explanation": "Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities. Students use drawings and equations with a symbol for the unknown number to represent the problem.",
       "questions": {
         "easy": [
           {
@@ -278,7 +278,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Determine the Unknown in Multiplication/Division Equations",
-      "explanation": "",
+      "explanation": "Determine the unknown whole number in a multiplication or division equation relating three whole numbers. For example, determine the unknown number that makes the equation true in equations such as 8 × ? = 48, 5 = ? ÷ 3, and 6 × 6 = ?.",
       "questions": {
         "easy": [
           {
@@ -368,7 +368,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Apply Properties of Operations to Multiply and Divide",
-      "explanation": "",
+      "explanation": "Apply properties of operations as strategies to multiply and divide. Examples: the commutative property (4 × 6 = 6 × 4), associative property (3 × 5 × 2 = 15 × 2 = 30), and distributive property (8 × 7 = 8 × (5 + 2) = 40 + 16 = 56). Students need not use formal terms for these properties.",
       "questions": {
         "easy": [
           {
@@ -458,7 +458,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Understand Division as an Unknown-Factor Problem",
-      "explanation": "",
+      "explanation": "Understand division as an unknown-factor problem. For example, find 32 ÷ 8 by finding the number that makes 32 when multiplied by 8. This connects division directly to multiplication.",
       "questions": {
         "easy": [
           {
@@ -548,7 +548,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Fluently Multiply and Divide Within 100",
-      "explanation": "",
+      "explanation": "Fluently multiply and divide within 100, using strategies such as the relationship between multiplication and division and properties of operations. By the end of Grade 3, students know from memory all products of two one-digit numbers.",
       "questions": {
         "easy": [
           {
@@ -638,7 +638,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Solve Two-Step Word Problems Using Four Operations",
-      "explanation": "",
+      "explanation": "Solve two-step word problems using the four operations. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding. Limited to problems with whole numbers and whole-number answers.",
       "questions": {
         "easy": [
           {
@@ -728,7 +728,7 @@
       "domain": "3.OA",
       "domainName": "Operations and Algebraic Thinking",
       "title": "Identify and Explain Arithmetic Patterns",
-      "explanation": "",
+      "explanation": "Identify arithmetic patterns (including patterns in the addition table or multiplication table) and explain them using properties of operations. For example, observe that 4 times a number is always even, and explain why 4 times a number can be decomposed into two equal addends.",
       "questions": {
         "easy": [
           {
@@ -818,7 +818,7 @@
       "domain": "3.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Round Whole Numbers to the Nearest 10 or 100",
-      "explanation": "",
+      "explanation": "Use place value understanding to round whole numbers to the nearest 10 or 100. Students apply their understanding of place value to determine which ten or hundred a number is closest to.",
       "questions": {
         "easy": [
           {
@@ -908,7 +908,7 @@
       "domain": "3.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Fluently Add and Subtract Within 1000",
-      "explanation": "",
+      "explanation": "Fluently add and subtract within 1000 using strategies and algorithms based on place value, properties of operations, and/or the relationship between addition and subtraction. A range of algorithms may be used.",
       "questions": {
         "easy": [
           {
@@ -998,7 +998,7 @@
       "domain": "3.NBT",
       "domainName": "Number and Operations in Base Ten",
       "title": "Multiply One-Digit Numbers by Multiples of 10",
-      "explanation": "",
+      "explanation": "Multiply one-digit whole numbers by multiples of 10 in the range 10-90 (e.g., 9 × 80, 5 × 60) using strategies based on place value and properties of operations.",
       "questions": {
         "easy": [
           {
@@ -1088,7 +1088,7 @@
       "domain": "3.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Understand Unit Fractions and Fractions a/b",
-      "explanation": "",
+      "explanation": "Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity formed by a parts of size 1/b. Grade 3 expectations are limited to fractions with denominators 2, 3, 4, 6, and 8.",
       "questions": {
         "easy": [
           {
@@ -1178,7 +1178,7 @@
       "domain": "3.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Represent Fractions on a Number Line",
-      "explanation": "",
+      "explanation": "Understand a fraction as a number on the number line and represent fractions on a number line diagram. Students represent a fraction 1/b by partitioning the interval from 0 to 1 into b equal parts, and represent a fraction a/b by marking off a lengths of 1/b from 0. Denominators limited to 2, 3, 4, 6, and 8.",
       "questions": {
         "easy": [
           {
@@ -1268,7 +1268,7 @@
       "domain": "3.NF",
       "domainName": "Number and Operations-Fractions",
       "title": "Equivalent Fractions and Comparing Fractions",
-      "explanation": "",
+      "explanation": "Explain equivalence of fractions and compare fractions by reasoning about their size. Students understand two fractions as equivalent if they are the same size or at the same point on a number line; generate simple equivalent fractions (e.g., 1/2 = 2/4); express whole numbers as fractions; and compare fractions with the same numerator or denominator using >, =, or <. Denominators limited to 2, 3, 4, 6, and 8.",
       "questions": {
         "easy": [
           {
@@ -1358,7 +1358,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Tell Time to the Nearest Minute; Solve Time Interval Problems",
-      "explanation": "",
+      "explanation": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram.",
       "questions": {
         "easy": [
           {
@@ -1448,7 +1448,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Measure and Estimate Liquid Volumes and Masses (g, kg, L)",
-      "explanation": "",
+      "explanation": "Measure and estimate liquid volumes and masses of objects using standard units of grams (g), kilograms (kg), and liters (l). Add, subtract, multiply, or divide to solve one-step word problems involving masses or volumes given in the same units. Excludes compound units and multiplicative comparison problems.",
       "questions": {
         "easy": [
           {
@@ -1538,7 +1538,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Scaled Picture Graphs and Bar Graphs",
-      "explanation": "",
+      "explanation": "Draw a scaled picture graph and a scaled bar graph to represent a data set with several categories. Solve one- and two-step 'how many more' and 'how many less' problems using information presented in scaled bar graphs. For example, draw a bar graph where each square represents 5 pets.",
       "questions": {
         "easy": [
           {
@@ -1628,7 +1628,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Measure Lengths to Halves/Fourths of an Inch; Line Plots",
-      "explanation": "",
+      "explanation": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units — whole numbers, halves, or quarters.",
       "questions": {
         "easy": [
           {
@@ -1718,7 +1718,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Recognize Area as an Attribute; Understand Area Measurement",
-      "explanation": "",
+      "explanation": "Recognize area as an attribute of plane figures and understand concepts of area measurement. A unit square has one square unit of area. A plane figure covered by n unit squares without gaps or overlaps has an area of n square units.",
       "questions": {
         "easy": [
           {
@@ -1808,7 +1808,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Measure Areas by Counting Unit Squares",
-      "explanation": "",
+      "explanation": "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units).",
       "questions": {
         "easy": [
           {
@@ -1898,7 +1898,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Relate Area to Multiplication and Addition",
-      "explanation": "",
+      "explanation": "Relate area to the operations of multiplication and addition. Students find areas of rectangles by tiling and by multiplying side lengths; use area models to represent the distributive property; and recognize area as additive by decomposing rectilinear figures into non-overlapping rectangles and adding their areas.",
       "questions": {
         "easy": [
           {
@@ -1988,7 +1988,7 @@
       "domain": "3.MD",
       "domainName": "Measurement and Data",
       "title": "Solve Problems Involving Perimeter",
-      "explanation": "",
+      "explanation": "Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters.",
       "questions": {
         "easy": [
           {
@@ -2078,7 +2078,7 @@
       "domain": "3.G",
       "domainName": "Geometry",
       "title": "Understand Shape Categories; Quadrilateral Subcategories",
-      "explanation": "",
+      "explanation": "Understand that shapes in different categories may share attributes, and that shared attributes can define a larger category. Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to these subcategories.",
       "questions": {
         "easy": [
           {
@@ -2168,7 +2168,7 @@
       "domain": "3.G",
       "domainName": "Geometry",
       "title": "Partition Shapes into Equal Areas; Express as Unit Fractions",
-      "explanation": "",
+      "explanation": "Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole. For example, partition a shape into 4 parts with equal area and describe each part as 1/4 of the area of the shape.",
       "questions": {
         "easy": [
           {
