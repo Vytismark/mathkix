@@ -374,7 +374,7 @@ The correct answer is: "${correctAnswer}"
 Your job: explain WHY the correct answer is "${correctAnswer}" in a way that helps them understand, not just memorize. Use a concrete example or analogy.
 
 ${problemBlock ? `${problemBlock}\n` : ''}RULES:
-- Start by normalizing the mistake: "That's a tricky one" or "Lots of kids mix this up" (brief, 3-5 words max).
+- Start with a brief, varied normalizing phrase (3-5 words max) — pick something different each time, such as "That's a tricky one", "This one trips people up", "Easy to mix those up", "Great question to revisit", or something similar. Never use the exact same opener twice in a row.
 - Then explain the key concept behind the correct answer using physical objects or everyday examples.
 - Show the reasoning step-by-step if needed, but keep it simple.
 - End with encouragement about learning from mistakes (brief, one phrase).

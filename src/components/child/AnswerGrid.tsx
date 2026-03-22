@@ -46,7 +46,9 @@ export function AnswerGrid({ options, selected, onSelect, onSubmit, disabled }: 
               disabled && 'cursor-not-allowed opacity-70'
             )}
           >
-            <span className="block text-xs font-normal opacity-60 mb-0.5">{stripHint(option.label)}</span>
+            {/^[A-Da-d]$/.test(option.label.trim()) && (
+              <span className="block text-xs font-normal opacity-60 mb-0.5">{option.label.trim().toUpperCase()}</span>
+            )}
             <span className="leading-snug text-center">{stripHint(option.value)}</span>
           </button>
         ))}
