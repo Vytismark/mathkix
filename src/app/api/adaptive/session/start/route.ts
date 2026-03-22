@@ -209,23 +209,24 @@ export async function POST(request: NextRequest) {
     .update({ engine_state: engineStateWithQuestions as unknown as Json })
     .eq('id', session.id)
 
-  // Check first session for analytics — fire-and-forget so it doesn't block response
-  // Analytics: fire-and-forget after response is sent
-  supabase
-    .from('practice_sessions')
-    .select('*', { count: 'exact', head: true })
-    .eq('child_id', childId)
-    .neq('id', session.id)
-    .then(({ count: prevSessionCount }) => {
+  // Analytics: fire-and-forget so it doesn't block response
+  ;(async () => {
+    try {
+      const { count: prevSessionCount } = await supabase
+        .from('practice_sessions')
+        .select('*', { count: 'exact', head: true })
+        .eq('child_id', childId)
+        .neq('id', session.id)
       const isFirst = (prevSessionCount ?? 0) === 0
-      return captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
+      await captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
         child_id: childId,
         session_id: session.id,
         question_count: final.length,
         grade: child.school_grade ?? 0,
         is_first: isFirst,
       })
-    }).catch(() => {})
+    } catch {}
+  })()
 
   supabase.from('behavioral_events').insert({
     child_id:   childId,
