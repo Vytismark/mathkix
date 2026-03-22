@@ -218,13 +218,13 @@ export async function POST(request: NextRequest) {
     .neq('id', session.id)
     .then(({ count: prevSessionCount }) => {
       const isFirst = (prevSessionCount ?? 0) === 0
-      captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
+      return captureServerEvent(user.id, isFirst ? 'first_session_started' : 'session_started', {
         child_id: childId,
         session_id: session.id,
         question_count: final.length,
         grade: child.school_grade ?? 0,
         is_first: isFirst,
-      }).catch(() => {})
+      })
     }).catch(() => {})
 
   supabase.from('behavioral_events').insert({
