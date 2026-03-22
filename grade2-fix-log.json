@@ -1,0 +1,347 @@
+[
+  {
+    "ref": "diag:577f3fe1-00c9-46eb-a329-28c715ca585b",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:894d3a3f-03b9-4c78-88ac-c7baab839d16",
+    "status": "rewritten",
+    "detail": "Marcus is building a fence around a garden. He wants the garden to have 6 sides and 6 angles, all equal in length. He draws a shape to plan it out. What shape did Marcus draw? Then, how many sides does a shape with one fewer side than his garden have?"
+  },
+  {
+    "ref": "lesson:38a941ac-9485-4c56-baad-eae05831f553:3",
+    "status": "rewritten",
+    "detail": "Which two shapes are quadrilaterals?"
+  },
+  {
+    "ref": "lesson:1e2cbda4-4db4-454e-87f0-2ee5b66324c6:1",
+    "status": "rewritten",
+    "detail": "Maya draws a shape with 6 sides. Then she draws another shape with 4 sides and 4 angles. Finally, she draws a 3D shape with 6 square faces, 8 corners, and 12 edges. Which list shows all three shapes Maya drew in order from fewest sides to most sides?"
+  },
+  {
+    "ref": "diag:a35df642-0a27-4e10-8882-2814b141ed93",
+    "status": "rewritten",
+    "detail": "A rectangle is divided into 4 equal rows of squares. Each row has 5 squares. How many squares are there in total?"
+  },
+  {
+    "ref": "lesson:cd417ef9-73ad-4027-a8ee-5ae2fc21f7d2:2",
+    "status": "rewritten",
+    "detail": "Maria has a rectangular piece of paper. She draws a grid with 5 rows and 4 columns of same-size squares. How many squares does she draw in total? Write an addition equation to show your answer."
+  },
+  {
+    "ref": "diag:ea3e8a51-525a-4cc5-8bda-10060990fbc0",
+    "status": "difficulty_updated",
+    "detail": "→ 3"
+  },
+  {
+    "ref": "diag:72a3dc36-3437-4cf6-8389-891bb7fa4c53",
+    "status": "rewritten",
+    "detail": "Mr. Chen has a rectangular pan of brownies. He cuts it into 4 equal pieces called fourths. His son eats 1 fourth of the pan. Which picture shows the brownies with 1 fourth removed? (Note: In picture A, 3 fourths remain. In picture B, 1 fourth remains. In picture C, 2 fourths remain. In picture D, 4 fourths remain.)"
+  },
+  {
+    "ref": "diag:c3b535ab-4e29-4637-8fc7-fc976dde26e1",
+    "status": "rewritten",
+    "detail": "A marker is 14 cm long. A crayon is 9 cm long. Which is longer and by how much?"
+  },
+  {
+    "ref": "diag:a223234f-db35-4253-aabc-7603026c4b5b",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:4ceb2330-1695-48e2-83da-3b763cb82010",
+    "status": "rewritten",
+    "detail": "Your teacher asks you to measure the length of your desk. You use a ruler that shows inches. The ruler shows your desk is 48 inches long. Which tool would be best to use if you wanted to measure your desk a different way?"
+  },
+  {
+    "ref": "diag:bb541c0c-c2f1-4b40-bb73-26321fdc4dcc",
+    "status": "rewritten",
+    "detail": "A desk is 36 inches long. Which tool would be best to measure the length of the desk?"
+  },
+  {
+    "ref": "lesson:1eb28c93-341b-4146-809f-5ed30f681b56:0",
+    "status": "rewritten",
+    "detail": "A classroom door needs to be measured. You can choose from: a ruler (12 inches), a yardstick (3 feet), or a measuring tape (10 feet). The door is about 7 feet tall. Which tool would be BEST for measuring the height of the door accurately without having to use it multiple times?"
+  },
+  {
+    "ref": "diag:9100f8e1-6453-4028-87c4-fd0f194843dd",
+    "status": "rewritten",
+    "detail": "Look at the bar graph showing how many books Ana, Ben, Carl, and Dee read. Ana read 12 books, Ben read 8 books, Carl read 15 books, and Dee read 10 books. How many books did Ana and Ben read together?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:1",
+    "status": "rewritten",
+    "detail": "Look at the picture graph. It shows how many apples each student picked. Ana picked 8 apples, Ben picked 5 apples, Carl picked 9 apples, and Dee picked 6 apples. How many more apples did Carl pick than Ben picked?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:2",
+    "status": "rewritten",
+    "detail": "Mrs. Chen's class made a picture graph showing favorite fruits. Each picture = 1 student. Apples: 8 pictures, Oranges: 5 pictures, Bananas: 7 pictures. How many students in total chose apples or oranges? Then, how many fewer students chose oranges than bananas?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:3",
+    "status": "rewritten",
+    "detail": "Ms. Chen made a picture graph showing what 24 students like to do. The graph shows: Math has 8 smiley faces, Reading has 7 smiley faces, and Art has 6 smiley faces. Each smiley face = 1 student. How many more students like Math than Reading?"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:4",
+    "status": "rewritten",
+    "detail": "A picture graph shows favorite sports at Jefferson Elementary. The graph shows Soccer with 12 stars, Basketball with 7 stars, Baseball with 5 stars, and Tag with 4 stars. Each star represents 1 student. How many fewer students chose Baseball and Tag combined than chose Soccer and Basketball combined?"
+  },
+  {
+    "ref": "diag:7a8ae4df-9623-483b-b3a1-dd03764809a7",
+    "status": "rewritten",
+    "detail": "A pencil measures 4 large paper clips long. The same pencil measures 8 small paper clips long. How many small paper clips equal 1 large paper clip?"
+  },
+  {
+    "ref": "diag:3181d6ae-0ea5-4a0c-8a02-6223d1a5af36",
+    "status": "rewritten",
+    "detail": "A ribbon is 3 feet long. If 1 yard equals 3 feet, how many yards long is the ribbon?"
+  },
+  {
+    "ref": "diag:27ad0350-cdd3-449b-9735-b17f17988d7d",
+    "status": "rewritten",
+    "detail": "A rope is 12 feet long. When you measure the same rope in yards, how many yards long is it? (Remember: 1 yard = 3 feet)"
+  },
+  {
+    "ref": "lesson:a9a038ae-d0a3-46ee-9139-58186fd319a5:4",
+    "status": "rewritten",
+    "detail": "Mrs. Chen measures a desk using paper clips. The desk is 8 paper clips long. Then she measures the same desk using her hand spans. The desk is 4 hand spans long. Why is the number different when she uses different units?"
+  },
+  {
+    "ref": "diag:5f8c6457-5037-4a18-aef6-9bd463d1cccf",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "diag:d09410f7-4e87-45f3-ab88-8587bbcab5a2",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "lesson:172febf5-84c1-4499-aece-8266e5c498b1:4",
+    "status": "rewritten",
+    "detail": "Your classroom is about 10 meters long. A hallway in your school is about as long as your classroom. About how many meters long is the hallway?"
+  },
+  {
+    "ref": "diag:67963526-56f4-4da8-919b-37bc4efaea49",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:97f7e43b-ef8d-41bb-a1e6-743e19c99c39",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:39644799-9d17-4216-bd4f-83caf88d28e5",
+    "status": "rewritten",
+    "detail": "A book costs $3.50. Tom has 2 one-dollar bills and 6 quarters. How much money does Tom have?"
+  },
+  {
+    "ref": "lesson:e38a6adb-9356-440c-b179-bbf8245ba7e3:1",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:cc3bda8e-3e7e-4172-97cb-2dcc8a94012a",
+    "status": "rewritten",
+    "detail": "Five crayons measure 6, 8, 6, 7, and 8 cm. You make a line plot to show the lengths. How many Xs will you put above the number 6 on your line plot?"
+  },
+  {
+    "ref": "diag:3319498f-80d4-417f-926e-996768a41fc8",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:91c27413-8586-4002-8202-5e594571442b",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:4ed13541-236f-408a-b2fc-e7a862f5eb22:1",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:4ed13541-236f-408a-b2fc-e7a862f5eb22:3",
+    "status": "rewritten",
+    "detail": "Mrs. Chen measured the lengths of 7 pencils in inches. Here are the measurements: 5, 6, 5, 7, 5, 6, 7. How many pencils are 5 inches long?"
+  },
+  {
+    "ref": "lesson:398b79c8-cb1c-41e6-b6a0-c9ac3a8715e0:1",
+    "status": "rewritten",
+    "detail": "A teacher measured the lengths of 12 pencils in centimeters and made a line plot. The line plot showed: 2 pencils at 8 cm, 3 pencils at 9 cm, 4 pencils at 10 cm, 2 pencils at 11 cm, and 1 pencil at 12 cm. How many pencils measured more than 9 cm?"
+  },
+  {
+    "ref": "lesson:398b79c8-cb1c-41e6-b6a0-c9ac3a8715e0:4",
+    "status": "rewritten",
+    "detail": "Mrs. Chen measured the lengths of 8 pencils in inches. Here are the measurements: 10, 12, 11, 10, 12, 12, 11, 10. Make a line plot with these measurements. How many pencils are 10 inches long?"
+  },
+  {
+    "ref": "lesson:39fceb8d-7803-437d-bc5c-a0f0b6633b0c:0",
+    "status": "rewritten",
+    "detail": "What is the value of the digit 7 in the number 374?"
+  },
+  {
+    "ref": "lesson:ee6008c8-ef4b-4071-83ea-93efb982055c:4",
+    "status": "rewritten",
+    "detail": "A store has 462 items in stock. The manager writes this number in three different ways. Which one is NOT a correct way to write 462?"
+  },
+  {
+    "ref": "diag:a64be5d3-c363-46c3-9183-531aab7ee159",
+    "status": "rewritten",
+    "detail": "Maya has 468 pennies. Josiah has 486 pennies. Use >, =, or < to compare the number of pennies. 468 ___ 486"
+  },
+  {
+    "ref": "diag:a8aca831-91ec-4fef-891f-5e9943773f63",
+    "status": "rewritten",
+    "detail": "Compare these two numbers. Which symbol makes the sentence true? 247 ___ 274"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:0",
+    "status": "rewritten",
+    "detail": "Mrs. Chen's class collected 347 pennies in a jar. Mr. Lopez's class collected 374 pennies in a jar. After Mrs. Chen's class found 27 more pennies in a box under a desk, they added them to their jar. Now which comparison is correct?"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:1",
+    "status": "rewritten",
+    "detail": "Maya has 247 stickers. Her friend has 274 stickers. Compare the number of stickers they have. Is 247 _____ 274?"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:2",
+    "status": "rewritten",
+    "detail": "Compare these two numbers: 705 and 710. Which symbol goes in the box? 705 ___ 710"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:3",
+    "status": "rewritten",
+    "detail": "Maya has 875 pennies. Her friend Sam has 857 pennies. Which symbol makes this sentence true? 875 ___ 857"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:4",
+    "status": "rewritten",
+    "detail": "Compare these two three-digit numbers: 423 and 432. Which symbol makes this sentence true? 423 __ 432"
+  },
+  {
+    "ref": "lesson:b33b5d8d-61b1-4a10-b469-cfcf96d7d645:3",
+    "status": "rewritten",
+    "detail": "Compare the two numbers. 600 __ 590. Which symbol goes in the blank?"
+  },
+  {
+    "ref": "diag:b1f3f980-46c2-4d7c-8fe7-e99c893a80ea",
+    "status": "rewritten",
+    "detail": "Maya has 68 pennies in her jar. Her grandmother gives her 17 more pennies. How many pennies does Maya have now?"
+  },
+  {
+    "ref": "lesson:c2fb1a1e-0c73-4b3d-9c73-27cfd3399ec4:1",
+    "status": "rewritten",
+    "detail": "Sarah has 68 stickers. She buys 17 more stickers. How many stickers does she have now?"
+  },
+  {
+    "ref": "diag:07ed2a51-0f70-4027-b5ff-117039a12325",
+    "status": "rewritten",
+    "detail": "Maya's school collected 456 cans. Then they collected 127 more cans. How many cans do they have now?"
+  },
+  {
+    "ref": "lesson:fdf9d6c8-0f9c-47f3-a046-1324b6a1d365:1",
+    "status": "rewritten",
+    "detail": "Maya has 847 stickers in her collection. She gives 378 stickers to her friend. How many stickers does Maya have left?"
+  },
+  {
+    "ref": "diag:2274c64b-f0a4-4b37-8a2a-7f75c865a0af",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:95c2283a-d2b7-407c-afab-a6cba0cc28e5",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:45d3ac7b-8619-4b4e-9788-9315cfebafb1",
+    "status": "rewritten",
+    "detail": "Maya has 350 dollars in her savings account. She withdraws 100 dollars to buy a gift. Then she adds 10 dollars from her allowance. How much money does she have now?"
+  },
+  {
+    "ref": "lesson:23b1d7aa-920d-4117-8ddd-5874aecdad4f:1",
+    "status": "rewritten",
+    "detail": "Maria has 350 stickers. She gives away 100 stickers to her friend. How many stickers does Maria have now?"
+  },
+  {
+    "ref": "lesson:23b1d7aa-920d-4117-8ddd-5874aecdad4f:4",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:3780352f-78f3-45fe-b1e0-d5bfab641ca4",
+    "status": "rewritten",
+    "detail": "Amy solved 82 - 37 by doing 82 - 40 + 3 = 45. Why does this strategy work?"
+  },
+  {
+    "ref": "diag:e34f3940-44aa-40bd-9497-da367c3899c4",
+    "status": "rewritten",
+    "detail": "Maya solves 78 - 40 by thinking about tens and ones. She says, '7 tens minus 4 tens equals 3 tens. The 8 ones stay the same. So 30 + 8 = 38.' Which statement best explains why Maya's strategy works?"
+  },
+  {
+    "ref": "diag:dead9f76-5ee5-4598-9bc8-51be2ac44064",
+    "status": "rewritten",
+    "detail": "Maria used the 'make a ten' strategy to solve 9 + 7. She broke 7 into 1 and 6, then added 9 + 1 to make 10, and then added 6 more. Why does this strategy work?"
+  },
+  {
+    "ref": "diag:9943887b-842b-4b4f-b559-253f580a5097",
+    "status": "rewritten",
+    "detail": "Tom is breaking apart 495 into hundreds, tens, and ones. He writes: 400 + 90 + 5 = 495. Why does this strategy work? Choose the best explanation."
+  },
+  {
+    "ref": "lesson:c34e79dc-0f0e-4992-a5f7-9cdb740cd01d:0",
+    "status": "rewritten",
+    "detail": "Maria added 47 + 26 by breaking apart the numbers into tens and ones. She wrote: 47 + 26 = (40 + 7) + (20 + 6) = (40 + 20) + (7 + 6) = 60 + 13 = 73. Which statement best explains WHY Maria's strategy works?"
+  },
+  {
+    "ref": "lesson:c34e79dc-0f0e-4992-a5f7-9cdb740cd01d:3",
+    "status": "rewritten",
+    "detail": "Maya added 56 + 27 by thinking 56 + 30 - 3. Which explanation best describes WHY this strategy works?"
+  },
+  {
+    "ref": "lesson:5728fc2b-8578-4e77-afae-7f93b366f069:4",
+    "status": "rewritten",
+    "detail": "Maya has some stickers. Her friend gives her 7 more stickers. Now Maya has 15 stickers. How many stickers did Maya have at the start?"
+  },
+  {
+    "ref": "lesson:24639afd-5fb2-402c-bea5-485115166f93:2",
+    "status": "rewritten",
+    "detail": "Maya has 9 crayons. Her friend gives her 8 more crayons. How many crayons does Maya have now?"
+  },
+  {
+    "ref": "lesson:24639afd-5fb2-402c-bea5-485115166f93:3",
+    "status": "rewritten",
+    "detail": "Maria has 16 crayons. She gives 8 crayons to her friend. How many crayons does Maria have left?"
+  },
+  {
+    "ref": "lesson:24639afd-5fb2-402c-bea5-485115166f93:4",
+    "status": "rewritten",
+    "detail": "Maya has 5 crayons. Her friend gives her 8 more crayons. How many crayons does Maya have now?"
+  },
+  {
+    "ref": "diag:de9072db-6b6c-4267-ad15-735dd7419d41",
+    "status": "difficulty_updated",
+    "detail": "→ 3"
+  },
+  {
+    "ref": "lesson:56b81e60-f764-452f-bf43-f23812653d95:3",
+    "status": "rewritten",
+    "detail": "Ms. Garcia arranges 15 stickers in an array with 3 rows. She puts 5 stickers in each row. Write an addition equation using equal addends to show the total number of stickers."
+  },
+  {
+    "ref": "lesson:0dde70bf-5816-4b59-926b-69d9febcc96e:1",
+    "status": "rewritten",
+    "detail": "Maria arranges 20 stickers in a rectangular array with 4 rows. She puts the same number of stickers in each row. Write an addition equation using equal addends (one addend for each row) that shows the total number of stickers."
+  },
+  {
+    "ref": "lesson:0dde70bf-5816-4b59-926b-69d9febcc96e:3",
+    "status": "rewritten",
+    "detail": "Maria arranges apples in a rectangular array with 4 rows and 5 apples in each row. She writes an addition equation to find the total number of apples: 5 + 5 + 5 + 5. What is the total number of apples in Maria's array?"
+  }
+]

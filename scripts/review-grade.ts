@@ -135,23 +135,34 @@ Include every question even if clean (empty flags).`
     return line
   }).join('\n\n---\n\n')
 
-  try {
-    const response = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 2000,
-      system,
-      messages: [{ role: 'user', content: `Review these ${questions.length} questions for standard ${code}:\n\n${userLines}` }],
-    })
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const response = await anthropic.messages.create({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 2000,
+        system,
+        messages: [{ role: 'user', content: `Review these ${questions.length} questions for standard ${code}:\n\n${userLines}` }],
+      })
 
-    const text = (response.content[0] as { text: string }).text
-    const start = text.indexOf('[')
-    const end = text.lastIndexOf(']')
-    if (start === -1 || end === -1) return []
-    return JSON.parse(text.slice(start, end + 1))
-  } catch (err) {
-    console.error(`  Error reviewing batch for ${code}:`, err)
-    return []
+      const text = (response.content[0] as { text: string }).text
+      const start = text.indexOf('[')
+      const end = text.lastIndexOf(']')
+      if (start === -1 || end === -1) {
+        if (attempt < 3) { await new Promise(r => setTimeout(r, 500)); continue }
+        return []
+      }
+      return JSON.parse(text.slice(start, end + 1))
+    } catch (err) {
+      if (attempt < 3) {
+        process.stdout.write(` [retry ${attempt}]`)
+        await new Promise(r => setTimeout(r, 500))
+      } else {
+        console.error(`\n  Error reviewing batch for ${code} after 3 attempts:`, err)
+        return []
+      }
+    }
   }
+  return []
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────────

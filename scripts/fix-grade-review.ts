@@ -32,21 +32,25 @@ const DIFF_LABEL: Record<number, string> = { 1: 'Easy', 2: 'Medium', 3: 'Hard' }
 
 // ── Items that are actually fine — skip them ──────────────────────────────────
 const SKIP_REFS = new Set([
-  'diag:04f25f19-1006-43a7-b1b0-20fea963033e',     // reviewer self-corrected: 3,450 is correct
-  'diag:0018ce98-990c-426a-898a-73cff11160a2',      // reviewer self-corrected: 8.4 is correct
-  'diag:0bb1cd33-2620-470c-b480-aa9aa157512b',      // reviewer self-corrected: 107.16 is correct
-  'diag:f03a2270-4500-4b87-b6b2-e6cafa89ec3e',      // reviewer: 4.751 is mathematically correct
-  'diag:6afd304c-e1bc-4201-8046-8c68a5a6cdb1',      // formatting only: 69104 is numerically correct
-  'diag:1984d65e-255d-4aa0-a843-e3f622511027',      // formatting only: 406463 is numerically correct
-  'diag:4ffe86e7-11ea-4a8b-a117-68b0a37f6aaf',      // reviewer: "Could be Hard" — borderline, keep
-  'lesson:c56b57b5-0d9b-4cc4-a7a2-417479522c18:3', // reviewer: Hard label is acceptable
-  'lesson:cace74b2-08b8-49f5-b161-7576e6fa5469:2', // reviewer: Hard difficulty is appropriate, content valid
+  'diag:04f25f19-1006-43a7-b1b0-20fea963033e',      // reviewer self-corrected: 3,450 is correct
+  'diag:0018ce98-990c-426a-898a-73cff11160a2',       // reviewer self-corrected: 8.4 is correct
+  'diag:0bb1cd33-2620-470c-b480-aa9aa157512b',       // reviewer self-corrected: 107.16 is correct
+  'diag:f03a2270-4500-4b87-b6b2-e6cafa89ec3e',       // reviewer: 4.751 is mathematically correct
+  'diag:6afd304c-e1bc-4201-8046-8c68a5a6cdb1',       // formatting only: 69104 is numerically correct
+  'diag:1984d65e-255d-4aa0-a843-e3f622511027',       // formatting only: 406463 is numerically correct
+  'lesson:c56b57b5-0d9b-4cc4-a7a2-417479522c18:3',  // reviewer: Hard label acceptable
+  'diag:679696c3-3af7-43dc-8e2a-18607f86a109',       // reviewer verified: 63,000 is correct
+  'lesson:c760eb39-72ea-43b1-a3e8-5dcbc16a02d1:1',  // reviewer verified: 3,450 is correct
+  'diag:8b17538f-fd71-4b47-813e-ea43b8db6446',       // reviewer verified: 10,000,000 is correct
+  'diag:636ea8c1-8ed9-41ef-b3bb-4edd9a1f88ab',       // reviewer verified: 3,000 is correct
+  'diag:7bf44e19-11ff-4803-82bc-de894d3e7099',       // reviewer self-corrected: 350 cm is correct
+  'lesson:050f2228-026e-4772-8e35-34a15e651b7b:2',   // CCSS inclusive def: parallelogram IS trapezoid
 ])
 
 // ── Diag questions where only difficulty label is wrong (content is fine) ─────
 const DIAG_DIFF_UPDATES: Record<string, number> = {
-  'diag:5a8cff26-c89a-40b8-ac24-71c52b5c8c8a': 2, // 5.MD.3: Hard → Medium
-  'diag:0896d3a5-36e1-4e48-a052-0ac9658eda1a': 2, // 5.NBT.3: Hard → Medium
+  'diag:f148a524-43f8-49de-a53f-d3938a195f9d': 2, // 5.OA.3: Hard → Medium
+  'diag:b4a5ba20-2c51-446f-a0f9-fd76e8889f30': 3, // 5.NBT.7: Medium → Hard (computational insight)
 }
 
 // ── Claude rewrite ────────────────────────────────────────────────────────────

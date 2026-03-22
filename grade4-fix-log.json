@@ -1,0 +1,372 @@
+[
+  {
+    "ref": "diag:2a44d98c-3d96-4fdd-8846-221fbfdbff35",
+    "status": "rewritten",
+    "detail": "Look at the rectangle drawn below. Draw a point at the center of the rectangle. Now draw a line segment from the top-left corner to the point you drew. Draw another line segment from the bottom-right corner to the same point. What geometric objects did you draw? Select all that apply."
+  },
+  {
+    "ref": "diag:51c19eab-f406-4fc3-adc0-80490de585ec",
+    "status": "rewritten",
+    "detail": "Look at the two rays below that share a common endpoint. What geometric figure do these two rays form together?"
+  },
+  {
+    "ref": "diag:cceb8dab-7d3b-4182-98f4-e74a12823a77",
+    "status": "rewritten",
+    "detail": "Look at these four shapes: a square, a rectangle, a triangle, and a trapezoid. Which shapes have both parallel sides AND perpendicular lines?"
+  },
+  {
+    "ref": "diag:980ae502-064e-4651-b9fc-05d951d4ff8e",
+    "status": "rewritten",
+    "detail": "Look at the shape below. It has 4 sides. Two sides are parallel to each other, and the other two sides are also parallel to each other. Does this shape have any right angles? Choose yes or no, then explain which type of quadrilateral it is based on its parallel sides."
+  },
+  {
+    "ref": "lesson:725e3e81-61d4-4566-b8fb-c1b67e2a60c6:0",
+    "status": "rewritten",
+    "detail": "Ms. Chen is designing a garden layout. She draws four different quadrilaterals on graph paper and measures their properties:\n\n- Figure A: Has 2 pairs of parallel sides, 4 right angles, and all 4 sides are equal length\n- Figure B: Has 2 pairs of parallel sides, 4 right angles, but only opposite sides are equal length\n- Figure C: Has 1 pair of parallel sides and no right angles\n- Figure D: Has no parallel sides and only 1 right angle\n\nWhich figures can be classified as rectangles?"
+  },
+  {
+    "ref": "lesson:725e3e81-61d4-4566-b8fb-c1b67e2a60c6:1",
+    "status": "rewritten",
+    "detail": "A shape has 4 sides with opposite sides that are parallel to each other. Two of its angles are right angles, and two are not. Which statement correctly describes this shape?\n\nA) It is a rectangle because all angles are right angles.\nB) It is a parallelogram because opposite sides are parallel, but NOT a rectangle because not all angles are right angles.\nC) It is a rectangle and a parallelogram.\nD) It is none of these shapes."
+  },
+  {
+    "ref": "lesson:725e3e81-61d4-4566-b8fb-c1b67e2a60c6:2",
+    "status": "rewritten",
+    "detail": "A carpenter is building four different picture frames. Frame A is a square, Frame B is a rectangle, Frame C is a rhombus, and Frame D is a trapezoid. Which frames always have exactly 4 right angles?"
+  },
+  {
+    "ref": "lesson:725e3e81-61d4-4566-b8fb-c1b67e2a60c6:3",
+    "status": "rewritten",
+    "detail": "A four-sided shape has 4 equal sides. Two pairs of opposite sides are parallel to each other. The shape has no right angles. Which two-dimensional figure is it?"
+  },
+  {
+    "ref": "lesson:725e3e81-61d4-4566-b8fb-c1b67e2a60c6:4",
+    "status": "rewritten",
+    "detail": "A triangle has one 90-degree angle at the top vertex. Based on this, which statement correctly describes this triangle?"
+  },
+  {
+    "ref": "lesson:70b0bfd8-be37-4ae3-bd88-83c68861bc53:2",
+    "status": "rewritten",
+    "detail": "Look at these two shapes: Shape A is a square and Shape B is a rectangle that is not a square. How are they the same when it comes to parallel lines and right angles?"
+  },
+  {
+    "ref": "lesson:b11fe71e-e91a-4023-8c6a-08c48cc0637a:1",
+    "status": "rewritten",
+    "detail": "Which of these figures has at least one line of symmetry that you could fold along to make matching parts?"
+  },
+  {
+    "ref": "lesson:b11fe71e-e91a-4023-8c6a-08c48cc0637a:3",
+    "status": "rewritten",
+    "detail": "An isosceles triangle has two sides that are the same length. How many lines of symmetry does an isosceles triangle have?"
+  },
+  {
+    "ref": "diag:03905093-1dea-40a4-a5da-b3bc5ea983fb",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "lesson:50d89f0e-91e9-4638-8e40-cbf5c27b1965:0",
+    "status": "rewritten",
+    "detail": "A carpenter is building a bookshelf. The shelf needs to be 4 feet long, and she wants to divide it into 3 equal sections using dividers. Each divider is 2 inches wide. Express the total length needed for the shelf and dividers in inches, then determine how many inches of actual shelf space will be available for books."
+  },
+  {
+    "ref": "diag:b07c56f7-b80a-44f2-8232-7484f789a66b",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:499d8aab-4c81-4dd9-8c7b-18640ae7dc4c",
+    "status": "rewritten",
+    "detail": "Mrs. Chen buys 3 bottles of juice for a party. Each bottle holds 2 liters. She pours all the juice into cups that hold 1 liter each. How many cups can she fill completely?"
+  },
+  {
+    "ref": "lesson:890bf4dc-83aa-4364-a4cd-f1a999de6d87:1",
+    "status": "rewritten",
+    "detail": "A water tank holds 60 gallons. Water flows in at 4 gallons per minute. How many minutes will it take to completely fill the tank?"
+  },
+  {
+    "ref": "diag:7e4c4c91-ee33-4e74-96e5-b11c44dba78e",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "lesson:14190ba0-a041-4002-8d2b-38f4c25186cd:1",
+    "status": "rewritten",
+    "detail": "Mr. Garcia is building a rectangular deck. He knows the deck will have a perimeter of 56 feet and one side will be 12 feet long. What is the area of the deck in square feet?"
+  },
+  {
+    "ref": "lesson:f7faf0a5-79f6-4e35-ac08-9c134a81c84d:4",
+    "status": "rewritten",
+    "detail": "A rectangular garden has a length of 11 feet and a width of 7 feet. Maria wants to build a fence around the garden. How many feet of fencing does she need?"
+  },
+  {
+    "ref": "lesson:aa2fa01b-fe06-426a-9f44-bd07fd0a03a3:3",
+    "status": "rewritten",
+    "detail": "A teacher measured rainfall at school over 10 days and made a line plot. The line plot shows: 1/4 inch (2 days), 1/2 inch (3 days), 3/4 inch (4 days), and 1 inch (1 day). What is the difference in rainfall between the rainiest day and the least rainy day?"
+  },
+  {
+    "ref": "lesson:aa2fa01b-fe06-426a-9f44-bd07fd0a03a3:4",
+    "status": "rewritten",
+    "detail": "A teacher measured the lengths of ribbon pieces using a ruler. The line plot shows the measurements: 1/2 inch (2 pieces), 3/4 inch (3 pieces), and 1/8 inch (1 piece). What is the total length of all the ribbon pieces combined?"
+  },
+  {
+    "ref": "lesson:ee1d7d50-5140-4982-9196-88776d330fc7:4",
+    "status": "rewritten",
+    "detail": "A line plot shows the lengths of ribbon pieces measured in inches: 1/2, 1/4, 1/2, 1/8, 1/2. How many pieces measure 1/2 inch?"
+  },
+  {
+    "ref": "diag:d97854d7-8d17-4145-b777-6d9247a70080",
+    "status": "rewritten",
+    "detail": "Maria used a protractor to measure an angle in her drawing. The angle measured 135 degrees. Is this angle closer to a right angle (90°), closer to a straight angle (180°), or exactly halfway between them?"
+  },
+  {
+    "ref": "diag:e54c37e4-5310-4cea-b4d0-dbf967a00621",
+    "status": "rewritten",
+    "detail": "Maya uses a protractor to measure an angle in her geometry folder. The protractor shows the angle measures 65 whole degrees. She then sketches a new angle that is 25 degrees larger than the angle she measured. What is the measure of the angle Maya sketched?"
+  },
+  {
+    "ref": "diag:8e83f44b-5a03-4669-8500-5191532d8fbb",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:04eb0a5a-d1da-4ccb-885f-f13ad544d877",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "lesson:e4b53258-840c-4878-9266-588b26afab36:0",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:e4b53258-840c-4878-9266-588b26afab36:1",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:e4b53258-840c-4878-9266-588b26afab36:2",
+    "status": "rewritten",
+    "detail": "Marcus uses a protractor to measure an angle in his geometry drawing. The protractor shows the angle measures 55 degrees. Which of the following best describes the size of this angle?"
+  },
+  {
+    "ref": "lesson:e4b53258-840c-4878-9266-588b26afab36:4",
+    "status": "rewritten",
+    "detail": "Maria uses a protractor to measure an angle in her geometry homework. She places the protractor's center at the angle's vertex and aligns one ray with the 0° mark. The other ray lines up with the 65° mark on the protractor. What is the measure of the angle in degrees?"
+  },
+  {
+    "ref": "lesson:4db51b47-4e51-487c-90fd-cdcd3dbe2bab:0",
+    "status": "rewritten",
+    "detail": "Maria used a protractor to measure three angles in her geometry set. She found angles measuring 45°, 72°, and 38°. She wants to sketch a fourth angle that is 15° larger than the sum of the two smallest angles she measured. What should be the measure of the fourth angle she sketches?"
+  },
+  {
+    "ref": "lesson:4db51b47-4e51-487c-90fd-cdcd3dbe2bab:2",
+    "status": "rewritten",
+    "detail": "Maya used a protractor to measure three angles in her geometry project. The first angle measured 48 degrees. The second angle measured 35 degrees. She then sketched a third angle that is the sum of the first two angles. However, she made an error and her sketch was actually 12 degrees less than it should have been. Using a protractor, what should the measure of Maya's third angle have been?"
+  },
+  {
+    "ref": "lesson:4db51b47-4e51-487c-90fd-cdcd3dbe2bab:3",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:2c12b823-373e-4041-b515-f99f6df15b9d:3",
+    "status": "rewritten",
+    "detail": "Use your protractor to measure the angle shown. What is the measure of the angle in whole degrees?"
+  },
+  {
+    "ref": "diag:d07d3b20-4b58-44fa-9bef-e4a07a807737",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:c4cce1b6-b85d-4dbc-887c-72448771d880",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "lesson:c0be11db-2a81-4b07-84d5-ec0322af7eed:4",
+    "status": "rewritten",
+    "detail": "Maya is building a corner shelf. One angle is split into two parts. The first part measures 35°. The second part measures 55°. What is the measure of the whole angle?"
+  },
+  {
+    "ref": "lesson:1fb111e3-2a11-4f63-9cff-afa5ff18a2e0:0",
+    "status": "rewritten",
+    "detail": "At the community center, three hallways meet at a corner, creating three angles that together form a straight line (180°). A facilities manager measures two of the angles: one angle is 52° and another angle is 67°. These two angles are adjacent and do not overlap. What is the measure of the third angle that completes the straight line?"
+  },
+  {
+    "ref": "lesson:1fb111e3-2a11-4f63-9cff-afa5ff18a2e0:1",
+    "status": "rewritten",
+    "detail": "At the corner of a playground, three straight paths meet and create angles. One path divides the corner into two angles: the first angle measures 28°, and the second angle measures 37°. A third path further divides the second angle into two smaller angles. If one of these smaller angles is 15°, what is the measure of the other smaller angle?"
+  },
+  {
+    "ref": "lesson:1fb111e3-2a11-4f63-9cff-afa5ff18a2e0:2",
+    "status": "rewritten",
+    "detail": "At Riverside Park, three pathways meet at point P. Pathway A and Pathway B form an angle of 128°. Pathway B and Pathway C form an angle of 95°. All three pathways spread out from point P without overlapping. What is the measure of the angle formed by Pathway A and Pathway C?"
+  },
+  {
+    "ref": "lesson:1fb111e3-2a11-4f63-9cff-afa5ff18a2e0:3",
+    "status": "rewritten",
+    "detail": "At the playground, three angles are formed around a point where two sticks meet. The first angle measures 47°. The second angle measures 58°. All three angles together form a complete rotation, which measures 360°. What is the measure of the third angle?"
+  },
+  {
+    "ref": "diag:50f07d06-5882-4ac8-928f-579068d656fb",
+    "status": "rewritten",
+    "detail": "In the number 440, how many times greater is the 4 in the hundreds place than the 4 in the tens place?"
+  },
+  {
+    "ref": "diag:3c3f4bca-248d-473a-976e-a91bdd95a05f",
+    "status": "rewritten",
+    "detail": "In the number 7,700, the digit 7 appears in the thousands place and in the hundreds place. How many times greater is the value of the 7 in the thousands place than the value of the 7 in the hundreds place?"
+  },
+  {
+    "ref": "diag:bc599d15-61a9-4f38-972d-93d54ba8dae3",
+    "status": "rewritten",
+    "detail": "The digit 5 appears in both 50,000 and 5,000. How many times greater is the value of the 5 in 50,000 compared to the value of the 5 in 5,000?"
+  },
+  {
+    "ref": "diag:667582cf-1f16-4064-a27d-537fedff1a8f",
+    "status": "rewritten",
+    "detail": "In the number 333,333, how many times greater is the value of the digit in the hundred-thousands place than the value of the digit in the hundreds place?"
+  },
+  {
+    "ref": "lesson:b631ee71-2cdf-42c3-ab75-0246fa08f6b5:0",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:b631ee71-2cdf-42c3-ab75-0246fa08f6b5:3",
+    "status": "rewritten",
+    "detail": "Write the number in expanded form: 594,999"
+  },
+  {
+    "ref": "lesson:6b301db3-eaf3-4b5f-8c65-9f8cd5839ca1:3",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:8c8baa94-79c6-405b-bcb9-66c3678ed871",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:22aebdb5-cfcd-4ca0-99ab-dd8f215d6e43",
+    "status": "rewritten",
+    "detail": "Maria is making a pizza with equal slices. She eats 2 out of 4 slices. Draw or explain how you can show that 2/4 is the same amount as 4/8 using visual models. What number do you multiply both the numerator and denominator of 2/4 by to get 4/8?"
+  },
+  {
+    "ref": "diag:0ea40179-f7fb-42db-a038-c1477a61d2dc",
+    "status": "rewritten",
+    "detail": "Maria has a pizza cut into 4 equal slices. She eats 1 slice. Which fraction shows an equivalent amount of pizza if the same pizza were cut into 8 equal slices instead? Draw or explain how the number and size of parts change, but the amount of pizza stays the same."
+  },
+  {
+    "ref": "lesson:14c904f8-4426-4f32-b601-5bf016a55b4d:1",
+    "status": "rewritten",
+    "detail": "Maria has a chocolate bar divided into 4 equal pieces. She ate 1 piece. Her friend Jake has a chocolate bar of the same size divided into 8 equal pieces. He ate 2 pieces. Draw or describe how you know Maria and Jake ate the same amount of chocolate. Explain why 1/4 is equivalent to 2/8 using the number and size of the parts."
+  },
+  {
+    "ref": "lesson:14c904f8-4426-4f32-b601-5bf016a55b4d:3",
+    "status": "rewritten",
+    "detail": "Maria is making a quilt with fabric squares. She colors 2/3 of her quilt pieces blue. She decides to cut each piece into 4 equal smaller pieces so she can use them for a more detailed pattern. Using a visual model in your mind, if she multiplies both the numerator and denominator of 2/3 by 4, what equivalent fraction does she get? Explain why the number and size of the blue pieces change, but the amount of the quilt that is blue stays the same."
+  },
+  {
+    "ref": "lesson:bdd44a5b-4224-4ac9-91b5-c8b2f8e97c01:1",
+    "status": "rewritten",
+    "detail": "Draw or describe a visual model showing why 2/3 is equivalent to 4/6. Explain how the number of parts and the size of each part are different, even though the fractions are the same size."
+  },
+  {
+    "ref": "lesson:bdd44a5b-4224-4ac9-91b5-c8b2f8e97c01:4",
+    "status": "rewritten",
+    "detail": "Maria has a chocolate bar divided into 10 equal pieces. She eats 6 pieces. Her friend has a chocolate bar of the same size divided into 5 equal pieces. How many pieces does her friend need to eat to have eaten the same amount of chocolate as Maria? Use the visual model to explain why 6/10 and your answer over 5 are equivalent fractions."
+  },
+  {
+    "ref": "lesson:58d03fb4-7224-468a-9995-6ed3e49fd27e:4",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:c8c097fb-8c3e-4007-904a-18377abc682c:2",
+    "status": "rewritten",
+    "detail": "Maria has 3 2/5 pounds of flour. She uses 1 4/5 pounds to bake cookies. How many pounds of flour does she have left?"
+  },
+  {
+    "ref": "lesson:9c457450-4bab-40c1-aa9b-f977b914a686:4",
+    "status": "rewritten",
+    "detail": "Maria is making bracelets for her friends. Each bracelet uses 3/8 pound of beads. If she makes 5 bracelets, how many pounds of beads does she use in total? Write your answer as a mixed number."
+  },
+  {
+    "ref": "diag:014987b0-92f3-42a0-ac07-1967302af756",
+    "status": "rewritten",
+    "detail": "A pencil costs 75 cents. Write 0.75 dollars as a fraction with a denominator of 100."
+  },
+  {
+    "ref": "lesson:598ee16a-494b-415a-8e73-205c813c12a0:3",
+    "status": "rewritten",
+    "detail": "Write 2.50 as a mixed number with a denominator of 100."
+  },
+  {
+    "ref": "lesson:e30b1784-d39c-470f-8283-46137e7c0d0c:1",
+    "status": "rewritten",
+    "detail": "A pencil costs $0.75. Write this amount as a fraction with a denominator of 100."
+  },
+  {
+    "ref": "diag:1271aa88-fd49-432d-9307-630f776dd7d4",
+    "status": "rewritten",
+    "detail": "Marcus measured two pieces of string. One piece is 0.48 meters long. The other piece is 0.54 meters long. Which comparison is correct? Use > or < to show which piece of string is longer."
+  },
+  {
+    "ref": "lesson:8ad2dd3f-4d07-45fc-9330-6366a7e3792c:2",
+    "status": "rewritten",
+    "detail": "Compare the two decimals: 0.89 and 0.98. Which symbol makes the statement true? 0.89 ___ 0.98"
+  },
+  {
+    "ref": "lesson:6a404159-559d-4229-953f-730770c5b2f0:1",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:6a404159-559d-4229-953f-730770c5b2f0:4",
+    "status": "rewritten",
+    "detail": "Sarah is comparing two prices at the store. One item costs $0.68 and another costs $0.86. Which comparison statement is correct, and explain your thinking using the place values."
+  },
+  {
+    "ref": "diag:67b932c0-249c-45ff-b14e-ed36294e5a8f",
+    "status": "rewritten",
+    "detail": "Interpret this equation as a comparison: 3 × 6 = 18. Which statement is correct?"
+  },
+  {
+    "ref": "diag:c13db827-70f2-4f95-91e2-6a199cccd4dc",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:bdefb979-c830-4586-b6d6-5da08776ca28",
+    "status": "rewritten",
+    "detail": "Liam ran 4 miles. His dad ran 7 times as far as Liam. Which statement and equation correctly describe this relationship?"
+  },
+  {
+    "ref": "diag:817a918b-21da-4618-927c-45e483893617",
+    "status": "rewritten",
+    "detail": "A bakery made 8 chocolate chip cookies. They made oatmeal cookies that are 9 times as many as the chocolate chip cookies. How many oatmeal cookies did they make? Then write a multiplication equation that shows this comparison."
+  },
+  {
+    "ref": "lesson:4993cb6f-e4ce-47c1-a93e-4c4cbdad5a4f:1",
+    "status": "rewritten",
+    "detail": "Marcus has 8 toy cars. His sister has 72 toy cars. Which statement correctly compares the number of toy cars they have?"
+  },
+  {
+    "ref": "lesson:4993cb6f-e4ce-47c1-a93e-4c4cbdad5a4f:3",
+    "status": "rewritten",
+    "detail": "Marcus has 4 times as many baseball cards as his friend Tyler. Which equation represents this multiplicative comparison if Marcus has 36 cards?"
+  },
+  {
+    "ref": "lesson:93336242-9d19-44d4-a744-12f4a0800ed9:2",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:60457479-2477-483e-b71f-95b7a7ea7166",
+    "status": "rewritten",
+    "detail": "Find all the factor pairs for 12. Which list shows all of them?"
+  }
+]

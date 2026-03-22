@@ -1,0 +1,257 @@
+[
+  {
+    "ref": "diag:f40ce343-932d-418c-886a-3d6917a65290",
+    "status": "rewritten",
+    "detail": "A container holds 5 liters of juice. Maria pours out 2 liters for a party and then pours out 1 more liter for her family. How many liters of juice are left in the container?"
+  },
+  {
+    "ref": "diag:014e2f6b-14a2-4c35-8487-f43732cb5b31",
+    "status": "rewritten",
+    "detail": "An apple has a mass of 150 grams. How many grams do 4 apples weigh?"
+  },
+  {
+    "ref": "diag:5b487490-af73-48cd-a31b-adb3915cc1f7",
+    "status": "rewritten",
+    "detail": "A bucket holds 8 liters of water. You fill 3 identical buckets. How many liters of water do you have in total?"
+  },
+  {
+    "ref": "lesson:84fdb280-d35d-44f3-aac3-fd8cd3a049ac:2",
+    "status": "rewritten",
+    "detail": "A container holds 1 liter of juice. How many liters of juice are in the container?"
+  },
+  {
+    "ref": "lesson:42463670-3c93-4d54-b52b-85a09c33e6f2:4",
+    "status": "rewritten",
+    "detail": "A cat weighs 4 kg. A dog weighs 9 kg. How much more does the dog weigh than the cat?"
+  },
+  {
+    "ref": "lesson:b7511a89-4f3e-47cd-92cf-e240fccc3f6c:1",
+    "status": "rewritten",
+    "detail": "A bakery has 8 liters of milk. They use 3 liters to make cheese and 2 liters to make yogurt. How many liters of milk are left?"
+  },
+  {
+    "ref": "lesson:b7511a89-4f3e-47cd-92cf-e240fccc3f6c:4",
+    "status": "rewritten",
+    "detail": "Five oranges each weigh 200 grams. An empty basket weighs 300 grams. What is the total mass in grams when all five oranges are placed in the basket?"
+  },
+  {
+    "ref": "diag:b67cd74d-e491-462b-8318-013e1736af25",
+    "status": "rewritten",
+    "detail": "A pencil is 5 and 1/2 inches long. What is the length of the pencil in inches?"
+  },
+  {
+    "ref": "diag:e0a7deea-f66d-462e-8db0-9bd850400de0",
+    "status": "rewritten",
+    "detail": "Mrs. Chen measured the lengths of 8 pencils in her classroom using a ruler marked with halves and fourths of an inch. Here are the measurements: 4 1/4 inches, 4 1/2 inches, 4 3/4 inches, 5 inches, 5 1/4 inches, 5 1/4 inches, 5 1/2 inches, and 6 inches. Create a line plot with these measurements. How many pencils measured 5 1/4 inches or longer?"
+  },
+  {
+    "ref": "lesson:babbe592-17e2-4c2f-aa4d-5ec2ce25d770:0",
+    "status": "rewritten",
+    "detail": "A pencil is 5 and 1/2 inches long. What is this length as a number?"
+  },
+  {
+    "ref": "lesson:ea251079-311e-4a2b-bdc5-ad585612eb75:1",
+    "status": "rewritten",
+    "detail": "Four students measured the lengths of their pencils using a ruler marked with halves and fourths of an inch. Here are their measurements: 4 1/4 inches, 4 3/4 inches, 5 1/2 inches, and 6 inches. Create a line plot with these measurements and mark each student's pencil with an X. How many X's should be placed on the line plot?"
+  },
+  {
+    "ref": "lesson:e5969d20-bfe5-4dc6-a25e-f72309d74aa7:0",
+    "status": "rewritten",
+    "detail": "A rectangle is 3 units long and 5 units wide. What is the area of the rectangle?"
+  },
+  {
+    "ref": "lesson:0d9f2c10-4ea8-4422-a0f0-2a6d67bc5071:1",
+    "status": "rewritten",
+    "detail": "A rectangular garden has a length of 6 feet and a width of (4 + 5) feet. Which equation shows that the total area equals the sum of two smaller rectangles?"
+  },
+  {
+    "ref": "lesson:0d9f2c10-4ea8-4422-a0f0-2a6d67bc5071:3",
+    "status": "rewritten",
+    "detail": "A rectangular garden measures 12 feet by 8 feet. Inside the garden, there is a rectangular flower bed that measures 3 feet by 4 feet. What is the area of the garden that is NOT covered by the flower bed?"
+  },
+  {
+    "ref": "lesson:0d9f2c10-4ea8-4422-a0f0-2a6d67bc5071:4",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:a80b1d9b-0b79-4910-853a-dd3c48ac102b",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:4197de43-e60b-46f6-a2e8-037a683a9153:1",
+    "status": "rewritten",
+    "detail": "Maria is organizing a class bake sale. She counted 555 cookies that were baked. She needs to round this number to the nearest 10 to order boxes, and to the nearest 100 to estimate for her report. What is 555 rounded to the nearest 10 and to the nearest 100?"
+  },
+  {
+    "ref": "diag:50cef00a-0b5b-408a-9e12-f06412e1e615",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "diag:bca718be-05ab-4449-88ac-c058d75cf46c",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "lesson:12ecf3d7-feff-44c1-8e0d-d21b0d960646:0",
+    "status": "rewritten",
+    "detail": "What is 3 × 40?"
+  },
+  {
+    "ref": "lesson:12ecf3d7-feff-44c1-8e0d-d21b0d960646:1",
+    "status": "rewritten",
+    "detail": "What is 7 × 40?"
+  },
+  {
+    "ref": "lesson:12ecf3d7-feff-44c1-8e0d-d21b0d960646:3",
+    "status": "rewritten",
+    "detail": "What is 3 × 50?"
+  },
+  {
+    "ref": "lesson:407f739d-0a98-4862-ac70-5490165d718a:3",
+    "status": "rewritten",
+    "detail": "On a number line from 0 to 1, you need to mark the point for 3/8. First, explain how many equal parts you need to divide the interval from 0 to 1 into. Then, starting at 0, how many of those equal parts do you count to reach 3/8?"
+  },
+  {
+    "ref": "diag:ec6af9fe-12f4-4ff2-9a72-7dbab44c988e",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:95ec47ad-510b-4b4d-941c-710c2e99c5d2",
+    "status": "rewritten",
+    "detail": "Maria has two ribbon pieces. One ribbon is 3/4 of a yard long. The other ribbon is 3/8 of a yard long. Which comparison is true?"
+  },
+  {
+    "ref": "lesson:20265430-bfb9-46e5-a8d2-a342c037e6af:4",
+    "status": "rewritten",
+    "detail": "Maya ate 3/8 of a pizza and her brother ate 5/8 of the same pizza. Who ate more pizza? Use the > or < symbol to compare the fractions."
+  },
+  {
+    "ref": "diag:80f3004f-df39-49ca-84e1-e69819327ae0",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:fb3bcdd3-f563-431b-aecb-805ab7a23c47",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:42fc8308-9057-4fc0-9f90-e3d80edc8661",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:8c3a2b33-48f5-40a4-b1b4-4d91cdc40389:0",
+    "status": "rewritten",
+    "detail": "A farmer has 54 eggs. He puts 9 eggs in each carton. How many cartons does he fill?"
+  },
+  {
+    "ref": "lesson:9f47dcd2-b43d-4a98-8766-12add938be61:4",
+    "status": "rewritten",
+    "detail": "A school cafeteria has 36 students who need to sit down. Each table seats 4 students. How many tables are needed for all the students? Then, the cafeteria adds 2 more empty tables for extra space. How many tables are there in total now?"
+  },
+  {
+    "ref": "diag:186013a3-4f17-47c7-9bd4-dd0486eaeb6d",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:f78c29e2-551b-452a-9851-ecba25a8b184",
+    "status": "rewritten",
+    "detail": "Maria arranged chairs in rows for a classroom party. She has 56 chairs total arranged in 7 equal rows. Write the equation 7 × ? = 56 and find the unknown number to show how many chairs are in each row."
+  },
+  {
+    "ref": "lesson:20d887bf-d4df-40b0-9bc4-fcd38823a679:2",
+    "status": "rewritten",
+    "detail": "Marcus is arranging 56 trading cards into equal piles. He makes 7 piles with the same number of cards in each pile. Write the multiplication equation 7 × ? = 56. What number goes in the box to make the equation true?"
+  },
+  {
+    "ref": "lesson:20d887bf-d4df-40b0-9bc4-fcd38823a679:3",
+    "status": "rewritten",
+    "detail": "Maria has 64 stickers to arrange in equal rows. She wants to make 8 equal rows with the same number of stickers in each row. How many stickers will be in each row? Write the equation ? × 8 = 64 and find the unknown number."
+  },
+  {
+    "ref": "lesson:20d887bf-d4df-40b0-9bc4-fcd38823a679:4",
+    "status": "rewritten",
+    "detail": "Find the unknown number that makes this equation true: ? ÷ 8 = 7"
+  },
+  {
+    "ref": "lesson:ad0bfc26-2b9b-4cf5-88c7-c0783e356a42:3",
+    "status": "rewritten",
+    "detail": "Marcus has 63 trading cards. He wants to put them equally into 7 piles. How many cards will be in each pile? Write and solve the division equation: 63 ÷ 7 = ?"
+  },
+  {
+    "ref": "lesson:fa8f628e-f726-4ba4-82e2-c2e5fe8ab2a7:2",
+    "status": "rewritten",
+    "detail": "Which number sentence shows the commutative property of multiplication? (Both should equal the same amount.)"
+  },
+  {
+    "ref": "lesson:fa8f628e-f726-4ba4-82e2-c2e5fe8ab2a7:3",
+    "status": "rewritten",
+    "detail": "Which number sentence shows the same product as 5 × 3?"
+  },
+  {
+    "ref": "lesson:fa0830db-62e2-4889-9db5-d9c40b5d94c2:4",
+    "status": "rewritten",
+    "detail": "Maya needs to find 8 × 7 using the distributive property. She breaks 7 into 5 + 2. What multiplication problems should she solve, and what is the final answer?\n\nA) 8 × 5 = 40 and 8 × 2 = 16, then add them together\nB) 8 + 5 = 13 and 8 + 2 = 10, then multiply\nC) 8 × 7 = 56 directly without breaking it apart\nD) 5 × 2 = 10, then 8 × 10 = 80"
+  },
+  {
+    "ref": "diag:2eb10f1d-addc-4671-95c9-f8cb1874fab8",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "diag:653266fe-bbe4-47e6-a148-1db6fba84c6c",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "diag:35a2dc9b-89cd-4f09-8716-7a0c2d4406cf",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "lesson:c64dd64a-6cca-4459-bd0f-8894cc5b91d0:0",
+    "status": "rewritten",
+    "detail": "Marcus has 6 bags of marbles. Each bag contains 8 marbles. How many marbles does Marcus have in total?"
+  },
+  {
+    "ref": "lesson:c64dd64a-6cca-4459-bd0f-8894cc5b91d0:1",
+    "status": "rewritten",
+    "detail": "Maria has 63 stickers. She wants to put them into 9 equal groups to share with her friends. How many stickers will be in each group?"
+  },
+  {
+    "ref": "lesson:c64dd64a-6cca-4459-bd0f-8894cc5b91d0:2",
+    "status": "rewritten",
+    "detail": "Maria has 7 flower pots. She plants 8 seeds in each pot. How many seeds did Maria plant in total?"
+  },
+  {
+    "ref": "lesson:c64dd64a-6cca-4459-bd0f-8894cc5b91d0:3",
+    "status": "rewritten",
+    "detail": "Maya has 72 stickers. She wants to put them equally into 8 envelopes. How many stickers will go in each envelope?"
+  },
+  {
+    "ref": "lesson:c64dd64a-6cca-4459-bd0f-8894cc5b91d0:4",
+    "status": "rewritten",
+    "detail": "Maya has 6 baskets. She puts 9 apples in each basket. How many apples does Maya have in total?"
+  },
+  {
+    "ref": "lesson:8a28a998-0616-43c6-bc7b-363c15be3cfe:1",
+    "status": "rewritten",
+    "detail": "Maria has 8 packages of stickers. Each package contains 9 stickers. Her friend gives her 3 more packages with 8 stickers each. How many stickers does Maria have in total?"
+  },
+  {
+    "ref": "lesson:8a28a998-0616-43c6-bc7b-363c15be3cfe:2",
+    "status": "rewritten",
+    "detail": "Maria has 96 stickers. She wants to put them into 8 equal piles to give to her friends. How many stickers will be in each pile? Then, if she decides to combine 3 piles together, how many stickers will be in the combined pile?"
+  },
+  {
+    "ref": "lesson:8a28a998-0616-43c6-bc7b-363c15be3cfe:4",
+    "status": "rewritten",
+    "detail": "Maria has 8 boxes of crayons. Each box contains 9 crayons. She gives away 28 crayons to her friends. How many crayons does Maria have left?"
+  }
+]

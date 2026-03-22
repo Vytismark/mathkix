@@ -1,0 +1,447 @@
+[
+  {
+    "ref": "diag:320e3734-b9de-4627-9ef1-71d52c6f71f6",
+    "status": "rewritten",
+    "detail": "Point A is located at (2, 5) and point B is located at (2, 9) on a coordinate grid. Which statement correctly describes the relationship between these two points?"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:0",
+    "status": "rewritten",
+    "detail": "On a coordinate plane, point A is at (3, 4), point B is at (6, 2), and point C is at (1, 7). Which point is located at the ordered pair (6, 2)?"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:1",
+    "status": "rewritten",
+    "detail": "On a coordinate plane, point P is at (4, 6) and point Q is at (9, 6). Point R is at (9, 1). Using ordered pairs, write the coordinates for point S so that points P, Q, R, and S are the four corners of a rectangle."
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:2",
+    "status": "rewritten",
+    "detail": "On a coordinate grid, point P is located at (3, 5) and point Q is located at (3, 9). Point R is located on the same vertical line as both P and Q, but exactly halfway between them. What ordered pair names the location of point R?"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:3",
+    "status": "rewritten",
+    "detail": "On a coordinate grid, a park entrance is at the origin (0, 0). A playground is 5 units east and 3 units north of the entrance. A fountain is 2 units west and 7 units north of the entrance. If you start at the playground and move 7 units west and 4 units south, what ordered pair describes your new location?"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:4",
+    "status": "rewritten",
+    "detail": "On a coordinate plane, three points are marked. Point A is at (4, 6), Point B is at (7, 2), and Point C is at (5, 5). If you start at the origin and move 7 units right and 2 units up, which point do you land on?"
+  },
+  {
+    "ref": "diag:68a298ea-de8e-415e-9889-6306fd2b334f",
+    "status": "rewritten",
+    "detail": "Amy is saving money for a bicycle. The coordinate points (0, 20), (1, 25), (2, 30), and (3, 35) show how much money in dollars she has saved after each week. If Amy graphs these points on a coordinate plane with weeks on the x-axis and dollars on the y-axis, what is the y-coordinate of the point that represents how much money Amy has saved after 5 weeks?"
+  },
+  {
+    "ref": "diag:a401853b-5290-4893-8a93-d04a93374174",
+    "status": "rewritten",
+    "detail": "Maya worked for 3 hours and earned $15. Which point on a coordinate plane shows this information, where the x-axis is hours and the y-axis is dollars earned?"
+  },
+  {
+    "ref": "diag:16b1612e-2b2a-4daf-affc-633ed410b6f3",
+    "status": "rewritten",
+    "detail": "Marcus is saving money for a new bicycle. He saves $4 each week. The table shows how much money he has saved at the end of each week:\n\nWeek 1: $4\nWeek 2: $8\nWeek 3: $12\nWeek 4: $16\n\nPlot these points on a coordinate plane where the x-coordinate is the week number and the y-coordinate is the amount saved in dollars. Which ordered pair represents the amount Marcus will have saved at the end of week 5?"
+  },
+  {
+    "ref": "diag:ad62efc5-cbb0-47ad-9ce7-6badc6442091",
+    "status": "rewritten",
+    "detail": "Sarah is planning a rectangular garden. She marks one corner of the garden at the point (2, 3) on a coordinate plane where each unit represents 1 foot. The opposite corner of her garden is at the point (7, 8). Which statement correctly interprets what these coordinates tell us about Sarah's garden?"
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:1",
+    "status": "rewritten",
+    "detail": "Maria is saving money for a new bicycle. She saves $4 each week. The points (1,4), (2,8), (3,12), and (4,16) show how much money she has saved after 1, 2, 3, and 4 weeks. If Maria continues this pattern, how much money will she have saved after 5 weeks? Graph the point that shows her savings after 5 weeks."
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:3",
+    "status": "rewritten",
+    "detail": "Maria is tracking how many items she sells and the total money she makes. She graphed two points on a coordinate plane: (2, 6) and (5, 15), where x represents the number of items sold and y represents the total dollars earned. What is the y-coordinate when x = 4?"
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:4",
+    "status": "rewritten",
+    "detail": "Marcus is tracking his savings. He starts with $10 and saves $5 each week. Plot the points for his savings at weeks 0, 1, 2, and 3 on a coordinate grid. What are the coordinates of the point that shows his savings after 2 weeks?"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:0",
+    "status": "rewritten",
+    "detail": "Amy tracks her weekly savings on a coordinate graph. She starts with $20 and saves $5 each week. She plots points where the x-coordinate is the week number and the y-coordinate is her total money in dollars. Which point should Amy plot for week 6?"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:1",
+    "status": "rewritten",
+    "detail": "Marcus is planning a rectangular garden in his backyard. He marks one corner at the point (2, 3) and the opposite corner at (7, 8) on a coordinate grid where each unit represents 1 foot. He wants to plant flowers along the edges of the rectangle. Based on the coordinates of these two corners, what are the length and width of his garden in feet?"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:2",
+    "status": "rewritten",
+    "detail": "A bakery tracks the cost of buying cookies. The points (1, 2), (2, 4), (3, 6), and (4, 8) are plotted on a coordinate plane, where the x-coordinate is the number of cookies and the y-coordinate is the cost in dollars. Plot these points and use them to find the cost of 7 cookies."
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:3",
+    "status": "rewritten",
+    "detail": "A swimming pool starts with 200 gallons of water. Every hour, 50 more gallons are added. Plot these points on a coordinate grid where the x-axis shows time in hours and the y-axis shows total gallons of water in the pool: (0, 200), (1, 250), (2, 300), and (3, 350). After 3 hours, how many gallons of water will be in the pool?"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:4",
+    "status": "rewritten",
+    "detail": "Marcus is tracking two delivery routes on a coordinate grid. Route A starts at the origin (0, 0) and passes through the point (2, 6). Route B starts at the point (0, 4) and passes through the point (3, 10). If both routes are straight lines, at which point do the two routes intersect?"
+  },
+  {
+    "ref": "lesson:e7ee8dfd-980a-4d70-9034-45ae1123e6bc:4",
+    "status": "rewritten",
+    "detail": "A rhombus is a quadrilateral with all four sides equal in length. A square is a special type of rhombus where all four angles are right angles. Which statement is true about all squares based on what we know about rhombuses?"
+  },
+  {
+    "ref": "lesson:050f2228-026e-4772-8e35-34a15e651b7b:2",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:7bf44e19-11ff-4803-82bc-de894d3e7099",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:fef3d56a-e64b-4cd1-85fb-e086a25a28ab",
+    "status": "rewritten",
+    "detail": "A water cooler holds 5,000 milliliters of water. How many liters is this? Then, if the cooler is filled 3 times during the week, how many total liters of water are used?"
+  },
+  {
+    "ref": "lesson:3560885d-79c0-48f1-a036-6366c7a66315:1",
+    "status": "rewritten",
+    "detail": "A juice bottle contains 2.5 liters of orange juice. The cafeteria will pour this juice into 250-milliliter cups for students at lunch. How many students can be served with one full bottle?"
+  },
+  {
+    "ref": "lesson:aa64e3d1-2446-46b3-8c09-5c81cec7fb35:0",
+    "status": "rewritten",
+    "detail": "Maria has a ribbon that is 3.5 meters long. She needs to cut it into pieces that are 10 centimeters each. How many 10-centimeter pieces can she cut from the ribbon?"
+  },
+  {
+    "ref": "lesson:aa64e3d1-2446-46b3-8c09-5c81cec7fb35:4",
+    "status": "rewritten",
+    "detail": "A shelf in Sarah's bedroom is 1.2 meters long. How many centimeters long is the shelf?"
+  },
+  {
+    "ref": "lesson:e224d840-5482-476e-b236-9981af3711f9:3",
+    "status": "rewritten",
+    "detail": "A teacher measured the lengths of 5 ribbons in fractions of a foot: 1/4 ft, 1/4 ft, 1/2 ft, 3/4 ft, and 3/4 ft. She decides to remove the two shortest ribbons from her collection. What is the average length of the remaining ribbons?"
+  },
+  {
+    "ref": "lesson:947300c0-d7fd-40b9-803f-3760125f1a6b:3",
+    "status": "rewritten",
+    "detail": "A rectangular box is filled with unit cubes. The box has a length of 5 unit cubes, a width of 4 unit cubes, and a height of 3 unit cubes, with no gaps or overlaps. What is the total volume of the box in cubic units?"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:0",
+    "status": "rewritten",
+    "detail": "What is volume?"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:1",
+    "status": "rewritten",
+    "detail": "A unit cube has a side length of 1 unit. What is the volume of this unit cube?"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:2",
+    "status": "rewritten",
+    "detail": "A box is filled with 12 unit cubes with no gaps or overlaps. What is the volume of the box?"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:3",
+    "status": "rewritten",
+    "detail": "Which unit do you use to measure the volume of a solid figure?"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:4",
+    "status": "rewritten",
+    "detail": "A box is packed with 24 unit cubes with no gaps or overlaps. What is the volume of the box?"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:0",
+    "status": "rewritten",
+    "detail": "A rectangular box is built with unit cubes. The bottom layer has 3 rows and 4 columns of cubes. There are 2 layers stacked on top of each other. What is the total volume of the box in cubic units?"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:1",
+    "status": "rewritten",
+    "detail": "A rectangular prism is made up of unit cubes. It is 5 cubes long, 3 cubes wide, and 2 cubes high. What is the volume of the rectangular prism in cubic units?"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:2",
+    "status": "rewritten",
+    "detail": "A rectangular box has dimensions 2 feet long, 3 feet wide, and 4 feet tall. Another rectangular box has dimensions 1 foot long, 6 feet wide, and 4 feet tall. Do these two boxes have the same volume?"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:3",
+    "status": "rewritten",
+    "detail": "A rectangular box is filled with unit cubes. The box is 4 units long, 3 units wide, and 2 units tall. How many unit cubes fit inside the box without any gaps or overlaps?"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:4",
+    "status": "rewritten",
+    "detail": "A rectangular box is packed completely with unit cubes. The bottom layer has 3 rows of 4 cubes each. There are 2 layers stacked on top of each other. What is the total volume of the box in cubic units?"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:2",
+    "status": "rewritten",
+    "detail": "A rectangular storage container measures 8 inches long, 6 inches wide, and 5 inches tall. If you fill this container completely with unit cubes that are 1 cubic inch each, and then remove a smaller rectangular section that measures 3 inches long, 2 inches wide, and 4 inches tall from one corner, how many unit cubes remain in the container?"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:3",
+    "status": "rewritten",
+    "detail": "A rectangular storage box is filled with unit cubes, each measuring 1 cubic inch. The bottom layer contains 6 rows and 4 columns of unit cubes. A second identical layer is stacked on top. Then a third layer is placed on top, but only 3/4 of that layer is filled with unit cubes (the remaining 1/4 is empty space). What is the total volume of the unit cubes in the box in cubic inches?"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:4",
+    "status": "rewritten",
+    "detail": "A rectangular prism is made up of unit cubes. The base layer has 6 rows and 3 columns of unit cubes. There are 5 layers stacked on top of each other. What is the total volume of the rectangular prism in cubic units?"
+  },
+  {
+    "ref": "diag:6308d0f1-6be7-4929-b520-6793547f80b7",
+    "status": "rewritten",
+    "detail": "A storage unit is built from two rectangular boxes joined together. The first box measures 8 feet long, 6 feet wide, and 5 feet tall. The second box measures 4 feet long, 6 feet wide, and 5 feet tall, and sits right next to the first box. What is the total volume of the entire storage unit in cubic feet?"
+  },
+  {
+    "ref": "lesson:4d346bf3-bec0-4bb4-8221-a1753dd4b444:2",
+    "status": "rewritten",
+    "detail": "A rectangular box has a length of 6 cm, a width of 5 cm, and a height of 4 cm. What is the volume of the box?"
+  },
+  {
+    "ref": "lesson:4d346bf3-bec0-4bb4-8221-a1753dd4b444:4",
+    "status": "rewritten",
+    "detail": "A rectangular prism has a base area of 25 square feet and a height of 8 feet. What is the volume of the rectangular prism?"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:1",
+    "status": "rewritten",
+    "detail": "A storage shed is made up of two connected rectangular sections. The main section is 12 feet long, 10 feet wide, and 8 feet tall. The attached storage room is 6 feet long, 10 feet wide, and 8 feet tall. Both sections have the same width and height and do not overlap. What is the total volume of the entire shed in cubic feet?"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:3",
+    "status": "rewritten",
+    "detail": "A storage container is made of two rectangular prisms stacked together. The bottom prism has dimensions 8 feet long, 5 feet wide, and 3 feet tall. The top prism has dimensions 8 feet long, 5 feet wide, and 2 feet tall. What is the total volume of the storage container in cubic feet?"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:4",
+    "status": "rewritten",
+    "detail": "A storage container is made by stacking two rectangular boxes. The bottom box measures 8 feet long, 6 feet wide, and 3 feet tall. The top box measures 5 feet long, 4 feet wide, and 2 feet tall. What is the total volume of the entire storage container in cubic feet?"
+  },
+  {
+    "ref": "diag:8b17538f-fd71-4b47-813e-ea43b8db6446",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:636ea8c1-8ed9-41ef-b3bb-4edd9a1f88ab",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:04f25f19-1006-43a7-b1b0-20fea963033e",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:679696c3-3af7-43dc-8e2a-18607f86a109",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:1ff40447-84cc-4a68-a28a-ed65a4fa1368",
+    "status": "rewritten",
+    "detail": "A bakery sells cupcakes for $3.75 each. If they sell 10² cupcakes at this price, what is the total revenue in dollars?"
+  },
+  {
+    "ref": "lesson:8cbc8ded-1ec9-4091-a5bb-0e3f94bb4166:4",
+    "status": "rewritten",
+    "detail": "A bakery owner has 5 pounds of flour. She multiplies this amount by 10³ to get her first bulk order, then multiplies that result by 10² to fill her storage containers. What is the final amount of flour in pounds in her storage containers?"
+  },
+  {
+    "ref": "lesson:c760eb39-72ea-43b1-a3e8-5dcbc16a02d1:1",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:0",
+    "status": "rewritten",
+    "detail": "Write 0.375 in words."
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:2",
+    "status": "rewritten",
+    "detail": "Compare: 0.5 ___ 0.50"
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:3",
+    "status": "rewritten",
+    "detail": "Write 2.008 in expanded form."
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:4",
+    "status": "rewritten",
+    "detail": "Compare the two decimals: 3.72 ___ 3.720"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:0",
+    "status": "rewritten",
+    "detail": "Write 347.392 in expanded form."
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:1",
+    "status": "rewritten",
+    "detail": "Compare the two decimals. Which symbol makes this statement true?\n\n4.563 ___ 4.536"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:2",
+    "status": "rewritten",
+    "detail": "Order these decimals from least to greatest: 0.305, 0.350, 0.035"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:4",
+    "status": "rewritten",
+    "detail": "Compare the two decimals: 12.099 and 12.1. Which symbol makes this statement true?\n\n12.099 ___ 12.1"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:0",
+    "status": "rewritten",
+    "detail": "Order these four decimals from greatest to least: 7.125, 7.215, 7.152, 7.251"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:2",
+    "status": "rewritten",
+    "detail": "Compare the two decimals: 0.356 and 0.365. Which symbol makes this statement true? 0.356 ___ 0.365"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:3",
+    "status": "rewritten",
+    "detail": "Compare the two decimals: 99.099 ___ 99.1. Which symbol makes the statement true?"
+  },
+  {
+    "ref": "diag:f03a2270-4500-4b87-b6b2-e6cafa89ec3e",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:6afd304c-e1bc-4201-8046-8c68a5a6cdb1",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:1984d65e-255d-4aa0-a843-e3f622511027",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:47559232-d3da-4e43-af83-d3c6347d274a:4",
+    "status": "rewritten",
+    "detail": "What is 73 × 21?"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:0",
+    "status": "skipped",
+    "detail": "Claude returned null"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:1",
+    "status": "rewritten",
+    "detail": "A bakery orders 34 boxes of flour. Each box contains 125 pounds. How many pounds of flour does the bakery order in total?"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:2",
+    "status": "rewritten",
+    "detail": "A school library ordered 67 boxes of books. Each box contains 809 books. How many books did the library order in total?"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:3",
+    "status": "rewritten",
+    "detail": "A school library ordered 48 boxes of books. Each box contains 375 books. How many books did the library order in total?"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:4",
+    "status": "rewritten",
+    "detail": "A school is ordering desks for 34 classrooms. Each classroom needs 2,500 pencils for the year. How many pencils does the school need to order in total?"
+  },
+  {
+    "ref": "diag:0018ce98-990c-426a-898a-73cff11160a2",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "diag:0bb1cd33-2620-470c-b480-aa9aa157512b",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:c56b57b5-0d9b-4cc4-a7a2-417479522c18:3",
+    "status": "skipped",
+    "detail": "false positive"
+  },
+  {
+    "ref": "lesson:c56b57b5-0d9b-4cc4-a7a2-417479522c18:4",
+    "status": "rewritten",
+    "detail": "A bakery sells cupcakes for $3.75 each. Maria buys 12 cupcakes and then buys 4.8 more cupcakes at a sale price of $2.50 each. How much does Maria spend in total?"
+  },
+  {
+    "ref": "diag:94938a29-ad14-4817-80e2-3186d41a4324",
+    "status": "rewritten",
+    "detail": "Without calculating, is 8 × 1/2 greater than or less than 8?"
+  },
+  {
+    "ref": "lesson:eedc5366-b59c-4604-84dc-56aebaf399c3:1",
+    "status": "rewritten",
+    "detail": "Without calculating, is 8 × 1/2 greater than or less than 8?"
+  },
+  {
+    "ref": "lesson:2604215e-da42-44d6-814d-8657662f7391:3",
+    "status": "rewritten",
+    "detail": "Marcus has a rope that is 8 feet long. He cuts a piece that is 3/4 of the original length to use for a project. Without multiplying, explain whether the piece he cuts will be longer or shorter than 8 feet, and why."
+  },
+  {
+    "ref": "lesson:2604215e-da42-44d6-814d-8657662f7391:4",
+    "status": "rewritten",
+    "detail": "Without calculating the exact answer, is the product of 100 × 3/4 greater than or less than 100? Explain why."
+  },
+  {
+    "ref": "diag:de80a83f-fec4-4be3-af02-87c0cfe9f7be",
+    "status": "rewritten",
+    "detail": "Write an expression that shows this calculation: multiply 5 by the sum of 345 and 17."
+  },
+  {
+    "ref": "diag:b4a5ba20-2c51-446f-a0f9-fd76e8889f30",
+    "status": "difficulty_updated",
+    "detail": "→ 3"
+  },
+  {
+    "ref": "lesson:5202f5ea-1a45-406d-b737-61cb0fa82571:0",
+    "status": "rewritten",
+    "detail": "Maria is buying supplies for a school fair. She needs to order 6 times as many items as the sum of 3,847 and 2,153. Without calculating the total number of items, write an expression that represents how many items Maria needs to order."
+  },
+  {
+    "ref": "lesson:5202f5ea-1a45-406d-b737-61cb0fa82571:4",
+    "status": "rewritten",
+    "detail": "Without calculating, explain why 4 × (7,583 + 2,416) must be greater than 7,583 + 2,416. Which statement correctly describes the relationship?"
+  },
+  {
+    "ref": "diag:f148a524-43f8-49de-a53f-d3938a195f9d",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "lesson:df66fd89-6e8f-433e-b317-13c92b84d062:1",
+    "status": "rewritten",
+    "detail": "Two numerical patterns are shown below.\n\nPattern A: 2, 4, 6, 8, 10\nPattern B: 4, 8, 12, 16, 20\n\nThe rule for Pattern A is: Start at 2, add 2 each time.\nThe rule for Pattern B is: Start at 4, add 4 each time.\n\nIf you continue both patterns and the next term in Pattern A is 12, what will the next term in Pattern B be?"
+  },
+  {
+    "ref": "lesson:cace74b2-08b8-49f5-b161-7576e6fa5469:1",
+    "status": "rewritten",
+    "detail": "Use these two rules to generate patterns:\n\nPattern A: Start at 5, add 3 each time\nPattern B: Start at 2, add 6 each time\n\nWrite out the first 5 terms of each pattern. Then form ordered pairs by matching the 1st term of Pattern A with the 1st term of Pattern B, the 2nd term of Pattern A with the 2nd term of Pattern B, and so on. What is the ordered pair formed from the 4th terms of both patterns?"
+  },
+  {
+    "ref": "lesson:cace74b2-08b8-49f5-b161-7576e6fa5469:4",
+    "status": "rewritten",
+    "detail": "Rule A: Start at 5 and add 4 each step. Rule B: Start at 2 and add 7 each step. Generate both patterns for 5 steps. Then form ordered pairs by matching the corresponding terms from Rule A and Rule B (Rule A term, Rule B term). What is the y-coordinate of the ordered pair that corresponds to Step 4?"
+  }
+]

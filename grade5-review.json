@@ -1,0 +1,716 @@
+[
+  {
+    "ref": "diag:320e3734-b9de-4627-9ef1-71d52c6f71f6",
+    "flags": [
+      "ambiguous_wording"
+    ],
+    "notes": "Answer key uses internal reference names (same_x_4_units_above) that don't match the option text. The actual answer option is 'They have the same x-coordinate; B is 4 units above A' but is labeled with a code.",
+    "code": "5.G.1"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:0",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question requires calculating or conceptually understanding distance to the origin using distance formula or conceptual proximity. This exceeds 5.G.1 scope, which only requires locating points and understanding the coordinate system structure, not distance calculations or comparisons to origin.",
+    "code": "5.G.1"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question requires identifying a fourth vertex of a rectangle given three vertices. While coordinate-based, this requires geometric reasoning (rectangles, vertices) beyond the scope of 5.G.1, which is limited to using coordinate systems to locate points.",
+    "code": "5.G.1"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:2",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Question is marked Hard but is a simple, direct single-step identification of an ordered pair location. Should be Easy difficulty.",
+    "code": "5.G.1"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:3",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Question is marked Hard but is a simple, direct identification of an ordered pair from a word problem context. No multi-step reasoning required. Should be Medium difficulty at most.",
+    "code": "5.G.1"
+  },
+  {
+    "ref": "lesson:8997a10f-3894-4cc1-920d-00a192ec4a70:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question requires comparing distances from points to the origin, which exceeds 5.G.1 scope. The standard addresses locating points using coordinates, not comparing relative distances.",
+    "code": "5.G.1"
+  },
+  {
+    "ref": "diag:68a298ea-de8e-415e-9889-6306fd2b334f",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Finding intersection of two linear patterns requires solving a system of equations, which exceeds Grade 5 scope. 5.G.2 covers graphing points and interpreting coordinates in context, not solving systems.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "diag:a401853b-5290-4893-8a93-d04a93374174",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple_choice question but options contain malformed text with double parentheses and repetition: '(3, 15)) (3, 15)' etc. Options are unreadable.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "diag:16b1612e-2b2a-4daf-affc-633ed410b6f3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Deriving algebraic rules (y = 4x) from patterns is beyond Grade 5. 5.G.2 involves graphing and interpreting points, not identifying/writing function rules.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "diag:ad62efc5-cbb0-47ad-9ce7-6badc6442091",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Calculating perimeter of a rectangle using coordinate endpoints requires coordinate distance formulas and geometric computation beyond 5.G.2 scope.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Identifying algebraic rules (y = 4x) from point sets is beyond Grade 5 scope. 5.G.2 covers graphing and interpreting points, not writing function rules.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Finding the rate of change (cost per item) from two points requires slope calculation, which exceeds Grade 5 scope.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:7b31b17c-6e02-441b-9fcb-daa4180f1ba4:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Analyzing rate of change and y-intercept from a point set requires understanding linear functions and their parameters beyond Grade 5.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:0",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Finding when two savings patterns are equal requires solving a system of equations, which exceeds Grade 5 scope.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Computing perimeter from coordinate endpoints requires distance formulas beyond 5.G.2 scope.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:2",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Deriving algebraic rules and making predictions with large x-values (x = 20) exceeds Grade 5 scope. 5.G.2 focuses on graphing and interpreting points, not function rules.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Writing linear rules (y = 200 + 50x) from word problems is beyond Grade 5. 5.G.2 covers graphing and interpreting points, not deriving function notation.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:988ceb12-adfd-4137-a5e8-29bd97642143:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Finding equations of two lines and their intersection point requires systems of linear equations and algebraic manipulation far beyond Grade 5 scope.",
+    "code": "5.G.2"
+  },
+  {
+    "ref": "lesson:e7ee8dfd-980a-4d70-9034-45ae1123e6bc:4",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "The correct answer should be 'Yes' not 'No'. A square has 2 pairs of consecutive equal sides (all 4 sides are equal, which satisfies the kite definition). The square is a special kite. This is mathematically incorrect.",
+    "code": "5.G.3"
+  },
+  {
+    "ref": "lesson:050f2228-026e-4772-8e35-34a15e651b7b:2",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "ISSUE: The correct answer states 'A parallelogram is a special type of trapezoid because it has at least one pair of parallel sides.' This is WRONG. Standard inclusive definition: trapezoid has AT LEAST one pair of parallel sides, making parallelogram (2 pairs) a special trapezoid. However, in some curricula (exclusive definition), trapezoid has EXACTLY one pair, making parallelogram NOT a trapezoid. Grade 5 CCSS typically uses inclusive definition, but the phrasing here creates ambiguity. The answer should clarify which definition is being used, or the question is problematic for Grade 5 scope clarity.",
+    "code": "5.G.4"
+  },
+  {
+    "ref": "diag:7bf44e19-11ff-4803-82bc-de894d3e7099",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "3.5 meters = 350 centimeters is INCORRECT. Correct answer is 350 cm (this matches the given answer), but this should be labeled as Easy, not Medium, since it's a direct single-step conversion.",
+    "code": "5.MD.1"
+  },
+  {
+    "ref": "diag:fef3d56a-e64b-4cd1-85fb-e086a25a28ab",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question goes outside 5.MD.1 scope. Converting liters to milliliters is valid, but the second conversion (liters to cups using an approximate decimal ratio of 4.23) involves non-standard conversion factors and approximations not typically used in Grade 5 standard measurement conversions. This pushes beyond the curriculum intent.",
+    "code": "5.MD.1"
+  },
+  {
+    "ref": "lesson:3560885d-79c0-48f1-a036-6366c7a66315:1",
+    "flags": [
+      "ambiguous_wording",
+      "ui_mismatch"
+    ],
+    "notes": "Question asks two things: (1) How many milliliters in 2.5 liters? (2) How many students served at 250 mL each? The answer given is only '10' but the question structure suggests two answers are needed. Wording is ambiguous about what single numeric answer is expected. If answer is students served, it should be clearer.",
+    "code": "5.MD.1"
+  },
+  {
+    "ref": "lesson:aa64e3d1-2446-46b3-8c09-5c81cec7fb35:0",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Answer given as '350' but should specify units (350 cm). Without units, the numeric answer is incomplete for a unit conversion question.",
+    "code": "5.MD.1"
+  },
+  {
+    "ref": "lesson:aa64e3d1-2446-46b3-8c09-5c81cec7fb35:4",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Answer given as '120' but should specify units (120 cm). Without units, the numeric answer is incomplete for a unit conversion question.",
+    "code": "5.MD.1"
+  },
+  {
+    "ref": "lesson:e224d840-5482-476e-b236-9981af3711f9:3",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Question asks to remove two smallest points from {1/4, 1/4, 1/2, 3/4, 3/4}, leaving {1/2, 3/4, 3/4}. Average = (1/2 + 3/4 + 3/4)/3 = 2/3. But answer marked as 3/4, which is incorrect. The average should be 2/3, not 3/4. Additionally, option C (2/3) appears to be the correct answer but marked as distractor.",
+    "code": "5.MD.2"
+  },
+  {
+    "ref": "lesson:947300c0-d7fd-40b9-803f-3760125f1a6b:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This problem involves scaling dimensions by 3 and computing the difference in volumes (3×4×5=60 vs 9×12×15=1620, difference=1560). The arithmetic complexity and the scaling concept (dimension multiplied by 3 means volume multiplied by 27) exceeds 5.MD.3 scope, which is about recognizing volume and packing with unit cubes, not scaling relationships.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:0",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice format has malformed options with extra closing parentheses (e.g., 'The distance around a 3D figure)' instead of proper key-value structure). Options appear duplicated/corrupted.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:1",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options are malformed with extra parentheses (e.g., '0.5 cubic centimeters (0.5 cm³))' instead of proper structure). UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:2",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:3",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94e68e1a-12de-40f4-ba27-8717654c39ad:4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:0",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses throughout. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:1",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:2",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:3",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:94584f90-3c00-420c-9f31-d61e69a81f44:4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options malformed with extra closing parentheses. UI format broken.",
+    "code": "5.MD.3"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:2",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Difficulty labeled Hard but this is straightforward 5×4×3 = 60 cubic units calculation. Should be Medium. Otherwise valid.",
+    "code": "5.MD.4"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:3",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Difficulty labeled Hard but this is straightforward 4×5×3 = 60 cubic inches. Should be Medium. Otherwise valid.",
+    "code": "5.MD.4"
+  },
+  {
+    "ref": "lesson:9f538e2c-8f4a-45c5-8a34-f3db95aed351:4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple_choice question but answer '5 layers' is not a number of cubic units. Answer is presented as '5 layers' but standard expects volume measurement (cubic units). Also, this is actually solving for height given volume/base, which is inverse of standard 5.MD.4 (measuring/counting volume, not calculating dimension). Questionable scope alignment.",
+    "code": "5.MD.4"
+  },
+  {
+    "ref": "diag:6308d0f1-6be7-4929-b520-6793547f80b7",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This problem requires subtraction of volumes, which is not explicitly part of 5.MD.5. The standard requires volume as additive (combining two non-overlapping prisms), not subtractive. Grade 5 does not require finding remaining volume by subtraction.",
+    "code": "5.MD.5"
+  },
+  {
+    "ref": "lesson:4d346bf3-bec0-4bb4-8221-a1753dd4b444:2",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This is a reverse problem: given volume and base area, find height. This requires division/working backwards, which goes beyond the standard's scope of applying V = l × w × h and V = B × h to find volume. Grade 5 is not required to solve for unknown dimensions.",
+    "code": "5.MD.5"
+  },
+  {
+    "ref": "lesson:4d346bf3-bec0-4bb4-8221-a1753dd4b444:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This asks to find base area given volume and height (reverse problem). This requires division/solving for an unknown, which is outside 5.MD.5 scope. Standard requires applying formulas to find volume, not solving for missing dimensions.",
+    "code": "5.MD.5"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Subtractive volume problem (removing a closet from a room). The standard requires additive volume with non-overlapping prisms, not subtractive. This is outside 5.MD.5 scope.",
+    "code": "5.MD.5"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This asks students to design/find dimensions given a volume constraint. This requires working backwards or decomposing, which is beyond 5.MD.5 scope. The standard applies formulas to find volume given dimensions, not vice versa.",
+    "code": "5.MD.5"
+  },
+  {
+    "ref": "lesson:bf22c92c-8ad7-469d-bf77-af87d3f365e0:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "A step pyramid composed of three rectangular prisms stacked vertically. While this appears to use additive volume, pyramids are not rectangular prisms. 5.MD.5 is restricted to right rectangular prisms. This goes outside the standard's scope.",
+    "code": "5.MD.5"
+  },
+  {
+    "ref": "diag:8b17538f-fd71-4b47-813e-ea43b8db6446",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Ten-thousands to thousandths is 7 places right: 10^7 = 10,000,000. Answer states 10,000,000 times which is correct, but labeling as 10⁷ is correct representation. Actually answer is correct. Removing flag.",
+    "code": "5.NBT.1"
+  },
+  {
+    "ref": "diag:636ea8c1-8ed9-41ef-b3bb-4edd9a1f88ab",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Tenths place, value 0.3. Moving 4 places left: tenths→ones→tens→hundreds→thousands. 0.3 × 10^4 = 3,000. Answer correct, but Hard difficulty label may be misleading—this is a direct computational application, not 'most complex valid.' Consider Medium.",
+    "code": "5.NBT.1"
+  },
+  {
+    "ref": "diag:04f25f19-1006-43a7-b1b0-20fea963033e",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "3.45 × 10³ = 3,450 is incorrect. 10³ = 1,000, so 3.45 × 1,000 = 3,450. Actually, the answer is correct. Upon recalculation: 3.45 × 10³ should equal 3,450. This is correct.",
+    "code": "5.NBT.2"
+  },
+  {
+    "ref": "diag:679696c3-3af7-43dc-8e2a-18607f86a109",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "6.3 × 10⁴ = 6.3 × 10,000 = 63,000. The answer given is correct, but the question asks for standard form and the answer provided is 63,000 which is correct.",
+    "code": "5.NBT.2"
+  },
+  {
+    "ref": "diag:1ff40447-84cc-4a68-a28a-ed65a4fa1368",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "3.75 × 10² = 3.75 × 100 = 375. The numeric answer is correct, but the question asks for both the calculation AND an explanation of decimal point movement. The answer field only contains the number 375, not the explanation. This is incomplete.",
+    "code": "5.NBT.2"
+  },
+  {
+    "ref": "lesson:8cbc8ded-1ec9-4091-a5bb-0e3f94bb4166:4",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Question states: multiply by 10³ to get 5,000 pounds, then multiply that result by 10². Working backward: if x × 10³ = 5,000, then x = 5. Then 5,000 × 10² = 500,000. The numeric answer 500,000 is correct, but the question asks to 'Explain the pattern,' which the answer field does not contain—only the number.",
+    "code": "5.NBT.2"
+  },
+  {
+    "ref": "lesson:c760eb39-72ea-43b1-a3e8-5dcbc16a02d1:1",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "3.45 × 10³ = 3.45 × 1,000 = 3,450. Correct answer given as 3,450, which is in the options. Answer is correct.",
+    "code": "5.NBT.2"
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:0",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice question but options are formatted incorrectly with label) format instead of standard A/B/C/D structure. Content is correct (reading 0.375 in words), but UI formatting is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:2",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (equivalence of 0.5 and 0.50), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:3",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (expanded form with fractional notation alternative), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:c7d3b879-542b-4822-b4ef-41717c0c39d8:4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (equivalence of 3.72 and 3.720), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:0",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (expanded form of 347.392), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:1",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (comparing 4.563 > 4.536), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:2",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (ordering decimals from least to greatest), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:46f530af-97db-408b-b6c1-f9f6fcf0c1b8:4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (comparing 12.099 < 12.1), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:0",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (ordering four decimals from greatest to least), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:2",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice with A/B/C/D but answer is listed as '<' (the symbol). Should clarify if answer is 'B) <' or provide consistent formatting. Content is correct (0.356 < 0.365).",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "lesson:640f62dc-5717-4bff-8eff-44338cf8bfca:3",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Options use label) format instead of standard A/B/C/D. Content is correct (comparing 99.099 < 99.1), but UI is non-standard.",
+    "code": "5.NBT.3"
+  },
+  {
+    "ref": "diag:f03a2270-4500-4b87-b6b2-e6cafa89ec3e",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Answer 4.751 is incorrect. When 4.751 is rounded to nearest tenth, it gives 4.8 ✓, but when rounded to nearest hundredth, it gives 4.75 ✓. However, 4.745 also satisfies both conditions (rounds to 4.8 and 4.75), and it's listed as an option. The question asks 'What could the number be?' implying any valid answer, but only one option is marked correct. 4.745 is equally valid and should also be acceptable, or the question needs to specify 'which of these' more carefully. The answer is not strictly wrong, but the question has ambiguity issues.",
+    "code": "5.NBT.4"
+  },
+  {
+    "ref": "diag:6afd304c-e1bc-4201-8046-8c68a5a6cdb1",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "1,234 × 56 = 69,104, not 69104. Answer lacks proper comma formatting.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "diag:1984d65e-255d-4aa0-a843-e3f622511027",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "4,567 × 89 = 406,463, not 406463. Answer lacks proper comma formatting.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "lesson:47559232-d3da-4e43-af83-d3c6347d274a:4",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Option format is malformed (uses '1,635)' syntax instead of 'A) 1,635'). All distractors are off by single digits, making them plausible but lacks variety in error types.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:0",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Option format is malformed (uses '35,568)' syntax instead of 'A) 35,568'). All distractors are very close numerical variations.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:1",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Option format is malformed (uses '69,410)' syntax instead of 'A) 69,410'). All distractors are very close numerical variations.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:2",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Option format is malformed (uses '54,203)' syntax instead of 'A) 54,203'). All distractors are very close numerical variations differing only in digit positions.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:3",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Option format is malformed (uses '17,400)' syntax instead of 'A) 17,400'). All distractors are very close numerical variations.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "lesson:1433e2df-e53b-4353-806c-3546f6541e2d:4",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Option format is malformed (uses '84,000)' syntax instead of 'A) 84,000'). All distractors are very close numerical variations.",
+    "code": "5.NBT.5"
+  },
+  {
+    "ref": "diag:0018ce98-990c-426a-898a-73cff11160a2",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "2.4 × 3.5 = 8.40, not 8.4. Wait, 8.40 = 8.4 mathematically. However, the calculation is correct. Clean.",
+    "code": "5.NBT.7"
+  },
+  {
+    "ref": "diag:0bb1cd33-2620-470c-b480-aa9aa157512b",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "45.6 × 2.35: 45.6 × 2.35 = 107.16. This is correct. Clean.",
+    "code": "5.NBT.7"
+  },
+  {
+    "ref": "lesson:c56b57b5-0d9b-4cc4-a7a2-417479522c18:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Word problem requires division of currency (non-standard context for 5.NBT.7 pure operations). However, the core operation is decimal division 8.76 ÷ 12, which is within scope. The answer $0.73 is correct. Acceptable as Hard word problem application.",
+    "code": "5.NBT.7"
+  },
+  {
+    "ref": "lesson:c56b57b5-0d9b-4cc4-a7a2-417479522c18:4",
+    "flags": [
+      "wrong_answer",
+      "ambiguous_wording"
+    ],
+    "notes": "4.8 dozen = 4.8 × 12 = 57.6 cupcakes. 57.6 × $3.75 = $216.00, not $18.00. The answer is mathematically incorrect. Additionally, the phrasing '4.8 dozen cupcakes' is ambiguous—does it mean 4.8 dozen individual cupcakes (57.6 total) or 4.8 cupcakes per dozen context? Most naturally interpreted as 4.8 × 12 cupcakes.",
+    "code": "5.NBT.7"
+  },
+  {
+    "ref": "diag:94938a29-ad14-4817-80e2-3186d41a4324",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Question multiplies by 2 (a whole number > 1), so product should be greater than 8. However, the answer states 'greater than 8' which is correct, but the question asks about 8 × 2, which is basic whole number multiplication, not fraction scaling. This is outside 5.NF.5 scope, which specifically addresses multiplication by fractions.",
+    "code": "5.NF.5"
+  },
+  {
+    "ref": "lesson:eedc5366-b59c-4604-84dc-56aebaf399c3:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Multiplying by 2 (a whole number) is outside 5.NF.5 scope, which focuses on multiplication by fractions. This should not be in a 5.NF.5 assessment.",
+    "code": "5.NF.5"
+  },
+  {
+    "ref": "lesson:2604215e-da42-44d6-814d-8657662f7391:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question asks about equivalent fractions (why a/b = (n×a)/(n×b)), which is 5.NF.1 content, not 5.NF.5 (scaling/resizing). Outside scope of this standard.",
+    "code": "5.NF.5"
+  },
+  {
+    "ref": "lesson:2604215e-da42-44d6-814d-8657662f7391:4",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Medium but requires calculating the actual product (99) and finding the difference, which involves computation. This is harder than typical Medium scaling questions that only compare without calculating. Should be Hard.",
+    "code": "5.NF.5"
+  },
+  {
+    "ref": "diag:de80a83f-fec4-4be3-af02-87c0cfe9f7be",
+    "flags": [
+      "ambiguous_wording"
+    ],
+    "notes": "Question asks to 'write an expression...then explain why.' But only the expression is listed as answer. The explanation requirement is not addressed in the answer field or grading structure. Ambiguous whether explanation is required for correctness.",
+    "code": "5.OA.2"
+  },
+  {
+    "ref": "diag:b4a5ba20-2c51-446f-a0f9-fd76e8889f30",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "This requires recognizing that 8,721 + 1,279 = 10,000 without calculating. This is a computational insight step beyond typical 5.OA.2 scope of comparing without evaluation. Hard is overstated — this is more of a Medium with a helpful number fact.",
+    "code": "5.OA.2"
+  },
+  {
+    "ref": "lesson:5202f5ea-1a45-406d-b737-61cb0fa82571:0",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Same question as diag:b4a5ba20-2c51-446f-a0f9-fd76e8889f30. Requires recognizing 8,721 + 1,279 = 10,000 without calculating. Hard overstates difficulty.",
+    "code": "5.OA.2"
+  },
+  {
+    "ref": "lesson:5202f5ea-1a45-406d-b737-61cb0fa82571:4",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Requires recognizing (999 + 1) = 1,000 without calculating. This is a computational insight rather than pure expression interpretation. Hard is overstated; should be Medium.",
+    "code": "5.OA.2"
+  },
+  {
+    "ref": "diag:f148a524-43f8-49de-a53f-d3938a195f9d",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Hard but is actually Medium. Students are given ordered pairs and asked to identify the rule (reverse direction from standard). This is a simpler task than generating patterns AND identifying relationships AND graphing. Should be Medium.",
+    "code": "5.OA.3"
+  },
+  {
+    "ref": "lesson:df66fd89-6e8f-433e-b317-13c92b84d062:1",
+    "flags": [
+      "ambiguous_wording"
+    ],
+    "notes": "Question references 'the pattern above' but this is unclear without visual context. Also, predicting B when A=20 requires identifying that B = 2×A from the previous question, making this dependent on prior context. The option labels appear malformed (e.g., 'B = 20)' and 'B = 2.5)' are confusing).",
+    "code": "5.OA.3"
+  },
+  {
+    "ref": "lesson:cace74b2-08b8-49f5-b161-7576e6fa5469:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Goes outside 5.OA.3 scope. The question asks students to graph ordered pairs on a coordinate plane AND interpret a savings context across weeks. The core task conflates (week, amount) graphing with the standard's requirement to graph (A-value, B-value) ordered pairs from corresponding terms. This is mixing different coordinate plane applications beyond the standard's definition.",
+    "code": "5.OA.3"
+  },
+  {
+    "ref": "lesson:cace74b2-08b8-49f5-b161-7576e6fa5469:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Goes outside 5.OA.3 scope. Question asks to 'graph the ordered pairs (Step, Value) for Rule A', which is graphing (position, term-value) not pairs of corresponding terms from two patterns. This is single-pattern graphing, not the two-pattern comparison that 5.OA.3 requires.",
+    "code": "5.OA.3"
+  }
+]

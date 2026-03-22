@@ -1,0 +1,187 @@
+[
+  {
+    "ref": "lesson:1a35060b-9a03-4fb8-9b43-16849bbff1a3:2",
+    "status": "rewritten",
+    "detail": "Look at this triangle. It is red and small. Is it still a triangle if we make it blue and big?"
+  },
+  {
+    "ref": "diag:5d8c8716-1c04-4cc4-88ab-701873ba6131",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "diag:9ba09fd7-7ff2-4943-98c4-e2cfc05efe19",
+    "status": "rewritten",
+    "detail": "Maya uses 2 triangles to build a composite shape. She places them together so their long sides touch. What shape did she make?"
+  },
+  {
+    "ref": "diag:49efe261-6f11-451c-aa29-4358ebd29203",
+    "status": "rewritten",
+    "detail": "Maya uses triangle pattern blocks to make a bigger shape. She puts 2 small triangles together. How many triangles did she use to make her new shape?"
+  },
+  {
+    "ref": "lesson:7c0078d1-582b-4ae5-b83e-f8b887d90140:1",
+    "status": "rewritten",
+    "detail": "Maya uses shape blocks to build a model house. She uses 1 cube for the main room, 1 rectangular prism for the garage, and 1 cone for the roof. How many 3D shapes did Maya use to compose her house?"
+  },
+  {
+    "ref": "lesson:7c0078d1-582b-4ae5-b83e-f8b887d90140:2",
+    "status": "rewritten",
+    "detail": "Maya uses 2 triangles and 1 square to make a composite shape. Then she uses 3 of these composite shapes to build an even bigger shape. How many triangles does she use in total?"
+  },
+  {
+    "ref": "lesson:7c0078d1-582b-4ae5-b83e-f8b887d90140:3",
+    "status": "rewritten",
+    "detail": "Maya uses pattern blocks to make a new shape. She puts together 2 triangles to make 1 square. Then she puts together 3 squares to make a bigger composite shape. Which shape did Maya make?"
+  },
+  {
+    "ref": "lesson:41883c8d-ec4d-4378-a0f0-53f7abb641bc:0",
+    "status": "rewritten",
+    "detail": "Maya has 2 triangles and 1 square. She puts them together to make a new shape. How many shapes did she use to make the new shape?"
+  },
+  {
+    "ref": "diag:e2be08d9-07b5-4911-8ec6-3878d359a2e1",
+    "status": "difficulty_updated",
+    "detail": "→ 2"
+  },
+  {
+    "ref": "diag:a849cc22-73ac-44ae-8b28-9669e975332e",
+    "status": "rewritten",
+    "detail": "Maria has three ribbons. She compares them by laying them next to each other. The blue ribbon is shorter than the red ribbon. The red ribbon is shorter than the yellow ribbon. Maria wants to order all three ribbons from longest to shortest. Which ribbon should be in the middle?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:0",
+    "status": "rewritten",
+    "detail": "Sarah has three ribbons: Ribbon A, Ribbon B, and Ribbon C. She cannot measure them with a ruler, so she uses Ribbon B to compare the others. She finds that Ribbon A is longer than Ribbon B. She also finds that Ribbon C is shorter than Ribbon B. Which ribbon is the longest?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:1",
+    "status": "rewritten",
+    "detail": "Maria has three ribbons. The blue ribbon is shorter than the red ribbon. The red ribbon is shorter than the yellow ribbon. She also has a green ribbon that is longer than the yellow ribbon. Which ribbon is the longest?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:2",
+    "status": "rewritten",
+    "detail": "Maria has three ribbons. She compares Ribbon 1 and Ribbon 2 by laying Ribbon 3 next to each one. Ribbon 3 reaches to the end of Ribbon 1 with extra left over. Ribbon 3 is exactly the same length as Ribbon 2. She then compares Ribbon 2 and Ribbon 3 by laying a fourth ribbon next to each one. The fourth ribbon is shorter than Ribbon 2 but longer than Ribbon 3. Based on these indirect comparisons, which ribbon is the longest?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:3",
+    "status": "rewritten",
+    "detail": "Tom has four sticks. Stick A is shorter than Stick B. Stick B is shorter than Stick C. Stick D is longer than Stick C. Tom wants to arrange all four sticks from shortest to longest. Which stick should be in the third position (third longest)?"
+  },
+  {
+    "ref": "lesson:81ef8fa8-1292-4345-9a01-9b4e719da1db:4",
+    "status": "rewritten",
+    "detail": "Maria has three ribbons. She compares ribbon A to ribbon B using a pencil as a measuring tool. The pencil is shorter than ribbon A but longer than ribbon B. Then she compares ribbon B to ribbon C using the same pencil. The pencil is shorter than ribbon B but longer than ribbon C. Which ribbon is the longest?"
+  },
+  {
+    "ref": "lesson:ae079020-802d-4b6a-a160-168dda3a6a83:0",
+    "status": "rewritten",
+    "detail": "Look at the analog clock. The hour hand is between 7 and 8. The minute hand points to 6. Write the time shown on the clock using digital numbers in the format H:MM or HH:MM."
+  },
+  {
+    "ref": "lesson:b0f9f273-4afa-46c3-a4eb-92e918c8cf37:4",
+    "status": "rewritten",
+    "detail": "Sarah counts from 98 to 105. She writes down each number as she counts. What number does she write after 103?"
+  },
+  {
+    "ref": "lesson:195782c2-7289-4563-8af1-a5105010c189:4",
+    "status": "rewritten",
+    "detail": "A number has 5 tens and some ones. The ones digit is 3 less than the tens digit. What is the number?"
+  },
+  {
+    "ref": "diag:91e7919b-9601-428d-92c2-744fc329d73a",
+    "status": "rewritten",
+    "detail": "Maya has 73 stickers. Her friend has a number of stickers that is greater than 73 but less than 75. Which number could her friend have?"
+  },
+  {
+    "ref": "lesson:c79f2009-1598-416a-a9e9-9943b6e904d4:2",
+    "status": "rewritten",
+    "detail": "Maria has 66 stickers. Her friend has 68 stickers. Which symbol makes this sentence true? 66 __ 68"
+  },
+  {
+    "ref": "lesson:c79f2009-1598-416a-a9e9-9943b6e904d4:3",
+    "status": "rewritten",
+    "detail": "Maya has 45 stickers. Her friend has 54 stickers. Which symbol makes this sentence true? 45 ___ 54"
+  },
+  {
+    "ref": "lesson:c79f2009-1598-416a-a9e9-9943b6e904d4:4",
+    "status": "rewritten",
+    "detail": "Maria has 90 stickers. Jake has 89 stickers. Which symbol makes this sentence true? 90 __ 89"
+  },
+  {
+    "ref": "lesson:9e94c084-94e0-48cc-85a3-a8333a28193b:0",
+    "status": "rewritten",
+    "detail": "Maria has 34 stickers. Ty has 43 stickers. Write the correct comparison using >, =, or < to show which number is greater."
+  },
+  {
+    "ref": "lesson:9e94c084-94e0-48cc-85a3-a8333a28193b:1",
+    "status": "rewritten",
+    "detail": "Maya has 73 stickers. Her friend has 75 stickers. Which symbol makes this sentence true? 73 ___ 75"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:0",
+    "status": "rewritten",
+    "detail": "Maya has 47 stickers. Her friend gives her 20 more stickers. How many stickers does Maya have now?"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:1",
+    "status": "rewritten",
+    "detail": "Maria has 47 stickers. Her friend gives her 20 more stickers. How many stickers does Maria have now?"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:2",
+    "status": "rewritten",
+    "detail": "Maya has 35 stickers. She buys 8 more stickers on Monday. Then on Tuesday, she buys 10 more stickers. How many stickers does Maya have after Tuesday?"
+  },
+  {
+    "ref": "lesson:01845dad-cebc-402d-8211-298395f6dd7c:3",
+    "status": "rewritten",
+    "detail": "Maria has 47 dollars. Her grandmother gives her 30 more dollars. How many dollars does Maria have now?"
+  },
+  {
+    "ref": "diag:92e74ae6-ec72-446f-a206-c466ceb47936",
+    "status": "difficulty_updated",
+    "detail": "→ 1"
+  },
+  {
+    "ref": "lesson:5ba78f10-f9f9-461c-a246-c405c880a944:0",
+    "status": "rewritten",
+    "detail": "Marcus has 14 toy cars. Some of them are red, and the rest are blue. He counts 6 red cars. To find how many blue cars he has, write a subtraction problem and then write it as an unknown addend equation. What number goes in the blank: 6 + ___ = 14?"
+  },
+  {
+    "ref": "lesson:5ba78f10-f9f9-461c-a246-c405c880a944:1",
+    "status": "rewritten",
+    "detail": "Marcus has 15 crayons. He gives some away and has 6 left. Which pair of equations shows this problem as a subtraction and as an addition with a missing number?"
+  },
+  {
+    "ref": "lesson:5ba78f10-f9f9-461c-a246-c405c880a944:3",
+    "status": "rewritten",
+    "detail": "Marcus has some toy cars. His friend gives him 7 more toy cars. Now Marcus has 15 toy cars. How many toy cars did Marcus have before his friend gave him some?"
+  },
+  {
+    "ref": "diag:12d53094-2c15-40d2-918f-2d732992a76e",
+    "status": "rewritten",
+    "detail": "Is this equation true or false? 5 - 2 = 3"
+  },
+  {
+    "ref": "diag:d7443d64-4298-4e77-8589-082f49ea6947",
+    "status": "rewritten",
+    "detail": "Is 7 - 2 = 6 - 1 true or false?"
+  },
+  {
+    "ref": "diag:0ae1f494-6831-42e3-8699-c7f60ad18f79",
+    "status": "rewritten",
+    "detail": "Is 3 + 4 = 7 true or false?"
+  },
+  {
+    "ref": "diag:7b7dd901-224f-4e1f-9a23-2ca9a0b859bd",
+    "status": "rewritten",
+    "detail": "Is 7 + 3 = 5 + 5 true or false?"
+  },
+  {
+    "ref": "diag:e89ff5e8-3acf-417e-80f9-e63e4c264d7b",
+    "status": "rewritten",
+    "detail": "Sarah had some stickers. Her friend gave her 7 more stickers. Now Sarah has 15 stickers. How many stickers did Sarah have at the start?"
+  }
+]

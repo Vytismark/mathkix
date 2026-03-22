@@ -1,0 +1,556 @@
+[
+  {
+    "ref": "diag:577f3fe1-00c9-46eb-a329-28c715ca585b",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Hard but the question is straightforward: 6 sides = hexagon. The phrase about 'equal sides' and 'equal angles' adds minor complexity, but this is still a direct application of the definition. Should be Medium.",
+    "code": "2.G.1"
+  },
+  {
+    "ref": "diag:894d3a3f-03b9-4c78-88ac-c7baab839d16",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Hard but this is a direct single-step identification: 5 sides and 5 angles = pentagon. This is Easy or at most Medium, not Hard.",
+    "code": "2.G.1"
+  },
+  {
+    "ref": "lesson:38a941ac-9485-4c56-baad-eae05831f553:3",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice question with malformed options. Options show duplicated text (e.g., 'Triangle and circle) Triangle and circle'). The option format is broken with both label and value repeated. Cannot determine if correct answer is actually in options due to formatting error.",
+    "code": "2.G.1"
+  },
+  {
+    "ref": "lesson:1e2cbda4-4db4-454e-87f0-2ee5b66324c6:1",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Hard but this is a conceptual reasoning question about whether a triangle (3 sides) can be a quadrilateral (4 sides). This is a direct application of definitions and should be Medium at most, not Hard.",
+    "code": "2.G.1"
+  },
+  {
+    "ref": "diag:a35df642-0a27-4e10-8882-2814b141ed93",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Answer is 20, but answer field should show the addition equation or both the equation and total. The question explicitly asks to 'Write an addition equation to show your answer' but answer only gives '20'. Should be '5+5+5+5=20' or similar. Ambiguous what the expected answer format is.",
+    "code": "2.G.2"
+  },
+  {
+    "ref": "lesson:cd417ef9-73ad-4027-a8ee-5ae2fc21f7d2:2",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Answer field shows '20; 4 + 4 + 4 + 4 + 4 = 20' but this is a MC question. Answer should be a single option from the list. The correct option is '20; 4 + 4 + 4 + 4 + 4 = 20' which matches, but answer format is confusing. Valid question otherwise (5 rows of 4).",
+    "code": "2.G.2"
+  },
+  {
+    "ref": "diag:ea3e8a51-525a-4cc5-8bda-10060990fbc0",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Medium but this requires understanding the relationship 'more equal parts = smaller each part,' which is conceptually harder. Should be Hard. Also, the MC option labels are confusing (showing fractions as labels rather than descriptive text).",
+    "code": "2.G.3"
+  },
+  {
+    "ref": "diag:72a3dc36-3437-4cf6-8389-891bb7fa4c53",
+    "flags": [
+      "grade_mismatch",
+      "wrong_difficulty"
+    ],
+    "notes": "This is a multi-step arithmetic problem requiring subtraction within word problem context (3-2+4-3). This goes significantly beyond partitioning and describing equal shares. 2.G.3 does not include fraction arithmetic or combining parts from different wholes. Also mislabeled as Hard when it should be flagged as out of scope entirely.",
+    "code": "2.G.3"
+  },
+  {
+    "ref": "diag:c3b535ab-4e29-4637-8fc7-fc976dde26e1",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options are malformed with extra parentheses and labels. Options should be cleanly separated. The question itself is valid and within scope.",
+    "code": "2.MD.1"
+  },
+  {
+    "ref": "diag:a223234f-db35-4253-aabc-7603026c4b5b",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled 'Hard' but this is addition of measured lengths (7+3+4=14), which is a straightforward 3-step addition. Should be Medium. The measuring itself (selecting ruler, reading inches) is the 2.MD.1 component; the addition is supplementary.",
+    "code": "2.MD.1"
+  },
+  {
+    "ref": "diag:4ceb2330-1695-48e2-83da-3b763cb82010",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice options have malformed formatting with extra parentheses. Content is valid.",
+    "code": "2.MD.1"
+  },
+  {
+    "ref": "diag:bb541c0c-c2f1-4b40-bb73-26321fdc4dcc",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Asks students to compare precision of measurement tools and explain why one is 'more precise.' This requires understanding of precision and unit size relationships beyond Grade 2 scope. Grade 2 students select tools and measure; comparing precision of different tools is typically Grade 3+.",
+    "code": "2.MD.1"
+  },
+  {
+    "ref": "lesson:1eb28c93-341b-4146-809f-5ed30f681b56:0",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Requires unit conversion (inches to feet) using a given relationship. This crosses into measurement conversion/relationships, which is 2.MD.3 (relating different-sized units within one system), not 2.MD.1 (selecting tools and measuring). Hard difficulty label appropriate for complexity, but content scope is wrong.",
+    "code": "2.MD.1"
+  },
+  {
+    "ref": "diag:9100f8e1-6453-4028-87c4-fd0f194843dd",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Requires finding max and min values, then subtracting them. This is a two-step comparison operation beyond basic graph reading. While 2-step problems are within scope, finding extrema and computing differences exceeds typical Grade 2 expectations for bar graphs with up to 4 categories.",
+    "code": "2.MD.10"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Same issue as diag:9100f8e1. Computing difference between max and min scores exceeds typical Grade 2 scope.",
+    "code": "2.MD.10"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:2",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Marked Hard but is essentially a single-step subtraction from picture graph. Should be Medium.",
+    "code": "2.MD.10"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Question involves implicit categories not shown in graph and requires subtraction of multiple values. Goes beyond standard scope of directly solving problems from graphs shown.",
+    "code": "2.MD.10"
+  },
+  {
+    "ref": "lesson:32126a9e-1f47-4615-b5fb-1a7db4bb2cd8:4",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Marked Hard but requires two steps (sum two values, subtract from third). Similar complexity to Medium questions. Label should be Medium.",
+    "code": "2.MD.10"
+  },
+  {
+    "ref": "diag:7a8ae4df-9623-483b-b3a1-dd03764809a7",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Question is numeric type but answer is '2 small blocks' (text + number), not purely numeric. Should be MC or answer should be just '2'.",
+    "code": "2.MD.2"
+  },
+  {
+    "ref": "diag:3181d6ae-0ea5-4a0c-8a02-6223d1a5af36",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Question is numeric type but answer is '1 yard' (text + unit), not purely numeric. Should be MC or answer should be just '1'.",
+    "code": "2.MD.2"
+  },
+  {
+    "ref": "diag:27ad0350-cdd3-449b-9735-b17f17988d7d",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Question is numeric type but answer is '1 yard = 3 feet' (equation/relationship), not a numeric value. Should be MC or reframe as numeric.",
+    "code": "2.MD.2"
+  },
+  {
+    "ref": "lesson:a9a038ae-d0a3-46ee-9139-58186fd319a5:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Requires unit conversion calculation (7 × 12 = 84). This is multiplication of two-digit numbers, outside 2.MD.2 scope and inappropriate for Grade 2 without explicit scaffold. More aligned to 3.MD.4.",
+    "code": "2.MD.2"
+  },
+  {
+    "ref": "diag:5f8c6457-5037-4a18-aef6-9bd463d1cccf",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Hard but is actually Easy. This is a direct single-step benchmark comparison (door ≈ 1 meter) with no extra reasoning required. Should be Easy difficulty.",
+    "code": "2.MD.3"
+  },
+  {
+    "ref": "diag:d09410f7-4e87-45f3-ab88-8587bbcab5a2",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled Hard but is actually Easy-Medium. Comparing 2 meters vs 2 centimeters is direct benchmark application. The reasoning (adult height ≈ 2 meters) is single-step. Should be Easy or Medium, not Hard.",
+    "code": "2.MD.3"
+  },
+  {
+    "ref": "lesson:172febf5-84c1-4499-aece-8266e5c498b1:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Goes beyond 2.MD.3 scope. Estimating two-story building height (6-8 meters) requires prior knowledge and context not typically covered in Grade 2 estimation benchmarks. Standard benchmarks are: pencil, door width (~1m), classroom (~10m), fingernail (1cm). This is introducing novel real-world objects without establishing the benchmark first.",
+    "code": "2.MD.3"
+  },
+  {
+    "ref": "diag:67963526-56f4-4da8-919b-37bc4efaea49",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "1 quarter (25¢) + 2 dimes (20¢) + 1 nickel (5¢) = 50¢. Answer is correct, but label says Medium when this is straightforward addition—closer to Easy. However, answer itself is correct.",
+    "code": "2.MD.8"
+  },
+  {
+    "ref": "diag:97f7e43b-ef8d-41bb-a1e6-743e19c99c39",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "3 quarters = 75 cents. 75 - 67 = 8 cents change. Answer is correct. Difficulty is appropriate for Medium.",
+    "code": "2.MD.8"
+  },
+  {
+    "ref": "diag:39644799-9d17-4216-bd4f-83caf88d28e5",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "MC format but answer is 'Yes', yet options use inconsistent labels. Options should have consistent structure. The option keys are misaligned (Yes/No vs. exactly_3_00/exactly_4_00). Tom has $2 + 6×$0.25 = $3.50, exactly enough. Answer is correct but UI is confusing.",
+    "code": "2.MD.8"
+  },
+  {
+    "ref": "lesson:e38a6adb-9356-440c-b179-bbf8245ba7e3:1",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Tom has 2×$1 + 6×$0.25 = $2 + $1.50 = $3.50. Book costs $3.50. Answer 'Yes — exactly $3.50' is correct. All options plausible.",
+    "code": "2.MD.8"
+  },
+  {
+    "ref": "diag:cc3bda8e-3e7e-4172-97cb-2dcc8a94012a",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Question asks how many Xs go above 6. Data: 6, 8, 6, 7, 8. The value 6 appears twice, so answer should be 2, not '2 Xs'. The numeric type expects a number, not a unit label. Answer should be: 2",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "diag:3319498f-80d4-417f-926e-996768a41fc8",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Data: 14, 15, 14, 16, 15, 14. The value 14 appears 3 times. Answer is correct (14 cm) but numeric type should return just the number: 14, not '14 cm'.",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "diag:91c27413-8586-4002-8202-5e594571442b",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Line plot: 8(2), 9(4), 10(3), 11(1). Total: 2+4+3+1 = 10. Answer is correct numerically but for numeric type should be: 10 (without 'objects' unit label). Minor issue but mathematically correct.",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "lesson:4ed13541-236f-408a-b2fc-e7a862f5eb22:1",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Data: 14, 15, 14, 16, 15, 14. Value 14 appears 3 times (most frequent). Answer given is 14, which is correct, but question asks 'which length' - for numeric type should be 14 (without units). This is marginally acceptable but formatting inconsistency noted.",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "lesson:4ed13541-236f-408a-b2fc-e7a862f5eb22:3",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice question but answer format is a text description ('5: 3 Xs, 6: 2 Xs, 7: 2 Xs'). The correct answer IS in the options, but this is an unusual answer format for MC - typically expects single concise response. Technically valid within standard but formatting is awkward.",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "lesson:398b79c8-cb1c-41e6-b6a0-c9ac3a8715e0:1",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice with answer containing explanation '4 (3 at 10 cm + 1 at 11 cm)'. While the answer 4 is correct, the parenthetical explanation in the answer field is unusual for numeric MC. However, correct answer IS in options.",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "lesson:398b79c8-cb1c-41e6-b6a0-c9ac3a8715e0:4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Multiple choice with complex answer format combining line plot description AND mode identification. Answer is in options but formatting is unusual. Technically valid but awkward for MC structure.",
+    "code": "2.MD.9"
+  },
+  {
+    "ref": "lesson:39fceb8d-7803-437d-bc5c-a0f0b6633b0c:0",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "First option '700 (7 hundreds)' appears duplicated in the options list (with double closing parenthesis syntax error).",
+    "code": "2.NBT.1"
+  },
+  {
+    "ref": "lesson:ee6008c8-ef4b-4071-83ea-93efb982055c:4",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Marked Hard but involves adding 100 and computing a new expanded form. This requires addition (2.NBT.7/8) beyond the scope of 2.NBT.3 (reading/writing). Should be Medium or flag as grade_mismatch if addition is not intended outcome.",
+    "code": "2.NBT.3"
+  },
+  {
+    "ref": "diag:a64be5d3-c363-46c3-9183-531aab7ee159",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question asks to name numbers in a range (465-470), which goes beyond 2.NBT.4 scope. 2.NBT.4 is strictly about comparing two three-digit numbers using comparison symbols. Identifying/listing numbers in a range is not part of this standard.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "diag:a8aca831-91ec-4fef-891f-5e9943773f63",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Question requires understanding that 30 tens = 300, which involves 2.NBT.1 (understanding place value equivalence). While the final comparison is valid for 2.NBT.4, the prerequisite reasoning goes outside this standard's scope. This is more appropriately a 2.NBT.1 question.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:0",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Labeled 'Hard' but this is a direct easy comparison (466 < 468, differ in ones place only). Should be Easy. Question is valid but difficulty is mislabeled.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Requires converting 30 tens to 300, which is 2.NBT.1 (place value). While the final comparison is 2.NBT.4, the conceptual requirement goes beyond this standard's scope.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:2",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Question requires constructing a number with given place values and comparing to 710. While comparison is valid for 2.NBT.4, the place value construction element (7 in hundreds, 5 in ones, fill in tens) extends beyond direct comparison of two given numbers.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Asks to name/write numbers in a range (850-900), which exceeds 2.NBT.4 scope. This standard is about comparing two given numbers, not generating numbers that satisfy comparison conditions.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "lesson:77ab576b-ba41-4928-bfa7-5549c0877a7e:4",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Requires place value decomposition and arithmetic (adding 3 to ones digit) to construct a number, then implicit comparison. This goes beyond direct two-number comparison into 2.NBT.1 and operations territory.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "lesson:b33b5d8d-61b1-4a10-b469-cfcf96d7d645:3",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Valid easy question (600 > 590), but options A and D are both '<' symbols, making one a clear duplicate distractor. Should be cleaned.",
+    "code": "2.NBT.4"
+  },
+  {
+    "ref": "diag:b1f3f980-46c2-4d7c-8fe7-e99c893a80ea",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Three-addend problem (68+17+5) is more complex than typical Hard difficulty for this standard. Standard emphasizes two-operand fluency. This stretches beyond typical Grade 2 scope.",
+    "code": "2.NBT.5"
+  },
+  {
+    "ref": "lesson:c2fb1a1e-0c73-4b3d-9c73-27cfd3399ec4:1",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Three-addend problem is beyond typical Hard scope for 2.NBT.5.",
+    "code": "2.NBT.5"
+  },
+  {
+    "ref": "diag:07ed2a51-0f70-4027-b5ff-117039a12325",
+    "flags": [
+      "wrong_difficulty",
+      "grade_mismatch"
+    ],
+    "notes": "This question requires multi-step reasoning beyond standard 2.NBT.7 scope: (850 - 127 = 723 remaining goal) then (723 - 456 = 267). This involves reasoning about hierarchical constraints and unknowns in a way that exceeds Grade 2 expectations for this standard. Labeled 'Hard' but conceptually requires understanding multi-step logic chains with nested unknowns, which is beyond scope.",
+    "code": "2.NBT.7"
+  },
+  {
+    "ref": "lesson:fdf9d6c8-0f9c-47f3-a046-1324b6a1d365:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "Subtraction involving 1000 as a minuend exceeds standard 2.NBT.7 scope, which specifies 'within 1000' (typically up to 999 + operations not exceeding 1000). This crosses into upper Grade 2 or Grade 3 content.",
+    "code": "2.NBT.7"
+  },
+  {
+    "ref": "diag:2274c64b-f0a4-4b37-8a2a-7f75c865a0af",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Question: Start at 450. Add 100. Then subtract 10. Correct answer: 450 + 100 = 550; 550 - 10 = 540. Given answer is 540, which is correct. However, the difficulty label 'Medium' is appropriate for a 2-step operation. Upon re-check: answer is correct.",
+    "code": "2.NBT.8"
+  },
+  {
+    "ref": "diag:95c2283a-d2b7-407c-afab-a6cba0cc28e5",
+    "flags": [
+      "wrong_answer"
+    ],
+    "notes": "Question: 620 - 100 + 10 = ? Correct calculation: 620 - 100 = 520; 520 + 10 = 530. Given answer is 530, which is correct.",
+    "code": "2.NBT.8"
+  },
+  {
+    "ref": "diag:45d3ac7b-8619-4b4e-9788-9315cfebafb1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "105 is outside the range 100-900 as stated in the standard definition. The number 105 is in the range, but subtracting 100 from it yields 5, which is outside the target range of numbers (100-900). This violates the scope of 2.NBT.8.",
+    "code": "2.NBT.8"
+  },
+  {
+    "ref": "lesson:23b1d7aa-920d-4117-8ddd-5874aecdad4f:1",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "105 is outside the target range. Subtracting 100 from 105 yields 5, which falls below 100. Violates the scope of 2.NBT.8 (numbers 100-900).",
+    "code": "2.NBT.8"
+  },
+  {
+    "ref": "lesson:23b1d7aa-920d-4117-8ddd-5874aecdad4f:4",
+    "flags": [
+      "ambiguous_wording"
+    ],
+    "notes": "Question asks 'What comes next? What kind of skip-count is this?' but answer is formatted as two parts. The multiple_choice format is appropriate and the answer '550; subtracting 100' is correct. However, the question structure asking for both the number AND the operation description is slightly ambiguous for a Grade 2 audience but acceptable.",
+    "code": "2.NBT.8"
+  },
+  {
+    "ref": "diag:3780352f-78f3-45fe-b1e0-d5bfab641ca4",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Hard difficulty appropriate for compensation strategy explanation. However, option formatting is corrupted with parentheses in odd places. First option appears duplicated/malformed. Clean the option text.",
+    "code": "2.NBT.9"
+  },
+  {
+    "ref": "diag:e34f3940-44aa-40bd-9497-da367c3899c4",
+    "flags": [
+      "ui_mismatch"
+    ],
+    "notes": "Numeric type question asks for explanation (open-ended). Should be short_answer or similar, not numeric. The answer shown is text, not a single number.",
+    "code": "2.NBT.9"
+  },
+  {
+    "ref": "diag:dead9f76-5ee5-4598-9bc8-51be2ac44064",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This is basic single-digit addition (9+7) with no explanation requirement. Does not ask student to explain WHY a strategy works—it only asks for the answer. Outside scope of 2.NBT.9.",
+    "code": "2.NBT.9"
+  },
+  {
+    "ref": "diag:9943887b-842b-4b4f-b559-253f580a5097",
+    "flags": [
+      "weak_distractors"
+    ],
+    "notes": "Hard difficulty but options are malformed (contain stray parentheses and duplicate text). The yes/no answers are too bare; distractors lack substantive explanations of place value errors.",
+    "code": "2.NBT.9"
+  },
+  {
+    "ref": "lesson:c34e79dc-0f0e-4992-a5f7-9cdb740cd01d:0",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Marked Hard but is trivially easy—just verify 400+90+5=495 with no explanation. Only asks Yes/No with no place-value reasoning required. Should be Easy or removed; doesn't measure explanation standard.",
+    "code": "2.NBT.9"
+  },
+  {
+    "ref": "lesson:c34e79dc-0f0e-4992-a5f7-9cdb740cd01d:3",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Marked Hard but only offers Yes/No with no explanation request. Student must recognize compensation (56+30-3 = 56+27) but question doesn't require articulation of WHY. Weak for Hard; no distractors shown.",
+    "code": "2.NBT.9"
+  },
+  {
+    "ref": "lesson:5728fc2b-8578-4e77-afae-7f93b366f069:4",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "This is a 2-step word problem (8 + 12 = 20), which is typical of medium difficulty. Hard difficulty should be reserved for single-step missing-value problems that require more strategic thinking.",
+    "code": "2.OA.2"
+  },
+  {
+    "ref": "lesson:24639afd-5fb2-402c-bea5-485115166f93:2",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Direct fluency question (9 + 9 = 18) should be Easy, not Medium. This is a simple doubles fact.",
+    "code": "2.OA.2"
+  },
+  {
+    "ref": "lesson:24639afd-5fb2-402c-bea5-485115166f93:3",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Direct fluency question (16 - 8 = 8) should be Easy, not Medium. This is a straightforward subtraction fact.",
+    "code": "2.OA.2"
+  },
+  {
+    "ref": "lesson:24639afd-5fb2-402c-bea5-485115166f93:4",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Direct fluency question (5 + 8 = 13) should be Easy, not Medium. This is a straightforward addition fact with no context.",
+    "code": "2.OA.2"
+  },
+  {
+    "ref": "diag:de9072db-6b6c-4267-ad15-735dd7419d41",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "This question requires solving for an unknown dimension (reverse reasoning: 20 objects, 4 rows, find columns). This is harder than typical Hard difficulty—it involves division/factor reasoning, which goes beyond using addition to find totals. Hard label is insufficient; this may exceed scope. However, if treated as 'find the missing addend,' it could be borderline. Label should clarify or question should be rephrased to emphasize the addend approach.",
+    "code": "2.OA.4"
+  },
+  {
+    "ref": "lesson:56b81e60-f764-452f-bf43-f23812653d95:3",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Requires reverse reasoning: 15 objects with 5 per row → how many rows? This is solving for an unknown dimension, not direct application of addition to arrays. Should be Hard, not Medium, or reconsidered as outside standard scope.",
+    "code": "2.OA.4"
+  },
+  {
+    "ref": "lesson:0dde70bf-5816-4b59-926b-69d9febcc96e:1",
+    "flags": [
+      "wrong_difficulty"
+    ],
+    "notes": "Reverse problem: 20 objects, 4 rows, find columns. Same issue as diag:de9072db—requires solving for unknown dimension. Should be reconsidered or relabeled. Currently marked Hard, which may be correct, but the framing differs from standard definition (using addition to *find total*, not solve for missing factor).",
+    "code": "2.OA.4"
+  },
+  {
+    "ref": "lesson:0dde70bf-5816-4b59-926b-69d9febcc96e:3",
+    "flags": [
+      "grade_mismatch"
+    ],
+    "notes": "This question addresses commutativity (3×4 = 4×3), which is a concept from multiplication and beyond the scope of 2.OA.4. The standard specifically focuses on using addition with rectangular arrays to find totals, not comparing arrays or introducing multiplication properties. This exceeds standard scope.",
+    "code": "2.OA.4"
+  }
+]
