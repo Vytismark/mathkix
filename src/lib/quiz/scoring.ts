@@ -7,7 +7,7 @@ export type QuestionType = 'multiple_choice' | 'numeric' | 'fraction'
 
 // Normalize a string answer for comparison
 function normalize(s: string): string {
-  return s.trim().toLowerCase().replace(/\s+/g, '')
+  return s.trim().toLowerCase().replace(/\s+/g, '').replace(/,/g, '')
 }
 
 // Parse a fraction string like "3/4" into numerator/denominator
@@ -36,8 +36,14 @@ export function checkAnswer(
   const c = normalize(correctAnswer)
 
   switch (questionType) {
-    case 'multiple_choice':
-      return u === c
+    case 'multiple_choice': {
+      if (u === c) return true
+      // Numeric fallback: "273" and "273.0" should both be correct
+      const uNum = parseFloat(u)
+      const cNum = parseFloat(c)
+      if (!isNaN(uNum) && !isNaN(cNum)) return Math.abs(uNum - cNum) < 0.001
+      return false
+    }
 
     case 'numeric': {
       // Try exact string match first, then numeric equality
