@@ -249,16 +249,11 @@ export default function AdminOverviewPage() {
             </div>
 
             {/* Process Heap */}
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <MemoryStick className="w-3.5 h-3.5 text-slate-400" />
-                <span className="text-xs text-slate-400">Process Heap</span>
-                <span className="ml-auto text-xs text-white font-mono">
-                  {sv.heapUsedMB} / {sv.heapTotalMB} MB
-                </span>
-                <span className="text-[10px] text-slate-500">RSS {sv.rssMB} MB</span>
-              </div>
-              <MemoryBar pct={+((sv.heapUsedMB / sv.heapTotalMB) * 100).toFixed(1)} />
+            <div className="flex items-center gap-2">
+              <MemoryStick className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <span className="text-xs text-slate-400">Process Heap</span>
+              <span className="ml-auto text-xs text-white font-mono">{sv.heapUsedMB} / {sv.heapTotalMB} MB</span>
+              <span className="text-[10px] text-slate-500">RSS {sv.rssMB} MB</span>
             </div>
 
             {/* CPU */}
@@ -266,7 +261,9 @@ export default function AdminOverviewPage() {
               <div className="flex items-center gap-2 mb-1.5">
                 <Cpu className="w-3.5 h-3.5 text-slate-400" />
                 <span className="text-xs text-slate-400">CPU</span>
-                <span className="ml-auto text-[11px] text-slate-500">{sv.cpuCount} cores · {(sv.cpuSpeedMHz / 1000).toFixed(2)} GHz</span>
+                <span className="ml-auto text-[11px] text-slate-500">
+                  {sv.cpuCount} cores{sv.cpuSpeedMHz > 0 ? ` · ${(sv.cpuSpeedMHz / 1000).toFixed(2)} GHz` : ''}
+                </span>
               </div>
               <p className="text-[11px] text-slate-500 truncate pl-5.5">{sv.cpuModel}</p>
             </div>
