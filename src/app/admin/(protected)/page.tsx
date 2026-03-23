@@ -21,12 +21,17 @@ import { Badge } from '@/components/ui/badge'
 
 interface ServerInfo {
   platform: string
+  arch: string
   hostname: string
   cpuCount: number
   cpuModel: string
+  cpuSpeedMHz: number
   memoryUsedGB: number
   memoryTotalGB: number
   memoryPct: number
+  heapUsedMB: number
+  heapTotalMB: number
+  rssMB: number
   loadAvg1m: number
   loadAvg5m: number
   loadAvg15m: number
@@ -173,19 +178,19 @@ export default function AdminOverviewPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Recent Tickets */}
+        {/* Open Tickets */}
         <div
           className="rounded-2xl border border-white/10 p-5"
           style={{ background: 'rgba(255,255,255,0.04)' }}
         >
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-sm font-semibold text-white">Recent Tickets</h2>
+            <h2 className="text-sm font-semibold text-white">Open Tickets</h2>
             <Link href="/admin/support" className="text-xs text-indigo-400 hover:text-indigo-300">
               View all
             </Link>
           </div>
           {stats.recentTickets.length === 0 ? (
-            <p className="text-slate-600 text-sm py-6 text-center">No tickets yet</p>
+            <p className="text-slate-600 text-sm py-6 text-center">No open tickets</p>
           ) : (
             <div className="space-y-2">
               {stats.recentTickets.map((t) => (
@@ -226,15 +231,15 @@ export default function AdminOverviewPage() {
               </div>
               <div>
                 <p className="text-sm text-white font-medium">{sv.hostname}</p>
-                <p className="text-[11px] text-slate-500">{sv.platform} &middot; up {formatUptime(sv.uptimeHours)}</p>
+                <p className="text-[11px] text-slate-500">{sv.platform} · {sv.arch} · up {formatUptime(sv.uptimeHours)}</p>
               </div>
             </div>
 
-            {/* Memory */}
+            {/* System Memory */}
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <MemoryStick className="w-3.5 h-3.5 text-slate-400" />
-                <span className="text-xs text-slate-400">Memory</span>
+                <span className="text-xs text-slate-400">System Memory</span>
                 <span className="ml-auto text-xs text-white font-mono">
                   {sv.memoryUsedGB} / {sv.memoryTotalGB} GB
                 </span>
@@ -243,12 +248,25 @@ export default function AdminOverviewPage() {
               <MemoryBar pct={sv.memoryPct} />
             </div>
 
+            {/* Process Heap */}
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <MemoryStick className="w-3.5 h-3.5 text-slate-400" />
+                <span className="text-xs text-slate-400">Process Heap</span>
+                <span className="ml-auto text-xs text-white font-mono">
+                  {sv.heapUsedMB} / {sv.heapTotalMB} MB
+                </span>
+                <span className="text-[10px] text-slate-500">RSS {sv.rssMB} MB</span>
+              </div>
+              <MemoryBar pct={+((sv.heapUsedMB / sv.heapTotalMB) * 100).toFixed(1)} />
+            </div>
+
             {/* CPU */}
             <div>
               <div className="flex items-center gap-2 mb-1.5">
                 <Cpu className="w-3.5 h-3.5 text-slate-400" />
                 <span className="text-xs text-slate-400">CPU</span>
-                <span className="ml-auto text-[11px] text-slate-500">{sv.cpuCount} cores</span>
+                <span className="ml-auto text-[11px] text-slate-500">{sv.cpuCount} cores · {(sv.cpuSpeedMHz / 1000).toFixed(2)} GHz</span>
               </div>
               <p className="text-[11px] text-slate-500 truncate pl-5.5">{sv.cpuModel}</p>
             </div>

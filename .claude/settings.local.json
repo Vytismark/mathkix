@@ -15,7 +15,13 @@
       "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade2-review.json'',''utf-8''\\)\\);console.log\\(''Grade2:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
       "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade3-review.json'',''utf-8''\\)\\);console.log\\(''Grade3:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
       "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade4-review.json'',''utf-8''\\)\\);console.log\\(''Grade4:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
-      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade5-review.json'',''utf-8''\\)\\);console.log\\(''Grade5:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")"
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''grade5-review.json'',''utf-8''\\)\\);console.log\\(''Grade5:'',d.length,''items''\\);d.forEach\\(x=>console.log\\(x.ref,''|'',x.flags.join\\('',''\\),''|'',x.notes.substring\\(0,100\\)\\)\\)\")",
+      "Bash(find \"/c/Users/gamin/OneDrive/Desktop/Math app/math-app/src/app/\\(child\\)/play\" -name \"lesson\" -type d)",
+      "Bash(ls \"/c/Users/gamin/OneDrive/Desktop/Math app/math-app/src/app/\\(parent\\)/children/[childId]/progress/\")",
+      "Bash(ls \"/c/Users/gamin/OneDrive/Desktop/Math app/math-app/src/app/\\(child\\)/play/lesson/[lessonId]/\")",
+      "Bash(rm -f scripts/gen-mcq-report.json)",
+      "Bash(rm -rf scripts/output)",
+      "Bash(rmdir src/components/shared)"
     ]
   },
   "hooks": {

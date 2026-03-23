@@ -42,10 +42,11 @@ export async function GET() {
     }
   }
 
-  // Recent tickets
+  // Open tickets only
   const { data: recentTickets } = await adminClient
     .from('support_tickets')
     .select('id, subject, status, priority, created_at, profiles!support_tickets_profile_id_fkey(full_name)')
+    .in('status', ['open', 'awaiting_human'])
     .order('created_at', { ascending: false })
     .limit(5)
 
@@ -56,15 +57,21 @@ export async function GET() {
   const usedMem = totalMem - freeMem
   const loadAvg = os.loadavg()
   const uptimeSeconds = os.uptime()
+  const heap = process.memoryUsage()
 
   const server = {
     platform: os.platform(),
+    arch: os.arch(),
     hostname: os.hostname(),
     cpuCount: cpus.length,
     cpuModel: cpus[0]?.model ?? 'Unknown',
+    cpuSpeedMHz: cpus[0]?.speed ?? 0,
     memoryUsedGB: +(usedMem / 1073741824).toFixed(2),
     memoryTotalGB: +(totalMem / 1073741824).toFixed(2),
     memoryPct: +((usedMem / totalMem) * 100).toFixed(1),
+    heapUsedMB: +(heap.heapUsed / 1048576).toFixed(1),
+    heapTotalMB: +(heap.heapTotal / 1048576).toFixed(1),
+    rssMB: +(heap.rss / 1048576).toFixed(1),
     loadAvg1m: +loadAvg[0].toFixed(2),
     loadAvg5m: +loadAvg[1].toFixed(2),
     loadAvg15m: +loadAvg[2].toFixed(2),
