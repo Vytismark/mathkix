@@ -1,12 +1,27 @@
 import type { MetadataRoute } from 'next'
 import { BLOG_POSTS } from '@/lib/blog'
+import { getPublishedDbPosts } from '@/lib/blog-db'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const revalidate = 3600
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://mathkix.com'
 
-  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+  const dbPosts = await getPublishedDbPosts()
+  const dbSlugs = new Set(dbPosts.map((p) => p.slug))
+
+  const staticRoutes: MetadataRoute.Sitemap = BLOG_POSTS
+    .filter((p) => !dbSlugs.has(p.slug))
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+
+  const dbRoutes: MetadataRoute.Sitemap = dbPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated_at),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -14,11 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-03-22'),
+      lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    ...blogRoutes,
+    ...dbRoutes,
+    ...staticRoutes,
     {
       url: baseUrl,
       lastModified: new Date('2026-03-18'),

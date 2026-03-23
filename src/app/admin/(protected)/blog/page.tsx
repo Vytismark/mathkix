@@ -1,52 +1,58 @@
 import Link from 'next/link'
-import { FileText, Clock, Tag, Calendar, ArrowRight, ExternalLink, Eye } from 'lucide-react'
+import { FileText, Clock, Tag, Calendar, ExternalLink, Eye, Plus, Pencil } from 'lucide-react'
+import { getAllDbPostsAdmin } from '@/lib/blog-db'
 import { BLOG_POSTS, formatDate } from '@/lib/blog'
 
-/* -- Helpers ------------------------------------------------- */
-
-function wordCount(post: (typeof BLOG_POSTS)[number]): number {
-  if (!post.body) return 0
-  return post.body.reduce((acc, block) => {
-    if (block.type === 'paragraph' || block.type === 'heading' || block.type === 'subheading' || block.type === 'highlight') {
-      return acc + block.text.split(/\s+/).length
-    }
-    if (block.type === 'list') {
-      return acc + block.items.join(' ').split(/\s+/).length
-    }
-    if (block.type === 'verdict') {
-      return acc + (block.shines + ' ' + block.fallsShort).split(/\s+/).length
-    }
-    if (block.type === 'pick') {
-      return acc + (block.scenario + ' ' + block.choice + ' ' + block.note).split(/\s+/).length
-    }
-    return acc
-  }, 0)
-}
+/* -- Helpers -------------------------------------------------- */
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
-  'Reviews':        { bg: 'rgba(124,58,237,0.15)', text: '#a78bfa' },
+  'Reviews':          { bg: 'rgba(124,58,237,0.15)', text: '#a78bfa' },
   'Learning Science': { bg: 'rgba(54,120,255,0.15)', text: '#3678FF' },
-  'Parenting':      { bg: 'rgba(245,158,11,0.15)', text: '#fbbf24' },
+  'Parenting':        { bg: 'rgba(245,158,11,0.15)',  text: '#fbbf24' },
 }
 
-/* -- Page ---------------------------------------------------- */
+/* -- Page ----------------------------------------------------- */
 
-export default function AdminBlogPage() {
-  const posts = [...BLOG_POSTS].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+export default async function AdminBlogPage() {
+  const dbPosts = await getAllDbPostsAdmin()
 
-  const totalWords = posts.reduce((acc, p) => acc + wordCount(p), 0)
-  const totalReadTime = posts.reduce((acc, p) => acc + p.readTime, 0)
-  const categories = [...new Set(posts.map((p) => p.category))]
-  const published = posts.filter((p) => p.body && p.body.length > 0)
+  // Static posts that haven't been superseded by a DB post
+  const dbSlugs = new Set(dbPosts.map((p) => p.slug))
+  const staticPosts = BLOG_POSTS.filter((p) => !dbSlugs.has(p.slug))
+
+  // Stats across everything
+  const totalPosts    = dbPosts.length + staticPosts.length
+  const publishedCount = dbPosts.filter((p) => p.published).length + staticPosts.filter((p) => p.body && p.body.length > 0).length
+  const totalReadTime = dbPosts.reduce((a, p) => a + p.read_time, 0)
+                      + staticPosts.reduce((a, p) => a + p.readTime, 0)
+  const categories = [
+    ...new Set([
+      ...dbPosts.map((p) => p.category),
+      ...staticPosts.map((p) => p.category),
+    ]),
+  ]
+
+  const allSorted = [
+    ...dbPosts.map((p) => ({ type: 'db' as const, p })),
+    ...staticPosts.map((p) => ({ type: 'static' as const, p })),
+  ].sort((a, b) => {
+    const da = a.type === 'db' ? a.p.date : (a.p as typeof staticPosts[0]).date
+    const db2 = b.type === 'db' ? b.p.date : (b.p as typeof staticPosts[0]).date
+    return new Date(db2).getTime() - new Date(da).getTime()
+  })
+
+  const latestDate = allSorted[0]
+    ? (allSorted[0].type === 'db'
+        ? allSorted[0].p.date
+        : (allSorted[0].p as typeof staticPosts[0]).date)
+    : null
 
   const statCards = [
     {
       icon: FileText,
       label: 'Total Posts',
-      value: posts.length,
-      sub: `${published.length} published`,
+      value: totalPosts,
+      sub: `${publishedCount} published`,
       color: '#3678FF',
       glow: 'rgba(54,120,255,0.3)',
     },
@@ -54,7 +60,7 @@ export default function AdminBlogPage() {
       icon: Clock,
       label: 'Total Read Time',
       value: `${totalReadTime}m`,
-      sub: `${totalWords.toLocaleString()} words`,
+      sub: `across all posts`,
       color: '#a855f7',
       glow: 'rgba(168,85,247,0.3)',
     },
@@ -69,8 +75,14 @@ export default function AdminBlogPage() {
     {
       icon: Calendar,
       label: 'Latest Post',
-      value: posts[0] ? new Date(posts[0].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—',
-      sub: posts[0] ? posts[0].title.slice(0, 32) + '…' : '—',
+      value: latestDate
+        ? new Date(latestDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+        : '—',
+      sub: allSorted[0]
+        ? (allSorted[0].type === 'db'
+            ? allSorted[0].p.title.slice(0, 32) + '…'
+            : (allSorted[0].p as typeof staticPosts[0]).title.slice(0, 32) + '…')
+        : '—',
       color: '#22c55e',
       glow: 'rgba(34,197,94,0.3)',
     },
@@ -80,14 +92,24 @@ export default function AdminBlogPage() {
     <div className="max-w-5xl">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-white">Blog</h1>
-        <Link
-          href="/blog"
-          target="_blank"
-          className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"
-        >
-          <ExternalLink className="w-3.5 h-3.5" />
-          View blog
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/blog"
+            target="_blank"
+            className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            View blog
+          </Link>
+          <Link
+            href="/admin/blog/new"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-white transition-opacity hover:opacity-80"
+            style={{ background: '#3678FF' }}
+          >
+            <Plus className="w-3.5 h-3.5" />
+            New post
+          </Link>
+        </div>
       </div>
 
       {/* Stat cards */}
@@ -134,82 +156,102 @@ export default function AdminBlogPage() {
           <h2 className="text-sm font-semibold text-white">All Posts</h2>
         </div>
 
-        <div className="divide-y divide-white/[0.05]">
-          {posts.map((post) => {
-            const isPublished = !!(post.body && post.body.length > 0)
-            const catStyle = CATEGORY_COLORS[post.category] ?? { bg: 'rgba(255,255,255,0.08)', text: '#94A3B8' }
-            const words = wordCount(post)
+        {allSorted.length === 0 ? (
+          <div className="px-5 py-12 text-center">
+            <p className="text-slate-600 text-sm mb-4">No posts yet.</p>
+            <Link
+              href="/admin/blog/new"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-white"
+              style={{ background: '#3678FF' }}
+            >
+              <Plus className="w-3.5 h-3.5" />
+              Create your first post
+            </Link>
+          </div>
+        ) : (
+          <div className="divide-y divide-white/[0.05]">
+            {allSorted.map(({ type, p }) => {
+              const isDb = type === 'db'
+              const slug = p.slug
+              const title = isDb ? (p as typeof dbPosts[0]).title : (p as typeof staticPosts[0]).title
+              const category = isDb ? (p as typeof dbPosts[0]).category : (p as typeof staticPosts[0]).category
+              const date = isDb ? (p as typeof dbPosts[0]).date : (p as typeof staticPosts[0]).date
+              const readTime = isDb ? (p as typeof dbPosts[0]).read_time : (p as typeof staticPosts[0]).readTime
+              const isPublished = isDb
+                ? (p as typeof dbPosts[0]).published
+                : !!(p as typeof staticPosts[0]).body?.length
 
-            return (
-              <div
-                key={post.slug}
-                className="flex items-center gap-4 px-5 py-4 hover:bg-white/[0.03] transition-colors"
-              >
-                {/* Status dot */}
+              const catStyle = CATEGORY_COLORS[category] ?? { bg: 'rgba(255,255,255,0.08)', text: '#94A3B8' }
+
+              return (
                 <div
-                  className="w-2 h-2 rounded-full shrink-0"
-                  style={{ background: isPublished ? '#22c55e' : '#64748b' }}
-                  title={isPublished ? 'Published' : 'Draft'}
-                />
+                  key={slug}
+                  className="flex items-center gap-4 px-5 py-4 hover:bg-white/[0.03] transition-colors"
+                >
+                  {/* Status dot */}
+                  <div
+                    className="w-2 h-2 rounded-full shrink-0"
+                    style={{ background: isPublished ? '#22c55e' : '#64748b' }}
+                    title={isPublished ? 'Published' : 'Draft'}
+                  />
 
-                {/* Main content */}
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-white truncate">{post.title}</p>
-                  <div className="flex items-center gap-3 mt-1">
-                    <span
-                      className="inline-block rounded-full px-2 py-0.5 text-[10px] font-medium"
-                      style={{ background: catStyle.bg, color: catStyle.text }}
-                    >
-                      {post.category}
-                    </span>
-                    <span className="text-[11px] text-slate-600">
-                      {formatDate(post.date)}
-                    </span>
-                    <span className="text-[11px] text-slate-600">
-                      {post.readTime} min read
-                    </span>
-                    {words > 0 && (
-                      <span className="text-[11px] text-slate-600">
-                        {words.toLocaleString()} words
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-white truncate">{title}</p>
+                    <div className="flex items-center gap-3 mt-1">
+                      <span
+                        className="inline-block rounded-full px-2 py-0.5 text-[10px] font-medium"
+                        style={{ background: catStyle.bg, color: catStyle.text }}
+                      >
+                        {category}
                       </span>
+                      <span className="text-[11px] text-slate-600">{formatDate(date)}</span>
+                      <span className="text-[11px] text-slate-600">{readTime} min read</span>
+                      {!isDb && (
+                        <span className="text-[10px] text-slate-700 font-medium">static</span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Status badge */}
+                  <span
+                    className="text-[10px] font-medium rounded-full px-2.5 py-1 shrink-0"
+                    style={
+                      isPublished
+                        ? { background: 'rgba(34,197,94,0.12)', color: '#22c55e' }
+                        : { background: 'rgba(100,116,139,0.15)', color: '#64748b' }
+                    }
+                  >
+                    {isPublished ? 'Published' : 'Draft'}
+                  </span>
+
+                  {/* Actions */}
+                  <div className="flex items-center gap-2 shrink-0">
+                    <Link
+                      href={`/blog/${slug}`}
+                      target="_blank"
+                      className="p-1.5 rounded-lg text-slate-500 hover:text-white hover:bg-white/[0.08] transition-colors"
+                      title="View live"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </Link>
+                    {isDb ? (
+                      <Link
+                        href={`/admin/blog/${slug}`}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/[0.08] transition-colors"
+                      >
+                        <Pencil className="w-3 h-3" />
+                        Edit
+                      </Link>
+                    ) : (
+                      <span className="px-3 py-1.5 text-xs text-slate-700">Static</span>
                     )}
                   </div>
                 </div>
-
-                {/* Status badge */}
-                <span
-                  className="text-[10px] font-medium rounded-full px-2.5 py-1 shrink-0"
-                  style={
-                    isPublished
-                      ? { background: 'rgba(34,197,94,0.12)', color: '#22c55e' }
-                      : { background: 'rgba(100,116,139,0.15)', color: '#64748b' }
-                  }
-                >
-                  {isPublished ? 'Published' : 'Draft'}
-                </span>
-
-                {/* Actions */}
-                <div className="flex items-center gap-2 shrink-0">
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    target="_blank"
-                    className="p-1.5 rounded-lg text-slate-500 hover:text-white hover:bg-white/[0.08] transition-colors"
-                    title="View live"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </Link>
-                  <Link
-                    href={`/admin/blog/${post.slug}`}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/[0.08] transition-colors"
-                  >
-                    Open
-                    <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </div>
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </div>
   )

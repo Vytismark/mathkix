@@ -3,6 +3,12 @@ export type Json = string | number | boolean | null | { [key: string]: Json | un
 export type Database = {
   public: {
     Tables: {
+      blog_posts: {
+        Row: { id: string; slug: string; title: string; description: string; category: string; date: string; read_time: number; author: string; content: string; published: boolean; created_at: string; updated_at: string }
+        Insert: { id?: string; slug: string; title: string; description?: string; category?: string; date?: string; read_time?: number; author?: string; content?: string; published?: boolean }
+        Update: { slug?: string; title?: string; description?: string; category?: string; date?: string; read_time?: number; author?: string; content?: string; published?: boolean; updated_at?: string }
+        Relationships: []
+      }
       profiles: {
         Row: { id: string; email: string; full_name: string | null; avatar_url: string | null; stripe_customer_id: string | null; notification_preferences: Json; created_at: string; updated_at: string }
         Insert: { id: string; email: string; full_name?: string | null; avatar_url?: string | null; stripe_customer_id?: string | null; notification_preferences?: Json }
