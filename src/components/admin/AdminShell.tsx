@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { Menu, X, LayoutDashboard, MessageCircle, BookOpen, LogOut } from 'lucide-react'
+import { Menu, X, LayoutDashboard, MessageCircle, BookOpen, LogOut, Newspaper } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const NAV_ITEMS = [
   { href: '/admin', label: 'Overview', icon: LayoutDashboard, exact: true },
   { href: '/admin/support', label: 'Support Tickets', icon: MessageCircle },
   { href: '/admin/questions', label: 'Questions', icon: BookOpen },
+  { href: '/admin/blog', label: 'Blog', icon: Newspaper },
 ]
 
 export function AdminShell({ children }: { children: React.ReactNode }) {
