@@ -1,15 +1,16 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import {
   ArrowLeft, Lock, Download, Trash2, AlertTriangle,
-  Shield, Bell, Eye, Mail, BookOpen, Megaphone, X,
+  Shield, Bell, Eye, Mail, BookOpen, Megaphone, X, KeyRound,
 } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { getPasswordStrength } from '@/lib/password'
+import { PinPad } from '@/components/parent/PinPad'
 
 /* ─── Shared styles ─────────────────────────────────────────────────────── */
 const inputClass =
@@ -91,6 +92,11 @@ export default function AccountPage() {
   })
   const [notifLoading, setNotifLoading] = useState<string | null>(null)
 
+  // ── PIN ──
+  const [pinHasSet, setPinHasSet] = useState(false)
+  const [pinMode, setPinMode] = useState<null | 'set' | 'change-old' | 'change-new' | 'remove'>(null)
+  const oldPinRef = useRef('')
+
   // ── export ──
   const [exportLoading, setExportLoading] = useState(false)
 
@@ -124,6 +130,11 @@ export default function AccountPage() {
           })
           setInitialized(true)
         })
+
+      fetch('/api/account/verify-pin')
+        .then(r => r.json())
+        .then(d => setPinHasSet(d.hasPIN ?? false))
+        .catch(() => {})
     })
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -197,6 +208,70 @@ export default function AccountPage() {
       toast.error('Failed to update preference')
     }
     setNotifLoading(null)
+  }
+
+  // ── PIN handlers ──
+
+  async function handleSetPin(pin: string): Promise<boolean> {
+    const res = await fetch('/api/account/set-pin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'set', pin }),
+    })
+    if (res.ok) {
+      toast.success('PIN set! Dashboard is now protected.')
+      setPinHasSet(true)
+      setPinMode(null)
+      return true
+    }
+    return false
+  }
+
+  async function handleChangeOldPin(pin: string): Promise<boolean> {
+    const res = await fetch('/api/account/verify-pin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin }),
+    })
+    const data = await res.json()
+    if (data.verified) {
+      oldPinRef.current = pin
+      setPinMode('change-new')
+      return true
+    }
+    return false
+  }
+
+  async function handleChangeNewPin(pin: string): Promise<boolean> {
+    const res = await fetch('/api/account/set-pin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'change', oldPin: oldPinRef.current, newPin: pin }),
+    })
+    if (res.ok) {
+      toast.success('PIN updated!')
+      oldPinRef.current = ''
+      setPinMode(null)
+      if (typeof window !== 'undefined') sessionStorage.removeItem('mathkix_pin_unlocked')
+      return true
+    }
+    return false
+  }
+
+  async function handleRemovePin(pin: string): Promise<boolean> {
+    const res = await fetch('/api/account/set-pin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'remove', pin }),
+    })
+    if (res.ok) {
+      toast.success('PIN removed.')
+      setPinHasSet(false)
+      setPinMode(null)
+      if (typeof window !== 'undefined') sessionStorage.removeItem('mathkix_pin_unlocked')
+      return true
+    }
+    return false
   }
 
   async function handleExportData() {
@@ -414,7 +489,95 @@ export default function AccountPage() {
         </div>
       </div>
 
-      {/* ═══════════════════════ 3. Email Notifications ═══════════════════════ */}
+      {/* ═══════════════════════ 3. Dashboard PIN ═══════════════════════ */}
+      <div className={`animate-fade-in-up ${cardClass} mb-5`} style={{ ...cardBg, animationDelay: nextDelay() }}>
+        <div className={headerClass}>
+          <KeyRound className="w-4 h-4 text-slate-500" />
+          <h2 className="text-white font-semibold">Dashboard PIN</h2>
+        </div>
+        <div className="px-6 py-6">
+          {pinMode === null ? (
+            <>
+              {/* Status */}
+              <div className="flex items-center gap-2.5 mb-3">
+                <span
+                  className="w-2.5 h-2.5 rounded-full shrink-0"
+                  style={{ background: pinHasSet ? '#34d399' : 'rgba(255,255,255,0.2)' }}
+                />
+                <p className="text-sm text-slate-300">
+                  {pinHasSet ? 'Dashboard PIN is active.' : 'No PIN set — dashboard is unprotected.'}
+                </p>
+              </div>
+              <p className="text-xs text-slate-500 mb-5 leading-relaxed">
+                A 4-digit PIN prevents children from accessing this dashboard. You&apos;ll be prompted
+                once per browser session — closing the tab resets it.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {!pinHasSet && (
+                  <button
+                    onClick={() => setPinMode('set')}
+                    className="cta-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
+                    style={{
+                      background: 'linear-gradient(135deg, #2557CC, #3678FF)',
+                      boxShadow: '0 4px 16px rgba(54,120,255,0.3)',
+                    }}
+                  >
+                    Set PIN
+                  </button>
+                )}
+                {pinHasSet && (
+                  <>
+                    <button
+                      onClick={() => setPinMode('change-old')}
+                      className="px-4 py-2.5 rounded-xl text-sm font-medium text-white border border-white/10 hover:bg-white/[0.06] transition-colors"
+                    >
+                      Change PIN
+                    </button>
+                    <button
+                      onClick={() => setPinMode('remove')}
+                      className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-red-400 border border-red-500/30 hover:bg-red-500/10 transition-colors"
+                    >
+                      Remove PIN
+                    </button>
+                  </>
+                )}
+              </div>
+            </>
+          ) : (
+            <div className="flex flex-col items-center gap-5">
+              <PinPad
+                mode="setup"
+                title={
+                  pinMode === 'set' ? 'Set a PIN' :
+                  pinMode === 'change-old' ? 'Change PIN' :
+                  pinMode === 'change-new' ? 'Change PIN' :
+                  'Remove PIN'
+                }
+                subtitle={
+                  pinMode === 'set' ? 'Choose a 4-digit PIN for your dashboard' :
+                  pinMode === 'change-old' ? 'Enter your current PIN first' :
+                  pinMode === 'change-new' ? 'Now enter your new PIN' :
+                  'Enter your current PIN to remove it'
+                }
+                onComplete={
+                  pinMode === 'set' ? handleSetPin :
+                  pinMode === 'change-old' ? handleChangeOldPin :
+                  pinMode === 'change-new' ? handleChangeNewPin :
+                  handleRemovePin
+                }
+              />
+              <button
+                onClick={() => { setPinMode(null); oldPinRef.current = '' }}
+                className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ═══════════════════════ 4. Email Notifications ═══════════════════════ */}
       <div className={`animate-fade-in-up ${cardClass} mb-5`} style={{ ...cardBg, animationDelay: nextDelay() }}>
         <div className={headerClass}>
           <Bell className="w-4 h-4 text-slate-500" />
@@ -462,7 +625,7 @@ export default function AccountPage() {
         </div>
       </div>
 
-      {/* ═══════════════════════ 4. Your Data ═══════════════════════ */}
+      {/* ═══════════════════════ 5. Your Data ═══════════════════════ */}
       <div className={`animate-fade-in-up ${cardClass} mb-5`} style={{ ...cardBg, animationDelay: nextDelay() }}>
         <div className={headerClass}>
           <Eye className="w-4 h-4 text-slate-500" />
@@ -517,7 +680,7 @@ export default function AccountPage() {
         </div>
       </div>
 
-      {/* ═══════════════════════ 5. Danger Zone ═══════════════════════ */}
+      {/* ═══════════════════════ 6. Danger Zone ═══════════════════════ */}
       <div
         className={`animate-fade-in-up rounded-3xl border border-red-500/30 overflow-hidden mb-8`}
         style={{ background: 'rgba(255,255,255,0.05)', animationDelay: nextDelay() }}
@@ -556,7 +719,7 @@ export default function AccountPage() {
         </div>
       </div>
 
-      {/* ═══════════════════════ 6. Legal Footer ═══════════════════════ */}
+      {/* ═══════════════════════ 7. Legal Footer ═══════════════════════ */}
       <div className="animate-fade-in-up text-center space-y-2 pb-4" style={{ animationDelay: nextDelay() }}>
         <div className="flex justify-center gap-6">
           <Link href="/privacy" className="text-sm text-slate-500 hover:text-slate-300 underline underline-offset-2 transition-colors">

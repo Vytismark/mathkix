@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
+import { PinPad } from '@/components/parent/PinPad'
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -39,6 +40,37 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
     return () => { document.body.style.overflow = '' }
   }, [drawerOpen])
 
+  // ── PIN gate ──
+  const [pinStatus, setPinStatus] = useState<'checking' | 'locked' | 'unlocked' | 'no-pin'>('checking')
+  const [gateExiting, setGateExiting] = useState(false)
+
+  useEffect(() => {
+    if (sessionStorage.getItem('mathkix_pin_unlocked') === '1') {
+      setPinStatus('unlocked')
+      return
+    }
+    fetch('/api/account/verify-pin')
+      .then(r => r.json())
+      .then(({ hasPIN }) => setPinStatus(hasPIN ? 'locked' : 'no-pin'))
+      .catch(() => setPinStatus('no-pin')) // fail open — never block on network error
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  async function handleGatePinComplete(pin: string): Promise<boolean> {
+    const res = await fetch('/api/account/verify-pin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin }),
+    })
+    const { verified } = await res.json()
+    if (verified) {
+      sessionStorage.setItem('mathkix_pin_unlocked', '1')
+      setGateExiting(true)
+      setTimeout(() => setPinStatus('unlocked'), 400)
+      return true
+    }
+    return false
+  }
+
   const [signingOut, setSigningOut] = useState(false)
   const [showSignOutConfirm, setShowSignOutConfirm] = useState(false)
 
@@ -46,6 +78,7 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
     if (signingOut) return
     setSigningOut(true)
     setShowSignOutConfirm(false)
+    sessionStorage.removeItem('mathkix_pin_unlocked')
     try {
       const supabase = createClient()
       const { error } = await supabase.auth.signOut()
@@ -113,6 +146,35 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      {/* ── PIN Gate overlay ── */}
+      {(pinStatus === 'checking' || pinStatus === 'locked') && (
+        <div
+          className={`fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8
+            ${gateExiting ? 'animate-pin-gate-exit' : 'animate-fade-in'}`}
+          style={{ background: '#07080f' }}
+        >
+          {/* Ambient glow */}
+          <div
+            className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px]"
+            style={{ background: 'radial-gradient(ellipse at center, rgba(54,120,255,0.1) 0%, transparent 65%)' }}
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mathkix-logo.svg" alt="MathKix" className="h-8 w-auto opacity-90 relative z-10" />
+          {pinStatus === 'checking' ? (
+            <div className="text-slate-500 text-sm animate-pulse relative z-10">Loading…</div>
+          ) : (
+            <div className="relative z-10">
+              <PinPad
+                mode="verify"
+                title="Welcome back"
+                subtitle="Enter your dashboard PIN"
+                onComplete={handleGatePinComplete}
+              />
+            </div>
+          )}
+        </div>
+      )}
+
       {/* ── Desktop sidebar (hidden on mobile) ── */}
       <nav
         className="hidden md:flex flex-col w-56 min-h-screen px-3 py-6 border-r border-white/[0.07] shrink-0"

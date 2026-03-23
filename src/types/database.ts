@@ -10,9 +10,9 @@ export type Database = {
         Relationships: []
       }
       profiles: {
-        Row: { id: string; email: string; full_name: string | null; avatar_url: string | null; stripe_customer_id: string | null; notification_preferences: Json; created_at: string; updated_at: string }
-        Insert: { id: string; email: string; full_name?: string | null; avatar_url?: string | null; stripe_customer_id?: string | null; notification_preferences?: Json }
-        Update: { full_name?: string | null; avatar_url?: string | null; stripe_customer_id?: string | null; notification_preferences?: Json }
+        Row: { id: string; email: string; full_name: string | null; avatar_url: string | null; stripe_customer_id: string | null; notification_preferences: Json; dashboard_pin_hash: string | null; created_at: string; updated_at: string }
+        Insert: { id: string; email: string; full_name?: string | null; avatar_url?: string | null; stripe_customer_id?: string | null; notification_preferences?: Json; dashboard_pin_hash?: string | null }
+        Update: { full_name?: string | null; avatar_url?: string | null; stripe_customer_id?: string | null; notification_preferences?: Json; dashboard_pin_hash?: string | null }
         Relationships: []
       }
       subscriptions: {

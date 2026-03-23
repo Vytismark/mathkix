@@ -722,3 +722,67 @@ body {
 .mobile-menu-enter {
   animation: slide-down-menu 0.2s ease both;
 }
+
+/* ─────────────────────────────────────────────
+   PIN pad - dot pop-in (spring bounce)
+───────────────────────────────────────────── */
+@keyframes pin-dot-pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pin-dot--filled {
+  animation: pin-dot-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.pin-dot--error {
+  background: #f87171 !important;
+  box-shadow: 0 0 8px rgba(248,113,113,0.5) !important;
+}
+
+/* ─────────────────────────────────────────────
+   PIN pad - error shake
+───────────────────────────────────────────── */
+@keyframes pin-shake {
+  0%, 100% { transform: translateX(0); }
+  15%      { transform: translateX(-8px); }
+  30%      { transform: translateX(7px); }
+  45%      { transform: translateX(-6px); }
+  60%      { transform: translateX(5px); }
+  75%      { transform: translateX(-3px); }
+  90%      { transform: translateX(2px); }
+}
+
+.animate-pin-shake {
+  animation: pin-shake 0.55s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* ─────────────────────────────────────────────
+   PIN gate overlay - fade-out on unlock
+───────────────────────────────────────────── */
+@keyframes pin-gate-exit {
+  from { opacity: 1; }
+  to   { opacity: 0; pointer-events: none; }
+}
+
+.animate-pin-gate-exit {
+  animation: pin-gate-exit 0.4s ease forwards;
+}
+
+/* ─────────────────────────────────────────────
+   PIN keys - hover/active states
+───────────────────────────────────────────── */
+@media (hover: hover) {
+  .pin-key:hover:not(:disabled) {
+    background: rgba(255,255,255,0.11) !important;
+    border-color: rgba(255,255,255,0.18) !important;
+  }
+}
+
+@media (hover: none) {
+  .pin-key:active:not(:disabled) {
+    background: rgba(54,120,255,0.15) !important;
+    transition-duration: 0.08s;
+  }
+}
