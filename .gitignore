@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Analysis and fix-log artifacts
+*-fix-log.json
+*-review.json
+flagged_reviews.json
+grade_mismatch_*.json
+mismatch_*.json
+verify-*.json
+fix-errors.json
+trend-analysis.json
+scripts/gen-mcq-report.json
+scripts/output/

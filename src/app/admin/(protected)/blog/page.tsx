@@ -70,7 +70,7 @@ export default function AdminBlogPage() {
       icon: Calendar,
       label: 'Latest Post',
       value: posts[0] ? new Date(posts[0].date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—',
-      sub: posts[0]?.title.slice(0, 32) + '…' ?? '—',
+      sub: posts[0] ? posts[0].title.slice(0, 32) + '…' : '—',
       color: '#22c55e',
       glow: 'rgba(34,197,94,0.3)',
     },
