@@ -30,7 +30,8 @@ import type {
   ModalityScores,
   PracticeQuestion,
 } from '@/types/lesson-content'
-// createDefaultModalityScores available from '@/types/lesson-content' if needed
+import type { ChildLearningProfile } from '@/types/learning-profile'
+import { CONFIDENCE_THRESHOLD } from '@/types/learning-profile'
 import {
   selectNextStandards,
   type PriorityScoringContext,
@@ -70,6 +71,7 @@ interface ComposerInput {
   lastUsedModality: TeachingModality | null
   recentStandards: Set<string>
   sessionsSinceMap: Map<string, number>
+  learningProfile: ChildLearningProfile | null
 }
 
 // ── Constants ────────────────────────────────────────────────
@@ -91,6 +93,10 @@ export async function composeSession(
   const budget = Math.max(3, Math.min(13,
     BUDGET_MAP[input.attentionSpan] + input.spanQuestionOffset
   ))
+
+  // ── Profile-aware adjustments ─────────────────────────────
+  const profile = input.learningProfile
+  const profileAdjustments = deriveProfileAdjustments(profile)
 
   // ── Step 1: Check if we have any authored lesson content ──
   // If not, fall back to the existing practice-only system
@@ -128,11 +134,29 @@ export async function composeSession(
   }
 
   // 2b. Instruction segments (1-2 standards with content)
-  const instructionStandards = standardsWithContent.slice(0, Math.min(2,
+  // Profile: focused learners get 1 standard, interleaved get 2
+  const maxInstructionStandards = profileAdjustments.preferFocused ? 1 : 2
+  const instructionStandards = standardsWithContent.slice(0, Math.min(maxInstructionStandards,
     Math.floor(remaining / (INSTRUCTION_COST + PRACTICE_COST))
   ))
 
   for (const priority of instructionStandards) {
+    // Profile: independent learners can skip instruction, get extra practice instead
+    if (profileAdjustments.canSkipInstruction) {
+      if (remaining >= PRACTICE_COST) {
+        const content = getLessonContent(priority.standardCode, 'procedural')
+        if (content && content.practiceQuestions.length > 0) {
+          segments.push({
+            type: 'practice',
+            standardCode: priority.standardCode,
+            questions: content.practiceQuestions.slice(0, PRACTICE_QUESTIONS_PER_SEGMENT + profileAdjustments.extraPracticeQuestions),
+          })
+          remaining -= PRACTICE_COST
+        }
+      }
+      continue
+    }
+
     if (remaining < INSTRUCTION_COST + PRACTICE_COST) break
 
     const available = getAvailableModalities(priority.standardCode)
@@ -397,3 +421,56 @@ function buildPriorityContext(input: ComposerInput): PriorityScoringContext {
     sessionsSinceMap: input.sessionsSinceMap,
   }
 }
+
+// ── Profile-aware session adjustments ────────────────────────
+
+interface ProfileAdjustments {
+  /** Prefer focused single-domain or interleaved multi-domain */
+  preferFocused: boolean
+  /** Reduce difficulty for anxious learners */
+  difficultyReduction: number   // 0 = none, 1 = one step easier
+  /** Extra practice questions for low working memory */
+  extraPracticeQuestions: number
+  /** Skip straight to practice if child is at "independent" fading stage */
+  canSkipInstruction: boolean
+}
+
+function deriveProfileAdjustments(
+  profile: ChildLearningProfile | null,
+): ProfileAdjustments {
+  const defaults: ProfileAdjustments = {
+    preferFocused: false,
+    difficultyReduction: 0,
+    extraPracticeQuestions: 0,
+    canSkipInstruction: false,
+  }
+
+  if (!profile) return defaults
+
+  const adj = { ...defaults }
+
+  // Interleaving preference
+  if (profile.interleavingPreference.confidence >= CONFIDENCE_THRESHOLD) {
+    adj.preferFocused = profile.interleavingPreference.value === 'focused_blocks'
+  }
+
+  // Math anxiety → reduce difficulty
+  if (profile.mathAnxietyLevel.confidence >= CONFIDENCE_THRESHOLD && profile.mathAnxietyLevel.value === 'high') {
+    adj.difficultyReduction = 1
+  }
+
+  // Low working memory → more practice (smaller chunks)
+  if (profile.workingMemoryCapacity.confidence >= CONFIDENCE_THRESHOLD && profile.workingMemoryCapacity.value === 'low') {
+    adj.extraPracticeQuestions = 1
+  }
+
+  // Independent learner → can skip instruction
+  if (profile.workedExampleFadingStage.confidence >= CONFIDENCE_THRESHOLD && profile.workedExampleFadingStage.value === 'independent') {
+    adj.canSkipInstruction = true
+  }
+
+  return adj
+}
+
+// Export for use by session/start route
+export type { ProfileAdjustments }

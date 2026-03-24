@@ -37,6 +37,7 @@ export type Database = {
           span_calibration_score: number; span_question_offset: number
           modality_scores: Json; preferred_modality: string | null
           current_frontier: Json; strengths: Json; gaps: Json
+          learning_profile: Json
         }
         Insert: {
           id?: string; profile_id: string; name: string; avatar_id?: string
@@ -52,6 +53,7 @@ export type Database = {
           span_calibration_score?: number; span_question_offset?: number
           modality_scores?: Json; preferred_modality?: string | null
           current_frontier?: Json; strengths?: Json; gaps?: Json
+          learning_profile?: Json
         }
         Update: {
           name?: string; avatar_id?: string
@@ -67,6 +69,7 @@ export type Database = {
           span_calibration_score?: number; span_question_offset?: number
           modality_scores?: Json; preferred_modality?: string | null
           current_frontier?: Json; strengths?: Json; gaps?: Json
+          learning_profile?: Json
         }
         Relationships: [{ foreignKeyName: string; columns: string[]; isOneToOne: boolean; referencedRelation: string; referencedColumns: string[] }]
       }

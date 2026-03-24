@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
   const [blocked, { data: child, error: childError }] = await Promise.all([
     requireActiveSubscription(user.id),
     supabase.from('children')
-      .select('id, domain_mastery, school_grade, attention_span, span_question_offset, learning_pace, challenge_preference, motivation_style, modality_scores, preferred_modality')
+      .select('id, domain_mastery, school_grade, attention_span, span_question_offset, learning_pace, challenge_preference, motivation_style, modality_scores, preferred_modality, learning_profile')
       .eq('id', childId)
       .eq('profile_id', user.id)
       .single(),
@@ -151,6 +151,7 @@ export async function POST(request: NextRequest) {
     lastUsedModality: (child.preferred_modality as 'visual' | 'story' | 'procedural' | 'interactive' | 'challenge') ?? null,
     recentStandards,
     sessionsSinceMap: new Map(),
+    learningProfile: (child.learning_profile as import('@/types/learning-profile').ChildLearningProfile | null) ?? null,
   })
 
   // ── Build engine state ──────────────────────────────────

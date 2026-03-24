@@ -13,6 +13,10 @@ import { scoreToSRQuality, applyReview, createInitialSRItem } from '@/lib/adapti
 import { checkAchievements, buildAchievementRow } from '@/lib/adaptive/achievements'
 import { computeAffinityDelta, applyScoreAdjustment } from '@/lib/adaptive/affinity'
 import { updateModalityScore, derivePreferredModality } from '@/lib/adaptive/modality'
+import { updateProfile } from '@/lib/adaptive/profiler'
+import { extractAllSignals, type AnswerRecord, type SessionContext } from '@/lib/adaptive/profile-signals'
+import type { ChildLearningProfile } from '@/types/learning-profile'
+import { createDefaultProfile } from '@/types/learning-profile'
 import type { Domain } from '@/types/quiz'
 import type { MixedQuestion, BehavioralEvent } from '@/types/adaptive'
 import type { SRItem, AchievementCheckState } from '@/types/adaptive'
@@ -71,7 +75,7 @@ export async function POST(request: NextRequest) {
   // Verify child ownership
   const { data: child } = await supabase
     .from('children')
-    .select('id, xp_total, streak_days, last_active, school_grade, domain_mastery, attention_span, span_calibration_score, span_question_offset, modality_scores')
+    .select('id, xp_total, streak_days, last_active, school_grade, domain_mastery, attention_span, span_calibration_score, span_question_offset, modality_scores, learning_profile')
     .eq('id', childId)
     .eq('profile_id', user.id)
     .single()
@@ -525,6 +529,55 @@ export async function POST(request: NextRequest) {
     await supabase.from('children').update({
       modality_scores: currentModalityScores as unknown as Json,
       preferred_modality: preferred,
+    }).eq('id', childId)
+  }
+
+  // ── Update learning profile via profiler ─────────────────
+  {
+    const sessionSegments = Array.isArray(segments) ? segments as SessionSegment[] : []
+    const instructionStandards = sessionSegments
+      .filter((s): s is SessionSegment & { type: 'instruction' } => s.type === 'instruction')
+      .map(s => s.standardCode)
+    const modalityUsedInSession = sessionSegments.find(s => s.type === 'instruction')
+      ? (sessionSegments.find(s => s.type === 'instruction') as { modality?: string })?.modality ?? null
+      : null
+
+    // Build answer records for signal extraction
+    const answerRecords: AnswerRecord[] = perQuestion.map((pq, idx) => ({
+      questionId: pq.question.id,
+      answer: pq.given,
+      correct: pq.correct,
+      startMs: idx * 15_000,  // approximate until per-question timestamps are added
+      endMs: (idx + 1) * 15_000,
+      difficulty: pq.question.difficulty ?? 1,
+      domain: pq.question.domain,
+      standardCode: pq.question.standard_code ?? null,
+      questionType: pq.question.type,
+      questionText: pq.question.text,
+      correctAnswer: pq.question.correct_answer,
+    }))
+
+    const sessionCtx: SessionContext = {
+      childId,
+      sessionId,
+      gradeLevel: child.school_grade ?? 3,
+      totalTimeMs: (timeSpentSec ?? 0) * 1000,
+      isSegmented: sessionSegments.length > 0,
+      hintRequestCount: 0,  // TODO: pass from client
+      emojiPositive: 0,
+      emojiNegative: 0,
+      instructionSkipCount: 0,
+      instructionStepsViewed: 0,
+      instructionStepsTotal: 0,
+      aiTeacherMessages: 0,
+    }
+
+    const allSignals = extractAllSignals(answerRecords, sessionCtx, modalityUsedInSession, instructionStandards)
+    const currentProfile = (child.learning_profile as ChildLearningProfile | null) ?? createDefaultProfile()
+    const updatedProfile = updateProfile(currentProfile, allSignals)
+
+    await supabase.from('children').update({
+      learning_profile: updatedProfile as unknown as Json,
     }).eq('id', childId)
   }
 
