@@ -61,6 +61,9 @@ Three client factories in `src/lib/supabase/`:
 
 `src/lib/adaptive/` — the core learning system:
 - `engine.ts` — question selection via composite scoring (mastery need, SR urgency, difficulty fit, domain weight, variety)
+- `prerequisites.ts` — DAG-based prerequisite graph traversal, readiness tiers (ideal/ready/unlocked/blocked), priority scoring for next-standard selection, deepest-gap remediation
+- `session-composer.ts` — builds structured sessions with instruction + practice + review segments, budget-based allocation, falls back to practice-only when no authored content exists
+- `modality.ts` — teaching modality selection (visual/story/procedural/interactive/challenge) using cold start from parent preferences → epsilon-greedy exploration → Thompson sampling exploitation
 - `spaced-repetition.ts` — SM-2 scheduling algorithm
 - `affinity.ts` — domain preference tracking with exponential decay
 - `achievements.ts` — badge/trophy detection
@@ -87,7 +90,15 @@ Secured by `CRON_SECRET` header. Defined in `vercel.json`:
 
 ### Types
 
-Hand-maintained in `src/types/`: `database.ts` (Supabase schema), `adaptive.ts`, `quiz.ts`, `stripe.ts`. Update these when changing database schema or domain models.
+Hand-maintained in `src/types/`: `database.ts` (Supabase schema), `adaptive.ts`, `quiz.ts`, `stripe.ts`, `lesson-content.ts` (modalities, instruction steps, session segments, visual assets). Update these when changing database schema or domain models.
+
+### Lesson content
+
+`src/data/lessons/` — hard-coded teaching content organized by grade and standard. Each standard has up to 5 modality variants (visual, story, procedural, interactive, challenge). The lesson registry (`src/data/lessons/index.ts`) lazy-loads content and provides `getLessonContent()`, `getAvailableModalities()`, `hasLessonContent()` queries. Currently authored: Grade 3 OA (3.OA.1–3.OA.9, 45 files). Standards without content fall back to practice-only sessions.
+
+### Prerequisite map
+
+`mathkix_prerequisite_map.json` — 393 Common Core standards (Grade 2 → High School) as a directed acyclic graph. Each node has prerequisites. The prerequisite engine in `src/lib/adaptive/prerequisites.ts` traverses this graph to determine which standards are ready to teach.
 
 ### Question data
 
@@ -103,7 +114,7 @@ Validation logic is in `src/lib/env.ts` — use `env.VARIABLE_NAME` in server co
 
 ## Database
 
-Supabase PostgreSQL with Row-Level Security on all user data tables. Migrations live in `supabase/migrations/` as ordered SQL scripts. Key tables: `profiles`, `subscriptions`, `children`, `diagnostic_questions`, `quiz_sessions`, `adaptive_sessions`, `spaced_repetition`, `domain_mastery`, `lessons`, `lesson_attempts`, `achievements`, `support_tickets`, `blog_posts`, `email_queue`.
+Supabase PostgreSQL with Row-Level Security on all user data tables. Migrations live in `supabase/migrations/` as ordered SQL scripts. Key tables: `profiles`, `subscriptions`, `children` (includes `modality_scores`, `preferred_modality`, `current_frontier`, `strengths`, `gaps`), `diagnostic_questions`, `quiz_sessions`, `practice_sessions`, `spaced_repetition_items`, `child_standard_mastery`, `lessons`, `lesson_attempts`, `modality_attempts`, `achievements`, `topic_affinity`, `behavioral_events`, `support_tickets`, `blog_posts`, `email_queue`.
 
 ## Code Style
 
