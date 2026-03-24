@@ -20,8 +20,15 @@ export function StartPracticeButton({ childId }: StartPracticeButtonProps) {
         body: JSON.stringify({ childId }),
       })
       const data = await res.json()
-      if (data.sessionId && Array.isArray(data.questions) && data.questions.length > 0) {
-        // Store questions so the session page can access them without a second API call
+      if (!data.sessionId) { setLoading(false); return }
+
+      if (data.isSegmented && Array.isArray(data.segments) && data.segments.length > 0) {
+        // New: segment-based session
+        sessionStorage.setItem(`session_segments_${data.sessionId}`, JSON.stringify(data.segments))
+        const grade = data.gradeLevel ?? 1
+        router.push(`/play/session/${data.sessionId}?child=${childId}&grade=${grade}&mode=segmented`)
+      } else if (Array.isArray(data.questions) && data.questions.length > 0) {
+        // Fallback: flat practice-only session
         sessionStorage.setItem(`session_questions_${data.sessionId}`, JSON.stringify(data.questions))
         const grade = data.gradeLevel ?? 1
         router.push(`/play/session/${data.sessionId}?child=${childId}&grade=${grade}`)

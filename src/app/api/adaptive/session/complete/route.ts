@@ -12,9 +12,12 @@ import { captureServerEvent } from '@/lib/posthog/server'
 import { scoreToSRQuality, applyReview, createInitialSRItem } from '@/lib/adaptive/spaced-repetition'
 import { checkAchievements, buildAchievementRow } from '@/lib/adaptive/achievements'
 import { computeAffinityDelta, applyScoreAdjustment } from '@/lib/adaptive/affinity'
+import { updateModalityScore, derivePreferredModality } from '@/lib/adaptive/modality'
 import type { Domain } from '@/types/quiz'
 import type { MixedQuestion, BehavioralEvent } from '@/types/adaptive'
 import type { SRItem, AchievementCheckState } from '@/types/adaptive'
+import type { SessionSegment, ModalityScores } from '@/types/lesson-content'
+import { createDefaultModalityScores } from '@/types/lesson-content'
 import type { Json } from '@/types/database'
 
 export const dynamic = 'force-dynamic'
@@ -58,6 +61,7 @@ export async function POST(request: NextRequest) {
     answers,       // Record<number, string>  question.id → answer given
     questions,     // MixedQuestion[] - sent back from client
     timeSpentSec,
+    segments,      // SessionSegment[] | undefined - sent for segmented sessions
   } = await request.json()
 
   if (!sessionId || !childId || !answers || !questions) {
@@ -67,7 +71,7 @@ export async function POST(request: NextRequest) {
   // Verify child ownership
   const { data: child } = await supabase
     .from('children')
-    .select('id, xp_total, streak_days, last_active, school_grade, domain_mastery, attention_span, span_calibration_score, span_question_offset')
+    .select('id, xp_total, streak_days, last_active, school_grade, domain_mastery, attention_span, span_calibration_score, span_question_offset, modality_scores')
     .eq('id', childId)
     .eq('profile_id', user.id)
     .single()
@@ -470,6 +474,59 @@ export async function POST(request: NextRequest) {
       time_spent_sec: timeSpentSec ?? null,
     } as Json,
   }).then(() => {})
+
+  // ── Track modality attempts (segmented sessions only) ────
+  if (Array.isArray(segments) && segments.length > 0) {
+    const sessionSegments = segments as SessionSegment[]
+    const currentModalityScores: ModalityScores =
+      (child.modality_scores as ModalityScores | null) ?? createDefaultModalityScores()
+
+    for (const seg of sessionSegments) {
+      if (seg.type !== 'instruction') continue
+
+      // Find the practice segment paired with this instruction
+      const pairedPractice = sessionSegments.find(
+        (s) => s.type === 'practice' && s.standardCode === seg.standardCode
+      )
+
+      // Calculate score from the paired practice questions
+      let segScorePct = 0
+      if (pairedPractice && pairedPractice.type === 'practice') {
+        const practiceQs = pairedPractice.questions
+        let correct = 0
+        for (const q of practiceQs) {
+          const given = String(answers[q.id] ?? '')
+          if (checkAnswer(q.type, given, q.correct_answer)) correct++
+        }
+        segScorePct = practiceQs.length > 0 ? Math.round((correct / practiceQs.length) * 100) : 0
+      }
+
+      // Record modality attempt
+      await supabase.from('modality_attempts').insert({
+        child_id: childId,
+        standard_code: seg.standardCode,
+        modality: seg.modality,
+        score_pct: segScorePct,
+        time_spent_sec: timeSpentSec ? Math.round(timeSpentSec / sessionSegments.length) : null,
+        engagement_signal: 'ok',
+      })
+
+      // Update modality scores on child profile
+      const updated = updateModalityScore(
+        currentModalityScores[seg.modality],
+        segScorePct,
+        'ok',
+      )
+      currentModalityScores[seg.modality] = updated
+    }
+
+    // Persist updated modality scores + derived preferred modality
+    const preferred = derivePreferredModality(currentModalityScores)
+    await supabase.from('children').update({
+      modality_scores: currentModalityScores as unknown as Json,
+      preferred_modality: preferred,
+    }).eq('id', childId)
+  }
 
   // ── Identify touched domains for island highlight ────────
   const domainsInSession = [...new Set(mixedQuestions.map((q) => q.domain))]

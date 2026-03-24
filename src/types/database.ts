@@ -35,6 +35,8 @@ export type Database = {
           xp_total: number; streak_days: number; last_active: string | null
           placement_done: boolean; created_at: string; updated_at: string
           span_calibration_score: number; span_question_offset: number
+          modality_scores: Json; preferred_modality: string | null
+          current_frontier: Json; strengths: Json; gaps: Json
         }
         Insert: {
           id?: string; profile_id: string; name: string; avatar_id?: string
@@ -48,6 +50,8 @@ export type Database = {
           learning_notes?: string | null
           xp_total?: number; streak_days?: number; last_active?: string | null; placement_done?: boolean
           span_calibration_score?: number; span_question_offset?: number
+          modality_scores?: Json; preferred_modality?: string | null
+          current_frontier?: Json; strengths?: Json; gaps?: Json
         }
         Update: {
           name?: string; avatar_id?: string
@@ -61,6 +65,8 @@ export type Database = {
           learning_notes?: string | null
           xp_total?: number; streak_days?: number; last_active?: string | null; placement_done?: boolean
           span_calibration_score?: number; span_question_offset?: number
+          modality_scores?: Json; preferred_modality?: string | null
+          current_frontier?: Json; strengths?: Json; gaps?: Json
         }
         Relationships: [{ foreignKeyName: string; columns: string[]; isOneToOne: boolean; referencedRelation: string; referencedColumns: string[] }]
       }
@@ -202,6 +208,12 @@ export type Database = {
             referencedColumns: ['id']
           }
         ]
+      }
+      modality_attempts: {
+        Row: { id: string; child_id: string; standard_code: string; modality: string; score_pct: number | null; time_spent_sec: number | null; engagement_signal: string | null; completed_at: string }
+        Insert: { id?: string; child_id: string; standard_code: string; modality: string; score_pct?: number | null; time_spent_sec?: number | null; engagement_signal?: string | null }
+        Update: { score_pct?: number | null; time_spent_sec?: number | null; engagement_signal?: string | null }
+        Relationships: [{ foreignKeyName: 'modality_attempts_child_id_fkey'; columns: ['child_id']; isOneToOne: false; referencedRelation: 'children'; referencedColumns: ['id'] }]
       }
       email_queue: {
         Row: { id: string; profile_id: string; sequence_key: string; send_at: string; sent_at: string | null; cancelled_at: string | null; failed_at: string | null; error: string | null; metadata: Json; created_at: string }

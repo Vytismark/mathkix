@@ -1,0 +1,3225 @@
+{
+  "meta": {
+    "name": "mathkix_prerequisite_map",
+    "version": "1.0",
+    "description": "Prerequisite map for Common Core Math Standards, Grades 3 through High School. Each node represents a standard with its prerequisites. The algorithm should traverse this graph to find the deepest unmastered prerequisite for any target skill.",
+    "notes": [
+      "Prerequisites prefixed with 'K.', '1.', or '2.' are foundational entry points assumed mastered by Grade 3.",
+      "Standards marked with (+) are advanced/optional for college-readiness.",
+      "★ denotes modeling standards."
+    ]
+  },
+  "standards": {
+
+    "3.OA.1": {
+      "id": "3.OA.1",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Represent and solve problems involving multiplication and division",
+      "description": "Interpret products of whole numbers, e.g., interpret 5 × 7 as the total number of objects in 5 groups of 7 objects each.",
+      "prerequisites": ["2.OA.3", "2.OA.4"]
+    },
+    "3.OA.2": {
+      "id": "3.OA.2",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Represent and solve problems involving multiplication and division",
+      "description": "Interpret whole-number quotients of whole numbers, e.g., interpret 56 ÷ 8 as the number of objects in each share.",
+      "prerequisites": ["3.OA.1", "2.OA.3"]
+    },
+    "3.OA.3": {
+      "id": "3.OA.3",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Represent and solve problems involving multiplication and division",
+      "description": "Use multiplication and division within 100 to solve word problems involving equal groups, arrays, and measurement quantities.",
+      "prerequisites": ["3.OA.1", "3.OA.2"]
+    },
+    "3.OA.4": {
+      "id": "3.OA.4",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Represent and solve problems involving multiplication and division",
+      "description": "Determine the unknown whole number in a multiplication or division equation relating three whole numbers.",
+      "prerequisites": ["3.OA.1", "3.OA.2", "3.OA.3"]
+    },
+    "3.OA.5": {
+      "id": "3.OA.5",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Understand properties of multiplication and the relationship between multiplication and division",
+      "description": "Apply properties of operations as strategies to multiply and divide (commutative, associative, distributive).",
+      "prerequisites": ["3.OA.1", "3.OA.2"]
+    },
+    "3.OA.6": {
+      "id": "3.OA.6",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Understand properties of multiplication and the relationship between multiplication and division",
+      "description": "Understand division as an unknown-factor problem.",
+      "prerequisites": ["3.OA.1", "3.OA.2", "3.OA.5"]
+    },
+    "3.OA.7": {
+      "id": "3.OA.7",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Multiply and divide within 100",
+      "description": "Fluently multiply and divide within 100. By end of Grade 3, know from memory all products of two one-digit numbers.",
+      "prerequisites": ["3.OA.5", "3.OA.6", "3.OA.3"]
+    },
+    "3.OA.8": {
+      "id": "3.OA.8",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Solve problems involving the four operations, and identify and explain patterns in arithmetic",
+      "description": "Solve two-step word problems using the four operations. Represent with equations using a letter for the unknown.",
+      "prerequisites": ["3.OA.3", "3.OA.7", "2.OA.1", "2.NBT.5"]
+    },
+    "3.OA.9": {
+      "id": "3.OA.9",
+      "grade": 3,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Solve problems involving the four operations, and identify and explain patterns in arithmetic",
+      "description": "Identify arithmetic patterns (including in addition/multiplication tables) and explain them using properties of operations.",
+      "prerequisites": ["3.OA.5", "3.OA.7"]
+    },
+
+    "3.NBT.1": {
+      "id": "3.NBT.1",
+      "grade": 3,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Use place value understanding and properties of operations to perform multi-digit arithmetic",
+      "description": "Use place value understanding to round whole numbers to the nearest 10 or 100.",
+      "prerequisites": ["2.NBT.1", "2.NBT.3"]
+    },
+    "3.NBT.2": {
+      "id": "3.NBT.2",
+      "grade": 3,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Use place value understanding and properties of operations to perform multi-digit arithmetic",
+      "description": "Fluently add and subtract within 1000 using strategies based on place value, properties of operations, and the relationship between addition and subtraction.",
+      "prerequisites": ["2.NBT.5", "2.NBT.7", "2.NBT.9"]
+    },
+    "3.NBT.3": {
+      "id": "3.NBT.3",
+      "grade": 3,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Use place value understanding and properties of operations to perform multi-digit arithmetic",
+      "description": "Multiply one-digit whole numbers by multiples of 10 in the range 10–90.",
+      "prerequisites": ["3.OA.1", "3.OA.5", "2.NBT.1"]
+    },
+
+    "3.NF.1": {
+      "id": "3.NF.1",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a/b as a parts of size 1/b.",
+      "prerequisites": ["2.G.3"]
+    },
+    "3.NF.2": {
+      "id": "3.NF.2",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Understand a fraction as a number on the number line; represent fractions on a number line diagram.",
+      "prerequisites": ["3.NF.1", "2.MD.6"]
+    },
+    "3.NF.2a": {
+      "id": "3.NF.2a",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Represent a fraction 1/b on a number line by partitioning the interval from 0 to 1 into b equal parts.",
+      "prerequisites": ["3.NF.1", "2.MD.6"]
+    },
+    "3.NF.2b": {
+      "id": "3.NF.2b",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Represent a fraction a/b on a number line by marking off a lengths 1/b from 0.",
+      "prerequisites": ["3.NF.2a", "3.NF.1"]
+    },
+    "3.NF.3": {
+      "id": "3.NF.3",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size.",
+      "prerequisites": ["3.NF.1", "3.NF.2"]
+    },
+    "3.NF.3a": {
+      "id": "3.NF.3a",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Understand two fractions as equivalent if they are the same size or same point on a number line.",
+      "prerequisites": ["3.NF.2", "3.NF.1"]
+    },
+    "3.NF.3b": {
+      "id": "3.NF.3b",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Recognize and generate simple equivalent fractions, e.g., 1/2 = 2/4, 4/6 = 2/3.",
+      "prerequisites": ["3.NF.3a", "3.NF.1"]
+    },
+    "3.NF.3c": {
+      "id": "3.NF.3c",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Express whole numbers as fractions and recognize fractions equivalent to whole numbers.",
+      "prerequisites": ["3.NF.1", "3.NF.3a"]
+    },
+    "3.NF.3d": {
+      "id": "3.NF.3d",
+      "grade": 3,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Develop understanding of fractions as numbers",
+      "description": "Compare two fractions with the same numerator or same denominator by reasoning about their size.",
+      "prerequisites": ["3.NF.1", "3.NF.2", "3.NF.3a"]
+    },
+
+    "3.MD.1": {
+      "id": "3.MD.1",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Solve problems involving measurement and estimation of intervals of time, liquid volumes, and masses of objects",
+      "description": "Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals.",
+      "prerequisites": ["2.MD.7", "2.NBT.5"]
+    },
+    "3.MD.2": {
+      "id": "3.MD.2",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Solve problems involving measurement and estimation of intervals of time, liquid volumes, and masses of objects",
+      "description": "Measure and estimate liquid volumes and masses of objects using grams, kilograms, and liters.",
+      "prerequisites": ["2.MD.1", "2.MD.3", "3.OA.3"]
+    },
+    "3.MD.3": {
+      "id": "3.MD.3",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Represent and interpret data",
+      "description": "Draw a scaled picture graph and a scaled bar graph to represent a data set. Solve 'how many more/less' problems using bar graphs.",
+      "prerequisites": ["2.MD.10", "3.OA.1"]
+    },
+    "3.MD.4": {
+      "id": "3.MD.4",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Represent and interpret data",
+      "description": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show data on a line plot.",
+      "prerequisites": ["2.MD.1", "3.NF.1", "2.MD.9"]
+    },
+    "3.MD.5": {
+      "id": "3.MD.5",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of area and relate area to multiplication and to addition",
+      "description": "Recognize area as an attribute of plane figures and understand concepts of area measurement (unit squares).",
+      "prerequisites": ["2.G.2", "3.OA.1"]
+    },
+    "3.MD.5a": {
+      "id": "3.MD.5a",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of area",
+      "description": "A unit square has one square unit of area and can be used to measure area.",
+      "prerequisites": ["2.G.2"]
+    },
+    "3.MD.5b": {
+      "id": "3.MD.5b",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of area",
+      "description": "A plane figure covered by n unit squares without gaps or overlaps has an area of n square units.",
+      "prerequisites": ["3.MD.5a"]
+    },
+    "3.MD.6": {
+      "id": "3.MD.6",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of area and relate area to multiplication and to addition",
+      "description": "Measure areas by counting unit squares.",
+      "prerequisites": ["3.MD.5"]
+    },
+    "3.MD.7": {
+      "id": "3.MD.7",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of area and relate area to multiplication and to addition",
+      "description": "Relate area to the operations of multiplication and addition.",
+      "prerequisites": ["3.MD.5", "3.MD.6", "3.OA.1", "3.OA.5"]
+    },
+    "3.MD.7a": {
+      "id": "3.MD.7a",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: area and multiplication",
+      "description": "Find area of a rectangle by tiling and show area equals side lengths multiplied.",
+      "prerequisites": ["3.MD.6", "3.OA.1"]
+    },
+    "3.MD.7b": {
+      "id": "3.MD.7b",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: area and multiplication",
+      "description": "Multiply side lengths to find areas of rectangles in real-world and math problems.",
+      "prerequisites": ["3.MD.7a", "3.OA.3"]
+    },
+    "3.MD.7c": {
+      "id": "3.MD.7c",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: area and multiplication",
+      "description": "Use tiling to show area of a rectangle with sides a and b+c is the sum of a×b and a×c (distributive property via area).",
+      "prerequisites": ["3.MD.7a", "3.OA.5"]
+    },
+    "3.MD.7d": {
+      "id": "3.MD.7d",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: area and multiplication",
+      "description": "Recognize area as additive. Find areas of rectilinear figures by decomposing into non-overlapping rectangles.",
+      "prerequisites": ["3.MD.7a", "3.MD.7b", "3.NBT.2"]
+    },
+    "3.MD.8": {
+      "id": "3.MD.8",
+      "grade": 3,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: recognize perimeter as an attribute of plane figures",
+      "description": "Solve problems involving perimeters of polygons, including finding perimeter, unknown side lengths, and comparing rectangles with same perimeter/different areas.",
+      "prerequisites": ["3.NBT.2", "3.MD.7b", "2.MD.1"]
+    },
+
+    "3.G.1": {
+      "id": "3.G.1",
+      "grade": 3,
+      "domain": "Geometry",
+      "cluster": "Reason with shapes and their attributes",
+      "description": "Understand shapes in different categories may share attributes defining a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, squares as quadrilaterals.",
+      "prerequisites": ["2.G.1"]
+    },
+    "3.G.2": {
+      "id": "3.G.2",
+      "grade": 3,
+      "domain": "Geometry",
+      "cluster": "Reason with shapes and their attributes",
+      "description": "Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole.",
+      "prerequisites": ["3.NF.1", "3.MD.5", "2.G.3"]
+    },
+
+    "4.OA.1": {
+      "id": "4.OA.1",
+      "grade": 4,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Use the four operations with whole numbers to solve problems",
+      "description": "Interpret a multiplication equation as a comparison (e.g., 35 = 5 × 7 means 35 is 5 times as many as 7).",
+      "prerequisites": ["3.OA.1", "3.OA.5"]
+    },
+    "4.OA.2": {
+      "id": "4.OA.2",
+      "grade": 4,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Use the four operations with whole numbers to solve problems",
+      "description": "Multiply or divide to solve word problems involving multiplicative comparison.",
+      "prerequisites": ["4.OA.1", "3.OA.3", "3.OA.7"]
+    },
+    "4.OA.3": {
+      "id": "4.OA.3",
+      "grade": 4,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Use the four operations with whole numbers to solve problems",
+      "description": "Solve multistep word problems with whole numbers using the four operations, including interpreting remainders.",
+      "prerequisites": ["3.OA.8", "4.OA.2", "3.NBT.2", "4.NBT.5", "4.NBT.6"]
+    },
+    "4.OA.4": {
+      "id": "4.OA.4",
+      "grade": 4,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Gain familiarity with factors and multiples",
+      "description": "Find all factor pairs for a whole number 1–100. Determine if a number is a multiple of a given one-digit number. Determine prime or composite.",
+      "prerequisites": ["3.OA.7", "3.OA.6"]
+    },
+    "4.OA.5": {
+      "id": "4.OA.5",
+      "grade": 4,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Generate and analyze patterns",
+      "description": "Generate a number or shape pattern that follows a given rule. Identify features of the pattern not explicit in the rule.",
+      "prerequisites": ["3.OA.9"]
+    },
+
+    "4.NBT.1": {
+      "id": "4.NBT.1",
+      "grade": 4,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Generalize place value understanding for multi-digit whole numbers",
+      "description": "Recognize that a digit in one place represents ten times what it represents in the place to its right.",
+      "prerequisites": ["2.NBT.1", "3.NBT.1"]
+    },
+    "4.NBT.2": {
+      "id": "4.NBT.2",
+      "grade": 4,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Generalize place value understanding for multi-digit whole numbers",
+      "description": "Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare using >, =, <.",
+      "prerequisites": ["4.NBT.1", "2.NBT.3", "2.NBT.4"]
+    },
+    "4.NBT.3": {
+      "id": "4.NBT.3",
+      "grade": 4,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Generalize place value understanding for multi-digit whole numbers",
+      "description": "Use place value understanding to round multi-digit whole numbers to any place.",
+      "prerequisites": ["4.NBT.1", "3.NBT.1"]
+    },
+    "4.NBT.4": {
+      "id": "4.NBT.4",
+      "grade": 4,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Use place value understanding and properties of operations to perform multi-digit arithmetic",
+      "description": "Fluently add and subtract multi-digit whole numbers using the standard algorithm.",
+      "prerequisites": ["3.NBT.2", "4.NBT.1"]
+    },
+    "4.NBT.5": {
+      "id": "4.NBT.5",
+      "grade": 4,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Use place value understanding and properties of operations to perform multi-digit arithmetic",
+      "description": "Multiply a whole number of up to four digits by a one-digit number, and multiply two two-digit numbers.",
+      "prerequisites": ["3.OA.7", "3.NBT.3", "4.NBT.1", "3.OA.5"]
+    },
+    "4.NBT.6": {
+      "id": "4.NBT.6",
+      "grade": 4,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Use place value understanding and properties of operations to perform multi-digit arithmetic",
+      "description": "Find whole-number quotients and remainders with up to four-digit dividends and one-digit divisors.",
+      "prerequisites": ["3.OA.7", "3.OA.6", "4.NBT.1", "4.NBT.5"]
+    },
+
+    "4.NF.1": {
+      "id": "4.NF.1",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Extend understanding of fraction equivalence and ordering",
+      "description": "Explain why a fraction a/b is equivalent to (n×a)/(n×b) using visual fraction models.",
+      "prerequisites": ["3.NF.3a", "3.NF.3b", "3.OA.1"]
+    },
+    "4.NF.2": {
+      "id": "4.NF.2",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Extend understanding of fraction equivalence and ordering",
+      "description": "Compare two fractions with different numerators and different denominators by creating common denominators/numerators or comparing to 1/2.",
+      "prerequisites": ["4.NF.1", "3.NF.3d"]
+    },
+    "4.NF.3": {
+      "id": "4.NF.3",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Understand a fraction a/b with a > 1 as a sum of fractions 1/b.",
+      "prerequisites": ["3.NF.1", "3.NF.3c"]
+    },
+    "4.NF.3a": {
+      "id": "4.NF.3a",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Understand addition and subtraction of fractions as joining and separating parts referring to the same whole.",
+      "prerequisites": ["4.NF.3", "3.NF.1"]
+    },
+    "4.NF.3b": {
+      "id": "4.NF.3b",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Decompose a fraction into a sum of fractions with the same denominator in more than one way.",
+      "prerequisites": ["4.NF.3a"]
+    },
+    "4.NF.3c": {
+      "id": "4.NF.3c",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Add and subtract mixed numbers with like denominators.",
+      "prerequisites": ["4.NF.3a", "4.NF.3b", "3.NF.3c"]
+    },
+    "4.NF.3d": {
+      "id": "4.NF.3d",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Solve word problems involving addition and subtraction of fractions with like denominators.",
+      "prerequisites": ["4.NF.3a", "4.NF.3c"]
+    },
+    "4.NF.4": {
+      "id": "4.NF.4",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Apply and extend previous understandings of multiplication to multiply a fraction by a whole number.",
+      "prerequisites": ["4.NF.3", "3.OA.1", "3.OA.5"]
+    },
+    "4.NF.4a": {
+      "id": "4.NF.4a",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Understand a fraction a/b as a multiple of 1/b (e.g., 5/4 = 5 × (1/4)).",
+      "prerequisites": ["4.NF.3", "3.OA.1"]
+    },
+    "4.NF.4b": {
+      "id": "4.NF.4b",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Understand a multiple of a/b as a multiple of 1/b, and use this to multiply a fraction by a whole number.",
+      "prerequisites": ["4.NF.4a", "3.OA.5"]
+    },
+    "4.NF.4c": {
+      "id": "4.NF.4c",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Build fractions from unit fractions",
+      "description": "Solve word problems involving multiplication of a fraction by a whole number.",
+      "prerequisites": ["4.NF.4b", "4.NF.3d"]
+    },
+    "4.NF.5": {
+      "id": "4.NF.5",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Understand decimal notation for fractions, and compare decimal fractions",
+      "description": "Express a fraction with denominator 10 as an equivalent fraction with denominator 100; add fractions with denominators 10 and 100.",
+      "prerequisites": ["4.NF.1", "4.NF.3a"]
+    },
+    "4.NF.6": {
+      "id": "4.NF.6",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Understand decimal notation for fractions, and compare decimal fractions",
+      "description": "Use decimal notation for fractions with denominators 10 or 100.",
+      "prerequisites": ["4.NF.5", "4.NBT.1"]
+    },
+    "4.NF.7": {
+      "id": "4.NF.7",
+      "grade": 4,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Understand decimal notation for fractions, and compare decimal fractions",
+      "description": "Compare two decimals to hundredths by reasoning about their size.",
+      "prerequisites": ["4.NF.6", "4.NF.2"]
+    },
+
+    "4.MD.1": {
+      "id": "4.MD.1",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Solve problems involving measurement and conversion of measurements",
+      "description": "Know relative sizes of measurement units within one system. Express measurements in a larger unit in terms of a smaller unit.",
+      "prerequisites": ["3.MD.2", "4.OA.1", "4.NBT.5"]
+    },
+    "4.MD.2": {
+      "id": "4.MD.2",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Solve problems involving measurement and conversion of measurements",
+      "description": "Use the four operations to solve word problems involving distances, time, volumes, masses, and money including simple fractions/decimals.",
+      "prerequisites": ["4.MD.1", "4.OA.3", "4.NF.3d"]
+    },
+    "4.MD.3": {
+      "id": "4.MD.3",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Solve problems involving measurement and conversion of measurements",
+      "description": "Apply the area and perimeter formulas for rectangles in real world and mathematical problems.",
+      "prerequisites": ["3.MD.7b", "3.MD.8", "4.NBT.5", "4.OA.3"]
+    },
+    "4.MD.4": {
+      "id": "4.MD.4",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Represent and interpret data",
+      "description": "Make a line plot for measurements in fractions of a unit (1/2, 1/4, 1/8). Solve problems using line plots.",
+      "prerequisites": ["3.MD.4", "4.NF.3d"]
+    },
+    "4.MD.5": {
+      "id": "4.MD.5",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of angle and measure angles",
+      "description": "Recognize angles as geometric shapes formed by two rays sharing a common endpoint. Understand angle measurement concepts.",
+      "prerequisites": ["3.G.1", "3.NF.1"]
+    },
+    "4.MD.5a": {
+      "id": "4.MD.5a",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: angle measurement",
+      "description": "An angle is measured by the fraction of the circular arc between the two rays. One degree = 1/360 of a circle.",
+      "prerequisites": ["3.NF.1", "3.G.1"]
+    },
+    "4.MD.5b": {
+      "id": "4.MD.5b",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: angle measurement",
+      "description": "An angle that turns through n one-degree angles has an angle measure of n degrees.",
+      "prerequisites": ["4.MD.5a"]
+    },
+    "4.MD.6": {
+      "id": "4.MD.6",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of angle and measure angles",
+      "description": "Measure angles in whole-number degrees using a protractor. Sketch angles of specified measure.",
+      "prerequisites": ["4.MD.5"]
+    },
+    "4.MD.7": {
+      "id": "4.MD.7",
+      "grade": 4,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of angle and measure angles",
+      "description": "Recognize angle measure as additive. Solve addition/subtraction problems to find unknown angles.",
+      "prerequisites": ["4.MD.6", "4.NBT.4"]
+    },
+
+    "4.G.1": {
+      "id": "4.G.1",
+      "grade": 4,
+      "domain": "Geometry",
+      "cluster": "Draw and identify lines and angles, and classify shapes",
+      "description": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify in 2D figures.",
+      "prerequisites": ["3.G.1", "4.MD.5"]
+    },
+    "4.G.2": {
+      "id": "4.G.2",
+      "grade": 4,
+      "domain": "Geometry",
+      "cluster": "Draw and identify lines and angles, and classify shapes",
+      "description": "Classify 2D figures based on presence/absence of parallel or perpendicular lines, or angles of a specified size. Recognize right triangles.",
+      "prerequisites": ["4.G.1", "3.G.1"]
+    },
+    "4.G.3": {
+      "id": "4.G.3",
+      "grade": 4,
+      "domain": "Geometry",
+      "cluster": "Draw and identify lines and angles, and classify shapes",
+      "description": "Recognize a line of symmetry for a 2D figure. Identify line-symmetric figures and draw lines of symmetry.",
+      "prerequisites": ["4.G.1", "3.G.1"]
+    },
+
+    "5.OA.1": {
+      "id": "5.OA.1",
+      "grade": 5,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Write and interpret numerical expressions",
+      "description": "Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols.",
+      "prerequisites": ["4.OA.3", "3.OA.8"]
+    },
+    "5.OA.2": {
+      "id": "5.OA.2",
+      "grade": 5,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Write and interpret numerical expressions",
+      "description": "Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them.",
+      "prerequisites": ["5.OA.1", "4.OA.3"]
+    },
+    "5.OA.3": {
+      "id": "5.OA.3",
+      "grade": 5,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Analyze patterns and relationships",
+      "description": "Generate two numerical patterns using two given rules. Identify relationships between corresponding terms. Graph ordered pairs on a coordinate plane.",
+      "prerequisites": ["4.OA.5", "5.G.1"]
+    },
+
+    "5.NBT.1": {
+      "id": "5.NBT.1",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Understand the place value system",
+      "description": "Recognize that a digit in one place represents 10 times as much as the place to its right and 1/10 of the place to its left.",
+      "prerequisites": ["4.NBT.1", "3.NF.1"]
+    },
+    "5.NBT.2": {
+      "id": "5.NBT.2",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Understand the place value system",
+      "description": "Explain patterns in the number of zeros when multiplying by powers of 10. Explain patterns in decimal point placement. Use whole-number exponents for powers of 10.",
+      "prerequisites": ["5.NBT.1", "4.NBT.1", "3.NBT.3"]
+    },
+    "5.NBT.3": {
+      "id": "5.NBT.3",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Understand the place value system",
+      "description": "Read, write, and compare decimals to thousandths.",
+      "prerequisites": ["5.NBT.1", "4.NF.6", "4.NF.7"]
+    },
+    "5.NBT.3a": {
+      "id": "5.NBT.3a",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Understand the place value system",
+      "description": "Read and write decimals to thousandths using base-ten numerals, number names, and expanded form.",
+      "prerequisites": ["5.NBT.1", "4.NF.6", "4.NBT.2"]
+    },
+    "5.NBT.3b": {
+      "id": "5.NBT.3b",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Understand the place value system",
+      "description": "Compare two decimals to thousandths using >, =, <.",
+      "prerequisites": ["5.NBT.3a", "4.NF.7"]
+    },
+    "5.NBT.4": {
+      "id": "5.NBT.4",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Understand the place value system",
+      "description": "Use place value understanding to round decimals to any place.",
+      "prerequisites": ["5.NBT.3", "4.NBT.3"]
+    },
+    "5.NBT.5": {
+      "id": "5.NBT.5",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Perform operations with multi-digit whole numbers and with decimals to hundredths",
+      "description": "Fluently multiply multi-digit whole numbers using the standard algorithm.",
+      "prerequisites": ["4.NBT.5", "4.NBT.1"]
+    },
+    "5.NBT.6": {
+      "id": "5.NBT.6",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Perform operations with multi-digit whole numbers and with decimals to hundredths",
+      "description": "Find whole-number quotients with up to four-digit dividends and two-digit divisors.",
+      "prerequisites": ["4.NBT.6", "5.NBT.5", "4.NBT.1"]
+    },
+    "5.NBT.7": {
+      "id": "5.NBT.7",
+      "grade": 5,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Perform operations with multi-digit whole numbers and with decimals to hundredths",
+      "description": "Add, subtract, multiply, and divide decimals to hundredths.",
+      "prerequisites": ["5.NBT.3", "5.NBT.5", "5.NBT.6", "4.NF.6", "5.NBT.2"]
+    },
+
+    "5.NF.1": {
+      "id": "5.NF.1",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Use equivalent fractions as a strategy to add and subtract fractions",
+      "description": "Add and subtract fractions with unlike denominators (including mixed numbers) by replacing with equivalent fractions.",
+      "prerequisites": ["4.NF.1", "4.NF.2", "4.NF.3c"]
+    },
+    "5.NF.2": {
+      "id": "5.NF.2",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Use equivalent fractions as a strategy to add and subtract fractions",
+      "description": "Solve word problems involving addition and subtraction of fractions with unlike denominators.",
+      "prerequisites": ["5.NF.1", "4.NF.3d"]
+    },
+    "5.NF.3": {
+      "id": "5.NF.3",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Apply and extend previous understandings of multiplication and division to multiply and divide fractions",
+      "description": "Interpret a fraction as division of the numerator by the denominator (a/b = a ÷ b).",
+      "prerequisites": ["4.NF.3", "4.NBT.6", "3.OA.6"]
+    },
+    "5.NF.4": {
+      "id": "5.NF.4",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Apply and extend previous understandings of multiplication and division to multiply and divide fractions",
+      "description": "Multiply a fraction or whole number by a fraction.",
+      "prerequisites": ["4.NF.4", "5.NF.3"]
+    },
+    "5.NF.4a": {
+      "id": "5.NF.4a",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Interpret (a/b) × q as a parts of a partition of q into b equal parts.",
+      "prerequisites": ["4.NF.4a", "4.NF.4b", "5.NF.3"]
+    },
+    "5.NF.4b": {
+      "id": "5.NF.4b",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Find area of a rectangle with fractional side lengths by tiling. Multiply fractional side lengths to find areas.",
+      "prerequisites": ["5.NF.4a", "3.MD.7a"]
+    },
+    "5.NF.5": {
+      "id": "5.NF.5",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Apply and extend previous understandings of multiplication and division to multiply and divide fractions",
+      "description": "Interpret multiplication as scaling (resizing).",
+      "prerequisites": ["5.NF.4", "4.NF.1"]
+    },
+    "5.NF.5a": {
+      "id": "5.NF.5a",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Compare the size of a product to one factor based on the size of the other factor, without computing.",
+      "prerequisites": ["5.NF.4", "4.NF.2"]
+    },
+    "5.NF.5b": {
+      "id": "5.NF.5b",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Explain why multiplying by a fraction > 1 gives a larger product and < 1 gives a smaller product.",
+      "prerequisites": ["5.NF.5a", "4.NF.1"]
+    },
+    "5.NF.6": {
+      "id": "5.NF.6",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Apply and extend previous understandings of multiplication and division to multiply and divide fractions",
+      "description": "Solve real world problems involving multiplication of fractions and mixed numbers.",
+      "prerequisites": ["5.NF.4", "5.NF.5", "5.NF.1"]
+    },
+    "5.NF.7": {
+      "id": "5.NF.7",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Apply and extend previous understandings of multiplication and division to multiply and divide fractions",
+      "description": "Divide unit fractions by whole numbers and whole numbers by unit fractions.",
+      "prerequisites": ["5.NF.3", "5.NF.4", "3.OA.6"]
+    },
+    "5.NF.7a": {
+      "id": "5.NF.7a",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Interpret division of a unit fraction by a non-zero whole number and compute such quotients.",
+      "prerequisites": ["5.NF.3", "5.NF.4"]
+    },
+    "5.NF.7b": {
+      "id": "5.NF.7b",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Interpret division of a whole number by a unit fraction and compute such quotients.",
+      "prerequisites": ["5.NF.3", "5.NF.7a"]
+    },
+    "5.NF.7c": {
+      "id": "5.NF.7c",
+      "grade": 5,
+      "domain": "Number and Operations—Fractions",
+      "cluster": "Multiply and divide fractions",
+      "description": "Solve real world problems involving division of unit fractions by whole numbers and vice versa.",
+      "prerequisites": ["5.NF.7a", "5.NF.7b"]
+    },
+
+    "5.MD.1": {
+      "id": "5.MD.1",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Convert like measurement units within a given measurement system",
+      "description": "Convert among different-sized standard measurement units within a given measurement system.",
+      "prerequisites": ["4.MD.1", "5.NBT.2", "5.NBT.7"]
+    },
+    "5.MD.2": {
+      "id": "5.MD.2",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Represent and interpret data",
+      "description": "Make a line plot for measurements in fractions of a unit. Use fraction operations to solve problems from line plots.",
+      "prerequisites": ["4.MD.4", "5.NF.1", "5.NF.6"]
+    },
+    "5.MD.3": {
+      "id": "5.MD.3",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of volume and relate volume to multiplication and to addition",
+      "description": "Recognize volume as an attribute of solid figures and understand concepts of volume measurement.",
+      "prerequisites": ["3.MD.5", "4.MD.3"]
+    },
+    "5.MD.3a": {
+      "id": "5.MD.3a",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Volume concepts",
+      "description": "A unit cube has one cubic unit of volume and can be used to measure volume.",
+      "prerequisites": ["3.MD.5a"]
+    },
+    "5.MD.3b": {
+      "id": "5.MD.3b",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Volume concepts",
+      "description": "A solid figure packed with n unit cubes without gaps/overlaps has a volume of n cubic units.",
+      "prerequisites": ["5.MD.3a"]
+    },
+    "5.MD.4": {
+      "id": "5.MD.4",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of volume and relate volume to multiplication and to addition",
+      "description": "Measure volumes by counting unit cubes.",
+      "prerequisites": ["5.MD.3"]
+    },
+    "5.MD.5": {
+      "id": "5.MD.5",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Geometric measurement: understand concepts of volume and relate volume to multiplication and to addition",
+      "description": "Relate volume to multiplication and addition and solve real world problems involving volume.",
+      "prerequisites": ["5.MD.4", "5.NBT.5", "3.MD.7"]
+    },
+    "5.MD.5a": {
+      "id": "5.MD.5a",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Volume and multiplication",
+      "description": "Find volume of a right rectangular prism by packing with unit cubes; show volume = edge lengths multiplied.",
+      "prerequisites": ["5.MD.4", "5.NBT.5"]
+    },
+    "5.MD.5b": {
+      "id": "5.MD.5b",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Volume and multiplication",
+      "description": "Apply formulas V = l × w × h and V = b × h for rectangular prisms.",
+      "prerequisites": ["5.MD.5a", "5.OA.1"]
+    },
+    "5.MD.5c": {
+      "id": "5.MD.5c",
+      "grade": 5,
+      "domain": "Measurement and Data",
+      "cluster": "Volume and multiplication",
+      "description": "Recognize volume as additive. Find volumes of composite figures by adding volumes of non-overlapping parts.",
+      "prerequisites": ["5.MD.5b", "3.MD.7d"]
+    },
+
+    "5.G.1": {
+      "id": "5.G.1",
+      "grade": 5,
+      "domain": "Geometry",
+      "cluster": "Graph points on the coordinate plane",
+      "description": "Use perpendicular number lines (axes) to define a coordinate system. Locate points using ordered pairs.",
+      "prerequisites": ["3.NF.2", "4.NBT.2"]
+    },
+    "5.G.2": {
+      "id": "5.G.2",
+      "grade": 5,
+      "domain": "Geometry",
+      "cluster": "Graph points on the coordinate plane",
+      "description": "Represent real world problems by graphing points in the first quadrant. Interpret coordinate values in context.",
+      "prerequisites": ["5.G.1", "5.OA.3"]
+    },
+    "5.G.3": {
+      "id": "5.G.3",
+      "grade": 5,
+      "domain": "Geometry",
+      "cluster": "Classify two-dimensional figures into categories based on their properties",
+      "description": "Understand that attributes of a category also belong to all subcategories (e.g., all rectangles have four right angles, squares are rectangles).",
+      "prerequisites": ["4.G.2", "3.G.1"]
+    },
+    "5.G.4": {
+      "id": "5.G.4",
+      "grade": 5,
+      "domain": "Geometry",
+      "cluster": "Classify two-dimensional figures into categories based on their properties",
+      "description": "Classify two-dimensional figures in a hierarchy based on properties.",
+      "prerequisites": ["5.G.3", "4.G.2"]
+    },
+
+    "6.RP.1": {
+      "id": "6.RP.1",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Understand ratio concepts and use ratio reasoning to solve problems",
+      "description": "Understand the concept of a ratio and use ratio language to describe a ratio relationship between two quantities.",
+      "prerequisites": ["5.NF.5", "4.OA.2", "5.NBT.7"]
+    },
+    "6.RP.2": {
+      "id": "6.RP.2",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Understand ratio concepts and use ratio reasoning to solve problems",
+      "description": "Understand the concept of a unit rate a/b associated with a ratio a:b with b ≠ 0.",
+      "prerequisites": ["6.RP.1", "5.NF.3", "5.NBT.7"]
+    },
+    "6.RP.3": {
+      "id": "6.RP.3",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Understand ratio concepts and use ratio reasoning to solve problems",
+      "description": "Use ratio and rate reasoning to solve real-world and mathematical problems.",
+      "prerequisites": ["6.RP.1", "6.RP.2"]
+    },
+    "6.RP.3a": {
+      "id": "6.RP.3a",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Ratio reasoning",
+      "description": "Make tables of equivalent ratios. Find missing values. Plot pairs on coordinate plane.",
+      "prerequisites": ["6.RP.1", "5.G.1", "5.OA.3"]
+    },
+    "6.RP.3b": {
+      "id": "6.RP.3b",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Ratio reasoning",
+      "description": "Solve unit rate problems including unit pricing and constant speed.",
+      "prerequisites": ["6.RP.2", "5.NBT.7"]
+    },
+    "6.RP.3c": {
+      "id": "6.RP.3c",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Ratio reasoning",
+      "description": "Find a percent of a quantity as a rate per 100. Solve problems finding the whole given a part and percent.",
+      "prerequisites": ["6.RP.2", "5.NF.4", "5.NBT.7"]
+    },
+    "6.RP.3d": {
+      "id": "6.RP.3d",
+      "grade": 6,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Ratio reasoning",
+      "description": "Use ratio reasoning to convert measurement units.",
+      "prerequisites": ["6.RP.2", "5.MD.1"]
+    },
+
+    "6.NS.1": {
+      "id": "6.NS.1",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of multiplication and division to divide fractions by fractions",
+      "description": "Interpret and compute quotients of fractions. Solve word problems involving division of fractions by fractions.",
+      "prerequisites": ["5.NF.7", "5.NF.4", "5.NF.3"]
+    },
+    "6.NS.2": {
+      "id": "6.NS.2",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Compute fluently with multi-digit numbers and find common factors and multiples",
+      "description": "Fluently divide multi-digit numbers using the standard algorithm.",
+      "prerequisites": ["5.NBT.6"]
+    },
+    "6.NS.3": {
+      "id": "6.NS.3",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Compute fluently with multi-digit numbers and find common factors and multiples",
+      "description": "Fluently add, subtract, multiply, and divide multi-digit decimals using the standard algorithm.",
+      "prerequisites": ["5.NBT.7", "6.NS.2"]
+    },
+    "6.NS.4": {
+      "id": "6.NS.4",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Compute fluently with multi-digit numbers and find common factors and multiples",
+      "description": "Find GCF of two numbers ≤ 100 and LCM of two numbers ≤ 12. Use distributive property to express sums.",
+      "prerequisites": ["4.OA.4", "3.OA.5", "5.NBT.6"]
+    },
+    "6.NS.5": {
+      "id": "6.NS.5",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of numbers to the system of rational numbers",
+      "description": "Understand positive and negative numbers describe quantities with opposite directions/values.",
+      "prerequisites": ["5.NBT.3", "5.G.1"]
+    },
+    "6.NS.6": {
+      "id": "6.NS.6",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of numbers to the system of rational numbers",
+      "description": "Understand a rational number as a point on the number line. Extend to negative number coordinates.",
+      "prerequisites": ["6.NS.5", "5.G.1", "3.NF.2"]
+    },
+    "6.NS.6a": {
+      "id": "6.NS.6a",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Rational numbers on number line",
+      "description": "Recognize opposite signs indicate locations on opposite sides of 0. –(–3) = 3. 0 is its own opposite.",
+      "prerequisites": ["6.NS.5"]
+    },
+    "6.NS.6b": {
+      "id": "6.NS.6b",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Rational numbers on number line",
+      "description": "Understand signs in ordered pairs as indicating locations in quadrants. Reflections across axes.",
+      "prerequisites": ["6.NS.6a", "5.G.1"]
+    },
+    "6.NS.6c": {
+      "id": "6.NS.6c",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Rational numbers on number line",
+      "description": "Find and position integers and other rational numbers on number line and coordinate plane.",
+      "prerequisites": ["6.NS.6a", "6.NS.6b"]
+    },
+    "6.NS.7": {
+      "id": "6.NS.7",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of numbers to the system of rational numbers",
+      "description": "Understand ordering and absolute value of rational numbers.",
+      "prerequisites": ["6.NS.6"]
+    },
+    "6.NS.7a": {
+      "id": "6.NS.7a",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Ordering and absolute value",
+      "description": "Interpret inequality statements as statements about relative position on a number line.",
+      "prerequisites": ["6.NS.6c"]
+    },
+    "6.NS.7b": {
+      "id": "6.NS.7b",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Ordering and absolute value",
+      "description": "Write, interpret, and explain statements of order for rational numbers in real-world contexts.",
+      "prerequisites": ["6.NS.7a"]
+    },
+    "6.NS.7c": {
+      "id": "6.NS.7c",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Ordering and absolute value",
+      "description": "Understand absolute value as distance from 0. Interpret absolute value as magnitude in real-world.",
+      "prerequisites": ["6.NS.6c"]
+    },
+    "6.NS.7d": {
+      "id": "6.NS.7d",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Ordering and absolute value",
+      "description": "Distinguish comparisons of absolute value from statements about order.",
+      "prerequisites": ["6.NS.7a", "6.NS.7c"]
+    },
+    "6.NS.8": {
+      "id": "6.NS.8",
+      "grade": 6,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of numbers to the system of rational numbers",
+      "description": "Solve real-world problems by graphing points in all four quadrants. Use coordinates and absolute value to find distances.",
+      "prerequisites": ["6.NS.6c", "6.NS.7c"]
+    },
+
+    "6.EE.1": {
+      "id": "6.EE.1",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Apply and extend previous understandings of arithmetic to algebraic expressions",
+      "description": "Write and evaluate numerical expressions involving whole-number exponents.",
+      "prerequisites": ["5.OA.1", "5.NBT.2", "5.NBT.5"]
+    },
+    "6.EE.2": {
+      "id": "6.EE.2",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Apply and extend previous understandings of arithmetic to algebraic expressions",
+      "description": "Write, read, and evaluate expressions in which letters stand for numbers.",
+      "prerequisites": ["5.OA.2", "6.EE.1"]
+    },
+    "6.EE.2a": {
+      "id": "6.EE.2a",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Algebraic expressions",
+      "description": "Write expressions that record operations with numbers and letters standing for numbers.",
+      "prerequisites": ["5.OA.2"]
+    },
+    "6.EE.2b": {
+      "id": "6.EE.2b",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Algebraic expressions",
+      "description": "Identify parts of an expression using mathematical terms (sum, term, product, factor, quotient, coefficient).",
+      "prerequisites": ["6.EE.2a"]
+    },
+    "6.EE.2c": {
+      "id": "6.EE.2c",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Algebraic expressions",
+      "description": "Evaluate expressions at specific values of variables. Perform operations in conventional order.",
+      "prerequisites": ["6.EE.2a", "6.EE.1", "5.OA.1"]
+    },
+    "6.EE.3": {
+      "id": "6.EE.3",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Apply and extend previous understandings of arithmetic to algebraic expressions",
+      "description": "Apply properties of operations to generate equivalent expressions (e.g., distributive property).",
+      "prerequisites": ["6.EE.2", "3.OA.5", "6.NS.4"]
+    },
+    "6.EE.4": {
+      "id": "6.EE.4",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Apply and extend previous understandings of arithmetic to algebraic expressions",
+      "description": "Identify when two expressions are equivalent.",
+      "prerequisites": ["6.EE.3"]
+    },
+    "6.EE.5": {
+      "id": "6.EE.5",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Reason about and solve one-variable equations and inequalities",
+      "description": "Understand solving an equation/inequality as finding which values make it true. Use substitution to check.",
+      "prerequisites": ["6.EE.2c"]
+    },
+    "6.EE.6": {
+      "id": "6.EE.6",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Reason about and solve one-variable equations and inequalities",
+      "description": "Use variables to represent numbers and write expressions when solving problems.",
+      "prerequisites": ["6.EE.2a", "5.OA.2"]
+    },
+    "6.EE.7": {
+      "id": "6.EE.7",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Reason about and solve one-variable equations and inequalities",
+      "description": "Solve real-world problems by writing and solving equations of the form x + p = q and px = q.",
+      "prerequisites": ["6.EE.5", "6.EE.6", "6.NS.3"]
+    },
+    "6.EE.8": {
+      "id": "6.EE.8",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Reason about and solve one-variable equations and inequalities",
+      "description": "Write inequalities of the form x > c or x < c. Recognize infinitely many solutions. Represent on number line.",
+      "prerequisites": ["6.EE.5", "6.NS.7a"]
+    },
+    "6.EE.9": {
+      "id": "6.EE.9",
+      "grade": 6,
+      "domain": "Expressions and Equations",
+      "cluster": "Represent and analyze quantitative relationships between dependent and independent variables",
+      "description": "Use variables for two quantities that change in relationship. Write equations. Analyze with graphs and tables.",
+      "prerequisites": ["6.EE.7", "6.RP.3a", "5.G.2"]
+    },
+
+    "6.G.1": {
+      "id": "6.G.1",
+      "grade": 6,
+      "domain": "Geometry",
+      "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+      "description": "Find area of right triangles, other triangles, special quadrilaterals, and polygons by composing/decomposing.",
+      "prerequisites": ["3.MD.7", "4.MD.3", "5.NF.4b"]
+    },
+    "6.G.2": {
+      "id": "6.G.2",
+      "grade": 6,
+      "domain": "Geometry",
+      "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+      "description": "Find volume of a right rectangular prism with fractional edge lengths. Apply V = lwh and V = bh.",
+      "prerequisites": ["5.MD.5b", "5.NF.4", "6.NS.1"]
+    },
+    "6.G.3": {
+      "id": "6.G.3",
+      "grade": 6,
+      "domain": "Geometry",
+      "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+      "description": "Draw polygons in the coordinate plane given coordinates. Use coordinates to find side lengths.",
+      "prerequisites": ["6.NS.8", "5.G.1"]
+    },
+    "6.G.4": {
+      "id": "6.G.4",
+      "grade": 6,
+      "domain": "Geometry",
+      "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+      "description": "Represent 3D figures using nets of rectangles and triangles. Use nets to find surface area.",
+      "prerequisites": ["6.G.1", "5.MD.5"]
+    },
+
+    "6.SP.1": {
+      "id": "6.SP.1",
+      "grade": 6,
+      "domain": "Statistics and Probability",
+      "cluster": "Develop understanding of statistical variability",
+      "description": "Recognize a statistical question as one that anticipates variability in data.",
+      "prerequisites": ["5.G.2", "5.MD.2"]
+    },
+    "6.SP.2": {
+      "id": "6.SP.2",
+      "grade": 6,
+      "domain": "Statistics and Probability",
+      "cluster": "Develop understanding of statistical variability",
+      "description": "Understand a data set has a distribution described by center, spread, and overall shape.",
+      "prerequisites": ["6.SP.1"]
+    },
+    "6.SP.3": {
+      "id": "6.SP.3",
+      "grade": 6,
+      "domain": "Statistics and Probability",
+      "cluster": "Develop understanding of statistical variability",
+      "description": "Recognize that a measure of center summarizes all values with a single number; measure of variation describes spread.",
+      "prerequisites": ["6.SP.2", "6.NS.3"]
+    },
+    "6.SP.4": {
+      "id": "6.SP.4",
+      "grade": 6,
+      "domain": "Statistics and Probability",
+      "cluster": "Summarize and describe distributions",
+      "description": "Display numerical data in dot plots, histograms, and box plots.",
+      "prerequisites": ["6.SP.2", "6.NS.6c"]
+    },
+    "6.SP.5": {
+      "id": "6.SP.5",
+      "grade": 6,
+      "domain": "Statistics and Probability",
+      "cluster": "Summarize and describe distributions",
+      "description": "Summarize numerical data sets in relation to their context (number of observations, center, variability, shape).",
+      "prerequisites": ["6.SP.3", "6.SP.4", "6.NS.3"]
+    },
+
+    "7.RP.1": {
+      "id": "7.RP.1",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Analyze proportional relationships and use them to solve real-world and mathematical problems",
+      "description": "Compute unit rates associated with ratios of fractions, including ratios of lengths, areas, and other quantities.",
+      "prerequisites": ["6.RP.2", "6.RP.3b", "6.NS.1"]
+    },
+    "7.RP.2": {
+      "id": "7.RP.2",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Analyze proportional relationships and use them to solve real-world and mathematical problems",
+      "description": "Recognize and represent proportional relationships between quantities.",
+      "prerequisites": ["7.RP.1", "6.RP.3a", "6.EE.9"]
+    },
+    "7.RP.2a": {
+      "id": "7.RP.2a",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Proportional relationships",
+      "description": "Decide whether two quantities are in a proportional relationship (test equivalent ratios, graph through origin).",
+      "prerequisites": ["7.RP.1", "6.RP.3a"]
+    },
+    "7.RP.2b": {
+      "id": "7.RP.2b",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Proportional relationships",
+      "description": "Identify the constant of proportionality (unit rate) in tables, graphs, equations, diagrams, and verbal descriptions.",
+      "prerequisites": ["7.RP.2a", "7.RP.1"]
+    },
+    "7.RP.2c": {
+      "id": "7.RP.2c",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Proportional relationships",
+      "description": "Represent proportional relationships by equations (e.g., t = pn).",
+      "prerequisites": ["7.RP.2b", "6.EE.7"]
+    },
+    "7.RP.2d": {
+      "id": "7.RP.2d",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Proportional relationships",
+      "description": "Explain what a point (x, y) on a proportional relationship graph means, especially (0, 0) and (1, r).",
+      "prerequisites": ["7.RP.2c", "7.RP.2a"]
+    },
+    "7.RP.3": {
+      "id": "7.RP.3",
+      "grade": 7,
+      "domain": "Ratios and Proportional Relationships",
+      "cluster": "Analyze proportional relationships and use them to solve real-world and mathematical problems",
+      "description": "Use proportional relationships to solve multistep ratio and percent problems (interest, tax, markups, commissions, percent change, error).",
+      "prerequisites": ["7.RP.2", "6.RP.3c"]
+    },
+
+    "7.NS.1": {
+      "id": "7.NS.1",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of operations with fractions to rational numbers",
+      "description": "Apply and extend previous understandings of addition and subtraction to add and subtract rational numbers.",
+      "prerequisites": ["6.NS.5", "6.NS.6", "6.NS.7", "5.NF.1"]
+    },
+    "7.NS.1a": {
+      "id": "7.NS.1a",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Describe situations in which opposite quantities combine to make 0.",
+      "prerequisites": ["6.NS.5", "6.NS.6a"]
+    },
+    "7.NS.1b": {
+      "id": "7.NS.1b",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Understand p + q as the number located a distance |q| from p. Show additive inverses sum to 0.",
+      "prerequisites": ["7.NS.1a", "6.NS.7c"]
+    },
+    "7.NS.1c": {
+      "id": "7.NS.1c",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Understand subtraction as adding the additive inverse. Distance between two rationals = absolute value of difference.",
+      "prerequisites": ["7.NS.1b", "6.NS.7c"]
+    },
+    "7.NS.1d": {
+      "id": "7.NS.1d",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Apply properties of operations as strategies to add and subtract rational numbers.",
+      "prerequisites": ["7.NS.1c", "6.EE.3"]
+    },
+    "7.NS.2": {
+      "id": "7.NS.2",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of operations with fractions to rational numbers",
+      "description": "Apply and extend previous understandings of multiplication and division to multiply and divide rational numbers.",
+      "prerequisites": ["7.NS.1", "6.NS.1"]
+    },
+    "7.NS.2a": {
+      "id": "7.NS.2a",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Understand multiplication extends from fractions to rational numbers maintaining properties. Rules for signed numbers.",
+      "prerequisites": ["6.NS.1", "7.NS.1", "6.EE.3"]
+    },
+    "7.NS.2b": {
+      "id": "7.NS.2b",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Understand integers can be divided (non-zero divisor) and every quotient of integers is rational. –(p/q) = (–p)/q = p/(–q).",
+      "prerequisites": ["7.NS.2a", "6.NS.1"]
+    },
+    "7.NS.2c": {
+      "id": "7.NS.2c",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Apply properties of operations to multiply and divide rational numbers.",
+      "prerequisites": ["7.NS.2a", "7.NS.2b"]
+    },
+    "7.NS.2d": {
+      "id": "7.NS.2d",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Rational number operations",
+      "description": "Convert a rational number to a decimal using long division; know the decimal form terminates or repeats.",
+      "prerequisites": ["7.NS.2b", "6.NS.2"]
+    },
+    "7.NS.3": {
+      "id": "7.NS.3",
+      "grade": 7,
+      "domain": "The Number System",
+      "cluster": "Apply and extend previous understandings of operations with fractions to rational numbers",
+      "description": "Solve real-world and mathematical problems involving the four operations with rational numbers.",
+      "prerequisites": ["7.NS.1d", "7.NS.2c"]
+    },
+
+    "7.EE.1": {
+      "id": "7.EE.1",
+      "grade": 7,
+      "domain": "Expressions and Equations",
+      "cluster": "Use properties of operations to generate equivalent expressions",
+      "description": "Apply properties of operations to add, subtract, factor, and expand linear expressions with rational coefficients.",
+      "prerequisites": ["6.EE.3", "6.EE.4", "7.NS.1d", "7.NS.2c"]
+    },
+    "7.EE.2": {
+      "id": "7.EE.2",
+      "grade": 7,
+      "domain": "Expressions and Equations",
+      "cluster": "Use properties of operations to generate equivalent expressions",
+      "description": "Understand that rewriting an expression in different forms can shed light on the problem.",
+      "prerequisites": ["7.EE.1"]
+    },
+    "7.EE.3": {
+      "id": "7.EE.3",
+      "grade": 7,
+      "domain": "Expressions and Equations",
+      "cluster": "Solve real-life and mathematical problems using numerical and algebraic expressions and equations",
+      "description": "Solve multi-step real-life problems with positive and negative rational numbers in any form. Assess reasonableness.",
+      "prerequisites": ["7.NS.3", "7.EE.1"]
+    },
+    "7.EE.4": {
+      "id": "7.EE.4",
+      "grade": 7,
+      "domain": "Expressions and Equations",
+      "cluster": "Solve real-life and mathematical problems using numerical and algebraic expressions and equations",
+      "description": "Use variables to represent quantities and construct simple equations and inequalities.",
+      "prerequisites": ["7.EE.1", "6.EE.7", "6.EE.8"]
+    },
+    "7.EE.4a": {
+      "id": "7.EE.4a",
+      "grade": 7,
+      "domain": "Expressions and Equations",
+      "cluster": "Equations and inequalities",
+      "description": "Solve word problems leading to equations of the form px + q = r and p(x + q) = r.",
+      "prerequisites": ["7.EE.4", "7.NS.3"]
+    },
+    "7.EE.4b": {
+      "id": "7.EE.4b",
+      "grade": 7,
+      "domain": "Expressions and Equations",
+      "cluster": "Equations and inequalities",
+      "description": "Solve word problems leading to inequalities of the form px + q > r or px + q < r. Graph solutions.",
+      "prerequisites": ["7.EE.4a", "6.EE.8"]
+    },
+
+    "7.G.1": {
+      "id": "7.G.1",
+      "grade": 7,
+      "domain": "Geometry",
+      "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+      "description": "Solve problems involving scale drawings of geometric figures, computing actual lengths and areas from a scale.",
+      "prerequisites": ["7.RP.2", "6.G.1", "6.RP.3"]
+    },
+    "7.G.2": {
+      "id": "7.G.2",
+      "grade": 7,
+      "domain": "Geometry",
+      "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+      "description": "Draw geometric shapes with given conditions. Focus on triangle conditions (angles/sides) — unique, multiple, or none.",
+      "prerequisites": ["4.G.1", "4.MD.6", "7.G.1"]
+    },
+    "7.G.3": {
+      "id": "7.G.3",
+      "grade": 7,
+      "domain": "Geometry",
+      "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+      "description": "Describe 2D figures that result from slicing 3D figures (plane sections of prisms and pyramids).",
+      "prerequisites": ["6.G.4", "5.MD.5"]
+    },
+    "7.G.4": {
+      "id": "7.G.4",
+      "grade": 7,
+      "domain": "Geometry",
+      "cluster": "Solve real-life and mathematical problems involving angle measure, area, surface area, and volume",
+      "description": "Know formulas for area and circumference of a circle and use them to solve problems.",
+      "prerequisites": ["6.G.1", "7.RP.2", "6.EE.2c"]
+    },
+    "7.G.5": {
+      "id": "7.G.5",
+      "grade": 7,
+      "domain": "Geometry",
+      "cluster": "Solve real-life and mathematical problems involving angle measure, area, surface area, and volume",
+      "description": "Use facts about supplementary, complementary, vertical, and adjacent angles to write and solve equations.",
+      "prerequisites": ["4.MD.7", "7.EE.4a"]
+    },
+    "7.G.6": {
+      "id": "7.G.6",
+      "grade": 7,
+      "domain": "Geometry",
+      "cluster": "Solve real-life and mathematical problems involving angle measure, area, surface area, and volume",
+      "description": "Solve problems involving area, volume, and surface area of 2D and 3D objects (triangles, quadrilaterals, polygons, cubes, right prisms).",
+      "prerequisites": ["6.G.1", "6.G.2", "6.G.4", "7.G.4"]
+    },
+
+    "7.SP.1": {
+      "id": "7.SP.1",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Use random sampling to draw inferences about a population",
+      "description": "Understand statistics can gain info about a population by examining a sample. Random sampling produces representative samples.",
+      "prerequisites": ["6.SP.1", "6.SP.5"]
+    },
+    "7.SP.2": {
+      "id": "7.SP.2",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Use random sampling to draw inferences about a population",
+      "description": "Use data from a random sample to draw inferences. Generate multiple samples to gauge variation.",
+      "prerequisites": ["7.SP.1", "6.SP.5"]
+    },
+    "7.SP.3": {
+      "id": "7.SP.3",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Draw informal comparative inferences about two populations",
+      "description": "Assess degree of visual overlap of two distributions. Express difference between centers as multiple of measure of variability.",
+      "prerequisites": ["6.SP.4", "6.SP.5"]
+    },
+    "7.SP.4": {
+      "id": "7.SP.4",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Draw informal comparative inferences about two populations",
+      "description": "Use measures of center and variability from random samples to draw informal comparative inferences about two populations.",
+      "prerequisites": ["7.SP.3", "7.SP.2"]
+    },
+    "7.SP.5": {
+      "id": "7.SP.5",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+      "description": "Understand probability of a chance event is a number between 0 and 1.",
+      "prerequisites": ["6.NS.6c", "6.RP.3c"]
+    },
+    "7.SP.6": {
+      "id": "7.SP.6",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+      "description": "Approximate probability by collecting data (long-run relative frequency). Predict approximate relative frequency given probability.",
+      "prerequisites": ["7.SP.5", "7.RP.2"]
+    },
+    "7.SP.7": {
+      "id": "7.SP.7",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+      "description": "Develop a probability model and use it to find probabilities. Compare model to observed frequencies.",
+      "prerequisites": ["7.SP.5", "7.SP.6"]
+    },
+    "7.SP.7a": {
+      "id": "7.SP.7a",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Probability models",
+      "description": "Develop a uniform probability model (equal probability to all outcomes).",
+      "prerequisites": ["7.SP.5"]
+    },
+    "7.SP.7b": {
+      "id": "7.SP.7b",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Probability models",
+      "description": "Develop a probability model by observing frequencies in data.",
+      "prerequisites": ["7.SP.6"]
+    },
+    "7.SP.8": {
+      "id": "7.SP.8",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+      "description": "Find probabilities of compound events using organized lists, tables, tree diagrams, and simulation.",
+      "prerequisites": ["7.SP.7"]
+    },
+    "7.SP.8a": {
+      "id": "7.SP.8a",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Compound probability",
+      "description": "Probability of compound event = fraction of outcomes in sample space for which event occurs.",
+      "prerequisites": ["7.SP.7"]
+    },
+    "7.SP.8b": {
+      "id": "7.SP.8b",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Compound probability",
+      "description": "Represent sample spaces using organized lists, tables, and tree diagrams.",
+      "prerequisites": ["7.SP.8a"]
+    },
+    "7.SP.8c": {
+      "id": "7.SP.8c",
+      "grade": 7,
+      "domain": "Statistics and Probability",
+      "cluster": "Compound probability",
+      "description": "Design and use a simulation to generate frequencies for compound events.",
+      "prerequisites": ["7.SP.8b", "7.SP.6"]
+    },
+
+    "8.NS.1": {
+      "id": "8.NS.1",
+      "grade": 8,
+      "domain": "The Number System",
+      "cluster": "Know that there are numbers that are not rational, and approximate them by rational numbers",
+      "description": "Know that non-rational numbers are called irrational. Show rational numbers have repeating decimal expansions. Convert repeating decimals to fractions.",
+      "prerequisites": ["7.NS.2d", "7.NS.2"]
+    },
+    "8.NS.2": {
+      "id": "8.NS.2",
+      "grade": 8,
+      "domain": "The Number System",
+      "cluster": "Know that there are numbers that are not rational, and approximate them by rational numbers",
+      "description": "Use rational approximations of irrational numbers to compare them and locate on number line.",
+      "prerequisites": ["8.NS.1", "7.NS.2d"]
+    },
+
+    "8.EE.1": {
+      "id": "8.EE.1",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Work with radicals and integer exponents",
+      "description": "Know and apply properties of integer exponents to generate equivalent expressions.",
+      "prerequisites": ["6.EE.1", "7.NS.2"]
+    },
+    "8.EE.2": {
+      "id": "8.EE.2",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Work with radicals and integer exponents",
+      "description": "Use square root and cube root symbols. Evaluate square roots of perfect squares and cube roots of perfect cubes. Know √2 is irrational.",
+      "prerequisites": ["8.EE.1", "8.NS.1"]
+    },
+    "8.EE.3": {
+      "id": "8.EE.3",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Work with radicals and integer exponents",
+      "description": "Use numbers in the form single digit × integer power of 10 to estimate very large or very small quantities.",
+      "prerequisites": ["8.EE.1", "5.NBT.2"]
+    },
+    "8.EE.4": {
+      "id": "8.EE.4",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Work with radicals and integer exponents",
+      "description": "Perform operations with numbers in scientific notation. Use scientific notation with appropriate units.",
+      "prerequisites": ["8.EE.3", "7.NS.3"]
+    },
+    "8.EE.5": {
+      "id": "8.EE.5",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Understand the connections between proportional relationships, lines, and linear equations",
+      "description": "Graph proportional relationships, interpreting the unit rate as slope. Compare two proportional relationships.",
+      "prerequisites": ["7.RP.2", "7.RP.2d"]
+    },
+    "8.EE.6": {
+      "id": "8.EE.6",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Understand the connections between proportional relationships, lines, and linear equations",
+      "description": "Use similar triangles to explain why slope is constant. Derive y = mx and y = mx + b.",
+      "prerequisites": ["8.EE.5", "8.G.4", "7.RP.2c"]
+    },
+    "8.EE.7": {
+      "id": "8.EE.7",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Analyze and solve linear equations and pairs of simultaneous linear equations",
+      "description": "Solve linear equations in one variable.",
+      "prerequisites": ["7.EE.4a", "7.NS.3"]
+    },
+    "8.EE.7a": {
+      "id": "8.EE.7a",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Linear equations",
+      "description": "Give examples of linear equations with one solution, infinitely many, or no solutions.",
+      "prerequisites": ["8.EE.7"]
+    },
+    "8.EE.7b": {
+      "id": "8.EE.7b",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Linear equations",
+      "description": "Solve linear equations with rational coefficients, including distributive property and collecting like terms.",
+      "prerequisites": ["8.EE.7", "7.EE.1"]
+    },
+    "8.EE.8": {
+      "id": "8.EE.8",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Analyze and solve linear equations and pairs of simultaneous linear equations",
+      "description": "Analyze and solve pairs of simultaneous linear equations.",
+      "prerequisites": ["8.EE.7", "8.EE.6"]
+    },
+    "8.EE.8a": {
+      "id": "8.EE.8a",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Systems of equations",
+      "description": "Solutions to a system correspond to points of intersection of their graphs.",
+      "prerequisites": ["8.EE.6", "8.EE.7"]
+    },
+    "8.EE.8b": {
+      "id": "8.EE.8b",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Systems of equations",
+      "description": "Solve systems of two linear equations algebraically and by graphing. Solve simple cases by inspection.",
+      "prerequisites": ["8.EE.8a", "8.EE.7b"]
+    },
+    "8.EE.8c": {
+      "id": "8.EE.8c",
+      "grade": 8,
+      "domain": "Expressions and Equations",
+      "cluster": "Systems of equations",
+      "description": "Solve real-world problems leading to two linear equations in two variables.",
+      "prerequisites": ["8.EE.8b"]
+    },
+
+    "8.F.1": {
+      "id": "8.F.1",
+      "grade": 8,
+      "domain": "Functions",
+      "cluster": "Define, evaluate, and compare functions",
+      "description": "Understand that a function assigns to each input exactly one output. The graph is the set of ordered pairs.",
+      "prerequisites": ["8.EE.6", "6.EE.9"]
+    },
+    "8.F.2": {
+      "id": "8.F.2",
+      "grade": 8,
+      "domain": "Functions",
+      "cluster": "Define, evaluate, and compare functions",
+      "description": "Compare properties of two functions each represented differently (algebraically, graphically, numerically, verbally).",
+      "prerequisites": ["8.F.1", "8.EE.6"]
+    },
+    "8.F.3": {
+      "id": "8.F.3",
+      "grade": 8,
+      "domain": "Functions",
+      "cluster": "Define, evaluate, and compare functions",
+      "description": "Interpret y = mx + b as defining a linear function. Give examples of non-linear functions.",
+      "prerequisites": ["8.F.1", "8.EE.6"]
+    },
+    "8.F.4": {
+      "id": "8.F.4",
+      "grade": 8,
+      "domain": "Functions",
+      "cluster": "Use functions to model relationships between quantities",
+      "description": "Construct a function to model a linear relationship. Determine rate of change and initial value from description, table, or graph.",
+      "prerequisites": ["8.F.3", "8.EE.6"]
+    },
+    "8.F.5": {
+      "id": "8.F.5",
+      "grade": 8,
+      "domain": "Functions",
+      "cluster": "Use functions to model relationships between quantities",
+      "description": "Describe qualitatively the functional relationship between two quantities by analyzing a graph. Sketch a graph from verbal description.",
+      "prerequisites": ["8.F.1", "8.F.3"]
+    },
+
+    "8.G.1": {
+      "id": "8.G.1",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+      "description": "Verify experimentally properties of rotations, reflections, and translations (lines→lines, angles preserved, parallels preserved).",
+      "prerequisites": ["4.G.1", "4.G.3", "7.G.2"]
+    },
+    "8.G.1a": {
+      "id": "8.G.1a",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Transformations",
+      "description": "Lines are taken to lines, and line segments to line segments of the same length.",
+      "prerequisites": ["4.G.1"]
+    },
+    "8.G.1b": {
+      "id": "8.G.1b",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Transformations",
+      "description": "Angles are taken to angles of the same measure.",
+      "prerequisites": ["4.MD.6", "4.G.1"]
+    },
+    "8.G.1c": {
+      "id": "8.G.1c",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Transformations",
+      "description": "Parallel lines are taken to parallel lines.",
+      "prerequisites": ["4.G.1"]
+    },
+    "8.G.2": {
+      "id": "8.G.2",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand congruence and similarity",
+      "description": "A 2D figure is congruent to another if the second can be obtained by a sequence of rigid motions.",
+      "prerequisites": ["8.G.1"]
+    },
+    "8.G.3": {
+      "id": "8.G.3",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand congruence and similarity",
+      "description": "Describe the effect of dilations, translations, rotations, and reflections on 2D figures using coordinates.",
+      "prerequisites": ["8.G.1", "6.NS.6c", "6.G.3"]
+    },
+    "8.G.4": {
+      "id": "8.G.4",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand congruence and similarity",
+      "description": "A 2D figure is similar to another if the second is obtained by rigid motions followed by a dilation.",
+      "prerequisites": ["8.G.2", "8.G.3", "7.G.1"]
+    },
+    "8.G.5": {
+      "id": "8.G.5",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand congruence and similarity",
+      "description": "Use informal arguments for angle sum of triangles, exterior angles, angles from parallel lines cut by transversal, and AA similarity.",
+      "prerequisites": ["8.G.4", "7.G.5"]
+    },
+    "8.G.6": {
+      "id": "8.G.6",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand and apply the Pythagorean Theorem",
+      "description": "Explain a proof of the Pythagorean Theorem and its converse.",
+      "prerequisites": ["8.G.4", "6.G.1", "8.EE.2"]
+    },
+    "8.G.7": {
+      "id": "8.G.7",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand and apply the Pythagorean Theorem",
+      "description": "Apply the Pythagorean Theorem to determine unknown side lengths in real-world and mathematical problems in 2D and 3D.",
+      "prerequisites": ["8.G.6", "8.EE.2"]
+    },
+    "8.G.8": {
+      "id": "8.G.8",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Understand and apply the Pythagorean Theorem",
+      "description": "Apply the Pythagorean Theorem to find the distance between two points in a coordinate system.",
+      "prerequisites": ["8.G.7", "6.NS.8"]
+    },
+    "8.G.9": {
+      "id": "8.G.9",
+      "grade": 8,
+      "domain": "Geometry",
+      "cluster": "Solve real-world problems involving volume of cylinders, cones, and spheres",
+      "description": "Know the formulas for volumes of cones, cylinders, and spheres and use them to solve problems.",
+      "prerequisites": ["7.G.6", "7.G.4", "5.MD.5b", "8.EE.1"]
+    },
+
+    "8.SP.1": {
+      "id": "8.SP.1",
+      "grade": 8,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate patterns of association in bivariate data",
+      "description": "Construct and interpret scatter plots. Describe patterns: clustering, outliers, positive/negative/linear/nonlinear association.",
+      "prerequisites": ["6.SP.4", "8.F.1", "6.NS.8"]
+    },
+    "8.SP.2": {
+      "id": "8.SP.2",
+      "grade": 8,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate patterns of association in bivariate data",
+      "description": "Know straight lines model relationships. Informally fit a line to scatter plot data suggesting linear association.",
+      "prerequisites": ["8.SP.1", "8.F.3"]
+    },
+    "8.SP.3": {
+      "id": "8.SP.3",
+      "grade": 8,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate patterns of association in bivariate data",
+      "description": "Use equation of a linear model to solve problems in context. Interpret slope and intercept.",
+      "prerequisites": ["8.SP.2", "8.F.4"]
+    },
+    "8.SP.4": {
+      "id": "8.SP.4",
+      "grade": 8,
+      "domain": "Statistics and Probability",
+      "cluster": "Investigate patterns of association in bivariate data",
+      "description": "Understand patterns in bivariate categorical data via two-way tables. Construct and interpret two-way tables.",
+      "prerequisites": ["7.SP.8b", "7.RP.3"]
+    },
+
+    "HSN-RN.1": {
+      "id": "HSN-RN.1",
+      "grade": "HS",
+      "domain": "Number and Quantity — The Real Number System",
+      "cluster": "Extend the properties of exponents to rational exponents",
+      "description": "Explain how the definition of rational exponents follows from extending properties of integer exponents.",
+      "prerequisites": ["8.EE.1", "8.NS.1", "8.EE.2"]
+    },
+    "HSN-RN.2": {
+      "id": "HSN-RN.2",
+      "grade": "HS",
+      "domain": "Number and Quantity — The Real Number System",
+      "cluster": "Extend the properties of exponents to rational exponents",
+      "description": "Rewrite expressions involving radicals and rational exponents using properties of exponents.",
+      "prerequisites": ["HSN-RN.1"]
+    },
+    "HSN-RN.3": {
+      "id": "HSN-RN.3",
+      "grade": "HS",
+      "domain": "Number and Quantity — The Real Number System",
+      "cluster": "Use properties of rational and irrational numbers",
+      "description": "Explain why sum/product of rationals is rational; sum of rational+irrational is irrational; product of nonzero rational and irrational is irrational.",
+      "prerequisites": ["8.NS.1", "7.NS.2"]
+    },
+    "HSN-Q.1": {
+      "id": "HSN-Q.1",
+      "grade": "HS",
+      "domain": "Number and Quantity — Quantities",
+      "cluster": "Reason quantitatively and use units to solve problems",
+      "description": "Use units to understand problems and guide multi-step solutions. Choose and interpret units and scales.",
+      "prerequisites": ["7.RP.3", "6.RP.3d", "8.EE.4"]
+    },
+    "HSN-Q.2": {
+      "id": "HSN-Q.2",
+      "grade": "HS",
+      "domain": "Number and Quantity — Quantities",
+      "cluster": "Reason quantitatively and use units to solve problems",
+      "description": "Define appropriate quantities for the purpose of descriptive modeling.",
+      "prerequisites": ["HSN-Q.1"]
+    },
+    "HSN-Q.3": {
+      "id": "HSN-Q.3",
+      "grade": "HS",
+      "domain": "Number and Quantity — Quantities",
+      "cluster": "Reason quantitatively and use units to solve problems",
+      "description": "Choose a level of accuracy appropriate to limitations on measurement when reporting quantities.",
+      "prerequisites": ["HSN-Q.1", "8.NS.2"]
+    },
+    "HSN-CN.1": {
+      "id": "HSN-CN.1",
+      "grade": "HS",
+      "domain": "Number and Quantity — The Complex Number System",
+      "cluster": "Perform arithmetic operations with complex numbers",
+      "description": "Know there is a complex number i such that i² = –1. Every complex number has form a + bi.",
+      "prerequisites": ["HSN-RN.3", "8.NS.1"]
+    },
+    "HSN-CN.2": {
+      "id": "HSN-CN.2",
+      "grade": "HS",
+      "domain": "Number and Quantity — The Complex Number System",
+      "cluster": "Perform arithmetic operations with complex numbers",
+      "description": "Use i² = –1 and commutative, associative, distributive properties to add, subtract, multiply complex numbers.",
+      "prerequisites": ["HSN-CN.1", "HSA-APR.1"]
+    },
+    "HSN-CN.7": {
+      "id": "HSN-CN.7",
+      "grade": "HS",
+      "domain": "Number and Quantity — The Complex Number System",
+      "cluster": "Use complex numbers in polynomial identities and equations",
+      "description": "Solve quadratic equations with real coefficients that have complex solutions.",
+      "prerequisites": ["HSN-CN.1", "HSA-REI.4b"]
+    },
+
+    "HSA-SSE.1": {
+      "id": "HSA-SSE.1",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Interpret the structure of expressions",
+      "description": "Interpret expressions that represent a quantity in terms of context. Interpret parts (terms, factors, coefficients).",
+      "prerequisites": ["6.EE.2b", "7.EE.2"]
+    },
+    "HSA-SSE.1a": {
+      "id": "HSA-SSE.1a",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Interpret the structure of expressions",
+      "description": "Interpret parts of an expression such as terms, factors, and coefficients.",
+      "prerequisites": ["6.EE.2b", "7.EE.1"]
+    },
+    "HSA-SSE.1b": {
+      "id": "HSA-SSE.1b",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Interpret the structure of expressions",
+      "description": "Interpret complicated expressions by viewing one or more parts as a single entity.",
+      "prerequisites": ["HSA-SSE.1a"]
+    },
+    "HSA-SSE.2": {
+      "id": "HSA-SSE.2",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Interpret the structure of expressions",
+      "description": "Use the structure of an expression to identify ways to rewrite it (e.g., difference of squares).",
+      "prerequisites": ["HSA-SSE.1", "8.EE.1"]
+    },
+    "HSA-SSE.3": {
+      "id": "HSA-SSE.3",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Write expressions in equivalent forms to solve problems",
+      "description": "Choose and produce an equivalent form of an expression to reveal properties of the quantity.",
+      "prerequisites": ["HSA-SSE.2"]
+    },
+    "HSA-SSE.3a": {
+      "id": "HSA-SSE.3a",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Equivalent forms",
+      "description": "Factor a quadratic expression to reveal zeros of the function it defines.",
+      "prerequisites": ["HSA-SSE.2", "HSA-APR.1"]
+    },
+    "HSA-SSE.3b": {
+      "id": "HSA-SSE.3b",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Equivalent forms",
+      "description": "Complete the square in a quadratic expression to reveal maximum or minimum.",
+      "prerequisites": ["HSA-SSE.3a"]
+    },
+    "HSA-SSE.3c": {
+      "id": "HSA-SSE.3c",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Equivalent forms",
+      "description": "Use properties of exponents to transform expressions for exponential functions.",
+      "prerequisites": ["HSA-SSE.2", "HSN-RN.1"]
+    },
+    "HSA-SSE.4": {
+      "id": "HSA-SSE.4",
+      "grade": "HS",
+      "domain": "Algebra — Seeing Structure in Expressions",
+      "cluster": "Write expressions in equivalent forms to solve problems",
+      "description": "Derive the formula for the sum of a finite geometric series and use it to solve problems.",
+      "prerequisites": ["HSA-SSE.3c", "HSF-BF.2"]
+    },
+
+    "HSA-APR.1": {
+      "id": "HSA-APR.1",
+      "grade": "HS",
+      "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+      "cluster": "Perform arithmetic operations on polynomials",
+      "description": "Polynomials are closed under addition, subtraction, multiplication. Add, subtract, multiply polynomials.",
+      "prerequisites": ["7.EE.1", "8.EE.7b", "6.EE.3"]
+    },
+    "HSA-APR.2": {
+      "id": "HSA-APR.2",
+      "grade": "HS",
+      "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+      "cluster": "Understand the relationship between zeros and factors of polynomials",
+      "description": "Know and apply the Remainder Theorem.",
+      "prerequisites": ["HSA-APR.1", "HSA-SSE.2"]
+    },
+    "HSA-APR.3": {
+      "id": "HSA-APR.3",
+      "grade": "HS",
+      "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+      "cluster": "Understand the relationship between zeros and factors of polynomials",
+      "description": "Identify zeros of polynomials when suitable factorizations are available. Use zeros to construct rough graph.",
+      "prerequisites": ["HSA-APR.2", "HSA-SSE.3a"]
+    },
+    "HSA-APR.4": {
+      "id": "HSA-APR.4",
+      "grade": "HS",
+      "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+      "cluster": "Use polynomial identities to solve problems",
+      "description": "Prove polynomial identities and use them to describe numerical relationships.",
+      "prerequisites": ["HSA-APR.1", "HSA-SSE.2"]
+    },
+    "HSA-APR.6": {
+      "id": "HSA-APR.6",
+      "grade": "HS",
+      "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+      "cluster": "Rewrite rational expressions",
+      "description": "Rewrite simple rational expressions in different forms; write a(x)/b(x) in form q(x) + r(x)/b(x).",
+      "prerequisites": ["HSA-APR.1", "HSA-APR.2"]
+    },
+
+    "HSA-CED.1": {
+      "id": "HSA-CED.1",
+      "grade": "HS",
+      "domain": "Algebra — Creating Equations",
+      "cluster": "Create equations that describe numbers or relationships",
+      "description": "Create equations and inequalities in one variable and use them to solve problems (linear, quadratic, rational, exponential).",
+      "prerequisites": ["8.EE.7", "7.EE.4", "HSA-SSE.1"]
+    },
+    "HSA-CED.2": {
+      "id": "HSA-CED.2",
+      "grade": "HS",
+      "domain": "Algebra — Creating Equations",
+      "cluster": "Create equations that describe numbers or relationships",
+      "description": "Create equations in two or more variables to represent relationships. Graph on coordinate axes with labels and scales.",
+      "prerequisites": ["8.EE.6", "8.F.4", "HSA-CED.1"]
+    },
+    "HSA-CED.3": {
+      "id": "HSA-CED.3",
+      "grade": "HS",
+      "domain": "Algebra — Creating Equations",
+      "cluster": "Create equations that describe numbers or relationships",
+      "description": "Represent constraints by equations/inequalities and systems. Interpret solutions as viable or non-viable in context.",
+      "prerequisites": ["HSA-CED.1", "HSA-CED.2", "8.EE.8"]
+    },
+    "HSA-CED.4": {
+      "id": "HSA-CED.4",
+      "grade": "HS",
+      "domain": "Algebra — Creating Equations",
+      "cluster": "Create equations that describe numbers or relationships",
+      "description": "Rearrange formulas to highlight a quantity of interest.",
+      "prerequisites": ["HSA-CED.1", "8.EE.7b"]
+    },
+
+    "HSA-REI.1": {
+      "id": "HSA-REI.1",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Understand solving equations as a process of reasoning and explain the reasoning",
+      "description": "Explain each step in solving a simple equation. Construct a viable argument to justify a solution method.",
+      "prerequisites": ["8.EE.7", "7.EE.4a"]
+    },
+    "HSA-REI.2": {
+      "id": "HSA-REI.2",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Understand solving equations as a process of reasoning",
+      "description": "Solve simple rational and radical equations. Give examples showing how extraneous solutions may arise.",
+      "prerequisites": ["HSA-REI.1", "HSN-RN.2", "HSA-APR.6"]
+    },
+    "HSA-REI.3": {
+      "id": "HSA-REI.3",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve equations and inequalities in one variable",
+      "description": "Solve linear equations and inequalities in one variable, including with coefficients represented by letters.",
+      "prerequisites": ["8.EE.7b", "7.EE.4b"]
+    },
+    "HSA-REI.4": {
+      "id": "HSA-REI.4",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve equations and inequalities in one variable",
+      "description": "Solve quadratic equations in one variable.",
+      "prerequisites": ["HSA-REI.1", "HSA-SSE.3a"]
+    },
+    "HSA-REI.4a": {
+      "id": "HSA-REI.4a",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve quadratic equations",
+      "description": "Complete the square to transform quadratic to (x – p)² = q. Derive the quadratic formula.",
+      "prerequisites": ["HSA-SSE.3b", "HSA-REI.1"]
+    },
+    "HSA-REI.4b": {
+      "id": "HSA-REI.4b",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve quadratic equations",
+      "description": "Solve quadratics by inspection, square roots, completing the square, quadratic formula, and factoring. Recognize complex solutions.",
+      "prerequisites": ["HSA-REI.4a", "HSA-SSE.3a", "HSN-CN.1"]
+    },
+    "HSA-REI.5": {
+      "id": "HSA-REI.5",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve systems of equations",
+      "description": "Prove that replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions.",
+      "prerequisites": ["8.EE.8b", "HSA-REI.1"]
+    },
+    "HSA-REI.6": {
+      "id": "HSA-REI.6",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve systems of equations",
+      "description": "Solve systems of linear equations exactly and approximately (e.g., with graphs).",
+      "prerequisites": ["HSA-REI.5", "8.EE.8b"]
+    },
+    "HSA-REI.7": {
+      "id": "HSA-REI.7",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Solve systems of equations",
+      "description": "Solve a system consisting of a linear equation and a quadratic equation algebraically and graphically.",
+      "prerequisites": ["HSA-REI.6", "HSA-REI.4b"]
+    },
+    "HSA-REI.10": {
+      "id": "HSA-REI.10",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Represent and solve equations and inequalities graphically",
+      "description": "Understand that the graph of an equation in two variables is the set of all its solutions plotted in the coordinate plane.",
+      "prerequisites": ["8.F.1", "8.EE.6"]
+    },
+    "HSA-REI.11": {
+      "id": "HSA-REI.11",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Represent and solve equations and inequalities graphically",
+      "description": "Explain why x-coordinates of intersection points of y = f(x) and y = g(x) are solutions of f(x) = g(x).",
+      "prerequisites": ["HSA-REI.10", "HSF-IF.7"]
+    },
+    "HSA-REI.12": {
+      "id": "HSA-REI.12",
+      "grade": "HS",
+      "domain": "Algebra — Reasoning with Equations and Inequalities",
+      "cluster": "Represent and solve equations and inequalities graphically",
+      "description": "Graph solutions to a linear inequality in two variables as a half-plane. Graph solution set of a system of linear inequalities.",
+      "prerequisites": ["HSA-REI.10", "HSA-REI.6"]
+    },
+
+    "HSF-IF.1": {
+      "id": "HSF-IF.1",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Understand the concept of a function and use function notation",
+      "description": "Understand function from domain to range assigns each input exactly one output. f(x) notation. Graph of f is y = f(x).",
+      "prerequisites": ["8.F.1"]
+    },
+    "HSF-IF.2": {
+      "id": "HSF-IF.2",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Understand the concept of a function and use function notation",
+      "description": "Use function notation, evaluate functions, and interpret statements using function notation in context.",
+      "prerequisites": ["HSF-IF.1", "6.EE.2c"]
+    },
+    "HSF-IF.3": {
+      "id": "HSF-IF.3",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Understand the concept of a function and use function notation",
+      "description": "Recognize that sequences are functions, sometimes defined recursively, whose domain is a subset of integers.",
+      "prerequisites": ["HSF-IF.1", "4.OA.5"]
+    },
+    "HSF-IF.4": {
+      "id": "HSF-IF.4",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Interpret functions that arise in applications in terms of the context",
+      "description": "Interpret key features of graphs and tables (intercepts, increasing/decreasing, maxima/minima, symmetry, end behavior, periodicity).",
+      "prerequisites": ["HSF-IF.1", "8.F.5"]
+    },
+    "HSF-IF.5": {
+      "id": "HSF-IF.5",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Interpret functions that arise in applications in terms of the context",
+      "description": "Relate the domain of a function to its graph and to the quantitative relationship it describes.",
+      "prerequisites": ["HSF-IF.1", "HSF-IF.4"]
+    },
+    "HSF-IF.6": {
+      "id": "HSF-IF.6",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Interpret functions that arise in applications in terms of the context",
+      "description": "Calculate and interpret the average rate of change of a function over a specified interval.",
+      "prerequisites": ["8.F.4", "HSF-IF.4"]
+    },
+    "HSF-IF.7": {
+      "id": "HSF-IF.7",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Analyze functions using different representations",
+      "description": "Graph functions expressed symbolically and show key features of the graph.",
+      "prerequisites": ["HSF-IF.4", "8.F.3"]
+    },
+    "HSF-IF.7a": {
+      "id": "HSF-IF.7a",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Graph functions",
+      "description": "Graph linear and quadratic functions and show intercepts, maxima, and minima.",
+      "prerequisites": ["HSF-IF.7", "HSA-SSE.3a", "HSA-SSE.3b"]
+    },
+    "HSF-IF.7b": {
+      "id": "HSF-IF.7b",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Graph functions",
+      "description": "Graph square root, cube root, and piecewise-defined functions, including step and absolute value.",
+      "prerequisites": ["HSF-IF.7", "HSN-RN.2"]
+    },
+    "HSF-IF.7c": {
+      "id": "HSF-IF.7c",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Graph functions",
+      "description": "Graph polynomial functions, identifying zeros and showing end behavior.",
+      "prerequisites": ["HSF-IF.7", "HSA-APR.3"]
+    },
+    "HSF-IF.7e": {
+      "id": "HSF-IF.7e",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Graph functions",
+      "description": "Graph exponential and logarithmic functions showing intercepts and end behavior; graph trigonometric functions showing period, midline, amplitude.",
+      "prerequisites": ["HSF-IF.7", "HSF-LE.2", "HSF-TF.5"]
+    },
+    "HSF-IF.8": {
+      "id": "HSF-IF.8",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Analyze functions using different representations",
+      "description": "Write a function in different but equivalent forms to reveal and explain different properties.",
+      "prerequisites": ["HSF-IF.7", "HSA-SSE.3"]
+    },
+    "HSF-IF.8a": {
+      "id": "HSF-IF.8a",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Equivalent function forms",
+      "description": "Factor and complete the square in a quadratic to show zeros, extrema, and symmetry.",
+      "prerequisites": ["HSA-SSE.3a", "HSA-SSE.3b"]
+    },
+    "HSF-IF.8b": {
+      "id": "HSF-IF.8b",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Equivalent function forms",
+      "description": "Use properties of exponents to interpret expressions for exponential functions (percent rate of change, growth/decay).",
+      "prerequisites": ["HSA-SSE.3c", "HSN-RN.1"]
+    },
+    "HSF-IF.9": {
+      "id": "HSF-IF.9",
+      "grade": "HS",
+      "domain": "Functions — Interpreting Functions",
+      "cluster": "Analyze functions using different representations",
+      "description": "Compare properties of two functions each represented differently.",
+      "prerequisites": ["HSF-IF.7", "8.F.2"]
+    },
+
+    "HSF-BF.1": {
+      "id": "HSF-BF.1",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Build a function that models a relationship between two quantities",
+      "description": "Write a function that describes a relationship between two quantities.",
+      "prerequisites": ["8.F.4", "HSF-IF.1", "HSA-CED.2"]
+    },
+    "HSF-BF.1a": {
+      "id": "HSF-BF.1a",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Build a function",
+      "description": "Determine an explicit expression, recursive process, or steps for calculation from a context.",
+      "prerequisites": ["HSF-BF.1", "HSF-IF.3"]
+    },
+    "HSF-BF.1b": {
+      "id": "HSF-BF.1b",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Build a function",
+      "description": "Combine standard function types using arithmetic operations.",
+      "prerequisites": ["HSF-BF.1a", "HSA-APR.1"]
+    },
+    "HSF-BF.2": {
+      "id": "HSF-BF.2",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Build a function that models a relationship between two quantities",
+      "description": "Write arithmetic and geometric sequences both recursively and explicitly. Model situations, translate between forms.",
+      "prerequisites": ["HSF-IF.3", "HSF-BF.1a"]
+    },
+    "HSF-BF.3": {
+      "id": "HSF-BF.3",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Build new functions from existing functions",
+      "description": "Identify the effect on graph of f(x) + k, kf(x), f(kx), f(x + k). Recognize even and odd functions.",
+      "prerequisites": ["HSF-IF.7", "HSF-IF.4"]
+    },
+    "HSF-BF.4": {
+      "id": "HSF-BF.4",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Build new functions from existing functions",
+      "description": "Find inverse functions.",
+      "prerequisites": ["HSF-IF.1", "HSA-CED.4"]
+    },
+    "HSF-BF.4a": {
+      "id": "HSF-BF.4a",
+      "grade": "HS",
+      "domain": "Functions — Building Functions",
+      "cluster": "Inverse functions",
+      "description": "Solve f(x) = c for a simple function with an inverse. Write expression for the inverse.",
+      "prerequisites": ["HSF-BF.4", "HSA-REI.1"]
+    },
+
+    "HSF-LE.1": {
+      "id": "HSF-LE.1",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+      "description": "Distinguish between situations modeled with linear vs. exponential functions.",
+      "prerequisites": ["8.F.3", "8.F.4", "HSF-IF.6"]
+    },
+    "HSF-LE.1a": {
+      "id": "HSF-LE.1a",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Linear vs exponential",
+      "description": "Prove linear functions grow by equal differences over equal intervals; exponentials grow by equal factors.",
+      "prerequisites": ["HSF-LE.1"]
+    },
+    "HSF-LE.1b": {
+      "id": "HSF-LE.1b",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Linear vs exponential",
+      "description": "Recognize situations with constant rate of change per unit interval.",
+      "prerequisites": ["HSF-LE.1", "8.F.4"]
+    },
+    "HSF-LE.1c": {
+      "id": "HSF-LE.1c",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Linear vs exponential",
+      "description": "Recognize situations with constant percent rate of change per unit interval.",
+      "prerequisites": ["HSF-LE.1", "7.RP.3"]
+    },
+    "HSF-LE.2": {
+      "id": "HSF-LE.2",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+      "description": "Construct linear and exponential functions (including arithmetic and geometric sequences) given graph, description, or input-output pairs.",
+      "prerequisites": ["HSF-LE.1", "HSF-BF.1a", "HSF-BF.2"]
+    },
+    "HSF-LE.3": {
+      "id": "HSF-LE.3",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+      "description": "Observe that a quantity increasing exponentially eventually exceeds one increasing linearly or polynomially.",
+      "prerequisites": ["HSF-LE.2", "HSF-IF.7"]
+    },
+    "HSF-LE.5": {
+      "id": "HSF-LE.5",
+      "grade": "HS",
+      "domain": "Functions — Linear, Quadratic, and Exponential Models",
+      "cluster": "Interpret expressions for functions in terms of the situation they model",
+      "description": "Interpret the parameters in a linear or exponential function in terms of a context.",
+      "prerequisites": ["HSF-LE.2", "HSF-IF.8b"]
+    },
+
+    "HSF-TF.1": {
+      "id": "HSF-TF.1",
+      "grade": "HS",
+      "domain": "Functions — Trigonometric Functions",
+      "cluster": "Extend the domain of trigonometric functions using the unit circle",
+      "description": "Understand radian measure as the length of the arc on the unit circle subtended by the angle.",
+      "prerequisites": ["HSG-C.5", "7.G.4"]
+    },
+    "HSF-TF.2": {
+      "id": "HSF-TF.2",
+      "grade": "HS",
+      "domain": "Functions — Trigonometric Functions",
+      "cluster": "Extend the domain of trigonometric functions using the unit circle",
+      "description": "Explain how the unit circle extends trigonometric functions to all real numbers.",
+      "prerequisites": ["HSF-TF.1", "HSG-SRT.6"]
+    },
+    "HSF-TF.5": {
+      "id": "HSF-TF.5",
+      "grade": "HS",
+      "domain": "Functions — Trigonometric Functions",
+      "cluster": "Model periodic phenomena with trigonometric functions",
+      "description": "Choose trigonometric functions to model periodic phenomena with specified amplitude, frequency, and midline.",
+      "prerequisites": ["HSF-TF.2", "HSF-IF.4", "HSF-BF.3"]
+    },
+    "HSF-TF.8": {
+      "id": "HSF-TF.8",
+      "grade": "HS",
+      "domain": "Functions — Trigonometric Functions",
+      "cluster": "Prove and apply trigonometric identities",
+      "description": "Prove the Pythagorean identity sin²(θ) + cos²(θ) = 1 and use it to find trig values given one value and quadrant.",
+      "prerequisites": ["HSF-TF.2", "8.G.6"]
+    },
+
+    "HSG-CO.1": {
+      "id": "HSG-CO.1",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Experiment with transformations in the plane",
+      "description": "Know precise definitions of angle, circle, perpendicular line, parallel line, and line segment.",
+      "prerequisites": ["8.G.1", "4.G.1"]
+    },
+    "HSG-CO.2": {
+      "id": "HSG-CO.2",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Experiment with transformations in the plane",
+      "description": "Represent transformations as functions that take points as inputs and give other points as outputs.",
+      "prerequisites": ["HSG-CO.1", "8.G.1", "HSF-IF.1"]
+    },
+    "HSG-CO.3": {
+      "id": "HSG-CO.3",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Experiment with transformations in the plane",
+      "description": "Describe rotations and reflections that carry a rectangle, parallelogram, trapezoid, or regular polygon onto itself.",
+      "prerequisites": ["HSG-CO.2", "8.G.1"]
+    },
+    "HSG-CO.4": {
+      "id": "HSG-CO.4",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Experiment with transformations in the plane",
+      "description": "Develop definitions of rotations, reflections, and translations in terms of angles, circles, perpendicular/parallel lines.",
+      "prerequisites": ["HSG-CO.1", "HSG-CO.2"]
+    },
+    "HSG-CO.5": {
+      "id": "HSG-CO.5",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Experiment with transformations in the plane",
+      "description": "Given a figure and transformation, draw the transformed figure. Specify a sequence of transformations mapping one figure to another.",
+      "prerequisites": ["HSG-CO.4", "8.G.3"]
+    },
+    "HSG-CO.6": {
+      "id": "HSG-CO.6",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Understand congruence in terms of rigid motions",
+      "description": "Use rigid motions to transform figures and predict effects. Use definition of congruence via rigid motions.",
+      "prerequisites": ["HSG-CO.5", "8.G.2"]
+    },
+    "HSG-CO.7": {
+      "id": "HSG-CO.7",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Understand congruence in terms of rigid motions",
+      "description": "Two triangles are congruent iff corresponding sides and angles are congruent (via rigid motions).",
+      "prerequisites": ["HSG-CO.6"]
+    },
+    "HSG-CO.8": {
+      "id": "HSG-CO.8",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Understand congruence in terms of rigid motions",
+      "description": "Explain how triangle congruence criteria (ASA, SAS, SSS) follow from rigid motions.",
+      "prerequisites": ["HSG-CO.7"]
+    },
+    "HSG-CO.9": {
+      "id": "HSG-CO.9",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Prove geometric theorems",
+      "description": "Prove theorems about lines and angles (vertical angles, transversals with parallel lines, perpendicular bisectors).",
+      "prerequisites": ["HSG-CO.8", "8.G.5"]
+    },
+    "HSG-CO.10": {
+      "id": "HSG-CO.10",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Prove geometric theorems",
+      "description": "Prove theorems about triangles (angle sum 180°, base angles of isosceles, midsegment, medians meet at a point).",
+      "prerequisites": ["HSG-CO.9", "HSG-CO.8"]
+    },
+    "HSG-CO.11": {
+      "id": "HSG-CO.11",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Prove geometric theorems",
+      "description": "Prove theorems about parallelograms (opposite sides/angles congruent, diagonals bisect, rectangles have congruent diagonals).",
+      "prerequisites": ["HSG-CO.9", "HSG-CO.10"]
+    },
+    "HSG-CO.12": {
+      "id": "HSG-CO.12",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Make geometric constructions",
+      "description": "Make formal geometric constructions with various tools (copy segment/angle, bisect, construct perpendicular/parallel lines).",
+      "prerequisites": ["HSG-CO.1", "HSG-CO.4"]
+    },
+    "HSG-CO.13": {
+      "id": "HSG-CO.13",
+      "grade": "HS",
+      "domain": "Geometry — Congruence",
+      "cluster": "Make geometric constructions",
+      "description": "Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle.",
+      "prerequisites": ["HSG-CO.12"]
+    },
+
+    "HSG-SRT.1": {
+      "id": "HSG-SRT.1",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Understand similarity in terms of similarity transformations",
+      "description": "Verify experimentally properties of dilations given by center and scale factor.",
+      "prerequisites": ["8.G.3", "8.G.4", "7.G.1"]
+    },
+    "HSG-SRT.2": {
+      "id": "HSG-SRT.2",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Understand similarity in terms of similarity transformations",
+      "description": "Use definition of similarity via similarity transformations. Explain similarity for triangles (equal angles, proportional sides).",
+      "prerequisites": ["HSG-SRT.1", "HSG-CO.6"]
+    },
+    "HSG-SRT.3": {
+      "id": "HSG-SRT.3",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Understand similarity in terms of similarity transformations",
+      "description": "Use properties of similarity transformations to establish the AA criterion for similarity.",
+      "prerequisites": ["HSG-SRT.2", "8.G.5"]
+    },
+    "HSG-SRT.4": {
+      "id": "HSG-SRT.4",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Prove theorems involving similarity",
+      "description": "Prove theorems about triangles (line parallel to one side divides other two proportionally; Pythagorean Theorem via similarity).",
+      "prerequisites": ["HSG-SRT.3", "8.G.6"]
+    },
+    "HSG-SRT.5": {
+      "id": "HSG-SRT.5",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Prove theorems involving similarity",
+      "description": "Use congruence and similarity criteria for triangles to solve problems and prove relationships.",
+      "prerequisites": ["HSG-SRT.4", "HSG-CO.8"]
+    },
+    "HSG-SRT.6": {
+      "id": "HSG-SRT.6",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+      "description": "By similarity, side ratios in right triangles are properties of the angles, leading to definitions of trigonometric ratios.",
+      "prerequisites": ["HSG-SRT.3", "8.G.6"]
+    },
+    "HSG-SRT.7": {
+      "id": "HSG-SRT.7",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+      "description": "Explain and use the relationship between sine and cosine of complementary angles.",
+      "prerequisites": ["HSG-SRT.6"]
+    },
+    "HSG-SRT.8": {
+      "id": "HSG-SRT.8",
+      "grade": "HS",
+      "domain": "Geometry — Similarity, Right Triangles, and Trigonometry",
+      "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+      "description": "Use trigonometric ratios and Pythagorean Theorem to solve right triangles in applied problems.",
+      "prerequisites": ["HSG-SRT.6", "8.G.7"]
+    },
+
+    "HSG-C.1": {
+      "id": "HSG-C.1",
+      "grade": "HS",
+      "domain": "Geometry — Circles",
+      "cluster": "Understand and apply theorems about circles",
+      "description": "Prove that all circles are similar.",
+      "prerequisites": ["HSG-SRT.1", "7.G.4"]
+    },
+    "HSG-C.2": {
+      "id": "HSG-C.2",
+      "grade": "HS",
+      "domain": "Geometry — Circles",
+      "cluster": "Understand and apply theorems about circles",
+      "description": "Identify and describe relationships among inscribed angles, radii, and chords.",
+      "prerequisites": ["HSG-C.1", "HSG-CO.9"]
+    },
+    "HSG-C.3": {
+      "id": "HSG-C.3",
+      "grade": "HS",
+      "domain": "Geometry — Circles",
+      "cluster": "Understand and apply theorems about circles",
+      "description": "Construct inscribed and circumscribed circles of a triangle. Prove properties of angles for inscribed quadrilateral.",
+      "prerequisites": ["HSG-C.2", "HSG-CO.12"]
+    },
+    "HSG-C.5": {
+      "id": "HSG-C.5",
+      "grade": "HS",
+      "domain": "Geometry — Circles",
+      "cluster": "Find arc lengths and areas of sectors of circles",
+      "description": "Derive using similarity that arc length is proportional to radius. Define radian measure. Derive area of a sector.",
+      "prerequisites": ["HSG-C.1", "7.G.4", "HSG-SRT.5"]
+    },
+
+    "HSG-GPE.1": {
+      "id": "HSG-GPE.1",
+      "grade": "HS",
+      "domain": "Geometry — Expressing Geometric Properties with Equations",
+      "cluster": "Translate between geometric description and equation for a conic section",
+      "description": "Derive equation of a circle using Pythagorean Theorem. Complete the square to find center and radius.",
+      "prerequisites": ["8.G.8", "HSA-SSE.3b"]
+    },
+    "HSG-GPE.2": {
+      "id": "HSG-GPE.2",
+      "grade": "HS",
+      "domain": "Geometry — Expressing Geometric Properties with Equations",
+      "cluster": "Translate between geometric description and equation for a conic section",
+      "description": "Derive the equation of a parabola given a focus and directrix.",
+      "prerequisites": ["HSG-GPE.1", "HSA-CED.2"]
+    },
+    "HSG-GPE.4": {
+      "id": "HSG-GPE.4",
+      "grade": "HS",
+      "domain": "Geometry — Expressing Geometric Properties with Equations",
+      "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+      "description": "Use coordinates to prove simple geometric theorems algebraically.",
+      "prerequisites": ["8.G.8", "HSA-REI.10"]
+    },
+    "HSG-GPE.5": {
+      "id": "HSG-GPE.5",
+      "grade": "HS",
+      "domain": "Geometry — Expressing Geometric Properties with Equations",
+      "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+      "description": "Prove slope criteria for parallel and perpendicular lines. Use them to solve problems.",
+      "prerequisites": ["8.EE.6", "HSG-CO.9"]
+    },
+    "HSG-GPE.6": {
+      "id": "HSG-GPE.6",
+      "grade": "HS",
+      "domain": "Geometry — Expressing Geometric Properties with Equations",
+      "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+      "description": "Find the point on a directed line segment that partitions it in a given ratio.",
+      "prerequisites": ["HSG-GPE.4", "7.RP.2"]
+    },
+    "HSG-GPE.7": {
+      "id": "HSG-GPE.7",
+      "grade": "HS",
+      "domain": "Geometry — Expressing Geometric Properties with Equations",
+      "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+      "description": "Use coordinates to compute perimeters of polygons and areas of triangles and rectangles.",
+      "prerequisites": ["8.G.8", "6.G.1"]
+    },
+
+    "HSG-GMD.1": {
+      "id": "HSG-GMD.1",
+      "grade": "HS",
+      "domain": "Geometry — Geometric Measurement and Dimension",
+      "cluster": "Explain volume formulas and use them to solve problems",
+      "description": "Give informal argument for formulas for circumference, area of circle, volume of cylinder, pyramid, cone.",
+      "prerequisites": ["7.G.4", "8.G.9", "HSG-SRT.5"]
+    },
+    "HSG-GMD.3": {
+      "id": "HSG-GMD.3",
+      "grade": "HS",
+      "domain": "Geometry — Geometric Measurement and Dimension",
+      "cluster": "Explain volume formulas and use them to solve problems",
+      "description": "Use volume formulas for cylinders, pyramids, cones, and spheres to solve problems.",
+      "prerequisites": ["HSG-GMD.1", "8.G.9"]
+    },
+    "HSG-GMD.4": {
+      "id": "HSG-GMD.4",
+      "grade": "HS",
+      "domain": "Geometry — Geometric Measurement and Dimension",
+      "cluster": "Visualize relationships between 2D and 3D objects",
+      "description": "Identify shapes of 2D cross-sections of 3D objects, and 3D objects generated by rotations of 2D objects.",
+      "prerequisites": ["7.G.3", "HSG-GMD.1"]
+    },
+    "HSG-MG.1": {
+      "id": "HSG-MG.1",
+      "grade": "HS",
+      "domain": "Geometry — Modeling with Geometry",
+      "cluster": "Apply geometric concepts in modeling situations",
+      "description": "Use geometric shapes, their measures, and properties to describe objects (e.g., model a tree trunk as a cylinder).",
+      "prerequisites": ["HSG-GMD.3", "HSN-Q.2"]
+    },
+    "HSG-MG.2": {
+      "id": "HSG-MG.2",
+      "grade": "HS",
+      "domain": "Geometry — Modeling with Geometry",
+      "cluster": "Apply geometric concepts in modeling situations",
+      "description": "Apply concepts of density based on area and volume in modeling situations.",
+      "prerequisites": ["HSG-GMD.3", "HSN-Q.1", "7.RP.1"]
+    },
+    "HSG-MG.3": {
+      "id": "HSG-MG.3",
+      "grade": "HS",
+      "domain": "Geometry — Modeling with Geometry",
+      "cluster": "Apply geometric concepts in modeling situations",
+      "description": "Apply geometric methods to solve design problems (physical constraints, minimize cost, typographic grids).",
+      "prerequisites": ["HSG-MG.1", "HSG-MG.2", "HSA-CED.3"]
+    },
+
+    "HSS-ID.1": {
+      "id": "HSS-ID.1",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+      "description": "Represent data with plots on the real number line (dot plots, histograms, box plots).",
+      "prerequisites": ["6.SP.4", "8.SP.1"]
+    },
+    "HSS-ID.2": {
+      "id": "HSS-ID.2",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+      "description": "Use statistics appropriate to shape of distribution to compare center and spread of two or more data sets.",
+      "prerequisites": ["HSS-ID.1", "6.SP.5"]
+    },
+    "HSS-ID.3": {
+      "id": "HSS-ID.3",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+      "description": "Interpret differences in shape, center, spread, accounting for outliers.",
+      "prerequisites": ["HSS-ID.2"]
+    },
+    "HSS-ID.4": {
+      "id": "HSS-ID.4",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+      "description": "Use mean and standard deviation to fit to a normal distribution and estimate population percentages.",
+      "prerequisites": ["HSS-ID.2", "HSS-ID.3"]
+    },
+    "HSS-ID.5": {
+      "id": "HSS-ID.5",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+      "description": "Summarize categorical data for two categories in two-way frequency tables. Interpret relative frequencies.",
+      "prerequisites": ["8.SP.4", "7.RP.3"]
+    },
+    "HSS-ID.6": {
+      "id": "HSS-ID.6",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+      "description": "Represent data on two quantitative variables on a scatter plot. Describe how variables are related.",
+      "prerequisites": ["8.SP.1", "8.SP.2"]
+    },
+    "HSS-ID.6a": {
+      "id": "HSS-ID.6a",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Scatter plots and models",
+      "description": "Fit a function to data (linear, quadratic, exponential models). Use fitted function to solve problems.",
+      "prerequisites": ["HSS-ID.6", "HSF-LE.2"]
+    },
+    "HSS-ID.6b": {
+      "id": "HSS-ID.6b",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Scatter plots and models",
+      "description": "Informally assess the fit of a function by plotting and analyzing residuals.",
+      "prerequisites": ["HSS-ID.6a"]
+    },
+    "HSS-ID.6c": {
+      "id": "HSS-ID.6c",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Scatter plots and models",
+      "description": "Fit a linear function for a scatter plot that suggests a linear association.",
+      "prerequisites": ["HSS-ID.6", "8.SP.2"]
+    },
+    "HSS-ID.7": {
+      "id": "HSS-ID.7",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Interpret linear models",
+      "description": "Interpret the slope and intercept of a linear model in the context of the data.",
+      "prerequisites": ["HSS-ID.6c", "8.SP.3"]
+    },
+    "HSS-ID.8": {
+      "id": "HSS-ID.8",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Interpret linear models",
+      "description": "Compute and interpret the correlation coefficient of a linear fit.",
+      "prerequisites": ["HSS-ID.7"]
+    },
+    "HSS-ID.9": {
+      "id": "HSS-ID.9",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+      "cluster": "Interpret linear models",
+      "description": "Distinguish between correlation and causation.",
+      "prerequisites": ["HSS-ID.8"]
+    },
+
+    "HSS-IC.1": {
+      "id": "HSS-IC.1",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+      "cluster": "Understand and evaluate random processes underlying statistical experiments",
+      "description": "Understand statistics as a process for making inferences about population parameters based on random sample.",
+      "prerequisites": ["7.SP.1", "7.SP.2"]
+    },
+    "HSS-IC.2": {
+      "id": "HSS-IC.2",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+      "cluster": "Understand and evaluate random processes underlying statistical experiments",
+      "description": "Decide if a specified model is consistent with results from a data-generating process.",
+      "prerequisites": ["HSS-IC.1", "7.SP.7"]
+    },
+    "HSS-IC.3": {
+      "id": "HSS-IC.3",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+      "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+      "description": "Recognize purposes/differences among sample surveys, experiments, observational studies. Role of randomization.",
+      "prerequisites": ["HSS-IC.1"]
+    },
+    "HSS-IC.4": {
+      "id": "HSS-IC.4",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+      "cluster": "Make inferences and justify conclusions",
+      "description": "Use sample survey data to estimate population mean/proportion. Develop margin of error through simulation.",
+      "prerequisites": ["HSS-IC.3", "HSS-ID.2"]
+    },
+    "HSS-IC.5": {
+      "id": "HSS-IC.5",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+      "cluster": "Make inferences and justify conclusions",
+      "description": "Use data from randomized experiment to compare treatments. Use simulations for significance.",
+      "prerequisites": ["HSS-IC.3", "HSS-IC.2"]
+    },
+    "HSS-IC.6": {
+      "id": "HSS-IC.6",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+      "cluster": "Make inferences and justify conclusions",
+      "description": "Evaluate reports based on data.",
+      "prerequisites": ["HSS-IC.4", "HSS-IC.5"]
+    },
+
+    "HSS-CP.1": {
+      "id": "HSS-CP.1",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Understand independence and conditional probability",
+      "description": "Describe events as subsets of a sample space using characteristics/unions/intersections/complements.",
+      "prerequisites": ["7.SP.8a", "7.SP.8b"]
+    },
+    "HSS-CP.2": {
+      "id": "HSS-CP.2",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Understand independence and conditional probability",
+      "description": "Understand two events are independent if P(A and B) = P(A)·P(B). Determine independence.",
+      "prerequisites": ["HSS-CP.1", "7.SP.7"]
+    },
+    "HSS-CP.3": {
+      "id": "HSS-CP.3",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Understand independence and conditional probability",
+      "description": "Understand conditional probability P(A|B) = P(A and B)/P(B). Interpret independence of A and B.",
+      "prerequisites": ["HSS-CP.2", "6.RP.2"]
+    },
+    "HSS-CP.4": {
+      "id": "HSS-CP.4",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Understand independence and conditional probability",
+      "description": "Construct and interpret two-way frequency tables. Decide independence. Approximate conditional probabilities.",
+      "prerequisites": ["HSS-CP.3", "HSS-ID.5"]
+    },
+    "HSS-CP.5": {
+      "id": "HSS-CP.5",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Understand independence and conditional probability",
+      "description": "Recognize and explain conditional probability and independence in everyday situations.",
+      "prerequisites": ["HSS-CP.3", "HSS-CP.4"]
+    },
+    "HSS-CP.6": {
+      "id": "HSS-CP.6",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Use the rules of probability to compute probabilities of compound events",
+      "description": "Find conditional probability P(A|B) as fraction of B's outcomes that also belong to A.",
+      "prerequisites": ["HSS-CP.3"]
+    },
+    "HSS-CP.7": {
+      "id": "HSS-CP.7",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Conditional Probability and the Rules of Probability",
+      "cluster": "Use the rules of probability to compute probabilities of compound events",
+      "description": "Apply the Addition Rule: P(A or B) = P(A) + P(B) – P(A and B).",
+      "prerequisites": ["HSS-CP.1", "HSS-CP.6"]
+    },
+
+    "HSS-MD.1": {
+      "id": "HSS-MD.1",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Using Probability to Make Decisions",
+      "cluster": "Calculate expected values and use them to solve problems",
+      "description": "(+) Define a random variable. Graph the corresponding probability distribution.",
+      "prerequisites": ["HSS-CP.1", "HSS-ID.1"]
+    },
+    "HSS-MD.2": {
+      "id": "HSS-MD.2",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Using Probability to Make Decisions",
+      "cluster": "Calculate expected values and use them to solve problems",
+      "description": "(+) Calculate expected value of a random variable. Interpret as the mean of the probability distribution.",
+      "prerequisites": ["HSS-MD.1", "6.SP.5"]
+    },
+    "HSS-MD.5": {
+      "id": "HSS-MD.5",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Using Probability to Make Decisions",
+      "cluster": "Use probability to evaluate outcomes of decisions",
+      "description": "(+) Weigh possible outcomes by assigning probabilities to payoff values and finding expected values.",
+      "prerequisites": ["HSS-MD.2", "HSS-CP.7"]
+    },
+    "HSS-MD.6": {
+      "id": "HSS-MD.6",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Using Probability to Make Decisions",
+      "cluster": "Use probability to evaluate outcomes of decisions",
+      "description": "(+) Use probabilities to make fair decisions.",
+      "prerequisites": ["HSS-MD.5", "7.SP.7a"]
+    },
+    "HSS-MD.7": {
+      "id": "HSS-MD.7",
+      "grade": "HS",
+      "domain": "Statistics and Probability — Using Probability to Make Decisions",
+      "cluster": "Use probability to evaluate outcomes of decisions",
+      "description": "(+) Analyze decisions and strategies using probability concepts.",
+      "prerequisites": ["HSS-MD.5", "HSS-MD.6"]
+    },
+
+    "2.OA.1": {
+      "id": "2.OA.1",
+      "grade": 2,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Use addition and subtraction within 100 to solve one- and two-step word problems.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.OA.3": {
+      "id": "2.OA.3",
+      "grade": 2,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Determine whether a group of objects (up to 20) has an odd or even number of members. Write equations for even numbers as two equal addends.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.OA.4": {
+      "id": "2.OA.4",
+      "grade": 2,
+      "domain": "Operations and Algebraic Thinking",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and 5 columns.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.NBT.1": {
+      "id": "2.NBT.1",
+      "grade": 2,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Understand that the three digits of a three-digit number represent hundreds, tens, and ones.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.NBT.3": {
+      "id": "2.NBT.3",
+      "grade": 2,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Read and write numbers to 1000 using base-ten numerals, number names, and expanded form.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.NBT.4": {
+      "id": "2.NBT.4",
+      "grade": 2,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Compare two three-digit numbers using >, =, and < symbols.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.NBT.5": {
+      "id": "2.NBT.5",
+      "grade": 2,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Fluently add and subtract within 100.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.NBT.7": {
+      "id": "2.NBT.7",
+      "grade": 2,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Add and subtract within 1000 using concrete models or drawings and strategies based on place value.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.NBT.9": {
+      "id": "2.NBT.9",
+      "grade": 2,
+      "domain": "Number and Operations in Base Ten",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Explain why addition and subtraction strategies work using place value and properties of operations.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.MD.1": {
+      "id": "2.MD.1",
+      "grade": 2,
+      "domain": "Measurement and Data",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Measure the length of an object by selecting and using appropriate tools.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.MD.3": {
+      "id": "2.MD.3",
+      "grade": 2,
+      "domain": "Measurement and Data",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Estimate lengths using units of inches, feet, centimeters, and meters.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.MD.6": {
+      "id": "2.MD.6",
+      "grade": 2,
+      "domain": "Measurement and Data",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Represent whole numbers as lengths on a number line diagram.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.MD.7": {
+      "id": "2.MD.7",
+      "grade": 2,
+      "domain": "Measurement and Data",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Tell and write time from analog and digital clocks to the nearest five minutes.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.MD.9": {
+      "id": "2.MD.9",
+      "grade": 2,
+      "domain": "Measurement and Data",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Generate measurement data by measuring lengths to the nearest whole unit. Show data on a line plot.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.MD.10": {
+      "id": "2.MD.10",
+      "grade": 2,
+      "domain": "Measurement and Data",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Draw a picture graph and a bar graph to represent a data set with up to four categories.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.G.1": {
+      "id": "2.G.1",
+      "grade": 2,
+      "domain": "Geometry",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Recognize and draw shapes having specified attributes.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.G.2": {
+      "id": "2.G.2",
+      "grade": 2,
+      "domain": "Geometry",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Partition a rectangle into rows and columns of same-size squares and count to find the total.",
+      "prerequisites": [],
+      "foundational": true
+    },
+    "2.G.3": {
+      "id": "2.G.3",
+      "grade": 2,
+      "domain": "Geometry",
+      "cluster": "Foundational (pre-Grade 3)",
+      "description": "Partition circles and rectangles into two, three, or four equal shares. Describe the shares using halves, thirds, fourths.",
+      "prerequisites": [],
+      "foundational": true
+    }
+  }
+}
