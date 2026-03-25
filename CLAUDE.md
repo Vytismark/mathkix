@@ -62,12 +62,37 @@ Three client factories in `src/lib/supabase/`:
 `src/lib/adaptive/` — the core learning system:
 - `engine.ts` — question selection via composite scoring (mastery need, SR urgency, difficulty fit, domain weight, variety)
 - `prerequisites.ts` — DAG-based prerequisite graph traversal, readiness tiers (ideal/ready/unlocked/blocked), priority scoring for next-standard selection, deepest-gap remediation
-- `session-composer.ts` — builds structured sessions with instruction + practice + review segments, budget-based allocation, falls back to practice-only when no authored content exists
-- `modality.ts` — teaching modality selection (visual/story/procedural/interactive/challenge) using cold start from parent preferences → epsilon-greedy exploration → Thompson sampling exploitation
+- `session-composer.ts` — builds structured sessions with instruction + practice + review segments, budget-based allocation with profile-aware adjustments, falls back to practice-only when no authored content exists
+- `modality.ts` — teaching modality selection (visual/story/procedural/interactive/challenge) using cold start → epsilon-greedy → Thompson sampling. Profile filters modalities by representation preference, CRA stage, and example-vs-rule preference.
+- `profiler.ts` — inference engine that silently builds a 25-dimension learning profile from session behavior. Runs after every session completion. Uses Bayesian-like confidence tracking.
+- `profile-signals.ts` — extracts raw behavioral signals from session data (response times, error patterns, engagement, fatigue, modality performance) for the profiler
+- `algo-logger.ts` — structured console logging for all algorithm decisions, visible in Vercel Functions logs with `[ALGO:{component}]` tags
 - `spaced-repetition.ts` — SM-2 scheduling algorithm
 - `affinity.ts` — domain preference tracking with exponential decay
 - `achievements.ts` — badge/trophy detection
 - `engagement.ts` — attention span calibration
+
+### Child learning profile
+
+`src/types/learning-profile.ts` — 25 dimensions inferred silently from behavior, stored as JSONB on `children.learning_profile`. Each dimension has a value, confidence (0-1), data point count, and last-updated timestamp. Dimensions only change when confidence threshold (0.3) is met.
+
+Profile flows through the system:
+1. **Session complete** → profiler extracts signals → updates profile dimensions
+2. **Session start** → `deriveProfileAdjustments()` converts profile into actionable adjustments
+3. **Session composer** uses adjustments for: difficulty reduction (anxiety), content ordering (fatigue), modality filtering (CRA stage, representation pref), interleaving (preference), word problem reduction (reading struggles)
+4. **AI teacher** receives adjustments via `profileAdjustments` in API request body → injects personality rules into Claude system prompt (warmth for anxiety, brevity for brief-depth, growth framing for fixed mindset, error-specific strategies)
+5. **Client** receives adjustments in session/start response → stores in sessionStorage → passes to AiTeacherPanel
+
+Profiler dimensions by category:
+- **Learning**: cognitiveStage, workingMemoryCapacity, processingSpeed, mathAnxietyLevel
+- **Knowledge**: misconceptionFlags (20 detection patterns in `src/data/misconceptions.ts`), proceduralVsConceptual
+- **Style**: representationPreference, exampleFirstVsRuleFirst, craStageByDomain
+- **Motivation**: motivationOrientation, challengeTolerance, mindsetIndicator
+- **Errors**: errorTypeTendency, selfCorrectionAbility, hintResponsiveness, responseLatencyPattern
+- **Pacing**: masterySpeedByDomain, interleavingPreference
+- **Context**: wordProblemProficiency, sessionFatiguePattern
+- **Scaffolding**: feedbackGranularity, explanationDepth
+- **Structure**: discoveryVsDirectInstruction, workedExampleFadingStage, problemFirstVsLessonFirst
 
 ### Placement quiz
 
@@ -75,7 +100,7 @@ Three client factories in `src/lib/supabase/`:
 
 ### AI integration
 
-`src/lib/anthropic/` — Claude SDK client and prompt templates. `teacher-prompts.ts` (17KB) handles tutoring with emotion detection, problem-type detection, and context-aware explanations. `support-prompts.ts` powers AI support ticket responses.
+`src/lib/anthropic/` — Claude SDK client and prompt templates. `teacher-prompts.ts` (17KB) handles tutoring with emotion detection, problem-type detection, and context-aware explanations. `support-prompts.ts` powers AI support ticket responses. The AI teacher at `/api/adaptive/ai-teacher` receives `profileAdjustments` and injects personality rules into the system prompt (anxiety warmth, explanation depth, mindset framing, error-specific strategies, hint scaffolding level).
 
 ### Payments
 
@@ -94,7 +119,7 @@ Hand-maintained in `src/types/`: `database.ts` (Supabase schema), `adaptive.ts`,
 
 ### Lesson content
 
-`src/data/lessons/` — hard-coded teaching content organized by grade and standard. Each standard has up to 5 modality variants (visual, story, procedural, interactive, challenge). The lesson registry (`src/data/lessons/index.ts`) lazy-loads content and provides `getLessonContent()`, `getAvailableModalities()`, `hasLessonContent()` queries. Currently authored: Grade 3 OA (3.OA.1–3.OA.9, 45 files). Standards without content fall back to practice-only sessions.
+`src/data/lessons/` — hard-coded teaching content organized by grade and standard. Each standard has up to 5 modality variants (visual, story, procedural, interactive, challenge). The lesson registry (`src/data/lessons/index.ts`) lazy-loads content and provides `getLessonContent()`, `getAvailableModalities()`, `hasLessonContent()` queries. Currently authored: Grade 3 OA (3.OA.1–3.OA.9, 45 files). Standards without content fall back to practice-only sessions. All practice questions are tagged with `category` (procedural/conceptual/word_problem/bare_number), `abstractionLevel` (concrete/representational/abstract), and `stepsRequired` (1-3) for the profiler.
 
 ### Prerequisite map
 
@@ -114,7 +139,7 @@ Validation logic is in `src/lib/env.ts` — use `env.VARIABLE_NAME` in server co
 
 ## Database
 
-Supabase PostgreSQL with Row-Level Security on all user data tables. Migrations live in `supabase/migrations/` as ordered SQL scripts. Key tables: `profiles`, `subscriptions`, `children` (includes `modality_scores`, `preferred_modality`, `current_frontier`, `strengths`, `gaps`), `diagnostic_questions`, `quiz_sessions`, `practice_sessions`, `spaced_repetition_items`, `child_standard_mastery`, `lessons`, `lesson_attempts`, `modality_attempts`, `achievements`, `topic_affinity`, `behavioral_events`, `support_tickets`, `blog_posts`, `email_queue`.
+Supabase PostgreSQL with Row-Level Security on all user data tables. Migrations live in `supabase/migrations/` as ordered SQL scripts (001–024). Key tables: `profiles`, `subscriptions`, `children` (includes `modality_scores`, `preferred_modality`, `learning_profile` JSONB, `current_frontier`, `strengths`, `gaps`), `diagnostic_questions`, `quiz_sessions`, `practice_sessions`, `spaced_repetition_items`, `child_standard_mastery`, `lessons`, `lesson_attempts`, `modality_attempts`, `achievements`, `topic_affinity`, `behavioral_events`, `support_tickets`, `blog_posts`, `email_queue`.
 
 ## Code Style
 
