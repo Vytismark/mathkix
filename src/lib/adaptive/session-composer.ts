@@ -445,27 +445,27 @@ function deriveProfileAdjustments(
     canSkipInstruction: false,
   }
 
-  if (!profile) return defaults
+  if (!profile || !profile.interleavingPreference) return defaults
 
   const adj = { ...defaults }
 
   // Interleaving preference
-  if (profile.interleavingPreference.confidence >= CONFIDENCE_THRESHOLD) {
+  if (profile.interleavingPreference?.confidence >= CONFIDENCE_THRESHOLD) {
     adj.preferFocused = profile.interleavingPreference.value === 'focused_blocks'
   }
 
   // Math anxiety → reduce difficulty
-  if (profile.mathAnxietyLevel.confidence >= CONFIDENCE_THRESHOLD && profile.mathAnxietyLevel.value === 'high') {
+  if (profile.mathAnxietyLevel?.confidence >= CONFIDENCE_THRESHOLD && profile.mathAnxietyLevel.value === 'high') {
     adj.difficultyReduction = 1
   }
 
   // Low working memory → more practice (smaller chunks)
-  if (profile.workingMemoryCapacity.confidence >= CONFIDENCE_THRESHOLD && profile.workingMemoryCapacity.value === 'low') {
+  if (profile.workingMemoryCapacity?.confidence >= CONFIDENCE_THRESHOLD && profile.workingMemoryCapacity.value === 'low') {
     adj.extraPracticeQuestions = 1
   }
 
   // Independent learner → can skip instruction
-  if (profile.workedExampleFadingStage.confidence >= CONFIDENCE_THRESHOLD && profile.workedExampleFadingStage.value === 'independent') {
+  if (profile.workedExampleFadingStage?.confidence >= CONFIDENCE_THRESHOLD && profile.workedExampleFadingStage.value === 'independent') {
     adj.canSkipInstruction = true
   }
 

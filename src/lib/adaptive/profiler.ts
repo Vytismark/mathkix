@@ -55,7 +55,8 @@ export function updateProfile(
   current: ChildLearningProfile | null,
   signals: SessionSignals,
 ): ChildLearningProfile {
-  const profile = current ?? createDefaultProfile()
+  // Handle null, undefined, or empty {} from DB (migration not yet applied)
+  const profile = (current && current.cognitiveStage) ? current : createDefaultProfile()
 
   return {
     cognitiveStage: inferCognitiveStage(profile.cognitiveStage, signals),
