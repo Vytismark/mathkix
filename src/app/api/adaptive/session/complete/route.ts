@@ -66,6 +66,7 @@ export async function POST(request: NextRequest) {
     questions,     // MixedQuestion[] - sent back from client
     timeSpentSec,
     segments,      // SessionSegment[] | undefined - sent for segmented sessions
+    timings,       // Record<number|string, { startMs, endMs }> | undefined - per-question timestamps
   } = await request.json()
 
   if (!sessionId || !childId || !answers || !questions) {
@@ -543,19 +544,24 @@ export async function POST(request: NextRequest) {
       : null
 
     // Build answer records for signal extraction
-    const answerRecords: AnswerRecord[] = perQuestion.map((pq, idx) => ({
-      questionId: pq.question.id,
-      answer: pq.given,
-      correct: pq.correct,
-      startMs: idx * 15_000,  // approximate until per-question timestamps are added
-      endMs: (idx + 1) * 15_000,
-      difficulty: pq.question.difficulty ?? 1,
-      domain: pq.question.domain,
-      standardCode: pq.question.standard_code ?? null,
-      questionType: pq.question.type,
-      questionText: pq.question.text,
-      correctAnswer: pq.question.correct_answer,
-    }))
+    // Use real per-question timestamps if available, otherwise approximate
+    const timingMap = (timings ?? {}) as Record<string, { startMs: number; endMs: number }>
+    const answerRecords: AnswerRecord[] = perQuestion.map((pq, idx) => {
+      const timing = timingMap[String(pq.question.id)]
+      return {
+        questionId: pq.question.id,
+        answer: pq.given,
+        correct: pq.correct,
+        startMs: timing?.startMs ?? idx * 15_000,
+        endMs: timing?.endMs ?? (idx + 1) * 15_000,
+        difficulty: pq.question.difficulty ?? 1,
+        domain: pq.question.domain,
+        standardCode: pq.question.standard_code ?? null,
+        questionType: pq.question.type,
+        questionText: pq.question.text,
+        correctAnswer: pq.question.correct_answer,
+      }
+    })
 
     const sessionCtx: SessionContext = {
       childId,

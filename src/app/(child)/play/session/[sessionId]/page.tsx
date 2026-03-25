@@ -71,6 +71,10 @@ export default function SessionPage() {
   const [questionIndex, setQuestionIndex]   = useState(0)
   const [answers, setAnswers]               = useState<Record<number, string>>({})
 
+  // ── Per-question timing (both modes) ──────────────────────
+  // Maps questionId → { startMs, endMs } for profiler signals
+  const [timings, setTimings] = useState<Record<number | string, { startMs: number; endMs: number }>>({})
+
   // ── Segmented mode state ──────────────────────────────────
   const [segments, setSegments]             = useState<SessionSegment[]>([])
   const [segmentIndex, setSegmentIndex]     = useState(0)
@@ -252,6 +256,7 @@ export default function SessionPage() {
     setWasCorrect(isCorrect)
     const key = `${segmentIndex}:${currentSegQuestion.id}`
     setSegAnswers((prev) => ({ ...prev, [key]: given }))
+    setTimings((prev) => ({ ...prev, [key]: { startMs: questionStartMs.current, endMs: Date.now() } }))
     setPhase('feedback')
 
     if (isCorrect) {
@@ -296,6 +301,7 @@ export default function SessionPage() {
           sessionId, childId, answers: allAnswers,
           questions: allQuestions, timeSpentSec,
           segments, // send segments for modality tracking
+          timings,  // per-question timestamps for profiler
         }),
       })
       const data = await res.json()
@@ -336,6 +342,7 @@ export default function SessionPage() {
 
     setWasCorrect(isCorrect)
     setAnswers((prev) => ({ ...prev, [currentQuestion.id]: given }))
+    setTimings((prev) => ({ ...prev, [currentQuestion.id]: { startMs: questionStartMs.current, endMs: Date.now() } }))
     setPhase('feedback')
 
     if (isCorrect) {
@@ -369,7 +376,7 @@ export default function SessionPage() {
         const res = await fetch('/api/adaptive/session/complete', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ sessionId, childId, answers: allAnswers, questions, timeSpentSec }),
+          body: JSON.stringify({ sessionId, childId, answers: allAnswers, questions, timeSpentSec, timings }),
         })
         const data = await res.json()
 
