@@ -32,6 +32,7 @@ import type {
 } from '@/types/lesson-content'
 import type { ChildLearningProfile } from '@/types/learning-profile'
 import { CONFIDENCE_THRESHOLD } from '@/types/learning-profile'
+import { logDecision, logTable } from './algo-logger'
 import {
   selectNextStandards,
   type PriorityScoringContext,
@@ -94,9 +95,17 @@ export async function composeSession(
     BUDGET_MAP[input.attentionSpan] + input.spanQuestionOffset
   ))
 
+  logDecision({ component: 'COMPOSER', action: 'compose_session_start', childId: input.childId, data: {
+    budget, attentionSpan: input.attentionSpan, offset: input.spanQuestionOffset, grade: input.gradeLevel,
+  }})
+
   // ── Profile-aware adjustments ─────────────────────────────
   const profile = input.learningProfile
   const profileAdjustments = deriveProfileAdjustments(profile)
+
+  logDecision({ component: 'COMPOSER', action: 'profile_adjustments', childId: input.childId, data: {
+    ...profileAdjustments, hasProfile: !!(profile && profile.cognitiveStage),
+  }})
 
   // ── Step 1: Check if we have any authored lesson content ──
   // If not, fall back to the existing practice-only system
@@ -107,8 +116,16 @@ export async function composeSession(
     (s) => hasLessonContent(s.standardCode)
   )
 
+  logDecision({ component: 'COMPOSER', action: 'content_check', childId: input.childId, data: {
+    candidateCount: candidateStandards.length,
+    withContentCount: standardsWithContent.length,
+    candidates: candidateStandards.map(s => ({ code: s.standardCode, score: Math.round(s.score), tier: s.readiness.tier })),
+    withContent: standardsWithContent.map(s => s.standardCode),
+  }})
+
   // No authored content → fall back to practice-only
   if (standardsWithContent.length === 0) {
+    logDecision({ component: 'COMPOSER', action: 'fallback_practice_only', childId: input.childId, data: { reason: 'no_authored_content' }})
     return composePracticeOnly(supabase, input, budget)
   }
 
@@ -174,6 +191,11 @@ export async function composeSession(
       totalAttempts,
     })
 
+    logDecision({ component: 'MODALITY', action: 'selected', childId: input.childId, data: {
+      standard: priority.standardCode, modality, available, totalAttempts,
+      phase: totalAttempts < 3 ? 'cold_start' : totalAttempts < 15 ? 'exploration' : 'exploitation',
+    }})
+
     const content = getLessonContent(priority.standardCode, modality)
     if (!content) continue
 
@@ -229,6 +251,17 @@ export async function composeSession(
     if (seg.type === 'practice') return sum + seg.questions.length * 0.5
     return sum + seg.questions.length * 0.4
   }, 0)
+
+  logTable('COMPOSER', 'session_segments', ordered.map(s => ({
+    type: s.type,
+    standard: s.standardCode,
+    ...(s.type === 'instruction' ? { modality: s.modality, steps: s.content.introduction.length } : {}),
+    ...(s.type !== 'instruction' ? { questions: s.questions.length } : {}),
+  })), input.childId)
+
+  logDecision({ component: 'COMPOSER', action: 'compose_session_done', childId: input.childId, data: {
+    isSegmented: true, segmentCount: ordered.length, estimatedMinutes: Math.round(totalMinutes), budgetUsed: budget - remaining, budgetTotal: budget,
+  }})
 
   return {
     segments: ordered,

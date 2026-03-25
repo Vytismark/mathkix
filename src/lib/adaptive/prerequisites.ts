@@ -21,6 +21,7 @@ import type {
   PrerequisiteNode,
   PrerequisiteGraph,
 } from '@/types/lesson-content'
+import { logDecision, logTable } from './algo-logger'
 import prerequisiteData from '../../../mathkix_prerequisite_map.json'
 
 // ── Types ────────────────────────────────────────────────────
@@ -353,6 +354,12 @@ export function selectNextStandards(
   count: number = 2,
 ): StandardPriority[] {
   const scored = scoreStandardPriorities(gradeLevel, ctx)
+
+  logDecision({ component: 'PREREQ', action: 'scored_standards', data: {
+    grade: gradeLevel, totalScored: scored.length,
+    top5: scored.slice(0, 5).map(s => ({ code: s.standardCode, score: Math.round(s.score), tier: s.readiness.tier, domain: s.domain })),
+  }})
+
   if (scored.length === 0) return []
 
   const selected: StandardPriority[] = []

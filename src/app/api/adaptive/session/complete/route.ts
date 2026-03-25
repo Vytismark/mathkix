@@ -15,6 +15,7 @@ import { computeAffinityDelta, applyScoreAdjustment } from '@/lib/adaptive/affin
 import { updateModalityScore, derivePreferredModality } from '@/lib/adaptive/modality'
 import { updateProfile } from '@/lib/adaptive/profiler'
 import { extractAllSignals, type AnswerRecord, type SessionContext } from '@/lib/adaptive/profile-signals'
+import { logDecision, logProfileChanges } from '@/lib/adaptive/algo-logger'
 import type { ChildLearningProfile } from '@/types/learning-profile'
 import { createDefaultProfile } from '@/types/learning-profile'
 import type { Domain } from '@/types/quiz'
@@ -106,6 +107,11 @@ export async function POST(request: NextRequest) {
   }
 
   const scorePct = Math.round((correctCount / mixedQuestions.length) * 100)
+
+  logDecision({ component: 'SESSION', action: 'session_scored', childId, sessionId, data: {
+    scorePct, correctCount, totalQuestions: mixedQuestions.length, totalXP, timeSpentSec,
+    domains: [...new Set(mixedQuestions.map(q => q.domain))],
+  }})
 
   // ── Group by standard_code for mastery + SR updates ──────
   const byStandard = new Map<string, {
@@ -578,9 +584,27 @@ export async function POST(request: NextRequest) {
       aiTeacherMessages: 0,
     }
 
+    const hasRealTimings = Object.keys(timingMap).length > 0
+    logDecision({ component: 'SESSION', action: 'profiler_signals', childId, sessionId, data: {
+      answerCount: answerRecords.length, hasRealTimings,
+      avgResponseMs: answerRecords.length > 0
+        ? Math.round(answerRecords.reduce((s, a) => s + (a.endMs - a.startMs), 0) / answerRecords.length)
+        : 0,
+      accuracy: answerRecords.length > 0
+        ? Math.round(answerRecords.filter(a => a.correct).length / answerRecords.length * 100)
+        : 0,
+      modalityUsed: modalityUsedInSession,
+    }})
+
     const allSignals = extractAllSignals(answerRecords, sessionCtx, modalityUsedInSession, instructionStandards)
     const currentProfile = (child.learning_profile as ChildLearningProfile | null) ?? createDefaultProfile()
     const updatedProfile = updateProfile(currentProfile, allSignals)
+
+    logProfileChanges(
+      childId,
+      currentProfile as unknown as Record<string, unknown>,
+      updatedProfile as unknown as Record<string, unknown>,
+    )
 
     await supabase.from('children').update({
       learning_profile: updatedProfile as unknown as Json,
