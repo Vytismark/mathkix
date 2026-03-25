@@ -99,8 +99,6 @@ export function computeAffinityDelta(
     : null
 
   return {
-    emoji_positive:     0,
-    emoji_negative:     0,
     correct_streak_best: correctStreak,
     avg_response_ms:    batchAvgMs,
     last_updated:       new Date().toISOString(),
@@ -133,19 +131,9 @@ export function applyScoreAdjustment(
 export function recomputeAffinityScore(affinity: TopicAffinity): number {
   const base = NEUTRAL_SCORE
 
-  // Emoji net signal: scale -20 to +20
-  const totalEmoji = affinity.emoji_positive + affinity.emoji_negative
-  const emojiNet = totalEmoji > 0
-    ? ((affinity.emoji_positive - affinity.emoji_negative) / totalEmoji) * 20
-    : 0
-
-  // Response time signal: -15 to +15
-  let responseSignal = 0
-  // (No global baseline available here; leave neutral)
-
   // Streak signal: +10 for a best streak >= 5
   const streakBonus = affinity.correct_streak_best >= 5 ? 10 : 0
 
-  const raw = base + emojiNet + responseSignal + streakBonus
+  const raw = base + streakBonus
   return Math.max(0, Math.min(100, raw))
 }

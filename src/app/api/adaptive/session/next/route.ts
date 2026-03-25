@@ -198,8 +198,6 @@ export async function POST(request: NextRequest) {
       : currentAffinity.affinity_score
     await supabase.from('topic_affinity').update({
       affinity_score:     newScore,
-      emoji_positive:     (currentAffinity.emoji_positive ?? 0) + (emoji === 'positive' ? 1 : 0),
-      emoji_negative:     (currentAffinity.emoji_negative ?? 0) + (emoji === 'negative' ? 1 : 0),
       avg_response_ms:    Math.round(((currentAffinity.avg_response_ms ?? time_spent_ms) + time_spent_ms) / 2),
       correct_streak_best: Math.max(currentAffinity.correct_streak_best ?? 0, updatedEngagement.correctStreak),
       last_updated:       new Date().toISOString(),
@@ -212,8 +210,6 @@ export async function POST(request: NextRequest) {
       sessions_in_domain:  1,
       correct_streak_best: updatedEngagement.correctStreak,
       avg_response_ms:     time_spent_ms,
-      emoji_positive:      emoji === 'positive' ? 1 : 0,
-      emoji_negative:      emoji === 'negative' ? 1 : 0,
     })
   }
 

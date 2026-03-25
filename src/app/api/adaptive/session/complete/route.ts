@@ -430,7 +430,7 @@ export async function POST(request: NextRequest) {
     if (scoreAdj !== undefined && scoreAdj !== 0) {
       const { data: existing } = await supabase
         .from('topic_affinity')
-        .select('affinity_score, emoji_positive, emoji_negative, correct_streak_best, sessions_in_domain')
+        .select('affinity_score, correct_streak_best, sessions_in_domain')
         .eq('child_id', childId)
         .eq('domain', domain)
         .maybeSingle()
@@ -443,8 +443,6 @@ export async function POST(request: NextRequest) {
         child_id: childId,
         domain,
         affinity_score: newScore,
-        emoji_positive: (existing?.emoji_positive ?? 0) + (delta.emoji_positive ?? 0),
-        emoji_negative: (existing?.emoji_negative ?? 0) + (delta.emoji_negative ?? 0),
         correct_streak_best: Math.max(existing?.correct_streak_best ?? 0, delta.correct_streak_best ?? 0),
         sessions_in_domain: sessionsInDomain + 1,
         last_updated: new Date().toISOString(),

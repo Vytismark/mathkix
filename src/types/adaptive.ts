@@ -92,8 +92,6 @@ export interface TopicAffinity {
   sessions_in_domain:  number
   correct_streak_best: number
   avg_response_ms:     number | null
-  emoji_positive:      number
-  emoji_negative:      number
   last_updated:        string
 }
 

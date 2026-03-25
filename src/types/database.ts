@@ -139,9 +139,9 @@ export type Database = {
         Relationships: [{ foreignKeyName: 'behavioral_events_child_id_fkey'; columns: ['child_id']; isOneToOne: false; referencedRelation: 'children'; referencedColumns: ['id'] }]
       }
       topic_affinity: {
-        Row: { id: string; child_id: string; domain: string; affinity_score: number; sessions_in_domain: number; correct_streak_best: number; avg_response_ms: number | null; emoji_positive: number; emoji_negative: number; last_updated: string }
-        Insert: { id?: string; child_id: string; domain: string; affinity_score?: number; sessions_in_domain?: number; correct_streak_best?: number; avg_response_ms?: number | null; emoji_positive?: number; emoji_negative?: number }
-        Update: { affinity_score?: number; sessions_in_domain?: number; correct_streak_best?: number; avg_response_ms?: number | null; emoji_positive?: number; emoji_negative?: number; last_updated?: string }
+        Row: { id: string; child_id: string; domain: string; affinity_score: number; sessions_in_domain: number; correct_streak_best: number; avg_response_ms: number | null; last_updated: string }
+        Insert: { id?: string; child_id: string; domain: string; affinity_score?: number; sessions_in_domain?: number; correct_streak_best?: number; avg_response_ms?: number | null }
+        Update: { affinity_score?: number; sessions_in_domain?: number; correct_streak_best?: number; avg_response_ms?: number | null; last_updated?: string }
         Relationships: [{ foreignKeyName: 'topic_affinity_child_id_fkey'; columns: ['child_id']; isOneToOne: false; referencedRelation: 'children'; referencedColumns: ['id'] }]
       }
       spaced_repetition_items: {
