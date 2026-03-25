@@ -151,19 +151,31 @@ export function ParentShell({ children }: { children: React.ReactNode }) {
         <div
           className={`fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8
             ${gateExiting ? 'animate-pin-gate-exit' : 'animate-fade-in'}`}
-          style={{ background: '#07080f' }}
+          style={{
+            background: '#07080f',
+            backgroundImage: 'radial-gradient(circle at 20% 80%, rgba(54,120,255,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(54,120,255,0.03) 0%, transparent 50%)',
+          }}
         >
-          {/* Ambient glow */}
+          {/* Ambient glows */}
           <div
-            className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px]"
-            style={{ background: 'radial-gradient(ellipse at center, rgba(54,120,255,0.1) 0%, transparent 65%)' }}
+            className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px]"
+            style={{ background: 'radial-gradient(ellipse at center, rgba(54,120,255,0.12) 0%, transparent 65%)' }}
           />
+          <div
+            className="pointer-events-none absolute bottom-[15%] right-[20%] w-[300px] h-[300px] animate-float-orb-delayed"
+            style={{ background: 'radial-gradient(circle, rgba(255,171,2,0.04) 0%, transparent 60%)' }}
+          />
+          <div
+            className="pointer-events-none absolute top-[10%] right-[15%] w-[200px] h-[200px] animate-float-orb"
+            style={{ background: 'radial-gradient(circle, rgba(54,120,255,0.06) 0%, transparent 60%)' }}
+          />
+
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/mathkix-logo.svg" alt="MathKix" className="h-8 w-auto opacity-90 relative z-10" />
+          <img src="/mathkix-logo.svg" alt="MathKix" className="h-9 md:h-10 w-auto opacity-90 relative z-10" />
           {pinStatus === 'checking' ? (
             <div className="text-slate-500 text-sm animate-pulse relative z-10">Loading…</div>
           ) : (
-            <div className="relative z-10">
+            <div className="relative z-10 md:bg-white/[0.04] md:border md:border-white/[0.08] md:rounded-3xl md:px-10 md:py-10 md:backdrop-blur-xl md:shadow-[0_8px_32px_rgba(0,0,0,0.4)] animate-glass-fade-in">
               <PinPad
                 mode="verify"
                 title="Welcome back"

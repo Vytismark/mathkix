@@ -124,14 +124,37 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
     <div className="flex flex-col items-center gap-6">
       {/* ── Skill rings hub ──────────────── */}
       <div className="relative w-full max-w-[300px] sm:max-w-[340px] mx-auto" style={{ aspectRatio: '1' }}>
-        {/* Center: CTA button + overall mastery */}
+        {/* Dashed connector lines from center to each ring */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+          {uniqueDomains.map((domain, i) => {
+            const pos = positions[i]
+            return (
+              <line
+                key={`line-${domain}`}
+                x1="50%"
+                y1="50%"
+                x2={`${pos.x}%`}
+                y2={`${pos.y}%`}
+                stroke="rgba(54,120,255,0.08)"
+                strokeWidth="1.5"
+                strokeDasharray="4 4"
+              />
+            )
+          })}
+        </svg>
+
+        {/* Center: overall mastery */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="flex flex-col items-center gap-2 w-36">
-            {/* Overall ring */}
+            {/* Overall ring with blue backdrop */}
             <div className="relative w-20 h-20 flex items-center justify-center">
+              <div
+                className="absolute inset-0 rounded-full opacity-[0.06]"
+                style={{ background: '#3678FF', transform: 'scale(1.2)' }}
+              />
               <SkillRingSVG pct={overallPct} color="#3678FF" colorLight="#dbeafe" size={80} />
               <div className="flex flex-col items-center">
-                <span className="text-xl font-extrabold text-slate-800 leading-none">{overallPct}%</span>
+                <span className="text-2xl font-extrabold text-slate-800 leading-none">{overallPct}%</span>
                 <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none mt-0.5">Overall</span>
               </div>
             </div>
@@ -152,6 +175,7 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
               style={{
                 left: `${pos.x}%`,
                 top: `${pos.y}%`,
+                zIndex: 5,
               }}
             >
               {/* Ring node */}
@@ -165,6 +189,12 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
                   ['--ring-color' as string]: isMastered ? 'rgba(245,158,11,0.5)' : `${style.color}40`,
                 }}
               >
+                {/* Colored halo behind ring */}
+                <div
+                  className="absolute inset-0 rounded-full opacity-[0.06]"
+                  style={{ background: style.color, transform: 'scale(1.15)' }}
+                />
+
                 <SkillRingSVG
                   pct={mastery}
                   color={isMastered ? '#f59e0b' : style.color}
@@ -172,9 +202,11 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
                   size={ringSize}
                 />
                 {/* Inner icon */}
-                <div className={`w-14 h-14 rounded-full flex items-center justify-center shadow-sm ${
-                  isMastered ? 'bg-gradient-to-br from-amber-50 to-white' : 'bg-white'
-                }`}>
+                <div className={`w-14 h-14 rounded-full flex items-center justify-center border border-slate-100 ${
+                  isMastered ? 'bg-gradient-to-b from-amber-50 to-white' : 'bg-gradient-to-b from-white to-slate-50'
+                }`}
+                  style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
+                >
                   <span className="text-2xl leading-none select-none">
                     {isMastered ? '👑' : style.icon}
                   </span>
@@ -182,7 +214,7 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
 
                 {/* Mastery badge */}
                 <div
-                  className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 text-[9px] font-extrabold text-white px-2 py-0.5 rounded-full shadow-sm"
+                  className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 text-[10px] font-extrabold text-white px-2 py-0.5 rounded-full shadow-md border border-white"
                   style={{ backgroundColor: isMastered ? '#f59e0b' : style.color }}
                 >
                   {mastery}%
@@ -207,7 +239,7 @@ export function SkillRings({ childId, domainMastery, domains }: SkillRingsProps)
       </div>
 
       {/* ── CTA button ───────────────────── */}
-      <div className="w-full max-w-sm">
+      <div className="w-full max-w-sm mt-2">
         <StartPracticeButton childId={childId} />
       </div>
     </div>

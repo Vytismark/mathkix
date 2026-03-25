@@ -93,9 +93,25 @@ export default async function PlayHomePage({
   ].filter((s) => s.show)
 
   return (
-    <div className="min-h-screen" style={{ background: '#F8FAFF' }}>
+    <div className="min-h-screen relative overflow-hidden" style={{
+      background: 'linear-gradient(170deg, #F0F4FF 0%, #F8FAFF 30%, #FFF9F0 70%, #F8FAFF 100%)',
+    }}>
+      {/* Decorative background shapes */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full opacity-30"
+          style={{ background: 'radial-gradient(circle, rgba(54,120,255,0.15), transparent 70%)' }} />
+        <div className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full opacity-25"
+          style={{ background: 'radial-gradient(circle, rgba(255,171,2,0.12), transparent 70%)' }} />
+        <div className="absolute top-1/3 right-4 w-16 h-16 rounded-2xl rotate-12 opacity-10"
+          style={{ background: '#3678FF' }} />
+        <div className="absolute bottom-1/4 left-8 w-12 h-12 rounded-xl -rotate-6 opacity-[0.07]"
+          style={{ background: '#FFAB02' }} />
+      </div>
+
       {/* ── Sticky HUD bar ───────────────────────── */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur shadow-md border-b-2 border-blue-200/80 px-4 py-3">
+      <div className="sticky top-0 z-10 backdrop-blur shadow-sm border-b border-blue-100/60 px-4 py-3" style={{
+        background: 'linear-gradient(to bottom, rgba(255,255,255,0.97), rgba(255,255,255,0.95))',
+      }}>
         <div className="max-w-2xl mx-auto flex items-center gap-3">
           <Link
             href="/select"
@@ -131,17 +147,18 @@ export default async function PlayHomePage({
 
         {/* ── Stats cards ──────────────────────────── */}
         <div className="mt-4 animate-fade-in-up" style={{ animationDelay: '80ms' }}>
-          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory justify-center scrollbar-hide">
+          <div className="stat-card-grid flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory justify-center scrollbar-hide">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className={`snap-center shrink-0 w-24 sm:w-28 min-h-[76px] sm:min-h-[80px] rounded-2xl shadow-lg border-2 border-white/20 bg-gradient-to-br ${stat.gradient} flex flex-col items-center justify-center gap-1 p-2.5 sm:p-3 ${
+                className={`snap-center shrink-0 w-28 sm:w-32 min-h-[88px] sm:min-h-[96px] rounded-3xl border border-white/30 bg-gradient-to-br ${stat.gradient} flex flex-col items-center justify-center gap-1.5 p-3 sm:p-4 transition-transform duration-200 hover:-translate-y-0.5 ${
                   stat.pulse ? 'animate-pulse' : ''
                 }`}
+                style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)' }}
               >
-                <span className="text-2xl leading-none">{stat.emoji}</span>
-                <span className="text-xl font-extrabold text-white leading-none">{stat.value}</span>
-                <span className="text-[10px] font-bold text-white/80 uppercase tracking-wide leading-none">{stat.label}</span>
+                <span className="text-3xl leading-none">{stat.emoji}</span>
+                <span className="text-2xl font-extrabold text-white leading-none">{stat.value}</span>
+                <span className="text-[11px] font-bold text-white/80 uppercase tracking-wide leading-none">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -151,11 +168,11 @@ export default async function PlayHomePage({
         {enrichedLessons.length > 0 && (
           <div className="mt-6 animate-fade-in-up" style={{ animationDelay: '160ms' }}>
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex-1 h-px bg-slate-200" />
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest px-2">
+              <div className="flex-1 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(54,120,255,0.2), transparent)' }} />
+              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest px-2">
                 Your Skills
               </span>
-              <div className="flex-1 h-px bg-slate-200" />
+              <div className="flex-1 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(54,120,255,0.2), transparent)' }} />
             </div>
             <SkillRings
               childId={childId}

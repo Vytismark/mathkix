@@ -190,31 +190,50 @@ export function GreetingBanner({
   )
 
   return (
-    <div className="rounded-3xl bg-white/70 backdrop-blur-sm border-2 border-white/50 p-4 flex items-center gap-4 shadow-sm">
-      {/* Mascot */}
-      <div className="shrink-0">
-        <MascotCharacter mood={mood} size="lg" />
-      </div>
+    <div
+      className="rounded-3xl overflow-hidden relative"
+      style={{
+        background: 'linear-gradient(135deg, #EEF2FF 0%, #E8F0FE 40%, #FFF7ED 100%)',
+        border: '1px solid rgba(54,120,255,0.1)',
+        boxShadow: '0 4px 16px rgba(54,120,255,0.06), 0 1px 3px rgba(0,0,0,0.04)',
+      }}
+    >
+      {/* Decorative corner accent */}
+      <div
+        className="absolute top-0 right-0 w-32 h-32 pointer-events-none opacity-40"
+        style={{ background: 'radial-gradient(circle at top right, rgba(54,120,255,0.15), transparent 70%)' }}
+      />
 
-      {/* Text */}
-      <div className="flex-1 min-w-0">
-        <h2 className="text-lg font-extrabold text-slate-800 leading-tight">{greeting?.main ?? `Hey, ${childName}!`}</h2>
-        <p className="text-sm text-slate-500 mt-0.5">{greeting?.sub ?? "Let's do some math!"}</p>
+      <div className="p-5 sm:p-6 flex items-center gap-4 relative z-10">
+        {/* Mascot with colored backdrop */}
+        <div className="shrink-0 relative">
+          <div
+            className="absolute inset-0 rounded-full opacity-15"
+            style={{ background: 'radial-gradient(circle, #3678FF, transparent)', transform: 'scale(1.3)' }}
+          />
+          <MascotCharacter mood={mood} size="lg" />
+        </div>
 
-        {/* Streak badge */}
-        {streakLine && (
-          <p className="text-xs font-bold text-orange-500 mt-1.5">{streakLine}</p>
-        )}
+        {/* Text */}
+        <div className="flex-1 min-w-0">
+          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-800 leading-tight">{greeting?.main ?? `Hey, ${childName}!`}</h2>
+          <p className="text-sm sm:text-base text-slate-600 mt-0.5">{greeting?.sub ?? "Let's do some math!"}</p>
 
-        {/* SR review nudge */}
-        {srDueCount > 0 && (
-          <a
-            href={`/play/home?child=${childId}&mode=review`}
-            className="inline-flex items-center gap-1.5 mt-2 text-xs font-bold text-[#3678FF] bg-blue-100 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-blue-200 transition-colors animate-pulse"
-          >
-            🧠 {srDueCount} review{srDueCount > 1 ? 's' : ''} waiting!
-          </a>
-        )}
+          {/* Streak badge */}
+          {streakLine && (
+            <p className="inline-block text-xs font-bold text-orange-500 mt-2 bg-orange-50 px-2.5 py-1 rounded-full border border-orange-100">{streakLine}</p>
+          )}
+
+          {/* SR review nudge */}
+          {srDueCount > 0 && (
+            <a
+              href={`/play/home?child=${childId}&mode=review`}
+              className="inline-flex items-center gap-1.5 mt-2 ml-1 text-xs font-bold text-[#3678FF] bg-blue-100 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-blue-200 transition-colors shadow-sm"
+            >
+              🧠 {srDueCount} review{srDueCount > 1 ? 's' : ''} waiting!
+            </a>
+          )}
+        </div>
       </div>
     </div>
   )

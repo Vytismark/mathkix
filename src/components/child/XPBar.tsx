@@ -29,13 +29,19 @@ export function XPBar({ xpTotal, gradeLevel, childName, streakDays = 0 }: XPBarP
       {/* Avatar with level badge */}
       <div className="relative shrink-0">
         <div
-          className="w-11 h-11 rounded-full flex items-center justify-center text-white text-base font-extrabold shadow-md select-none ring-[3px] ring-white"
-          style={{ background: `linear-gradient(135deg, ${gradeColor}, ${gradeColor}cc)` }}
+          className="w-12 h-12 rounded-full flex items-center justify-center text-white text-base font-extrabold shadow-md select-none"
+          style={{
+            background: `linear-gradient(135deg, ${gradeColor}, ${gradeColor}cc)`,
+            boxShadow: `0 0 0 3px white, 0 2px 8px rgba(0,0,0,0.1)`,
+          }}
         >
           {initial}
         </div>
         {/* Level badge */}
-        <div className="absolute -bottom-1 -right-1 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded-full ring-2 ring-white shadow-sm leading-none" style={{ backgroundColor: '#3678FF' }}>
+        <div
+          className="absolute -bottom-1 -right-1 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full ring-2 ring-white shadow-sm leading-none"
+          style={{ backgroundColor: '#3678FF' }}
+        >
           {level}
         </div>
       </div>
@@ -48,13 +54,13 @@ export function XPBar({ xpTotal, gradeLevel, childName, streakDays = 0 }: XPBarP
             ⭐ {xpTotal.toLocaleString()}
           </span>
         </div>
-        <div className="relative h-4 bg-slate-200/80 rounded-full overflow-hidden shadow-inner">
+        <div className="relative h-5 bg-slate-100 rounded-full overflow-hidden shadow-inner border border-slate-200/50">
           <div
-            className="h-full bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 rounded-full transition-all duration-700 flex items-center justify-end"
+            className="xp-bar-fill h-full bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 rounded-full transition-all duration-700 flex items-center justify-end"
             style={{ width: `${Math.max(pct, 8)}%` }}
           >
             {pct >= 20 && (
-              <span className="text-[9px] font-extrabold text-white/90 pr-1.5 drop-shadow-sm leading-none">
+              <span className="text-[10px] font-extrabold text-white/90 pr-1.5 drop-shadow-sm leading-none relative z-10">
                 {xpInLevel}/{XP_PER_LEVEL}
               </span>
             )}
@@ -73,8 +79,8 @@ export function XPBar({ xpTotal, gradeLevel, childName, streakDays = 0 }: XPBarP
       {/* Grade badge */}
       {gradeLevel !== null && (
         <div
-          className="shrink-0 text-sm font-extrabold text-white px-3 py-1.5 rounded-xl shadow-md tracking-wide"
-          style={{ backgroundColor: gradeColor }}
+          className="shrink-0 text-sm font-extrabold text-white px-3 py-1.5 rounded-xl border-2 border-white tracking-wide"
+          style={{ backgroundColor: gradeColor, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}
         >
           {`G${gradeLevel}`}
         </div>
