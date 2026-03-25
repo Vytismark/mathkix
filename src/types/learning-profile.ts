@@ -27,6 +27,9 @@ export interface ProfileDimension<T> {
   confidence: number       // 0-1, how sure we are
   dataPoints: number        // sessions that contributed to this inference
   lastUpdated: string       // ISO timestamp
+  trend?: 'improving' | 'stable' | 'declining'  // cross-session trend
+  /** Recent raw values for rolling analysis (last 10 observations) */
+  recentValues?: string[]   // JSON-serialized for generic storage
 }
 
 // ── Confidence thresholds ────────────────────────────────────
@@ -36,6 +39,46 @@ export const CONFIDENCE_THRESHOLD = 0.3
 
 /** Expected sessions to reach full confidence */
 export const SESSIONS_TO_FULL_CONFIDENCE = 20
+
+/** Minimum sessions before changing an established dimension value */
+export const MIN_SESSIONS_TO_CHANGE = 3
+
+// ── Session signal snapshot (stored in history) ──────────────
+
+export interface SessionSignalSnapshot {
+  timestamp: string
+  /** Core metrics */
+  accuracy: number                // 0-1
+  avgResponseMs: number
+  questionCount: number
+  /** Error patterns */
+  errorStreak: number
+  bareNumberAccuracy: number | null
+  wordProblemAccuracy: number | null
+  proceduralAccuracy: number | null
+  conceptualAccuracy: number | null
+  multiStepAccuracy: number | null
+  /** Timing patterns */
+  postErrorPauseMs: number | null
+  postCorrectPauseMs: number | null
+  firstHalfAccuracy: number
+  secondHalfAccuracy: number
+  speedDecayRatio: number
+  /** Engagement */
+  hintRate: number
+  aiTeacherUsageRate: number
+  instructionSkipRate: number
+  instructionCompletionRate: number
+  /** Modality */
+  modalityUsed: string | null
+  postInstructionAccuracy: number | null
+  /** Domains */
+  domainsPracticed: string[]
+  wasInterleaved: boolean
+}
+
+/** Max snapshots to keep in history */
+export const MAX_SIGNAL_HISTORY = 20
 
 // ── Dimension value types ────────────────────────────────────
 
@@ -109,6 +152,9 @@ export interface ChildLearningProfile {
   discoveryVsDirectInstruction: ProfileDimension<InstructionStyle>
   workedExampleFadingStage: ProfileDimension<ExampleFadingStage>
   problemFirstVsLessonFirst: ProfileDimension<LessonOrdering>
+
+  // ── Signal history for rolling analysis ───────────
+  signalHistory: SessionSignalSnapshot[]
 }
 
 // ── Default factory ──────────────────────────────────────────
@@ -152,39 +198,103 @@ export function createDefaultProfile(): ChildLearningProfile {
     discoveryVsDirectInstruction: dim<InstructionStyle>('balanced'),
     workedExampleFadingStage: dim<ExampleFadingStage>('full_examples'),
     problemFirstVsLessonFirst: dim<LessonOrdering>('lesson_first'),
+
+    signalHistory: [],
   }
 }
 
 // ── Dimension update helpers ─────────────────────────────────
 
 /**
- * Update a dimension with a new observation.
- * Uses exponential moving average weighted by session count.
- * Only changes the value if the new observation is consistent
- * (prevents flapping between values on every session).
+ * Update a dimension with a new observation using rolling window analysis.
+ *
+ * Value change rules (prevents flapping):
+ *   - First 2 sessions: adopt readily
+ *   - Sessions 3+: require MIN_SESSIONS_TO_CHANGE consecutive consistent
+ *     signals OR signal strength >= 0.8 to change an established value
+ *   - Same value as current: reinforces confidence
+ *
+ * Confidence uses diminishing returns: each session adds less confidence
+ * than the previous one, modeling real-world certainty accumulation.
+ *
+ * Trend detection: looks at recent values to determine if dimension
+ * is improving, stable, or declining.
  */
 export function updateDimension<T>(
   current: ProfileDimension<T>,
   newValue: T,
-  signalStrength: number = 1, // 0-1, how strong this session's signal is
+  signalStrength: number = 1,
 ): ProfileDimension<T> {
   const newDataPoints = current.dataPoints + 1
-  const confidenceGain = signalStrength / SESSIONS_TO_FULL_CONFIDENCE
-  const newConfidence = Math.min(1, current.confidence + confidenceGain)
 
-  // For the first few sessions, adopt the new value readily.
-  // After that, require consistent signals to change.
-  const shouldUpdate =
-    current.dataPoints < 3 ||              // early: always update
-    newValue === current.value ||           // same value: reinforce
-    signalStrength >= 0.7                   // strong signal: override
+  // Diminishing returns on confidence: first sessions add more
+  // Formula: each session adds less (1/n scaling), capped at 1.0
+  const diminishingGain = signalStrength / Math.max(SESSIONS_TO_FULL_CONFIDENCE, newDataPoints * 0.5)
+  const newConfidence = Math.min(1, current.confidence + diminishingGain)
+
+  // Track recent values (last 10 observations)
+  const recentValues = [...(current.recentValues ?? [])]
+  recentValues.push(JSON.stringify(newValue))
+  if (recentValues.length > 10) recentValues.shift()
+
+  // Determine if value should change
+  let shouldUpdate: boolean
+  if (newDataPoints <= 2) {
+    // Early sessions: adopt readily
+    shouldUpdate = true
+  } else if (newValue === current.value) {
+    // Same value: reinforce (always "update" to bump confidence)
+    shouldUpdate = true
+  } else if (signalStrength >= 0.8) {
+    // Very strong signal: override
+    shouldUpdate = true
+  } else {
+    // Require consistency: the new value must have appeared in
+    // MIN_SESSIONS_TO_CHANGE of the last 5 observations
+    const recentWindow = recentValues.slice(-5)
+    const newValueStr = JSON.stringify(newValue)
+    const consistentCount = recentWindow.filter(v => v === newValueStr).length
+    shouldUpdate = consistentCount >= MIN_SESSIONS_TO_CHANGE
+  }
+
+  // Detect trend from recent values
+  const trend = detectTrend(recentValues)
 
   return {
     value: shouldUpdate ? newValue : current.value,
     confidence: newConfidence,
     dataPoints: newDataPoints,
     lastUpdated: new Date().toISOString(),
+    trend,
+    recentValues,
   }
+}
+
+/**
+ * Detect trend from recent string-encoded values.
+ * For ordinal dimensions, detects movement toward "better" or "worse".
+ */
+function detectTrend(recentValues: string[]): 'improving' | 'stable' | 'declining' | undefined {
+  if (recentValues.length < 4) return undefined
+
+  // Check if the last 3 values are all the same (stable)
+  const last3 = recentValues.slice(-3)
+  if (last3.every(v => v === last3[0])) return 'stable'
+
+  // Check if value is changing by comparing first half to second half
+  const mid = Math.floor(recentValues.length / 2)
+  const firstHalf = recentValues.slice(0, mid)
+  const secondHalf = recentValues.slice(mid)
+
+  // Count unique values in each half
+  const firstUnique = new Set(firstHalf).size
+  const secondUnique = new Set(secondHalf).size
+
+  // If second half is more consistent (fewer unique values), dimension is stabilizing
+  if (secondUnique < firstUnique) return 'stable'
+
+  // Otherwise we can't determine trend from categorical values alone
+  return undefined
 }
 
 /**
