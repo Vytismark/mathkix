@@ -78,6 +78,7 @@ interface AiTeacherPanelProps {
   progressSummary?: string   // e.g. "3 of 8 correct so far"
   wrongAnswerTrigger?: number // increment to trigger wrong-answer explanation
   prefetchedGreeting?: string // pre-fetched greeting text - display instantly, skip API call
+  onChildMessage?:  () => void // called each time the child sends a message (for engagement tracking)
   className?:       string
 }
 
@@ -93,6 +94,7 @@ export function AiTeacherPanel({
   progressSummary,
   wrongAnswerTrigger = 0,
   prefetchedGreeting,
+  onChildMessage,
   className = '',
 }: AiTeacherPanelProps) {
   const mode = getTeacherMode(gradeLevel)
@@ -146,6 +148,7 @@ export function AiTeacherPanel({
     // Increment struggle count for non-automatic child messages
     if (!isAutomatic && userText) {
       setStruggleCount((prev) => prev + 1)
+      onChildMessage?.()
     }
 
     if (userMsg) {

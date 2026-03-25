@@ -82,6 +82,17 @@ export default function SessionPage() {
   const [segAnswers, setSegAnswers]         = useState<Record<string, string>>({}) // "segIdx:qId" → answer
   const [transitionType, setTransitionType] = useState<'to_practice' | 'to_review' | 'to_instruction' | null>(null)
 
+  // ── Engagement signal counters (sent to profiler) ─────────
+  const engagementCounters = useRef({
+    hintRequestCount: 0,      // AI teacher messages from child
+    emojiPositive: 0,
+    emojiNegative: 0,
+    instructionSkipCount: 0,  // times "Got it! Skip" was pressed
+    instructionStepsViewed: 0,
+    instructionStepsTotal: 0,
+    aiTeacherMessages: 0,     // total child messages to AI
+  })
+
   // ── Greeting pre-fetch cache ──────────────────────────────
   const greetingCache = useRef<Map<number, string>>(new Map())
 
@@ -232,12 +243,27 @@ export default function SessionPage() {
 
   // ── Segmented: handle instruction complete ────────────────
   const handleInstructionComplete = useCallback(() => {
+    // Track that all steps were viewed
+    const seg = segments[segmentIndex]
+    if (seg?.type === 'instruction') {
+      engagementCounters.current.instructionStepsViewed += seg.content.introduction.length
+      engagementCounters.current.instructionStepsTotal += seg.content.introduction.length
+    }
     advanceSegmented()
-  }, [advanceSegmented])
+  }, [advanceSegmented, segments, segmentIndex])
 
   const handleInstructionSkip = useCallback(() => {
+    // Track the skip and partial step viewing
+    engagementCounters.current.instructionSkipCount++
+    const seg = segments[segmentIndex]
+    if (seg?.type === 'instruction') {
+      engagementCounters.current.instructionStepsTotal += seg.content.introduction.length
+      // Steps viewed so far are approximated — InstructionCard tracks stepIndex internally
+      // We count this as partial viewing (at least 1 step was seen before skip)
+      engagementCounters.current.instructionStepsViewed += 1
+    }
     advanceSegmented()
-  }, [advanceSegmented])
+  }, [advanceSegmented, segments, segmentIndex])
 
   // ── Segmented: submit answer for practice/review question ─
   const submitSegmentedAnswer = useCallback(async () => {
@@ -302,6 +328,7 @@ export default function SessionPage() {
           questions: allQuestions, timeSpentSec,
           segments, // send segments for modality tracking
           timings,  // per-question timestamps for profiler
+          engagement: engagementCounters.current,
         }),
       })
       const data = await res.json()
@@ -376,7 +403,7 @@ export default function SessionPage() {
         const res = await fetch('/api/adaptive/session/complete', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ sessionId, childId, answers: allAnswers, questions, timeSpentSec, timings }),
+          body: JSON.stringify({ sessionId, childId, answers: allAnswers, questions, timeSpentSec, timings, engagement: engagementCounters.current }),
         })
         const data = await res.json()
 
@@ -681,6 +708,10 @@ export default function SessionPage() {
             progressSummary={`${correctCount} of ${totalProgress.total} correct so far`}
             wrongAnswerTrigger={wrongAnswerTrigger}
             prefetchedGreeting={isSegmentedMode ? undefined : greetingCache.current.get(questionIndex)}
+            onChildMessage={() => {
+              engagementCounters.current.aiTeacherMessages++
+              engagementCounters.current.hintRequestCount++
+            }}
             className="h-[300px] sm:h-[420px] md:h-[calc(100vh-100px)] md:max-h-[560px]"
           />
         </div>

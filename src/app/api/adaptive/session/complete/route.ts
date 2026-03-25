@@ -68,6 +68,7 @@ export async function POST(request: NextRequest) {
     timeSpentSec,
     segments,      // SessionSegment[] | undefined - sent for segmented sessions
     timings,       // Record<number|string, { startMs, endMs }> | undefined - per-question timestamps
+    engagement,    // { hintRequestCount, emojiPositive, emojiNegative, instructionSkipCount, instructionStepsViewed, instructionStepsTotal, aiTeacherMessages } | undefined
   } = await request.json()
 
   if (!sessionId || !childId || !answers || !questions) {
@@ -569,19 +570,20 @@ export async function POST(request: NextRequest) {
       }
     })
 
+    const eng = (engagement ?? {}) as Record<string, number>
     const sessionCtx: SessionContext = {
       childId,
       sessionId,
       gradeLevel: child.school_grade ?? 3,
       totalTimeMs: (timeSpentSec ?? 0) * 1000,
       isSegmented: sessionSegments.length > 0,
-      hintRequestCount: 0,  // TODO: pass from client
-      emojiPositive: 0,
-      emojiNegative: 0,
-      instructionSkipCount: 0,
-      instructionStepsViewed: 0,
-      instructionStepsTotal: 0,
-      aiTeacherMessages: 0,
+      hintRequestCount: eng.hintRequestCount ?? 0,
+      emojiPositive: eng.emojiPositive ?? 0,
+      emojiNegative: eng.emojiNegative ?? 0,
+      instructionSkipCount: eng.instructionSkipCount ?? 0,
+      instructionStepsViewed: eng.instructionStepsViewed ?? 0,
+      instructionStepsTotal: eng.instructionStepsTotal ?? 0,
+      aiTeacherMessages: eng.aiTeacherMessages ?? 0,
     }
 
     const hasRealTimings = Object.keys(timingMap).length > 0
@@ -594,6 +596,13 @@ export async function POST(request: NextRequest) {
         ? Math.round(answerRecords.filter(a => a.correct).length / answerRecords.length * 100)
         : 0,
       modalityUsed: modalityUsedInSession,
+      engagement: {
+        hints: sessionCtx.hintRequestCount,
+        emoji: `+${sessionCtx.emojiPositive}/-${sessionCtx.emojiNegative}`,
+        instructionSkips: sessionCtx.instructionSkipCount,
+        stepsViewed: `${sessionCtx.instructionStepsViewed}/${sessionCtx.instructionStepsTotal}`,
+        aiMessages: sessionCtx.aiTeacherMessages,
+      },
     }})
 
     const allSignals = extractAllSignals(answerRecords, sessionCtx, modalityUsedInSession, instructionStandards)
