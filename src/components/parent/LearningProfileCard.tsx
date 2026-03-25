@@ -158,20 +158,22 @@ export function LearningProfileCard({ childId }: LearningProfileCardProps) {
   }, [childId])
 
   if (loading) return <div className="text-sm text-slate-400 py-4">Loading learning profile...</div>
-  if (!profile || !profile.cognitiveStage) return null
 
   // Count dimensions with enough confidence to show
-  const visibleDimensions = Object.entries(DIMENSION_MAP).filter(([key]) => {
+  const visibleDimensions = profile ? Object.entries(DIMENSION_MAP).filter(([key]) => {
     const dim = profile[key] as ProfileDimension | undefined
     return dim && dim.confidence >= 0.15 && dim.dataPoints >= 1
-  })
+  }) : []
 
-  if (visibleDimensions.length === 0) {
+  if (!profile || !profile.cognitiveStage || visibleDimensions.length === 0) {
     return (
-      <div className="bg-white rounded-2xl border border-slate-100 p-6 mt-6">
-        <h3 className="text-lg font-bold text-slate-800 mb-2">Learning Profile</h3>
-        <p className="text-sm text-slate-500">
-          We're still getting to know your child's learning style. After a few more sessions, insights will appear here.
+      <div
+        className="rounded-2xl border border-white/10 p-6"
+        style={{ background: 'rgba(255,255,255,0.05)' }}
+      >
+        <h3 className="text-lg font-bold text-white mb-2">Learning Profile</h3>
+        <p className="text-sm text-slate-400">
+          We&apos;re still getting to know your child&apos;s learning style. After a few more sessions, insights will appear here.
         </p>
       </div>
     )
@@ -187,9 +189,12 @@ export function LearningProfileCard({ childId }: LearningProfileCardProps) {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-100 p-6 mt-6">
+    <div
+      className="rounded-2xl border border-white/10 p-6"
+      style={{ background: 'rgba(255,255,255,0.05)' }}
+    >
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-bold text-slate-800">Learning Profile</h3>
+        <h3 className="text-lg font-bold text-white">Learning Profile</h3>
         <span className="text-xs text-slate-400">{profile.cognitiveStage?.dataPoints ?? 0} sessions analyzed</span>
       </div>
 
@@ -199,21 +204,21 @@ export function LearningProfileCard({ childId }: LearningProfileCardProps) {
           if (!items || items.length === 0) return null
           return (
             <div key={cat}>
-              <h4 className="text-sm font-semibold text-slate-500 mb-2">
+              <h4 className="text-sm font-semibold text-slate-400 mb-2">
                 {CATEGORY_ICONS[cat]} {cat}
               </h4>
               <div className="space-y-2">
                 {items.map(({ key, dim, display }) => {
                   const valueStr = typeof dim.value === 'string' ? dim.value : JSON.stringify(dim.value)
                   return (
-                    <div key={key} className="flex items-start gap-2 px-3 py-2 bg-slate-50 rounded-xl">
+                    <div key={key} className="flex items-start gap-2 px-3 py-2 rounded-xl" style={{ background: 'rgba(255,255,255,0.05)' }}>
                       <ConfidenceDot confidence={dim.confidence} />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-1">
-                          <span className="text-sm font-medium text-slate-700">{display.label}</span>
+                          <span className="text-sm font-medium text-slate-200">{display.label}</span>
                           <TrendArrow trend={dim.trend} />
                         </div>
-                        <p className="text-xs text-slate-500 mt-0.5">
+                        <p className="text-xs text-slate-400 mt-0.5">
                           {display.describe(valueStr)}
                         </p>
                       </div>
@@ -226,7 +231,7 @@ export function LearningProfileCard({ childId }: LearningProfileCardProps) {
         })}
       </div>
 
-      <p className="text-xs text-slate-400 mt-4">
+      <p className="text-xs text-slate-500 mt-4">
         This profile is built automatically from session behavior. It becomes more accurate with each session.
       </p>
     </div>
