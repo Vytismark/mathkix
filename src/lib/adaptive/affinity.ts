@@ -61,9 +61,6 @@ export function computeAffinityDelta(
   const answerEvents = events.filter(
     (e) => e.event_type === 'answer_correct' || e.event_type === 'answer_wrong'
   )
-  const emojiPositive = events.filter((e) => e.event_type === 'emoji_reaction' && e.metadata?.emoji === 'positive').length
-  const emojiNegative = events.filter((e) => e.event_type === 'emoji_reaction' && e.metadata?.emoji === 'negative').length
-
   // Response time delta: fast → positive, slow → negative
   let scoreAdjustment = 0
 
@@ -81,10 +78,6 @@ export function computeAffinityDelta(
       else if (ratio > 1.5) scoreAdjustment -= 5
     }
   }
-
-  // Emoji reactions: each positive +3, each negative -3
-  scoreAdjustment += emojiPositive * 3
-  scoreAdjustment -= emojiNegative * 3
 
   // Correct streak bonus: streaks are enjoyment signals
   const correctStreak = (() => {
@@ -106,8 +99,8 @@ export function computeAffinityDelta(
     : null
 
   return {
-    emoji_positive:     emojiPositive,
-    emoji_negative:     emojiNegative,
+    emoji_positive:     0,
+    emoji_negative:     0,
     correct_streak_best: correctStreak,
     avg_response_ms:    batchAvgMs,
     last_updated:       new Date().toISOString(),

@@ -37,8 +37,6 @@ export interface SessionContext {
   totalTimeMs: number
   isSegmented: boolean
   hintRequestCount: number
-  emojiPositive: number
-  emojiNegative: number
   instructionSkipCount: number    // times child hit "Got it!" to skip
   instructionStepsViewed: number  // total instruction steps viewed
   instructionStepsTotal: number   // total instruction steps available
@@ -98,8 +96,6 @@ export interface ErrorPatternSignals {
 export interface EngagementSignals {
   /** Hint requests per question */
   hintRate: number
-  /** Emoji reactions (positive - negative) */
-  emojiNet: number
   /** Did child skip instruction steps? */
   instructionSkipRate: number
   /** How many instruction steps were viewed vs available */
@@ -279,7 +275,6 @@ export function extractEngagementSignals(
 
   return {
     hintRate: ctx.hintRequestCount / questionCount,
-    emojiNet: ctx.emojiPositive - ctx.emojiNegative,
     instructionSkipRate: ctx.instructionStepsTotal > 0
       ? ctx.instructionSkipCount / ctx.instructionStepsTotal
       : 0,

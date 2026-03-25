@@ -68,8 +68,7 @@ export default function LessonPage() {
 
   // Adaptive session state
   const [engagementWindow, setEngagementWindow] = useState<EngagementWindow | null>(null)
-  const [pendingEmoji, setPendingEmoji]         = useState<'positive' | 'negative' | null>(null)
-  const [showEmojiPrompt, setShowEmojiPrompt]   = useState(false)
+  const [pendingEmoji]         = useState<'positive' | 'negative' | null>(null)  // kept for API compat, never set
   const [showEngagement, setShowEngagement]     = useState(false)
   const [pendingAction, setPendingAction]       = useState<AdaptiveAction | null>(null)
 
@@ -206,13 +205,10 @@ export default function LessonPage() {
       setCurrentInput('')
       setSelectedOption(null)
       setWasCorrect(null)
-      setPendingEmoji(null)
       setPhase('answering')
     } else {
       // Last question - submit lesson
       setPhase('submitting')
-      setShowEmojiPrompt(true)
-      setTimeout(() => setShowEmojiPrompt(false), 3500)
       const allAnswers  = { ...answers, [currentQuestion.id]: given }
       const timeSpentSec = Math.round((Date.now() - startedAt) / 1000)
       const lessonTimeMs = Date.now() - startedAt
@@ -368,28 +364,7 @@ export default function LessonPage() {
         <div className="text-5xl animate-spin">⭐</div>
         <p className="text-muted-foreground">Saving your results…</p>
 
-        {/* Emoji reaction - shown briefly so child can tap before results load */}
-        {sessionId && showEmojiPrompt && (
-          <div className="bg-white rounded-3xl shadow-md p-6 w-full max-w-xs text-center">
-            <p className="text-sm font-semibold text-slate-600 mb-4">How was that lesson?</p>
-            <div className="flex gap-6 justify-center">
-              <button
-                onClick={() => setPendingEmoji('positive')}
-                className={`text-4xl p-3 rounded-2xl transition-all ${pendingEmoji === 'positive' ? 'bg-green-100 scale-110 shadow' : 'opacity-50 hover:opacity-100'}`}
-                title="I liked it!"
-              >
-                👍
-              </button>
-              <button
-                onClick={() => setPendingEmoji('negative')}
-                className={`text-4xl p-3 rounded-2xl transition-all ${pendingEmoji === 'negative' ? 'bg-orange-100 scale-110 shadow' : 'opacity-50 hover:opacity-100'}`}
-                title="It was hard"
-              >
-                😕
-              </button>
-            </div>
-          </div>
-        )}
+        {/* Emoji reaction UI removed — engagement tracked via behavioral signals instead */}
       </div>
     )
   }

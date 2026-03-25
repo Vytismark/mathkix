@@ -85,8 +85,6 @@ export default function SessionPage() {
   // ── Engagement signal counters (sent to profiler) ─────────
   const engagementCounters = useRef({
     hintRequestCount: 0,      // AI teacher messages from child
-    emojiPositive: 0,
-    emojiNegative: 0,
     instructionSkipCount: 0,  // times "Got it! Skip" was pressed
     instructionStepsViewed: 0,
     instructionStepsTotal: 0,

@@ -70,7 +70,6 @@ export type BehavioralEventType =
   | 'topic_pivot'        // engine switched domains mid-session
   | 'session_start'
   | 'session_end'
-  | 'emoji_reaction'     // child tapped thumbs-up / thumbs-down
 
 export interface BehavioralEvent {
   child_id:      string

@@ -180,10 +180,6 @@ function inferMathAnxiety(
     else if (pauseRatio > 1.5) anxietyScore += 1
   }
 
-  // Negative emoji reactions
-  if (engagement.emojiNet < -2) anxietyScore += 2
-  else if (engagement.emojiNet < 0) anxietyScore += 1
-
   // Avoidance: high hint rate without improvement
   if (engagement.hintRate > 0.5) anxietyScore += 1
 
@@ -310,13 +306,13 @@ function inferMotivation(
 ) {
   const { engagement } = signals
 
-  // Extrinsic: high emoji reaction to XP/achievements, engagement tied to rewards
   // Intrinsic: uses AI teacher often (curious), high instruction completion
+  // Extrinsic: skips instruction, focuses on completing quickly
   let value: MotivationOrientation = 'mixed'
 
   if (engagement.aiTeacherUsageRate > 0.3 && engagement.instructionCompletionRate > 0.8) {
     value = 'intrinsic'
-  } else if (engagement.emojiNet > 2 && engagement.instructionSkipRate > 0.3) {
+  } else if (engagement.instructionSkipRate > 0.3 && engagement.aiTeacherUsageRate < 0.1) {
     value = 'extrinsic'
   }
 

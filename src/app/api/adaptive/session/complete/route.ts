@@ -578,8 +578,6 @@ export async function POST(request: NextRequest) {
       totalTimeMs: (timeSpentSec ?? 0) * 1000,
       isSegmented: sessionSegments.length > 0,
       hintRequestCount: eng.hintRequestCount ?? 0,
-      emojiPositive: eng.emojiPositive ?? 0,
-      emojiNegative: eng.emojiNegative ?? 0,
       instructionSkipCount: eng.instructionSkipCount ?? 0,
       instructionStepsViewed: eng.instructionStepsViewed ?? 0,
       instructionStepsTotal: eng.instructionStepsTotal ?? 0,
@@ -598,7 +596,6 @@ export async function POST(request: NextRequest) {
       modalityUsed: modalityUsedInSession,
       engagement: {
         hints: sessionCtx.hintRequestCount,
-        emoji: `+${sessionCtx.emojiPositive}/-${sessionCtx.emojiNegative}`,
         instructionSkips: sessionCtx.instructionSkipCount,
         stepsViewed: `${sessionCtx.instructionStepsViewed}/${sessionCtx.instructionStepsTotal}`,
         aiMessages: sessionCtx.aiTeacherMessages,
