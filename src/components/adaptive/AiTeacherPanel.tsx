@@ -79,6 +79,14 @@ interface AiTeacherPanelProps {
   wrongAnswerTrigger?: number // increment to trigger wrong-answer explanation
   prefetchedGreeting?: string // pre-fetched greeting text - display instantly, skip API call
   onChildMessage?:  () => void // called each time the child sends a message (for engagement tracking)
+  /** Profile-derived adjustments for teacher personality */
+  profileAdjustments?: {
+    anxietyLevel?: string
+    explanationDepth?: string
+    mindset?: string
+    errorStrategy?: string
+    hintStyle?: string
+  }
   className?:       string
 }
 
@@ -95,6 +103,7 @@ export function AiTeacherPanel({
   wrongAnswerTrigger = 0,
   prefetchedGreeting,
   onChildMessage,
+  profileAdjustments: profileAdj,
   className = '',
 }: AiTeacherPanelProps) {
   const mode = getTeacherMode(gradeLevel)
@@ -180,6 +189,7 @@ export function AiTeacherPanel({
           problemType,
           progressSummary: progressSummary ?? null,
           gradeLevel,
+          profileAdjustments: profileAdj ?? null,
         }),
       })
 

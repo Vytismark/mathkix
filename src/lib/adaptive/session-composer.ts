@@ -52,6 +52,8 @@ export interface ComposedSession {
   /** Whether this session uses the new segment-based format */
   isSegmented: boolean
   totalEstimatedMinutes: number
+  /** Profile-derived adjustments for client-side use (AI teacher, UI) */
+  profileAdjustments: ProfileAdjustments
 }
 
 interface ComposerInput {
@@ -180,6 +182,26 @@ export async function composeSession(
     const available = getAvailableModalities(priority.standardCode)
     if (available.length === 0) continue
 
+    // Profile-aware modality filtering
+    let filteredModalities = [...available]
+    if (profileAdjustments.preferConcreteModalities) {
+      // Concrete-stage kids: prefer visual and interactive over procedural/challenge
+      const concrete: TeachingModality[] = ['visual', 'interactive', 'story']
+      const preferred = filteredModalities.filter(m => concrete.includes(m))
+      if (preferred.length > 0) filteredModalities = preferred
+    }
+    if (profileAdjustments.exampleOrRule === 'rule_first') {
+      // Rule-first kids: boost procedural if available
+      if (filteredModalities.includes('procedural')) {
+        filteredModalities = ['procedural', ...filteredModalities.filter(m => m !== 'procedural')]
+      }
+    } else if (profileAdjustments.exampleOrRule === 'example_first') {
+      // Example-first kids: boost visual/story
+      const exampleTypes: TeachingModality[] = ['visual', 'story']
+      const preferred = filteredModalities.filter(m => exampleTypes.includes(m))
+      if (preferred.length > 0) filteredModalities = [...preferred, ...filteredModalities.filter(m => !exampleTypes.includes(m))]
+    }
+
     // Select modality
     const totalAttempts = Object.values(input.modalityScores)
       .reduce((sum, s) => sum + s.attempts, 0)
@@ -187,14 +209,15 @@ export async function composeSession(
     const modality = selectModality({
       modalityScores: input.modalityScores,
       childPreferences: input.childPreferences,
-      availableModalities: available,
+      availableModalities: filteredModalities.length > 0 ? filteredModalities : available,
       lastUsedModality: input.lastUsedModality,
       totalAttempts,
     })
 
     logDecision({ component: 'MODALITY', action: 'selected', childId: input.childId, data: {
-      standard: priority.standardCode, modality, available, totalAttempts,
+      standard: priority.standardCode, modality, available, filtered: filteredModalities, totalAttempts,
       phase: totalAttempts < 3 ? 'cold_start' : totalAttempts < 15 ? 'exploration' : 'exploitation',
+      profileInfluence: { representationPref: profileAdjustments.representationPref, exampleOrRule: profileAdjustments.exampleOrRule, preferConcrete: profileAdjustments.preferConcreteModalities },
     }})
 
     const content = getLessonContent(priority.standardCode, modality)
@@ -248,7 +271,7 @@ export async function composeSession(
 
   // ── Step 3: Order segments ────────────────────────────────
   // instruction → practice → review (end on review for retention)
-  const ordered = orderSegments(segments)
+  const ordered = orderSegments(segments, profileAdjustments)
 
   const totalMinutes = ordered.reduce((sum, seg) => {
     if (seg.type === 'instruction') return sum + (seg.content.estimatedMinutes ?? 3)
@@ -272,6 +295,7 @@ export async function composeSession(
     fallbackQuestions: null,
     isSegmented: true,
     totalEstimatedMinutes: Math.round(totalMinutes),
+    profileAdjustments,
   }
 }
 
@@ -284,7 +308,7 @@ async function composePracticeOnly(
 ): Promise<ComposedSession> {
   const pool = await buildQuestionPool(supabase, input.gradeLevel)
   if (pool.length === 0) {
-    return { segments: [], fallbackQuestions: [], isSegmented: false, totalEstimatedMinutes: 0 }
+    return { segments: [], fallbackQuestions: [], isSegmented: false, totalEstimatedMinutes: 0, profileAdjustments: deriveProfileAdjustments(input.learningProfile) }
   }
 
   const affinityMap = new Map<Domain, number>()
@@ -318,6 +342,7 @@ async function composePracticeOnly(
     fallbackQuestions: selected,
     isSegmented: false,
     totalEstimatedMinutes: Math.round(selected.length * 0.5),
+    profileAdjustments: deriveProfileAdjustments(input.learningProfile),
   }
 }
 
@@ -409,7 +434,7 @@ function candidateToPractice(q: CandidateQuestion): PracticeQuestion {
 
 // ── Helper: order segments for optimal learning ──────────────
 
-function orderSegments(segments: SessionSegment[]): SessionSegment[] {
+function orderSegments(segments: SessionSegment[], adjustments: ProfileAdjustments): SessionSegment[] {
   const instructions = segments.filter(s => s.type === 'instruction')
   const practices = segments.filter(s => s.type === 'practice')
   const reviews = segments.filter(s => s.type === 'review')
@@ -418,7 +443,6 @@ function orderSegments(segments: SessionSegment[]): SessionSegment[] {
   const paired: SessionSegment[] = []
   for (const inst of instructions) {
     paired.push(inst)
-    // Find the matching practice segment for this standard
     const matchIdx = practices.findIndex(p => p.standardCode === inst.standardCode)
     if (matchIdx >= 0) {
       paired.push(practices[matchIdx])
@@ -429,9 +453,13 @@ function orderSegments(segments: SessionSegment[]): SessionSegment[] {
   // Remaining practice segments (reinforcement)
   paired.push(...practices)
 
-  // Reviews at the end (retention)
-  paired.push(...reviews)
+  // Reviews at the end (retention) — unless frontloading for early-decay kids
+  if (adjustments.frontloadHardContent && reviews.length > 0) {
+    // Put reviews first (they're harder/older material) for kids who decay early
+    return [...reviews, ...paired]
+  }
 
+  paired.push(...reviews)
   return paired
 }
 
@@ -461,15 +489,48 @@ function buildPriorityContext(input: ComposerInput): PriorityScoringContext {
 
 // ── Profile-aware session adjustments ────────────────────────
 
-interface ProfileAdjustments {
+export interface ProfileAdjustments {
+  // ── Session composition ──────────────────────────
   /** Prefer focused single-domain or interleaved multi-domain */
   preferFocused: boolean
-  /** Reduce difficulty for anxious learners */
-  difficultyReduction: number   // 0 = none, 1 = one step easier
+  /** Reduce difficulty for anxious learners (0 = none, 1 = one step easier) */
+  difficultyReduction: number
   /** Extra practice questions for low working memory */
   extraPracticeQuestions: number
   /** Skip straight to practice if child is at "independent" fading stage */
   canSkipInstruction: boolean
+  /** Put harder content first for early-decay fatigue pattern */
+  frontloadHardContent: boolean
+  /** Reduce word problems for kids who struggle with reading comprehension */
+  reduceWordProblems: boolean
+
+  // ── Modality preferences ─────────────────────────
+  /** Preferred representation: visual, symbolic, verbal */
+  representationPref: 'visual' | 'symbolic' | 'verbal' | null
+  /** Example-first (visual/story) vs rule-first (procedural) */
+  exampleOrRule: 'example_first' | 'rule_first' | null
+  /** CRA stage for modality filtering */
+  preferConcreteModalities: boolean
+
+  // ── AI teacher personality ───────────────────────
+  /** Math anxiety level → affects teacher warmth */
+  anxietyLevel: 'high' | 'moderate' | 'low'
+  /** How detailed explanations should be */
+  explanationDepth: 'brief' | 'moderate' | 'detailed'
+  /** Growth vs fixed mindset → affects error framing */
+  mindset: 'fixed_leaning' | 'neutral' | 'growth_leaning'
+  /** How to handle errors: careless → "slow down", conceptual → re-teach */
+  errorStrategy: 'slow_down' | 'reteach' | 'simplify_language' | 'default'
+  /** Hint style: minimal nudge vs full scaffold */
+  hintStyle: 'minimal' | 'moderate' | 'full_scaffold'
+
+  // ── Content presentation ─────────────────────────
+  /** Worked example fading stage */
+  exampleFading: 'full_examples' | 'partial' | 'independent'
+  /** Processing speed label (for timeout/pacing adjustments) */
+  processingSpeed: 'slow' | 'moderate' | 'fast'
+  /** Challenge tolerance (for difficulty ramping) */
+  challengeTolerance: 'low' | 'moderate' | 'high'
 }
 
 function deriveProfileAdjustments(
@@ -480,34 +541,91 @@ function deriveProfileAdjustments(
     difficultyReduction: 0,
     extraPracticeQuestions: 0,
     canSkipInstruction: false,
+    frontloadHardContent: false,
+    reduceWordProblems: false,
+    representationPref: null,
+    exampleOrRule: null,
+    preferConcreteModalities: false,
+    anxietyLevel: 'moderate',
+    explanationDepth: 'moderate',
+    mindset: 'neutral',
+    errorStrategy: 'default',
+    hintStyle: 'moderate',
+    exampleFading: 'full_examples',
+    processingSpeed: 'moderate',
+    challengeTolerance: 'moderate',
   }
 
   if (!profile || !profile.interleavingPreference) return defaults
 
   const adj = { ...defaults }
+  const C = CONFIDENCE_THRESHOLD
 
-  // Interleaving preference
-  if (profile.interleavingPreference?.confidence >= CONFIDENCE_THRESHOLD) {
+  // ── Session composition ──────────────────────────
+  if (profile.interleavingPreference?.confidence >= C) {
     adj.preferFocused = profile.interleavingPreference.value === 'focused_blocks'
   }
-
-  // Math anxiety → reduce difficulty
-  if (profile.mathAnxietyLevel?.confidence >= CONFIDENCE_THRESHOLD && profile.mathAnxietyLevel.value === 'high') {
+  if (profile.mathAnxietyLevel?.confidence >= C && profile.mathAnxietyLevel.value === 'high') {
     adj.difficultyReduction = 1
   }
-
-  // Low working memory → more practice (smaller chunks)
-  if (profile.workingMemoryCapacity?.confidence >= CONFIDENCE_THRESHOLD && profile.workingMemoryCapacity.value === 'low') {
+  if (profile.workingMemoryCapacity?.confidence >= C && profile.workingMemoryCapacity.value === 'low') {
     adj.extraPracticeQuestions = 1
   }
-
-  // Independent learner → can skip instruction
-  if (profile.workedExampleFadingStage?.confidence >= CONFIDENCE_THRESHOLD && profile.workedExampleFadingStage.value === 'independent') {
+  if (profile.workedExampleFadingStage?.confidence >= C && profile.workedExampleFadingStage.value === 'independent') {
     adj.canSkipInstruction = true
+  }
+  if (profile.sessionFatiguePattern?.confidence >= C && profile.sessionFatiguePattern.value === 'early_decay') {
+    adj.frontloadHardContent = true
+  }
+  if (profile.wordProblemProficiency?.confidence >= C && profile.wordProblemProficiency.value === 'struggles') {
+    adj.reduceWordProblems = true
+  }
+
+  // ── Modality preferences ─────────────────────────
+  if (profile.representationPreference?.confidence >= C) {
+    adj.representationPref = profile.representationPreference.value
+  }
+  if (profile.exampleFirstVsRuleFirst?.confidence >= C) {
+    adj.exampleOrRule = profile.exampleFirstVsRuleFirst.value === 'balanced' ? null : profile.exampleFirstVsRuleFirst.value
+  }
+  if (profile.cognitiveStage?.confidence >= C && profile.cognitiveStage.value === 'concrete') {
+    adj.preferConcreteModalities = true
+  }
+
+  // ── AI teacher personality ───────────────────────
+  if (profile.mathAnxietyLevel?.confidence >= C) {
+    adj.anxietyLevel = profile.mathAnxietyLevel.value
+  }
+  if (profile.explanationDepth?.confidence >= C) {
+    adj.explanationDepth = profile.explanationDepth.value
+  }
+  if (profile.mindsetIndicator?.confidence >= C) {
+    adj.mindset = profile.mindsetIndicator.value
+  }
+  if (profile.errorTypeTendency?.confidence >= C) {
+    adj.errorStrategy =
+      profile.errorTypeTendency.value === 'careless' ? 'slow_down'
+      : profile.errorTypeTendency.value === 'conceptual' ? 'reteach'
+      : profile.errorTypeTendency.value === 'reading' ? 'simplify_language'
+      : 'default'
+  }
+  if (profile.hintResponsiveness?.confidence >= C) {
+    adj.hintStyle =
+      profile.hintResponsiveness.value === 'self_sufficient' ? 'minimal'
+      : profile.hintResponsiveness.value === 'needs_full_scaffold' ? 'full_scaffold'
+      : 'moderate'
+  }
+
+  // ── Content presentation ─────────────────────────
+  if (profile.workedExampleFadingStage?.confidence >= C) {
+    adj.exampleFading = profile.workedExampleFadingStage.value
+  }
+  if (profile.processingSpeed?.confidence >= C) {
+    adj.processingSpeed = profile.processingSpeed.value
+  }
+  if (profile.challengeTolerance?.confidence >= C) {
+    adj.challengeTolerance = profile.challengeTolerance.value
   }
 
   return adj
 }
-
-// Export for use by session/start route
-export type { ProfileAdjustments }

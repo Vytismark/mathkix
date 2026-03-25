@@ -37,7 +37,8 @@ export async function POST(request: NextRequest) {
     history, sessionId, autoGreet, wrongExplain,
     struggleCount: rawStruggle, emotionSignal: rawEmotion, problemType: rawProblem,
     progressSummary, gradeLevel: clientGradeLevel,
-  } = body
+    profileAdjustments,
+  } = body as typeof body & { profileAdjustments?: Record<string, string> }
 
   if (!childId || !message) {
     return NextResponse.json({ error: 'childId and message required' }, { status: 400 })
@@ -106,6 +107,39 @@ export async function POST(request: NextRequest) {
   // Inject progress summary as context before conversation
   if (progressSummary) {
     systemPrompt = `[PROGRESS: ${progressSummary}. Struggle count: ${struggleCount}. Emotion: ${emotionSignal}.]\n\n${systemPrompt}`
+  }
+
+  // Inject profile-based personality adjustments
+  if (profileAdjustments) {
+    const personalityRules: string[] = []
+
+    if (profileAdjustments.anxietyLevel === 'high') {
+      personalityRules.push('This child has MATH ANXIETY. Be extra warm, encouraging, and patient. Celebrate small wins. Never express surprise at mistakes. Use phrases like "That\'s a great try!" and "You\'re getting closer!"')
+    }
+    if (profileAdjustments.explanationDepth === 'brief') {
+      personalityRules.push('This child prefers BRIEF explanations. Keep responses to 1-2 short sentences. Do not over-explain.')
+    } else if (profileAdjustments.explanationDepth === 'detailed') {
+      personalityRules.push('This child benefits from DETAILED explanations. Break things down step by step. Use examples.')
+    }
+    if (profileAdjustments.mindset === 'fixed_leaning') {
+      personalityRules.push('This child shows FIXED MINDSET tendencies. Frame errors as learning: "You haven\'t got it YET" not "That\'s wrong." Emphasize effort over ability. Never say "this is easy."')
+    }
+    if (profileAdjustments.errorStrategy === 'slow_down') {
+      personalityRules.push('This child makes CARELESS errors (knows the concept but rushes). Encourage them to slow down and double-check. Say things like "Take your time" and "Let\'s check each step."')
+    } else if (profileAdjustments.errorStrategy === 'reteach') {
+      personalityRules.push('This child makes CONCEPTUAL errors (misunderstands the method). When they\'re wrong, re-explain the concept from the beginning with a simpler example.')
+    } else if (profileAdjustments.errorStrategy === 'simplify_language') {
+      personalityRules.push('This child struggles with READING COMPREHENSION in math. Use simple words. Break word problems into shorter sentences. Highlight the key numbers and operation.')
+    }
+    if (profileAdjustments.hintStyle === 'minimal') {
+      personalityRules.push('This child is SELF-SUFFICIENT. Give minimal hints — a single nudge like "What operation?" is enough. Do not over-scaffold.')
+    } else if (profileAdjustments.hintStyle === 'full_scaffold') {
+      personalityRules.push('This child needs FULL SCAFFOLDING. Walk through the problem step by step. Show the first step explicitly, then guide them through the next.')
+    }
+
+    if (personalityRules.length > 0) {
+      systemPrompt = `[CHILD PROFILE - adapt your teaching style accordingly:\n${personalityRules.join('\n')}\n]\n\n${systemPrompt}`
+    }
   }
 
   const rawUserContent = buildTeacherUserMessage(message, contextHint)

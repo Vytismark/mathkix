@@ -14,6 +14,7 @@ import { InstructionCard } from '@/components/child/InstructionCard'
 import { SegmentTransition } from '@/components/child/SegmentTransition'
 import type { MixedQuestion, EarnedAchievement } from '@/types/adaptive'
 import type { SessionSegment, PracticeQuestion } from '@/types/lesson-content'
+import type { ProfileAdjustments } from '@/lib/adaptive/session-composer'
 
 type Phase = 'loading' | 'answering' | 'feedback' | 'wrong_review' | 'submitting' | 'instruction' | 'transition'
 
@@ -91,6 +92,9 @@ export default function SessionPage() {
     aiTeacherMessages: 0,     // total child messages to AI
   })
 
+  // ── Profile adjustments (from session/start, for AI teacher + UI) ──
+  const [profileAdj, setProfileAdj] = useState<ProfileAdjustments | null>(null)
+
   // ── Greeting pre-fetch cache ──────────────────────────────
   const greetingCache = useRef<Map<number, string>>(new Map())
 
@@ -130,6 +134,12 @@ export default function SessionPage() {
   // ── Load session data ─────────────────────────────────────
   useEffect(() => {
     if (!sessionId) { router.push('/select'); return }
+
+    // Load profile adjustments
+    try {
+      const profileRaw = sessionStorage.getItem(`session_profile_${sessionId}`)
+      if (profileRaw) setProfileAdj(JSON.parse(profileRaw))
+    } catch {}
 
     if (isSegmentedMode) {
       const raw = sessionStorage.getItem(`session_segments_${sessionId}`)
@@ -710,6 +720,13 @@ export default function SessionPage() {
               engagementCounters.current.aiTeacherMessages++
               engagementCounters.current.hintRequestCount++
             }}
+            profileAdjustments={profileAdj ? {
+              anxietyLevel: profileAdj.anxietyLevel,
+              explanationDepth: profileAdj.explanationDepth,
+              mindset: profileAdj.mindset,
+              errorStrategy: profileAdj.errorStrategy,
+              hintStyle: profileAdj.hintStyle,
+            } : undefined}
             className="h-[300px] sm:h-[420px] md:h-[calc(100vh-100px)] md:max-h-[560px]"
           />
         </div>

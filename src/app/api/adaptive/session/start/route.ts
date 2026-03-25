@@ -194,6 +194,7 @@ export async function POST(request: NextRequest) {
       totalEstimatedMinutes: composed.totalEstimatedMinutes,
       srDueCount: engineState.srDueThisSession.length,
       gradeLevel: child.school_grade ?? 0,
+      profileAdjustments: composed.profileAdjustments,
       // Backward compat: also send flat questions for old clients
       questions: [],
       totalXP: 0,
@@ -245,6 +246,7 @@ export async function POST(request: NextRequest) {
     totalXP: final.reduce((s, q) => s + q.xp_per_correct, 0),
     srDueCount: engineState.srDueThisSession.length,
     gradeLevel: child.school_grade ?? 0,
+    profileAdjustments: composed.profileAdjustments,
   })
 }
 

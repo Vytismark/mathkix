@@ -22,6 +22,11 @@ export function StartPracticeButton({ childId }: StartPracticeButtonProps) {
       const data = await res.json()
       if (!data.sessionId) { setLoading(false); return }
 
+      // Store profile adjustments for AI teacher and UI personalization
+      if (data.profileAdjustments) {
+        sessionStorage.setItem(`session_profile_${data.sessionId}`, JSON.stringify(data.profileAdjustments))
+      }
+
       if (data.isSegmented && Array.isArray(data.segments) && data.segments.length > 0) {
         // New: segment-based session
         sessionStorage.setItem(`session_segments_${data.sessionId}`, JSON.stringify(data.segments))
