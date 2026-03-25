@@ -77,13 +77,14 @@ interface ComposerInput {
 
 // ── Constants ────────────────────────────────────────────────
 
-const BUDGET_MAP = { short: 5, medium: 7, long: 9 } as const
+const BUDGET_MAP = { short: 4, medium: 5, long: 7 } as const
 const INSTRUCTION_COST = 2   // units per instruction segment
-const PRACTICE_COST = 1      // units per practice segment (3 questions)
-const REVIEW_COST = 1        // units per review segment (2 questions)
+const PRACTICE_COST = 1      // units per practice segment
+const REVIEW_COST = 1        // units per review segment
 
 const PRACTICE_QUESTIONS_PER_SEGMENT = 3
 const REVIEW_QUESTIONS_PER_SEGMENT = 2
+const MAX_REINFORCEMENT_SEGMENTS = 2  // cap reinforcement to avoid bloat
 
 // ── Main composer ────────────────────────────────────────────
 
@@ -219,16 +220,18 @@ export async function composeSession(
     }
   }
 
-  // 2c. Fill remaining budget with reinforcement practice
-  if (remaining >= PRACTICE_COST) {
+  // 2c. Fill remaining budget with reinforcement practice (capped)
+  const maxReinforcement = Math.min(remaining, MAX_REINFORCEMENT_SEGMENTS)
+  if (maxReinforcement >= PRACTICE_COST) {
     const reinforcementQuestions = await buildReinforcementQuestions(
-      supabase, input, remaining * PRACTICE_QUESTIONS_PER_SEGMENT,
+      supabase, input, maxReinforcement * PRACTICE_QUESTIONS_PER_SEGMENT,
       // Exclude standards already covered by instruction segments
       new Set(instructionStandards.map(s => s.standardCode))
     )
 
     // Split into practice segments
-    for (let i = 0; i < reinforcementQuestions.length && remaining >= PRACTICE_COST; i += PRACTICE_QUESTIONS_PER_SEGMENT) {
+    let reinforcementCount = 0
+    for (let i = 0; i < reinforcementQuestions.length && remaining >= PRACTICE_COST && reinforcementCount < MAX_REINFORCEMENT_SEGMENTS; i += PRACTICE_QUESTIONS_PER_SEGMENT) {
       const batch = reinforcementQuestions.slice(i, i + PRACTICE_QUESTIONS_PER_SEGMENT)
       if (batch.length === 0) break
 
@@ -239,6 +242,7 @@ export async function composeSession(
         questions: batch.map(candidateToPractice),
       })
       remaining -= PRACTICE_COST
+      reinforcementCount++
     }
   }
 

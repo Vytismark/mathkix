@@ -55,6 +55,12 @@ export function selectModality(ctx: ModalitySelectionContext): TeachingModality 
 
   if (candidates.length === 1) return candidates[0]
 
+  if (ctx.totalAttempts === 0) {
+    // Very first lesson ever — always start with visual (safest, most engaging)
+    if (candidates.includes('visual')) return 'visual'
+    if (candidates.includes('story')) return 'story'
+  }
+
   if (ctx.totalAttempts < COLD_START_THRESHOLD) {
     return coldStartSelection(candidates, ctx.childPreferences)
   }
