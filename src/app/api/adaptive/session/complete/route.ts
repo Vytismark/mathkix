@@ -548,11 +548,26 @@ export async function POST(request: NextRequest) {
       ? (sessionSegments.find(s => s.type === 'instruction') as { modality?: string })?.modality ?? null
       : null
 
+    // Build question classification lookup from segment practice questions
+    type QClassification = { category?: string; abstractionLevel?: string; stepsRequired?: number }
+    const classificationMap = new Map<number, QClassification>()
+    for (const seg of sessionSegments) {
+      if (seg.type === 'practice' || seg.type === 'review') {
+        for (const q of seg.questions) {
+          const pq = q as QClassification & { id: number }
+          if (pq.category || pq.abstractionLevel || pq.stepsRequired) {
+            classificationMap.set(pq.id, { category: pq.category, abstractionLevel: pq.abstractionLevel, stepsRequired: pq.stepsRequired })
+          }
+        }
+      }
+    }
+
     // Build answer records for signal extraction
     // Use real per-question timestamps if available, otherwise approximate
     const timingMap = (timings ?? {}) as Record<string, { startMs: number; endMs: number }>
     const answerRecords: AnswerRecord[] = perQuestion.map((pq, idx) => {
       const timing = timingMap[String(pq.question.id)]
+      const classification = classificationMap.get(pq.question.id)
       return {
         questionId: pq.question.id,
         answer: pq.given,
@@ -565,6 +580,9 @@ export async function POST(request: NextRequest) {
         questionType: pq.question.type,
         questionText: pq.question.text,
         correctAnswer: pq.question.correct_answer,
+        category: classification?.category as AnswerRecord['category'],
+        abstractionLevel: classification?.abstractionLevel as AnswerRecord['abstractionLevel'],
+        stepsRequired: classification?.stepsRequired,
       }
     })
 

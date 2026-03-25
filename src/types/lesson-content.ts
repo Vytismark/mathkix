@@ -89,6 +89,12 @@ export interface PracticeQuestion {
   difficulty: number                  // 1-3
   hint?: string                       // optional hint shown after wrong attempt
   visual?: VisualAsset
+  /** Profiler classification: what kind of question */
+  category?: 'procedural' | 'conceptual' | 'word_problem' | 'bare_number'
+  /** Profiler classification: abstraction level */
+  abstractionLevel?: 'concrete' | 'representational' | 'abstract'
+  /** Profiler classification: how many steps to solve */
+  stepsRequired?: number
 }
 
 // ── Session segments ─────────────────────────────────────────
