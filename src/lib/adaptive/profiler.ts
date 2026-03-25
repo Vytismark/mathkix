@@ -331,13 +331,13 @@ function inferWorkingMemory(
   let strength = 0.3
 
   if (multiStepAcc !== null && stats.sessionCount >= 2) {
-    // Use current session + rolling average for stability
+    // Weight multi-step accuracy more heavily (70%) than overall (30%)
     const rollingMultiStep = stats.sessionCount >= 3
-      ? (multiStepAcc + stats.avgAccuracy) / 2  // blend with overall accuracy
+      ? multiStepAcc * 0.7 + stats.avgAccuracy * 0.3
       : multiStepAcc
 
-    if (rollingMultiStep >= 0.75) { value = 'high'; strength = 0.6 }
-    else if (rollingMultiStep < 0.35) { value = 'low'; strength = 0.6 }
+    if (rollingMultiStep >= 0.7) { value = 'high'; strength = 0.6 }
+    else if (rollingMultiStep < 0.4) { value = 'low'; strength = 0.6 }
     else { value = 'medium'; strength = 0.4 }
 
     // Correlation: anxious kids may fail multi-step from anxiety, not low memory
@@ -572,19 +572,19 @@ function inferChallengeTolerance(
   let strength = 0.3
 
   if (stats.sessionCount >= 3) {
-    // High: persists through errors, low hint rate across sessions
-    if (stats.avgErrorStreak >= 2 && stats.avgHintRate < 0.2) {
+    // High: persists through many errors, low hint rate across sessions
+    if (stats.avgErrorStreak >= 3 && stats.avgHintRate < 0.15) {
       value = 'high'
       strength = 0.6
     }
-    // Low: high hint rate, low error streaks (gives up quickly)
-    else if (stats.avgHintRate > 0.4 && stats.avgErrorStreak <= 1) {
+    // Low: high hint rate (regardless of error streak — asking for help = low tolerance)
+    else if (stats.avgHintRate > 0.35) {
       value = 'low'
       strength = 0.6
     }
 
     // Trend matters: improving accuracy despite errors = growing tolerance
-    if (stats.accuracyTrend > 0.02 && signals.errorPattern.maxErrorStreak >= 2) {
+    if (stats.accuracyTrend > 0.02 && signals.errorPattern.maxErrorStreak >= 3) {
       value = 'high'
       strength = Math.max(strength, 0.5)
     }
@@ -694,9 +694,9 @@ function inferLatencyPattern(
   const acc = stats.sessionCount >= 3 ? stats.avgAccuracy : signals.errorPattern.overallAccuracy
 
   let value: ResponseLatencyPattern = 'variable'
-  if (avgMs < 10_000 && acc >= 0.8) value = 'fast_right'
-  else if (avgMs < 10_000 && acc < 0.5) value = 'fast_wrong'
-  else if (avgMs > 18_000 && acc >= 0.6) value = 'slow_careful'
+  if (avgMs < 10_000 && acc >= 0.75) value = 'fast_right'
+  else if (avgMs < 10_000 && acc < 0.6) value = 'fast_wrong'
+  else if (avgMs > 18_000 && acc >= 0.55) value = 'slow_careful'
 
   // Consistency check: if accuracy variance is high, pattern is variable
   if (stats.accuracyVariance > 0.04 && stats.sessionCount >= 5) value = 'variable'
@@ -796,9 +796,12 @@ function inferFatiguePattern(
   let value: FatiguePattern = 'consistent'
 
   // Rolling: average first-half vs second-half gap across sessions
-  if (stats.avgFatigueGap > 0.15 && stats.avgSpeedDecayRatio > 1.2) {
-    // Determine if early or late decay
-    value = signals.fatigue.earlyAccuracy > signals.fatigue.midAccuracy ? 'early_decay' : 'late_decay'
+  // avgFatigueGap > 0 means first half is better than second half → late decay
+  // avgFatigueGap < 0 means second half is better → early decay (slow start)
+  if (stats.avgFatigueGap > 0.15 && stats.avgSpeedDecayRatio > 1.15) {
+    value = 'late_decay'  // accuracy drops in second half
+  } else if (stats.avgFatigueGap < -0.15) {
+    value = 'early_decay'  // starts slow, improves mid-session
   }
 
   return updateDimension(current, value, stats.sessionCount >= 5 ? 0.6 : 0.3)
