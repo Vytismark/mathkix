@@ -274,6 +274,7 @@ export interface PriorityScoringContext {
 export function scoreStandardPriorities(
   gradeLevel: number,
   ctx: PriorityScoringContext,
+  allowPrereqBypass: boolean = false,
 ): StandardPriority[] {
   const graph = loadPrerequisiteGraph()
   const standards = getStandardsForGrade(gradeLevel)
@@ -322,9 +323,16 @@ export function scoreStandardPriorities(
     const stalenessPenalty = recentlyPracticed ? 15 : Math.max(0, (5 - sessionsSince) * W_STALENESS)
 
     // ── Tier penalty for blocked/unlocked ──
+    // Tier penalty: blocked standards score lower (unless parent goal is "advance")
     let tierPenalty = 0
-    if (readiness.tier === 'blocked') tierPenalty = 30
-    else if (readiness.tier === 'unlocked') tierPenalty = 10
+    if (allowPrereqBypass) {
+      // Advance mode: minimal penalty for blocked/unlocked
+      if (readiness.tier === 'blocked') tierPenalty = 10
+      else if (readiness.tier === 'unlocked') tierPenalty = 3
+    } else {
+      if (readiness.tier === 'blocked') tierPenalty = 30
+      else if (readiness.tier === 'unlocked') tierPenalty = 10
+    }
 
     const score = readinessScore + needScore + srScore + domainBalance + engagementBonus - stalenessPenalty - tierPenalty
 
@@ -352,8 +360,9 @@ export function selectNextStandards(
   gradeLevel: number,
   ctx: PriorityScoringContext,
   count: number = 2,
+  allowPrereqBypass: boolean = false,
 ): StandardPriority[] {
-  const scored = scoreStandardPriorities(gradeLevel, ctx)
+  const scored = scoreStandardPriorities(gradeLevel, ctx, allowPrereqBypass)
 
   logDecision({ component: 'PREREQ', action: 'scored_standards', data: {
     grade: gradeLevel, totalScored: scored.length,

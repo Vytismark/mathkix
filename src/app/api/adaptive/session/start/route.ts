@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
   const [blocked, { data: child, error: childError }] = await Promise.all([
     requireActiveSubscription(user.id),
     supabase.from('children')
-      .select('id, domain_mastery, school_grade, attention_span, span_question_offset, learning_pace, challenge_preference, motivation_style, modality_scores, preferred_modality, learning_profile')
+      .select('id, domain_mastery, school_grade, attention_span, span_question_offset, learning_pace, challenge_preference, motivation_style, parent_goal, modality_scores, preferred_modality, learning_profile')
       .eq('id', childId)
       .eq('profile_id', user.id)
       .single(),
@@ -147,6 +147,7 @@ export async function POST(request: NextRequest) {
       learning_pace: child.learning_pace ?? 'average',
       challenge_preference: child.challenge_preference ?? 'balanced',
       motivation_style: child.motivation_style ?? 'encouragement',
+      parent_goal: child.parent_goal ?? 'reinforce',
     },
     lastUsedModality: (child.preferred_modality as 'visual' | 'story' | 'procedural' | 'interactive' | 'challenge') ?? null,
     recentStandards,

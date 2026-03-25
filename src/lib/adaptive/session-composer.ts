@@ -70,6 +70,7 @@ interface ComposerInput {
     learning_pace: 'steady' | 'average' | 'quick'
     challenge_preference: 'gentle' | 'balanced' | 'loves_challenge'
     motivation_style: 'rewards' | 'challenge' | 'encouragement'
+    parent_goal: 'catch_up' | 'reinforce' | 'advance'
   }
   lastUsedModality: TeachingModality | null
   recentStandards: Set<string>
@@ -100,11 +101,12 @@ export async function composeSession(
 
   logDecision({ component: 'COMPOSER', action: 'compose_session_start', childId: input.childId, data: {
     budget, attentionSpan: input.attentionSpan, offset: input.spanQuestionOffset, grade: input.gradeLevel,
+    parentGoal: input.childPreferences.parent_goal, learningPace: input.childPreferences.learning_pace,
   }})
 
   // ── Profile-aware adjustments ─────────────────────────────
   const profile = input.learningProfile
-  const profileAdjustments = deriveProfileAdjustments(profile)
+  const profileAdjustments = deriveProfileAdjustments(profile, input.childPreferences)
 
   logDecision({ component: 'COMPOSER', action: 'profile_adjustments', childId: input.childId, data: {
     ...profileAdjustments, hasProfile: !!(profile && profile.cognitiveStage),
@@ -113,7 +115,7 @@ export async function composeSession(
   // ── Step 1: Check if we have any authored lesson content ──
   // If not, fall back to the existing practice-only system
   const priorityCtx = buildPriorityContext(input)
-  const candidateStandards = selectNextStandards(input.gradeLevel, priorityCtx, 3)
+  const candidateStandards = selectNextStandards(input.gradeLevel, priorityCtx, 3, profileAdjustments.allowPrereqBypass)
 
   const standardsWithContent = candidateStandards.filter(
     (s) => hasLessonContent(s.standardCode)
@@ -136,21 +138,22 @@ export async function composeSession(
   let remaining = budget
   const segments: SessionSegment[] = []
 
-  // 2a. SR reviews (max 1 segment)
+  // 2a. SR reviews (1 segment normally, +1 for catch_up goal)
+  const maxReviewSegments = 1 + profileAdjustments.extraReviewSegments
   const srDue = getDueItems(input.srItems)
-  if (srDue.length > 0 && remaining >= REVIEW_COST) {
-    const reviewQuestions = await buildReviewQuestions(
-      supabase, input, srDue.slice(0, REVIEW_QUESTIONS_PER_SEGMENT)
-    )
-    if (reviewQuestions.length > 0) {
-      segments.push({
-        type: 'review',
-        standardCode: reviewQuestions[0].standard_code ?? srDue[0].standard_code,
-        questions: reviewQuestions.map(candidateToPractice),
-        isSpacedRepetition: true,
-      } as SessionSegment)
-      remaining -= REVIEW_COST
-    }
+  let reviewsAdded = 0
+  while (srDue.length > reviewsAdded * REVIEW_QUESTIONS_PER_SEGMENT && remaining >= REVIEW_COST && reviewsAdded < maxReviewSegments) {
+    const batch = srDue.slice(reviewsAdded * REVIEW_QUESTIONS_PER_SEGMENT, (reviewsAdded + 1) * REVIEW_QUESTIONS_PER_SEGMENT)
+    const reviewQuestions = await buildReviewQuestions(supabase, input, batch)
+    if (reviewQuestions.length === 0) break
+    segments.push({
+      type: 'review',
+      standardCode: reviewQuestions[0].standard_code ?? batch[0].standard_code,
+      questions: reviewQuestions.map(candidateToPractice),
+      isSpacedRepetition: true,
+    } as SessionSegment)
+    remaining -= REVIEW_COST
+    reviewsAdded++
   }
 
   // 2b. Instruction segments (1-2 standards with content)
@@ -169,7 +172,7 @@ export async function composeSession(
           segments.push({
             type: 'practice',
             standardCode: priority.standardCode,
-            questions: content.practiceQuestions.slice(0, PRACTICE_QUESTIONS_PER_SEGMENT + profileAdjustments.extraPracticeQuestions),
+            questions: content.practiceQuestions.slice(0, profileAdjustments.practiceQuestionsPerSegment + profileAdjustments.extraPracticeQuestions),
           })
           remaining -= PRACTICE_COST
         }
@@ -237,7 +240,7 @@ export async function composeSession(
       segments.push({
         type: 'practice',
         standardCode: priority.standardCode,
-        questions: content.practiceQuestions.slice(0, PRACTICE_QUESTIONS_PER_SEGMENT),
+        questions: content.practiceQuestions.slice(0, profileAdjustments.practiceQuestionsPerSegment),
       })
       remaining -= PRACTICE_COST
     }
@@ -247,15 +250,16 @@ export async function composeSession(
   const maxReinforcement = Math.min(remaining, MAX_REINFORCEMENT_SEGMENTS)
   if (maxReinforcement >= PRACTICE_COST) {
     const reinforcementQuestions = await buildReinforcementQuestions(
-      supabase, input, maxReinforcement * PRACTICE_QUESTIONS_PER_SEGMENT,
+      supabase, input, maxReinforcement * profileAdjustments.practiceQuestionsPerSegment,
       // Exclude standards already covered by instruction segments
       new Set(instructionStandards.map(s => s.standardCode))
     )
 
     // Split into practice segments
     let reinforcementCount = 0
-    for (let i = 0; i < reinforcementQuestions.length && remaining >= PRACTICE_COST && reinforcementCount < MAX_REINFORCEMENT_SEGMENTS; i += PRACTICE_QUESTIONS_PER_SEGMENT) {
-      const batch = reinforcementQuestions.slice(i, i + PRACTICE_QUESTIONS_PER_SEGMENT)
+    const qPerSeg = profileAdjustments.practiceQuestionsPerSegment
+    for (let i = 0; i < reinforcementQuestions.length && remaining >= PRACTICE_COST && reinforcementCount < MAX_REINFORCEMENT_SEGMENTS; i += qPerSeg) {
+      const batch = reinforcementQuestions.slice(i, i + qPerSeg)
       if (batch.length === 0) break
 
       const standardCode = batch[0].standard_code ?? 'mixed'
@@ -308,7 +312,7 @@ async function composePracticeOnly(
 ): Promise<ComposedSession> {
   const pool = await buildQuestionPool(supabase, input.gradeLevel)
   if (pool.length === 0) {
-    return { segments: [], fallbackQuestions: [], isSegmented: false, totalEstimatedMinutes: 0, profileAdjustments: deriveProfileAdjustments(input.learningProfile) }
+    return { segments: [], fallbackQuestions: [], isSegmented: false, totalEstimatedMinutes: 0, profileAdjustments: deriveProfileAdjustments(input.learningProfile, input.childPreferences) }
   }
 
   const affinityMap = new Map<Domain, number>()
@@ -342,7 +346,7 @@ async function composePracticeOnly(
     fallbackQuestions: selected,
     isSegmented: false,
     totalEstimatedMinutes: Math.round(selected.length * 0.5),
-    profileAdjustments: deriveProfileAdjustments(input.learningProfile),
+    profileAdjustments: deriveProfileAdjustments(input.learningProfile, input.childPreferences),
   }
 }
 
@@ -531,11 +535,27 @@ export interface ProfileAdjustments {
   processingSpeed: 'slow' | 'moderate' | 'fast'
   /** Challenge tolerance (for difficulty ramping) */
   challengeTolerance: 'low' | 'moderate' | 'high'
+
+  // ── Parent goal & pacing ─────────────────────────
+  /** Parent goal: catch_up prioritizes gaps, advance pushes forward */
+  parentGoal: 'catch_up' | 'reinforce' | 'advance'
+  /** Learning pace: affects practice quantity per standard */
+  learningPace: 'steady' | 'average' | 'quick'
+  /** Extra review segments for catch_up goal */
+  extraReviewSegments: number
+  /** Whether to allow advancing past incomplete prerequisites */
+  allowPrereqBypass: boolean
+  /** Practice questions per segment (adjusted by pace) */
+  practiceQuestionsPerSegment: number
 }
 
 function deriveProfileAdjustments(
   profile: ChildLearningProfile | null,
+  prefs?: ComposerInput['childPreferences'],
 ): ProfileAdjustments {
+  const parentGoal = prefs?.parent_goal ?? 'reinforce'
+  const learningPace = prefs?.learning_pace ?? 'average'
+
   const defaults: ProfileAdjustments = {
     preferFocused: false,
     difficultyReduction: 0,
@@ -554,6 +574,11 @@ function deriveProfileAdjustments(
     exampleFading: 'full_examples',
     processingSpeed: 'moderate',
     challengeTolerance: 'moderate',
+    parentGoal,
+    learningPace,
+    extraReviewSegments: parentGoal === 'catch_up' ? 1 : 0,
+    allowPrereqBypass: parentGoal === 'advance',
+    practiceQuestionsPerSegment: learningPace === 'steady' ? 4 : learningPace === 'quick' ? 2 : 3,
   }
 
   if (!profile || !profile.interleavingPreference) return defaults
@@ -625,6 +650,29 @@ function deriveProfileAdjustments(
   }
   if (profile.challengeTolerance?.confidence >= C) {
     adj.challengeTolerance = profile.challengeTolerance.value
+  }
+
+  // ── Parent goal overrides ────────────────────────
+  if (parentGoal === 'catch_up') {
+    // More review, reduce difficulty, more practice per standard
+    adj.extraReviewSegments = 1
+    adj.difficultyReduction = Math.max(adj.difficultyReduction, 1)
+    adj.practiceQuestionsPerSegment = Math.max(adj.practiceQuestionsPerSegment, 4)
+  } else if (parentGoal === 'advance') {
+    // Push forward, less review, allow bypassing prerequisites
+    adj.allowPrereqBypass = true
+    adj.extraReviewSegments = 0
+    adj.practiceQuestionsPerSegment = Math.min(adj.practiceQuestionsPerSegment, 2)
+  }
+
+  // ── Learning pace fine-tuning ────────────────────
+  if (learningPace === 'steady') {
+    // More practice, never skip instruction
+    adj.canSkipInstruction = false
+    adj.practiceQuestionsPerSegment = Math.max(adj.practiceQuestionsPerSegment, 4)
+  } else if (learningPace === 'quick') {
+    // Less practice, allow instruction skip if profile supports it
+    adj.practiceQuestionsPerSegment = Math.min(adj.practiceQuestionsPerSegment, 2)
   }
 
   return adj
