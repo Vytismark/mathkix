@@ -81,10 +81,25 @@ Based on `motivationOrientation`:
 
 After the profiler has baseline data (~100+ sessions across multiple children):
 
-### Problem-First vs Lesson-First
-- Track `problemFirstVsLessonFirst` dimension
-- Alternate session ordering and compare performance
-- Goal: validate the profiler's inference matches actual performance
+### Problem-First vs Lesson-First (deferred — needs careful approach)
+The `problemFirstVsLessonFirst` profiler dimension (25th of 25) is the only one that cannot be fully inferred from passive observation. It requires comparing performance when instruction comes before practice vs after.
+
+**Current state:** The dimension defaults to `lesson_first` and partially infers from behavior — if a child skips instruction ("Got it!") and still scores well, it shifts toward `problem_first`. This is a reasonable proxy but not a true A/B test.
+
+**Why it's deferred:** Randomly varying session ordering could confuse children. A child expecting a lesson who gets thrown into practice first may feel lost or anxious.
+
+**When to implement:**
+1. Wait until all Grade 3 domains have lesson content (so every session is segmented)
+2. Add a parent consent toggle: "Let us experiment with lesson ordering to find what works best for your child"
+3. Only then alternate ordering across sessions (not within a single session)
+4. Compare: score on practice questions, time-to-answer, hint requests, engagement signals
+5. After ~10 sessions per ordering, the profiler will have enough data to lock in a preference
+
+**Natural inference (happening now):**
+- Sessions with authored content → instruction first (lesson_first)
+- Sessions without content → practice only (implicit problem_first)
+- As content coverage expands, the profiler will see both orderings organically
+- The `instructionSkipRate` and post-skip accuracy already provide a weak signal
 
 ### Immediate vs Delayed Feedback
 - Track `feedbackGranularity` dimension
