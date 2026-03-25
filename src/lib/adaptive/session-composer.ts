@@ -148,8 +148,8 @@ export async function composeSession(
     if (reviewQuestions.length === 0) break
     segments.push({
       type: 'review',
-      standardCode: reviewQuestions[0].standard_code ?? batch[0].standard_code,
-      questions: reviewQuestions.map(candidateToPractice),
+      standardCode: batch[0].standard_code,
+      questions: reviewQuestions,
       isSpacedRepetition: true,
     } as SessionSegment)
     remaining -= REVIEW_COST
@@ -356,31 +356,42 @@ async function buildReviewQuestions(
   supabase: SupabaseClient<Database>,
   input: ComposerInput,
   srItems: SRItem[],
-): Promise<CandidateQuestion[]> {
-  const pool = await buildQuestionPool(supabase, input.gradeLevel)
+): Promise<PracticeQuestion[]> {
+  const selected: PracticeQuestion[] = []
 
-  // Filter to questions matching SR standard codes
-  const srCodes = new Set(srItems.map(i => i.standard_code))
-  const srPool = pool.filter(q => srCodes.has(q.standard_code))
-
-  if (srPool.length === 0) return []
-
-  // Pick questions at appropriate difficulty for review
-  const selected: CandidateQuestion[] = []
   for (const item of srItems) {
-    const matching = srPool.filter(q => q.standard_code === item.standard_code)
-    if (matching.length === 0) continue
-
-    // For review: pick medium difficulty (not too easy, not too hard)
-    const sorted = matching.sort((a, b) =>
-      Math.abs(a.difficulty - 2) - Math.abs(b.difficulty - 2)
-    )
-    selected.push(sorted[0])
     if (selected.length >= REVIEW_QUESTIONS_PER_SEGMENT) break
+
+    // First: try authored lesson content (has classification tags for profiler)
+    const available = getAvailableModalities(item.standard_code)
+    if (available.length > 0) {
+      const content = getLessonContent(item.standard_code, available[0])
+      if (content && content.practiceQuestions.length > 0) {
+        const sorted = [...content.practiceQuestions].sort((a, b) =>
+          Math.abs(a.difficulty - 2) - Math.abs(b.difficulty - 2)
+        )
+        selected.push(sorted[0])
+        continue
+      }
+    }
+
+    // Fallback: use old question pool (no classification tags)
+    if (!fallbackPool) {
+      fallbackPool = await buildQuestionPool(supabase, input.gradeLevel)
+    }
+    const matching = fallbackPool.filter(q => q.standard_code === item.standard_code)
+    if (matching.length > 0) {
+      const sorted = matching.sort((a, b) =>
+        Math.abs(a.difficulty - 2) - Math.abs(b.difficulty - 2)
+      )
+      selected.push(candidateToPractice(sorted[0]))
+    }
   }
 
   return selected
 }
+// Lazy-loaded fallback pool for SR questions without authored content
+let fallbackPool: CandidateQuestion[] | null = null
 
 // ── Helper: build reinforcement practice questions ───────────
 

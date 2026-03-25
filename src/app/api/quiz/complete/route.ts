@@ -14,8 +14,11 @@ import {
   rebuildDomainStateFromHistory,
   computeDomainScores,
 } from '@/lib/quiz/adaptive'
-import type { QuizAnswerRecord, DomainScores } from '@/types/quiz'
+import type { QuizAnswerRecord, DomainScores, Domain } from '@/types/quiz'
 import type { Json } from '@/types/database'
+import { updateProfile } from '@/lib/adaptive/profiler'
+import { extractAllSignals, type AnswerRecord, type SessionContext } from '@/lib/adaptive/profile-signals'
+import { logDecision } from '@/lib/adaptive/algo-logger'
 
 export async function POST(request: NextRequest) {
   const supabase = await createClient()
@@ -138,6 +141,56 @@ export async function POST(request: NextRequest) {
         last_attempted: now,
       })
     }
+  }
+
+  // ── Seed learning profile from diagnostic quiz ──────────────────────────
+  // Bootstrap profiler dimensions from quiz signals (partial confidence).
+  // This gives the algorithm a head start before the first real session.
+  {
+    let cumulativeMs = 0
+    const quizAnswerRecords: AnswerRecord[] = questionsAsked.map((a) => {
+      const startMs = cumulativeMs
+      cumulativeMs += a.time_ms ?? 10_000
+      return {
+        questionId: parseInt(a.question_id) || 0,
+        answer: a.answer_given,
+        correct: a.correct,
+        startMs,
+        endMs: cumulativeMs,
+        difficulty: a.difficulty,
+        domain: (a.domain as Domain) ?? 'OA',
+        standardCode: a.standard_code ?? null,
+        questionType: 'numeric',
+        questionText: '',
+        correctAnswer: '',
+      }
+    })
+
+    const quizContext: SessionContext = {
+      childId,
+      sessionId,
+      gradeLevel: schoolGrade ?? 3,
+      totalTimeMs: cumulativeMs,
+      isSegmented: false,
+      hintRequestCount: 0,
+      instructionSkipCount: 0,
+      instructionStepsViewed: 0,
+      instructionStepsTotal: 0,
+      aiTeacherMessages: 0,
+    }
+
+    const signals = extractAllSignals(quizAnswerRecords, quizContext, null, [])
+    const initialProfile = updateProfile(null, signals)
+
+    await supabase.from('children').update({
+      learning_profile: initialProfile as unknown as Json,
+    }).eq('id', childId)
+
+    logDecision({ component: 'PROFILER', action: 'quiz_seed', childId, data: {
+      questionsAnalyzed: questionsAsked.length,
+      avgResponseMs: Math.round(cumulativeMs / questionsAsked.length),
+      accuracy: Math.round(questionsAsked.filter(a => a.correct).length / questionsAsked.length * 100),
+    }})
   }
 
   captureServerEvent(user.id, 'quiz_completed', {

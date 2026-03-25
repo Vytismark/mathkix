@@ -7,6 +7,7 @@ import { getDomainsForGrade } from '@/types/quiz'
 import type { Domain } from '@/types/quiz'
 import { DomainProgressGrid } from '@/components/parent/DomainProgressGrid'
 import type { DomainData, StandardInfo } from '@/components/parent/DomainProgressGrid'
+import { LearningProfileCard } from '@/components/parent/LearningProfileCard'
 import { getGradeBank } from '@/data/questions'
 
 const AVATAR_EMOJI: Record<string, string> = {
@@ -187,6 +188,13 @@ export default async function ChildDetailPage({
           practicedStandards={practicedStandards}
         />
       </div>
+
+      {/* Learning Profile */}
+      {child.placement_done && (
+        <div className="mb-8">
+          <LearningProfileCard childId={childId} />
+        </div>
+      )}
 
       {/* Recent activity */}
       <div

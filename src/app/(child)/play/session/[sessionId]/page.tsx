@@ -12,9 +12,10 @@ import { AiTeacherPanel } from '@/components/adaptive/AiTeacherPanel'
 import { ReadAloudButton } from '@/components/child/ReadAloudButton'
 import { InstructionCard } from '@/components/child/InstructionCard'
 import { SegmentTransition } from '@/components/child/SegmentTransition'
-import type { MixedQuestion, EarnedAchievement } from '@/types/adaptive'
+import type { MixedQuestion, EarnedAchievement, EngagementWindow } from '@/types/adaptive'
 import type { SessionSegment, PracticeQuestion } from '@/types/lesson-content'
 import type { ProfileAdjustments } from '@/lib/adaptive/session-composer'
+import { createEngagementWindow, processAnswer as processEngagement, recommendAction } from '@/lib/adaptive/engagement'
 
 type Phase = 'loading' | 'answering' | 'feedback' | 'wrong_review' | 'submitting' | 'instruction' | 'transition'
 
@@ -94,6 +95,11 @@ export default function SessionPage() {
 
   // ── Profile adjustments (from session/start, for AI teacher + UI) ──
   const [profileAdj, setProfileAdj] = useState<ProfileAdjustments | null>(null)
+
+  // ── Live engagement detection ─────────────────────────────
+  const [engWindow, setEngWindow] = useState<EngagementWindow | null>(null)
+  const [engagementBanner, setEngagementBanner] = useState<string | null>(null)
+  const [showBreakModal, setShowBreakModal] = useState(false)
 
   // ── Greeting pre-fetch cache ──────────────────────────────
   const greetingCache = useRef<Map<number, string>>(new Map())
@@ -288,6 +294,7 @@ export default function SessionPage() {
     } catch {}
 
     setWasCorrect(isCorrect)
+    processEngagementSignal(isCorrect)
     const key = `${segmentIndex}:${currentSegQuestion.id}`
     setSegAnswers((prev) => ({ ...prev, [key]: given }))
     setTimings((prev) => ({ ...prev, [key]: { startMs: questionStartMs.current, endMs: Date.now() } }))
@@ -376,6 +383,7 @@ export default function SessionPage() {
     } catch {}
 
     setWasCorrect(isCorrect)
+    processEngagementSignal(isCorrect)
     setAnswers((prev) => ({ ...prev, [currentQuestion.id]: given }))
     setTimings((prev) => ({ ...prev, [currentQuestion.id]: { startMs: questionStartMs.current, endMs: Date.now() } }))
     setPhase('feedback')
@@ -461,6 +469,29 @@ export default function SessionPage() {
   const handleToastDismiss = useCallback(() => {
     setToastQueue((prev) => prev.slice(1))
   }, [])
+
+  // ── Process engagement signal after each answer ──────────
+  const processEngagementSignal = useCallback((isCorrect: boolean) => {
+    const responseMs = Date.now() - questionStartMs.current
+    const window = engWindow ?? createEngagementWindow()
+    const { window: updated, signal } = processEngagement(window, responseMs, isCorrect)
+    setEngWindow(updated)
+
+    const action = recommendAction(signal)
+    if (action === 'offer_break') {
+      setShowBreakModal(true)
+    } else if (action === 'reduce_difficulty') {
+      setEngagementBanner('Take your time — no rush!')
+      setTimeout(() => setEngagementBanner(null), 3000)
+    } else if (action === 'domain_pivot') {
+      setEngagementBanner(signal === 'disengaged'
+        ? "Great work so far! Let's wrap up soon."
+        : "Let's try a different topic!")
+      setTimeout(() => setEngagementBanner(null), 4000)
+    } else {
+      setEngagementBanner(null)
+    }
+  }, [engWindow])
 
   const handleEquationPartClick = (partLabel: string) => {
     setContextHint(partLabel)
@@ -553,6 +584,31 @@ export default function SessionPage() {
 
       {toastQueue.length > 0 && (
         <AchievementToast achievement={toastQueue[0]} onDismiss={handleToastDismiss} />
+      )}
+
+      {/* Engagement banner */}
+      {engagementBanner && (
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-30 bg-amber-50 border border-amber-200 text-amber-800 px-5 py-2.5 rounded-2xl shadow-lg text-sm font-semibold animate-in fade-in slide-in-from-top-2 duration-300">
+          {engagementBanner}
+        </div>
+      )}
+
+      {/* Break suggestion modal */}
+      {showBreakModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+          <div className="bg-white rounded-3xl shadow-xl p-8 max-w-sm mx-4 text-center">
+            <div className="text-5xl mb-4">😊</div>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">Take a quick break!</h3>
+            <p className="text-slate-500 mb-6">You've been working hard. Rest your eyes for a moment.</p>
+            <button
+              onClick={() => setShowBreakModal(false)}
+              className="w-full py-3 rounded-2xl font-bold text-white text-lg"
+              style={{ background: '#3678FF' }}
+            >
+              I'm ready to continue!
+            </button>
+          </div>
+        </div>
       )}
 
       {/* Top bar */}
